@@ -1,0 +1,76 @@
+{
+  "experiment_id": "E4",
+  "research_question": "Ablation",
+  "run_timestamp": "2026-08-14T17:12:12.835918Z",
+  "conditions": {
+    "A1_static_only": {
+      "description": "Static extractor, no dynamic",
+      "result": {
+        "tp": 139,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "note": "Same as A5 at extraction level \u2014 dynamic evidence unavailable"
+    },
+    "A2_dynamic_only": {
+      "status": "[RESULT_PENDING]",
+      "reason": "Dynamic evidence unavailable"
+    },
+    "A3_control_flow_only": {
+      "description": "CONTROL_FLOW contracts only",
+      "result": {
+        "tp": 23,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "A4_temporal_only": {
+      "description": "TEMPORAL contracts only",
+      "result": {
+        "tp": 113,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "A5_full_bcg": {
+      "description": "Full BCG (all contract types)",
+      "result": {
+        "tp": 139,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "A6_with_provenance": {
+      "description": "With provenance",
+      "result": {
+        "tp": 139,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "note": "Provenance does not filter contracts; identical to A5"
+    },
+    "A7_with_dynamic": {
+      "status": "[RESULT_PENDING]",
+      "reason": "Dynamic evidence unavailable"
+    }
+  },
+  "notes": [
+    "Level-2 DETERMINISTIC ground truth only.",
+    "Dynamic ablation conditions blocked by missing GnuCOBOL."
+  ]
+}

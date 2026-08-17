@@ -1,0 +1,35 @@
+{
+  "source_type": "EXECUTION",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.185028+00:00",
+  "generator": "generate_execution_traces.py \u2014 GnuCOBOL compilation",
+  "program": "EMPPAY",
+  "execution_id": "exec-emppay-20260816160525",
+  "return_code": 0,
+  "stdout_lines": [
+    "Name: Millard        Fillmore       ",
+    "Hours Worked Per Week: 019",
+    "Hourly Rate: 023.50",
+    "Bonus-Rate: .00",
+    "Gross Pay Per Week: 0000446.50",
+    "Gross Pay Per Month: 0001786.00",
+    "Hi Chris - how's Loretta today?"
+  ],
+  "events": [
+    {
+      "event_id": "0d54bf59-ebd5-419f-98bd-434a721b31ad",
+      "execution_id": "exec-emppay-20260816160525",
+      "artifact_id": "EMPPAY",
+      "operation": "EXECUTE",
+      "timestamp": "2026-08-16T16:05:26.185113+00:00",
+      "source_type": "EXECUTION",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "program": "EMPPAY",
+        "gnucobol_version": "cobc (GnuCOBOL) 3.2.0"
+      }
+    }
+  ]
+}

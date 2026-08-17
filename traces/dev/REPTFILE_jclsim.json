@@ -1,0 +1,58 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.206350+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "REPTFILE",
+  "execution_id": "jclsim-reptfile-20260816160526206313",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/REPTFILE.jcl",
+  "n_steps_ordered": 1,
+  "events": [
+    {
+      "event_id": "0b4ee5e5-9fe7-4b60-81b4-1393928762ff",
+      "execution_id": "jclsim-reptfile-20260816160526206313",
+      "artifact_id": "0399490d0103000e",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.206317+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "REPTFILE",
+        "job_entity_id": "0399490d0103000e",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "a9130012-cfa1-4e69-ae26-17340fd02719",
+      "execution_id": "jclsim-reptfile-20260816160526206313",
+      "artifact_id": "cab8264b34b8a7cb",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.206317+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP05",
+        "step_index": 0,
+        "jcl_file": "REPTFILE.jcl"
+      }
+    },
+    {
+      "event_id": "a7f5ccf1-4ca0-49b3-9070-f85b5df9247f",
+      "execution_id": "jclsim-reptfile-20260816160526206313",
+      "artifact_id": "cab8264b34b8a7cb",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.706317+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP05",
+        "step_index": 0,
+        "jcl_file": "REPTFILE.jcl"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+\begin{table}[t]
+\small
+\centering
+\caption{Per-operator detection (RQ2). Bold = operators where structural baseline scores zero, demonstrating the need for behavioral contract semantics.}
+\label{table:per_operator}
+\begin{tabular}{llrrrr}
+\toprule
+Operator & Category & BCG F1 & Struct. F1 & $\Delta$ & N Eval. \\
+\midrule
+REORDER\_JOBS & F1 & 1.000 & 0.966 & +0.035 & 29 \\
+REMOVE\_JOB\_DEPENDENCY & F1 & 1.000 & 1.000 & 0.000 & 28 \\
+ALTER\_STEP\_SEQUENCE & F1 & 1.000 & 1.000 & 0.000 & 28 \\
+REMOVE\_DATASET\_INIT & F2 & 1.000 & 1.000 & 0.000 & 1 \\
+\textbf{CHANGE\_DATASET\_NAME} & F2 & \textbf{1.000} & \textbf{0.000} & \textbf{+1.000} & 1 \\
+\textbf{ALTER\_FILE\_DEP\_ORDER} & F2 & \textbf{1.000} & \textbf{0.000} & \textbf{+1.000} & 1 \\
+\textbf{SUPPRESS\_RC\_CHECK} & F3 & \textbf{1.000} & \textbf{0.000} & \textbf{+1.000} & 8 \\
+\textbf{ALTER\_ERROR\_BRANCH} & F3 & \textbf{1.000} & \textbf{0.000} & \textbf{+1.000} & 8 \\
+\midrule
+\textbf{Overall} & & \textbf{1.000} & \textbf{0.817} & \textbf{+0.183} & \textbf{104} \\
+\bottomrule
+\end{tabular}
+\end{table}

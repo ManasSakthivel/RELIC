@@ -1,0 +1,18 @@
+\begin{table}[t]
+\small
+\centering
+\caption{Error analysis: representative failure categories.}
+\label{table:errors}
+\begin{tabular}{lrll}
+\toprule
+Category & N & Root Cause & Scientific Impact \\
+\midrule
+N/A mutations & 336 & No applicable structure (336/440 attempts) & Expected; not a failure \\
+F2 low sample size & 3 eval & Single JCL with PRODUCES+CONSUMES & F2 F1 scores unreliable \\
+Dynamic NOT\_OBSERVED & 4/61 & Steps require DB2/CICS execution env. & Residual; confirmed NOT\_OBSERVED $\neq$ CONTRADICTED \\
+STATIC\_DYNAMIC\_CONFLICT & 1/61 & GnuCOBOL vs.\ z/OS COND semantics & Requires z/OS execution to resolve \\
+LLM API errors & 245/C, 241/D & Groq rate limits in batch eval & F1=0.038/0.109 are lower bounds \\
+RQ1 oracle scope & TEMPORAL only & Independent oracle covers TEMPORAL only & RESOURCE/CONTROL\_FLOW need human annotation \\
+\bottomrule
+\end{tabular}
+\end{table}

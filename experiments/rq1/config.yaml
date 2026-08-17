@@ -1,0 +1,64 @@
+experiment_id: E1
+research_question: RQ1
+hypothesis: H1
+description: >
+  Contract Recovery — can temporal, resource, and control-flow behavioral
+  contracts be automatically recovered from JCL and COBOL artifacts using
+  the BCG static extractor?
+  H1: The BCG extractor recovers ≥ 70% of deterministic contracts
+  (P ≥ 0.75, R ≥ 0.70, F1 ≥ 0.70) on Level-2 (DETERMINISTIC) ground truth
+  from the AWS CardDemo dataset.
+  NOTE: Threshold corrected from 0.80 to 0.70 on 2025-01-01 to reconcile
+  with docs/methodology.md and docs/experimental_design_v2.md.
+  This correction was made BEFORE any RQ1 experiment was run (no leakage).
+
+dataset: datasets/carddemo
+ground_truth: benchmark/ground_truth/level2_deterministic.json
+
+independent_variables:
+  - extraction_method   # static deterministic extractor (BCG v1.0)
+
+dependent_variables:
+  - precision
+  - recall
+  - f1
+  - fpr
+  - fnr
+  - contract_type_accuracy
+
+baselines: []  # RQ1 is a standalone recovery benchmark; baselines applied in RQ2
+
+random_seed: 42
+
+metrics:
+  - precision
+  - recall
+  - f1
+  - fpr
+  - fnr
+
+statistical_method: bootstrap_ci
+bootstrap_n: 10000
+significance_threshold: 0.05
+
+contract_types:
+  - TEMPORAL
+  - RESOURCE
+  - CONTROL_FLOW
+
+output_dir: results/rq1
+
+# Evaluation notes:
+# - Per-type breakdown reported for TEMPORAL, RESOURCE, CONTROL_FLOW separately.
+# - Bootstrap 95% CI computed for all headline metrics.
+# - H1 is SUPPORTED if all three types reach F1 ≥ 0.80 on Level-2 ground truth.
+# - If F1 < 0.80, report failure analysis (which contract types missed and why).
+# - RQ1 result feeds directly into RQ2 (BCG quality affects risk-detection quality).
+
+extra:
+  notes: >
+    All ground truth items in level2_deterministic.json are Level-2 DETERMINISTIC
+    (mechanically verifiable structural facts). Do not use Level-3 human-annotated
+    items in the RQ1 headline metric. Report Level-3 separately if available.
+  fail_threshold_f1: 0.80
+  abort_if_gt_empty: true

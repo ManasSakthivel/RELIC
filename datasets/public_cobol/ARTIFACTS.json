@@ -1,0 +1,306 @@
+{
+  "generated_at": "2026-08-14T16:45:16.993448+00:00",
+  "artifact_count": 50,
+  "artifacts": [
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+      "artifact_type": "JCL",
+      "sha256": "22225a047b6e43f516f0d4391cd89244fa2f3ff417836031aee062a0b9288a42",
+      "size_bytes": 763
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "2d76d2d19666500934f4a02678e4b874ca7728e0b520685ef2d2ce067c05ac82",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "d9051016907661256185f47796867234fb52f2b7a0f0c74b9a2e32785086a797",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "ce39af6a91c752a24a97293918da62ccfbadb6af3765b86c8ceac050a2579f8b",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "e29fe39c88c28177e914bd524fdb1214e22d5ec936bfaaefd023293ed7fabc28",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0005J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "8881539ea24c8b234cb2d312f6007821bff9f9cb626fe7da2c7aea1404e2c321",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0006J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "92881981edefc4bb1627cc1e62630606873960dd0e059083859d5592edc543ce",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0007J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "3688e1028a2a772932a14ca08a71325c212aeaee04e50b238f101923ef8d57c1",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0008J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "1e001c82b90702d85e57a11016c04440f63a0b63ad5cce8a9474fcee8a38f735",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0009J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "a2b698dcde10169481666f5599e4e6cd60eca282365e34fbae1844efa9f3f84d",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0010J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "319db045fae85d30ac9989bbbfed6ffbc99cc98d163137e0d55256d6f8fabf58",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0011J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "1f212ac1a856b93ddfe11e350d143a84e0f4250351c9f75936aa6d2879fac11c",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0012J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "9716ea79e8c7acd7d00ed8a9750ad65532cdbc427b1dce2c15264743e9d548d9",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0013J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "c7e57f8a39ba4d886cda1eb1d46d7d1109a09f87e1f013b4803d49273b8640d2",
+      "size_bytes": 570
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0014J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "57d46a2d6ee17e01e1d03f7595249d1191099309728271ae66ef7116f4e003b1",
+      "size_bytes": 570
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "7244325c5a4446022dbc3d3e0d3f43f0cd116ff3ef22bed4ed161b1c2273aa08",
+      "size_bytes": 1119
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL006AJ.jcl",
+      "artifact_type": "JCL",
+      "sha256": "955e2fb09104d538df58c47e9937de51becd91fc2e2cf80a514a9c6cb25b1762",
+      "size_bytes": 796
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/COBRUN.jcl",
+      "artifact_type": "JCL",
+      "sha256": "3f8db1045588ba1825eacf2e979f1927d9266699175cdc6f05f0b6d8a0a105db",
+      "size_bytes": 856
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/HELLO.jcl",
+      "artifact_type": "JCL",
+      "sha256": "4813ef7511621e5247b4144cadae0f24768c1918f072ada73749c2d9e75ea811",
+      "size_bytes": 276
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/PAYROL00.jcl",
+      "artifact_type": "JCL",
+      "sha256": "6390daeefc32aa250b7bfe559646ab4f410def6b10f3f4f79e05e25b3b5e05a7",
+      "size_bytes": 279
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/PAYROL0X.jcl",
+      "artifact_type": "JCL",
+      "sha256": "59f1943b01d659e68db2961d29179c12946ea2fe14613bc4a4736bc5b3cef017",
+      "size_bytes": 279
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHBINJ.jcl",
+      "artifact_type": "JCL",
+      "sha256": "5c90e783f02849f6610430b7893a520168f5897cc5a714de12ef9f274b6bac90",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHSERJ.jcl",
+      "artifact_type": "JCL",
+      "sha256": "dafa07a9dd28fe39af74c5bcffcf926d433d72c72270956655d3bfe2c37c60ba",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jclproc/IGYWC.jcl",
+      "artifact_type": "JCL",
+      "sha256": "023a7e0c2117b58e1da50de54487e1a16ac7042df64eda952f665233fefdc44d",
+      "size_bytes": 1633
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jclproc/IGYWCL.jcl",
+      "artifact_type": "JCL",
+      "sha256": "6f8e574a43540b4a4ef8a2d1f47837a868bf72cf7740eb2ebc2300b3b63752ad",
+      "size_bytes": 1972
+    },
+    {
+      "path": "COBOL Programming Course #2 - Learning COBOL/Labs/jclproc/IGYWCLG.jcl",
+      "artifact_type": "JCL",
+      "sha256": "397ea1b1d79f04ca4c5e531ac97163a71d56eae62ff743a0ef3a7937e887564a",
+      "size_bytes": 2511
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/cbl/CBL0106.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "3cde3ac691111fcb8e9f00d4bc537ca48dc0a860d04fd075f73071547a4be67a",
+      "size_bytes": 7147
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/cbl/CBL0106C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "9a4d0689f9cae7d392390413a594fe37b9fa9eac8f936eed418454ea6827ae12",
+      "size_bytes": 7596
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/jcl/CBL0106J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "fa3cdcbd1375b1c31693410a773491c0be2209e4bf6afe02a171a959cf615e07",
+      "size_bytes": 797
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/cbl/CBLDB21.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "6b451aabffa723435c6ba67a37f006a60dc123d2c1ab1feebaf16314e10cb46a",
+      "size_bytes": 9301
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/cbl/CBLDB22.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "0fc6be67b763e6a8f49ec58a4f81707c14ad5c69f49fe95e66c1b1fe62e67900",
+      "size_bytes": 12982
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/cbl/CBLDB23.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "78a180507e31ce2a6a53fcc90d842b4672b9aadd8b24cf581874ab520e166030",
+      "size_bytes": 12027
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB21C.jcl",
+      "artifact_type": "JCL",
+      "sha256": "8c07bd744fdb0f2b89d07af05eaa1285a97cab9bd51b0811d34cc5a0ec072b4d",
+      "size_bytes": 459
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB21R.jcl",
+      "artifact_type": "JCL",
+      "sha256": "98048c6ba433343e457427ba4bfde5a56234037a3c9f9f423ea0d4516ce33743",
+      "size_bytes": 691
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB22C.jcl",
+      "artifact_type": "JCL",
+      "sha256": "92d040cd14302fb266d34bd8ec2916a45bd0947a7d922e317ca366061a965bba",
+      "size_bytes": 459
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB22R.jcl",
+      "artifact_type": "JCL",
+      "sha256": "e4d8a3078239a1c49a9f3daadafaac47f09dfcd5ea20cedceb44ab973dd4eaa2",
+      "size_bytes": 698
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB23C.jcl",
+      "artifact_type": "JCL",
+      "sha256": "ab3e395b3973f5be11cedb555716b61eca1334cb7e99347c4977ccd4be924765",
+      "size_bytes": 465
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB23R.jcl",
+      "artifact_type": "JCL",
+      "sha256": "54e2510415985f6938a64bff19fb4e8c2ac1ac0adab0c66b81e767431390bab7",
+      "size_bytes": 692
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CRETBL.jcl",
+      "artifact_type": "JCL",
+      "sha256": "15c97c17eb72a4e49f70fd2e2835f8aa9d8f4fce72a03d54606c9494e0ecc1ff",
+      "size_bytes": 2405
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/DB2SETUP.jcl",
+      "artifact_type": "JCL",
+      "sha256": "cadf9734ab7363b1d9a2f2ce489bcbc4a57c8fadc8330f6877d3e04c58a9c705",
+      "size_bytes": 1889
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/DBRMLIB.jcl",
+      "artifact_type": "JCL",
+      "sha256": "74a0715d4ffc77d3e0e1c9518804e22a6e908eec6a43f8ac4a4fd4400c0780ec",
+      "size_bytes": 488
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/LOADTBL.jcl",
+      "artifact_type": "JCL",
+      "sha256": "4965c35ea061bed72f3008681498670ebee968ebc488230bf7a56279cc74d353",
+      "size_bytes": 998
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/SELTBL.jcl",
+      "artifact_type": "JCL",
+      "sha256": "aecf55d10441692da7e6885388f4d66d975a76c44d3f63932905bd79822e3af4",
+      "size_bytes": 489
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jclproc/DB2CBL.jcl",
+      "artifact_type": "JCL",
+      "sha256": "e334bdd003f6df2ed0a5ff6d1f6478b40834d0337e4cdd8f07cbb3f171bd6cc9",
+      "size_bytes": 4285
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jclproc/DB2JCL.jcl",
+      "artifact_type": "JCL",
+      "sha256": "dec669b6dce879c78bcf32390b1fb06007ad331922715aebdfbc88bb6f4c51ab",
+      "size_bytes": 998
+    },
+    {
+      "path": "COBOL Programming Course #3 - Advanced Topics/Labs/jclproc/DSNUPROC.jcl",
+      "artifact_type": "JCL",
+      "sha256": "2b0b69879acb910eda418410d784c380fffcd0ae679877a5d243196d3422fa37",
+      "size_bytes": 749
+    },
+    {
+      "path": "COBOL Programming Course #4 - Testing/Labs/cbl/DEPTPAY.CBL",
+      "artifact_type": "COBOL",
+      "sha256": "cdac72e76397e77140f9e0788bc756e8402c752b8b8e41bef423e1b7aa77fc18",
+      "size_bytes": 1418
+    },
+    {
+      "path": "COBOL Programming Course #4 - Testing/Labs/cbl/EMPPAY.CBL",
+      "artifact_type": "COBOL",
+      "sha256": "2471ecfbad466ea54d01dc5cddd25b556cdae6eaf9a4e1ecabc45f3b9c19328c",
+      "size_bytes": 2002
+    },
+    {
+      "path": "COBOL Programming Course #4 - Testing/Labs/jcl/DEPTPAY.JCL",
+      "artifact_type": "JCL",
+      "sha256": "b2a02073016940a860817da461d8c592a175a170de0610e48ceb5c5da43f3c63",
+      "size_bytes": 478
+    },
+    {
+      "path": "COBOL Programming Course #4 - Testing/Labs/jcl/EMPPAY.JCL",
+      "artifact_type": "JCL",
+      "sha256": "5272216a78eec24f88e15636ea206efbf1607125c45e56687e4ea4a94c9d277b",
+      "size_bytes": 791
+    }
+  ]
+}

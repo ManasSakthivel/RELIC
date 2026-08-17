@@ -1,0 +1,18 @@
+\begin{table}[t]
+\small
+\centering
+\caption{Contract recovery (RQ1) --- TEMPORAL contracts only, independently implemented oracle. The oracle (\texttt{scripts/run\_rq1\_independent.py}) shares only the JCL specification with the extractor; no source code is shared. Macro-F1 is lower because files with zero contracts contribute F1=0.0 by convention (17/33 such files). RESOURCE and CONTROL\_FLOW contracts require Level-3 human annotation for independent validation and are not reported here.}
+\label{table:rq1}
+\begin{tabular}{lrrrrrr}
+\toprule
+Scope & TP & FP & FN & Micro-P & Micro-R & Micro-F1 \\
+\midrule
+TEMPORAL (independent oracle) & 56 & 0 & 0 & 1.000 & 1.000 & 1.000 \\
+\midrule
+\multicolumn{7}{l}{\small Macro-F1 = 0.576 \quad 95\% CI (bootstrap, $n$=10{,}000): [0.39, 0.73] \quad $n_{\mathrm{files}}$=33} \\
+\multicolumn{7}{l}{\small H1 verdict: \textbf{SUPPORTED} (threshold: Micro-F1 $\geq$ 0.70, Precision $\geq$ 0.75)} \\
+\bottomrule
+\end{tabular}
+\vspace{0.3em}
+{\small \textit{Scope limitation:} This evaluation is limited to TEMPORAL contracts. RESOURCE ($n$=3 in full corpus) and CONTROL\_FLOW ($n$=23) require independent human annotation; a deterministic oracle analogous to the above does not exist for those types without sharing parsing logic. The deprecated Level-2 self-consistency result (same extractor, F1=1.00) is preserved in \texttt{results/rq1/rq1\_summary.json} but is not cited as accuracy evidence.}
+\end{table}

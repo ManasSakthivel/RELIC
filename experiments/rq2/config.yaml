@@ -1,0 +1,85 @@
+experiment_id: E2
+research_question: RQ2
+hypothesis: H2
+description: >
+  Modernization Risk Detection — does execution-grounded BCG analysis improve
+  risk detection compared with all baselines?
+  H2: BCG+dynamic achieves statistically significantly higher F1 for
+  mutation-based risk detection than structural (Baseline A), complexity
+  (Baseline B), LLM-only (Baseline C), dep+LLM (Baseline D), and
+  static BCG (Baseline E) on the fault-grounded mutation benchmark.
+
+dataset: datasets/carddemo
+ground_truth: benchmark/ground_truth/mutations_ground_truth.json
+
+independent_variables:
+  - detection_condition  # one of: structural | complexity | llm_only | dep_llm | static_bcg | bcg_dynamic
+
+dependent_variables:
+  - precision
+  - recall
+  - f1
+  - fpr
+  - fnr
+
+baselines:
+  - structural
+  - complexity
+  - llm_only
+  - dep_llm
+  - static_bcg
+
+# Proposed approach
+# approach: bcg_dynamic
+
+random_seed: 42
+
+metrics:
+  - precision
+  - recall
+  - f1
+  - fpr
+  - fnr
+
+statistical_method: bootstrap_ci
+bootstrap_n: 10000
+significance_threshold: 0.05   # Before Bonferroni correction
+
+mutation_categories:
+  - F1_ordering_violation        # Temporal: job/step reordering
+  - F2_resource_dependency_break # Resource: file availability violation
+  - F3_control_flow_change       # Control: error-condition bypass
+
+n_mutations_per_category: 50    # 50 per category = 150 total mutations
+
+contract_types:
+  - TEMPORAL
+  - RESOURCE
+  - CONTROL_FLOW
+
+output_dir: results/rq2
+
+extra:
+  # Pairwise Mann-Whitney U tests with Bonferroni correction
+  # n_comparisons = 5 (BCG+dynamic vs each of 5 baselines)
+  n_pairwise_comparisons: 5
+  bonferroni_alpha: 0.01   # 0.05 / 5
+
+  # Mutation benchmark construction notes:
+  # - Each mutation must have an empirically grounded failure_category
+  #   documented in docs/failure_taxonomy.md
+  # - Ground truth source: Level-1 (EXECUTION_ORACLE) where available,
+  #   Level-2 (DETERMINISTIC) otherwise
+  # - Mutations are seeded with random_seed=42 for reproducibility
+  mutation_seed: 42
+
+  # LLM baseline runs 5x for variance; report mean ± std
+  llm_n_runs: 5
+
+  notes: >
+    RQ2 is the primary research question. Hypothesis H2 fails if BCG+dynamic
+    does not achieve statistically significantly higher F1 than ALL baselines.
+    Partial improvement (significant vs. some but not all baselines) is a
+    partial confirmation and must be clearly reported.
+    A negative result (BCG not better) is a valid finding and must be reported
+    without modification to the experimental design.

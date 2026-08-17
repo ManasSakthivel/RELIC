@@ -1,0 +1,34 @@
+{
+  "source_type": "EXECUTION",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:25.530587+00:00",
+  "generator": "generate_execution_traces.py \u2014 GnuCOBOL compilation",
+  "program": "DEPTPAY",
+  "execution_id": "exec-deptpay-20260816160524",
+  "return_code": 0,
+  "stdout_lines": [
+    "Department Name: FINANCE             ",
+    "Department Location: SOUTHWEST   ",
+    "Manager FNAME: Millard        ",
+    "Manager NAME: Millard        ",
+    "Department AVG Salary: 0005847.95",
+    "Number of employees: 019"
+  ],
+  "events": [
+    {
+      "event_id": "84b4b591-e3f0-467d-89fe-651c236ed2af",
+      "execution_id": "exec-deptpay-20260816160524",
+      "artifact_id": "DEPTPAY",
+      "operation": "EXECUTE",
+      "timestamp": "2026-08-16T16:05:25.530649+00:00",
+      "source_type": "EXECUTION",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "program": "DEPTPAY",
+        "gnucobol_version": "cobc (GnuCOBOL) 3.2.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "SYNTHETIC_STATIC_HEADER": "SYNTHETIC_STATIC: This trace was programmatically generated, not from real execution. It may only be used for pipeline testing.",
+  "source_type": "SYNTHETIC_STATIC",
+  "note": "GnuCOBOL was NOT available at trace-generation time. This trace is a synthetic stub covering the CBACT01C account master processing step of the CardDemo batch job sequence. It must NOT be used to promote contracts to STATIC_DYNAMIC_SUPPORTED.",
+  "gnucobol_available": false,
+  "gnucobol_version": null,
+  "generated_at": "2026-08-14T16:47:04.095596+00:00",
+  "generator": "Subagent C — Dynamic Execution / legacy-contract research platform",
+  "program": "CBACT01C",
+  "execution_id": "synth-cbact01c-20260814",
+  "events": [
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0001",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-14T16:47:01.000000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "step": "JOBINIT",
+        "note": "Synthetic JOB_START for CBACT01C account maintenance batch program"
+      }
+    },
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0002",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-14T16:47:01.100000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "step": "STEP010",
+        "note": "Synthetic STEP_START: CBACT01C account processing"
+      }
+    },
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0003",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "EXECUTE",
+      "timestamp": "2026-08-14T16:47:01.200000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "CBACT01C",
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic EXECUTE: CBACT01C program invocation"
+      }
+    },
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0004",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "CONSUME",
+      "timestamp": "2026-08-14T16:47:01.300000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "ACCTFILE",
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic CONSUME: CBACT01C reads ACCTFILE (account master dataset)"
+      }
+    },
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0005",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "READ",
+      "timestamp": "2026-08-14T16:47:01.400000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "ACCTFILE",
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "records_read_approx": 100,
+        "note": "Synthetic READ: records consumed from ACCTFILE"
+      }
+    },
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0006",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "WRITE",
+      "timestamp": "2026-08-14T16:47:01.500000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "ACCTOUT",
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic WRITE: CBACT01C writes processed account records to ACCTOUT"
+      }
+    },
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0007",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "PRODUCE",
+      "timestamp": "2026-08-14T16:47:01.600000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "ACCTOUT",
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic PRODUCE: ACCTOUT dataset available to REPORT step"
+      }
+    },
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0008",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "RETURN",
+      "timestamp": "2026-08-14T16:47:01.700000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic RETURN: CBACT01C program normal termination RC=0"
+      }
+    },
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0009",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-14T16:47:01.800000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "step": "STEP010",
+        "note": "Synthetic STEP_END: CBACT01C step completed RC=0"
+      }
+    },
+    {
+      "event_id": "b2c3d4e5-0002-0002-0002-cbact01c0010",
+      "execution_id": "synth-cbact01c-20260814",
+      "artifact_id": "CBACT01C",
+      "operation": "JOB_END",
+      "timestamp": "2026-08-14T16:47:01.900000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic JOB_END for CBACT01C phase"
+      }
+    }
+  ]
+}

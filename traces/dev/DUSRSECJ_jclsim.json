@@ -1,0 +1,148 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.199938+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "DUSRSECJ",
+  "execution_id": "jclsim-dusrsecj-20260816160526199849",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/DUSRSECJ.jcl",
+  "n_steps_ordered": 4,
+  "events": [
+    {
+      "event_id": "c25acb5e-ffb7-4497-8bd6-889f7f5495de",
+      "execution_id": "jclsim-dusrsecj-20260816160526199849",
+      "artifact_id": "26ce985cac0fc300",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.199854+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "DUSRSECJ",
+        "job_entity_id": "26ce985cac0fc300",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "833fa159-52d4-49da-b600-458202338f80",
+      "execution_id": "jclsim-dusrsecj-20260816160526199849",
+      "artifact_id": "4d96f743b19b4ae2",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.199854+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "PREDEL",
+        "step_index": 0,
+        "jcl_file": "DUSRSECJ.jcl"
+      }
+    },
+    {
+      "event_id": "6ae4d587-e88b-4c80-bd72-469bfda333d9",
+      "execution_id": "jclsim-dusrsecj-20260816160526199849",
+      "artifact_id": "4d96f743b19b4ae2",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.699854+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "PREDEL",
+        "step_index": 0,
+        "jcl_file": "DUSRSECJ.jcl"
+      }
+    },
+    {
+      "event_id": "01d3b865-3abd-4ccb-8ba8-31abfb8d2a75",
+      "execution_id": "jclsim-dusrsecj-20260816160526199849",
+      "artifact_id": "54fbb0efcf0110e5",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:28.199854+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP01",
+        "step_index": 1,
+        "jcl_file": "DUSRSECJ.jcl"
+      }
+    },
+    {
+      "event_id": "7b091a00-ae11-4cd7-9548-67a609bf28dc",
+      "execution_id": "jclsim-dusrsecj-20260816160526199849",
+      "artifact_id": "54fbb0efcf0110e5",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:28.699854+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP01",
+        "step_index": 1,
+        "jcl_file": "DUSRSECJ.jcl"
+      }
+    },
+    {
+      "event_id": "e5796974-a235-4535-a26b-1d586f756a63",
+      "execution_id": "jclsim-dusrsecj-20260816160526199849",
+      "artifact_id": "5125336ae86d570d",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:29.199854+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP02",
+        "step_index": 2,
+        "jcl_file": "DUSRSECJ.jcl"
+      }
+    },
+    {
+      "event_id": "3425a200-c7e1-433a-b9e0-4ed679220261",
+      "execution_id": "jclsim-dusrsecj-20260816160526199849",
+      "artifact_id": "5125336ae86d570d",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:29.699854+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP02",
+        "step_index": 2,
+        "jcl_file": "DUSRSECJ.jcl"
+      }
+    },
+    {
+      "event_id": "cf081c15-3bac-48df-b6cf-385d3e0cc62b",
+      "execution_id": "jclsim-dusrsecj-20260816160526199849",
+      "artifact_id": "bd3c85caca70a783",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:30.199854+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP03",
+        "step_index": 3,
+        "jcl_file": "DUSRSECJ.jcl"
+      }
+    },
+    {
+      "event_id": "5671f859-2778-4e92-9db7-ca0f1f1655e9",
+      "execution_id": "jclsim-dusrsecj-20260816160526199849",
+      "artifact_id": "bd3c85caca70a783",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:30.699854+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP03",
+        "step_index": 3,
+        "jcl_file": "DUSRSECJ.jcl"
+      }
+    }
+  ]
+}

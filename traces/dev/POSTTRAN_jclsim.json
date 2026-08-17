@@ -1,0 +1,58 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.203285+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "POSTTRAN",
+  "execution_id": "jclsim-posttran-20260816160526203246",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/POSTTRAN.jcl",
+  "n_steps_ordered": 1,
+  "events": [
+    {
+      "event_id": "e34ea634-528f-4237-bbcd-20fb65bf8dc3",
+      "execution_id": "jclsim-posttran-20260816160526203246",
+      "artifact_id": "402d082504bce448",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.203252+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "POSTTRAN",
+        "job_entity_id": "402d082504bce448",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "61451f04-578d-4eb9-9202-4a968ccdaac0",
+      "execution_id": "jclsim-posttran-20260816160526203246",
+      "artifact_id": "12fa9c5ae83ca1c9",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.203252+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP15",
+        "step_index": 0,
+        "jcl_file": "POSTTRAN.jcl"
+      }
+    },
+    {
+      "event_id": "fa71cb74-21ab-4e73-9ace-2f3c481e309a",
+      "execution_id": "jclsim-posttran-20260816160526203246",
+      "artifact_id": "12fa9c5ae83ca1c9",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.703252+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP15",
+        "step_index": 0,
+        "jcl_file": "POSTTRAN.jcl"
+      }
+    }
+  ]
+}

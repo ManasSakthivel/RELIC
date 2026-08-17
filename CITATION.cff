@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: >
+  If you use LEGACY-CONTRACT in your research, please cite it using
+  the metadata below.
+title: >
+  LEGACY-CONTRACT: Execution-Grounded Behavioral Contract Recovery
+  for Legacy Batch Modernization Risk Detection
+abstract: >
+  A research platform for the automatic recovery, dynamic validation, and
+  change-risk detection of implicit behavioral contracts embedded in COBOL/JCL
+  batch systems. The system formalizes behavioral obligations as a Behavioral
+  Contract Graph (BCG = (V, E, C, P, D, Γ)) and evaluates them against a
+  fault-grounded mutation benchmark derived from documented real-world
+  modernization failures.
+authors:
+  - name: "LEGACY-CONTRACT Research Team"
+repository-code: "https://github.com/ManasSakthivel/RELIC"
+license: Apache-2.0
+version: "1.0.0"
+date-released: "2025-08-17"
+keywords:
+  - legacy modernization
+  - behavioral contracts
+  - COBOL
+  - JCL
+  - program analysis
+  - software engineering
+  - mutation testing
+  - dynamic analysis
+preferred-citation:
+  type: conference-paper
+  title: >
+    Execution-Grounded Behavioral Contract Recovery for Legacy Batch
+    Modernization Risk Detection
+  authors:
+    - name: "Anonymous Authors"
+  collection-title: "Proceedings of the 47th International Conference on Software Engineering (ICSE 2025)"
+  year: 2025
+  notes: >
+    Citation will be updated with full author and publication details
+    after double-blind review.

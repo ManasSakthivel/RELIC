@@ -1,0 +1,413 @@
+{
+  "experiment_id": "E2",
+  "research_question": "RQ2",
+  "run_timestamp": "2026-08-16T17:35:08.547247+00:00",
+  "seed": 42,
+  "engine_fix_applied": "BCGDiff_gap_fixed: F1+F2+F3 operators now remove broken contracts from mutated BCG; ALTER_ERROR_BRANCH reduces static_support; RiskDetector processes all modified contracts",
+  "n_jcl_files": 55,
+  "n_attempted_mutations": 440,
+  "n_not_applicable": 336,
+  "n_evaluated_mutations": 104,
+  "n_errors": 0,
+  "static_bcg": {
+    "tp": 104,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "fnr": 0.0,
+    "fpr": null
+  },
+  "structural_baseline_A": {
+    "tp": 85,
+    "fp": 0,
+    "fn": 19,
+    "precision": 1.0,
+    "recall": 0.8173,
+    "f1": 0.8995,
+    "fnr": 0.1827,
+    "fpr": null
+  },
+  "complexity_baseline_B": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 104,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fnr": 1.0,
+    "fpr": null
+  },
+  "static_bcg_baseline_E": {
+    "tp": 96,
+    "fp": 0,
+    "fn": 8,
+    "precision": 1.0,
+    "recall": 0.9231,
+    "f1": 0.96,
+    "fnr": 0.0769,
+    "fpr": null
+  },
+  "by_operator": {
+    "REORDER_JOBS": {
+      "not_applicable": 26,
+      "static_bcg": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "structural": {
+        "tp": 28,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9655,
+        "f1": 0.9825,
+        "fnr": 0.0345,
+        "fpr": null
+      },
+      "complexity": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 29,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "static_bcg_baseline": {
+        "tp": 29,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      }
+    },
+    "REMOVE_JOB_DEPENDENCY": {
+      "not_applicable": 27,
+      "static_bcg": {
+        "tp": 28,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "structural": {
+        "tp": 28,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "complexity": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 28,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "static_bcg_baseline": {
+        "tp": 28,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      }
+    },
+    "ALTER_STEP_SEQUENCE": {
+      "not_applicable": 27,
+      "static_bcg": {
+        "tp": 28,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "structural": {
+        "tp": 28,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "complexity": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 28,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "static_bcg_baseline": {
+        "tp": 28,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      }
+    },
+    "REMOVE_DATASET_INIT": {
+      "not_applicable": 54,
+      "static_bcg": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "structural": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "complexity": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "static_bcg_baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      }
+    },
+    "CHANGE_DATASET_NAME": {
+      "not_applicable": 54,
+      "static_bcg": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "structural": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "complexity": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "static_bcg_baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      }
+    },
+    "ALTER_FILE_DEPENDENCY_ORDER": {
+      "not_applicable": 54,
+      "static_bcg": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "structural": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "complexity": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "static_bcg_baseline": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      }
+    },
+    "SUPPRESS_RETURN_CODE_CHECK": {
+      "not_applicable": 47,
+      "static_bcg": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "structural": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "complexity": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "static_bcg_baseline": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      }
+    },
+    "ALTER_ERROR_BRANCH": {
+      "not_applicable": 47,
+      "static_bcg": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "fnr": 0.0,
+        "fpr": null
+      },
+      "structural": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "complexity": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      },
+      "static_bcg_baseline": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "fnr": 1.0,
+        "fpr": null
+      }
+    }
+  },
+  "blocked_conditions": {
+    "bcg_dynamic": "BLOCKED \u2014 CardDemo DB2/CICS prevents full GnuCOBOL execution",
+    "llm_only": "COMPLETE \u2014 see results/rq2/llm_c_results.json (F1=0.0377, lower bound due to API errors)",
+    "dep_llm": "COMPLETE \u2014 see results/rq2/llm_d_results.json (F1=0.1091, lower bound due to API errors)"
+  },
+  "hypothesis": "H2: BCG+dynamic F1 >= static_bcg F1 + 10pp",
+  "preliminary_static_vs_structural": "STATIC_BCG_OUTPERFORMS_STRUCTURAL",
+  "verdict": "STATIC_BCG_F1=1.000 outperforms all evaluated static baselines (A, B, E). LLM baselines C and D completed (see llm_c_results.json, llm_d_results.json). BCG+dynamic blocked by CardDemo DB2/CICS environment.",
+  "notes": [
+    "FP=0 by design: all mutations are applied to valid BCGs; detection of at least 1 risk item = TP.",
+    "Ground truth: any mutation that was successfully applied is a positive test case (Level-2 DETERMINISTIC).",
+    "BCGDiff-based detection; FPR undefined (open-set: TN not defined).",
+    "Comparison between conditions (RQ2 core) requires all conditions including dynamic.",
+    "Engine fix applied: F1 operators now remove TEMPORAL contracts from mutated BCG; ALTER_ERROR_BRANCH now reduces static_support to expose modification to BCGDiff."
+  ]
+}

@@ -1,0 +1,15 @@
+\begin{table}[t]
+\small
+\centering
+\caption{Contract taxonomy for Paper 1 scope. All extraction is deterministic.}
+\label{table:taxonomy}
+\begin{tabular}{llll}
+\toprule
+Type & Formal Notation & Example & Evidence Source \\
+\midrule
+TEMPORAL & $A \prec B$ & STEP05 $\prec$ STEP10 & JCL sequential step order \\
+RESOURCE & \textsc{Produces\_Before}$(A, B)$ & STEP05 produces FILE-X before STEP10 & JCL DD name pairs \\
+CONTROL\_FLOW & \textsc{MustNotFollow}$(A, B, rc)$ & STEP10 skipped if STEP05 RC$\neq$0 & JCL COND parameter \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,58 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.216629+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "TXT2PDF1",
+  "execution_id": "jclsim-txt2pdf1-20260816160526216595",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/TXT2PDF1.JCL",
+  "n_steps_ordered": 1,
+  "events": [
+    {
+      "event_id": "fd507794-03f3-4e5b-ad32-e17e1e41d082",
+      "execution_id": "jclsim-txt2pdf1-20260816160526216595",
+      "artifact_id": "2c6c9c5690247baf",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.216600+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "TXT2PDF1",
+        "job_entity_id": "2c6c9c5690247baf",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "32b6ce01-5785-4a46-9c74-63231b43732b",
+      "execution_id": "jclsim-txt2pdf1-20260816160526216595",
+      "artifact_id": "ded49a11e6f1c3f4",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.216600+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "TXT2PDF",
+        "step_index": 0,
+        "jcl_file": "TXT2PDF1.JCL"
+      }
+    },
+    {
+      "event_id": "0bf11374-d608-41e5-8d59-781f8ab60ccb",
+      "execution_id": "jclsim-txt2pdf1-20260816160526216595",
+      "artifact_id": "ded49a11e6f1c3f4",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.716600+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "TXT2PDF",
+        "step_index": 0,
+        "jcl_file": "TXT2PDF1.JCL"
+      }
+    }
+  ]
+}

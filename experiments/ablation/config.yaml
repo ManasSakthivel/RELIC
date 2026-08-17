@@ -1,0 +1,76 @@
+experiment_id: E4_ABLATION
+research_question: ABLATION
+hypothesis: H4
+description: >
+  Ablation Study — which combination of evidence sources is necessary and sufficient
+  for high-quality behavioral contract recovery?
+  H4: Each evidence component (static structure, provenance, dynamic evidence, LLM)
+  contributes positively to F1, and the full combination (E6) achieves the highest
+  F1 without requiring LLM (E7 not significantly better than E6 per H4b).
+  H4b: LLM enrichment (E7 vs E6) does not produce statistically significant F1 gain.
+
+dataset: datasets/carddemo
+ground_truth: benchmark/ground_truth/level2_deterministic.json
+
+independent_variables:
+  - ablation_condition  # one of: E0–E7 (see below)
+
+dependent_variables:
+  - precision
+  - recall
+  - f1
+  - fpr
+  - fnr
+
+baselines: []
+
+ablation_conditions:
+  - E0_source_only              # Raw source text, no analysis
+  - E1_structural               # Source + structural dependency extraction only
+  - E2_static_contracts         # Source + static contract candidates (no full BCG)
+  - E3_static_bcg               # Full static BCG (entities, relations, contracts)
+  - E4_bcg_provenance           # BCG + provenance records per contract
+  - E5_bcg_dynamic              # BCG + dynamic execution evidence (no provenance)
+  - E6_bcg_provenance_dynamic   # BCG + provenance + dynamic (proposed system)
+  - E7_bcg_provenance_dynamic_llm  # BCG + provenance + dynamic + LLM enrichment
+
+random_seed: 42
+
+metrics:
+  - precision
+  - recall
+  - f1
+  - fpr
+  - fnr
+
+statistical_method: bootstrap_ci
+bootstrap_n: 10000
+significance_threshold: 0.05
+
+contract_types:
+  - TEMPORAL
+  - RESOURCE
+  - CONTROL_FLOW
+
+output_dir: results/ablation
+
+extra:
+  # Key test: is E6 significantly better than E3 (static BCG alone)?
+  # Key test: is E7 significantly better than E6 (does LLM help)?
+  # These pairwise tests determine whether each component earns its complexity cost.
+  key_pairwise_comparisons:
+    - [E6_bcg_provenance_dynamic, E3_static_bcg]   # tests BCG+dyn vs BCG alone
+    - [E7_bcg_provenance_dynamic_llm, E6_bcg_provenance_dynamic]  # tests LLM contribution
+    - [E4_bcg_provenance, E3_static_bcg]            # tests provenance contribution
+    - [E5_bcg_dynamic, E3_static_bcg]               # tests dynamic evidence alone
+
+  # SCIENTIFIC NOTE: If E3 (static BCG) matches E6 (BCG+provenance+dynamic),
+  # report that finding prominently — it would mean dynamic evidence does not help,
+  # which is a significant negative result.
+
+  notes: >
+    The ablation study directly addresses the evidence-sufficiency research question.
+    Do not design ablation conditions post-hoc to ensure a positive result.
+    The conditions E0–E7 are defined in docs/methodology.md and must not be
+    modified after the first experiment run.
+    Report the full E0–E7 table regardless of outcome.

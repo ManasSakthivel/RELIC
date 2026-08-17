@@ -1,0 +1,5 @@
+dataset: aws-carddemo
+source_url: https://github.com/aws-samples/aws-mainframe-modernization-carddemo/archive/refs/heads/main.zip
+downloaded_at: 2026-08-14T16:44:53.972354+00:00
+git_commit: unknown
+tool: legacy-contract dataset downloader

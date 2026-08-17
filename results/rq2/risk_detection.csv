@@ -1,0 +1,5 @@
+baseline,precision,recall,f1
+Baseline A,1.0,0.7982,0.8878
+Baseline B,0.0,0.0,0.0
+Baseline E,1.0,0.9266,0.9619
+Proposed,1.0,1.0,1.0

@@ -1,0 +1,58 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.202157+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "INTCALC",
+  "execution_id": "jclsim-intcalc-20260816160526202100",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/INTCALC.jcl",
+  "n_steps_ordered": 1,
+  "events": [
+    {
+      "event_id": "6570deba-c196-41b9-8b00-c79cbb8e2455",
+      "execution_id": "jclsim-intcalc-20260816160526202100",
+      "artifact_id": "132b85c84231f5ca",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.202109+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "INTCALC",
+        "job_entity_id": "132b85c84231f5ca",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "79e5b3d4-34ee-48b7-bbeb-1ff4b56cb65a",
+      "execution_id": "jclsim-intcalc-20260816160526202100",
+      "artifact_id": "9745f6476cd6fb02",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.202109+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP15",
+        "step_index": 0,
+        "jcl_file": "INTCALC.jcl"
+      }
+    },
+    {
+      "event_id": "458178f1-6088-4856-a8ea-1b48b87e9ca7",
+      "execution_id": "jclsim-intcalc-20260816160526202100",
+      "artifact_id": "9745f6476cd6fb02",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.702109+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP15",
+        "step_index": 0,
+        "jcl_file": "INTCALC.jcl"
+      }
+    }
+  ]
+}

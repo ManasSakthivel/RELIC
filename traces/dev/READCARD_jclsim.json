@@ -1,0 +1,58 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.205108+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "READCARD",
+  "execution_id": "jclsim-readcard-20260816160526205073",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/READCARD.jcl",
+  "n_steps_ordered": 1,
+  "events": [
+    {
+      "event_id": "e69ea13e-3c4b-44d0-ab99-a49c7fdad516",
+      "execution_id": "jclsim-readcard-20260816160526205073",
+      "artifact_id": "bcb2f28d43a48741",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.205078+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "READCARD",
+        "job_entity_id": "bcb2f28d43a48741",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "5a0196d2-8f5e-46c5-8b28-730847ea5dd1",
+      "execution_id": "jclsim-readcard-20260816160526205073",
+      "artifact_id": "2c3d482e2c644136",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.205078+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP05",
+        "step_index": 0,
+        "jcl_file": "READCARD.jcl"
+      }
+    },
+    {
+      "event_id": "be76178a-670f-4b80-af53-8b6d269c68e0",
+      "execution_id": "jclsim-readcard-20260816160526205073",
+      "artifact_id": "2c3d482e2c644136",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.705078+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP05",
+        "step_index": 0,
+        "jcl_file": "READCARD.jcl"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+condition,description,tp,fp,fn,precision,recall,f1
+A1_static_only,"Static extractor, no dynamic",139,0,0,1.0,1.0,1.0
+A2_dynamic_only,,[RESULT_PENDING],[RESULT_PENDING],[RESULT_PENDING],[RESULT_PENDING],[RESULT_PENDING],[RESULT_PENDING]
+A3_control_flow_only,CONTROL_FLOW contracts only,23,0,0,1.0,1.0,1.0
+A4_temporal_only,TEMPORAL contracts only,113,0,0,1.0,1.0,1.0
+A5_full_bcg,Full BCG (all contract types),139,0,0,1.0,1.0,1.0
+A6_with_provenance,With provenance,139,0,0,1.0,1.0,1.0
+A7_with_dynamic,,[RESULT_PENDING],[RESULT_PENDING],[RESULT_PENDING],[RESULT_PENDING],[RESULT_PENDING],[RESULT_PENDING]

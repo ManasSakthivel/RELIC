@@ -1,0 +1,76 @@
+experiment_id: E5_GENERALIZATION
+research_question: GENERALIZATION
+hypothesis: H5
+description: >
+  Cross-System Generalization — does the BCG approach generalize to COBOL/JCL
+  systems not seen during development, threshold tuning, or prompt engineering?
+  H5: F1 on held-out systems degrades by no more than 10 percentage points
+  (absolute) relative to in-distribution (development) systems, and the
+  degradation is not statistically significant at α=0.05.
+
+dataset: datasets/
+ground_truth: benchmark/ground_truth/generalization_ground_truth.json
+
+independent_variables:
+  - system   # identifier of the COBOL/JCL system under evaluation
+
+dependent_variables:
+  - precision
+  - recall
+  - f1
+  - fpr
+  - fnr
+
+baselines: []
+
+# ALL systems used in the experiment (development + held-out)
+systems:
+  - carddemo            # development system (AWS CardDemo)
+  # Additional public systems added here as they are prepared.
+  # Must not be added to this list after any experiment has been run (leakage).
+
+# Held-out systems: MUST NOT influence any design decision before E5 runs.
+# Thresholds, prompts, and taxonomies must be frozen before held-out evaluation.
+held_out_systems:
+  - []    # Populated when additional public COBOL datasets are prepared.
+          # See docs/dataset_selection.md for candidate systems.
+
+random_seed: 42
+
+metrics:
+  - precision
+  - recall
+  - f1
+  - fpr
+  - fnr
+
+statistical_method: bootstrap_ci
+bootstrap_n: 10000
+significance_threshold: 0.05
+
+contract_types:
+  - TEMPORAL
+  - RESOURCE
+  - CONTROL_FLOW
+
+output_dir: results/generalization
+
+extra:
+  # Degradation analysis:
+  # - mean_in_distribution_f1: average F1 across development systems
+  # - mean_out_of_distribution_f1: average F1 across held-out systems
+  # - f1_delta = OOD - in-distribution (negative = degradation)
+  # H5 is SUPPORTED if |f1_delta| ≤ 0.10 AND Mann-Whitney p > 0.05
+
+  # LEAKAGE PREVENTION RULES (enforced by ExperimentRunner):
+  # 1. held_out_systems traces must never be used for reconciliation tuning
+  # 2. held_out_systems source must not be used for taxonomy design
+  # 3. held_out_systems must not appear in development benchmark
+  # 4. This config must not be modified after any in-distribution run completes
+
+  notes: >
+    Generalization is essential for scientific credibility. A system that works
+    only on its training/development dataset provides no generalizable findings.
+    If held-out data is unavailable, clearly state that generalization was not
+    evaluated and list it as a threat to external validity in the paper.
+    Do not claim cross-system generalization without held-out evaluation data.

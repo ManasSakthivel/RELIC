@@ -1,0 +1,88 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.194506+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "COMBTRAN",
+  "execution_id": "jclsim-combtran-20260816160526194433",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/COMBTRAN.jcl",
+  "n_steps_ordered": 2,
+  "events": [
+    {
+      "event_id": "3f008533-8c09-4ea5-af9d-5a865a9c2f2f",
+      "execution_id": "jclsim-combtran-20260816160526194433",
+      "artifact_id": "0b74016bcd90e038",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.194446+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "COMBTRAN",
+        "job_entity_id": "0b74016bcd90e038",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "26fc46d7-8734-4735-8e12-2c2a0a7f3512",
+      "execution_id": "jclsim-combtran-20260816160526194433",
+      "artifact_id": "d651dad99a2dbdf6",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.194446+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP05R",
+        "step_index": 0,
+        "jcl_file": "COMBTRAN.jcl"
+      }
+    },
+    {
+      "event_id": "9aa69bb8-286a-44c4-a3fd-c8a31bc1299b",
+      "execution_id": "jclsim-combtran-20260816160526194433",
+      "artifact_id": "d651dad99a2dbdf6",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.694446+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP05R",
+        "step_index": 0,
+        "jcl_file": "COMBTRAN.jcl"
+      }
+    },
+    {
+      "event_id": "498ad3a2-595c-4f4d-98cf-257f2b24070f",
+      "execution_id": "jclsim-combtran-20260816160526194433",
+      "artifact_id": "fce2c3ef33bce3f6",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:28.194446+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP10",
+        "step_index": 1,
+        "jcl_file": "COMBTRAN.jcl"
+      }
+    },
+    {
+      "event_id": "74e1bb5d-d031-40e9-9d2b-f55925b3c5b1",
+      "execution_id": "jclsim-combtran-20260816160526194433",
+      "artifact_id": "fce2c3ef33bce3f6",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:28.694446+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP10",
+        "step_index": 1,
+        "jcl_file": "COMBTRAN.jcl"
+      }
+    }
+  ]
+}

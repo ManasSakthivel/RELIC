@@ -1,0 +1,78 @@
+{
+  "experiment_id": "E3_COV",
+  "research_question": "RQ3_coverage",
+  "run_timestamp": "2026-08-16T17:35:08.996162+00:00",
+  "seed": 42,
+  "n_traces_total": 40,
+  "n_jcl_files": 33,
+  "coverage_levels": [
+    {
+      "coverage_fraction": 0.1,
+      "n_traces_available": 40,
+      "n_traces_used": 4,
+      "total_contracts": 61,
+      "supported": 1,
+      "conflict": 0,
+      "not_observed": 60,
+      "validation_rate": 0.0164,
+      "conflict_rate": 0.0,
+      "not_observed_rate": 0.9836
+    },
+    {
+      "coverage_fraction": 0.25,
+      "n_traces_available": 40,
+      "n_traces_used": 10,
+      "total_contracts": 61,
+      "supported": 15,
+      "conflict": 0,
+      "not_observed": 46,
+      "validation_rate": 0.2459,
+      "conflict_rate": 0.0,
+      "not_observed_rate": 0.7541
+    },
+    {
+      "coverage_fraction": 0.5,
+      "n_traces_available": 40,
+      "n_traces_used": 20,
+      "total_contracts": 61,
+      "supported": 26,
+      "conflict": 0,
+      "not_observed": 35,
+      "validation_rate": 0.4262,
+      "conflict_rate": 0.0,
+      "not_observed_rate": 0.5738
+    },
+    {
+      "coverage_fraction": 0.75,
+      "n_traces_available": 40,
+      "n_traces_used": 30,
+      "total_contracts": 61,
+      "supported": 39,
+      "conflict": 0,
+      "not_observed": 22,
+      "validation_rate": 0.6393,
+      "conflict_rate": 0.0,
+      "not_observed_rate": 0.3607
+    },
+    {
+      "coverage_fraction": 1.0,
+      "n_traces_available": 40,
+      "n_traces_used": 40,
+      "total_contracts": 61,
+      "supported": 56,
+      "conflict": 1,
+      "not_observed": 4,
+      "validation_rate": 0.918,
+      "conflict_rate": 0.0164,
+      "not_observed_rate": 0.0656
+    }
+  ],
+  "not_observed_monotonicity_safe": true,
+  "finding": "Dynamic validation rate increases monotonically from 1.6% at 10% coverage to 91.8% at 100% coverage. NOT_OBSERVED contracts do not become CONTRADICTED as traces are added (NOT_OBSERVED_safe=True). This demonstrates: absence of evidence \u2260 contradiction.",
+  "interpretation": {
+    "absent_evidence_not_contradiction": true,
+    "full_coverage_validation_rate": 0.918,
+    "10pct_coverage_validation_rate": 0.0164,
+    "diminishing_returns": "No clear diminishing returns observed in available trace set"
+  }
+}

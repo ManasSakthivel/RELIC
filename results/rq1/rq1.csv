@@ -1,0 +1,5 @@
+contract_type,tp,fp,fn,support,precision,recall,f1
+OVERALL,139,0,0,139,1.0,1.0,1.0
+TEMPORAL,113,0,0,113,1.0,1.0,1.0
+RESOURCE,3,0,0,3,1.0,1.0,1.0
+CONTROL_FLOW,23,0,0,23,1.0,1.0,1.0

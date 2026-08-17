@@ -1,0 +1,178 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.215011+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "CREASTMT",
+  "execution_id": "jclsim-creastmt-20260816160526214916",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/CREASTMT.JCL",
+  "n_steps_ordered": 5,
+  "events": [
+    {
+      "event_id": "2aead031-ee0f-4639-9531-ab69fee89ed3",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "d4860fbfc2f98da3",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.214921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "CREASTMT",
+        "job_entity_id": "d4860fbfc2f98da3",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "3735f98b-f325-426e-89fc-943ab7426a04",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "918edd9623e84c6b",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.214921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "DELDEF01",
+        "step_index": 0,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    },
+    {
+      "event_id": "56b75699-e60a-48d8-bebb-c0cca43bc15e",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "918edd9623e84c6b",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.714921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "DELDEF01",
+        "step_index": 0,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    },
+    {
+      "event_id": "c3b73a61-0db7-44cd-b36a-d17361b7255d",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "df2c4a8bb577d5fc",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:28.214921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP010",
+        "step_index": 1,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    },
+    {
+      "event_id": "b2722cbb-050f-44c6-9538-660410427c60",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "df2c4a8bb577d5fc",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:28.714921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP010",
+        "step_index": 1,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    },
+    {
+      "event_id": "5c5f56cf-5b00-441a-bca6-4c24926ab5b9",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "8668d9553edcc7c3",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:29.214921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP020",
+        "step_index": 2,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    },
+    {
+      "event_id": "42c79927-372f-443e-b2c3-91c5b6c161f7",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "8668d9553edcc7c3",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:29.714921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP020",
+        "step_index": 2,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    },
+    {
+      "event_id": "8f916e48-4fd4-4adc-8eff-c9a5783c57a1",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "eb0408df502213c3",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:30.214921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP030",
+        "step_index": 3,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    },
+    {
+      "event_id": "3596fcbb-5b67-4855-bc0b-eb8f1de40bfc",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "eb0408df502213c3",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:30.714921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP030",
+        "step_index": 3,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    },
+    {
+      "event_id": "2978c374-6601-46fa-9e20-885f5a4dbb1e",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "6ae47a3264185f35",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:31.214921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP040",
+        "step_index": 4,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    },
+    {
+      "event_id": "087f4e50-ef18-4f90-9d63-1f9a61468b1e",
+      "execution_id": "jclsim-creastmt-20260816160526214916",
+      "artifact_id": "6ae47a3264185f35",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:31.714921+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP040",
+        "step_index": 4,
+        "jcl_file": "CREASTMT.JCL"
+      }
+    }
+  ]
+}

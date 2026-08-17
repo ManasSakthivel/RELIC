@@ -1,0 +1,615 @@
+{
+  "experiment_id": "E1_INDEP",
+  "research_question": "RQ1_independent_oracle",
+  "run_timestamp": "2026-08-16T17:35:08.347312+00:00",
+  "seed": 42,
+  "n_jcl_files": 33,
+  "oracle_type": "INDEPENDENT_REFERENCE_REGEX_IMPLEMENTATION",
+  "oracle_independence_note": "Oracle uses regex-based minimal JCL step-ordering parser implemented independently in this script. It shares the JCL SPEC (steps execute in textual order) but NOT code with StaticContractExtractor. This eliminates the circular evaluation problem present in Level-2 DETERMINISTIC GT.",
+  "contract_scope": "TEMPORAL_ONLY",
+  "contract_scope_note": "Only TEMPORAL (PRECEDES) contracts have deterministic oracle support from JCL step ordering alone. RESOURCE and CONTROL_FLOW contracts require DD disposition and COND= analysis which cannot be validated without sharing more implementation logic. Scope limitation is scientific.",
+  "micro_precision": 1.0,
+  "micro_recall": 1.0,
+  "micro_f1": 1.0,
+  "macro_f1": 0.5758,
+  "f1_ci_lower": 0.3939,
+  "f1_ci_upper": 0.7273,
+  "bootstrap_n": 10000,
+  "total_tp": 56,
+  "total_fp": 0,
+  "total_fn": 0,
+  "files_with_fp": 0,
+  "files_with_fn": 0,
+  "hypothesis": "H1: micro_F1 >= 0.70, Precision >= 0.75",
+  "h1_verdict": "SUPPORTED",
+  "fp_analysis": "No FP contracts detected \u2014 system matches oracle exactly.",
+  "fn_analysis": "No FN contracts \u2014 system captures all oracle contracts.",
+  "per_file": [
+    {
+      "file": "DUSRSECJ.jcl",
+      "oracle_steps": [
+        "PREDEL",
+        "STEP01",
+        "STEP02",
+        "STEP03"
+      ],
+      "oracle_contracts": 3,
+      "system_contracts": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "TCATBALF.jcl",
+      "oracle_steps": [
+        "STEP05",
+        "STEP10",
+        "STEP15"
+      ],
+      "oracle_contracts": 2,
+      "system_contracts": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "CBEXPORT.jcl",
+      "oracle_steps": [
+        "STEP01",
+        "STEP02"
+      ],
+      "oracle_contracts": 1,
+      "system_contracts": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "CARDFILE.jcl",
+      "oracle_steps": [
+        "CLCIFIL",
+        "STEP05",
+        "STEP10",
+        "STEP15",
+        "STEP40",
+        "STEP50",
+        "STEP60",
+        "OPCIFIL"
+      ],
+      "oracle_contracts": 7,
+      "system_contracts": 7,
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "PRTCATBL.jcl",
+      "oracle_steps": [
+        "DELDEF",
+        "STEP05R",
+        "STEP10R"
+      ],
+      "oracle_contracts": 2,
+      "system_contracts": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "DISCGRP.jcl",
+      "oracle_steps": [
+        "STEP05",
+        "STEP10",
+        "STEP15"
+      ],
+      "oracle_contracts": 2,
+      "system_contracts": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "DEFGDGB.jcl",
+      "oracle_steps": [
+        "STEP05"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "READCUST.jcl",
+      "oracle_steps": [
+        "STEP05"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "READXREF.jcl",
+      "oracle_steps": [
+        "STEP05"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "TRANBKP.jcl",
+      "oracle_steps": [
+        "STEP05R",
+        "STEP05",
+        "STEP10"
+      ],
+      "oracle_contracts": 2,
+      "system_contracts": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "DEFGDGD.jcl",
+      "oracle_steps": [
+        "STEP10",
+        "STEP20",
+        "STEP30",
+        "STEP40",
+        "STEP50",
+        "STEP60"
+      ],
+      "oracle_contracts": 5,
+      "system_contracts": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "CBIMPORT.jcl",
+      "oracle_steps": [
+        "STEP01"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "WAITSTEP.jcl",
+      "oracle_steps": [
+        "WAIT"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "READACCT.jcl",
+      "oracle_steps": [
+        "PREDEL",
+        "STEP05"
+      ],
+      "oracle_contracts": 1,
+      "system_contracts": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "POSTTRAN.jcl",
+      "oracle_steps": [
+        "STEP15"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "CLOSEFIL.jcl",
+      "oracle_steps": [
+        "CLCIFIL"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "REPTFILE.jcl",
+      "oracle_steps": [
+        "STEP05"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "INTCALC.jcl",
+      "oracle_steps": [
+        "STEP15"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "CUSTFILE.jcl",
+      "oracle_steps": [
+        "CLCIFIL",
+        "STEP05",
+        "STEP10",
+        "STEP15",
+        "OPCIFIL"
+      ],
+      "oracle_contracts": 4,
+      "system_contracts": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "TRANCATG.jcl",
+      "oracle_steps": [
+        "STEP05",
+        "STEP10",
+        "STEP15"
+      ],
+      "oracle_contracts": 2,
+      "system_contracts": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "TRANFILE.jcl",
+      "oracle_steps": [
+        "CLCIFIL",
+        "STEP05",
+        "STEP10",
+        "STEP15",
+        "STEP20",
+        "STEP25",
+        "STEP30",
+        "OPCIFIL"
+      ],
+      "oracle_contracts": 7,
+      "system_contracts": 7,
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "DEFCUST.jcl",
+      "oracle_steps": [
+        "STEP05",
+        "STEP05"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "TRANREPT.jcl",
+      "oracle_steps": [
+        "STEP05R",
+        "STEP05R",
+        "STEP10R"
+      ],
+      "oracle_contracts": 1,
+      "system_contracts": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "DALYREJS.jcl",
+      "oracle_steps": [
+        "STEP05"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "ESDSRRDS.jcl",
+      "oracle_steps": [
+        "PREDEL",
+        "STEP01",
+        "STEP02",
+        "STEP03",
+        "STEP04",
+        "STEP05"
+      ],
+      "oracle_contracts": 5,
+      "system_contracts": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "TRANTYPE.jcl",
+      "oracle_steps": [
+        "STEP05",
+        "STEP10",
+        "STEP15"
+      ],
+      "oracle_contracts": 2,
+      "system_contracts": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "OPENFIL.jcl",
+      "oracle_steps": [
+        "OPCIFIL"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "ACCTFILE.jcl",
+      "oracle_steps": [
+        "STEP05",
+        "STEP10",
+        "STEP15"
+      ],
+      "oracle_contracts": 2,
+      "system_contracts": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "READCARD.jcl",
+      "oracle_steps": [
+        "STEP05"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "CBADMCDJ.jcl",
+      "oracle_steps": [
+        "STEP1"
+      ],
+      "oracle_contracts": 0,
+      "system_contracts": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "COMBTRAN.jcl",
+      "oracle_steps": [
+        "STEP05R",
+        "STEP10"
+      ],
+      "oracle_contracts": 1,
+      "system_contracts": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "TRANIDX.jcl",
+      "oracle_steps": [
+        "STEP20",
+        "STEP25",
+        "STEP30"
+      ],
+      "oracle_contracts": 2,
+      "system_contracts": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    },
+    {
+      "file": "XREFFILE.jcl",
+      "oracle_steps": [
+        "STEP05",
+        "STEP10",
+        "STEP15",
+        "STEP20",
+        "STEP25",
+        "STEP30"
+      ],
+      "oracle_contracts": 5,
+      "system_contracts": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "oracle_only": [],
+      "system_only": []
+    }
+  ]
+}

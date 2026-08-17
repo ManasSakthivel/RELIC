@@ -1,0 +1,208 @@
+{
+  "generated_at": "2026-08-16T16:05:26.216784+00:00",
+  "gnucobol_available": true,
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "n_traces": 40,
+  "traces": [
+    {
+      "file": "DEPTPAY_execution.json",
+      "source_type": "EXECUTION",
+      "program": "DEPTPAY"
+    },
+    {
+      "file": "EMPPAY_execution.json",
+      "source_type": "EXECUTION",
+      "program": "EMPPAY"
+    },
+    {
+      "file": "ACCTFILE_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "ACCTFILE"
+    },
+    {
+      "file": "CARDFILE_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "CARDFILE"
+    },
+    {
+      "file": "CBADMCDJ_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "CBADMCDJ"
+    },
+    {
+      "file": "CBEXPORT_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "CBEXPORT"
+    },
+    {
+      "file": "CBIMPORT_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "CBIMPORT"
+    },
+    {
+      "file": "CLOSEFIL_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "CLOSEFIL"
+    },
+    {
+      "file": "COMBTRAN_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "COMBTRAN"
+    },
+    {
+      "file": "CUSTFILE_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "CUSTFILE"
+    },
+    {
+      "file": "DALYREJS_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "DALYREJS"
+    },
+    {
+      "file": "DEFCUST_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "DEFCUST"
+    },
+    {
+      "file": "DEFGDGB_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "DEFGDGB"
+    },
+    {
+      "file": "DEFGDGD_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "DEFGDGD"
+    },
+    {
+      "file": "DISCGRP_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "DISCGRP"
+    },
+    {
+      "file": "DUSRSECJ_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "DUSRSECJ"
+    },
+    {
+      "file": "ESDSRRDS_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "ESDSRRDS"
+    },
+    {
+      "file": "INTCALC_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "INTCALC"
+    },
+    {
+      "file": "OPENFIL_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "OPENFIL"
+    },
+    {
+      "file": "POSTTRAN_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "POSTTRAN"
+    },
+    {
+      "file": "PRTCATBL_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "PRTCATBL"
+    },
+    {
+      "file": "READACCT_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "READACCT"
+    },
+    {
+      "file": "READCARD_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "READCARD"
+    },
+    {
+      "file": "READCUST_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "READCUST"
+    },
+    {
+      "file": "READXREF_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "READXREF"
+    },
+    {
+      "file": "REPTFILE_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "REPTFILE"
+    },
+    {
+      "file": "TCATBALF_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "TCATBALF"
+    },
+    {
+      "file": "TRANBKP_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "TRANBKP"
+    },
+    {
+      "file": "TRANCATG_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "TRANCATG"
+    },
+    {
+      "file": "TRANFILE_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "TRANFILE"
+    },
+    {
+      "file": "TRANIDX_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "TRANIDX"
+    },
+    {
+      "file": "TRANREPT_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "TRANREPT"
+    },
+    {
+      "file": "TRANTYPE_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "TRANTYPE"
+    },
+    {
+      "file": "WAITSTEP_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "WAITSTEP"
+    },
+    {
+      "file": "XREFFILE_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "XREFFILE"
+    },
+    {
+      "file": "CREASTMT_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "CREASTMT"
+    },
+    {
+      "file": "FTPJCL_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "FTPJCL"
+    },
+    {
+      "file": "INTRDRJ1_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "INTRDRJ1"
+    },
+    {
+      "file": "INTRDRJ2_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "INTRDRJ2"
+    },
+    {
+      "file": "TXT2PDF1_jclsim.json",
+      "source_type": "EXECUTION_SIMULATED",
+      "program": "TXT2PDF1"
+    }
+  ]
+}

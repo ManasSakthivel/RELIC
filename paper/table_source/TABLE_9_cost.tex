@@ -1,0 +1,21 @@
+\begin{table}[t]
+\small
+\centering
+\caption{Computational cost. Apple M-series CPU, Python 3.11.15, macOS arm64.}
+\label{table:cost}
+\begin{tabular}{llll}
+\toprule
+Phase & Input & Approx.\ Time & Notes \\
+\midrule
+JCL parsing & 98 files & $<$1\,s & Deterministic \\
+Contract extraction & 98 BCGs & $<$1\,s & Deterministic \\
+Mutation benchmark & 440 mutations & $<$2\,s & In-memory \\
+GnuCOBOL compile & 2 programs & $<$5\,s & cobc 3.2.0 \\
+JCL trace generation & 20 files & $<$1\,s & Parser-derived \\
+Bootstrap CI (10k iter) & 139 GT items & $<$1\,s & NumPy \\
+Full test suite & 265 tests & 0.14\,s & pytest \\
+\midrule
+\textbf{Total (excl.\ LLM)} & & \textbf{$<$10\,s} & \\
+\bottomrule
+\end{tabular}
+\end{table}

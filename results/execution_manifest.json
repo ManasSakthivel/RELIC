@@ -1,0 +1,123 @@
+{
+  "created_at": "2026-08-14T16:47:04.095596+00:00",
+  "gnucobol_available": false,
+  "gnucobol_version": null,
+  "trace_generation_method": "SYNTHETIC_STATIC",
+  "gnucobol_limitation_note": "GnuCOBOL (cobc) was not found on the host system at any expected path (PATH, homebrew, or explicit 'gnucobol' binary). No real instrumented execution was possible. All traces in this manifest are SYNTHETIC_STATIC.",
+  "adapter_status": {
+    "GnuCOBOLTraceAdapter": "LOADS_OK",
+    "JCLSimulatorAdapter": "LOADS_OK",
+    "import_path": "legacy_contract.dynamic_analysis.gnucobol_adapter",
+    "validated_at": "2026-08-14T16:47:04.095596+00:00"
+  },
+  "traces": {
+    "dev": [
+      {
+        "file": "traces/dev/ACCTFILE_synthetic.json",
+        "program": "ACCTFILE",
+        "execution_id": "synth-acctfile-20260814",
+        "source_type": "SYNTHETIC_STATIC",
+        "event_count": 6,
+        "operations": {
+          "JOB_START": 1,
+          "STEP_START": 1,
+          "OPEN": 1,
+          "PRODUCE": 1,
+          "STEP_END": 1,
+          "JOB_END": 1
+        },
+        "integrity_check": "ALL_CORRECT",
+        "may_promote_to_static_dynamic_supported": false,
+        "purpose": "Pipeline connectivity testing only"
+      },
+      {
+        "file": "traces/dev/CBACT01C_synthetic.json",
+        "program": "CBACT01C",
+        "execution_id": "synth-cbact01c-20260814",
+        "source_type": "SYNTHETIC_STATIC",
+        "event_count": 10,
+        "operations": {
+          "JOB_START": 1,
+          "STEP_START": 1,
+          "EXECUTE": 1,
+          "CONSUME": 1,
+          "READ": 1,
+          "WRITE": 1,
+          "PRODUCE": 1,
+          "RETURN": 1,
+          "STEP_END": 1,
+          "JOB_END": 1
+        },
+        "integrity_check": "ALL_CORRECT",
+        "may_promote_to_static_dynamic_supported": false,
+        "purpose": "Pipeline connectivity testing only"
+      },
+      {
+        "file": "traces/dev/REPORT_synthetic.json",
+        "program": "REPORT",
+        "execution_id": "synth-report-20260814",
+        "source_type": "SYNTHETIC_STATIC",
+        "event_count": 10,
+        "operations": {
+          "JOB_START": 1,
+          "STEP_START": 1,
+          "EXECUTE": 1,
+          "CONSUME": 1,
+          "READ": 1,
+          "WRITE": 1,
+          "PRODUCE": 1,
+          "RETURN": 1,
+          "STEP_END": 1,
+          "JOB_END": 1
+        },
+        "integrity_check": "ALL_CORRECT",
+        "may_promote_to_static_dynamic_supported": false,
+        "purpose": "Pipeline connectivity testing only"
+      }
+    ],
+    "validation": [],
+    "held_out": []
+  },
+  "coverage_summary": {
+    "programs_traced": 3,
+    "total_events": 26,
+    "event_types": {
+      "JOB_START": 3,
+      "STEP_START": 3,
+      "OPEN": 1,
+      "EXECUTE": 2,
+      "CONSUME": 2,
+      "READ": 2,
+      "WRITE": 2,
+      "PRODUCE": 3,
+      "RETURN": 2,
+      "STEP_END": 3,
+      "JOB_END": 3
+    },
+    "coverage_note": "Coverage figures are NOT meaningful for SYNTHETIC_STATIC traces. These counts reflect the synthetic event schema only, not actual program behavior."
+  },
+  "scientific_integrity": {
+    "source_type_label": "SYNTHETIC_STATIC",
+    "all_events_correctly_labeled": true,
+    "may_be_used_for_rq3_h3": false,
+    "may_promote_contracts": false,
+    "contract_promotion_rule": "SYNTHETIC_STATIC traces may NOT advance contract status to STATIC_DYNAMIC_SUPPORTED. Only EXECUTION or EXECUTION_SIMULATED traces from real GnuCOBOL execution may do so.",
+    "not_observed_vs_contradicted": "NOT_OBSERVED != CONTRADICTED. These synthetic traces do not constitute evidence of absence for any behavioral contract."
+  },
+  "limitations": [
+    "GnuCOBOL not installed on host: no real instrumented execution possible",
+    "All traces are SYNTHETIC_STATIC — structurally plausible, not behaviorally observed",
+    "SYNTHETIC_STATIC traces cannot be used to validate temporal ordering (RQ3/H3a, H3b)",
+    "SYNTHETIC_STATIC traces cannot reduce FPR for contracts — they have no real execution evidence",
+    "Validation and held_out trace sets are empty — no coverage data available",
+    "VSAM file access not testable even with GnuCOBOL (would apply if cobc were available)",
+    "GDG (Generation Data Group) access not testable with GnuCOBOL",
+    "z/OS ABEND handling not testable with GnuCOBOL"
+  ],
+  "remediation": {
+    "to_enable_execution_simulated_traces": "Install GnuCOBOL: brew install gnucobol (macOS) or apt-get install gnucobol (Linux), then re-run Subagent C",
+    "to_enable_real_execution_traces": "Requires z/OS environment with SMF record access",
+    "alternative": "Use JCLSimulatorAdapter with a batch-simulation script that invokes GnuCOBOL-compiled COBOL programs"
+  },
+  "notes": "All traces labeled SYNTHETIC_STATIC (GnuCOBOL unavailable). NOT z/OS production execution. NOT GnuCOBOL instrumented execution. These stubs exist solely for pipeline connectivity testing."
+}

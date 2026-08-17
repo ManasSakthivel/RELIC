@@ -1,0 +1,58 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.193125+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "CBIMPORT",
+  "execution_id": "jclsim-cbimport-20260816160526193074",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/CBIMPORT.jcl",
+  "n_steps_ordered": 1,
+  "events": [
+    {
+      "event_id": "1d64893a-6578-4491-afd0-7814792e09ca",
+      "execution_id": "jclsim-cbimport-20260816160526193074",
+      "artifact_id": "3a61040ecd51ebc1",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.193083+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "CBIMPORT",
+        "job_entity_id": "3a61040ecd51ebc1",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "3686beb7-4f57-44be-ae06-086993373a8c",
+      "execution_id": "jclsim-cbimport-20260816160526193074",
+      "artifact_id": "ee7af9e1e8b2c53e",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.193083+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP01",
+        "step_index": 0,
+        "jcl_file": "CBIMPORT.jcl"
+      }
+    },
+    {
+      "event_id": "4c59007b-bce4-4fb4-9918-b07fa457abf9",
+      "execution_id": "jclsim-cbimport-20260816160526193074",
+      "artifact_id": "ee7af9e1e8b2c53e",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.693083+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP01",
+        "step_index": 0,
+        "jcl_file": "CBIMPORT.jcl"
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+  research:
+    build: .
+    volumes:
+      - ./datasets:/workspace/datasets:ro
+      - ./traces:/workspace/traces
+      - ./results:/workspace/results
+      - ./figures:/workspace/figures
+      - ./paper:/workspace/paper
+    environment:
+      - PYTHONPATH=/workspace/src
+      - SEED=42
+      - LCB_ENV=research
+    command: make reproduce-paper1
+
+  ui:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./ui/src:/app/src
+    environment:
+      - VITE_API_URL=http://api:8000
+
+  api:
+    build: .
+    command: uvicorn legacy_contract.api.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/workspace/src
+      - ./datasets:/workspace/datasets:ro
+      - ./traces:/workspace/traces
+    environment:
+      - PYTHONPATH=/workspace/src
+
+  db:
+    image: neo4j:5.13
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=none
+    volumes:
+      - neo4j_data:/data
+
+volumes:
+  neo4j_data:

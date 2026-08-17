@@ -1,0 +1,22 @@
+\begin{table}[t]
+\small
+\centering
+\caption{Fault-grounded mutation taxonomy. All operators are empirically documented; see \texttt{docs/failure\_taxonomy.md}.}
+\label{table:mutations}
+\begin{tabular}{llrr}
+\toprule
+Operator & Failure Category & N Evaluated & N N/A \\
+\midrule
+REORDER\_JOBS & F1 — Job ordering & 29 & 26 \\
+REMOVE\_JOB\_DEPENDENCY & F1 — Job ordering & 28 & 27 \\
+ALTER\_STEP\_SEQUENCE & F1 — Job ordering & 28 & 27 \\
+REMOVE\_DATASET\_INIT & F2 — Resource & 1 & 54 \\
+CHANGE\_DATASET\_NAME & F2 — Resource & 1 & 54 \\
+ALTER\_FILE\_DEP\_ORDER & F2 — Resource & 1 & 54 \\
+SUPPRESS\_RC\_CHECK & F3 — RC propagation & 8 & 47 \\
+ALTER\_ERROR\_BRANCH & F3 — RC propagation & 8 & 47 \\
+\midrule
+\textbf{Total} & & \textbf{104} & \textbf{336} \\
+\bottomrule
+\end{tabular}
+\end{table}

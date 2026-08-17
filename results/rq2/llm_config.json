@@ -1,0 +1,13 @@
+{
+  "provider": "groq",
+  "model": "llama-3.3-70b-versatile",
+  "base_url": "https://api.groq.com/openai/v1",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 400,
+  "prompt_version_C": "llm_only_v2_blinded",
+  "prompt_version_D": "dep_llm_v2_blinded",
+  "note_v1_discarded": "v1 prompts leaked semantics-preserving context for negatives; all v1 runs were discarded. Only v2_blinded results are reported.",
+  "run_timestamp": "2026-08-17T03:16:07.142852+00:00",
+  "note": "API key loaded from environment only, never stored."
+}

@@ -1,0 +1,65 @@
+# Confidence weights for ConfidenceVector aggregation.
+#
+# SCIENTIFIC INTEGRITY RULES:
+# 1. These weights are set BEFORE any experiment is run (see docs/research_decisions.md D-004).
+# 2. Weights must NOT be changed after the first experiment run to fit observed results.
+# 3. The locked flag must be set to true (with locked_at timestamp) after the first run.
+# 4. If weights need revision after analysis, document the revision in
+#    docs/research_decisions.md with full rationale and rerun ALL experiments.
+# 5. These are evidence-strength weights, NOT probabilities. ConfidenceVector.aggregate()
+#    returns a normalized score in [0,1], not P(contract is valid).
+#
+# Weight justification (see also docs/research_decisions.md D-004):
+#   dynamic_support (0.30): Highest weight because execution evidence is the most
+#     direct form of behavioral grounding. However, dynamic evidence is often
+#     incomplete — this weight reflects ideal evidence, not coverage.
+#   static_support (0.25): Strong structural evidence from deterministic parser output.
+#   human_validation (0.20): Expert annotation adds semantic interpretation not
+#     captured by automated analysis.
+#   cross_artifact_support (0.15): Evidence corroborated across multiple artifact
+#     types (JCL + COBOL + copybook) is more reliable.
+#   provenance_quality (0.10): Complete provenance reduces uncertainty but does
+#     not itself validate the contract.
+#   execution_frequency (0.10): Contracts observed in many trace executions are
+#     more likely to be real; but rare contracts may still be genuine.
+#
+# Note: weights do not sum to 1.0 — this is intentional. The aggregate() method
+# applies them as a weighted sum over the [0,1] dimension scores, then applies
+# ambiguity_penalty as a multiplicative reduction.
+# The raw sum of weights = 0.25+0.30+0.15+0.10+0.20+0.10 = 1.10 (slight overcount
+# compensated by ambiguity_penalty and clamping to [0,1]).
+
+weights:
+  static_support: 0.25
+  dynamic_support: 0.30
+  cross_artifact_support: 0.15
+  provenance_quality: 0.10
+  human_validation: 0.20
+  execution_frequency: 0.10
+
+# Weight lock controls:
+#   locked: false  — weights may be adjusted during development phase
+#   locked: true   — weights are frozen; experiments are running or complete
+#   locked_at:     — ISO timestamp set automatically when locked
+#
+# The ExperimentRunner checks this flag and refuses to run if weights were
+# modified after locked_at (leakage prevention).
+locked: true
+locked_at: "2026-08-14T22:00:00Z"
+lock_reason: >
+  Weights locked after first experiment run (RQ1 executed 2026-08-14).
+  RQ2 mutation benchmark also complete.
+  Weights must not change without full experimental restart.
+  See docs/research_decisions.md D-004 for rationale.
+
+# Calibration reference:
+#   After RQ1 runs, compute Brier score for confidence calibration
+#   (see MetricsCalculator.calibration_brier_score).
+#   If Brier score > 0.25, revisit weights with developer-set reasoning.
+#   Do NOT tune weights to minimize Brier score on held-out data.
+calibration_brier_score_threshold: 0.25
+calibration_note: >
+  Brier score measures whether high-confidence contracts are more often correct.
+  It is NOT a signal to optimize weights post-hoc. If calibration is poor,
+  investigate whether the confidence model is appropriate, not whether
+  different weights would improve metrics on the test set.

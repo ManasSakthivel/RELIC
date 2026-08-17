@@ -1,0 +1,972 @@
+{
+  "generated_at": "2026-08-14T16:44:53.949381+00:00",
+  "artifact_count": 161,
+  "artifacts": [
+    {
+      "path": "app/app-authorization-ims-db2-mq/cbl/CBPAUP0C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "309468a5c4745f92c6dcf6ed28b396334b2f131ced78eb43eda962a63d2b174e",
+      "size_bytes": 14832
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cbl/COPAUA0C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "224856ce6ef1b7417aefcec033a36a9315c0005decf9f11d21d11e9240e3f8fa",
+      "size_bytes": 81437
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cbl/COPAUS0C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "7ab6dadad6d9d738f6a0cb402f394c25ccda5f7fef26ad644feeb76c11065254",
+      "size_bytes": 44043
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cbl/COPAUS1C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "27a969cbee69426fa1056053e676041430e99399912f0e27ee1f1a454093c21e",
+      "size_bytes": 23000
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cbl/COPAUS2C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "57232060f8bdaecc679b74e93fcf91d93cffd400326c001bd187ab5fad14789e",
+      "size_bytes": 19050
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cbl/DBUNLDGS.CBL",
+      "artifact_type": "COBOL",
+      "sha256": "13c409d1b14b52c4d334c9297aaa7dafa209901569f809127f3831d780722e33",
+      "size_bytes": 29195
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cbl/PAUDBLOD.CBL",
+      "artifact_type": "COBOL",
+      "sha256": "5694a2ed8a12dd4dc82717b401c655866a0e1f9abb0acf395151ead2b0cb31a7",
+      "size_bytes": 29438
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cbl/PAUDBUNL.CBL",
+      "artifact_type": "COBOL",
+      "sha256": "cf174417cd833193fec178a782fa8d7cabb95da9a8c2ca709af598c45f485625",
+      "size_bytes": 25226
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy/CCPAUERY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "df7164d2732832f109a8efa71055931174c58af6889a17e59a4b2aa85ce62f03",
+      "size_bytes": 2779
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy/CCPAURLY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "8d661ea459eff6c274f14a4dd93158222ab9700590421eebf30fe9e4edf56bfa",
+      "size_bytes": 1492
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy/CCPAURQY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "f51a28f11413bde18ca6401a9a627ca722844fbd6c4d4e190b5ca4977e006fec",
+      "size_bytes": 2448
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy/CIPAUDTY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "5d67c37c828dc2278339cdd1902a14305799a773d999a329e30c0801e9c80077",
+      "size_bytes": 3887
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy/CIPAUSMY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "bb6eea3270e29ba465147652faea25923588ff3be57a4fc800fbc4b7a26fff29",
+      "size_bytes": 2050
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy/IMSFUNCS.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "5ea447d14d95fd603c6ab0cf8405f130540b10e41ffea40eb85b8de3daa6e13b",
+      "size_bytes": 1545
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy/PADFLPCB.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "616e5d500d4a4c8e9ba63016c1b93ede555130b8c61d78199a84387dc809073a",
+      "size_bytes": 1334
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy/PASFLPCB.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "5bb13aa1fe948ba79e211725e4ebe24f34e8d00da0641a4b75108403a07da34f",
+      "size_bytes": 1334
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy/PAUTBPCB.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "a8fa31077ee1c72e2a97e2e39d7911df6b5e6e75ab5fec5ea86aa5143e36c9cf",
+      "size_bytes": 1334
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy-bms/COPAU00.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "7bd332d0966e4b0a289521716d5ef5f00c8f55e50f5992dce10e15dbbf04da7d",
+      "size_bytes": 61372
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/cpy-bms/COPAU01.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "bee60b3bfeb37d5df0d0ff3182f564bd1aa8cb1f36100c4f7ed4fc42108a7937",
+      "size_bytes": 27352
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+      "artifact_type": "JCL",
+      "sha256": "99e84914708d330fd3b8d19ce8b731ed5acd9b4e0dbdc16af8823802a01b68e4",
+      "size_bytes": 1732
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+      "artifact_type": "JCL",
+      "sha256": "58539078f5e86b3a08168bbc4d8e379cedeb34d168ad0eb6e6f94fc07bf87e8d",
+      "size_bytes": 3412
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+      "artifact_type": "JCL",
+      "sha256": "39148453bd6d29707f332474dddd2b6b9d7289010e4bf281d91a4a39e1f30b4b",
+      "size_bytes": 1974
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+      "artifact_type": "JCL",
+      "sha256": "d1e6a1d45659be1d22e79eb6c94156b6b55ac3745c13e111f74747fb85440606",
+      "size_bytes": 1996
+    },
+    {
+      "path": "app/app-authorization-ims-db2-mq/jcl/UNLDPADB.JCL",
+      "artifact_type": "JCL",
+      "sha256": "3fa6ee3e8f1fb86833d5a28be923deb85f51a47b927ab854ed244b6048f5297c",
+      "size_bytes": 2626
+    },
+    {
+      "path": "app/app-transaction-type-db2/cbl/COBTUPDT.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "0213fd5718c6aadd3fba6bbfb1818456d75d10843181bff63aca9ff57d39e87c",
+      "size_bytes": 19197
+    },
+    {
+      "path": "app/app-transaction-type-db2/cbl/COTRTLIC.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "916a5fe2279ad626147990d8f86fac1e4b296f827889485b020cc310b5323601",
+      "size_bytes": 85529
+    },
+    {
+      "path": "app/app-transaction-type-db2/cbl/COTRTUPC.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "c16e40c391c0ad2d3e797a0e01144ef5b78d3b0db0a1771411a95a9d08b01f67",
+      "size_bytes": 137862
+    },
+    {
+      "path": "app/app-transaction-type-db2/cpy/CSDB2RPY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "6f7d0bd7de7d860eae16d783bb962e83acfb84d4fdc22ae71131fa2a740510d5",
+      "size_bytes": 6923
+    },
+    {
+      "path": "app/app-transaction-type-db2/cpy/CSDB2RWY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "ba1e08f4f6ab85058742c1a2392e7f110bc59e0080a2d074904211f2d74e0024",
+      "size_bytes": 3676
+    },
+    {
+      "path": "app/app-transaction-type-db2/cpy-bms/COTRTLI.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "ece821940dafaf827eb1e3a1720aa9cfad43e3f1e0b42968ed322473edde1616",
+      "size_bytes": 19686
+    },
+    {
+      "path": "app/app-transaction-type-db2/cpy-bms/COTRTUP.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "36f1acf35569976b97aa4ae3bf8307c36c32d444b007b5f70c148f73601e5a11",
+      "size_bytes": 8140
+    },
+    {
+      "path": "app/app-transaction-type-db2/jcl/CREADB21.jcl",
+      "artifact_type": "JCL",
+      "sha256": "9ca64a0007f94cee65cdc2c4817ae433a72818831d654bf192613e6c6e7c4cc8",
+      "size_bytes": 6804
+    },
+    {
+      "path": "app/app-transaction-type-db2/jcl/MNTTRDB2.jcl",
+      "artifact_type": "JCL",
+      "sha256": "9e8a11746c47ea762258e8b5d96a6852f35e7dce4ea456a31a2e9f76f127040e",
+      "size_bytes": 1799
+    },
+    {
+      "path": "app/app-transaction-type-db2/jcl/TRANEXTR.jcl",
+      "artifact_type": "JCL",
+      "sha256": "11649702d1a495e52c47493a9fc618c383e2932ea81444525b3e89b69edce598",
+      "size_bytes": 4707
+    },
+    {
+      "path": "app/app-vsam-mq/cbl/COACCT01.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "92776ed2801da1148839a9ed98b6537de4b41e0c7f050c8dcaae0d4e4ea543b5",
+      "size_bytes": 50220
+    },
+    {
+      "path": "app/app-vsam-mq/cbl/CODATE01.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "97fcba3faa272c98778eb7ef50ef87faec7290168e24a9b1714996453d660ddb",
+      "size_bytes": 42444
+    },
+    {
+      "path": "app/cbl/CBACT01C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "f8eb6e3a561ff96a1889a8f777a8998850a11dddae221da2c5018067d7b95551",
+      "size_bytes": 17450
+    },
+    {
+      "path": "app/cbl/CBACT02C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "d290cbbbec1e25859847d9dfe6b28040cd6b09c3b71747e39de7b4713d838e76",
+      "size_bytes": 14096
+    },
+    {
+      "path": "app/cbl/CBACT03C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "ee1019bc3ef7bc4e0f807b6e9b7167c9386ee7c2f647c63dfddc6fc464487855",
+      "size_bytes": 14101
+    },
+    {
+      "path": "app/cbl/CBACT04C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "5084bb8b0c9a0f0199f737487ae1863f12e43cabbdc459a62b6b67bedc683cc4",
+      "size_bytes": 52479
+    },
+    {
+      "path": "app/cbl/CBCUS01C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "233dbc3bc33a3b9ac555922085a92be56e88d16316bff624b5723c4c36c99714",
+      "size_bytes": 6914
+    },
+    {
+      "path": "app/cbl/CBEXPORT.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "598e3c9055b96b79266910e080bc24048eb308ee61afc828c06dbade9f501d38",
+      "size_bytes": 24197
+    },
+    {
+      "path": "app/cbl/CBIMPORT.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "0eccb28695cb3a8ea6f6ea7da26d1b48a4529787f6130b2c98bead33bc661967",
+      "size_bytes": 20239
+    },
+    {
+      "path": "app/cbl/CBSTM03A.CBL",
+      "artifact_type": "COBOL",
+      "sha256": "23c8753b6b4e0c24d4560c83861fe8162626bab195faec0fe88cf80b8bf432b5",
+      "size_bytes": 35574
+    },
+    {
+      "path": "app/cbl/CBSTM03B.CBL",
+      "artifact_type": "COBOL",
+      "sha256": "ac004f7f40dcb3f2a14dfb83a743f83fed9383675bc93452f3424c40cb6475a7",
+      "size_bytes": 6983
+    },
+    {
+      "path": "app/cbl/CBTRN01C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "55c2aebd59528aa42b28878ba5ca4d17a00b3548fc25e4ce1529710d366fd576",
+      "size_bytes": 17967
+    },
+    {
+      "path": "app/cbl/CBTRN02C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "708f3cadc555acab63f11e2f3238f5372ac7180e6b01197bf960d96bf0d2e83f",
+      "size_bytes": 58890
+    },
+    {
+      "path": "app/cbl/CBTRN03C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "8691e625502b7efcfd7ba4ae61797132e7b68f3fd5fedcdcc7dd6488f6871eef",
+      "size_bytes": 52239
+    },
+    {
+      "path": "app/cbl/COACTUPC.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "b5bb7d6ccad022e0fc91b4dd1e971f49d184adf89b56abdce14eccff35b39396",
+      "size_bytes": 182463
+    },
+    {
+      "path": "app/cbl/COACTVWC.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "4f1e55176f69edfb55b7af7a161aceb8c3bc3bd1b2924a704a76256e0e751b54",
+      "size_bytes": 74764
+    },
+    {
+      "path": "app/cbl/COADM01C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "4e49afda5f685f3ebeb95ed04a93cf88df93d39c66d8d7f9ba2b9a3e00a1f690",
+      "size_bytes": 22736
+    },
+    {
+      "path": "app/cbl/COBIL00C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "b5c46039eb8fd2f7ed7d3ca379172e56fa87385a369023bef706b04986fe1cfb",
+      "size_bytes": 23426
+    },
+    {
+      "path": "app/cbl/COBSWAIT.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "38a8d28235e58509776f5c8c74c113d5848a7ac68fab753c55ab887221c3b43a",
+      "size_bytes": 2020
+    },
+    {
+      "path": "app/cbl/COCRDLIC.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "d6a9210ad3062bd657881fc3f0d2a7368db3ff4869594e0d6a878d8f410d87b6",
+      "size_bytes": 117376
+    },
+    {
+      "path": "app/cbl/COCRDSLC.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "d5af307fb4b1a155f03df9eea14b402d866a332360e14a1e37dbefe59b73363b",
+      "size_bytes": 71308
+    },
+    {
+      "path": "app/cbl/COCRDUPC.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "c245cf383a4a3f721773a13ca231eb76bd5ae75c1830d58c7aba898a554a0de9",
+      "size_bytes": 125961
+    },
+    {
+      "path": "app/cbl/COMEN01C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "c77747b4caaf00b45177a6449562b7f59ec336db832937595edef8b32fdce6fa",
+      "size_bytes": 12461
+    },
+    {
+      "path": "app/cbl/CORPT00C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "0b06bd5d4f38f17871de8985c439dfce7ed30d28e02b6ffeb8459e0cd8db4fc2",
+      "size_bytes": 28302
+    },
+    {
+      "path": "app/cbl/COSGN00C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "4f901ae6b113eebae60ae1d94b30f8cb9906d031a4419770bf56980bdf97e377",
+      "size_bytes": 10288
+    },
+    {
+      "path": "app/cbl/COTRN00C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "51479f131b4fb300008403f0c4f9fdbde56f22a7fb341c782492da29f0d23bbe",
+      "size_bytes": 29270
+    },
+    {
+      "path": "app/cbl/COTRN01C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "fc24ff879ac6ae12bc6817554cb756f14c5e86e0ca2dd0037af49599887f03c0",
+      "size_bytes": 14244
+    },
+    {
+      "path": "app/cbl/COTRN02C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "dc33b4c797a98d2732070a223f43cc78992c2846681163a032e376630742b1ed",
+      "size_bytes": 33665
+    },
+    {
+      "path": "app/cbl/COUSR00C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "831433c6ec8306038c85cb86a8307f91dca48c26ef33a997f402187cbd9f4e04",
+      "size_bytes": 29285
+    },
+    {
+      "path": "app/cbl/COUSR01C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "aa131b1e3382dc6d101b42f1c97d4fb0c2fdd706819ed9f9a0187c82b30f3019",
+      "size_bytes": 12571
+    },
+    {
+      "path": "app/cbl/COUSR02C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "85d36699cbd3079320e689576ea8406d07ad78901f4f3a68a129b869359b46ca",
+      "size_bytes": 17611
+    },
+    {
+      "path": "app/cbl/COUSR03C.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "bcd68f08c145b3b9b9c809a7082834e9519d78b6f363a0d1c5ff9d9576dcf888",
+      "size_bytes": 15038
+    },
+    {
+      "path": "app/cbl/CSUTLDTC.cbl",
+      "artifact_type": "COBOL",
+      "sha256": "58c165dcfc3927232c02c152c673e3dee551587b85e7fe56ca67325c980eebb6",
+      "size_bytes": 11608
+    },
+    {
+      "path": "app/cpy/COADM02Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "86d4b5b5c89449126b2a37bb46458fe451a2523490d3c7f7f9c35d36199fe6b3",
+      "size_bytes": 5014
+    },
+    {
+      "path": "app/cpy/COCOM01Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "77097557ee4c365f62138328d3e280ce7aba5f81d418c6f16434f0fbb2aafa6c",
+      "size_bytes": 2714
+    },
+    {
+      "path": "app/cpy/CODATECN.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "8efc6b6d79bd46d65fcdc4e6a8e3778511fca76054f3fbae8e3075b0a2aa8fb1",
+      "size_bytes": 2723
+    },
+    {
+      "path": "app/cpy/COMEN02Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "433f5b373c2a42c3c83d62eef1dfb5b101265a9db62e42857ba58acf8c50011d",
+      "size_bytes": 5324
+    },
+    {
+      "path": "app/cpy/COSTM01.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "108170f314aa951281fdda321c4609c89638caee8d4d7085d08cdca5dc6bec36",
+      "size_bytes": 1999
+    },
+    {
+      "path": "app/cpy/COTTL01Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "5032bfa9428354bb4a62e8c82ba1efa7dcf6b80f27544ad99a81c8a8df8ed41b",
+      "size_bytes": 1642
+    },
+    {
+      "path": "app/cpy/CSDAT01Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "61dd7b01d974c13cd47f71774c613dd67996418a22fae730d09b246c0b710ad7",
+      "size_bytes": 3234
+    },
+    {
+      "path": "app/cpy/CSLKPCDY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "098d384b9580abd5b4b77ae9c33b8cb65b28be45390130b22c48c3714200cca2",
+      "size_bytes": 51399
+    },
+    {
+      "path": "app/cpy/CSMSG01Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "ef8ce44572885d63e46a02516f992cabbbc57ea94235000fd376325750e26eda",
+      "size_bytes": 1533
+    },
+    {
+      "path": "app/cpy/CSMSG02Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "0238a3a75e723272e0c287b46a52d365de8549dada1a73d15df75660ad7bd2ea",
+      "size_bytes": 1921
+    },
+    {
+      "path": "app/cpy/CSSETATY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "45000f93a9be6e8132262e53faa1db03ab1f20fbee4063272b890837216d1fcb",
+      "size_bytes": 1885
+    },
+    {
+      "path": "app/cpy/CSSTRPFY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "751bc1a625114a8660ee2172b70cdea135c259652d2305a2bfda25ff4cf34853",
+      "size_bytes": 6603
+    },
+    {
+      "path": "app/cpy/CSUSR01Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "37c34094dc4124bc6255e0b06a0387442f4f0dd9d51dd6623b559d370aa0d2cb",
+      "size_bytes": 1582
+    },
+    {
+      "path": "app/cpy/CSUTLDPY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "80f83e3d55ff84c0d9088e68399f30ebad4db763280d47bdec220eadc45ba2af",
+      "size_bytes": 13061
+    },
+    {
+      "path": "app/cpy/CSUTLDWY.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "ecba6f07ea9db7c6f58f7fc1c5227179e8b80299f79a04743c6adb9f08190a1a",
+      "size_bytes": 5263
+    },
+    {
+      "path": "app/cpy/CUSTREC.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "f87a0a041fbd8f38dc9c23a9519b917af9c7008527e9cb924f91c2fb4e0a2ecc",
+      "size_bytes": 1518
+    },
+    {
+      "path": "app/cpy/CVACT01Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "81a08bad15af5664326a6f0af3650f570821c4857ffdec3a6a39f91f07dca728",
+      "size_bytes": 1125
+    },
+    {
+      "path": "app/cpy/CVACT02Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "9f1c62ef31b9d541712f1ed28f79e011ea7338611f5e0f30f2e1cbf624181223",
+      "size_bytes": 730
+    },
+    {
+      "path": "app/cpy/CVACT03Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "ffc6079e09b28739e154bf6c1e1c36d408209faa91f6cf7008078dc596a1c370",
+      "size_bytes": 736
+    },
+    {
+      "path": "app/cpy/CVCRD01Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "52b6dbe09f7648f3fdbd7c00f4683d434fe6b631f6c8854466a24f42c1c92445",
+      "size_bytes": 3436
+    },
+    {
+      "path": "app/cpy/CVCUS01Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "944fd9a8eb10a683d0db97b9a87f2151982f649970287eb74358826056af25f8",
+      "size_bytes": 1588
+    },
+    {
+      "path": "app/cpy/CVEXPORT.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "49d07843c9bd6f1a8f8eeb65f1085dabbced582f825773a7772970d1146409f4",
+      "size_bytes": 6168
+    },
+    {
+      "path": "app/cpy/CVTRA01Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "50637f13692c89b17a2fc60d249dc54e9eb3569d933afca3cdcf65b491a9d5ba",
+      "size_bytes": 898
+    },
+    {
+      "path": "app/cpy/CVTRA02Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "7828fae489c59944b4310e223028a8d3a525ccf4ead113c062bcaff04b52bf9c",
+      "size_bytes": 898
+    },
+    {
+      "path": "app/cpy/CVTRA03Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "fb15dbc4a6924cbddce0704932f9e61c067ac10004cd00839dff0ed7c7bb0667",
+      "size_bytes": 655
+    },
+    {
+      "path": "app/cpy/CVTRA04Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "89803bc13a06347e1f3d8a599a5383b87235b203dce9f18a486bc233186479f8",
+      "size_bytes": 817
+    },
+    {
+      "path": "app/cpy/CVTRA05Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "d7bde0e78ff608497087b9909c889ed39e347269f964bda767b92b547fbb5fec",
+      "size_bytes": 1546
+    },
+    {
+      "path": "app/cpy/CVTRA06Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "c5c69f1b86c5a10156d3c5881d7cf387e6b925aae32825360f85bf4056a554a1",
+      "size_bytes": 1538
+    },
+    {
+      "path": "app/cpy/CVTRA07Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "72ba597b1a40e1e6cf908e15da9e6a818a0ab899ef1d27d15edeb074963102fa",
+      "size_bytes": 5758
+    },
+    {
+      "path": "app/cpy/UNUSED1Y.cpy",
+      "artifact_type": "COPYBOOK",
+      "sha256": "91ad4ceffd87a40f5071dd4f0d3a08dc1253d76d2f0b3ecfc03490f7526b78e3",
+      "size_bytes": 406
+    },
+    {
+      "path": "app/cpy-bms/COACTUP.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "2ae13a55cb35c63988c17e96744ce77dfda9663896e65061b818f47d9be983dc",
+      "size_bytes": 26048
+    },
+    {
+      "path": "app/cpy-bms/COACTVW.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "f3bf70a636aecb5874518ccc53f9826bcc69070b8307bdc551b2c57b9dd61dce",
+      "size_bytes": 18399
+    },
+    {
+      "path": "app/cpy-bms/COADM01.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "ced4c34fdb3fa4284561d83ff8e273cef2a1b45cefc36e56c34da6fec5528006",
+      "size_bytes": 10506
+    },
+    {
+      "path": "app/cpy-bms/COBIL00.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "a8d1a371182c73b41b4effd2d2a9c3b005f503cb0c8e88f5b2f5b5062e739e85",
+      "size_bytes": 5886
+    },
+    {
+      "path": "app/cpy-bms/COCRDLI.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "f5029dc12e672443e8fa33b764f60bf7db2e7ecfbc57d733289d70b382d995af",
+      "size_bytes": 22016
+    },
+    {
+      "path": "app/cpy-bms/COCRDSL.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "3e099c4a1857986dd7fa5253d4419aeee0a2f27c76f34d9081ac5a724f45bfd1",
+      "size_bytes": 8172
+    },
+    {
+      "path": "app/cpy-bms/COCRDUP.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "6b874a8dd290a4a6c3baa7e89768a91e0feabb4923ec5dd3db721687bdfa897e",
+      "size_bytes": 9074
+    },
+    {
+      "path": "app/cpy-bms/COMEN01.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "21275363519e57f47c5c7842178344208f3ad773a551e74e5eeff285c775ad5c",
+      "size_bytes": 10506
+    },
+    {
+      "path": "app/cpy-bms/CORPT00.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "7da2980799bcc3df642d02d09fd00fafb890cdb487e034f2f9b5b0e0767ce03b",
+      "size_bytes": 9012
+    },
+    {
+      "path": "app/cpy-bms/COSGN00.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "e2a2f8f6e76e1613cbd8f0baaca87d571a49a7bc219d16a732e4e4ecd7485407",
+      "size_bytes": 6302
+    },
+    {
+      "path": "app/cpy-bms/COTRN00.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "18c9ab55bd2ed9345f9fda9e4d16ed710ef615fad34076fad7d63d2fc1ac6b77",
+      "size_bytes": 28494
+    },
+    {
+      "path": "app/cpy-bms/COTRN01.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "23ba94dd138ea687701a74eb629d5c5c484b43834e03ebf44f162e43c15a4420",
+      "size_bytes": 10784
+    },
+    {
+      "path": "app/cpy-bms/COTRN02.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "1eae5b624b8e7f97c24e94a373065d5c648340e21019bd7736dc663ab0d8642d",
+      "size_bytes": 10802
+    },
+    {
+      "path": "app/cpy-bms/COUSR00.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "88c9031484d3bd2da62488c6941c431ee3b910b3feaf7918762968ba0bb9c318",
+      "size_bytes": 28472
+    },
+    {
+      "path": "app/cpy-bms/COUSR01.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "a263a33ce46ea0b50ade18e4e18dd27dc848a516a9851a16d015c7240de82926",
+      "size_bytes": 6756
+    },
+    {
+      "path": "app/cpy-bms/COUSR02.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "f4bb7686c024300fc72bebf01577c4fd03699625cf80101e4951e5c977503214",
+      "size_bytes": 6766
+    },
+    {
+      "path": "app/cpy-bms/COUSR03.CPY",
+      "artifact_type": "COPYBOOK",
+      "sha256": "e0bb6cff954a736c69ead4d7b649116e8a240e771b206fca0a4fd11531d4b585",
+      "size_bytes": 6316
+    },
+    {
+      "path": "app/jcl/ACCTFILE.jcl",
+      "artifact_type": "JCL",
+      "sha256": "febba716137a3f59302ef1136c60dccce4d07d32e1d118b15d48f99266dea9e7",
+      "size_bytes": 4880
+    },
+    {
+      "path": "app/jcl/CARDFILE.jcl",
+      "artifact_type": "JCL",
+      "sha256": "0240faee5aec80d976ce0b15a85f101fa0f901b09b72d64545daa09858ddcc0c",
+      "size_bytes": 9947
+    },
+    {
+      "path": "app/jcl/CBADMCDJ.jcl",
+      "artifact_type": "JCL",
+      "sha256": "364243e503e92d38af82e86459677c92a6cb03c0ecc25c6f81ca29b32780f678",
+      "size_bytes": 6408
+    },
+    {
+      "path": "app/jcl/CBEXPORT.jcl",
+      "artifact_type": "JCL",
+      "sha256": "2af5ab38310c86231f9374618b5ee488b494ff79d0158ab460659616002ca54f",
+      "size_bytes": 2947
+    },
+    {
+      "path": "app/jcl/CBIMPORT.jcl",
+      "artifact_type": "JCL",
+      "sha256": "c3e72035f1c27f51e301d3d198e9a85bd2f55c6f91c6bf77249022f18775573b",
+      "size_bytes": 2755
+    },
+    {
+      "path": "app/jcl/CLOSEFIL.jcl",
+      "artifact_type": "JCL",
+      "sha256": "6a9adef38b7b67074851ac6263a5f40b9d47e51aa0e03f98ab87a201c3b6032b",
+      "size_bytes": 2235
+    },
+    {
+      "path": "app/jcl/COMBTRAN.jcl",
+      "artifact_type": "JCL",
+      "sha256": "ab60da6cfdc8c4ec66c8b950540553bf35e91dc1e61a1dd4ada5bb888011c85c",
+      "size_bytes": 3662
+    },
+    {
+      "path": "app/jcl/CREASTMT.JCL",
+      "artifact_type": "JCL",
+      "sha256": "d32627022d7686d1811ba253faa2c5d86295c8055428b2a610a27d8f84751950",
+      "size_bytes": 4457
+    },
+    {
+      "path": "app/jcl/CUSTFILE.jcl",
+      "artifact_type": "JCL",
+      "sha256": "3f222d940612015b0c3b532253e34e8e60f02a670dd780a10b9db1f90e8deea7",
+      "size_bytes": 6401
+    },
+    {
+      "path": "app/jcl/DALYREJS.jcl",
+      "artifact_type": "JCL",
+      "sha256": "2ea635d82002b7b2292b107598032f9e4963f4b9a9135f418f67343c594c29f3",
+      "size_bytes": 2233
+    },
+    {
+      "path": "app/jcl/DEFCUST.jcl",
+      "artifact_type": "JCL",
+      "sha256": "488bddaab9561e741bff7569c17413bed9fc833e17b658dbbe94ca663de980b3",
+      "size_bytes": 2415
+    },
+    {
+      "path": "app/jcl/DEFGDGB.jcl",
+      "artifact_type": "JCL",
+      "sha256": "4e515d5e5fa999382ff2852897ec21a14ff707133fef2e2246976aac789285c0",
+      "size_bytes": 4744
+    },
+    {
+      "path": "app/jcl/DEFGDGD.jcl",
+      "artifact_type": "JCL",
+      "sha256": "278015ffb3a0c0b4694a0a5e4ade10060bf6c6fca10413353bf92c5fc64e7a02",
+      "size_bytes": 3717
+    },
+    {
+      "path": "app/jcl/DISCGRP.jcl",
+      "artifact_type": "JCL",
+      "sha256": "ef70df333b0acbf77f977df607cbaa559d18d8d0213eac93e478f2f0d4b447bb",
+      "size_bytes": 4904
+    },
+    {
+      "path": "app/jcl/DUSRSECJ.jcl",
+      "artifact_type": "JCL",
+      "sha256": "02b0b78847e722b133b23d8f6152471214ea65d4f4c08692a5f42425987ca3c4",
+      "size_bytes": 4060
+    },
+    {
+      "path": "app/jcl/ESDSRRDS.jcl",
+      "artifact_type": "JCL",
+      "sha256": "9bec766029968057b831f539cc91b84e4e1d8ee22aa3de5ba6b509f8a698de77",
+      "size_bytes": 5067
+    },
+    {
+      "path": "app/jcl/FTPJCL.JCL",
+      "artifact_type": "JCL",
+      "sha256": "fecb67d223c6b31a8004175e4187a0211c0484e04851f80a4c11577a1dec2ea9",
+      "size_bytes": 1612
+    },
+    {
+      "path": "app/jcl/INTCALC.jcl",
+      "artifact_type": "JCL",
+      "sha256": "61afa664a807558e58213641d9f3317ab3b354a350c4c1536a630897d194d275",
+      "size_bytes": 2964
+    },
+    {
+      "path": "app/jcl/INTRDRJ1.JCL",
+      "artifact_type": "JCL",
+      "sha256": "f986f004a306a49728a138d3ee8c11f39fcaded1c36292ff0c68c068420dc4dd",
+      "size_bytes": 757
+    },
+    {
+      "path": "app/jcl/INTRDRJ2.JCL",
+      "artifact_type": "JCL",
+      "sha256": "aac63659b8c44b39c31d6e3ddf510f780f69341a734b66ba879ffcea1c060134",
+      "size_bytes": 615
+    },
+    {
+      "path": "app/jcl/OPENFIL.jcl",
+      "artifact_type": "JCL",
+      "sha256": "1831990c78749793661ba75f46007810fd1fb0c237e6220623bc4795e2c7e87e",
+      "size_bytes": 2232
+    },
+    {
+      "path": "app/jcl/POSTTRAN.jcl",
+      "artifact_type": "JCL",
+      "sha256": "ecff62c691e6ce101de08690e72ec065bc98bd845744ddf914899097d37c9191",
+      "size_bytes": 3246
+    },
+    {
+      "path": "app/jcl/PRTCATBL.jcl",
+      "artifact_type": "JCL",
+      "sha256": "24ba68991b615b24b642ec9365b7a06376f8a813368f6656fcbbb2f4fb2031a2",
+      "size_bytes": 4316
+    },
+    {
+      "path": "app/jcl/READACCT.jcl",
+      "artifact_type": "JCL",
+      "sha256": "0965badda9c801df4f86e74755b66325764d8d1a840c615e6552b660f6401f15",
+      "size_bytes": 2407
+    },
+    {
+      "path": "app/jcl/READCARD.jcl",
+      "artifact_type": "JCL",
+      "sha256": "1b1ac8b46a655783bcf7f5e86d238f05b91b10c846928edf54d07eddd46206bd",
+      "size_bytes": 2117
+    },
+    {
+      "path": "app/jcl/READCUST.jcl",
+      "artifact_type": "JCL",
+      "sha256": "971f5e80ab0262356b2d998f848c06bdedb4e53fd570b51ee7911791999c1fd7",
+      "size_bytes": 1604
+    },
+    {
+      "path": "app/jcl/READXREF.jcl",
+      "artifact_type": "JCL",
+      "sha256": "3ec9d1c9efd6bd907b488621f562bd166e3a91d3607dac2bb731de5015ba21fa",
+      "size_bytes": 2065
+    },
+    {
+      "path": "app/jcl/REPTFILE.jcl",
+      "artifact_type": "JCL",
+      "sha256": "638afb6511732859f8cb273c586208e3602d121d6264ffe53642dc6aa4e2104c",
+      "size_bytes": 2207
+    },
+    {
+      "path": "app/jcl/TCATBALF.jcl",
+      "artifact_type": "JCL",
+      "sha256": "fa89dbfa8c34cb43c20298f6851c3aa1635556d3469ba7eac5859abe2305556e",
+      "size_bytes": 4865
+    },
+    {
+      "path": "app/jcl/TRANBKP.jcl",
+      "artifact_type": "JCL",
+      "sha256": "457cd00d14a1d9ac9983d92212541df3456e8428862b97cf10bab7249b9e6183",
+      "size_bytes": 5330
+    },
+    {
+      "path": "app/jcl/TRANCATG.jcl",
+      "artifact_type": "JCL",
+      "sha256": "3030bce92bf7f086b826b39bd711f6a37eec730a5e8fb0c503da612f3b01cade",
+      "size_bytes": 4884
+    },
+    {
+      "path": "app/jcl/TRANFILE.jcl",
+      "artifact_type": "JCL",
+      "sha256": "360080ae5bf5153c3ecbf82385b070a6c7a2cdbf18870685951bf9894516730a",
+      "size_bytes": 9721
+    },
+    {
+      "path": "app/jcl/TRANIDX.jcl",
+      "artifact_type": "JCL",
+      "sha256": "64a06b44c816ee666a0e82e24fbf040d5ed792d158c93a0ac477db5dfa30dcae",
+      "size_bytes": 4210
+    },
+    {
+      "path": "app/jcl/TRANREPT.jcl",
+      "artifact_type": "JCL",
+      "sha256": "7d8fc0777e6b9fb1c62aee6b4b10a67d127057c84b92203c7152f230b3db9571",
+      "size_bytes": 6427
+    },
+    {
+      "path": "app/jcl/TRANTYPE.jcl",
+      "artifact_type": "JCL",
+      "sha256": "7a10aa43bd6737007a19fbfa5592934ef553816ffeef8c208db34d4475518051",
+      "size_bytes": 4885
+    },
+    {
+      "path": "app/jcl/TXT2PDF1.JCL",
+      "artifact_type": "JCL",
+      "sha256": "a9e9a847c252c9f7bd01b5a0c011f534ee9e01a9045727b2aadd3af93b07f7f0",
+      "size_bytes": 1448
+    },
+    {
+      "path": "app/jcl/WAITSTEP.jcl",
+      "artifact_type": "JCL",
+      "sha256": "36c98a55c7701bfaa9bd6404d2aca95888880d4f908ced678840a37e2e3eac5e",
+      "size_bytes": 1568
+    },
+    {
+      "path": "app/jcl/XREFFILE.jcl",
+      "artifact_type": "JCL",
+      "sha256": "ae0edd90056cccacd26412fad2cf3d95656c2a2810b66d8c316cbaac9e81248f",
+      "size_bytes": 8165
+    },
+    {
+      "path": "samples/jcl/BATCMP.jcl",
+      "artifact_type": "JCL",
+      "sha256": "ae512920b80849a064cfdc93eb5f629902ffd6b70f8158a594dae08daf4f2eef",
+      "size_bytes": 3182
+    },
+    {
+      "path": "samples/jcl/BMSCMP.jcl",
+      "artifact_type": "JCL",
+      "sha256": "0f849b796a3005ff05745e9e49639efb39924c4d19033d41170568652b317943",
+      "size_bytes": 2636
+    },
+    {
+      "path": "samples/jcl/CICCMP.jcl",
+      "artifact_type": "JCL",
+      "sha256": "09d5e665e1918631acba7e60f5fb9524d40480208de5d36687452dd219dcc4ee",
+      "size_bytes": 3810
+    },
+    {
+      "path": "samples/jcl/CICDBCMP.jcl",
+      "artifact_type": "JCL",
+      "sha256": "22088d7b8076fb2a6a81051c35395b654443caee1552d2881850f2009f5e9d1e",
+      "size_bytes": 2690
+    },
+    {
+      "path": "samples/jcl/IMSMQCMP.jcl",
+      "artifact_type": "JCL",
+      "sha256": "c4265460649a83838a663e71efadc492abb009c921061aea2a9ab02ceafb4f0b",
+      "size_bytes": 4437
+    },
+    {
+      "path": "samples/jcl/LISTCAT.jcl",
+      "artifact_type": "JCL",
+      "sha256": "ba86bbacbf5658b62306c2c84ab9b2235d46499702eef6bd5283e9791517c45e",
+      "size_bytes": 1951
+    },
+    {
+      "path": "samples/jcl/RACFCMDS.jcl",
+      "artifact_type": "JCL",
+      "sha256": "157b253b51c1a0ad8ed7d90ae8468de256b546589e7d857d9ee57035950f8cd9",
+      "size_bytes": 2348
+    },
+    {
+      "path": "samples/jcl/REPRTEST.jcl",
+      "artifact_type": "JCL",
+      "sha256": "b0e6570aefc965f5c372ead927476efff72fc75a7e8a594186ad5fec88e6c4cf",
+      "size_bytes": 2529
+    },
+    {
+      "path": "samples/jcl/SORTTEST.jcl",
+      "artifact_type": "JCL",
+      "sha256": "718453aa02b44f965579fa73ab85a8f192753f9c1346f140f3306724adaa8266",
+      "size_bytes": 2200
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+\begin{table}[t]
+\small
+\centering
+\caption{Ablation study. [RP] = RESULT\_PENDING. Dynamic conditions blocked by CardDemo execution environment requirements.}
+\label{table:ablation}
+\begin{tabular}{llll}
+\toprule
+Condition & Evidence & F1 (RQ1) & F1 (RQ2) \\
+\midrule
+E0 — source only & Source text & [RP] & [RP] \\
+E1 — structural & + structural deps & n/a & 0.8995$^*$ \\
+E2 — static contracts & + static contracts & [RP] & [RP] \\
+E3 — static BCG & Full static BCG & 1.000$^\dagger$ & 1.000 \\
+E4 — BCG+provenance & + provenance & [RP] & [RP] \\
+E5 — BCG+dynamic & + dynamic evidence & [RP] & [RP] \\
+E6 — BCG+prov+dyn & + both & [RP] & [RP] \\
+E7 — full system & + LLM & [RP] & [RP] \\
+\bottomrule
+\end{tabular}
+\vspace{0.3em}
+{\small $^*$ Baseline A (structural) result. $^\dagger$ Tautological --- see Table~\ref{table:rq1}.}
+\end{table}

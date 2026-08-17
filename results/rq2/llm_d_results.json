@@ -1,0 +1,28 @@
+{
+  "baseline": "D",
+  "description": "Dep+LLM blinded (Groq llama-3.3-70b-versatile, v2_blinded)",
+  "run_id": "D_BLINDED_20260817T041823",
+  "model": "llama-3.3-70b-versatile",
+  "prompt_version": "dep_llm_v2_blinded",
+  "temperature": 0.0,
+  "seed": 42,
+  "n_positive": 104,
+  "n_negative": 144,
+  "n_total": 248,
+  "n_errors": 241,
+  "n_successful": 7,
+  "metrics": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 98,
+    "tn": 144,
+    "errors": 241,
+    "precision": 1.0,
+    "recall": 0.0577,
+    "f1": 0.1091,
+    "fpr": 0.0,
+    "specificity": 1.0
+  },
+  "run_timestamp": "2026-08-17T04:24:52.459090+00:00",
+  "records_file": "llm_d_records.jsonl"
+}

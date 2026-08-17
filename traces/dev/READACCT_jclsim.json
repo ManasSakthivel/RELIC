@@ -1,0 +1,88 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.204605+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "READACCT",
+  "execution_id": "jclsim-readacct-20260816160526204550",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/READACCT.jcl",
+  "n_steps_ordered": 2,
+  "events": [
+    {
+      "event_id": "0290b406-a58f-4963-9b34-ca56568a006b",
+      "execution_id": "jclsim-readacct-20260816160526204550",
+      "artifact_id": "1f394e68bb82ebad",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.204555+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "READACCT",
+        "job_entity_id": "1f394e68bb82ebad",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "ed2d9679-0f4d-4723-a0b3-c7f23bd050b7",
+      "execution_id": "jclsim-readacct-20260816160526204550",
+      "artifact_id": "83296938a600f901",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.204555+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "PREDEL",
+        "step_index": 0,
+        "jcl_file": "READACCT.jcl"
+      }
+    },
+    {
+      "event_id": "efa3b7f9-4778-4ce6-ba3d-71f6f1bb1600",
+      "execution_id": "jclsim-readacct-20260816160526204550",
+      "artifact_id": "83296938a600f901",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.704555+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "PREDEL",
+        "step_index": 0,
+        "jcl_file": "READACCT.jcl"
+      }
+    },
+    {
+      "event_id": "a3a17430-28d0-4d25-8d1a-8da4f77f1d08",
+      "execution_id": "jclsim-readacct-20260816160526204550",
+      "artifact_id": "39bfb488bdb95a70",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:28.204555+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP05",
+        "step_index": 1,
+        "jcl_file": "READACCT.jcl"
+      }
+    },
+    {
+      "event_id": "5ee40d01-0f61-403b-a5f2-a066e7a20276",
+      "execution_id": "jclsim-readacct-20260816160526204550",
+      "artifact_id": "39bfb488bdb95a70",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:28.704555+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP05",
+        "step_index": 1,
+        "jcl_file": "READACCT.jcl"
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "jcl": {
+    "files_attempted": 55,
+    "files_parsed_successfully": 55,
+    "parse_success_rate": 1.0,
+    "construct_counts": {
+      "JOB": 55,
+      "EXEC": 136,
+      "DD": 547,
+      "PROC": 0,
+      "PEND": 0,
+      "IF": 0,
+      "ENDIF": 0,
+      "SET": 24,
+      "INCLUDE": 0
+    },
+    "files_with_errors": []
+  },
+  "cobol": {
+    "files_attempted": 44,
+    "files_parsed_successfully": 44,
+    "parse_success_rate": 1.0,
+    "division_counts": {
+      "IDENTIFICATION": 44,
+      "ENVIRONMENT": 43,
+      "DATA": 44,
+      "PROCEDURE": 44
+    },
+    "files_with_errors": []
+  },
+  "timestamp": "2026-08-16T14:30:41.153201+00:00",
+  "dataset": "carddemo",
+  "note": "Parser coverage metrics for CardDemo JCL and COBOL artifacts. Files with parse errors are logged but do not indicate incorrect extraction: partial parsing still produces valid IR entities for recognised constructs."
+}

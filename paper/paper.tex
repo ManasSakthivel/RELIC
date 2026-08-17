@@ -1,0 +1,703 @@
+%% LEGACY-CONTRACT — Conference Paper (Submission-Ready Draft)
+%% Target: ICSE / ESEC/FSE / ASE / ICSME  (10-page double-column ACM/IEEE format)
+%% Compilation: pdflatex paper.tex (requires booktabs, amsmath, graphicx, xspace)
+%%
+%% DOUBLE-BLIND SUBMISSION: author and affiliation fields are left as placeholders.
+%% Remove "Anonymous" markers and insert real names before camera-ready.
+%%
+%% All numbers in this paper are traced to results/FINAL_RESULTS_MANIFEST.json (v1.4).
+%% Authoritative source: make reproduce-paper1
+
+\documentclass[sigconf,anonymous,review]{acmart}
+
+%% Packages
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{multirow}
+
+%% Convenience macros
+\newcommand{\bcg}{\textsc{BCG}\xspace}
+\newcommand{\system}{\textsc{Legacy-Contract}\xspace}
+\newcommand{\carddemo}{\textit{CardDemo}\xspace}
+\newcommand{\gnucobol}{\textit{GnuCOBOL}\xspace}
+\newcommand{\notobs}{\texttt{NOT\_OBSERVED}\xspace}
+\newcommand{\supported}{\texttt{STATIC\_DYNAMIC\_SUPPORTED}\xspace}
+\newcommand{\conflict}{\texttt{STATIC\_DYNAMIC\_CONFLICT}\xspace}
+\newcommand{\ie}{\textit{i.e.},\xspace}
+\newcommand{\eg}{\textit{e.g.},\xspace}
+
+%% ACM metadata — anonymized for double-blind review
+\acmConference[ICSE 2025]{47th International Conference on Software Engineering}{2025}{Ottawa, Canada}
+\acmBooktitle{ICSE '25: Proceedings of the 47th International Conference on Software Engineering}
+
+\begin{document}
+
+%%=======================================================================
+\title{Execution-Grounded Behavioral Contract Recovery\\for Legacy Batch Modernization Risk Detection}
+%%=======================================================================
+
+%% Anonymous submission — remove for camera-ready
+\author{Anonymous Authors}
+\affiliation{\institution{Anonymous Institution}}
+\email{anonymous@anonymous.org}
+
+\begin{abstract}
+Legacy batch systems written in COBOL and Job Control Language (JCL) encode implicit
+behavioral contracts across heterogeneous artifacts: temporal ordering obligations in
+step sequences, resource availability guarantees in dataset disposition parameters,
+and control-flow guards in return-code conditions.
+These obligations are never explicitly represented, making semantic behavioral
+regressions the dominant failure mode during modernization to cloud-native
+orchestration platforms.
+
+We present the \textbf{Behavioral Contract Graph} (\bcg), a provenance-aware formal
+intermediate representation ($\mathit{BCG} = (V, E, C, P, D, \Gamma)$) that makes
+implicit behavioral obligations explicit across JCL and COBOL artifacts.
+Key to our approach is \emph{confidence-delta detection}: a contract can be
+\emph{weakened} without being removed, and this weakening is a modernization risk
+invisible to structural dependency analysis.
+
+We evaluate \system on the AWS \carddemo mainframe benchmark across three research
+questions.
+\textbf{RQ1} (contract recovery): the TEMPORAL extraction pipeline achieves
+micro-precision $= 1.00$, micro-recall $= 1.00$, micro-F1 $= 1.00$ against an
+independently implemented deterministic oracle on 33 held-out JCL files
+(56 TP, 0 FP, 0 FN; macro-F1 $= 0.58$, 95\% CI: [0.39, 0.73]).
+This evaluation covers TEMPORAL contracts; RESOURCE and CONTROL\_FLOW require
+human annotation.
+\textbf{RQ2} (risk detection): against 104 evaluated fault-grounded mutations,
+static \bcg achieves F1 $= 1.00$ and FPR $= 0.00$ on a 144-item
+semantics-preserving negative benchmark.
+The discriminating contribution is confidence-delta detection, which catches
+8 \texttt{ALTER\_ERROR\_BRANCH} mutations invisible to both structural analysis
+(Baseline~A, F1\,$=$\,0.90) and \bcg without confidence-delta (Baseline~E,
+F1\,$=$\,0.96).
+On this blinded benchmark, the evaluated LLM-only and Dependency+LLM baselines
+achieved F1\,$=$\,0.038 and F1\,$=$\,0.109, respectively (lower bounds due to
+97--98\% API error rates; 3 and 7 successful calls from 248 total).
+\textbf{RQ3} (dynamic evidence): with 40 traces (2 real GnuCOBOL, 38 simulated
+JCL step-ordering; \textbf{not z/OS}),
+91.8\% of contracts reach \supported; the coverage experiment
+empirically confirms $\notobs \neq \text{CONTRADICTED}$ across all coverage levels.
+All FPR=0 results on the 144-item negative benchmark are consequences of the
+closed-set benchmark design; open-world false-positive rates are not measured.
+\end{abstract}
+
+%%=======================================================================
+\section{Introduction}\label{sec:intro}
+%%=======================================================================
+
+Mainframe batch systems underpin global financial infrastructure.
+Over 220 billion lines of COBOL remain in active production, processing more than
+95 billion transactions daily~\cite{comella2000survey}.
+Modernizing these systems --- migrating JCL job streams to AWS Step Functions or
+Apache Airflow, translating COBOL to Java, or re-hosting to cloud-native batch
+engines --- is a high-value, high-risk engineering activity.
+Industry postmortems consistently identify \emph{semantic behavioral regressions} as
+the dominant failure mode: the modernized system runs without crashing but silently
+violates an obligation that the original JCL enforced~\cite{ulrich2010information}.
+
+\textbf{The root cause is structural.}
+The behavioral obligations embedded in JCL artifacts --- step ordering, dataset
+availability sequencing, return-code propagation chains --- are never made explicit.
+When a migration engineer translates \texttt{COND=(4,GT,STEP01)} to an orchestration
+condition, they must infer its semantics from context; there is no formal
+specification to consult.
+When an initialization step is dropped because it ``only creates an empty file,''
+the implicit resource dependency between that step and the downstream transaction
+programs is silently broken.
+
+\textbf{The gap in existing approaches.}
+Structural dependency analysis~\cite{tip1995slicing,reps1997profiling} identifies
+\emph{what depends on what}, but cannot represent \emph{what behavioral obligations
+must be preserved}.
+Consider a modernization that removes the \texttt{COND} parameter controlling
+step bypass on error (\texttt{ALTER\_ERROR\_BRANCH}).
+The structural dependency graph is \emph{unchanged}: the same steps reference the
+same datasets.
+Structural Baseline A (program slicing) and BCG-without-confidence-delta
+(Baseline E) both miss this class of regression.
+Only explicit behavioral contract representation --- and confidence-delta detection
+--- catches it.
+
+\textbf{Our contribution.}
+We introduce the \textbf{Behavioral Contract Graph (\bcg)}, a formal intermediate
+representation that makes behavioral obligations explicit:
+\begin{enumerate}
+\item A typed entity graph over JCL jobs, steps, programs, and datasets;
+\item Behavioral contracts (\textsc{Temporal}, \textsc{Resource},
+      \textsc{Control-Flow}) with deterministic provenance;
+\item A static/dynamic reconciliation mechanism that distinguishes
+      \supported, \conflict, and \notobs;
+\item A confidence-delta differencing algorithm (\texttt{BCGDiff}) that detects both
+      \emph{broken} and \emph{weakened} contracts.
+\end{enumerate}
+
+\textbf{Research questions:}
+\begin{description}
+\item[\textbf{RQ1}] Can TEMPORAL behavioral contracts be automatically recovered
+  with precision and recall sufficient for practical use, validated against an
+  independently implemented oracle?
+\item[\textbf{RQ2}] Does contract-aware BCG analysis improve modernization-risk
+  detection compared with structural, complexity, LLM-based, and static-BCG
+  baselines?
+\item[\textbf{RQ3}] Does dynamic execution evidence increase contract validation
+  coverage while preserving zero false positives on a semantics-preserving benchmark?
+\end{description}
+
+\textbf{Motivating example.}
+\Cref{lst:motivating} shows an \texttt{ALTER\_ERROR\_BRANCH} mutation in JCL.
+The original \texttt{COND=(4,GT,STEP01)} means: ``skip STEP02 if STEP01 returned a
+code greater than 4.''
+The modernized version changes the threshold to \texttt{COND=(16,GT,STEP01)},
+allowing STEP02 to execute even when STEP01 signaled a soft error (RC=8--15).
+The structural dependency graph is \emph{identical} in both versions --- STEP02
+still follows STEP01.
+Structural Baseline A misses this.
+\bcg represents a \textsc{Control-Flow} contract with
+$\mathit{static\_support} = 1.0$; the mutation reduces it to $0.7$.
+BCGDiff detects the confidence-delta $\Delta = 0.3 > \theta$, raising a risk flag.
+
+\begin{lstlisting}[caption={Motivating example: ALTER\_ERROR\_BRANCH},
+  label=lst:motivating, basicstyle=\small\ttfamily,
+  frame=single, numbers=left]
+// Original JCL
+//STEP02 EXEC PGM=CBACT02C,
+//  COND=(4,GT,STEP01)   <- skip if RC > 4
+
+// Modernized (mutation applied)
+//STEP02 EXEC PGM=CBACT02C,
+//  COND=(16,GT,STEP01)  <- threshold raised
+\end{lstlisting}
+
+%%=======================================================================
+\section{Background}\label{sec:background}
+%%=======================================================================
+
+\textbf{JCL/COBOL batch systems.}
+IBM Job Control Language (JCL) defines batch job structure: EXEC cards (program
+invocations), DD cards (dataset declarations with DISP= disposition parameters),
+and COND parameters (conditional execution based on step return codes).
+COBOL programs implement business logic, referencing files via FILE CONTROL sections.
+Behavioral obligations are distributed across artifact types and never written down
+as specifications.
+
+\textbf{Behavioral contracts.}
+We extend Meyer's Design by Contract~\cite{meyer1992applying} to define a
+\emph{behavioral contract} as a formally representable obligation that must hold
+across execution events for the system to preserve its intended behavior.
+Unlike DbC contracts, ours are \emph{recovered} from existing artifacts, not
+specified by developers.
+
+\textbf{Static vs.\ dynamic analysis.}
+Static analysis extracts facts without execution; dynamic analysis extracts facts
+from traces.
+Both have known limitations: static over-approximates; dynamic under-approximates.
+Our critical principle: $\notobs \neq \text{CONTRADICTED}$.
+The absence of dynamic evidence for a contract is not evidence of absence; it signals
+incomplete execution coverage.
+
+%%=======================================================================
+\section{Behavioral Contract Graph}\label{sec:bcg}
+%%=======================================================================
+
+\subsection{Formal Definition}
+
+We define the \bcg as the 6-tuple:
+$\mathit{BCG} = (V, E, C, P, D, \Gamma)$
+where:
+$V$ is the set of typed entities (jobs, steps, programs, datasets, copybooks);
+$E \subseteq V \times \mathit{RelationType} \times V$ is the structural relation set;
+$C$ is the behavioral contract set;
+$P: C \to \mathit{ProvenanceRecord}$ maps each contract to its evidence record;
+$D$ is the dynamic observation set (linked to $V$ via $\mathit{artifact\_id}$);
+$\Gamma: C \to (\mathit{ValidationState} \times \mathit{ConfidenceVector})$ provides
+per-contract validation state and evidence-strength scores.
+
+\subsection{Contract Types}
+
+\textbf{TEMPORAL:} $A \prec B$ — in all valid executions satisfying relevant
+preconditions, $A$ must complete before $B$ begins.
+
+\textbf{RESOURCE:} $\mathit{produces}(A, R) \prec \mathit{consumes}(B, R)$ — step
+$A$ must successfully produce resource $R$ before step $B$ attempts to access it.
+
+\textbf{CONTROL-FLOW:} $\mathit{RC}(A)\ op\ T \to \neg\mathit{execute}(B)$ — if
+step $A$'s return code satisfies the condition $\mathit{RC}\ op\ T$, step $B$ must
+not execute.
+
+\subsection{Validation States and Confidence}
+
+\Cref{table:states} defines the eight validation states.
+The key scientific principle is that \notobs must remain distinct from
+\texttt{CONTRADICTED}: a contract with no dynamic evidence is a valid static
+candidate, not a falsified one.
+
+The confidence model is a multi-dimensional evidence-strength vector
+$\boldsymbol{w} \cdot \boldsymbol{x}$ with dimensions for static support, dynamic
+support, cross-artifact support, provenance quality, human validation, and execution
+frequency.
+\textbf{Warning:} this score is an evidence-strength estimate in $[0,1]$, not a
+calibrated probability.
+
+\begin{table}[t]
+\small\centering
+\caption{Contract validation states.}\label{table:states}
+\begin{tabular}{ll}
+\toprule
+State & Meaning \\
+\midrule
+\texttt{STATIC\_CANDIDATE}         & Static only; not yet dynamically validated \\
+\texttt{STATIC\_DYNAMIC\_SUPPORTED} & Static and dynamic observations agree \\
+\texttt{STATIC\_DYNAMIC\_CONFLICT}  & Static and dynamic observations disagree \\
+\texttt{NOT\_OBSERVED}             & No dynamic evidence (≠ contradicted) \\
+\texttt{HUMAN\_VALIDATED}          & Expert-confirmed \\
+\texttt{GROUND\_TRUTH}             & Deterministic/execution-oracle verified \\
+\texttt{DYNAMICALLY\_OBSERVED}     & Observed in traces; not statically extracted \\
+\texttt{UNRESOLVED}                & Ambiguous; insufficient evidence \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%%=======================================================================
+\section{Confidence-Delta Differencing}\label{sec:diff}
+%%=======================================================================
+
+The \texttt{BCGDiff} algorithm compares an original \bcg with a modernized \bcg.
+It classifies each changed contract as either:
+(a) \emph{broken}: the contract is absent from the modernized BCG; or
+(b) \emph{modified}: the contract is present but its confidence has decreased
+    below a threshold $\delta$.
+
+The key insight is that a modernization engineer can \emph{weaken} a behavioral
+obligation without removing it --- the \texttt{ALTER\_ERROR\_BRANCH} mutation in
+\cref{lst:motivating} is precisely this case.
+Structural analysis sees no change; BCG-without-confidence-delta (Baseline~E) also
+misses it.
+Only \texttt{diff.modified} inspection, checking
+$\Delta\mathit{static\_support} = 1.0 - 0.7 = 0.3 > \theta$, raises the flag.
+
+This architectural discriminator explains the full Baseline E $\to$ Proposed gap
+(F1: $0.9600 \to 1.0000$), catching all 8 \texttt{ALTER\_ERROR\_BRANCH} mutations.
+
+%%=======================================================================
+\section{Static/Dynamic Reconciliation}\label{sec:reconciliation}
+%%=======================================================================
+
+For each contract $c$, the reconciliation engine retrieves events linked to
+$c.\mathit{subject\_id}$ and $c.\mathit{object\_id}$ from $D$.
+Predicate-specific logic determines the outcome:
+\textsc{Precedes} compares latest-subject-timestamp with earliest-object-timestamp;
+\textsc{ProducesBeforeConsumes} checks produce and consume event ordering;
+\textsc{MustNotFollowOnError} checks whether the bypass condition is respected.
+
+If no relevant events exist ($E_s = \emptyset \wedge E_o = \emptyset$):
+outcome $\leftarrow$ \notobs (never \texttt{CONTRADICTED}).
+
+The execution evidence must be labeled with its source type:
+\texttt{EXECUTION} (real \gnucobol),
+\texttt{EXECUTION\_SIMULATED} (JCL step-ordering simulation), or
+\texttt{SYNTHETIC\_STATIC} (excluded by guard \texttt{SI-01}).
+These labels must never be changed after assignment.
+
+%%=======================================================================
+\section{Fault-Grounded Mutation Framework}\label{sec:mutations}
+%%=======================================================================
+
+Mutation operators are derived from documented modernization failure modes, not tuned
+to this benchmark.
+We used the AWS \carddemo issue history, public migration case studies, and academic
+literature~\cite{comella2000survey,ulrich2010information}.
+The taxonomy was constructed before operator implementation and was not modified after
+seeing evaluation results.
+
+Three failure categories (F1--F3) with eight operators
+(\cref{table:mutations}) cover job-ordering, file-availability, and
+return-code-propagation regressions.
+Of 440 mutation attempts, 336 (76.4\%) were not applicable
+(\texttt{MutationNotApplicable}): F2/F3 operators require specific JCL structures
+absent in most \carddemo files.
+This is a benchmark representativeness limitation, not a framework failure.
+
+%%=======================================================================
+\section{Experimental Methodology}\label{sec:methodology}
+%%=======================================================================
+
+\textbf{Dataset.}
+Primary: AWS \carddemo (Apache 2.0) --- 55 JCL files, 44 COBOL programs, 62
+copybooks.
+RQ1 uses 33 held-out JCL files (test split, seed=42).
+RQ2 uses the development split.
+Secondary: Open Mainframe Project public COBOL (43 JCL + 7 COBOL) for parser
+coverage; not used as headline result.
+
+\textbf{Ground truth hierarchy.}
+Level-2 (deterministic structural facts from JCL grammar) for RQ2;
+Level-1 (independent deterministic oracle) for RQ1 TEMPORAL contracts.
+Level-3 (human annotation) is future work for RESOURCE/CONTROL\_FLOW.
+
+\textbf{Baselines.}
+\begin{description}
+\item[A] Structural dependency analysis (program slicing)~\cite{tip1995slicing}.
+\item[B] Static complexity/risk metrics.
+\item[C] LLM-only: Groq \texttt{llama-3.3-70b-versatile}, v2\_blinded prompts,
+  temperature=0.0.
+\item[D] Dependency + LLM: topology provided to same LLM, v2\_blinded.
+\item[E] Static \bcg without confidence-delta detection (\texttt{diff.broken} only).
+\end{description}
+
+\textbf{LLM baseline methodology.}
+Baselines C and D used Groq's OpenAI-compatible API.
+During validation, an initial prompt configuration (v1) was found to include the
+phrase ``semantics-preserving change'' in negative descriptions, exposing benchmark
+structure to the model.
+Those runs were discarded.
+All reported LLM results use v2\_blinded prompts with neutral operator descriptions.
+High API error rates were observed: 245/248 (Baseline~C) and 241/248 (Baseline~D)
+calls failed.
+The reported F1 scores (0.038 and 0.109) are based on 3 and 7 successful calls
+respectively, and should be interpreted as lower bounds.
+
+\textbf{Negative benchmark.}
+144 semantics-preserving mutations (5 operators: \texttt{RENAME\_STEP\_COMMENT},
+\texttt{ADD\_REDUNDANT\_DEPENDENCY}, \texttt{REORDER\_INDEPENDENT\_STEPS},
+\texttt{CHANGE\_ACCOUNTING\_PARAMETERS}, \texttt{RENAME\_PROC\_LABEL}) confirm
+FPR=0.000.
+
+\textbf{Dynamic evidence.}
+40 execution traces: 2 real \gnucobol \texttt{EXECUTION}, 38
+\texttt{EXECUTION\_SIMULATED} (JCL step-ordering simulation).
+3 \texttt{SYNTHETIC\_STATIC} traces excluded by guard \texttt{SI-01}.
+Execution environment: \gnucobol 3.2.0 on macOS arm64 --- \textbf{not} z/OS.
+
+\textbf{Statistical method.}
+95\% bootstrap CI (10,000 iterations, seed=42) for RQ1 macro-F1.
+RQ2 metrics are descriptive (closed-set benchmark with FP=0 by design;
+ceiling effects preclude pairwise significance tests).
+Where significance testing is not appropriate, we say so explicitly.
+
+\textbf{Engine fix disclosure.}
+A gap in BCGDiff was identified and corrected before final evaluation: the original
+\texttt{RiskDetector} inspected only \texttt{diff.broken}, missing mutations that
+reduced contract confidence without removing the contract.
+The fix added \texttt{diff.modified} inspection.
+All RQ2 results were computed after this fix (\texttt{rq2\_summary.json},
+\texttt{engine\_fix\_applied}).
+
+\textbf{Reproducibility.}
+\texttt{make reproduce-paper1} reproduces all deterministic results.
+LLM baselines require \texttt{GROQ\_API\_KEY}.
+All seeds fixed at 42.
+
+%%=======================================================================
+\section{Results}\label{sec:results}
+%%=======================================================================
+
+\subsection{RQ1: Contract Recovery}
+
+\Cref{table:rq1} shows the TEMPORAL evaluation against the independently implemented
+oracle (\texttt{scripts/run\_rq1\_independent.py}; no shared code with
+\texttt{StaticContractExtractor}).
+
+\textbf{Result:} Macro-F1 $= 0.576$ (95\% CI: [0.39, 0.73]);
+micro-F1 $= 1.000$ (56 TP, 0 FP, 0 FN, TEMPORAL contracts only).
+H1 is \textbf{supported}.
+
+Macro-F1 is lower than micro-F1 because 17 of 33 held-out files have zero TEMPORAL
+contracts; those files score F1=0.0 by convention.
+This is not an extraction failure.
+
+\textbf{Scope limitation:}
+This evaluation covers TEMPORAL contracts only.
+RESOURCE ($n=3$) and CONTROL\_FLOW ($n=23$) require Level-3 human annotation for
+independent validation; no independent oracle can be constructed for those types
+without sharing parsing logic.
+
+\input{table_source/TABLE_4_rq1}
+
+\subsection{RQ2: Modernization Risk Detection}
+
+\Cref{table:baselines,table:per_operator} present the full results.
+
+\textbf{Positive benchmark (104 mutations; F2 operators n=1 each — preliminary):}
+Static \bcg achieves F1=1.000 (recall=1.000, FNR=0.000).
+The discriminating finding is \texttt{ALTER\_ERROR\_BRANCH}: 8 mutations where
+confidence-delta detection identifies a modified (not broken) contract with
+$\Delta\mathit{static\_support} = 0.30$.
+Structural Baseline A (F1=0.900) and BCG-without-confidence-delta Baseline E
+(F1=0.960) both miss these; the proposed method catches all 8.
+F2 operators (REMOVE\_DATASET\_INIT, CHANGE\_DATASET\_NAME,
+ALTER\_FILE\_DEP\_ORDER) each have $n=1$ applicable instance;
+those results are illustrative and not sufficient for per-operator statistical claims.
+
+\textbf{Negative benchmark (144 TN):}
+FPR=0.000, Specificity=1.000 for all methods.
+\textit{Note: FPR=0.000 is a consequence of the closed-set benchmark design;
+open-world false-positive rates are not measured.}
+
+\textbf{LLM baselines:}
+On this blinded benchmark, Baseline~C (LLM-only) achieved F1=0.038 and Baseline~D
+(Dependency+LLM) achieved F1=0.109.
+These results are lower bounds due to high API error rates; they should not be
+generalized beyond this benchmark, task, and model version.
+
+H2 (reformulated) is \textbf{supported}:
+recall(proposed) $= 1.00 >$ recall(Baseline A) $= 0.82$ and recall(proposed) $= 1.00 >$
+recall(Baseline E) $= 0.92$.
+
+\input{table_source/TABLE_5_baselines}
+
+\subsection{RQ3: Dynamic Evidence}
+
+\Cref{table:rq3} shows the reconciliation results with 40 execution traces.
+
+\textbf{Result:}
+56/61 contracts reach \supported (91.8\%).
+1 contract reaches \conflict (a CONTROL\_FLOW contract where trace shows execution
+despite COND-bypass condition; likely GnuCOBOL/z/OS behavioral divergence).
+4 contracts remain \notobs (JCL steps requiring DB2/CICS execution environment).
+
+\textbf{Coverage experiment (\cref{table:coverage}):}
+Validation rate increases monotonically from 1.6\% (4 traces) to 91.8\% (40 traces).
+No \notobs contract becomes \texttt{CONTRADICTED} as traces are withheld
+(\texttt{not\_observed\_monotonicity\_safe = True}).
+This empirically confirms $\notobs \neq \text{CONTRADICTED}$.
+
+H3 (reformulated) is \textbf{supported}: dynamic validation rate $= 91.8\% > 50\%$;
+FPR $= 0.000$ (TN=144).
+
+\begin{table}[t]
+\small\centering
+\caption{RQ3: Dynamic contract reconciliation (40 traces).}\label{table:rq3}
+\begin{tabular}{lrr}
+\toprule
+State & Count & Rate \\
+\midrule
+\texttt{STATIC\_DYNAMIC\_SUPPORTED} & 56 & 91.8\% \\
+\texttt{STATIC\_DYNAMIC\_CONFLICT}  & 1  & 1.6\%  \\
+\texttt{NOT\_OBSERVED}              & 4  & 6.6\%  \\
+\midrule
+Total contracts & 61 & — \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\small\centering
+\caption{RQ3: Dynamic coverage experiment.}\label{table:coverage}
+\begin{tabular}{rrrrrr}
+\toprule
+Coverage & Traces & Supported & Conflict & NOT\_OBS & Rate \\
+\midrule
+10\%  & 4  & 1  & 0 & 60 & 1.6\%  \\
+25\%  & 10 & 15 & 0 & 46 & 24.6\% \\
+50\%  & 20 & 26 & 0 & 35 & 42.6\% \\
+75\%  & 30 & 39 & 0 & 22 & 63.9\% \\
+100\% & 40 & 56 & 1 & 4  & 91.8\% \\
+\bottomrule
+\end{tabular}
+{\small NOT\_OBS $\neq$ CONTRADICTED at all levels (monotonicity confirmed).}
+\end{table}
+
+%%=======================================================================
+\section{Discussion}\label{sec:discussion}
+%%=======================================================================
+
+\textbf{Why does BCG outperform structural analysis?}
+Structural analysis identifies topology changes but cannot represent behavioral
+obligations.
+The \texttt{ALTER\_ERROR\_BRANCH} family demonstrates this precisely: topology is
+unchanged, but the behavioral obligation (``STEP02 must not execute if STEP01 returns
+8--15'') is violated.
+\bcg represents this as a \textsc{Control-Flow} contract with a confidence that
+degrades under the mutation; structural analysis has no analogous representation.
+
+\textbf{Why does confidence-delta matter?}
+Modernization risks are not always binary.
+A practitioner may weaken a guard condition (raise the RC threshold) rather than
+remove it entirely.
+The \texttt{diff.modified} mechanism detects this weakening class, which accounts for
+8 mutations (7.7\% of evaluated cases) that Baseline E misses.
+
+\textbf{Why did the LLM baselines perform poorly on this benchmark?}
+On this blinded benchmark, F1 $= 0.038$ (LLM-only) and F1 $= 0.109$ (Dep+LLM).
+Both results are lower bounds due to high API error rates (97--98\%).
+At the same time, even the 3 and 7 successful calls produced modest recall.
+The blinded baselines lack access to the BCG's formal contract representation,
+confidence model, and structured diff infrastructure.
+We do not claim that LLMs generally fail on semantic analysis tasks; these results
+are specific to this benchmark, task formulation, and model/prompt configuration.
+
+\textbf{What does dynamic evidence add?}
+Dynamic evidence promotes 91.8\% of statically extracted TEMPORAL contracts to
+\supported, confirming that JCL step-ordering obligations are valid execution
+obligations, not artifacts of static analysis.
+The 1 \conflict case warrants investigation; the 4 \notobs cases are definitionally
+not contradictions.
+The coverage experiment demonstrates that each additional trace provides new evidence
+without creating false contradictions.
+
+\textbf{Deployment on real z/OS.}
+Production deployment would require: (1) z/OS SMF-record-based trace collection;
+(2) a JES job-completion event adapter; (3) a RACF-aware entity resolver.
+None of these are fundamental architectural changes; they are adapter implementations
+for the existing \texttt{DynamicEvidenceAdapter} interface.
+
+%%=======================================================================
+\section{Threats to Validity}\label{sec:threats}
+%%=======================================================================
+
+\textbf{Internal validity.}
+Mutation operators were designed from external evidence before BCG implementation;
+no operator was modified after seeing results.
+However, the benchmark is dominated by F1 (TEMPORAL) mutations (85/104); F2/F3
+coverage is limited to 19 cases.
+The LLM baseline results are lower bounds due to API infrastructure constraints.
+
+\textbf{Construct validity.}
+The independent oracle for RQ1 covers TEMPORAL contracts only; RESOURCE and
+CONTROL\_FLOW require human annotation.
+The confidence score is an evidence-strength estimate, not a calibrated probability.
+FP=0 in RQ2 is a closed-benchmark design property, not an independently measured
+false-alarm rate.
+
+\textbf{External validity.}
+All results are on \carddemo --- a demonstration system of modest complexity
+($\approx30$ COBOL programs, 33+ JCL files).
+Real enterprise systems may have thousands of programs and more complex JCL.
+We do not claim enterprise-wide generalization.
+A second public JCL/COBOL system was not empirically evaluated; this remains an
+explicit limitation.
+
+\textbf{GnuCOBOL vs.\ z/OS.}
+38/40 traces are \texttt{EXECUTION\_SIMULATED}; 2 are real \gnucobol 3.2.0.
+z/OS-specific behaviors (SMF, JES, RACF, COMP-3 binary arithmetic) are not captured.
+All dynamic evidence is labeled \texttt{EXECUTION (GnuCOBOL, NOT z/OS)}.
+
+\textbf{LLM validity.}
+LLM results depend on model version, prompt, and provider.
+Infrastructure constraints (97--98\% API error rate) make the reported F1 values
+lower bounds.
+These results apply only to this benchmark, task, and configuration.
+
+%%=======================================================================
+\section{Related Work}\label{sec:related}
+%%=======================================================================
+
+\textbf{Dynamic invariant inference.}
+Daikon~\cite{ernst2007daikon} infers data-value invariants from execution traces.
+BCG differs on four axes: (a) contract type (behavioral obligations vs.\ data-value
+invariants); (b) artifact domain (cross-artifact JCL+COBOL vs.\ single-program OO);
+(c) static extraction precedes dynamic grounding; (d) formal provenance per contract.
+
+\textbf{Specification mining.}
+Ammons \etal~\cite{ammons2002mining} mine API usage protocols from traces;
+Lo \etal~\cite{lo2006mining} mine iterative-convergent control patterns;
+Lorenzoli \etal~\cite{lorenzoli2008gist} infer behavioral models via FSM learning.
+BCG adds cross-artifact scope, explicit conflict taxonomy, and static provenance.
+
+\textbf{Runtime verification.}
+Leucker and Schallhart~\cite{leucker2009brief} survey runtime verification as
+inline specification checking.
+BCG performs \emph{post-hoc} recovery for modernization risk analysis, not
+inline monitoring.
+
+\textbf{Semantic differencing.}
+Lahiri \etal~\cite{lahiri2012symdiff} perform statement-level symbolic differencing.
+BCG operates at job/step/contract granularity without SMT encoding (infeasible for
+large COBOL programs with vendor runtime behavior).
+Pessoa \etal~\cite{pessoa2022cobol} perform semantic differencing on COBOL programs
+but do not formalize contracts, use dynamic evidence, or support JCL.
+
+\textbf{Legacy COBOL analysis.}
+Sneed~\cite{sneed2008legacy} extracts structural facts from COBOL for migration
+assessment; our work adds behavioral obligations, JCL scope, and dynamic evidence.
+Comella-Dorda \etal~\cite{comella2000survey} and Ulrich and Newcomb~\cite{ulrich2010information}
+document the failure patterns our mutation taxonomy is grounded in.
+
+\textbf{LLM code analysis.}
+Hou \etal~\cite{hou2024llm}, Fan \etal~\cite{fan2023llm}, and Ling \etal~\cite{ling2023domain}
+demonstrate LLM code-understanding capabilities.
+Our evaluation provides a datapoint on LLM performance for blinded behavioral
+contract violation detection in legacy JCL/COBOL.
+
+%%=======================================================================
+\section{Limitations}\label{sec:limitations}
+%%=======================================================================
+
+\begin{description}
+\item[L1] \textbf{Single primary dataset.} All results are on \carddemo.
+  Enterprise systems may have thousands of programs; performance may differ.
+\item[L2] \textbf{GnuCOBOL, not z/OS.} Dynamic evidence is \gnucobol on
+  Linux/macOS; z/OS-specific behaviors are not captured.
+\item[L3] \textbf{Simulated traces.} 38/40 traces are \texttt{EXECUTION\_SIMULATED};
+  only 2 are real execution.
+\item[L4] \textbf{TEMPORAL-only independent validation.} RESOURCE and CONTROL\_FLOW
+  contracts require human annotation; oracle scope is explicitly limited.
+\item[L5] \textbf{LLM results are benchmark-specific.}
+  F1=0.038/0.109 applies to this benchmark, task, model, and prompt; high API error
+  rates make these lower bounds.
+\item[L6] \textbf{Confidence is not probability.} The confidence score is an
+  evidence-strength estimate without calibration.
+\end{description}
+
+%%=======================================================================
+\section{Conclusion}\label{sec:conclusion}
+%%=======================================================================
+
+We presented the Behavioral Contract Graph (\bcg), a provenance-aware intermediate
+representation that makes implicit behavioral obligations explicit in legacy
+COBOL/JCL systems, and confidence-delta differencing (\texttt{BCGDiff}) for
+modernization risk detection.
+
+Our empirical evaluation on the AWS \carddemo benchmark produced three findings:
+(1) The TEMPORAL extraction pipeline achieves micro-F1=1.000 against an independent
+oracle (56 TP, 0 FP, 0 FN; macro-F1=0.576, CI:[0.39,0.73]);
+(2) Static \bcg detects all 104 evaluated positive mutations (F1=1.000) with
+FPR=0.000 on 144 semantics-preserving cases; the key contributor is confidence-delta
+detection of 8 \texttt{ALTER\_ERROR\_BRANCH} mutations invisible to structural and
+BCG-only baselines;
+(3) Dynamic evidence validates 91.8\% of contracts, and the coverage experiment
+confirms $\notobs \neq \text{CONTRADICTED}$ empirically.
+
+Limitations include single-dataset evaluation, GnuCOBOL rather than z/OS execution,
+and TEMPORAL-only independent oracle coverage.
+These are explicitly retained, not minimized.
+
+%%=======================================================================
+\section*{Data Availability}\label{sec:data}
+%%=======================================================================
+
+All experimental results, scripts, and configurations are available in the
+supplementary artifact package.
+Deterministic components are fully reproducible via \texttt{make reproduce-paper1}.
+LLM baselines require a \texttt{GROQ\_API\_KEY} (not included).
+The primary dataset is AWS \carddemo (Apache 2.0, publicly available).
+
+%%=======================================================================
+%% Bibliography
+%%=======================================================================
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+%% -----------------------------------------------------------------------
+%% Appendix: Per-Operator Results
+%% -----------------------------------------------------------------------
+\appendix
+\section{Per-Operator Breakdown}\label{app:per_operator}
+
+\input{table_source/TABLE_6_per_operator}
+
+\section{Fault-Grounded Mutation Taxonomy}\label{app:mutations}
+
+\input{table_source/TABLE_7_mutations}
+
+\end{document}

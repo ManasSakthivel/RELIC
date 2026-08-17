@@ -1,0 +1,41 @@
+{
+  "locked_at": "2026-08-14T17:00:28.622894Z",
+  "lock_version": "v1.0",
+  "git_commit": "no_git_history",
+  "random_seed": 42,
+  "bootstrap_n": 10000,
+  "confidence_threshold": {
+    "rq1_f1": 0.7,
+    "rq1_precision": 0.75,
+    "rq2_f1_delta_pp": 10.0,
+    "rq3_fpr_delta_pp": 15.0
+  },
+  "model_version": "N/A (LLM not used in core experiments)",
+  "prompt_version": "N/A",
+  "ground_truth_hash": "72e4af88b358fcf0",
+  "config_hashes": {
+    "experiments/rq1/config.yaml": "f4d403e9056a2ff9",
+    "experiments/rq2/config.yaml": "93607248a288eec2",
+    "experiments/rq3/config.yaml": "10ccc70799fccc33",
+    "experiments/ablation/config.yaml": "9fd68e5b33bf2157"
+  },
+  "split_hashes": {
+    "datasets/carddemo/SPLITS_60_20_20.json": "2dba598307c5a420",
+    "datasets/public_cobol/SPLITS_60_20_20.json": "2d9973d36422af54"
+  },
+  "frozen_parameters": {
+    "confidence_weights": {
+      "static_support": 0.25,
+      "dynamic_support": 0.3,
+      "cross_artifact_support": 0.15,
+      "provenance_quality": 0.1,
+      "human_validation": 0.2,
+      "execution_frequency": 0.1
+    },
+    "weights_intentional_sum": 1.1,
+    "fpr_is_nan_for_open_set": true,
+    "bonferroni_n_comparisons": 5,
+    "mwu_alternative": "two-sided"
+  },
+  "policy": "NO parameter changes after this lock without re-running ALL affected experiments from scratch and documenting in docs/research_decisions.md"
+}

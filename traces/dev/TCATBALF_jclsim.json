@@ -1,0 +1,118 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.206977+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "TCATBALF",
+  "execution_id": "jclsim-tcatbalf-20260816160526206913",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/TCATBALF.jcl",
+  "n_steps_ordered": 3,
+  "events": [
+    {
+      "event_id": "47331de9-ecfe-4a9d-8a62-b469a2ac8392",
+      "execution_id": "jclsim-tcatbalf-20260816160526206913",
+      "artifact_id": "7c7afe1fc7eaa8f2",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.206917+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "TCATBALF",
+        "job_entity_id": "7c7afe1fc7eaa8f2",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "020a717b-881e-442e-b79b-13330996ddb8",
+      "execution_id": "jclsim-tcatbalf-20260816160526206913",
+      "artifact_id": "f0a3d7b0da8a6464",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.206917+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP05",
+        "step_index": 0,
+        "jcl_file": "TCATBALF.jcl"
+      }
+    },
+    {
+      "event_id": "5226d38e-a992-4866-bca2-d368a80eb8f7",
+      "execution_id": "jclsim-tcatbalf-20260816160526206913",
+      "artifact_id": "f0a3d7b0da8a6464",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.706917+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP05",
+        "step_index": 0,
+        "jcl_file": "TCATBALF.jcl"
+      }
+    },
+    {
+      "event_id": "add98741-6c31-4aab-b842-857769f96b26",
+      "execution_id": "jclsim-tcatbalf-20260816160526206913",
+      "artifact_id": "92df264f15a28695",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:28.206917+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP10",
+        "step_index": 1,
+        "jcl_file": "TCATBALF.jcl"
+      }
+    },
+    {
+      "event_id": "e630377e-685a-448b-8923-c8d721bb5f81",
+      "execution_id": "jclsim-tcatbalf-20260816160526206913",
+      "artifact_id": "92df264f15a28695",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:28.706917+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP10",
+        "step_index": 1,
+        "jcl_file": "TCATBALF.jcl"
+      }
+    },
+    {
+      "event_id": "d01c6af7-9797-40e4-82b1-d8ff22f05477",
+      "execution_id": "jclsim-tcatbalf-20260816160526206913",
+      "artifact_id": "a6c667ec724be7d6",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:29.206917+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "STEP15",
+        "step_index": 2,
+        "jcl_file": "TCATBALF.jcl"
+      }
+    },
+    {
+      "event_id": "2bfcdd45-a0d0-4f21-b00f-3c0c2878dd25",
+      "execution_id": "jclsim-tcatbalf-20260816160526206913",
+      "artifact_id": "a6c667ec724be7d6",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:29.706917+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "STEP15",
+        "step_index": 2,
+        "jcl_file": "TCATBALF.jcl"
+      }
+    }
+  ]
+}

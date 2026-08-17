@@ -1,0 +1,23 @@
+\begin{table}[t]
+\small
+\centering
+\caption{Baseline comparison (RQ2). Evaluated on 104 applicable mutations (440 attempted, 336~N/A). FP=0 by construction. FPR from negative benchmark: TN=144, FP=0, FPR=0.000. LLM baselines (C, D) use Groq \texttt{llama-3.3-70b-versatile}, v2\_blinded prompts (v1 discarded due to benchmark leak); 245/241 API errors reduced effective sample. All non-LLM results are deterministic and fully reproducible.}
+\label{table:baselines}
+\begin{tabular}{lrrrrrrl}
+\toprule
+Method & TP & FP & FN & P & R & F1 & FNR \\
+\midrule
+Complexity (Baseline B)       & 0  & 0 & 104 & 0.000 & 0.000 & 0.000 & 1.000 \\
+Structural (Baseline A)       & 85 & 0 &  19 & 1.000 & 0.817 & 0.900 & 0.183 \\
+Static BCG w/o $\delta$ (Baseline E) & 96 & 0 & 8 & 1.000 & 0.923 & 0.960 & 0.077 \\
+LLM-only (Baseline C)$^\dagger$ & 2  & 0 & 102 & 1.000 & 0.019 & 0.038 & 0.981 \\
+Dep+LLM (Baseline D)$^\dagger$ & 6  & 0 &  98 & 1.000 & 0.058 & 0.109 & 0.942 \\
+\midrule
+\textbf{Static BCG (Proposed)} & \textbf{104} & \textbf{0} & \textbf{0} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{0.000} \\
+\bottomrule
+\end{tabular}
+\vspace{0.3em}
+{\small $^\dagger$High API error rates (245/248 and 241/248 calls failed); classification based on 3 and 7 successful responses, respectively. Low recall driven primarily by API failures, not by misclassification. This limitation is discussed in \S\ref{sec:threats}.}
+\vspace{0.3em}
+{\small Negative benchmark (144 semantics-preserving mutations): FP=0 for all methods evaluated; FPR=0.000; Specificity=1.000.}
+\end{table}

@@ -1,0 +1,32 @@
+{
+  "experiment_id": "E3",
+  "research_question": "RQ3",
+  "run_timestamp": "2026-08-15T01:24:20.952275+00:00",
+  "status": "PARTIAL_EVIDENCE_AVAILABLE",
+  "hypothesis": "H3: BCG+dynamic FPR <= static_bcg FPR - 15pp at >=50% coverage",
+  "verdict": "PARTIAL_EVIDENCE_AVAILABLE",
+  "h3_testability": "NOT_TESTABLE_WITH_CURRENT_BENCHMARK — FPR is undefined in closed-set mutation benchmark (no ground-truth negative set; all evaluated mutations violate contracts). Observable metric: dynamic validation rate = 49.2% (31/63 contracts STATIC_DYNAMIC_SUPPORTED).",
+  "artifact_mapping_wired": true,
+  "artifact_mapping_note": "ArtifactMapper (C1 fix) is wired into src/legacy_contract/dynamic_analysis/ and called from scripts/run_dynamic_reconciliation.py. EXACT/PROC_EXPANDED mappings replace program names with step entity IDs; AMBIGUOUS mappings are never guessed.",
+  "note": "Full results in rq3_dynamic_results.json. Summary reflects that file. H3 is UNTESTABLE as stated — FPR is undefined in the mutation benchmark (no ground-truth negative set). Dynamic validation rate 49.2% is below the 50% coverage threshold required for H3.",
+  "results_source": "rq3_dynamic_results.json",
+  "gnucobol_available": true,
+  "gnucobol_version": "GnuCOBOL 3.2.0",
+  "n_traces_loaded": 16,
+  "n_execution_traces": 13,
+  "n_synthetic_excluded": 3,
+  "n_jcl_files": 33,
+  "contracts": {
+    "total": 63,
+    "STATIC_CANDIDATE": 0,
+    "STATIC_DYNAMIC_SUPPORTED": 31,
+    "STATIC_DYNAMIC_CONFLICT": 1,
+    "NOT_OBSERVED": 31
+  },
+  "dynamic_validation_rate": 0.4921,
+  "h3_status": "UNTESTABLE",
+  "h3_reason": "FPR undefined in mutation benchmark (open-set; no ground-truth negative universe). Dynamic validation rate 49.2% approaches but does not reach 50% coverage threshold. Full FPR comparison requires complete execution trace coverage.",
+  "coverage_levels_requested": [0.1, 0.25, 0.5, 0.75, 1.0],
+  "coverage_results": "BLOCKED_EXTERNAL_DEPENDENCY — requires CardDemo execution environment with DB2/CICS/IMS stubs",
+  "remediation": "1. Obtain CardDemo execution environment (z/OS sandbox or GnuCOBOL with DB2/CICS stubs). 2. Wire artifact_mapping.py into pipeline. 3. Regenerate full trace set. 4. Reformulate H3 to use a benchmark with ground-truth negatives."
+}

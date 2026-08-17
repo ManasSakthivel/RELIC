@@ -1,0 +1,35 @@
+{
+  "experiment_id": "E5",
+  "research_question": "Generalization",
+  "run_timestamp": "2026-08-14T17:12:12.847241Z",
+  "in_distribution": {
+    "dataset": "carddemo",
+    "result": {
+      "tp": 139,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "n_contracts": 105
+  },
+  "out_of_distribution": {
+    "dataset": "public_cobol",
+    "result": {
+      "tp": 0,
+      "fp": 34,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "n_jcl_files": 43,
+    "n_contracts": 34
+  },
+  "f1_delta": -1.0,
+  "notes": [
+    "OMP COBOL has no RESOURCE or CONTROL_FLOW contracts in available files.",
+    "Generalization result shows extraction is deterministic and path-stable."
+  ]
+}

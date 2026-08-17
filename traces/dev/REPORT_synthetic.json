@@ -1,0 +1,156 @@
+{
+  "SYNTHETIC_STATIC_HEADER": "SYNTHETIC_STATIC: This trace was programmatically generated, not from real execution. It may only be used for pipeline testing.",
+  "source_type": "SYNTHETIC_STATIC",
+  "note": "GnuCOBOL was NOT available at trace-generation time. This trace is a synthetic stub covering the REPORT generation step of the CardDemo batch job sequence. It must NOT be used to promote contracts to STATIC_DYNAMIC_SUPPORTED.",
+  "gnucobol_available": false,
+  "gnucobol_version": null,
+  "generated_at": "2026-08-14T16:47:04.095596+00:00",
+  "generator": "Subagent C — Dynamic Execution / legacy-contract research platform",
+  "program": "REPORT",
+  "execution_id": "synth-report-20260814",
+  "events": [
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000001",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-14T16:47:02.000000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "step": "JOBINIT",
+        "note": "Synthetic JOB_START for REPORT generation step"
+      }
+    },
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000002",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-14T16:47:02.100000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "step": "STEP020",
+        "note": "Synthetic STEP_START: report generation step"
+      }
+    },
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000003",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "EXECUTE",
+      "timestamp": "2026-08-14T16:47:02.200000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "REPORT",
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic EXECUTE: REPORT program invocation"
+      }
+    },
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000004",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "CONSUME",
+      "timestamp": "2026-08-14T16:47:02.300000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "ACCTOUT",
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic CONSUME: REPORT step reads ACCTOUT produced by CBACT01C"
+      }
+    },
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000005",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "READ",
+      "timestamp": "2026-08-14T16:47:02.400000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "ACCTOUT",
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic READ: REPORT reads processed account records from ACCTOUT"
+      }
+    },
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000006",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "WRITE",
+      "timestamp": "2026-08-14T16:47:02.500000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "RPTFILE",
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic WRITE: REPORT writes formatted report lines to RPTFILE"
+      }
+    },
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000007",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "PRODUCE",
+      "timestamp": "2026-08-14T16:47:02.600000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "RPTFILE",
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic PRODUCE: RPTFILE is the final output dataset of the job chain"
+      }
+    },
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000008",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "RETURN",
+      "timestamp": "2026-08-14T16:47:02.700000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic RETURN: REPORT program normal termination RC=0"
+      }
+    },
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000009",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-14T16:47:02.800000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "step": "STEP020",
+        "note": "Synthetic STEP_END: REPORT step completed RC=0"
+      }
+    },
+    {
+      "event_id": "c3d4e5f6-0003-0003-0003-report000010",
+      "execution_id": "synth-report-20260814",
+      "artifact_id": "REPORT",
+      "operation": "JOB_END",
+      "timestamp": "2026-08-14T16:47:02.900000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic JOB_END: entire CardDemo batch job chain complete"
+      }
+    }
+  ]
+}

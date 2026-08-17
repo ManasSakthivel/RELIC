@@ -1,0 +1,6 @@
+coverage_level,n_contracts,n_supported,n_conflict,n_not_observed,dynamic_validation_rate,status
+actual_measured,63,31,1,31,0.492,PARTIAL_EVIDENCE_AVAILABLE
+NOTE_1,,,,,,RQ3 coverage experiment (H3: FPR reduction at coverage thresholds) requires full execution environment
+NOTE_2,,,,,,FPR undefined in mutation benchmark (FP=0 by design); H3 cannot be evaluated as stated
+NOTE_3,,,,,,Coverage threshold experiment (0.10/0.25/0.50/0.75/1.00) is BLOCKED_EXTERNAL_DEPENDENCY
+NOTE_4,,,,,,See rq3_dynamic_results.json for actual measured values

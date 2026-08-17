@@ -1,0 +1,29 @@
+{
+  "baseline": "C",
+  "description": "LLM-only blinded (Groq llama-3.3-70b-versatile, v2_blinded prompts)",
+  "run_id": "C_BLINDED_20260817T034654",
+  "model": "llama-3.3-70b-versatile",
+  "prompt_version": "llm_only_v2_blinded",
+  "note_v1_confound": "v1 prompts appended (semantics-preserving change) for negatives \u2014 directional leak. v2 uses neutral blinded descriptions for all operators.",
+  "temperature": 0.0,
+  "seed": 42,
+  "n_positive": 104,
+  "n_negative": 144,
+  "n_total": 248,
+  "n_errors": 245,
+  "n_successful": 3,
+  "metrics": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 102,
+    "tn": 144,
+    "errors": 245,
+    "precision": 1.0,
+    "recall": 0.0192,
+    "f1": 0.0377,
+    "fpr": 0.0,
+    "specificity": 1.0
+  },
+  "run_timestamp": "2026-08-17T03:52:56.357711+00:00",
+  "records_file": "llm_c_records_blinded.jsonl"
+}

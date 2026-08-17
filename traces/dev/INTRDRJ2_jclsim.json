@@ -1,0 +1,58 @@
+{
+  "source_type": "EXECUTION_SIMULATED",
+  "gnucobol_version": "cobc (GnuCOBOL) 3.2.0",
+  "gnucobol_available": true,
+  "generated_at": "2026-08-16T16:05:26.216252+00:00",
+  "generator": "generate_execution_traces.py \u2014 JCL step-ordering simulation",
+  "program": "INTRDRJ2",
+  "execution_id": "jclsim-intrdrj2-20260816160526216222",
+  "source_jcl": "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main/app/jcl/INTRDRJ2.JCL",
+  "n_steps_ordered": 1,
+  "events": [
+    {
+      "event_id": "e21fd837-12b6-4f9b-a7be-a5671467ff58",
+      "execution_id": "jclsim-intrdrj2-20260816160526216222",
+      "artifact_id": "6e61132ae35f4048",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-16T16:05:26.216226+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "job": "INTRDRJ2",
+        "job_entity_id": "6e61132ae35f4048",
+        "simulation": "JCL_ordering_from_parser"
+      }
+    },
+    {
+      "event_id": "c3dbbe29-849e-4392-ac67-7af4ecb40538",
+      "execution_id": "jclsim-intrdrj2-20260816160526216222",
+      "artifact_id": "f1dc5d58c49621e0",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-16T16:05:27.216226+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "step": "IDCAMS",
+        "step_index": 0,
+        "jcl_file": "INTRDRJ2.JCL"
+      }
+    },
+    {
+      "event_id": "a5f2738c-7434-4294-ae88-1adc9708a0fc",
+      "execution_id": "jclsim-intrdrj2-20260816160526216222",
+      "artifact_id": "f1dc5d58c49621e0",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-16T16:05:27.716226+00:00",
+      "source_type": "EXECUTION_SIMULATED",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "step": "IDCAMS",
+        "step_index": 0,
+        "jcl_file": "INTRDRJ2.JCL"
+      }
+    }
+  ]
+}

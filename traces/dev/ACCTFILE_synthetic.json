@@ -1,0 +1,102 @@
+{
+  "SYNTHETIC_STATIC_HEADER": "SYNTHETIC_STATIC: This trace was programmatically generated, not from real execution. It may only be used for pipeline testing.",
+  "source_type": "SYNTHETIC_STATIC",
+  "note": "GnuCOBOL was NOT available at trace-generation time. This trace is a synthetic stub covering the ACCTFILE dataset-open step of the CardDemo batch job sequence. It must NOT be used to promote contracts to STATIC_DYNAMIC_SUPPORTED.",
+  "gnucobol_available": false,
+  "gnucobol_version": null,
+  "generated_at": "2026-08-14T16:47:04.095596+00:00",
+  "generator": "Subagent C — Dynamic Execution / legacy-contract research platform",
+  "program": "ACCTFILE",
+  "execution_id": "synth-acctfile-20260814",
+  "events": [
+    {
+      "event_id": "a1b2c3d4-0001-0001-0001-acctfile00001",
+      "execution_id": "synth-acctfile-20260814",
+      "artifact_id": "ACCTFILE",
+      "operation": "JOB_START",
+      "timestamp": "2026-08-14T16:47:00.000000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "step": "JOBINIT",
+        "note": "Synthetic JOB_START event for pipeline connectivity testing"
+      }
+    },
+    {
+      "event_id": "a1b2c3d4-0001-0001-0001-acctfile00002",
+      "execution_id": "synth-acctfile-20260814",
+      "artifact_id": "ACCTFILE",
+      "operation": "STEP_START",
+      "timestamp": "2026-08-14T16:47:00.100000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "ACCTFILE",
+      "return_code": null,
+      "metadata": {
+        "synthetic": true,
+        "step": "STEP010",
+        "note": "Synthetic STEP_START: account file dataset open"
+      }
+    },
+    {
+      "event_id": "a1b2c3d4-0001-0001-0001-acctfile00003",
+      "execution_id": "synth-acctfile-20260814",
+      "artifact_id": "ACCTFILE",
+      "operation": "OPEN",
+      "timestamp": "2026-08-14T16:47:00.200000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "ACCTFILE",
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "file_org": "SEQUENTIAL",
+        "access_mode": "INPUT",
+        "note": "Synthetic OPEN event: ACCTFILE opened for INPUT"
+      }
+    },
+    {
+      "event_id": "a1b2c3d4-0001-0001-0001-acctfile00004",
+      "execution_id": "synth-acctfile-20260814",
+      "artifact_id": "ACCTFILE",
+      "operation": "PRODUCE",
+      "timestamp": "2026-08-14T16:47:00.300000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": "ACCTFILE",
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic PRODUCE event: ACCTFILE dataset available to downstream consumers"
+      }
+    },
+    {
+      "event_id": "a1b2c3d4-0001-0001-0001-acctfile00005",
+      "execution_id": "synth-acctfile-20260814",
+      "artifact_id": "ACCTFILE",
+      "operation": "STEP_END",
+      "timestamp": "2026-08-14T16:47:00.400000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "step": "STEP010",
+        "note": "Synthetic STEP_END: ACCTFILE step completed RC=0"
+      }
+    },
+    {
+      "event_id": "a1b2c3d4-0001-0001-0001-acctfile00006",
+      "execution_id": "synth-acctfile-20260814",
+      "artifact_id": "ACCTFILE",
+      "operation": "JOB_END",
+      "timestamp": "2026-08-14T16:47:00.500000Z",
+      "source_type": "SYNTHETIC_STATIC",
+      "resource": null,
+      "return_code": 0,
+      "metadata": {
+        "synthetic": true,
+        "note": "Synthetic JOB_END for ACCTFILE phase"
+      }
+    }
+  ]
+}
