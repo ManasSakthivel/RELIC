@@ -1,5 +1,5 @@
 # Reproducibility Guide
-## LEGACY-CONTRACT — Complete Reproducibility Protocol
+## RELIC — Complete Reproducibility Protocol
 
 ---
 
@@ -133,4 +133,4 @@ docker-compose up research
 # This mounts datasets and traces, runs all experiments, generates figures
 ```
 
-The Docker image pins all software versions and is uploaded to Docker Hub at `legacy-contract/research:v1.0`.
+The Docker image pins all software versions and is uploaded to Docker Hub at `relic/research:v1.0`.

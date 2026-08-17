@@ -1,5 +1,5 @@
 """
-LEGACY-CONTRACT — top-level package init.
+RELIC (legacy_contract) — top-level package init.
 """
 
 try:

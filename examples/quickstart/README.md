@@ -1,6 +1,6 @@
-# Quickstart Example
+# RELIC Quickstart Example
 
-This example walks through the core LEGACY-CONTRACT pipeline on a minimal
+This example walks through the core RELIC pipeline on a minimal
 two-step JCL job. It demonstrates:
 
 1. Parsing JCL artifacts
@@ -59,7 +59,7 @@ python3.11 run_quickstart.py
 ## Expected Output
 
 ```
-=== LEGACY-CONTRACT Quickstart ===
+=== RELIC Quickstart ===
 
 Step 1: Parsing SAMPLEJOB.jcl...
   Found job: SAMPLEJOB

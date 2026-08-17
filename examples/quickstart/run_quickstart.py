@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.11
 """
-LEGACY-CONTRACT Quickstart Example.
+RELIC — Quickstart Example.
 
 Demonstrates the core pipeline on a minimal two-step JCL job:
   1. Parse JCL artifact
@@ -36,7 +36,7 @@ from legacy_contract.risk.detector import RiskDetector
 def main() -> None:
     jcl_path = Path(__file__).parent / "SAMPLEJOB.jcl"
 
-    print("=== LEGACY-CONTRACT Quickstart ===\n")
+    print("=== RELIC Quickstart ===\n")
 
     # -----------------------------------------------------------------------
     # Step 1: Parse JCL
@@ -116,7 +116,7 @@ def main() -> None:
     else:
         print("\n  No risks detected (expected for a PRESERVED diff).")
 
-    print("\n=== Quickstart complete ===")
+    print("\n=== RELIC Quickstart complete ===")
     print("For full benchmark reproduction: make reproduce-paper1")
     print("For documentation: docs/architecture.md, docs/methodology.md")
 

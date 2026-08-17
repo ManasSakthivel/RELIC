@@ -1,7 +1,7 @@
 """
 Figure 1: System Architecture Diagram.
 
-Generates a clean box-and-arrow diagram of the LEGACY-CONTRACT pipeline:
+Generates a clean box-and-arrow diagram of the RELIC pipeline:
 Artifacts → Parsers → IR → Static Extraction → BCG → Reconciliation → Risk Detection
 
 This is a structural (non-empirical) figure and can be generated at any time.
@@ -210,7 +210,7 @@ def generate(output_dir: Path) -> None:
     # Title and legend
     # -----------------------------------------------------------------------
     ax.set_title(
-        "Figure 1: LEGACY-CONTRACT System Architecture",
+        "Figure 1: RELIC System Architecture",
         fontsize=11,
         fontweight="bold",
         pad=8,

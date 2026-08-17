@@ -1,19 +1,18 @@
 cff-version: 1.2.0
 message: >
-  If you use LEGACY-CONTRACT in your research, please cite it using
-  the metadata below.
-title: >
-  LEGACY-CONTRACT: Execution-Grounded Behavioral Contract Recovery
-  for Legacy Batch Modernization Risk Detection
+  If you use RELIC in your research, please cite it using the metadata below.
+title: "RELIC: Execution-Grounded Behavioral Analysis for Legacy Software Modernization"
 abstract: >
-  A research platform for the automatic recovery, dynamic validation, and
-  change-risk detection of implicit behavioral contracts embedded in COBOL/JCL
-  batch systems. The system formalizes behavioral obligations as a Behavioral
-  Contract Graph (BCG = (V, E, C, P, D, Γ)) and evaluates them against a
-  fault-grounded mutation benchmark derived from documented real-world
-  modernization failures.
+  RELIC recovers implicit behavioral obligations from legacy JCL/COBOL systems as
+  Behavioral Contract Graphs (BCG = (V, E, C, P, D, Γ)), compares them across
+  modernized versions using confidence-delta differencing, and uses execution
+  evidence to distinguish supported, conflicting, and unobserved behavior.
+  Evaluated on the AWS CardDemo benchmark: BCG F1=1.000 vs structural baseline
+  F1=0.8995 across 104 evaluated mutations; 91.8% dynamic validation rate.
 authors:
-  - name: "LEGACY-CONTRACT Research Team"
+  - family-names: "Sakthivel"
+    given-names: "Manas"
+    email: "manas.mskg@gmail.com"
 repository-code: "https://github.com/ManasSakthivel/RELIC"
 license: Apache-2.0
 version: "1.0.0"
@@ -28,14 +27,11 @@ keywords:
   - mutation testing
   - dynamic analysis
 preferred-citation:
-  type: conference-paper
-  title: >
-    Execution-Grounded Behavioral Contract Recovery for Legacy Batch
-    Modernization Risk Detection
+  type: generic
+  title: "RELIC: Execution-Grounded Behavioral Analysis for Legacy Software Modernization"
   authors:
-    - name: "Anonymous Authors"
-  collection-title: "Proceedings of the 47th International Conference on Software Engineering (ICSE 2025)"
+    - family-names: "Sakthivel"
+      given-names: "Manas"
   year: 2025
   notes: >
-    Citation will be updated with full author and publication details
-    after double-blind review.
+    Manuscript under review. Repository: https://github.com/ManasSakthivel/RELIC

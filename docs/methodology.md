@@ -1,5 +1,5 @@
 # Research Methodology
-## LEGACY-CONTRACT — Paper 1 Scope, RQs, Hypotheses, Baselines, Experimental Design
+## RELIC — Paper 1 Scope, RQs, Hypotheses, Baselines, Experimental Design
 
 ---
 

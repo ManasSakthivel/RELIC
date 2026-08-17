@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" width="560" height="320" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+
+  <!-- Background -->
+  <rect width="560" height="320" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="280" y="26" text-anchor="middle" font-size="13" font-weight="600" fill="#1f2328">F1 on CardDemo Mutation Benchmark</text>
+  <text x="280" y="43" text-anchor="middle" font-size="10" fill="#57606a">104 evaluated mutations · closed-set benchmark</text>
+
+  <!-- Y-axis -->
+  <line x1="80" y1="55" x2="80" y2="255" stroke="#e5e7eb" stroke-width="1"/>
+  <!-- Y-axis labels -->
+  <text x="72" y="258" text-anchor="end" font-size="9" fill="#6b7280">0.0</text>
+  <text x="72" y="207" text-anchor="end" font-size="9" fill="#6b7280">0.25</text>
+  <text x="72" y="157" text-anchor="end" font-size="9" fill="#6b7280">0.5</text>
+  <text x="72" y="107" text-anchor="end" font-size="9" fill="#6b7280">0.75</text>
+  <text x="72" y="60" text-anchor="end" font-size="9" fill="#6b7280">1.0</text>
+  <!-- Y gridlines -->
+  <line x1="80" y1="207" x2="530" y2="207" stroke="#f3f4f6" stroke-width="1"/>
+  <line x1="80" y1="157" x2="530" y2="157" stroke="#f3f4f6" stroke-width="1"/>
+  <line x1="80" y1="107" x2="530" y2="107" stroke="#f3f4f6" stroke-width="1"/>
+  <line x1="80" y1="58" x2="530" y2="58" stroke="#f3f4f6" stroke-width="1"/>
+
+  <!-- Bar width 52, gap 12 -->
+  <!-- RELIC: F1=1.000  height=200 -->
+  <rect x="88"  y="58"  width="52" height="197" rx="3" fill="#3b82f6"/>
+  <text x="114" y="53"  text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">1.000</text>
+
+  <!-- Static BCG (Baseline E): F1=0.960  height=192 -->
+  <rect x="152" y="66"  width="52" height="189" rx="3" fill="#93c5fd"/>
+  <text x="178" y="62"  text-anchor="middle" font-size="10" font-weight="600" fill="#2563eb">0.960</text>
+
+  <!-- Structural (Baseline A): F1=0.8995  height=180 -->
+  <rect x="216" y="75"  width="52" height="180" rx="3" fill="#6ee7b7"/>
+  <text x="242" y="71"  text-anchor="middle" font-size="10" font-weight="600" fill="#065f46">0.900</text>
+
+  <!-- Dep+LLM (Baseline D): F1=0.1091  height=22 -->
+  <rect x="280" y="233" width="52" height="22"  rx="3" fill="#fcd34d"/>
+  <text x="306" y="229" text-anchor="middle" font-size="10" fill="#78350f">0.109</text>
+
+  <!-- LLM-only (Baseline C): F1=0.0377  height=8 -->
+  <rect x="344" y="247" width="52" height="8"   rx="3" fill="#fca5a5"/>
+  <text x="370" y="243" text-anchor="middle" font-size="10" fill="#991b1b">0.038†</text>
+
+  <!-- Complexity (Baseline B): F1=0.000  height=0 → thin line -->
+  <rect x="408" y="255" width="52" height="2"   rx="1" fill="#d1d5db"/>
+  <text x="434" y="251" text-anchor="middle" font-size="10" fill="#9ca3af">0.000</text>
+
+  <!-- X-axis baseline -->
+  <line x1="80" y1="255" x2="530" y2="255" stroke="#9ca3af" stroke-width="1"/>
+
+  <!-- X-axis labels -->
+  <text x="114" y="272" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1d4ed8">RELIC</text>
+  <text x="178" y="272" text-anchor="middle" font-size="9.5" fill="#374151">Static BCG</text>
+  <text x="242" y="272" text-anchor="middle" font-size="9.5" fill="#374151">Structural</text>
+  <text x="306" y="272" text-anchor="middle" font-size="9.5" fill="#374151">Dep+LLM</text>
+  <text x="370" y="272" text-anchor="middle" font-size="9.5" fill="#374151">LLM-only</text>
+  <text x="434" y="272" text-anchor="middle" font-size="9.5" fill="#374151">Complexity</text>
+
+  <!-- Footnote -->
+  <text x="88" y="298" font-size="9" fill="#9ca3af">† LLM baselines are lower bounds — high API error rates during evaluation runs.</text>
+  <text x="88" y="311" font-size="9" fill="#9ca3af">See docs/experiments.md for methodology. Results are benchmark-specific.</text>
+
+</svg>

@@ -1,6 +1,6 @@
 # Results Directory
 
-This directory contains all experimental results for LEGACY-CONTRACT Paper 1.
+This directory contains all experimental results for RELIC Paper 1.
 
 **Authoritative manifest:** `FINAL_RESULTS_MANIFEST.json` (v1.4, `frozen=true`)  
 All numbers in the paper trace back to this manifest and the JSON files below.

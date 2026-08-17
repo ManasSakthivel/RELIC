@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to LEGACY-CONTRACT are documented here.
+All notable changes to RELIC are documented here.
 
 ---
 

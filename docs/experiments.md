@@ -1,6 +1,6 @@
 # Experiments
 
-## LEGACY-CONTRACT — Paper 1 Experiment Documentation
+## RELIC — Experiment Documentation
 
 This document describes the exact configuration of each experiment in the paper.
 All experiment configurations are frozen in `experiments/*/config.yaml`.

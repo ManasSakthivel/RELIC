@@ -1,10 +1,10 @@
-# Contributing to LEGACY-CONTRACT
+# Contributing to RELIC
 
 Thank you for your interest in this research project.
 
 ## Research Integrity First
 
-LEGACY-CONTRACT is an academic research artifact. The primary obligation is
+RELIC is an academic research artifact. The primary obligation is
 **scientific reproducibility and honesty**. Before contributing, read:
 
 - `docs/methodology.md` — research design and frozen experimental scope
@@ -27,7 +27,7 @@ Open a GitHub issue with:
 
 ### Suggesting Extensions
 
-LEGACY-CONTRACT is designed to be extended. High-value extensions include:
+RELIC is designed to be extended. High-value extensions include:
 
 - Additional mutation operators (F4–F7 categories)
 - Level-3 human annotation of RESOURCE and CONTROL_FLOW contracts

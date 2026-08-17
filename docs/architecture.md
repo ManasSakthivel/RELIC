@@ -1,15 +1,15 @@
 # Architecture Documentation
-## LEGACY-CONTRACT — System Architecture for Research Platform
+## RELIC — System Architecture
 
 ---
 
 ## SYSTEM OVERVIEW
 
-LEGACY-CONTRACT is a modular research platform investigating whether execution-grounded behavioral contracts improve modernization-risk detection for legacy batch systems.
+RELIC is a modular research platform investigating whether execution-grounded behavioral contracts improve modernization-risk detection for legacy batch systems.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
-│                        LEGACY-CONTRACT                              │
+│                             RELIC                                       │
 │                                                                     │
 │  ┌─────────────┐    ┌──────────────┐    ┌──────────────────────┐   │
 │  │  INGESTION  │───▶│   PARSERS    │───▶│  IR (Intermediate    │   │

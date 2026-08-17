@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "legacy-contract"
-version = "0.1.0"
-description = "Execution-Grounded Behavioral Contract Recovery for Legacy Batch Modernization"
-authors = ["LEGACY-CONTRACT Research Team"]
+name = "relic"
+version = "1.0.0"
+description = "RELIC: Execution-Grounded Behavioral Analysis for Legacy Software Modernization"
+authors = ["Manas Sakthivel"]
 license = "Apache-2.0"
 readme = "README.md"
 packages = [{include = "legacy_contract", from = "src"}]

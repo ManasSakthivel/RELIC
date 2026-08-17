@@ -1,5 +1,5 @@
 # Limitations
-## LEGACY-CONTRACT — Honest Limitations of the Research System
+## RELIC — Limitations of the Research System
 
 ---
 

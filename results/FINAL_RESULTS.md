@@ -1,4 +1,4 @@
-# Final Results — LEGACY-CONTRACT Paper 1
+# Final Results — RELIC Paper 1
 
 All numbers below are sourced from `FINAL_RESULTS_MANIFEST.json` (v1.4, frozen=true).  
 Authoritative reproduction command: `make reproduce-paper1`

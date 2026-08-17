@@ -188,7 +188,7 @@ FIGURE_GENERATORS = {
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate all LEGACY-CONTRACT paper figures."
+        description="Generate all RELIC paper figures."
     )
     parser.add_argument(
         "--results-dir",

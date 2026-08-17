@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 560" width="740" height="560" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+
+  <!-- Background -->
+  <rect width="740" height="560" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="370" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2328">RELIC — System Architecture</text>
+
+  <!-- ── ROW 1: Inputs ── -->
+  <!-- JCL Files -->
+  <rect x="30" y="60" width="130" height="48" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="95" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">JCL Files</text>
+  <text x="95" y="97" text-anchor="middle" font-size="10" fill="#3b82f6">55 artifacts (.jcl)</text>
+
+  <!-- COBOL Programs -->
+  <rect x="180" y="60" width="130" height="48" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="245" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">COBOL Programs</text>
+  <text x="245" y="97" text-anchor="middle" font-size="10" fill="#3b82f6">44 artifacts (.cbl)</text>
+
+  <!-- Copybooks -->
+  <rect x="330" y="60" width="130" height="48" rx="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="395" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">Copybooks</text>
+  <text x="395" y="97" text-anchor="middle" font-size="10" fill="#3b82f6">62 artifacts (.cpy)</text>
+
+  <!-- Execution Traces -->
+  <rect x="530" y="60" width="175" height="48" rx="6" fill="#fef9c3" stroke="#fde047" stroke-width="1.2"/>
+  <text x="617" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#713f12">Execution Traces</text>
+  <text x="617" y="97" text-anchor="middle" font-size="10" fill="#92400e">GnuCOBOL / simulated</text>
+
+  <!-- ── Arrows row1 → row2 ── -->
+  <line x1="95" y1="108" x2="95" y2="154" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="245" y1="108" x2="245" y2="154" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="395" y1="108" x2="340" y2="154" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="617" y1="108" x2="617" y2="154" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- ── ROW 2: Parsers + Adapter ── -->
+  <!-- Parser group -->
+  <rect x="30" y="155" width="430" height="48" rx="6" fill="#dcfce7" stroke="#86efac" stroke-width="1.2"/>
+  <text x="245" y="174" text-anchor="middle" font-size="12" font-weight="600" fill="#14532d">Parsers</text>
+  <text x="245" y="191" text-anchor="middle" font-size="10" fill="#15803d">JCL Parser · COBOL Parser · Copybook Parser → IR (deterministic IDs)</text>
+
+  <!-- Dynamic Evidence Adapter -->
+  <rect x="480" y="155" width="225" height="48" rx="6" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.2"/>
+  <text x="592" y="174" text-anchor="middle" font-size="12" font-weight="600" fill="#78350f">Dynamic Evidence</text>
+  <text x="592" y="191" text-anchor="middle" font-size="10" fill="#92400e">Adapter + ArtifactMapper</text>
+
+  <!-- ── Arrows row2 → row3 ── -->
+  <line x1="245" y1="203" x2="245" y2="249" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="400" y1="203" x2="400" y2="249" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="592" y1="203" x2="592" y2="249" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- ── ROW 3: Extractor + BCG Builder ── -->
+  <rect x="30" y="250" width="280" height="52" rx="6" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.2"/>
+  <text x="170" y="270" text-anchor="middle" font-size="12" font-weight="600" fill="#4c1d95">Static Contract Extractor</text>
+  <text x="170" y="288" text-anchor="middle" font-size="10" fill="#6d28d9">TEMPORAL · RESOURCE · CONTROL_FLOW</text>
+
+  <rect x="330" y="250" width="225" height="52" rx="6" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.2"/>
+  <text x="442" y="270" text-anchor="middle" font-size="12" font-weight="600" fill="#4c1d95">BCG Builder</text>
+  <text x="442" y="288" text-anchor="middle" font-size="10" fill="#6d28d9">Entities · Relations · Contracts</text>
+
+  <!-- Evidence stream merges into BCG -->
+  <line x1="592" y1="250" x2="555" y2="302" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- ── Arrows row3 → row4 ── -->
+  <line x1="170" y1="302" x2="295" y2="348" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="442" y1="302" x2="395" y2="348" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- ── ROW 4: BCG (core) ── -->
+  <rect x="110" y="350" width="480" height="58" rx="8" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1.8"/>
+  <text x="350" y="374" text-anchor="middle" font-size="13" font-weight="700" fill="#831843">Behavioral Contract Graph (BCG)</text>
+  <text x="350" y="394" text-anchor="middle" font-size="10" fill="#9d174d">BCG = (V, E, C, P, D, Γ)   ·   provenance · confidence · validation state</text>
+
+  <!-- ── Arrows row4 → row5 ── -->
+  <line x1="220" y1="408" x2="155" y2="454" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="350" y1="408" x2="350" y2="454" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+  <line x1="480" y1="408" x2="555" y2="454" stroke="#6b7280" stroke-width="1.4" marker-end="url(#arr)"/>
+
+  <!-- ── ROW 5: BCGDiff · Reconciliation · Risk Detector ── -->
+  <rect x="30" y="456" width="210" height="52" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1.2"/>
+  <text x="135" y="476" text-anchor="middle" font-size="12" font-weight="600" fill="#7c2d12">BCGDiff</text>
+  <text x="135" y="494" text-anchor="middle" font-size="10" fill="#9a3412">broken · modified (confidence-delta)</text>
+
+  <rect x="260" y="456" width="175" height="52" rx="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+  <text x="347" y="476" text-anchor="middle" font-size="12" font-weight="600" fill="#14532d">Reconciliation</text>
+  <text x="347" y="494" text-anchor="middle" font-size="10" fill="#15803d">SUPPORTED · CONFLICT · NOT_OBSERVED</text>
+
+  <rect x="455" y="456" width="240" height="52" rx="6" fill="#ffe4e6" stroke="#fca5a5" stroke-width="1.2"/>
+  <text x="575" y="476" text-anchor="middle" font-size="12" font-weight="600" fill="#881337">Risk Report</text>
+  <text x="575" y="494" text-anchor="middle" font-size="10" fill="#9f1239">violations · evidence chains · confidence</text>
+
+  <!-- ── Legend ── -->
+  <rect x="30" y="524" width="14" height="10" rx="2" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="49" y="533" font-size="10" fill="#374151">Artifacts</text>
+  <rect x="110" y="524" width="14" height="10" rx="2" fill="#dcfce7" stroke="#86efac" stroke-width="1"/>
+  <text x="129" y="533" font-size="10" fill="#374151">Parsers / IR</text>
+  <rect x="220" y="524" width="14" height="10" rx="2" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="239" y="533" font-size="10" fill="#374151">Analysis</text>
+  <rect x="310" y="524" width="14" height="10" rx="2" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1"/>
+  <text x="329" y="533" font-size="10" fill="#374151">BCG (core)</text>
+  <rect x="415" y="524" width="14" height="10" rx="2" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+  <text x="434" y="533" font-size="10" fill="#374151">Dynamic Evidence</text>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+</svg>
