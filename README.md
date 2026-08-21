@@ -16,6 +16,10 @@ When you migrate to Kubernetes or AWS Step Functions, these rules have to be rei
 
 Structural analysis catches things like "this step uses that dataset." It doesn't catch "this step's behavior changed because the condition that guards it was weakened."
 
+<p align="center">
+  <img src="docs/assets/relic-motivation.svg" alt="The ALTER_ERROR_BRANCH problem — structural analysis sees the same dependency graph, but the behavioral guard has changed" width="700"/>
+</p>
+
 ---
 
 ## How RELIC works
@@ -40,6 +44,10 @@ JCL / COBOL artifacts
 
 The key idea is *confidence-delta differencing*: instead of just checking whether a contract exists in both versions, RELIC checks whether the contract has been *weakened* — e.g., a return-code threshold that changed from `RC=4` to `RC=16`. The structural graph looks identical in both versions; only the behavioral confidence changes.
 
+<p align="center">
+  <img src="docs/assets/relic-architecture.svg" alt="RELIC system architecture — from JCL/COBOL inputs through parsers, BCG construction, and BCGDiff to contract violations" width="700"/>
+</p>
+
 ---
 
 ## Results
@@ -62,6 +70,10 @@ RELIC detected 104/104 violating mutations and produced zero false positives on 
 † LLM baselines used blinded prompts but had substantial API failure rates (245/248 and 241/248 calls errored). The numbers above are lower bounds due to those failures.
 
 **Scope note:** All of this is on CardDemo, a demonstration application. These aren't production numbers and shouldn't be read as "RELIC works on real mainframes." The methodology is sound on this benchmark; generalization to larger or more complex systems is an open question.
+
+<p align="center">
+  <img src="docs/assets/relic-results.svg" alt="F1 comparison bar chart — RELIC vs five baselines on the CardDemo mutation benchmark" width="540"/>
+</p>
 
 ---
 
