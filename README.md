@@ -77,7 +77,7 @@ export GROQ_API_KEY="your-key"
 python3.11 scripts/run_llm_baselines.py
 ```
 
-No local GnuCOBOL required for deterministic experiments. For trace generation, see [docs/reproduction.md](docs/reproduction.md).
+No local GnuCOBOL required for deterministic experiments. For trace generation, see [docs/reproducibility.md](docs/reproducibility.md).
 
 ---
 

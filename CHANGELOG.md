@@ -33,8 +33,21 @@ All notable changes to RELIC are documented here.
 - Research documentation: architecture, methodology, limitations, reproduction guides
 - Paper manuscript (ACM sigconf format, double-blind ready): `paper/paper.tex`
 
+### Fixed
+
+- BCGDiff engine gap: `RiskDetector` previously inspected only `diff.broken`, missing
+  mutations that weakened contracts without removing them. Fixed to also inspect
+  `diff.modified`; ALTER_ERROR_BRANCH (8 mutations) now correctly detected.
+- Reflexive-pair guard: duplicate step names in DEFCUST.jcl/TRANREPT.jcl created
+  false self-ordering obligations. Guard added to both extractor and oracle;
+  evaluated mutation count reduced from 109 to 104.
+- RQ3 bugs (3 fixed): timestamp parsing, absolute vs. relative path entity-ID
+  mismatch, ArtifactMapper misapplied to entity-ID traces.
+- LLM baseline v1 prompts discarded (semantics-preserving context leak in negative
+  descriptions); all reported LLM results use v2_blinded prompts.
+
 ### Research Status
 
 All frozen results are in `results/FINAL_RESULTS_MANIFEST.json` (v1.4).
 LLM baselines require `GROQ_API_KEY`. All other experiments are fully deterministic.
-See `docs/reproduction.md` for the complete reproduction guide.
+See `docs/reproducibility.md` for the complete reproduction guide.

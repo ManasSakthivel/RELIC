@@ -229,9 +229,9 @@ This empirically confirms the design principle: absence of evidence ≠ contradi
 | Condition | Description | F1 |
 |---|---|---|
 | A1 (Full BCG) | Full proposed system | 1.000 |
-| A3 (Structural only) | Structural edges only — equivalent to Baseline A | 0.888 |
+| A3 (Structural only) | Structural edges only — equivalent to Baseline A | 0.8995 |
 | A4 (Complexity only) | Complexity metrics only — equivalent to Baseline B | 0.000 |
-| A5 (BCG, no delta) | BCG without confidence-delta — equivalent to Baseline E | 0.962 |
+| A5 (BCG, no delta) | BCG without confidence-delta — equivalent to Baseline E | 0.9600 |
 | A2, A7 (Dynamic) | Dynamic-evidence conditions — blocked (CardDemo DB2/CICS) | — |
 
 The single architectural difference between A1 (F1=1.00) and A5 (F1=0.96) is

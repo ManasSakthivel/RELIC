@@ -1,7 +1,7 @@
 {
   "experiment_id": "E2",
   "research_question": "RQ2",
-  "run_timestamp": "2026-08-16T17:35:08.547247+00:00",
+  "run_timestamp": "2026-08-29T11:20:30.499550+00:00",
   "seed": 42,
   "engine_fix_applied": "BCGDiff_gap_fixed: F1+F2+F3 operators now remove broken contracts from mutated BCG; ALTER_ERROR_BRANCH reduces static_support; RiskDetector processes all modified contracts",
   "n_jcl_files": 55,
@@ -396,13 +396,13 @@
     }
   },
   "blocked_conditions": {
-    "bcg_dynamic": "BLOCKED \u2014 CardDemo DB2/CICS prevents full GnuCOBOL execution",
-    "llm_only": "COMPLETE \u2014 see results/rq2/llm_c_results.json (F1=0.0377, lower bound due to API errors)",
-    "dep_llm": "COMPLETE \u2014 see results/rq2/llm_d_results.json (F1=0.1091, lower bound due to API errors)"
+    "bcg_dynamic": "[RESULT_PENDING] \u2014 GnuCOBOL not available",
+    "llm_only": "[RESULT_PENDING] \u2014 LLM endpoint not available",
+    "dep_llm": "[RESULT_PENDING] \u2014 LLM endpoint not available"
   },
   "hypothesis": "H2: BCG+dynamic F1 >= static_bcg F1 + 10pp",
   "preliminary_static_vs_structural": "STATIC_BCG_OUTPERFORMS_STRUCTURAL",
-  "verdict": "STATIC_BCG_F1=1.000 outperforms all evaluated static baselines (A, B, E). LLM baselines C and D completed (see llm_c_results.json, llm_d_results.json). BCG+dynamic blocked by CardDemo DB2/CICS environment.",
+  "verdict": "[RESULT_PENDING] \u2014 cannot compare BCG+dynamic vs baselines until dynamic evidence available",
   "notes": [
     "FP=0 by design: all mutations are applied to valid BCGs; detection of at least 1 risk item = TP.",
     "Ground truth: any mutation that was successfully applied is a positive test case (Level-2 DETERMINISTIC).",
