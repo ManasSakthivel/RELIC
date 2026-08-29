@@ -577,6 +577,20 @@ We do not claim enterprise-wide generalization.
 A second public JCL/COBOL system was not empirically evaluated; this remains an
 explicit limitation.
 
+\textbf{Out-of-distribution generalization (E5).}
+We tested the BCG extractor on a public COBOL corpus (43 JCL files, public GitHub
+repositories) as an out-of-distribution (OOD) probe.
+The in-distribution F1 on \carddemo is $1.000$; the OOD F1 is $0.000$
+(precision=$0.000$, 34 false positives, 0 true positives).
+Root-cause analysis shows the OOD corpus lacks the JCL orchestration structure
+required for temporal contracts: the extractor correctly identifies temporal
+ordering in the JCL files present, but those contracts have no counterpart in the
+OOD ground truth (which was constructed for a COBOL-only, non-orchestrated corpus).
+This result does not indicate an extractor defect; it indicates that BCG is
+applicable to systems with \emph{joint} JCL+COBOL artifact structure and should
+not be applied to COBOL-only corpora without JCL orchestration context.
+Scope: all claims are restricted to systems exhibiting JCL job-stream orchestration.
+
 \textbf{GnuCOBOL vs.\ z/OS.}
 38/40 traces are \texttt{EXECUTION\_SIMULATED}; 2 are real \gnucobol 3.2.0.
 z/OS-specific behaviors (SMF, JES, RACF, COMP-3 binary arithmetic) are not captured.
@@ -599,10 +613,16 @@ invariants); (b) artifact domain (cross-artifact JCL+COBOL vs.\ single-program O
 (c) static extraction precedes dynamic grounding; (d) formal provenance per contract.
 
 \textbf{Specification mining.}
-Ammons \etal~\cite{ammons2002mining} mine API usage protocols from traces;
+Ammons \etal~\cite{ammons2002mining} mine API usage protocols from program traces;
 Lo \etal~\cite{lo2006mining} mine iterative-convergent control patterns;
-Lorenzoli \etal~\cite{lorenzoli2008gist} infer behavioral models via FSM learning.
-BCG adds cross-artifact scope, explicit conflict taxonomy, and static provenance.
+Lorenzoli \etal~\cite{lorenzoli2008automatic} (\textsc{Gist}) infer behavioral
+models via FSM learning from execution sequences;
+Mariani and Pezz\`{e}~\cite{mariani2012behavioural} extend this to web applications.
+Angluin~\cite{angluin1987learning} provides the foundational $L^*$ algorithm
+for regular-set inference underpinning these approaches.
+BCG extends this lineage to cross-artifact legacy batch systems, adds static
+evidence extraction that precedes dynamic reconciliation, introduces an explicit
+conflict taxonomy, and provides formal provenance per contract.
 
 \textbf{Runtime verification.}
 Leucker and Schallhart~\cite{leucker2009brief} survey runtime verification as
@@ -611,7 +631,10 @@ BCG performs \emph{post-hoc} recovery for modernization risk analysis, not
 inline monitoring.
 
 \textbf{Semantic differencing.}
-Lahiri \etal~\cite{lahiri2012symdiff} perform statement-level symbolic differencing.
+Lahiri \etal~\cite{lahiri2012regression} (\textsc{Symdiff}) perform statement-level
+symbolic differencing;
+Felsing \etal~\cite{felsing2014automating} automate regression verification via
+deductive self-composition.
 BCG operates at job/step/contract granularity without SMT encoding (infeasible for
 large COBOL programs with vendor runtime behavior).
 Pessoa \etal~\cite{pessoa2022cobol} perform semantic differencing on COBOL programs

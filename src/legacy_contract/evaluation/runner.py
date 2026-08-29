@@ -352,14 +352,20 @@ class ExperimentRunner:
 
         benchmark = Benchmark.load(str(gt_path))
         gt_items = benchmark.get_positives()
-        gt_ids = [item.contract_id for item in gt_items]
+        # Use natural_language (contract_statement) as the matching key.
+        # The extractor produces deterministic natural_language strings like
+        # "Step X must execute and complete before step Y begins." — these
+        # match the GT benchmark items' contract_statement field.
+        # UUIDs (contract_id) are regenerated fresh on each extractor run
+        # and cannot be used as a stable matching key.
+        gt_ids = [item.contract_statement for item in gt_items]
         gt_types = [item.contract_type for item in gt_items]
 
         logger.info(
             f"RQ1: {len(gt_ids)} ground-truth contracts from {gt_path}"
         )
 
-        # Run static extractor
+        # Run static extractor; returns natural_language strings (matching key)
         predicted_ids, predicted_types = self._run_static_extractor(
             dataset_path, config
         )
@@ -774,14 +780,20 @@ class ExperimentRunner:
             from legacy_contract.static_analysis.extractor import StaticContractExtractor
             from legacy_contract.ingestion import ingest_directory
 
-            ir_graph = ingest_directory(str(dataset_path))
+            inventory = ingest_directory(str(dataset_path))
+            ir_graph = inventory.combined_ir  # ArtifactInventory wraps IRGraph
             extractor = StaticContractExtractor()
-            contracts = extractor.extract(ir_graph)
+            extraction_result = extractor.extract(ir_graph)
+            # extractor.extract() returns a StaticExtractionResult; iterate .all_contracts
+            # Return natural_language as the matching key — this is deterministic
+            # from entity names and matches the GT benchmark's contract_statement field.
+            # formal_statement (e.g. "COBRUN ≺ RUN") does NOT match the GT
+            # contract_statement (e.g. "Step COBRUN must execute ... before step RUN begins.").
             sigs = [
-                c.formal_statement or c.natural_language
-                for c in contracts
+                c.natural_language or c.formal_statement
+                for c in extraction_result.all_contracts
             ]
-            types = [c.contract_type.value for c in contracts]
+            types = [c.contract_type.value for c in extraction_result.all_contracts]
             return sigs, types
         except Exception as exc:
             logger.warning(
@@ -828,7 +840,8 @@ class ExperimentRunner:
             from baselines.structural import StructuralBaselineAnalyzer
             from legacy_contract.ingestion import ingest_directory
 
-            ir_graph = ingest_directory(self._resolve_path(config.dataset))
+            inventory = ingest_directory(self._resolve_path(config.dataset))
+            ir_graph = inventory.combined_ir  # ArtifactInventory wraps IRGraph
             analyzer = StructuralBaselineAnalyzer()
             sdg = analyzer.analyze(ir_graph)
             # Structural baseline produces StructuralRiskItem objects;
@@ -848,7 +861,8 @@ class ExperimentRunner:
             from legacy_contract.bcg.builder import BCGBuilder
             from legacy_contract.reconciliation.engine import ReconciliationEngine
 
-            ir_graph = ingest_directory(self._resolve_path(config.dataset))
+            inventory = ingest_directory(self._resolve_path(config.dataset))
+            ir_graph = inventory.combined_ir  # ArtifactInventory wraps IRGraph
             extractor = StaticContractExtractor()
             contracts = extractor.extract(ir_graph)
 
@@ -892,7 +906,8 @@ class ExperimentRunner:
             from legacy_contract.reconciliation.engine import ReconciliationEngine
             import random as _random
 
-            ir_graph = ingest_directory(self._resolve_path(config.dataset))
+            inventory = ingest_directory(self._resolve_path(config.dataset))
+            ir_graph = inventory.combined_ir  # ArtifactInventory wraps IRGraph
             extractor = StaticContractExtractor()
             contracts = extractor.extract(ir_graph)
 
@@ -921,28 +936,73 @@ class ExperimentRunner:
     def _run_ablation_condition(
         self, condition: str, config: ExperimentConfig
     ) -> list[str] | None:
-        """Map ablation condition name to the corresponding evidence combination."""
-        static_conditions = {
-            "E0_source_only",
-            "E1_structural",
-            "E2_static_contracts",
-            "E3_static_bcg",
-            "E4_bcg_provenance",
-        }
-        dynamic_conditions = {
-            "E5_bcg_dynamic",
-            "E6_bcg_provenance_dynamic",
-            "E7_bcg_provenance_dynamic_llm",
-        }
-        if condition in static_conditions:
-            preds, _ = self._run_static_extractor(
-                self._resolve_path(config.dataset), config
-            )
-            return preds
-        elif condition in dynamic_conditions:
-            return self._run_bcg_dynamic(config)
-        else:
-            logger.warning(f"Unknown ablation condition: {condition}")
+        """
+        Map ablation condition name to the corresponding evidence combination.
+
+        Ablation ladder (each condition adds one layer of evidence):
+          E0_source_only      — no extraction; returns empty list (baseline for coverage)
+          E1_structural       — structural dependency baseline only
+          E2_static_contracts — temporal contracts only (no resource, no control-flow)
+          E3_static_bcg       — all static contracts (temporal + resource + control-flow)
+          E4_bcg_provenance   — static BCG with high-confidence provenance filter (≥0.9)
+          E5_bcg_dynamic      — static BCG + dynamic trace reconciliation
+          E6_bcg_provenance_dynamic — static BCG + provenance + dynamic
+          E7_bcg_provenance_dynamic_llm — full pipeline including LLM enrichment
+        """
+        try:
+            if condition == "E0_source_only":
+                # No contract extraction — empty prediction set
+                return []
+
+            elif condition == "E1_structural":
+                return self._run_structural_baseline(config)
+
+            elif condition == "E2_static_contracts":
+                # Temporal contracts only
+                from legacy_contract.ingestion import ingest_directory
+                from legacy_contract.static_analysis.extractor import TemporalContractExtractor
+
+                inventory = ingest_directory(self._resolve_path(config.dataset))
+                ir_graph = inventory.combined_ir
+                temporal = TemporalContractExtractor().extract(ir_graph)
+                return [
+                    c.natural_language or c.formal_statement
+                    for c in temporal
+                ]
+
+            elif condition in ("E3_static_bcg", "E4_bcg_provenance"):
+                # E3: all static contracts
+                # E4: all static contracts filtered to high-confidence (≥0.9 static_support)
+                preds, _ = self._run_static_extractor(
+                    self._resolve_path(config.dataset), config
+                )
+                if preds is None:
+                    return None
+                if condition == "E4_bcg_provenance":
+                    # Re-extract to apply confidence filter
+                    from legacy_contract.ingestion import ingest_directory
+                    from legacy_contract.static_analysis.extractor import StaticContractExtractor
+
+                    inventory = ingest_directory(self._resolve_path(config.dataset))
+                    ir_graph = inventory.combined_ir
+                    result = StaticContractExtractor().extract(ir_graph)
+                    preds = [
+                        c.natural_language or c.formal_statement
+                        for c in result.all_contracts
+                        if getattr(c.confidence, "static_support", 1.0) >= 0.9
+                    ]
+                return preds
+
+            elif condition in ("E5_bcg_dynamic", "E6_bcg_provenance_dynamic",
+                               "E7_bcg_provenance_dynamic_llm"):
+                return self._run_bcg_dynamic(config)
+
+            else:
+                logger.warning(f"Unknown ablation condition: {condition}")
+                return None
+
+        except Exception as exc:
+            logger.warning(f"Ablation condition '{condition}' failed: {exc}")
             return None
 
     # ------------------------------------------------------------------
