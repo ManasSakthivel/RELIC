@@ -1,7 +1,7 @@
 {
   "experiment_id": "E3",
   "research_question": "RQ3",
-  "run_timestamp": "2026-08-29T11:42:31.189065+00:00",
+  "run_timestamp": "2026-08-29T12:09:18.771805+00:00",
   "gnucobol_available": true,
   "gnucobol_version": "GnuCOBOL 3.2.0",
   "n_traces_loaded": 43,

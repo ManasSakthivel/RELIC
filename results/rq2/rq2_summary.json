@@ -1,7 +1,7 @@
 {
   "experiment_id": "E2",
   "research_question": "RQ2",
-  "run_timestamp": "2026-08-29T11:42:19.040975+00:00",
+  "run_timestamp": "2026-08-29T12:09:18.505091+00:00",
   "seed": 42,
   "engine_fix_applied": "BCGDiff_gap_fixed: F1+F2+F3 operators now remove broken contracts from mutated BCG; ALTER_ERROR_BRANCH reduces static_support; RiskDetector processes all modified contracts",
   "n_jcl_files": 55,

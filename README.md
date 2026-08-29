@@ -65,7 +65,7 @@ I generated mutations of the JCL control flow and ran each method against them:
 | LLM-only† | 0.038 |
 | Complexity metrics | 0.000 |
 
-RELIC detected 104/104 violating mutations and produced zero false positives on 144 semantics-preserving negatives.
+RELIC detected 104/104 violating mutations and produced zero false positives on 144 semantics-preserving negatives. Contract recovery (RQ1) evaluated on a strict 11-file held-out split with zero overlap with the development set: micro-F1=1.000 (21 TP, 0 FP, 0 FN).
 
 † LLM baselines used blinded prompts but had substantial API failure rates (245/248 and 241/248 calls errored). The numbers above are lower bounds due to those failures.
 

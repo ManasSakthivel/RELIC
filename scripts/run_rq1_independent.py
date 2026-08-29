@@ -164,25 +164,39 @@ def _build_extractor_contracts(jcl_path: pathlib.Path, parser: JCLParser,
 
 
 def _discover_held_out_jcl() -> list[pathlib.Path]:
-    """Return held-out JCL files (test split, NOT used during development)."""
+    """Return held-out JCL files (test split, NOT used during development).
+
+    BUG FIX (2026-08-30): SPLITS_60_20_20.json uses key 'held_out' not 'test'.
+    Previous runs fell through to the fallback (all 33 app/jcl/*.jcl files),
+    which includes dev-split files. The correct held-out set is 11 files with
+    zero overlap with the dev (33) and validation (11) splits.
+    """
     splits_file = ROOT / "datasets" / "carddemo" / "SPLITS_60_20_20.json"
     if splits_file.exists():
         with open(splits_file) as f:
             splits = json.load(f)
+        # Primary key: 'held_out' (correct name in SPLITS_60_20_20.json)
+        # Legacy fallback: 'test' (was wrong key; kept for backward compat)
+        held_out_raw = splits.get("held_out", splits.get("test", []))
         test_paths = [
-            pathlib.Path(p) for p in splits.get("test", [])
+            pathlib.Path(p) for p in held_out_raw
             if p.lower().endswith(".jcl")
         ]
+        # Resolve paths relative to dataset extraction base
+        base = ROOT / "datasets/carddemo/extracted/aws-mainframe-modernization-carddemo-main"
         resolved = []
         for p in test_paths:
             if p.is_absolute() and p.exists():
                 resolved.append(p)
+            elif (base / p).exists():
+                resolved.append(base / p)
             elif (ROOT / p).exists():
                 resolved.append(ROOT / p)
         if resolved:
             return resolved
 
     # Fallback: use all JCL files (report limitation)
+    print("WARNING: held_out split not resolved; falling back to all app/jcl/*.jcl")
     jcl_dir = (ROOT / "datasets/carddemo/extracted"
                / "aws-mainframe-modernization-carddemo-main/app/jcl")
     return list(jcl_dir.glob("*.jcl")) if jcl_dir.exists() else []
