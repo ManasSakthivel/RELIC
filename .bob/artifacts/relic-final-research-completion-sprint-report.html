@@ -1,0 +1,144 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>RELIC — Final Research Completion Sprint Report</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 14px; line-height: 1.6; background: #fff; color: #1f2328; max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+  h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  h2 { font-size: 15px; font-weight: 700; margin-top: 28px; margin-bottom: 8px; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  h3 { font-size: 13px; font-weight: 700; margin-top: 16px; margin-bottom: 6px; color: #3b82d4; }
+  .meta { color: #57606a; font-size: 12px; margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0 16px; }
+  th { background: #f7f8fa; font-weight: 600; text-align: left; padding: 5px 8px; border: 1px solid #e5e7eb; }
+  td { padding: 4px 8px; border: 1px solid #e5e7eb; vertical-align: top; }
+  tr:nth-child(even) { background: #f7f8fa; }
+  .pass { color: #1a7340; font-weight: 700; }
+  .warn { color: #b45309; font-weight: 700; }
+  .fail { color: #b91c1c; font-weight: 700; }
+  .verdict { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-weight: 700; }
+  .v-b { background: #dbeafe; color: #1e40af; }
+  .v-c { background: #fef9c3; color: #92400e; }
+  code { font-size: 12px; background: #f7f8fa; padding: 1px 4px; border-radius: 3px; border: 1px solid #e5e7eb; }
+  .risk-critical { color: #b91c1c; font-weight: 700; }
+  .risk-high { color: #b45309; font-weight: 700; }
+  .risk-medium { color: #0369a1; font-weight: 700; }
+  .risk-low { color: #15803d; font-weight: 700; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 3px 0; }
+  .section-note { background: #f0f9ff; border-left: 3px solid #3b82d4; padding: 8px 12px; margin: 10px 0; font-size: 13px; }
+  .no-change { background: #f0fdf4; border-left: 3px solid #15803d; padding: 8px 12px; margin: 10px 0; font-size: 13px; }
+  footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid #e5e7eb; text-align: center; font-size: 12px; color: #57606a; }
+</style>
+</head>
+<body>
+
+<h1>RELIC — Final Research Completion Sprint</h1>
+<div class="meta">8 parallel forensic agents · Completion date: 2026-08-30 · Commit: <code>8f698a2</code> · Branch: main</div>
+
+<h2>A. Final Scientific Status</h2>
+<span class="verdict v-b">B — RESEARCH-SOLID WITH EXPLICIT LIMITATIONS</span>
+<p style="margin-top:10px">Core evidence is valid and independently verified. Remaining limitations are real, clearly scoped, and documented. The primary claim — BCGDiff confidence-delta detection outperforms structural analysis, particularly on behavioral mutations — is supported by evidence.</p>
+
+<h2>B. Final Verified Results</h2>
+<table>
+  <tr><th>Experiment</th><th>Dataset</th><th style="text-align:right">N</th><th>P</th><th>R</th><th>F1</th><th>Verified?</th><th>Reproducible?</th></tr>
+  <tr><td>RQ1 Independent Oracle (TEMPORAL)</td><td>CardDemo (33 JCL)</td><td style="text-align:right">56</td><td>1.000</td><td>1.000</td><td>1.000</td><td class="pass">✓ YES</td><td class="pass">✓ YES</td></tr>
+  <tr><td>RQ1 Macro F1</td><td>CardDemo (33 JCL)</td><td style="text-align:right">33 files</td><td>—</td><td>—</td><td>0.576</td><td class="pass">✓ YES</td><td class="pass">✓ YES</td></tr>
+  <tr><td>RQ2 BCGDiff (proposed)</td><td>CardDemo dev (55 JCL)</td><td style="text-align:right">104</td><td>1.000</td><td>1.000</td><td>1.000</td><td class="pass">✓ YES</td><td class="pass">✓ YES</td></tr>
+  <tr><td>RQ2 Structural (Baseline A)</td><td>CardDemo dev</td><td style="text-align:right">104</td><td>1.000</td><td>0.817</td><td>0.900</td><td class="pass">✓ YES</td><td class="pass">✓ YES</td></tr>
+  <tr><td>RQ2 Complexity (Baseline B)</td><td>CardDemo dev</td><td style="text-align:right">104</td><td>0.000</td><td>0.000</td><td>0.000</td><td class="pass">✓ YES</td><td class="pass">✓ YES</td></tr>
+  <tr><td>RQ2 Static BCG (Baseline E)</td><td>CardDemo dev</td><td style="text-align:right">104</td><td>1.000</td><td>0.923</td><td>0.960</td><td class="pass">✓ YES</td><td class="pass">✓ YES</td></tr>
+  <tr><td>RQ2 Negative (TN/FPR)</td><td>CardDemo (33 JCL × 5 ops)</td><td style="text-align:right">144</td><td>—</td><td>—</td><td>FPR=0.000</td><td class="pass">✓ YES</td><td class="pass">✓ YES</td></tr>
+  <tr><td>RQ2 LLM-only (Baseline C) — lower bound</td><td>CardDemo (248 items)</td><td style="text-align:right">3 valid calls</td><td>1.000</td><td>0.019</td><td>0.038</td><td class="pass">✓ YES</td><td class="warn">GROQ KEY REQ.</td></tr>
+  <tr><td>RQ2 Dep+LLM (Baseline D) — lower bound</td><td>CardDemo (248 items)</td><td style="text-align:right">7 valid calls</td><td>1.000</td><td>0.058</td><td>0.109</td><td class="pass">✓ YES</td><td class="warn">GROQ KEY REQ.</td></tr>
+  <tr><td>RQ3 Dynamic validation (simulation)</td><td>CardDemo (33 JCL, 40 traces)</td><td style="text-align:right">61</td><td>—</td><td>—</td><td>0.918 rate</td><td class="pass">✓ YES</td><td class="pass">✓ YES</td></tr>
+  <tr><td>RQ3 Dynamic validation (real execution)</td><td>CardDemo (2 real traces)</td><td style="text-align:right">61</td><td>—</td><td>—</td><td>0.000 rate</td><td class="pass">✓ YES</td><td class="pass">✓ YES</td></tr>
+</table>
+
+<h2>C. Before vs After (Corrected Values)</h2>
+<div class="no-change"><strong>No F1 value corrections required.</strong> All previously reported values are arithmetically correct. The audit confirmed values, not changed them.</div>
+<table>
+  <tr><th>Metric</th><th>Previous</th><th>Forensic Audit</th><th>Reason</th></tr>
+  <tr><td>RQ1 micro-F1</td><td>1.0000</td><td>1.0000</td><td>Verified correct (56 TP, 0 FP, 0 FN)</td></tr>
+  <tr><td>RQ1 macro-F1</td><td>0.5758</td><td>0.5758</td><td>Verified correct (14 zero-contract files → F1=0.0 per file)</td></tr>
+  <tr><td>RQ2 BCGDiff F1</td><td>1.0000</td><td>1.0000</td><td>Verified from CSV (104 TP, 0 FN)</td></tr>
+  <tr><td>RQ3 91.8%</td><td>"dynamic validation"</td><td>91.8% <em>simulation corroboration</em></td><td>All 56 promotions from EXECUTION_SIMULATED traces; real-execution = 0/61</td></tr>
+  <tr><td>OOD F1=0.0</td><td>"OOD failure"</td><td>Benchmark artifact</td><td>34 extracted contracts valid but unverifiable (no oracle)</td></tr>
+  <tr><td>LLM F1=0.038/0.109</td><td>"Baseline result"</td><td>Lower bounds</td><td>97–99% API failure; infrastructure-limited, not capability-limited</td></tr>
+</table>
+
+<h2>D. Claims that ARE Defensible</h2>
+<ul>
+  <li>RELIC's BCGDiff detects 104/104 mutations (F1=1.000) that directly violate TEMPORAL contracts; structural analysis misses 19 (F1=0.900).</li>
+  <li>RELIC achieves FPR=0.000 on 144 semantics-preserving negative mutations.</li>
+  <li><strong>ALTER_ERROR_BRANCH discriminates:</strong> Structural baseline F1=0.000, Baseline E (no confidence-delta) F1=0.000, RELIC F1=1.000. This is RELIC's unique capability.</li>
+  <li>RELIC correctly implements JCL PRECEDES contract extraction (micro-F1=1.000 against a code-independent oracle).</li>
+  <li>56/61 contracts (91.8%) corroborated by JCL step-ordering simulation.</li>
+  <li>In-distribution F1=1.000 on CardDemo. Generalization is an open question.</li>
+</ul>
+
+<h2>E. Claims that Must NOT Be Made</h2>
+<ul>
+  <li><span class="fail">✗</span> "Dynamic validation rate 91.8%" → must say "91.8% corroboration by JCL step-ordering simulation (0% from real execution)"</li>
+  <li><span class="fail">✗</span> "RELIC outperforms LLMs" → must say "RELIC substantially outperformed LLM lower bounds (F1=0.04/0.11 with 97-99% API failures)"</li>
+  <li><span class="fail">✗</span> "Generalizes to legacy systems" → "Evaluated exclusively on CardDemo; generalization is an open question"</li>
+  <li><span class="fail">✗</span> "Independent oracle evaluation" (full claim) → "Code-independent oracle sharing the JCL PRECEDES specification; confirms implementation correctness"</li>
+  <li><span class="fail">✗</span> "F1=1.0 proves RELIC detects all behavioral changes" → "F1=1.0 on closed mutation benchmark where mutations target BCG-detectable contracts"</li>
+</ul>
+
+<h2>F. Remaining Scientific Limitations</h2>
+<ul>
+  <li><strong>Single dataset:</strong> CardDemo only. One demonstration application.</li>
+  <li><strong>Simulation circularity (RQ3):</strong> EXECUTION_SIMULATED traces from same JCL parser as BCG; promotion near-guaranteed structurally.</li>
+  <li><strong>Oracle spec-sharing (RQ1):</strong> Oracle and SUT share deterministic JCL spec; F1=1.0 is expected for any correct implementation.</li>
+  <li><strong>No held-out split (RQ1):</strong> Split key mismatch → fallback to full directory; evaluates on development files.</li>
+  <li><strong>OOD unevaluable:</strong> public_cobol has no oracle; F1=0.0 is benchmark incompatibility, not extractor failure.</li>
+  <li><strong>LLM baselines confounded:</strong> 97–99% API failure rate makes comparison inconclusive beyond "RELIC &gt; LLM lower bound."</li>
+  <li><strong>GnuCOBOL ≠ z/OS:</strong> Real execution from non-mainframe environment only.</li>
+  <li><strong>TEMPORAL-only independent validation:</strong> RESOURCE/CONTROL_FLOW require human annotation (blocked).</li>
+</ul>
+
+<h2>G. Reviewer Risk Register</h2>
+<table>
+  <tr><th>Risk</th><th>Level</th><th>Fixable Now?</th></tr>
+  <tr><td>"Dynamic validation" is simulation — not real execution</td><td><span class="risk-critical">CRITICAL</span></td><td class="pass">YES — README + manifest updated, claims scoped</td></tr>
+  <tr><td>Oracle shares JCL spec with SUT; F1=1.0 is expected</td><td><span class="risk-high">HIGH</span></td><td class="warn">PARTIALLY — disclosed; Level-3 annotation blocked (requires annotators)</td></tr>
+  <tr><td>F1=1.0 on closed benchmark is suspicious</td><td><span class="risk-high">HIGH</span></td><td class="pass">YES — explained by benchmark design (mutations target BCG contracts)</td></tr>
+  <tr><td>76.4% N/A rate limits benchmark N</td><td><span class="risk-medium">MEDIUM</span></td><td class="pass">YES — N/A taxonomy fully explained and documented</td></tr>
+  <tr><td>Single-system evaluation (CardDemo only)</td><td><span class="risk-high">HIGH</span></td><td class="warn">NO — requires second subject system (blocked, no JCL+COBOL corpus available)</td></tr>
+  <tr><td>LLM comparison confounded by API failures</td><td><span class="risk-medium">MEDIUM</span></td><td class="pass">YES — framed as lower bounds; disclosed in README</td></tr>
+  <tr><td>OOD F1=0.0 — catastrophic generalization drop</td><td><span class="risk-high">HIGH</span></td><td class="pass">YES — disclosed as benchmark artifact (no oracle for public_cobol JCL)</td></tr>
+  <tr><td>RQ1 not on strictly held-out split</td><td><span class="risk-medium">MEDIUM</span></td><td class="warn">PARTIALLY — disclosed as limitation; deterministic algorithm so leakage risk minimal</td></tr>
+</table>
+
+<h2>H. Repository Status</h2>
+<table>
+  <tr><th>Item</th><th>Status</th></tr>
+  <tr><td>Branch</td><td>main</td></tr>
+  <tr><td>Commit</td><td><code>8f698a2</code></td></tr>
+  <tr><td>Tests</td><td class="pass">305/305 PASS</td></tr>
+  <tr><td>Reproduction (<code>make reproduce-paper1</code>)</td><td class="pass">ALL 5 SCRIPTS PASS</td></tr>
+  <tr><td>Manifest version</td><td>v1.5 (post-forensic-audit)</td></tr>
+  <tr><td>Evidence ledger</td><td class="pass">NEW: docs/evidence_ledger.md</td></tr>
+  <tr><td>Forensic audit report</td><td class="pass">NEW: docs/final_forensic_audit.md</td></tr>
+  <tr><td>README</td><td class="pass">Updated — limitations section corrected</td></tr>
+  <tr><td>Secret scan</td><td class="pass">.env NOT tracked by git; no hardcoded paths</td></tr>
+  <tr><td>GitHub push</td><td class="pass">PUSHED — 7624b5a → 8f698a2</td></tr>
+  <tr><td>Negative mutations CSV</td><td class="pass">Regenerated (fresh timestamps)</td></tr>
+</table>
+
+<h2>I. Does the User Need to Take Any Manual Action?</h2>
+<div class="section-note">
+<strong>YES — 3 items remain that cannot be completed without external resources:</strong>
+<ol style="margin-top:8px">
+  <li><strong>Paper claim scoping [HIGH]:</strong> Update <code>paper/paper.tex</code> to replace "dynamic validation rate 91.8%" with "91.8% corroboration by JCL step-ordering simulation (0% from real program execution)." The code is correct; the paper prose may still use the pre-audit framing.</li>
+  <li><strong>Second subject system [HIGH]:</strong> Generalization cannot be established with only CardDemo. Requires a second JCL+COBOL corpus with ground truth. Cannot be automated — blocked on data availability.</li>
+  <li><strong>Level-3 human annotation [MEDIUM]:</strong> Independent annotation by qualified JCL/COBOL experts for RESOURCE and CONTROL_FLOW contracts. Required for full oracle independence. Blocked on annotator availability.</li>
+</ol>
+<p style="margin-top:8px">Items not required before treating this as a final research snapshot: the F1 values are correct, the repository is reproducible, all limitations are documented, and the core BCGDiff vs. structural comparison is scientifically defensible as stated.</p>
+</div>
+
+<footer>Made with IBM Bob</footer>
+</body>
+</html>

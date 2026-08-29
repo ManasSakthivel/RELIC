@@ -1,0 +1,154 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>RELIC — Final Gap-Closure Sprint</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 14px; line-height: 1.6; background: #fff; color: #1f2328; max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+  h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  h2 { font-size: 15px; font-weight: 700; margin-top: 28px; margin-bottom: 8px; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; }
+  h3 { font-size: 13px; font-weight: 700; margin-top: 16px; margin-bottom: 5px; }
+  .meta { color: #57606a; font-size: 12px; margin-bottom: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 8px 0 14px; }
+  th { background: #f7f8fa; font-weight: 600; text-align: left; padding: 5px 8px; border: 1px solid #e5e7eb; }
+  td { padding: 4px 8px; border: 1px solid #e5e7eb; vertical-align: top; }
+  tr:nth-child(even) { background: #f7f8fa; }
+  .pass { color: #1a7340; font-weight: 700; }
+  .warn { color: #b45309; font-weight: 700; }
+  .fail { color: #b91c1c; font-weight: 700; }
+  code { font-size: 12px; background: #f7f8fa; padding: 1px 4px; border-radius: 3px; border: 1px solid #e5e7eb; }
+  .freeze-box { background: #f0fdf4; border: 2px solid #15803d; padding: 14px 16px; border-radius: 6px; margin: 20px 0; }
+  .freeze-box h3 { color: #15803d; margin-top: 0; font-size: 16px; }
+  .changed { background: #fefce8; }
+  .note { background: #f0f9ff; border-left: 3px solid #3b82d4; padding: 8px 12px; margin: 8px 0; font-size: 13px; }
+  .blocked { background: #fff7ed; border-left: 3px solid #f97316; padding: 8px 12px; margin: 8px 0; font-size: 13px; }
+  footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid #e5e7eb; text-align: center; font-size: 12px; color: #57606a; }
+  ul { margin: 4px 0; padding-left: 20px; }
+  li { margin: 2px 0; }
+</style>
+</head>
+<body>
+
+<h1>RELIC — Final Gap-Closure Sprint</h1>
+<div class="meta">6 parallel agents · Commit: <code>fed30a8</code> · Branch: main · 305/305 tests pass</div>
+
+<div class="freeze-box">
+  <h3>🔒 RELIC IS FROZEN</h3>
+  <p style="margin:0">No further experimental or engineering work is required before writing the paper. All feasible gaps have been resolved. All infeasible gaps have been formally blocked with evidence. The repository is in a scientifically correct, reproducible state.</p>
+  <p style="margin:8px 0 0"><strong>→ FREEZE RELIC. WRITE THE PAPER.</strong></p>
+</div>
+
+<h2>1. Final Scientific Status</h2>
+<p><strong>B — RESEARCH-SOLID WITH EXPLICIT LIMITATIONS</strong><br />
+Core evidence is valid and reproducible. The primary contribution (BCGDiff confidence-delta detection, demonstrated uniquely by ALTER_ERROR_BRANCH) is supported. All limitations are documented with evidence. No fatal reviewer issues remain.</p>
+
+<h2>2. Corrected Results (Before → After)</h2>
+<table>
+  <tr><th>Metric</th><th>Before (fallback split)</th><th>After (held_out split)</th><th>Reason</th></tr>
+  <tr class="changed"><td>RQ1 dataset</td><td>33 files (all app/jcl — includes dev)</td><td><strong>11 files (held_out, zero overlap with dev)</strong></td><td>Bug fix: script used <code>splits["test"]</code>; correct key is <code>splits["held_out"]</code></td></tr>
+  <tr class="changed"><td>RQ1 total TP</td><td>56</td><td><strong>21</strong></td><td>Smaller held-out set</td></tr>
+  <tr class="changed"><td>RQ1 macro-F1</td><td>0.5758</td><td><strong>0.5455</strong></td><td>5/11 zero-contract files (vs 14/33 before); same structural cause</td></tr>
+  <tr><td>RQ1 micro-F1</td><td>1.0000</td><td><strong>1.0000 (unchanged)</strong></td><td>0 FP, 0 FN — correct on held-out set</td></tr>
+  <tr><td>RQ1 H1 verdict</td><td>SUPPORTED</td><td><strong>SUPPORTED</strong></td><td>—</td></tr>
+  <tr><td>RQ2 BCGDiff F1</td><td>1.0000</td><td>1.0000</td><td>Unchanged</td></tr>
+  <tr><td>RQ2 Structural F1</td><td>0.8995</td><td>0.8995</td><td>Unchanged</td></tr>
+  <tr><td>RQ3 validation rate</td><td>91.8% (mislabelled "dynamic")</td><td>91.8% simulation corroboration / 0% real execution</td><td>Correctly scoped in README</td></tr>
+</table>
+
+<h2>3. Gap Investigations</h2>
+
+<h3>Gap A — test vs held_out split fix ✅ COMPLETE</h3>
+<div class="note">
+<strong>Bug fixed.</strong> <code>run_rq1_independent.py</code> used <code>splits["test"]</code>; the correct key in <code>SPLITS_60_20_20.json</code> is <code>splits["held_out"]</code>. The proper held-out set is 11 files with <em>zero overlap</em> with dev(33) or validation(11). Script updated with path-resolution improvement and bug note. RQ1 re-run on correct data.
+</div>
+<p><strong>Impact:</strong> micro-F1 unchanged (1.000). macro-F1 corrected from 0.5758 → 0.5455 (proportionally more single-step files in held_out). Split is now scientifically valid.</p>
+
+<h3>Gap B — Second subject system ⛔ BLOCKED</h3>
+<div class="blocked">
+<strong>BLOCKED — no independent second-system corpus with oracle available.</strong><br />
+Investigated: <code>public_cobol</code> = IBM COBOL Programming Course (simple 1–2 step lab JCL; all repetitive COBRUN→RUN patterns; no independent oracle; insufficient structural complexity). CardDemo subdirs = same system. No other JCL+COBOL corpus with independent ground truth is accessible in current resources.
+</div>
+
+<h3>Gap C — Real dynamic execution ⛔ BLOCKED</h3>
+<div class="blocked">
+<strong>BLOCKED — no runtime JCL execution environment available.</strong><br />
+Investigated: 14/31 CardDemo programs potentially standalone (no EXEC SQL/CICS), but all fail compilation (require copybooks, missing dataset setup). Only EMPPAY/DEPTPAY (public_cobol) compile standalone — but they are COBOL programs, not JCL-orchestrated steps; they cannot corroborate JCL step-ordering contracts. Real execution rate = 0/61 JCL contracts. The 91.8% result remains correctly classified as simulation.
+</div>
+
+<h3>Gap D — Independent annotation ⛔ BLOCKED</h3>
+<div class="blocked">
+<strong>BLOCKED — no qualified external JCL/COBOL annotators available.</strong><br />
+RESOURCE and CONTROL_FLOW contract annotation requires domain experts who have not seen RELIC's output. Self-annotation is circular. Automated oracle infeasible for these contract types. RQ1 remains scoped to TEMPORAL contracts only.
+</div>
+
+<h2>4. Final Verified Results</h2>
+<table>
+  <tr><th>Experiment</th><th>Dataset</th><th style="text-align:right">N</th><th>P</th><th>R</th><th>F1</th><th>Verified</th></tr>
+  <tr><td>RQ1 micro (held_out)</td><td>CardDemo held_out (11 JCL)</td><td style="text-align:right">21 contracts</td><td>1.000</td><td>1.000</td><td><strong>1.000</strong></td><td class="pass">✓</td></tr>
+  <tr><td>RQ1 macro (held_out)</td><td>CardDemo held_out (11 JCL)</td><td style="text-align:right">11 files</td><td>—</td><td>—</td><td><strong>0.5455</strong></td><td class="pass">✓</td></tr>
+  <tr><td>RQ2 BCGDiff (proposed)</td><td>CardDemo dev (55 JCL)</td><td style="text-align:right">104 mutations</td><td>1.000</td><td>1.000</td><td><strong>1.000</strong></td><td class="pass">✓</td></tr>
+  <tr><td>RQ2 Structural (A)</td><td>CardDemo dev</td><td style="text-align:right">104</td><td>1.000</td><td>0.817</td><td><strong>0.900</strong></td><td class="pass">✓</td></tr>
+  <tr><td>RQ2 Baseline E (static BCG)</td><td>CardDemo dev</td><td style="text-align:right">104</td><td>1.000</td><td>0.923</td><td><strong>0.960</strong></td><td class="pass">✓</td></tr>
+  <tr><td>RQ2 Complexity (B)</td><td>CardDemo dev</td><td style="text-align:right">104</td><td>0.000</td><td>0.000</td><td><strong>0.000</strong></td><td class="pass">✓</td></tr>
+  <tr><td>RQ2 LLM-C (lower bound)</td><td>CardDemo (248)</td><td style="text-align:right">3 valid calls</td><td>1.000</td><td>0.019</td><td><strong>0.038</strong></td><td class="pass">✓</td></tr>
+  <tr><td>RQ2 LLM-D (lower bound)</td><td>CardDemo (248)</td><td style="text-align:right">7 valid calls</td><td>1.000</td><td>0.058</td><td><strong>0.109</strong></td><td class="pass">✓</td></tr>
+  <tr><td>RQ2 Negative (FPR)</td><td>CardDemo (33 JCL)</td><td style="text-align:right">144 TN</td><td>—</td><td>—</td><td><strong>FPR=0.000</strong></td><td class="pass">✓</td></tr>
+  <tr><td>RQ3 Simulation corroboration</td><td>CardDemo dev (33 JCL)</td><td style="text-align:right">61 contracts</td><td>—</td><td>—</td><td><strong>91.8% sim / 0% real</strong></td><td class="pass">✓</td></tr>
+</table>
+
+<h2>5. Remaining Scientific Limitations (for paper)</h2>
+<ul>
+  <li><strong>Single-system evaluation:</strong> CardDemo only. One demonstration app.</li>
+  <li><strong>RQ1 N=11:</strong> Small held-out set; deterministic system so correctness check is valid, but N is modest.</li>
+  <li><strong>Simulation-only dynamic evidence:</strong> 91.8% from JCL simulation; 0% from real execution.</li>
+  <li><strong>Simulation circularity:</strong> EXECUTION_SIMULATED traces use same parser as BCG; promotion near-guaranteed.</li>
+  <li><strong>TEMPORAL-only independent validation:</strong> RESOURCE/CONTROL_FLOW blocked on annotation.</li>
+  <li><strong>LLM baselines confounded:</strong> 97–99% API failures; lower bounds only.</li>
+  <li><strong>OOD incompatibility:</strong> public_cobol has no oracle; F1=0.0 is benchmark artifact.</li>
+  <li><strong>GnuCOBOL ≠ z/OS:</strong> Non-mainframe environment.</li>
+</ul>
+
+<h2>6. Final Reviewer Risk Register</h2>
+<table>
+  <tr><th>Risk</th><th>Level</th><th>Addressed?</th></tr>
+  <tr><td>Dynamic validation = simulation</td><td class="fail">CRITICAL</td><td class="pass">YES — README, manifest, evidence ledger updated</td></tr>
+  <tr><td>F1=1.0 unexplained</td><td class="warn">HIGH</td><td class="pass">YES — closed benchmark + ALTER_ERROR_BRANCH discriminator</td></tr>
+  <tr><td>Oracle spec-sharing</td><td class="warn">HIGH</td><td class="pass">YES — claim scoped to JCL PRECEDES implementation correctness</td></tr>
+  <tr><td>Single-system evaluation</td><td class="warn">HIGH</td><td class="warn">NO — Gap B BLOCKED; disclosed as limitation</td></tr>
+  <tr><td>OOD F1=0.0</td><td class="warn">HIGH</td><td class="pass">YES — disclosed as benchmark incompatibility</td></tr>
+  <tr><td>N/A rate 76.4%</td><td style="color:#0369a1;font-weight:700">MEDIUM</td><td class="pass">YES — taxonomy documented</td></tr>
+  <tr><td>RQ1 N=11 (small held-out)</td><td style="color:#0369a1;font-weight:700">MEDIUM</td><td class="pass">YES — fixed split + acknowledged in manifest</td></tr>
+  <tr><td>LLM comparison confounded</td><td style="color:#0369a1;font-weight:700">MEDIUM</td><td class="pass">YES — lower bound framing in README</td></tr>
+</table>
+
+<h2>7. Repository Status</h2>
+<table>
+  <tr><th>Item</th><th>Status</th></tr>
+  <tr><td>Branch / Commit</td><td>main / <code>fed30a8</code></td></tr>
+  <tr><td>Tests</td><td class="pass">305/305 PASS</td></tr>
+  <tr><td>Reproduction (<code>make reproduce-paper1</code>)</td><td class="pass">ALL 5 SCRIPTS PASS</td></tr>
+  <tr><td>Manifest</td><td class="pass">v1.6 — gap_closure_sprint block added</td></tr>
+  <tr><td>RQ1 split</td><td class="pass">FIXED — held_out (11 files, zero dev overlap)</td></tr>
+  <tr><td>Evidence ledger</td><td class="pass">docs/evidence_ledger.md</td></tr>
+  <tr><td>Forensic audit</td><td class="pass">docs/final_forensic_audit.md</td></tr>
+  <tr><td>Secret scan</td><td class="pass">.env NOT tracked by git</td></tr>
+  <tr><td>GitHub push</td><td class="pass">PUSHED — 8f698a2 → fed30a8</td></tr>
+</table>
+
+<h2>8. Does the User Need to Make Any Further Experimental or Engineering Changes?</h2>
+<div class="freeze-box">
+  <h3 style="font-size:15px">NO.</h3>
+  <p style="margin:0"><strong>RELIC IS FROZEN. MOVE TO PAPER WRITING.</strong></p>
+  <p style="margin:8px 0 0">The only remaining work is paper prose:</p>
+  <ol style="margin-top:6px">
+    <li>Update <code>paper/paper.tex</code> to replace "dynamic validation 91.8%" with "91.8% simulation corroboration (0% real execution)" — this is a <em>writing</em> task, not an experiment.</li>
+    <li>Report RQ1 N=11 (held_out) and macro-F1=0.5455 in the paper (not 0.5758).</li>
+    <li>Scope all claims per the evidence ledger and adversarial review guidance.</li>
+    <li>Include the limitations section covering: single dataset, simulation-only dynamic evidence, TEMPORAL-only independent oracle, LLM lower bounds.</li>
+  </ol>
+  <p style="margin-top:8px"><em>These are writing tasks. No new experiments are required or would be responsible to run.</em></p>
+</div>
+
+<footer>Made with IBM Bob</footer>
+</body>
+</html>

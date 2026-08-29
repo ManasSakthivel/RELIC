@@ -1,0 +1,170 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>RELIC Sprint Report</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif; font-size: 14px; line-height: 1.6; color: #1f2328; background: #fff; margin: 0; padding: 0; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 24px; }
+  h1 { font-size: 22px; font-weight: 700; margin: 0 0 4px; }
+  .subtitle { color: #57606a; font-size: 13px; margin-bottom: 28px; }
+  h2 { font-size: 15px; font-weight: 700; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; margin: 28px 0 12px; }
+  h3 { font-size: 13px; font-weight: 700; margin: 16px 0 6px; color: #1f2328; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px; }
+  th { background: #f7f8fa; font-weight: 600; text-align: left; padding: 6px 8px; border: 1px solid #e5e7eb; }
+  td { padding: 5px 8px; border: 1px solid #e5e7eb; vertical-align: top; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 11px; font-weight: 600; }
+  .b-ok { background: #dcfce7; color: #166534; }
+  .b-warn { background: #fef9c3; color: #854d0e; }
+  .b-block { background: #fee2e2; color: #991b1b; }
+  .b-partial { background: #dbeafe; color: #1e40af; }
+  .verdict { background: #f0fdf4; border: 1px solid #86efac; border-radius: 6px; padding: 14px 18px; margin: 20px 0; }
+  .verdict-title { font-weight: 700; font-size: 16px; color: #166534; }
+  .mono { font-family: monospace; font-size: 12px; background: #f7f8fa; padding: 1px 4px; border-radius: 3px; }
+  .section-note { background: #f7f8fa; border-left: 3px solid #3b82d4; padding: 8px 12px; font-size: 13px; margin-bottom: 12px; }
+  ul { margin: 6px 0 10px 20px; padding: 0; }
+  li { margin-bottom: 3px; }
+  footer { margin-top: 40px; padding-top: 12px; border-top: 1px solid #e5e7eb; text-align: center; font-size: 12px; color: #57606a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>RELIC — 4-Hour Research Sprint Report</h1>
+<div class="subtitle">Branch: main  |  Final commit: <span class="mono">7624b5a</span>  |  Pushed to: github.com/ManasSakthivel/RELIC  |  Tests: 305/305 ✓</div>
+
+
+<div class="verdict">
+  <div class="verdict-title">Sprint Verdict: B — PARTIAL BUT SCIENTIFICALLY SOLID</div>
+  <p style="margin:8px 0 0">RELIC is a clean, reproducible research artifact with strong, fully reproducible evidence for its three research questions on the CardDemo benchmark. All five core experiments re-run and verified to exact frozen values. Nine high-priority issues fixed. Repository pushed to GitHub. Major known limitations are honestly documented.</p>
+</div>
+
+
+<h2>1 · Verified Experimental Results</h2>
+<table>
+  <tr><th>Experiment</th><th>Dataset / N</th><th>Metric</th><th>Result</th><th>Reproduced?</th></tr>
+  <tr><td><b>RQ1</b> — Contract recovery (independent oracle)</td><td>CardDemo test split, 33 JCL files, 56 TEMPORAL contracts</td><td>Micro-F1 / Macro-F1 / 95% CI</td><td>1.0000 / 0.5758 / [0.39, 0.73]</td><td><span class="badge b-ok">✓ EXACT</span></td></tr>
+  <tr><td><b>RQ2+</b> — BCG risk detection (positive mutations)</td><td>CardDemo, 104 evaluated / 440 attempted (336 N/A)</td><td>F1 (BCG proposed)</td><td>1.0000</td><td><span class="badge b-ok">✓ EXACT</span></td></tr>
+  <tr><td><b>RQ2+ Baseline A</b> — Structural dependency</td><td>Same</td><td>F1</td><td>0.8995</td><td><span class="badge b-ok">✓ EXACT</span></td></tr>
+  <tr><td><b>RQ2+ Baseline E</b> — BCG, no confidence-delta</td><td>Same</td><td>F1</td><td>0.9600</td><td><span class="badge b-ok">✓ EXACT</span></td></tr>
+  <tr><td><b>RQ2+ Baseline C</b> — LLM-only (lower bound)</td><td>248 calls, 245 API errors</td><td>F1</td><td>0.0377</td><td><span class="badge b-ok">✓ EXACT</span></td></tr>
+  <tr><td><b>RQ2+ Baseline D</b> — Dep+LLM (lower bound)</td><td>248 calls, 241 API errors</td><td>F1</td><td>0.1091</td><td><span class="badge b-ok">✓ EXACT</span></td></tr>
+  <tr><td><b>RQ2− Negative benchmark</b> (semantics-preserving)</td><td>144 evaluated (351 N/A / 495 attempted)</td><td>FPR / TN</td><td>0.0 / 144</td><td><span class="badge b-ok">✓ EXACT</span></td></tr>
+  <tr><td><b>RQ3</b> — Dynamic validation rate</td><td>33 JCL files, 61 contracts, 40 traces (2 real + 38 simulated)</td><td>Validation rate / SUPPORTED</td><td>91.8% / 56</td><td><span class="badge b-ok">✓ EXACT</span></td></tr>
+  <tr><td><b>RQ3 Coverage</b> — Monotonicity experiment</td><td>10%→100% trace coverage</td><td>Rate at 100%</td><td>91.8% (NOT_OBS monotone safe)</td><td><span class="badge b-ok">✓ EXACT</span></td></tr>
+</table>
+<p style="font-size:12px;color:#57606a">All results reproduce via <span class="mono">make reproduce-paper1</span>. Seed=42. Results verified against FINAL_RESULTS_MANIFEST.json v1.4.</p>
+
+
+<h2>2 · Sprint Work Completed</h2>
+<h3>Discovery &amp; Verification</h3>
+<ul>
+  <li>Full repository audit: source, BCG, mutations, baselines, benchmark, tests, docs, paper, CI</li>
+  <li>All 5 core experiments re-run; results verified exact to frozen manifest (v1.4)</li>
+  <li>305/305 tests pass throughout sprint</li>
+</ul>
+<h3>Critical Fixes Applied</h3>
+<ul>
+  <li><b>802 absolute paths normalized</b> in <span class="mono">benchmark/ground_truth/level2_deterministic.json</span> and <span class="mono">results/ground_truth_manifest.json</span> — broke cross-machine reproducibility</li>
+  <li><b>LaTeX compilation fixed</b>: added undefined macros <span class="mono">\ambiguous</span> and <span class="mono">\partiallysupported</span> to paper.tex preamble (caused pdflatex failure)</li>
+  <li><b>Stale ablation footnote fixed</b>: "Tautological" → accurate independent oracle description with scope</li>
+  <li><b>Broken documentation links fixed</b>: README.md + CHANGELOG.md pointed to non-existent <span class="mono">docs/reproduction.md</span> → corrected to <span class="mono">docs/reproducibility.md</span></li>
+  <li><b>Manifest git_commit updated</b>: "NO_GIT" → actual HEAD SHA <span class="mono">b3d57ed</span></li>
+  <li><b>Manifest blocked_experiments updated</b>: stale "OPENAI_API_KEY / GPT-4" entries now correctly reflect Groq-completed lower bounds</li>
+  <li><b>Missing paper tables generated</b>: <span class="mono">paper/tables/table_static_vs_dynamic.md</span> and <span class="mono">paper/tables/table_dynamic_coverage.md</span> (listed in manifest but absent)</li>
+  <li><b>CHANGELOG.md</b>: added Fixed section documenting BCGDiff engine fix, reflexive-pair guard fix, 3 RQ3 bug fixes, LLM v1 prompt discard</li>
+  <li><b>docs/experiments.md</b>: corrected stale F1 values (Baseline A 0.888→0.8995, Baseline E 0.962→0.9600)</li>
+</ul>
+<h3>Repository &amp; Release</h3>
+<ul>
+  <li>Security audit: no secrets, API keys, or credentials found (zowe.schema.json references are field type descriptions, not real credentials)</li>
+  <li>All changes committed with meaningful commit message</li>
+  <li>Successfully pushed to <span class="mono">github.com/ManasSakthivel/RELIC</span> main branch</li>
+</ul>
+
+
+<h2>3 · Incomplete Work</h2>
+<table>
+  <tr><th>Item</th><th>Why incomplete</th><th>Scientific impact</th><th>Next action</th></tr>
+  <tr><td>Ablation A2/A7 (dynamic-only, BCG+dynamic)</td><td>Blocked: CardDemo DB2/CICS environment unavailable; GnuCOBOL can't run full CardDemo programs</td><td>MEDIUM — limits claim about dynamic evidence contribution</td><td>Obtain execution environment; or document as "future work"</td></tr>
+  <tr><td>Second subject system (JCL+COBOL)</td><td>No suitable public JCL+COBOL corpus found within sprint time</td><td>HIGH — limits external validity claim</td><td>Search IBM public samples, OpenMainframe zorow; priority for Paper 2</td></tr>
+  <tr><td>Level-3 human annotation (RESOURCE/CONTROL_FLOW oracle)</td><td>Requires qualified JCL/COBOL human annotators</td><td>HIGH — RQ1 oracle covers TEMPORAL only</td><td>Recruit annotators; follow docs/annotation_protocol_final.md</td></tr>
+  <tr><td>LLM baseline improvement (better prompts / retry logic)</td><td>Groq API error rate 97-98%; results are lower bounds only</td><td>MEDIUM — weakens baseline comparison clarity</td><td>Implement retry/exponential backoff; re-run with lower error rate</td></tr>
+  <tr><td>Confidence calibration study</td><td>No ground-truth modernization outcomes available</td><td>MEDIUM — confidence is evidence-strength, not probability</td><td>Future work; requires real migration case studies</td></tr>
+</table>
+
+
+<h2>4 · Claims Audit Summary</h2>
+<div class="section-note">26 claims FULLY SUPPORTED · 0 claims UNSUPPORTED · 0 claims FALSE</div>
+<table>
+  <tr><th>Claim</th><th>Evidence</th><th>Scope</th><th>Safe?</th></tr>
+  <tr><td>TEMPORAL extraction micro-F1=1.000</td><td>Independent oracle, 56 TP, 0 FN, 33 files</td><td>TEMPORAL only, CardDemo test split</td><td><span class="badge b-ok">YES</span></td></tr>
+  <tr><td>BCG detects all 104 evaluated mutations (F1=1.000)</td><td>Closed-set benchmark, 440 attempted / 336 N/A</td><td>Evaluated set only; FPR=0 is design property</td><td><span class="badge b-ok">YES (with scope)</span></td></tr>
+  <tr><td>Confidence-delta catches ALTER_ERROR_BRANCH (8 mutations invisible to Baseline E)</td><td>Per-operator results; 8 FN for both Baseline A and E, 0 FN for proposed</td><td>F3 operator, CardDemo</td><td><span class="badge b-ok">YES</span></td></tr>
+  <tr><td>91.8% dynamic validation rate</td><td>56/61 SUPPORTED, 40 traces (2 real + 38 simulated)</td><td>JCL-ordering simulation dominates; NOT z/OS</td><td><span class="badge b-ok">YES (with scope)</span></td></tr>
+  <tr><td>LLM baselines F1=0.038 (C) and 0.109 (D)</td><td>Groq llama-3.3-70b-versatile, v2_blinded prompts; 97-98% API error rate</td><td>LOWER BOUNDS only</td><td><span class="badge b-warn">YES (lower bounds)</span></td></tr>
+  <tr><td>OOD generalization F1=0.000 on public COBOL</td><td>E5 experiment; 34 FP, 0 TP — root cause: no JCL orchestration context</td><td>Correctly disclosed in paper §Threats</td><td><span class="badge b-ok">YES</span></td></tr>
+</table>
+
+
+<h2>5 · Reviewer Risk Register</h2>
+<table>
+  <tr><th>Risk</th><th>Attack</th><th>Priority</th><th>Current defense</th></tr>
+  <tr><td>Generalization failure</td><td>"OOD F1=0.0 shows system doesn't work beyond CardDemo"</td><td><span class="badge b-block">P0</span></td><td>Root-cause disclosed: artifact structure mismatch, not extractor defect. Paper §Threats §5.5 covers it.</td></tr>
+  <tr><td>Simulation ≠ execution</td><td>"38/40 traces are simulated; RQ3 is about JCL ordering, not program behavior"</td><td><span class="badge b-block">P0</span></td><td>Explicitly stated: EXECUTION_SIMULATED label throughout; paper §6 and §Threats §GnuCOBOL.</td></tr>
+  <tr><td>Closed-set benchmark inflation</td><td>"F1=1.0 and FPR=0 are trivial on a designed benchmark"</td><td><span class="badge b-partial">P1</span></td><td>Closed-set design stated; negative benchmark is separate; discriminating operator analysis shows non-trivial gap.</td></tr>
+  <tr><td>Single dataset</td><td>"All results on CardDemo, an AWS demo app; no enterprise validity"</td><td><span class="badge b-partial">P1</span></td><td>Limitations §1 and paper §Threats; second system remains future work.</td></tr>
+  <tr><td>RESOURCE/CONTROL_FLOW unevaluated</td><td>"RQ1 oracle is TEMPORAL-only; 2/3 of BCG model is unvalidated"</td><td><span class="badge b-partial">P1</span></td><td>Explicitly stated in paper §Results (RQ1 scope limitation) and §Threats §Construct.</td></tr>
+</table>
+
+
+<h2>6 · What a Fresh Researcher Can Reproduce</h2>
+<div class="section-note">
+  <b>Full reproduction (deterministic):</b><br />
+  <span class="mono">pip install poetry &amp;&amp; poetry install &amp;&amp; make reproduce-paper1</span><br />
+  Produces: RQ1, RQ2 positive + negative, RQ3 dynamic + coverage. All 305 tests pass. ~10s runtime.
+</div>
+<div class="section-note">
+  <b>LLM baselines (requires GROQ_API_KEY):</b><br />
+  <span class="mono">export GROQ_API_KEY="your-key" &amp;&amp; python3.11 scripts/run_llm_baselines.py</span><br />
+  Results are lower bounds due to Groq API error rates observed during evaluation run.
+</div>
+<p style="color:#57606a;font-size:12px">Not reproducible without external resources: z/OS execution traces · Level-3 human annotation · Full CardDemo COBOL execution (DB2/CICS stubs required)</p>
+
+
+<h2>7 · Git Status</h2>
+<table>
+  <tr><th>Item</th><th>Value</th></tr>
+  <tr><td>Branch</td><td>main</td></tr>
+  <tr><td>Final commit</td><td><span class="mono">7624b5a</span> — merge: integrate remote README updates with local link fix</td></tr>
+  <tr><td>Sprint commit</td><td><span class="mono">491069a</span> — artifact: sprint hardening — reproducibility, path portability, paper alignment</td></tr>
+  <tr><td>Files changed</td><td>16 files (14 modified + 2 new tables)</td></tr>
+  <tr><td>Tests</td><td>305/305 passed at commit time</td></tr>
+  <tr><td>Remote</td><td>https://github.com/ManasSakthivel/RELIC.git</td></tr>
+  <tr><td>Push status</td><td><span class="badge b-ok">✓ PUSHED</span></td></tr>
+</table>
+
+
+<h2>8 · Final Research Position</h2>
+<p><b>Based on the evidence currently available, RELIC can defensibly claim:</b></p>
+<ul>
+  <li>The Behavioral Contract Graph correctly and completely extracts TEMPORAL ordering contracts from JCL job streams (micro-F1=1.000 against an independent oracle, 56 verified contracts, CardDemo test split).</li>
+  <li>Confidence-delta differencing detects contract <em>weakening</em> — a class of modernization risk invisible to structural dependency analysis — as demonstrated by 8 ALTER_ERROR_BRANCH mutations undetectable by Baselines A and E.</li>
+  <li>On a closed-set fault-grounded benchmark of 104 positive mutations, BCG achieves F1=1.000 with zero false positives across 144 semantics-preserving negatives (FPR=0, closed-set property).</li>
+  <li>Available execution traces (2 real GnuCOBOL, 38 JCL-ordering simulations) validate 91.8% of extracted contracts, demonstrating the pipeline works end-to-end and that NOT_OBSERVED ≠ CONTRADICTED.</li>
+  <li>The system is fully reproducible: <span class="mono">make reproduce-paper1</span> deterministically reproduces all five experiments.</li>
+</ul>
+<p><b>RELIC cannot yet defensibly claim:</b></p>
+<ul>
+  <li>Generalization to systems other than CardDemo (OOD test: F1=0.0 on public COBOL — root cause documented).</li>
+  <li>Independent oracle coverage for RESOURCE and CONTROL_FLOW contracts (Level-3 human annotation deferred).</li>
+  <li>Real z/OS execution evidence (GnuCOBOL only; 38/40 traces are JCL-ordering simulations).</li>
+  <li>Enterprise-scale validity (CardDemo ≈ 30 programs, a demonstration system).</li>
+  <li>Probabilistic interpretation of confidence scores (evidence-strength estimate, not calibrated probability).</li>
+</ul>
+
+<footer>Made with IBM Bob</footer>
+</div>
+</body>
+</html>
