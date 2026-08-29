@@ -123,10 +123,11 @@ RELIC/
 ## Limitations
 
 - **Single dataset.** Everything is on CardDemo. It's a demonstration app, not a production system.
-- **GnuCOBOL, not z/OS.** Dynamic evidence comes from GnuCOBOL 3.2 on Linux/macOS. 38 of 40 traces are JCL ordering simulations, not actual JCL execution.
+- **GnuCOBOL, not z/OS.** Dynamic evidence comes from GnuCOBOL 3.2 on Linux/macOS. 38 of 40 traces are JCL ordering simulations, not actual JCL execution. The 91.8% "dynamic validation rate" is corroboration by simulation, not independent execution — real-execution rate is 0/61.
 - **TEMPORAL contracts only** for the independent RQ1 evaluation. RESOURCE and CONTROL_FLOW contracts require human annotation to evaluate independently.
 - **FPR=0 is a closed-set result.** The negative benchmark is constructed from semantics-preserving mutations. It doesn't measure false positives in the open-world case.
-- **LLM baseline results are lower bounds** due to API failures.
+- **LLM baseline results are lower bounds** due to API failures (245/248 and 241/248 calls errored; numbers are not representative of LLM capability).
+- **F1=1.0 is on a closed mutation benchmark** where mutations are designed to violate BCG contracts. It is explainable and not inflated, but should not be read as a general detection claim.
 
 Full detail: [docs/limitations.md](docs/limitations.md)
 
