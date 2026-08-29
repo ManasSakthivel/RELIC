@@ -37,7 +37,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "90a70df6-7ed2-4d09-a717-7ee135fde1f3",
@@ -53,7 +56,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "aa79da22-17da-43db-b100-074ad9923a7b",
@@ -69,7 +75,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "9f28c753-4e3a-4f59-b2e4-bf1b14dff4b2",
@@ -101,7 +110,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "99db3e74-7630-48e5-a9bf-abe43be89945",
@@ -117,7 +129,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "ab3be9ec-3f97-4492-a74a-2cf072989165",
@@ -133,7 +148,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "026fb512-fdf8-4b19-ac76-f4f6f663ff54",
@@ -165,7 +183,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "00caab56-ca45-4495-b0c5-b779ba4ae1ab",
@@ -181,7 +202,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "726c89c5-9c32-4345-8980-6b13f352fcab",
@@ -197,7 +221,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "1364f85f-a2e8-43d7-a36a-0a5f7572c5aa",
@@ -229,7 +256,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "119eb5cb-4cab-4a8b-8221-faf8ad76a945",
@@ -245,7 +275,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "aaa99001-5dd3-4560-bea2-0b6c69c27c24",
@@ -261,7 +294,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "3c41d241-95fa-4ca7-a910-bf6709a53e42",
@@ -293,7 +329,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "e02a5b70-f329-4c63-b140-d54bd4fabf57",
@@ -309,7 +348,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a32fcb6e-6848-4685-aa5e-8b6595633ed0",
@@ -325,7 +367,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "402367be-e2df-47c3-aa70-304cbc5fc565",
@@ -373,7 +418,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "b9bb5bed-0119-49b5-8803-84cc3023de30",
@@ -389,7 +437,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "882d189d-a61b-4c1f-9ce8-c492b6575c58",
@@ -405,7 +456,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "2bd6c2c1-913f-4b65-b9af-3e51444ee7a4",
@@ -421,7 +475,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a2595046-d092-4262-b9cc-edd5a90b7757",
@@ -453,7 +510,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "4e55c0fe-8f61-45f8-bc23-398af4f501e9",
@@ -469,7 +529,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "e0f51a86-4d4b-4038-9bac-c09dc9f181f5",
@@ -485,7 +548,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "85993b46-7748-4003-bb23-740f6c61570d",
@@ -517,7 +583,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "eea54b75-f1f9-40da-b40e-797ed3a66725",
@@ -533,7 +602,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "ae1f25a5-e671-4454-b0e9-b267ac3d3080",
@@ -549,7 +621,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "854db0f7-84b4-4eea-b08d-4abb249c39e9",
@@ -565,7 +640,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "dd3798ad-b2fa-4d57-910d-1a36a37740ed",
@@ -597,7 +675,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "261af230-9f84-4341-a22e-134e46c22a59",
@@ -613,7 +694,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4d2c1dac-85d1-4251-bf85-e96990a935b7",
@@ -629,7 +713,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "0f693f05-26b3-4710-86ba-b8e93bbafa51",
@@ -661,7 +748,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "a7264f46-7a03-4792-a83e-ac890aa65dd7",
@@ -677,7 +767,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "6b929873-81b1-40b9-ae6f-3efe44761476",
@@ -693,7 +786,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "2d464526-0976-492d-a7b2-5a83e29708dc",
@@ -725,7 +821,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "0dd2605c-1441-41e4-b6f7-ba05263c3ec6",
@@ -741,7 +840,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "93e8390f-8f48-4ab2-b795-ad7d4cbc5be0",
@@ -757,7 +859,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "ab95a053-1866-476c-96d4-a59e670ae3ad",
@@ -789,7 +894,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "d63dfc81-53a6-43fc-9b11-3c7815f07e7e",
@@ -805,7 +913,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "eab70a81-c227-415d-9e84-31893700599c",
@@ -821,7 +932,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "367a8651-74d4-4401-b19c-897c9af32e03",
@@ -853,7 +967,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "cd8e6501-4d94-4e4b-9b31-79921115a2fd",
@@ -869,7 +986,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "9cd9b760-2805-44be-bff4-af9ab05d316a",
@@ -885,7 +1005,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "de8cc1da-d036-4e69-a24b-8a947b169bf4",
@@ -917,7 +1040,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "c2c9303f-38b8-4f79-a8dc-bad920ee4648",
@@ -933,7 +1059,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4fa5b50d-7e9f-491c-86ae-b27bef275447",
@@ -949,7 +1078,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "71974a0f-137a-4809-966e-aeaabbdcf4d2",
@@ -981,7 +1113,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "fb39a938-ed94-491c-82e0-b8729baf6891",
@@ -997,7 +1132,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "431bf6eb-e377-4579-b560-fe1851d1a0fb",
@@ -1013,7 +1151,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4ccb37ca-1489-4385-8566-38179b2beb43",
@@ -1045,7 +1186,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "c46eaff0-057f-439b-80e3-70028289da14",
@@ -1061,7 +1205,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "5d032cb7-6773-4916-942b-c2b583db9059",
@@ -1077,7 +1224,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b6a93b6d-51e6-48c4-b4a6-2a6a4832d87d",
@@ -1093,7 +1243,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "dc683748-ef87-4a67-854c-eb90be374f04",
@@ -1125,7 +1278,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "d49fdb85-df9e-4760-b6e9-ba71ed279eda",
@@ -1141,7 +1297,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "e1593cba-7fd0-468d-8e07-d44cff1b54be",
@@ -1157,7 +1316,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "ddbf3f50-79b8-4b93-9374-538fcad0c44a",
@@ -1189,7 +1351,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "b7c4537b-b560-4b41-ac17-9a1d7cc49bd4",
@@ -1205,7 +1370,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4f0cd078-90ef-4f9b-8890-a40db2034aad",
@@ -1221,7 +1389,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "7e0067eb-e12c-41aa-9eaa-468ff4c9cf45",
@@ -1253,7 +1424,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "66e8f05e-1fe5-4603-9143-5d4214f2225c",
@@ -1269,7 +1443,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "c6ef5d3a-b64b-4367-8c70-3512ef5f924b",
@@ -1285,7 +1462,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "2afe82cb-8cec-415b-81be-0daef51f2bb7",
@@ -1317,7 +1497,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "1d377b64-8d97-45ca-b570-ed4804d48720",
@@ -1333,7 +1516,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "7193f28f-bb28-43ac-a743-b233a2677a97",
@@ -1349,7 +1535,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "7932794d-847a-4159-a791-2ef07bc4055e",
@@ -1365,7 +1554,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "360e3454-0808-42b1-bb65-e20eaf31e7bd",
@@ -1381,7 +1573,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "39c2677b-2bc3-4e1e-a866-4bf499bedc7d",
@@ -1429,7 +1624,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "33448a92-790b-4072-9223-8a81f1df8927",
@@ -1445,7 +1643,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "ebcf54c4-a710-47b5-a6d6-29187cdd5a5b",
@@ -1461,7 +1662,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "9b80e6f7-dbe9-4a4e-bb9d-42f0678ff17e",
@@ -1477,7 +1681,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "f29e13cb-fea7-4625-ad9a-9dbc616c9628",
@@ -1493,7 +1700,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "3e965464-f11c-4989-81da-29aeeca58ebe",
@@ -1525,7 +1735,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "9b569b62-a98d-4dc7-8033-412741328e3c",
@@ -1541,7 +1754,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "95b005d6-a6c6-4055-a4a1-6f3d667c0034",
@@ -1557,7 +1773,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "d6b5d3a7-cb20-47cb-a15e-3ed6abe43e29",
@@ -1573,7 +1792,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "1f8de518-a535-43e2-9c60-398bcf44fab1",
@@ -1589,7 +1811,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4bc5bd74-983f-459f-acf6-13bac269c733",
@@ -1605,7 +1830,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "53a6850d-eeb2-43c9-ae9c-9e799d779c0d",
@@ -1621,7 +1849,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4f4cc570-6626-4968-b2e3-04d9930512de",
@@ -1637,7 +1868,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "735289bd-2aa6-4de5-bb5a-ed0e6639b951",
@@ -1685,7 +1919,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "0708d1ff-0faf-4c63-ae94-5c6d8a1dfed1",
@@ -1701,7 +1938,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "436a435c-eb2a-48b5-a3c6-0e1f88ecb172",
@@ -1717,7 +1957,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "22977e79-15bd-486b-a97c-3c80ee7a6001",
@@ -1749,7 +1992,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "e704950a-98f6-4c54-8aa5-5ff957c0ccbb",
@@ -1765,7 +2011,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "6acd0f72-9862-4425-bec0-feb1077cad26",
@@ -1781,7 +2030,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "9f81a84b-c19d-459a-b00a-cbcf2bb12afe",
@@ -1797,7 +2049,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "efc90146-d774-4cad-8ed5-87af47319e71",
@@ -1813,7 +2068,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "74993850-76e8-40cb-9546-67c5c3ee63f9",
@@ -1829,7 +2087,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4a149ffb-bc84-456b-9f72-ac59f1980e0a",
@@ -1845,7 +2106,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "263ea81a-f9fa-4c50-bde8-b0189b4a3a4c",
@@ -1909,7 +2173,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "fe8b3afd-d6b3-4836-9c0f-df618f43f1f8",
@@ -1925,7 +2192,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "0136d9a5-0965-4e4b-b607-58e8019d792a",
@@ -1941,7 +2211,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "ffb2b788-3fba-45aa-bdcd-4dbdbced04ce",
@@ -1957,7 +2230,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "0326f7dc-2514-444a-bb5b-dee256468beb",
@@ -1973,7 +2249,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "1d549ad4-d031-473e-aeda-e78c67040aa1",
@@ -1989,7 +2268,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "30e95a58-1d70-4ae7-ac25-6bb7886ca422",
@@ -2005,7 +2287,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "57faafa7-57c9-418c-8551-eed294b3e5a1",
@@ -2037,7 +2322,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "f4b7b973-6085-4626-b9e1-4b288831aa8b",
@@ -2053,7 +2341,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "58a46acc-fc55-4a79-9d1a-61cf29a638c1",
@@ -2069,7 +2360,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "f5d8edf9-9dfb-41ba-a019-6dc0d7d961f9",
@@ -2181,7 +2475,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "7a19eb80-5b48-450f-b6b1-e08e084012aa",
@@ -2197,7 +2494,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "9efbe2ff-35fe-46b0-8310-0d116ec9a1f0",
@@ -2213,7 +2513,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "58205474-3c0d-449b-a19d-73cd3534e9b6",
@@ -2229,7 +2532,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "25b26cdd-3cdc-4fe1-a769-b4ed7eefe44b",
@@ -2245,7 +2551,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "f703d76b-5b96-4441-a76a-ec5eff442536",
@@ -2261,7 +2570,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "7a021fa0-6a77-471f-903a-624117206023",
@@ -2277,7 +2589,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "d374e3e8-bfea-4513-8c89-3d39f5d392a0",
@@ -2293,7 +2608,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "f1243c79-acd6-467f-9556-b957a9273ccf",
@@ -2309,7 +2627,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "df0a0d3b-9a92-4c51-a7bb-491e3461b5f5",
@@ -2325,7 +2646,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "3c807f60-5c02-46a8-bc9c-5807147aa517",
@@ -2469,7 +2793,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "8b2d7dbb-0b50-4d74-9844-23855f36153f",
@@ -2485,7 +2812,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "d6291310-2e0a-4aef-9e47-d4d36ae661ed",
@@ -2501,7 +2831,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "dc813df7-08fa-492a-a554-fee343fc9af5",
@@ -2517,7 +2850,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "3c9a4cac-1c55-4641-8e4b-98e312eb9e31",
@@ -2533,7 +2869,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "aea27988-5bee-4bc4-b49e-57bce3d4589d",
@@ -2549,7 +2888,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "2e751975-19fd-4d4f-b3e9-50b8a7bbbfb2",
@@ -2565,7 +2907,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "7cd22e94-0901-4918-ab91-53333cf7dcb3",
@@ -2581,7 +2926,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b7a7c6d6-7492-4ab8-a485-c228512dfc73",
@@ -2597,7 +2945,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "edbb5540-49d8-414d-9c11-a2a701488424",
@@ -2661,7 +3012,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "6aa6ed17-2fa5-46d2-8159-29d490609e25",
@@ -2677,7 +3031,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "40bdb169-1be4-4bb7-b063-61eff7fda01c",
@@ -2693,7 +3050,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "ba6464be-2284-425d-9356-cffbe5220684",
@@ -2709,7 +3069,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "d33fdd36-0ea1-425d-ad40-e34adf19ba98",
@@ -2725,7 +3088,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "79545261-b6f1-43d5-b104-0e1adbdfe81c",
@@ -2741,7 +3107,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "41effa88-2de2-4e72-805a-33749ec1193d",
@@ -2757,7 +3126,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "c2e4d128-d84a-4309-9f97-5630aabedfd4",
@@ -2805,7 +3177,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "35cd0a43-74ba-49d0-a73d-7468d4c53a06",
@@ -2821,7 +3196,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "4b9b3a4e-05fe-4cbf-8b3c-d86e99d16847",
@@ -2837,7 +3215,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "57dc3536-d854-4b9f-ad46-d218ea574d39",
@@ -2853,7 +3234,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "ecc7dec9-dbcd-4f7f-a7b8-c7de497126c6",
@@ -2869,7 +3253,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "c192013c-061a-4925-864a-5d3a8eec908f",
@@ -2901,7 +3288,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "d74e62e7-c3ad-4e73-960d-39359f3ee967",
@@ -2917,7 +3307,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "784b0cf3-4811-49e7-81a3-0353b94fc2aa",
@@ -2933,7 +3326,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "d10ca0dd-398a-4cf4-afed-51cd31597e3f",
@@ -3061,7 +3457,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "1d2c963d-15f3-46ea-806f-75d8bca88953",
@@ -3077,7 +3476,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "1ba62687-b2a1-403e-b150-c6dd8d5231f9",
@@ -3093,7 +3495,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "eacf48fd-a840-4f9c-8559-0665a97e0a2f",
@@ -3109,7 +3514,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "3039c73f-1c40-4287-980e-a5bfa79dc893",
@@ -3125,7 +3533,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "8909bbdd-8fe7-43c8-b44d-a06887316cac",
@@ -3141,7 +3552,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "e3e8f3a9-3c3e-4608-acde-4ccf7b8c7df4",
@@ -3157,7 +3571,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "4c50d396-8feb-4a6f-bf27-d519c0deb381",
@@ -3173,7 +3590,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "3ee2bce1-8055-4f17-8ddf-33b05862c55c",
@@ -3189,7 +3609,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "287ba172-d0dc-44af-af98-d1d72358c40e",
@@ -3205,7 +3628,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a61c3517-e86e-4d57-b975-6086b4550588",
@@ -3221,7 +3647,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "698af98d-01ba-4a50-a7de-d047c48ad2f8",
@@ -3237,7 +3666,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a2ceb9d7-d54d-426c-9360-a643355086f2",
@@ -3253,7 +3685,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a97957b2-df20-4692-b56b-f7cbbd6b95ea",
@@ -3269,7 +3704,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "da602c44-1377-49c5-b714-07ddf13ef2b4",
@@ -3285,7 +3723,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "7bcb722e-e99c-4fae-a107-5cc80b8a0f34",
@@ -3333,7 +3774,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "cd99b21f-9959-4722-8bac-6b84100e0e19",
@@ -3349,7 +3793,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "fa078910-75f7-4901-8171-536f915b3487",
@@ -3365,7 +3812,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b79c9e02-f1af-491a-9f3b-147cc8092480",
@@ -3381,7 +3831,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "5b464d17-261e-4608-959d-18f271210c7b",
@@ -3397,7 +3850,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "c0ed1d41-d0b1-480c-a5b7-38e60d58cabf",
@@ -3445,7 +3901,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "b0348007-cc2a-4867-beb3-d10e737b75f7",
@@ -3461,7 +3920,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "764f886d-cfa1-403f-b1a4-7377beea3abc",
@@ -3477,7 +3939,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "971ccf6e-b8d5-43e9-9d6c-4dc1913f02df",
@@ -3493,7 +3958,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "daca6c77-7e70-40c7-a5eb-139639486b93",
@@ -3509,7 +3977,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b56cc527-5daf-43eb-8cd1-533b9c556997",
@@ -3525,7 +3996,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "8cbfe1bb-def6-4db4-8184-2424d9b377ca",
@@ -3541,7 +4015,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "525db2aa-7d3d-4d4b-9aaa-6594e02ec7d4",
@@ -3557,7 +4034,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "1990a90e-a32f-4719-92c7-5e87d445319b",
@@ -3621,7 +4101,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "3e02581e-d313-4955-85fc-36eebcb0e46a",
@@ -3637,7 +4120,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "f004b60d-abac-4808-be0b-bc64a8498cb7",
@@ -3653,7 +4139,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "f273969e-2b45-4830-80b5-7355921ca124",
@@ -3669,7 +4158,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "d2ad16d5-e328-4980-88a7-a6ab9e54f263",
@@ -3685,7 +4177,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "f303153e-23cb-4565-a760-414d67b1267d",
@@ -3845,7 +4340,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "947867ad-6ef2-4391-9320-6a19af714f10",
@@ -3861,7 +4359,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "3518ac0e-2bdb-4d5f-9276-3624f4f8d53f",
@@ -3877,7 +4378,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "1dc654b6-de4a-4990-9800-3a11fb850dbe",
@@ -3893,7 +4397,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "d6729988-d468-4f03-93c6-024d6a1ace32",
@@ -3909,7 +4416,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "a30614a0-c2f5-4bc4-98dd-198fc8967160",
@@ -3925,7 +4435,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "64b6e3de-b62b-4f7a-98fc-44f0cff4fc0c",
@@ -3941,7 +4454,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "fdfeb883-a16a-4c3e-b5ab-234848dc28dd",
@@ -3957,7 +4473,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "36e3fde6-b9ff-400b-94f7-49f6d5f42c10",
@@ -3973,7 +4492,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b792ae39-e404-4063-af6c-6ba69f10d824",
@@ -3989,7 +4511,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "ed951c42-4d24-49c5-9dc2-7054c5bd1ad7",
@@ -4005,7 +4530,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b1a23ce7-6672-4215-b5c8-0a1a54ea62f3",
@@ -4021,7 +4549,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a43fa544-7e90-480c-9447-668aaefe92c0",
@@ -4037,7 +4568,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "bb7d7992-88c2-4d78-9346-4249e014f6f0",
@@ -4069,7 +4603,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "d0136323-c934-4a26-8883-3c6c9a1bb924",
@@ -4085,7 +4622,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b4b35ded-65d0-4093-abea-2638796f8c38",
@@ -4101,7 +4641,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "5602114c-7293-4b64-941e-6527ad04ae95",
@@ -4117,7 +4660,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "22eff15f-f356-4e89-8b0e-6da708f63892",
@@ -4133,7 +4679,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "48470b65-d78a-4758-baa4-e7a029abb3c8",
@@ -4149,7 +4698,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "d3edf6a9-5acf-4c6f-947d-8ccaac45f3e3",
@@ -4165,7 +4717,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a7cbbf6e-b31f-4cba-946a-5a6580fe76bc",
@@ -4245,7 +4800,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "84134d8e-4bee-4d08-a514-05b4efd932c2",
@@ -4261,7 +4819,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "0f75be47-cfb7-4f80-8bca-62c5a3f37176",
@@ -4277,7 +4838,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "75b92126-779b-43ba-b085-38333394419f",
@@ -4293,7 +4857,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "5f7ffb2b-b85b-4648-8814-05591d56222c",
@@ -4309,7 +4876,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "e04a2151-5092-47c6-a9bd-3257138166dc",
@@ -4325,7 +4895,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "f4f3bea7-542e-476b-912f-cc1696768c39",
@@ -4341,7 +4914,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "fd06446a-1d90-4f11-9b03-1c6df60f891f",
@@ -4357,7 +4933,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "797df9f8-c222-4ea1-b938-fea98475b3c5",
@@ -4373,7 +4952,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a8a49c7a-4e2e-4af0-a19e-f6800f575294",
@@ -4421,7 +5003,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "4273b291-7ca4-4860-b6bb-67ddf43ac94e",
@@ -4437,7 +5022,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "be0027b6-a1e3-409e-a69c-a0cd42ea4bac",
@@ -4453,7 +5041,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "5fedc190-ffe3-4b01-a308-6caf24f76a5f",
@@ -4469,7 +5060,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4d501b3c-56d1-47af-8b19-06238c2953ce",
@@ -4485,7 +5079,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "59f096eb-0f45-4641-b202-2baf2bd2ecd3",
@@ -4613,7 +5210,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "39ebc5b1-0980-4640-9638-f60210a31811",
@@ -4629,7 +5229,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "216babed-7bea-4057-b463-ee65b238156a",
@@ -4645,7 +5248,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "a96311c6-390c-474c-9fc1-0bd87a1d4393",
@@ -4661,7 +5267,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "e7dee948-8d32-490f-a744-7af75f9171cd",
@@ -4677,7 +5286,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "45bcdf0d-b92b-4493-acde-431d2f900cfe",
@@ -4693,7 +5305,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "1a4aad05-fe7e-4fb1-a337-be871eec8579",
@@ -4709,7 +5324,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "6ffbe343-a65a-41a1-b229-316c437364f9",
@@ -4725,7 +5343,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "c48469fa-61bd-4c4b-98a7-691c223fc5bc",
@@ -4741,7 +5362,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "c96d9e6d-e1cd-4d3c-b276-375debe1e943",
@@ -4757,7 +5381,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a854a8e8-486a-465b-982e-bc65cda8a499",
@@ -4773,7 +5400,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "64205eea-4f3d-4f49-ba8d-146cea924ac7",
@@ -4789,7 +5419,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "0dc579c0-0e74-48cb-8f9a-35324070d9ee",
@@ -4805,7 +5438,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "276a06ea-111c-4f0d-b886-750debd44a42",
@@ -4821,7 +5457,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "311158bb-faf4-42b3-beb0-af48e57ca3bb",
@@ -4837,7 +5476,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "844e0cdb-1497-4c15-b9f7-28fa80e0b6d5",
@@ -4869,7 +5511,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "f9453305-c4d6-407a-811d-eebd47828321",
@@ -4885,7 +5530,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "2202142f-8501-4fb7-b3c0-6941ed3888a6",
@@ -4933,7 +5581,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "6697d13b-fc54-458f-a9e2-d47c64de2352",
@@ -4949,7 +5600,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "f27930dc-192f-438f-950e-2de10a00afac",
@@ -4965,7 +5619,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "539975da-9f26-416b-b756-7a8f04ac8de8",
@@ -4981,7 +5638,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "993c6a29-6289-47e9-a45a-b0b1fa34801b",
@@ -4997,7 +5657,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "1db44fc7-774b-4ec3-bbc7-884f2050d572",
@@ -5093,7 +5756,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "4fab1b16-199e-4d54-aeba-00f822fc785b",
@@ -5109,7 +5775,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "5a86842a-73d7-499b-ad30-64ee0548cebc",
@@ -5125,7 +5794,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "a7537baf-b8f6-4627-b458-e352d7ae4c1a",
@@ -5141,7 +5813,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "00725cea-0ff0-48c1-8dee-64458be8a1da",
@@ -5157,7 +5832,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "ce54ffa4-31f3-40f6-b4fc-10eae1785e3a",
@@ -5173,7 +5851,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "1b664a90-b9fe-477b-b27d-9d3c4820698d",
@@ -5189,7 +5870,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "2c0f9336-0e89-43a7-856f-09b5bde24e9f",
@@ -5205,7 +5889,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "209d64e5-b795-4f12-b496-2f55d0f0332a",
@@ -5221,7 +5908,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "440be091-50ae-48f2-accb-e6f9c0aa85bb",
@@ -5237,7 +5927,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4b0dfad6-61cf-4aa1-837f-76a42ef625a9",
@@ -5253,7 +5946,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "19d25016-2522-4452-a285-13d6ffd0f7a0",
@@ -5301,7 +5997,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "4494826f-e941-43ae-b195-a904b18cae6e",
@@ -5317,7 +6016,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "7da228bd-88f2-4111-ad67-5979cd34579a",
@@ -5333,7 +6035,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "45264b48-23c3-4ba3-91dc-cb53934bbe30",
@@ -5349,7 +6054,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "61a4d2bb-0d7a-4a15-873a-6e369201f72e",
@@ -5365,7 +6073,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "544c3b1c-1564-492b-9fa7-219718e5c43b",
@@ -5381,7 +6092,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "be4ecb20-7b68-4085-a210-3ca83828e17d",
@@ -5429,7 +6143,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "c13ff8e2-74b0-4347-958f-90b87ab55590",
@@ -5445,7 +6162,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "51fd4f2b-6694-4310-bad6-3edcdb88bdf0",
@@ -5461,7 +6181,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "2bdf5028-9374-4695-bc87-db7b49cc5d47",
@@ -5477,7 +6200,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "6e3a92c3-c9a5-442a-95ae-7eab1c803e4c",
@@ -5493,7 +6219,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "e3e7eec4-f2a0-4bd6-98c1-1efd7f200242",
@@ -5509,7 +6238,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "00f004e6-817e-42a7-b1a9-534f6cca3716",
@@ -5525,7 +6257,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "7846ae2f-79f2-4bac-8fdc-42d6f572dfe1",
@@ -5557,7 +6292,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "a83942ec-feef-435b-825e-fcbc97f6f71e",
@@ -5573,7 +6311,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b20e4ead-be05-4f3f-b7b5-f3bd605e78df",
@@ -5589,7 +6330,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "63f8f483-07e4-475c-9eb0-d3048d210a8e",
@@ -5637,7 +6381,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "5f66d5ac-a0c0-41ae-b403-59b84f948938",
@@ -5653,7 +6400,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "a2403e58-4e8b-463c-8d5d-125ea32076ca",
@@ -5669,7 +6419,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "f4c43594-cdcb-40ed-9a1f-804090fe4064",
@@ -5685,7 +6438,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "59d7a060-32eb-4d43-a9b9-e97b995eba62",
@@ -5701,7 +6457,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "dadb37f5-5ce3-49a7-b24e-b7996c32c945",
@@ -5797,7 +6556,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "322375d2-2a3c-4198-ab5b-80a0c2f8fa58",
@@ -5813,7 +6575,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "eb4217a6-aa49-48a0-b843-d85add84b517",
@@ -5829,7 +6594,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "7c661e2a-3795-49e4-be72-30b95924c6be",
@@ -5845,7 +6613,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "14f7d306-ecaf-4bff-b14c-2381f389ab4b",
@@ -5861,7 +6632,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "fff55675-a14e-47d8-be23-fd935a1245ba",
@@ -5877,7 +6651,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "38c6b71a-43ad-47a5-9d55-b9c6613dabb2",
@@ -5893,7 +6670,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "5f1dbbb4-b477-4bd1-bda9-49ca95e3f7ed",
@@ -5909,7 +6689,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "15796cf6-d151-4e06-ad46-ff16e17bcef6",
@@ -5925,7 +6708,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "2e7374a9-4c2c-44b4-abc5-62e8dd6a1760",
@@ -5941,7 +6727,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b11fb72b-c495-477d-beac-0a6f3661cc21",
@@ -5957,7 +6746,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4bdb52bb-194c-47e0-9c84-5d864db2b5d4",
@@ -5989,7 +6781,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "acbe35a3-530e-4cb5-941f-78dde1ac302c",
@@ -6005,7 +6800,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "840e4e4e-3ee5-4710-9e44-c0741331ddf6",
@@ -6021,7 +6819,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "8bc403b9-4e1c-47dd-b9ff-48820fa435df",
@@ -6037,7 +6838,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "82a6258a-2d73-4e6d-8f12-e03ef89e27c9",
@@ -6053,7 +6857,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "70f034fd-f473-48e6-9438-e6b11e3c74de",
@@ -6101,7 +6908,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "c3326658-fce9-4d3a-aac7-1f758e197c56",
@@ -6117,7 +6927,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "711967a6-457f-44c1-8eaf-abec0a17a60b",
@@ -6133,7 +6946,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "a3d0dd72-f22b-4ac7-8b05-62eb372cb686",
@@ -6165,7 +6981,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "c840a75c-d5d2-41ec-9685-0f51014f27bb",
@@ -6181,7 +7000,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "30c6e293-d10f-452e-ae44-f6920dc99749",
@@ -6197,7 +7019,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "46280447-ac45-484b-9750-1fc95a381350",
@@ -6421,7 +7246,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "4ac3f999-d8a2-4ed0-aa37-290ab69dc7b9",
@@ -6437,7 +7265,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "591dd249-f8be-474c-9840-be929e9807e5",
@@ -6453,7 +7284,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "b89f7c01-71c7-486f-ab66-152cf0dbbdc4",
@@ -6469,7 +7303,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "c1be0c6b-e806-48f7-847b-8477c10c22b2",
@@ -6485,7 +7322,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "91b1bcb3-df66-4484-8eb3-e502df8f1b25",
@@ -6501,7 +7341,10 @@
       "evidence": "structural_non_relationship:reverse_resource_flow",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_resource_hard"
+      }
     },
     {
       "contract_id": "feb621e7-9c8d-401e-9b45-c69dd43d60b5",
@@ -6517,7 +7360,10 @@
       "evidence": "structural_non_relationship:reverse_resource_flow",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_resource_hard"
+      }
     },
     {
       "contract_id": "26e4d827-7dce-4ccd-b068-6feb897caadf",
@@ -6533,7 +7379,10 @@
       "evidence": "structural_non_relationship:reverse_resource_flow",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_resource_hard"
+      }
     },
     {
       "contract_id": "564d2f66-d50f-4359-aa11-d352f6a1446b",
@@ -6549,7 +7398,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "3fc13e1d-866a-4711-8648-76c35aa6442a",
@@ -6565,7 +7417,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "5dafdeac-6216-471a-b938-ee6d9027d4b1",
@@ -6581,7 +7436,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "64b5345f-9190-46db-b2e4-4546e52d8585",
@@ -6597,7 +7455,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "cd8e8f4d-a7aa-436b-8d9a-28b9f168cc06",
@@ -6613,7 +7474,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "3d2b204f-e2ae-4c00-99aa-f9c75ab03b31",
@@ -6629,7 +7493,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "7d01a336-2380-44c9-a564-6074154df5f5",
@@ -6645,7 +7512,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b0b288ee-dceb-435a-bbb3-75b454609cf8",
@@ -6661,7 +7531,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "58393242-291d-4655-9837-e0293f38ad86",
@@ -6677,7 +7550,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b007e5ee-f181-4dfe-909b-687012d31c25",
@@ -6693,7 +7569,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "2ea8b237-1ab9-40fc-9556-6440696adf17",
@@ -6741,7 +7620,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "3b11eedd-2bbf-4813-988f-402e01c33858",
@@ -6757,7 +7639,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "75c31b0a-a812-4ecf-9863-8adc524064a8",
@@ -6773,7 +7658,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "3b0dfe01-1bce-4403-bc05-20e6618ed57c",
@@ -6805,7 +7693,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "c73ae0d9-b276-4acc-923c-70248493c005",
@@ -6821,7 +7712,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "442c6421-2d5b-427b-a2dd-c4b796a275d5",
@@ -6837,7 +7731,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "4bc81a62-1387-4816-9868-bad128e9b12a",
@@ -6885,7 +7782,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "ed2eaa04-8089-4918-8d66-1d68a66eeec0",
@@ -6901,7 +7801,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "ceb8ae1f-d600-4c5f-a560-ca091841f043",
@@ -6917,7 +7820,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b9d4c727-ca82-42ac-b857-1abed854f437",
@@ -6933,7 +7839,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "fbd65d9c-21ff-4300-82f8-347d58e43d63",
@@ -6949,7 +7858,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "04d4289a-e8fd-4465-9c40-a39716347cb3",
@@ -6965,7 +7877,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "57978bfa-53e2-4a86-9cd0-7257d3b5bfc9",
@@ -6997,7 +7912,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "d17ff2d6-f7fa-40ba-8a0d-83bb7cea2d0e",
@@ -7013,7 +7931,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "da2d8739-fdca-4de4-a072-2e52885dc537",
@@ -7029,7 +7950,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "162e3d59-e08a-40a2-a170-1e48ced05080",
@@ -7045,7 +7969,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "153a9fd7-d249-4eec-8bdd-089ff5db1af9",
@@ -7061,7 +7988,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "49f4fecf-f25f-4a92-b596-143a1fbb5d23",
@@ -7189,7 +8119,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "02c72ef9-7777-40f2-8714-979cd5097969",
@@ -7205,7 +8138,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "5634bdea-8352-4dd0-a45f-d6e4601e9e40",
@@ -7221,7 +8157,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "672460aa-11d7-4961-86a7-ac0d286f6749",
@@ -7237,7 +8176,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "98c62d13-b890-40c2-823a-fd01f939f410",
@@ -7253,7 +8195,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "1a9c5571-e2dd-4ad6-adbe-1cc21005df99",
@@ -7269,7 +8214,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "07f4c737-43f4-4b82-b0fa-a35dcb48ed5d",
@@ -7285,7 +8233,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "b27be74a-a10f-4d29-8626-55436f3f240c",
@@ -7301,7 +8252,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "3a57efaa-a190-41f2-b77d-c02c53d42658",
@@ -7317,7 +8271,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "8d35f6a7-9c19-4405-9db1-6beb4e51ce43",
@@ -7333,7 +8290,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "0de14e2a-ebdd-4f34-8fe5-b11a662a670d",
@@ -7349,7 +8309,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "3926f4b9-fbad-4e8c-9c31-5bb52d6fb64d",
@@ -7381,7 +8344,10 @@
       "evidence": "structural_non_relationship:reverse_ordering",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "reverse_temporal_hard"
+      }
     },
     {
       "contract_id": "04a22062-762e-451b-b018-6352130f5674",
@@ -7397,7 +8363,10 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     },
     {
       "contract_id": "7218d8e3-32e9-47e5-ab0c-12e4fdea992b",
@@ -7413,11 +8382,23 @@
       "evidence": "structural_non_relationship:self_precedence_impossible",
       "annotator": "deterministic_extractor",
       "adjudication_status": "NOT_REQUIRED",
-      "note": ""
+      "note": "",
+      "metadata": {
+        "negative_type": "self_precedes_trivial"
+      }
     }
   ],
   "locked": true,
   "locked_at": "2026-08-17T00:00:00.000000Z",
-  "lock_reason": "P0 baseline freeze \u2014 paths corrected from untitled folder to RELIC--> repo location; benchmark locked for reproducibility",
-  "lock_hash": "e8c35aac8d1ab150f8b4064cbe48e85799a9ad27272df84b22fd863c4941d598"
+  "lock_reason": "P0 baseline freeze — paths corrected from untitled folder to RELIC--> repo location; benchmark locked for reproducibility",
+  "lock_hash": "3afac3f951832316b0490526fcebc7dc",
+  "negative_type_counts": {
+    "self_precedes_trivial": 208,
+    "reverse_temporal_hard": 113,
+    "reverse_resource_hard": 3,
+    "other": 0
+  },
+  "metadata": {
+    "benchmark_quality_note": "Negative items tagged by type: self_precedes_trivial are reflexively false (trivially rejectable); reverse_*_hard are genuine hard negatives. Report metrics both with all negatives and with hard-negatives-only."
+  }
 }

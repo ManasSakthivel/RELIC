@@ -205,6 +205,14 @@ Our critical principle: $\notobs \neq \text{CONTRADICTED}$.
 The absence of dynamic evidence for a contract is not evidence of absence; it signals
 incomplete execution coverage.
 
+\textbf{Static/dynamic reconciliation.}
+Naik \etal~\cite{naik2006race} combine static and dynamic analysis to reduce
+false positives in race detection.
+BCG extends this pattern to behavioral contracts: static extraction produces candidate
+contracts, dynamic reconciliation assigns explicit validation states
+(\supported, \conflict, \notobs, \ambiguous, \partiallysupported) per contract, and
+confidence-delta differencing drives modernization-risk classification.
+
 %%=======================================================================
 \section{Behavioral Contract Graph}\label{sec:bcg}
 %%=======================================================================
@@ -415,11 +423,23 @@ Macro-F1 is lower than micro-F1 because 17 of 33 held-out files have zero TEMPOR
 contracts; those files score F1=0.0 by convention.
 This is not an extraction failure.
 
+\textbf{Benchmark negative composition.}
+The Level-2 ground-truth benchmark (463 items: 139 positive, 324 negative) contains
+two negative classes: 113 \emph{reverse-temporal} negatives (hard: reversed step
+order) and 208 \emph{self-PRECEDES} negatives (trivially false: a step before itself).
+The self-PRECEDES negatives are detected trivially by any reflexivity guard and are
+tagged \texttt{negative\_type=self\_precedes\_trivial} in the benchmark JSON.
+RQ2 specificity (Specificity=1.000, 144 TN) uses a \emph{separate} mutation-based
+negative benchmark containing only semantics-preserving mutations, not these GT negatives.
+RQ1 evaluation uses the independent oracle only on 33 held-out files; no GT negatives
+affect the primary RQ1 metric.
+
 \textbf{Scope limitation:}
 This evaluation covers TEMPORAL contracts only.
-RESOURCE ($n=3$) and CONTROL\_FLOW ($n=23$) require Level-3 human annotation for
-independent validation; no independent oracle can be constructed for those types
-without sharing parsing logic.
+RESOURCE ($n=3$, single file) and CONTROL\_FLOW ($n=23$, no negatives)
+are reported as counts only; their volumes are insufficient for statistical claims.
+No independent oracle can be constructed for RESOURCE/CONTROL\_FLOW without sharing
+parsing logic; Level-3 human annotation is deferred to future work.
 
 \input{table_source/TABLE_4_rq1}
 
@@ -617,12 +637,34 @@ Ammons \etal~\cite{ammons2002mining} mine API usage protocols from program trace
 Lo \etal~\cite{lo2006mining} mine iterative-convergent control patterns;
 Lorenzoli \etal~\cite{lorenzoli2008automatic} (\textsc{Gist}) infer behavioral
 models via FSM learning from execution sequences;
+Klaedtke \etal~\cite{klaedtke2021mining} mine behavioral contracts from execution
+traces using DFA inference;
 Mariani and Pezz\`{e}~\cite{mariani2012behavioural} extend this to web applications.
 Angluin~\cite{angluin1987learning} provides the foundational $L^*$ algorithm
 for regular-set inference underpinning these approaches.
 BCG extends this lineage to cross-artifact legacy batch systems, adds static
 evidence extraction that precedes dynamic reconciliation, introduces an explicit
 conflict taxonomy, and provides formal provenance per contract.
+
+\textbf{\textsc{Gist} vs.\ BCG.}
+Lorenzoli \etal's \textsc{Gist}~\cite{lorenzoli2008automatic} is the closest
+dynamic contract-inference predecessor. BCG differs on five axes:
+(1)~\emph{Static+dynamic reconciliation:} \textsc{Gist} is purely dynamic; BCG
+extracts static structural evidence first, then reconciles with traces via explicit
+conflict states;
+(2)~\emph{Provenance:} \textsc{Gist} FSMs carry no link to source artifacts; BCG
+contracts carry a \texttt{ProvenanceRecord} per contract;
+(3)~\emph{Cross-artifact scope:} \textsc{Gist} targets single programs; BCG spans JCL
+jobs, COBOL steps, and inter-artifact dataset dependencies;
+(4)~\emph{Batch domain semantics:} \textsc{Gist} models method-call event traces; BCG
+models JCL step ordering, DD \texttt{DISP=} parameters, and \texttt{COND=} return-code
+chains;
+(5)~\emph{Fault-grounded evaluation:} \textsc{Gist} was not evaluated with
+empirically sourced modernization mutation operators; BCG operators derive from
+documented mainframe-to-cloud migration failures.
+Similarly, Klaedtke \etal's DFA-based mining~\cite{klaedtke2021mining} is dynamic-only,
+lacks static provenance and cross-artifact scope, and targets general program
+traces rather than legacy batch orchestration.
 
 \textbf{Runtime verification.}
 Leucker and Schallhart~\cite{leucker2009brief} survey runtime verification as
@@ -637,17 +679,22 @@ Felsing \etal~\cite{felsing2014automating} automate regression verification via
 deductive self-composition.
 BCG operates at job/step/contract granularity without SMT encoding (infeasible for
 large COBOL programs with vendor runtime behavior).
-Pessoa \etal~\cite{pessoa2022cobol} perform semantic differencing on COBOL programs
-but do not formalize contracts, use dynamic evidence, or support JCL.
+Pessoa \etal~\cite{pessoa2022behavioral} perform behavioral semantic differencing on
+COBOL program pairs to detect modernization regressions.
+Unlike Pessoa, BCG: (a) represents behavioral obligations as a formal typed contract IR
+with per-contract provenance and validation states; (b) spans JCL job-level orchestration
+and batch step ordering across multiple programs; (c) reconciles static structural
+evidence with dynamic execution traces; (d) evaluates on a fault-grounded mutation
+benchmark derived from documented production failures.
 
 \textbf{Legacy COBOL analysis.}
-Sneed~\cite{sneed2008legacy} extracts structural facts from COBOL for migration
+Sneed~\cite{sneed2008cobol} extracts structural facts from COBOL for migration
 assessment; our work adds behavioral obligations, JCL scope, and dynamic evidence.
 Comella-Dorda \etal~\cite{comella2000survey} and Ulrich and Newcomb~\cite{ulrich2010information}
 document the failure patterns our mutation taxonomy is grounded in.
 
 \textbf{LLM code analysis.}
-Hou \etal~\cite{hou2024llm}, Fan \etal~\cite{fan2023llm}, and Ling \etal~\cite{ling2023domain}
+Hou \etal~\cite{hou2024llm4se}, Fan \etal~\cite{fan2023llm}, and Ling \etal~\cite{ling2023domain}
 demonstrate LLM code-understanding capabilities.
 Our evaluation provides a datapoint on LLM performance for blinded behavioral
 contract violation detection in legacy JCL/COBOL.

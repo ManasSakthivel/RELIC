@@ -232,6 +232,62 @@
 
 ---
 
+---
+
+## 8. PHASE-3 ADDITIONS — SPECIFICATION MINING & RUNTIME VERIFICATION (W29–W36)
+
+*Added during P1 Literature Audit to address reviewer risk of missing specification-mining lineage.*
+
+### W29 — Lo, Khoo, Han (2006) "Mining Iterative-Convergent Control Flow Patterns"
+**Venue:** TOSEM  
+**Core idea:** Mines control-flow patterns from execution traces using iterative-convergent grammar inference.  
+**Relation:** Specification mining from traces — BCG's dynamic layer performs analogous pattern recovery.  
+**Gap:** Single-program, trace-only. No JCL scope. No static evidence. No provenance.
+
+### W30 — Ammons, Bodik, Larus (2002) "Mining Specifications"
+**Venue:** POPL  
+**Core idea:** Mines API usage protocols (temporal patterns) from execution traces.  
+**Relation:** Closest early predecessor to BCG's temporal contract extraction from traces.  
+**Gap:** Single-program, trace-only. No JCL scope. No cross-artifact. No static evidence.
+
+### W31 — Lorenzoli, Mariani, Pezzè (2008) "Automatic Generation of Behavioral Models" (GIST)
+**Venue:** ICSE  
+**Core idea:** Infers behavioral FSM models from execution traces using k-tail algorithm.  
+**Relation:** Closest dynamic behavioral contract predecessor. BCG differs on 5 axes: (1) static+dynamic reconciliation, (2) per-contract provenance, (3) cross-artifact scope, (4) batch domain semantics, (5) fault-grounded evaluation.  
+**Gap:** Purely dynamic. Single-program. No JCL. No provenance. No modernization application.
+
+### W32 — Angluin (1987) "Learning Regular Sets from Queries and Counterexamples"
+**Venue:** Information and Computation  
+**Core idea:** L* algorithm for learning regular languages via membership queries and counterexamples.  
+**Relation:** Theoretical foundation for FSM inference used in GIST, Lo 2006, Ammons 2002.  
+**Gap:** Pure automata theory; no application to software contracts.
+
+### W33 — Leucker & Schallhart (2009) "A Brief Account of Runtime Verification"
+**Venue:** Journal of Logic and Algebraic Programming  
+**Core idea:** Survey of runtime verification as inline specification checking against monitors.  
+**Relation:** BCG performs post-hoc contract recovery, not inline monitoring — orthogonal application.  
+**Gap:** Inline RV monitors; not post-hoc recovery; not legacy batch domain.
+
+### W34 — Mariani & Pezzè (2012) "Behavioral Pattern Mining for Web Applications"
+**Venue:** ICSE  
+**Core idea:** Extends GIST-style behavioral model inference to web application event traces.  
+**Relation:** Domain extension of W31 (GIST); same dynamic-only limitation as GIST.  
+**Gap:** Web domain; purely dynamic; no JCL/COBOL; no provenance.
+
+### W35 — Lahiri et al. (2012) "SYMDIFF: Language-Agnostic Semantic Diff"
+**Venue:** CAV  
+**Core idea:** Statement-level symbolic differencing of programs using SMT encoding.  
+**Relation:** Related to BCG's Confidence-Delta differencing but operates at statement level via symbolic execution.  
+**Gap:** SMT encoding infeasible for large COBOL with vendor runtime behavior; statement-level not contract-level.
+
+### W36 — Felsing et al. (2014) "Automating Regression Verification"
+**Venue:** ASE  
+**Core idea:** Regression verification via deductive self-composition.  
+**Relation:** Formal verification approach to change impact; BCG takes execution-grounded, contract-level approach.  
+**Gap:** Deductive verification requires formal specifications; inapplicable to undocumented legacy batch code.
+
+
+
 ## SUMMARY TABLE
 
 | # | Work | Behavioral Contracts | Cross-Artifact | Static+Dynamic | Provenance | JCL/COBOL | Modernization | BCG IR |
