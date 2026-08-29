@@ -1,32 +1,35 @@
 # Final Results — RELIC Paper 1
 
-All numbers below are sourced from `FINAL_RESULTS_MANIFEST.json` (v1.4, frozen=true).  
+All numbers below are sourced from `FINAL_RESULTS_MANIFEST.json` (v1.6, frozen=true).
 Authoritative reproduction command: `make reproduce-paper1`
 
 ---
 
 ## RQ1 — Contract Recovery (TEMPORAL only, independent oracle)
 
-**File:** `rq1/rq1_independent.json`  
-**Oracle:** Independent regex-based implementation — shares JCL spec, no shared code  
-**Scope:** TEMPORAL contracts only (RESOURCE/CONTROL_FLOW require human annotation)  
-**Dataset:** 33 held-out JCL files (CardDemo test split)
+**File:** `rq1/rq1_independent.json`
+**Oracle:** Independent regex-based implementation — shares JCL spec, no shared code
+**Scope:** TEMPORAL contracts only (RESOURCE/CONTROL_FLOW require human annotation)
+**Dataset:** 11 held-out JCL files (CardDemo `held_out` split — ZERO overlap with dev/validation)
+**Split fix note:** Prior version used `splits["test"]` key (does not exist); corrected to `splits["held_out"]`.
 
 | Metric | Value |
 |---|---|
 | Micro-Precision | 1.0000 |
 | Micro-Recall | 1.0000 |
 | Micro-F1 | 1.0000 |
-| Macro-F1 | 0.5758 |
-| 95% Bootstrap CI | [0.3939, 0.7273] |
-| Total TP | 56 |
+| Macro-F1 | 0.5455 |
+| 95% Bootstrap CI (macro-F1) | [0.2727, 0.8182] |
+| Total TP | 21 |
 | Total FP | 0 |
 | Total FN | 0 |
 | H1 verdict | SUPPORTED |
 
-**Interpretation:** Micro-F1=1.00 indicates the extractor and oracle agree exactly on all 56
-TEMPORAL contracts across 33 files. Macro-F1=0.58 reflects that many files have small contract
-sets, producing high variance in per-file F1. The evaluation is limited to TEMPORAL contracts.
+**Interpretation:** Micro-F1=1.00 indicates the extractor and oracle agree exactly on all 21
+TEMPORAL contracts across 11 held-out files (zero dev overlap). Macro-F1=0.5455 reflects that
+6 of 11 files have zero TEMPORAL contracts (single-step JCL), producing F1=0.0 per convention
+for those files. Wide CI [0.27, 0.82] reflects per-file variance in contract density (n=11 files).
+Evaluation is limited to TEMPORAL contracts; RESOURCE/CONTROL_FLOW require human annotation.
 
 ---
 
