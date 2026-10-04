@@ -411,7 +411,7 @@ Details, evidence and next validation steps: `docs/limitations.md`.
 ## 9. Reproducibility
 
 `make setup && make test && make reproduce && make check` regenerates every
-number, table and figure in about five minutes on a laptop. No mainframe,
+number, table and figure in 5–25 minutes on a laptop. No mainframe,
 GnuCOBOL or API key is needed. Raw per-mutant records include the unified diff,
 the oracle's evidence and every detector's decision.
 

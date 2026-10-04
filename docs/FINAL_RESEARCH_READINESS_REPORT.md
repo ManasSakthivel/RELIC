@@ -351,7 +351,12 @@ LLM results:
 | Cause of the failure | one sentence in this report quoted the legacy test count without marking it legacy (a documentation issue, found by the stale-number scan). It was reworded in the follow-up commit; no code or result changed |
 | Regenerated artifacts | every file under `results/final/` (raw records, LLM records and status, manifest, metrics, tables), `results/legacy/`, `paper/generated/`, `figures/final/`, `docs/assets/relic-results.svg` and all generated documentation blocks were **byte-identical** to the committed versions; the only changed file was `results/final/run_info.json` (commit hash, dirty flag, timestamp) |
 
-REPEAT_RUN_PENDING
+**Repeat on the corrected commit `e5699fc`** (same procedure, fresh clone, no API
+key), 2026-10-04 06:59:39Z → 07:21:31Z. `make setup` 0, `make test` 0 (391
+passed), `make reproduce` 0, `make check` 0 ("Consistency check passed").
+Again, every regenerated artifact was byte-identical to the commit apart from
+`results/final/run_info.json`. `make reproduce` took 1,300 s on this run against
+289 s on the first, on the same laptop; expect roughly 5–25 minutes.
 
 **Determinism.** Two complete benchmark runs with different `PYTHONHASHSEED`
 values produced byte-identical `evaluation_records.jsonl`,
