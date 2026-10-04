@@ -255,7 +255,14 @@ class ControlFlowContractExtractor:
     - COND=EVEN: step executes even if previous step abended
     - COND=ONLY: step executes only if previous step abended
     These generate special control-flow contracts.
+
+    COND without a step name: IBM semantics test the return code of *every*
+    previous step. v1.0.0 bound such a test only to the immediately preceding
+    step (``legacy_v1_0=True`` reproduces that behaviour).
     """
+
+    def __init__(self, legacy_v1_0: bool = False) -> None:
+        self.legacy_v1_0 = legacy_v1_0
 
     def extract(self, ir: IRGraph) -> list[Contract]:
         contracts: list[Contract] = []
@@ -284,7 +291,10 @@ class ControlFlowContractExtractor:
                     ]
                 else:
                     # Applies to all preceding steps
-                    ref_entities = self._get_preceding_steps(step, ir)
+                    if self.legacy_v1_0:
+                        ref_entities = self._get_preceding_steps(step, ir)
+                    else:
+                        ref_entities = self._get_all_preceding_steps(step, ir)
 
                 for ref_entity in ref_entities:
                     evidence = EvidenceItem(
@@ -355,6 +365,24 @@ class ControlFlowContractExtractor:
                 preceding.append(rel.source)
         return preceding
 
+    def _get_all_preceding_steps(
+        self, step: IREntity, ir: IRGraph
+    ) -> list[IREntity]:
+        """All steps that transitively precede this step (IBM COND semantics)."""
+        seen: dict[str, IREntity] = {}
+        frontier = [step.entity_id]
+        while frontier:
+            current = frontier.pop()
+            for rel in ir.get_relations_to(current):
+                if (
+                    rel.relation_type == RelationType.MUST_PRECEDE
+                    and rel.source.entity_id not in seen
+                    and rel.source.entity_id != step.entity_id
+                ):
+                    seen[rel.source.entity_id] = rel.source
+                    frontier.append(rel.source.entity_id)
+        return list(seen.values())
+
 
 # ---------------------------------------------------------------------------
 # Combined Static Extractor
@@ -391,10 +419,10 @@ class StaticContractExtractor:
     Call .extract(ir) to get all static candidate contracts.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, legacy_v1_0: bool = False) -> None:
         self._temporal = TemporalContractExtractor()
         self._resource = ResourceContractExtractor()
-        self._control = ControlFlowContractExtractor()
+        self._control = ControlFlowContractExtractor(legacy_v1_0=legacy_v1_0)
 
     def extract(self, ir: IRGraph) -> StaticExtractionResult:
         result = StaticExtractionResult(

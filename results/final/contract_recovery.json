@@ -1,0 +1,5856 @@
+{
+  "description": "RQ1 \u2014 contract recovery against oracle-derived facts, for all three contract",
+  "subjects": {
+    "carddemo": {
+      "files_with_oracle_pairs": {
+        "CONTROL_FLOW": 8,
+        "CONTROL_FLOW_INCL_IF": 8,
+        "RESOURCE": 11,
+        "TEMPORAL": 29
+      },
+      "micro": {
+        "relic_v1_0": {
+          "CONTROL_FLOW": {
+            "f1": 0.5526,
+            "fn": 34,
+            "fp": 0,
+            "fpr": null,
+            "n": 55,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 55,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8454,
+              1.0
+            ],
+            "recall": 0.3818,
+            "recall_ci95": [
+              0.2652,
+              0.5139
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 21
+          },
+          "CONTROL_FLOW_INCL_IF": {
+            "f1": 0.5526,
+            "fn": 34,
+            "fp": 0,
+            "fpr": null,
+            "n": 55,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 55,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8454,
+              1.0
+            ],
+            "recall": 0.3818,
+            "recall_ci95": [
+              0.2652,
+              0.5139
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 21
+          },
+          "RESOURCE": {
+            "f1": 0.24,
+            "fn": 19,
+            "fp": 0,
+            "fpr": null,
+            "n": 22,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 22,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.4385,
+              1.0
+            ],
+            "recall": 0.1364,
+            "recall_ci95": [
+              0.0475,
+              0.3333
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 3
+          },
+          "TEMPORAL": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "n": 79,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 79,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9536,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9536,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 79
+          }
+        },
+        "relic_v1_1": {
+          "CONTROL_FLOW": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "n": 55,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 55,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9347,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9347,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 55
+          },
+          "CONTROL_FLOW_INCL_IF": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "n": 55,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 55,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9347,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9347,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 55
+          },
+          "RESOURCE": {
+            "f1": 0.45,
+            "fn": 13,
+            "fp": 9,
+            "fpr": 1.0,
+            "n": 31,
+            "negatives": 9,
+            "no_prediction": 0,
+            "positives": 22,
+            "precision": 0.5,
+            "precision_ci95": [
+              0.2903,
+              0.7097
+            ],
+            "recall": 0.4091,
+            "recall_ci95": [
+              0.2326,
+              0.6127
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.2991
+            ],
+            "tn": 0,
+            "tp": 9
+          },
+          "TEMPORAL": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "n": 79,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 79,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9536,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9536,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 79
+          }
+        }
+      },
+      "n_files": 55,
+      "per_file": [
+        {
+          "file": "app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 1,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/app-authorization-ims-db2-mq/jcl/UNLDPADB.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 1,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "app/app-transaction-type-db2/jcl/CREADB21.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 4,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 4,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 4
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 6
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 6
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 4
+          }
+        },
+        {
+          "file": "app/app-transaction-type-db2/jcl/MNTTRDB2.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/app-transaction-type-db2/jcl/TRANEXTR.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 6,
+            "fp": 0,
+            "tp": 4
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 6,
+            "fp": 0,
+            "tp": 4
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 4
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 10
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 10
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 4,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 4
+          }
+        },
+        {
+          "file": "app/jcl/ACCTFILE.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "app/jcl/CARDFILE.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 3,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 7
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 3,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 7
+          }
+        },
+        {
+          "file": "app/jcl/CBADMCDJ.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/CBEXPORT.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "app/jcl/CBIMPORT.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/CLOSEFIL.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/COMBTRAN.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "app/jcl/CREASTMT.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 6,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 6,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 4
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 9
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 9
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 4
+          }
+        },
+        {
+          "file": "app/jcl/CUSTFILE.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 4
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 4
+          }
+        },
+        {
+          "file": "app/jcl/DALYREJS.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/DEFCUST.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/DEFGDGB.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/DEFGDGD.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 7,
+            "fp": 0,
+            "tp": 4
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 7,
+            "fp": 0,
+            "tp": 4
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 11
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 11
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          }
+        },
+        {
+          "file": "app/jcl/DISCGRP.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "app/jcl/DUSRSECJ.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 1,
+            "tp": 1
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          }
+        },
+        {
+          "file": "app/jcl/ESDSRRDS.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 2,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 2,
+            "tp": 2
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          }
+        },
+        {
+          "file": "app/jcl/FTPJCL.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/INTCALC.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/INTRDRJ1.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "app/jcl/INTRDRJ2.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/OPENFIL.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/POSTTRAN.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/PRTCATBL.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "app/jcl/READACCT.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "app/jcl/READCARD.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/READCUST.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/READXREF.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/REPTFILE.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/TCATBALF.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "app/jcl/TRANBKP.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "app/jcl/TRANCATG.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "app/jcl/TRANFILE.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 3,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 7
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 3,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 7
+          }
+        },
+        {
+          "file": "app/jcl/TRANIDX.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "app/jcl/TRANREPT.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "app/jcl/TRANTYPE.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "app/jcl/TXT2PDF1.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/WAITSTEP.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "app/jcl/XREFFILE.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 3,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 3,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          }
+        },
+        {
+          "file": "samples/jcl/BATCMP.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "samples/jcl/BMSCMP.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "samples/jcl/CICCMP.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "samples/jcl/CICDBCMP.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "samples/jcl/IMSMQCMP.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 10,
+            "fp": 0,
+            "tp": 5
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 10,
+            "fp": 0,
+            "tp": 5
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 2,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 15
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 15
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 2,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          }
+        },
+        {
+          "file": "samples/jcl/LISTCAT.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "samples/jcl/RACFCMDS.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "samples/jcl/REPRTEST.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "samples/jcl/SORTTEST.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        }
+      ]
+    },
+    "genapp": {
+      "files_with_oracle_pairs": {
+        "CONTROL_FLOW": 4,
+        "CONTROL_FLOW_INCL_IF": 4,
+        "RESOURCE": 2,
+        "TEMPORAL": 8
+      },
+      "micro": {
+        "relic_v1_0": {
+          "CONTROL_FLOW": {
+            "f1": 0.6667,
+            "fn": 3,
+            "fp": 2,
+            "fpr": 1.0,
+            "n": 10,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 8,
+            "precision": 0.7143,
+            "precision_ci95": [
+              0.3589,
+              0.9178
+            ],
+            "recall": 0.625,
+            "recall_ci95": [
+              0.3057,
+              0.8632
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.6576
+            ],
+            "tn": 0,
+            "tp": 5
+          },
+          "CONTROL_FLOW_INCL_IF": {
+            "f1": 0.6667,
+            "fn": 3,
+            "fp": 2,
+            "fpr": 1.0,
+            "n": 10,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 8,
+            "precision": 0.7143,
+            "precision_ci95": [
+              0.3589,
+              0.9178
+            ],
+            "recall": 0.625,
+            "recall_ci95": [
+              0.3057,
+              0.8632
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.6576
+            ],
+            "tn": 0,
+            "tp": 5
+          },
+          "RESOURCE": {
+            "f1": 0.0,
+            "fn": 4,
+            "fp": 2,
+            "fpr": 1.0,
+            "n": 6,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 4,
+            "precision": 0.0,
+            "precision_ci95": [
+              0.0,
+              0.6576
+            ],
+            "recall": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.4899
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.6576
+            ],
+            "tn": 0,
+            "tp": 0
+          },
+          "TEMPORAL": {
+            "f1": 0.9714,
+            "fn": 0,
+            "fp": 4,
+            "fpr": 1.0,
+            "n": 72,
+            "negatives": 4,
+            "no_prediction": 0,
+            "positives": 68,
+            "precision": 0.9444,
+            "precision_ci95": [
+              0.8657,
+              0.9782
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9465,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.4899
+            ],
+            "tn": 0,
+            "tp": 68
+          }
+        },
+        "relic_v1_1": {
+          "CONTROL_FLOW": {
+            "f1": 0.8889,
+            "fn": 0,
+            "fp": 2,
+            "fpr": 1.0,
+            "n": 10,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 8,
+            "precision": 0.8,
+            "precision_ci95": [
+              0.4902,
+              0.9433
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.6756,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.6576
+            ],
+            "tn": 0,
+            "tp": 8
+          },
+          "CONTROL_FLOW_INCL_IF": {
+            "f1": 0.8889,
+            "fn": 0,
+            "fp": 2,
+            "fpr": 1.0,
+            "n": 10,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 8,
+            "precision": 0.8,
+            "precision_ci95": [
+              0.4902,
+              0.9433
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.6756,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.6576
+            ],
+            "tn": 0,
+            "tp": 8
+          },
+          "RESOURCE": {
+            "f1": 0.0,
+            "fn": 4,
+            "fp": 2,
+            "fpr": 1.0,
+            "n": 6,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 4,
+            "precision": 0.0,
+            "precision_ci95": [
+              0.0,
+              0.6576
+            ],
+            "recall": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.4899
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.6576
+            ],
+            "tn": 0,
+            "tp": 0
+          },
+          "TEMPORAL": {
+            "f1": 0.9714,
+            "fn": 0,
+            "fp": 4,
+            "fpr": 1.0,
+            "n": 72,
+            "negatives": 4,
+            "no_prediction": 0,
+            "positives": 68,
+            "precision": 0.9444,
+            "precision_ci95": [
+              0.8657,
+              0.9782
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9465,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.4899
+            ],
+            "tn": 0,
+            "tp": 68
+          }
+        }
+      },
+      "n_files": 29,
+      "per_file": [
+        {
+          "file": "base/cntl/adef121.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 5
+          }
+        },
+        {
+          "file": "base/cntl/asmmap.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 3,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 3,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          }
+        },
+        {
+          "file": "base/cntl/cdef121.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/cdef122.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/cdef123.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/cdef124.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/cdef125.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/cobol.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 2,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 2,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 2,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 3,
+            "tp": 30
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 2,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 2,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 2,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 3,
+            "tp": 30
+          }
+        },
+        {
+          "file": "base/cntl/cpsmde2.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/db2bind.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/db2cre.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          }
+        },
+        {
+          "file": "base/cntl/db2del.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/defdrep.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 2,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 2,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "base/cntl/defwrep.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "base/cntl/itpentr.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/itpll.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/itpstl.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 1,
+            "tp": 21
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 1,
+            "tp": 21
+          }
+        },
+        {
+          "file": "base/cntl/sampcma.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/sampncs.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/samptsq.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/sampwui.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/wsaac01.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/wsaap01.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/wsaic01.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/wsaip01.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 3
+          }
+        },
+        {
+          "file": "base/cntl/wsauc01.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/wsaup01.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/wsavc01.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "base/cntl/wsavp01.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        }
+      ]
+    },
+    "omp_course": {
+      "files_with_oracle_pairs": {
+        "CONTROL_FLOW": 1,
+        "CONTROL_FLOW_INCL_IF": 23,
+        "RESOURCE": 23,
+        "TEMPORAL": 25
+      },
+      "micro": {
+        "relic_v1_0": {
+          "CONTROL_FLOW": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "n": 1,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 1,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.2065,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.2065,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 1
+          },
+          "CONTROL_FLOW_INCL_IF": {
+            "f1": 0.0833,
+            "fn": 22,
+            "fp": 0,
+            "fpr": null,
+            "n": 23,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 23,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.2065,
+              1.0
+            ],
+            "recall": 0.0435,
+            "recall_ci95": [
+              0.0077,
+              0.2099
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 1
+          },
+          "RESOURCE": {
+            "f1": 0.0,
+            "fn": 23,
+            "fp": 0,
+            "fpr": null,
+            "n": 23,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 23,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.1431
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 0
+          },
+          "TEMPORAL": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "n": 26,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 26,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8713,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8713,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 26
+          }
+        },
+        "relic_v1_1": {
+          "CONTROL_FLOW": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "n": 1,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 1,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.2065,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.2065,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 1
+          },
+          "CONTROL_FLOW_INCL_IF": {
+            "f1": 0.0833,
+            "fn": 22,
+            "fp": 0,
+            "fpr": null,
+            "n": 23,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 23,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.2065,
+              1.0
+            ],
+            "recall": 0.0435,
+            "recall_ci95": [
+              0.0077,
+              0.2099
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 1
+          },
+          "RESOURCE": {
+            "f1": 0.0,
+            "fn": 23,
+            "fp": 0,
+            "fpr": null,
+            "n": 23,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 23,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.1431
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 0
+          },
+          "TEMPORAL": {
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "n": 26,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 26,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8713,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8713,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 26
+          }
+        }
+      },
+      "n_files": 37,
+      "per_file": [
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0005J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0006J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0007J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0008J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0009J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0010J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0011J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0012J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0013J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0014J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL006AJ.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/COBRUN.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/HELLO.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/PAYROL00.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/PAYROL0X.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHBINJ.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHSERJ.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/jcl/CBL0106J.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB21C.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB21R.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB22C.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB22R.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB23C.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB23R.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CRETBL.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/DB2SETUP.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/DBRMLIB.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/LOADTBL.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        },
+        {
+          "file": "COBOL Programming Course #3 - Advanced Topics/Labs/jcl/SELTBL.jcl",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          }
+        },
+        {
+          "file": "COBOL Programming Course #4 - Testing/Labs/jcl/DEPTPAY.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 2
+          }
+        },
+        {
+          "file": "COBOL Programming Course #4 - Testing/Labs/jcl/EMPPAY.JCL",
+          "relic_v1_0:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_0:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          },
+          "relic_v1_1:CONTROL_FLOW": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:CONTROL_FLOW_INCL_IF": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:RESOURCE": {
+            "fn": 1,
+            "fp": 0,
+            "tp": 0
+          },
+          "relic_v1_1:TEMPORAL": {
+            "fn": 0,
+            "fp": 0,
+            "tp": 1
+          }
+        }
+      ]
+    }
+  }
+}

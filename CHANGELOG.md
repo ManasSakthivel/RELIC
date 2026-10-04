@@ -4,7 +4,48 @@ All notable changes to RELIC are documented here.
 
 ---
 
+## [1.1.0] — 2026-10-04
+
+**Research remediation.** The evaluation was rebuilt; the 1.0.0 headline results are
+withdrawn. Audit: `docs/remediation/PRE_REMEDIATION_AUDIT.md`; status:
+`docs/FINAL_RESEARCH_READINESS_REPORT.md`.
+
+### Added
+
+- Source-level mutation benchmark (`relic_eval/`): 10 operators applied at every
+  applicable site of three public JCL corpora (AWS CardDemo, OMP COBOL Programming
+  Course, IBM CICS GenApp), with complete accounting of every candidate mutant.
+- Independent JCL execution-semantics oracle (`jcl_oracle/`) as ground truth; shares
+  no code with RELIC and never sees the mutation operator.
+- Corrected LLM baselines C (LLM-only) and D (dependency + LLM): the model sees the
+  original and modified JCL; no operator/label in the prompt; failed calls are never
+  scored; every request/response cached; common-population comparison.
+- Trivial "any non-comment change" reference detector; file-level cluster bootstrap CIs;
+  sensitivity analyses; generated tables/figures/doc blocks; `make check`.
+- `legacy_v1_0` switches that reproduce the released behaviour exactly; RELIC v1.1
+  (spec-conformance fixes, reported separately as post hoc).
+
+### Fixed (v1.1, post hoc)
+
+- JCL continuation lines (IBM rule), columns 73–80, balanced `COND=` capture,
+  `COND` without step name binds all previous steps, BCG diff compares guard
+  parameters and flags weakened guards.
+- Baseline B no longer receives the mutation location.
+- Generated-block rendering and its consistency check (empty blocks were never
+  matched; table row order depended on JSON key order).
+
+### Withdrawn
+
+- RQ2 F1 = 1.000 (BCG-level harness that deleted contracts from RELIC's own output),
+  FPR = 0 on vacuous negatives, the "confidence-delta" finding, LLM F1 0.0377 / 0.1091
+  (rate-limited calls scored as answers), RQ3 dynamic validation rate (self-generated
+  traces), "empirically grounded" operator claims (unverifiable sources).
+
+---
+
 ## [1.0.0] — 2025-08-17
+
+> **Superseded.** The evaluation results listed for 1.0.0 below are withdrawn (see 1.1.0).
 
 **Initial public research release.**
 
@@ -23,11 +64,11 @@ All notable changes to RELIC are documented here.
 - NegativeMutationEngine: 5 semantics-preserving operators for false-positive evaluation
 - Baselines A–E: structural dependency, complexity metrics, LLM-only, Dep+LLM, static BCG
 - Full evaluation framework: RQ1, RQ2, RQ3, ablation experiments
-- 305 tests: unit, integration, regression, scientific integrity (SI-01 through SI-12)
-- Fault-grounded mutation benchmark: 104 evaluated positive + 144 negative mutations
-- CardDemo evaluation: BCG F1=1.000 vs structural baseline F1=0.8995
-- LLM baselines evaluated: Groq llama-3.3-70b-versatile, v2_blinded prompts
-- Dynamic validation: 91.8% contracts SUPPORTED with 40 execution traces
+- 305 tests (legacy suite): unit, integration, regression, scientific integrity (SI-01 through SI-12)
+- Fault-grounded mutation benchmark (withdrawn): 104 evaluated positive + 144 negative mutations
+- CardDemo evaluation (withdrawn — circular harness): BCG F1=1.000 vs structural baseline F1=0.8995
+- LLM baselines (withdrawn — 245/248 and 241/248 calls failed and were scored): Groq llama-3.3-70b-versatile, v2_blinded prompts
+- Dynamic validation (withdrawn — self-generated traces): 91.8% contracts SUPPORTED with 40 execution traces
 - Reproducibility: `make reproduce-paper1` runs all deterministic experiments
 - Docker support: single-command reproduction environment
 - Research documentation: architecture, methodology, limitations, reproduction guides

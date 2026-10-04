@@ -1,83 +1,39 @@
-[tool.poetry]
-name = "relic"
-version = "1.0.0"
-description = "RELIC: Execution-Grounded Behavioral Analysis for Legacy Software Modernization"
-authors = ["Manas Sakthivel"]
-license = "Apache-2.0"
-readme = "README.md"
-packages = [{include = "legacy_contract", from = "src"}]
-
-[tool.poetry.dependencies]
-python = "^3.11"
-# Core
-networkx = "^3.2"
-pydantic = "^2.5"
-sqlalchemy = "^2.0"
-alembic = "^1.13"
-# Parsers
-lark = "^1.1"          # PEG/EBNF parser for JCL + COBOL grammar
-antlr4-python3-runtime = "^4.13"
-# Analysis
-scipy = "^1.11"
-numpy = "^1.26"
-pandas = "^2.1"
-# Visualization
-matplotlib = "^3.8"
-seaborn = "^0.13"
-graphviz = "^0.20"
-# API
-fastapi = "^0.104"
-uvicorn = "^0.24"
-# LLM (optional)
-openai = {version = "^1.6", optional = true}
-anthropic = {version = "^0.8", optional = true}
-# Utilities
-click = "^8.1"
-rich = "^13.7"
-pyyaml = "^6.0"
-python-dotenv = "^1.0"
-loguru = "^0.7"
-tqdm = "^4.66"
-
-[tool.poetry.extras]
-llm = ["openai", "anthropic"]
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^7.4"
-pytest-cov = "^4.1"
-pytest-asyncio = "^0.21"
-black = "^23.12"
-isort = "^5.13"
-mypy = "^1.8"
-ruff = "^0.1"
-hypothesis = "^6.92"  # Property-based testing for parsers
-
-[tool.poetry.scripts]
-lcb = "legacy_contract.cli:main"
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relic"
+version = "1.1.0"
+description = "RELIC: behavioral contract analysis for JCL batch modernization, with an independent execution-semantics evaluation"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "Manas Sakthivel"}]
+requires-python = ">=3.11"
+dependencies = [
+    "loguru>=0.7",
+    "matplotlib>=3.8",
+    "pyyaml>=6.0",
+    "scipy>=1.11",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+api = ["fastapi>=0.104", "pydantic>=2.5", "uvicorn>=0.24"]
+
+[tool.setuptools.packages.find]
+where = ["src", "."]
+include = ["legacy_contract*", "baselines*", "jcl_oracle*", "relic_eval*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
 
 [tool.black]
 line-length = 100
 target-version = ["py311"]
 
-[tool.isort]
-profile = "black"
-line_length = 100
-
-[tool.mypy]
-python_version = "3.11"
-strict = true
-ignore_missing_imports = true
-
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-select = ["E", "F", "I", "N", "W", "UP"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-asyncio_mode = "auto"
-pythonpath = ["src", "."]

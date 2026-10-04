@@ -1,0 +1,36 @@
+{
+  "negative_benchmark": {
+    "attempted": 495,
+    "evaluated_tn": 144,
+    "not_applicable": 351,
+    "note": "All five legacy negative operators edit RELIC's BCG without touching any contract (one is a no-op the graph de-duplicates); TN is guaranteed. Only the 144 TN rows were saved by the legacy script; N/A rows exist only as a count."
+  },
+  "operator_mapping": {
+    "ALTER_ERROR_BRANCH": "ALTER_COND_THRESHOLD",
+    "ALTER_FILE_DEPENDENCY_ORDER": "MOVE_CONSUMER_BEFORE_PRODUCER",
+    "ALTER_STEP_SEQUENCE": "SWAP_ADJACENT_STEPS",
+    "CHANGE_DATASET_NAME": "RENAME_OUTPUT_DATASET",
+    "REMOVE_DATASET_INIT": "DELETE_PRODUCER_STEP",
+    "REMOVE_JOB_DEPENDENCY": "SPLIT_JOB",
+    "REORDER_JOBS": "SWAP_ADJACENT_STEPS",
+    "SUPPRESS_RETURN_CODE_CHECK": "REMOVE_COND"
+  },
+  "positive_benchmark": {
+    "by_reason": {
+      "CIRCULAR_HARNESS": 104,
+      "NO_SITE": 310,
+      "NO_SITE (continuation defect)": 24,
+      "POST_HOC_EXCLUSION": 2
+    },
+    "legacy_errors": 0,
+    "legacy_evaluated": 104,
+    "legacy_evaluated_by_contract_type": {
+      "CONTROL_FLOW": 16,
+      "RESOURCE": 3,
+      "TEMPORAL": 85
+    },
+    "legacy_not_applicable": 336,
+    "methodologically_valid_rows": 0,
+    "total_rows": 440
+  }
+}

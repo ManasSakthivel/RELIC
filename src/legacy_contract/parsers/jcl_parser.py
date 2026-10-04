@@ -102,9 +102,28 @@ class JCLParser:
         re.IGNORECASE,
     )
     COMMENT_PATTERN = re.compile(r"^//\*")
+    # v1.0.0 rule (kept for legacy mode): a continuation line needed >= 15
+    # blanks after '//'. IBM JCL allows the continued operand to start in any
+    # column 4-16, so this rule merged none of CardDemo's 296 continuation lines.
     CONTINUATION_PATTERN = re.compile(r"^//\s{15}")
+    # IBM rule: the operand field of the current statement ends with a comma
+    # and the next line is '//' followed by a blank in column 3.
+    IBM_CONTINUATION_PATTERN = re.compile(r"^//\s+\S")
+    STATEMENT_COLUMNS = 71
+    COND_PATTERN_LEGACY = re.compile(r"COND=(\([^)]+\)|\w+)", re.IGNORECASE)
+    COND_PATTERN_BALANCED = re.compile(r"COND=(\((?:[^()]|\([^()]*\))*\)|\w+)", re.IGNORECASE)
 
-    def __init__(self) -> None:
+    def __init__(self, legacy_v1_0: bool = False) -> None:
+        """
+        Parameters
+        ----------
+        legacy_v1_0:
+            Reproduce the as-released v1.0.0 behaviour exactly (non-standard
+            continuation rule, sequence columns 73-80 kept, COND captured up to
+            the first ')'). Used only to evaluate the released version; the
+            default follows the IBM JCL statement-format rules.
+        """
+        self.legacy_v1_0 = legacy_v1_0
         self._current_job: IREntity | None = None
         self._current_step: IREntity | None = None
         self._step_order: list[IREntity] = []
@@ -161,9 +180,16 @@ class JCLParser:
         result: JCLParseResult,
     ) -> list[tuple[int, str]]:
         """
-        Merge continuation lines (JCL lines starting with // + 15 spaces).
+        Merge continuation lines.
         Returns list of (original_line_number, merged_line).
+
+        Default (IBM) mode: columns 73-80 are dropped; a statement whose
+        operand field ends with ',' continues on the next '//' line whose
+        column 3 is blank; the continued operand field is appended directly.
+        Legacy v1.0 mode: only lines with >= 15 blanks after '//' are merged.
         """
+        if not self.legacy_v1_0:
+            return self._merge_continuations_ibm(lines)
         merged: list[tuple[int, str]] = []
         i = 0
         while i < len(lines):
@@ -178,6 +204,62 @@ class JCLParser:
                 merged.append((line_no, combined))
             else:
                 merged.append((line_no, line))
+            i += 1
+        return merged
+
+    @staticmethod
+    def _operand_field(text: str) -> str:
+        """Operand text up to the first blank outside quotes / parentheses."""
+        out: list[str] = []
+        in_quote = False
+        depth = 0
+        for ch in text:
+            if ch == "'":
+                in_quote = not in_quote
+            elif not in_quote:
+                if ch == "(":
+                    depth += 1
+                elif ch == ")":
+                    depth = max(0, depth - 1)
+                elif ch == " " and depth == 0:
+                    break
+            out.append(ch)
+        return "".join(out)
+
+    def _merge_continuations_ibm(self, lines: list[str]) -> list[tuple[int, str]]:
+        merged: list[tuple[int, str]] = []
+        cols = self.STATEMENT_COLUMNS
+        i = 0
+        n = len(lines)
+        while i < n:
+            line = lines[i][:cols].rstrip() if lines[i].startswith("//") else lines[i]
+            line_no = i + 1
+            m = re.match(r"^//(\S*)\s+(\S+)\s*(.*)$", line)
+            if (
+                m is None
+                or line.startswith("//*")
+                or m.group(2).upper() == "IF"
+            ):
+                merged.append((line_no, line))
+                i += 1
+                continue
+            field = self._operand_field(m.group(3))
+            if not field.endswith(","):
+                merged.append((line_no, line))
+                i += 1
+                continue
+            combined = f"//{m.group(1)} {m.group(2)} {field}"
+            while field.endswith(",") and i + 1 < n:
+                nxt = lines[i + 1][:cols].rstrip()
+                if nxt.startswith("//*"):
+                    i += 1          # comment statements may be interleaved
+                    continue
+                if not self.IBM_CONTINUATION_PATTERN.match(nxt):
+                    break
+                i += 1
+                field = self._operand_field(nxt[2:].lstrip())
+                combined += field
+            merged.append((line_no, combined))
             i += 1
         return merged
 
@@ -320,7 +402,8 @@ class JCLParser:
             self._current_step = step_entity
 
         # Extract COND parameter for control-flow contract candidates
-        cond_match = re.search(r"COND=(\([^)]+\)|\w+)", token.operands, re.IGNORECASE)
+        cond_pattern = self.COND_PATTERN_LEGACY if self.legacy_v1_0 else self.COND_PATTERN_BALANCED
+        cond_match = cond_pattern.search(token.operands)
         if cond_match:
             step_entity.attributes["cond"] = cond_match.group(1).strip()
 

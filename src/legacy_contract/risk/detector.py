@@ -39,13 +39,48 @@ from typing import Any
 
 from loguru import logger
 
-from legacy_contract.bcg.model import BCG, BCGDiff
+from legacy_contract.bcg.model import BCG, BCGDiff, contract_parameters
 from legacy_contract.contracts.model import (
     Contract,
     ContractType,
     ValidationState,
 )
 from legacy_contract.mutations.engine import MutationRecord
+
+
+# ---------------------------------------------------------------------------
+# COND guard semantics
+# ---------------------------------------------------------------------------
+
+_MAX_RC = 4095
+
+
+def _cond_bypasses(code: int, op: str, rc: int) -> bool:
+    """IBM COND test: the step is bypassed when ``code <op> rc`` is true."""
+    return {
+        "GT": code > rc, "GE": code >= rc, "EQ": code == rc,
+        "LT": code < rc, "LE": code <= rc, "NE": code != rc,
+    }.get(op.upper(), False)
+
+
+def guard_weakened(original: Contract, modified: Contract) -> bool:
+    """
+    True if some return code makes the original COND test bypass the step
+    while the modified test lets it run (the error guard became weaker).
+    Contracts without a parseable threshold/operator are treated as weakened
+    when their parameters differ (conservative).
+    """
+    try:
+        c0 = int(original.metadata["rc_threshold"])
+        c1 = int(modified.metadata["rc_threshold"])
+        op0 = str(original.metadata["operator"])
+        op1 = str(modified.metadata["operator"])
+    except (KeyError, TypeError, ValueError):
+        return True
+    return any(
+        _cond_bypasses(c0, op0, rc) and not _cond_bypasses(c1, op1, rc)
+        for rc in range(_MAX_RC + 1)
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -270,6 +305,13 @@ class RiskDetector:
     # is placed in false_positive_candidates rather than risk_items.
     FALSE_POSITIVE_THRESHOLD: float = 0.30
 
+    def __init__(self, legacy_v1_0: bool = False) -> None:
+        """
+        legacy_v1_0: reproduce v1.0.0, which ignored changes to guard
+        parameters (COND threshold / operator) when diffing contracts.
+        """
+        self.legacy_v1_0 = legacy_v1_0
+
     def detect(
         self,
         original_bcg: BCG,
@@ -301,7 +343,9 @@ class RiskDetector:
 
         The mutation_record is included in the report for full traceability.
         """
-        diff: BCGDiff = original_bcg.diff(mutated_bcg)
+        diff: BCGDiff = original_bcg.diff(
+            mutated_bcg, compare_parameters=not self.legacy_v1_0
+        )
 
         logger.info(
             f"RiskDetector.detect: "
@@ -340,6 +384,14 @@ class RiskDetector:
             (orig, mod) for orig, mod in diff.modified
             if orig.confidence_score() > mod.confidence_score() + 0.001
             # The +0.001 tolerance filters sub-threshold floating point differences.
+            or (
+                # A changed guard parameter (e.g. COND threshold) is a violation
+                # when it *weakens* the guard: there is a return code for which
+                # the original bypassed the step but the modernized version runs it.
+                not self.legacy_v1_0
+                and contract_parameters(orig) != contract_parameters(mod)
+                and guard_weakened(orig, mod)
+            )
         ]
         for orig_contract, mod_contract in all_modified_with_delta:
             risk_item = self._build_modified_risk_item(

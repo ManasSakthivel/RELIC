@@ -1,136 +1,60 @@
-# Reproducibility Guide
-## RELIC — Complete Reproducibility Protocol
+# Reproducibility
 
----
+## What to install
+- Python ≥ 3.11 on macOS or Linux (tested: macOS 26 / arm64, CPython 3.11.16).
+- `make setup` creates `.venv` and installs `requirements.lock` (pinned; generated
+  from `requirements.in` in a fresh environment). Alternative:
+  `uv venv --python 3.11 && uv pip install -r requirements.lock`.
+- Not needed: z/OS, GnuCOBOL, Docker, network access, API keys. `make reproduce`
+  re-scores the LLM baselines from the committed request/response cache
+  (`results/final/raw/llm_cache/`). Re-querying the model needs `GROQ_API_KEY`
+  (or another provider, see `relic_eval/llm_baselines.py`); pass it through the
+  environment only, never in a file.
+- If no Python >= 3.11 is on PATH, `make setup` uses one managed by `uv`, or set
+  `PY_BOOT=/path/to/python3.11`.
 
-## CORE PRINCIPLE
+## What to run
+| Command | What it does | Time |
+|---|---|---|
+| `make test` | full test suite (RELIC unit/integration, oracle semantics, evaluation, regression, results integrity) | seconds |
+| `make reproduce` | generates all mutants, labels them with the oracle, runs every detector, writes raw records, manifest, metrics, tables, LaTeX tables, figures and generated doc blocks, then runs `make check` | ~5 min |
+| `make metrics` | recomputes metrics, tables, figures and doc blocks from the committed raw records only | ~1 s |
+| `make check` | fails if any reported number disagrees with the raw records, or active docs contain withdrawn numbers | ~2 s |
+| `make llm-baselines` | queries the model for every EVALUABLE mutant not yet in the cache (seeded random order; stops cleanly when the provider quota is exhausted) and recomputes metrics | API-bound (hours on a free-tier key) |
+| `make reproduce-legacy` | re-runs the pre-remediation scripts in v1.0.0 mode (provenance only; reproduces the legacy numbers exactly, apart from timestamps/UUIDs) | ~10 s |
 
-A researcher unfamiliar with this project should be able to:
-1. Clone the repository
-2. Run `make setup`
-3. Run `make reproduce-paper1`
-4. Obtain results matching those in the paper (within reported variance bounds for LLM components)
+## Where outputs appear
+- `results/final/raw/evaluation_records.jsonl` — one record per candidate mutant:
+  diff, oracle verdict and evidence, every prediction.
+- `results/final/evaluation_manifest.csv` — one row per candidate mutant
+  (mutation_id, mutation_type, contract_type, subject_system, status, status_reason,
+  expected_violation, oracle_result, relic_result, evaluable_for_metrics, …).
+- `results/final/metrics.json` — every reported number.
+- `results/final/contract_recovery.json` — RQ1 per-file results.
+- `results/final/tables/*.md`, `paper/generated/*.tex`, `figures/final/*.svg`.
+- `results/final/run_info.json` — timestamp, Python, platform, git commit.
+- `results/legacy/` — accounting of the legacy run.
 
----
+## How metrics are generated
+`relic_eval/metrics.py` (formulas and consistency assertions) ←
+`relic_eval/report.py` (populations, breakdowns, sensitivity analyses, rendering).
+README, paper and docs contain metrics only inside
+`<!-- BEGIN GENERATED:… -->` blocks, which `report.py` rewrites and
+`check_consistency.py` verifies.
 
-## REQUIREMENTS
+## Determinism
 
-### Software versions (pinned)
+LLM answers are not deterministic across providers or model versions. The cache
+makes the reported LLM results reproducible; a fresh query may give different
+answers.
 
-```
-Python: 3.11.x (see pyproject.toml)
-GnuCOBOL: 3.1.2
-Node.js: 20.x (for UI)
-Docker: 24.x
-All Python packages: pinned in pyproject.toml [tool.poetry.dependencies]
-```
+No randomness in mutant generation (exhaustive site enumeration), oracle or
+detectors. The bootstrap uses a fixed seed (20261004). Raw records and
+`metrics.json` contain no timestamps or random identifiers, so two runs produce
+byte-identical files (verified during the remediation by running the pipeline
+twice and comparing hashes).
 
-### Hardware requirements
-
-```
-RAM: 8GB minimum (16GB recommended for large trace analysis)
-CPU: Any modern x86-64 or ARM64
-Storage: 10GB for datasets + traces + results
-GPU: Not required
-```
-
----
-
-## DATASET PREPARATION
-
-```bash
-# Download CardDemo dataset
-make download-carddemo
-# Verifies checksums against datasets/carddemo/ARTIFACTS.json
-
-# Download supplementary public COBOL datasets
-make download-public-cobol
-```
-
-All datasets are cached locally after first download. Re-running uses cached versions.
-
----
-
-## TRACE GENERATION
-
-```bash
-# Generate all development and validation traces
-make generate-traces
-
-# This runs:
-# 1. GnuCOBOL compilation of batch programs
-# 2. Instrumented execution with controlled inputs
-# 3. JCL batch job simulation
-# 4. Normalization to ExecutionEvent schema
-# All outputs in traces/dev/ and traces/validation/
-```
-
-**Random seeds:** All input generation uses seed 42 by default. Use `SEED=<n> make generate-traces` for different seeds.
-
----
-
-## EXPERIMENTS
-
-```bash
-# Run all Paper 1 experiments
-make run-experiments
-
-# Individual experiments
-make rq1          # Contract recovery
-make rq2          # Risk detection comparison
-make rq3          # Dynamic evidence value
-make ablation     # Ablation study
-make generalize   # Generalization experiment
-```
-
----
-
-## FIGURE AND TABLE GENERATION
-
-```bash
-# Generate all figures and tables from results
-make figures
-make tables
-
-# Outputs:
-# figures/fig_*.pdf
-# paper/tables/*.md
-# paper/table_source/*.tex
-```
-
----
-
-## LLM EXPERIMENT REPRODUCIBILITY
-
-LLM-involving baselines (C, D, E7) are not bit-for-bit reproducible across model versions. To reproduce:
-
-1. Use the model version specified in `config/llm_config.yaml`
-2. Use the exact prompts in `src/contracts/prompts/` (versioned)
-3. Report variance across 5 runs (scripts provided)
-
-The deterministic BCG pipeline (no LLM) is fully bit-for-bit reproducible.
-
----
-
-## VERSION TRACKING
-
-```
-experiments/rq1/config.yaml      — frozen experiment configuration
-experiments/rq2/config.yaml      — frozen experiment configuration
-experiments/rq3/config.yaml      — frozen experiment configuration
-results/RUN_LOG.jsonl             — log of every experiment run with timestamp, seed, version
-paper/PAPER_RESULTS_SNAPSHOT.json — results snapshot used to generate figures/tables in paper
-```
-
----
-
-## DOCKER CONTAINERIZATION
-
-```bash
-# Full reproducibility in Docker
-docker-compose up research
-
-# This mounts datasets and traces, runs all experiments, generates figures
-```
-
-The Docker image pins all software versions and is uploaded to Docker Hub at `relic/research:v1.0`.
+## Known environment assumptions
+- File reading uses `errors="replace"`; all subject files are ASCII.
+- The pipeline imports with `PYTHONPATH=src:.` (set by the Makefile) or after
+  `pip install -e .`.

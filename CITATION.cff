@@ -1,22 +1,22 @@
 cff-version: 1.2.0
 message: >
   If you use RELIC in your research, please cite it using the metadata below.
-title: "RELIC: Execution-Grounded Behavioral Analysis for Legacy Software Modernization"
+title: "RELIC: Behavioral Contract Analysis for JCL Batch Modernization"
 abstract: >
-  RELIC recovers implicit behavioral obligations from legacy JCL/COBOL systems as
-  Behavioral Contract Graphs (BCG = (V, E, C, P, D, Γ)), compares them across
-  modernized versions using confidence-delta differencing, and uses execution
-  evidence to distinguish supported, conflicting, and unobserved behavior.
-  Evaluated on the AWS CardDemo benchmark: BCG F1=1.000 vs structural baseline
-  F1=0.8995 across 104 evaluated mutations; 91.8% dynamic validation rate.
+  RELIC recovers implicit behavioral obligations (TEMPORAL, RESOURCE, CONTROL_FLOW)
+  from JCL batch jobs as a Behavioral Contract Graph and reports contracts that a
+  changed job breaks or weakens. Version 1.1.0 replaces the earlier, circular
+  evaluation (its results are withdrawn) with a source-level mutation benchmark
+  over three public JCL corpora, labelled by an independent JCL execution-semantics
+  oracle. Current results: results/final/metrics.json and docs/evaluation/RESULTS.md.
 authors:
   - family-names: "Sakthivel"
     given-names: "Manas"
     email: "manas.mskg@gmail.com"
 repository-code: "https://github.com/ManasSakthivel/RELIC"
 license: Apache-2.0
-version: "1.0.0"
-date-released: "2025-08-17"
+version: "1.1.0"
+date-released: "2026-10-04"
 keywords:
   - legacy modernization
   - behavioral contracts
@@ -25,13 +25,12 @@ keywords:
   - program analysis
   - software engineering
   - mutation testing
-  - dynamic analysis
 preferred-citation:
   type: generic
-  title: "RELIC: Execution-Grounded Behavioral Analysis for Legacy Software Modernization"
+  title: "RELIC: Behavioral Contract Analysis for JCL Batch Modernization"
   authors:
     - family-names: "Sakthivel"
       given-names: "Manas"
-  year: 2025
+  year: 2026
   notes: >
-    Manuscript under review. Repository: https://github.com/ManasSakthivel/RELIC
+    Manuscript draft, not peer reviewed (paper/paper.md). Repository: https://github.com/ManasSakthivel/RELIC

@@ -577,6 +577,16 @@ class TestRiskDetectorModifiedContracts:
         assert "rc_threshold changed" in report.false_positive_candidates[0].change_description
 
     def test_strengthened_modified_contract_is_not_reported_as_violation(self):
+        """
+        Legacy (v1.0.0) behaviour: the diff ignored guard parameters, so a
+        contract whose confidence *rose* is not reported.
+
+        Note (remediation, Oct 2026): this fixture uses COND=(4,GT) -> (2,GT).
+        Under IBM COND semantics that is a *weakening* (at RC 2-3 the original
+        bypasses the step, the new version runs it), so the premise "stronger
+        guard" only holds for the confidence-based v1.0.0 view. The v1.1
+        semantics are tested in TestGuardWeakeningSemantics below.
+        """
         bcg = make_control_flow_bcg()
         original_contract = next(iter(bcg.contracts.values()))
         mutated_bcg = copy.deepcopy(bcg)
@@ -584,7 +594,7 @@ class TestRiskDetectorModifiedContracts:
         mutated_contract.confidence.static_support = original_contract.confidence.static_support + 0.2
         mutated_contract.metadata["rc_threshold"] = 2
 
-        report = RiskDetector().detect(
+        report = RiskDetector(legacy_v1_0=True).detect(
             bcg,
             mutated_bcg,
             MutationRecord(
