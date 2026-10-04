@@ -152,15 +152,20 @@ class BCG:
         )
         return covered / len(self.contracts)
 
-    def diff(self, other: "BCG") -> "BCGDiff":
+    def diff(self, other: "BCG", compare_parameters: bool = True) -> "BCGDiff":
         """
         Compute contract-level diff: self = original, other = modernized.
         Returns contracts broken, preserved, added, and modified.
 
         MODIFIED contracts have the same semantic signature (type, subject,
-        predicate, object) in both BCGs but differ in scope, confidence, or
-        validation state — indicating a behavioral obligation that changed
-        quantitatively but was not dropped entirely.
+        predicate, object) in both BCGs but differ in confidence, validation
+        state or (when ``compare_parameters``) in their behavioural parameters
+        (``rc_threshold`` / ``operator`` of a CONTROL_FLOW guard) — i.e. an
+        obligation that changed but was not dropped entirely.
+
+        v1.0.0 did not compare parameters, so a source-level change such as
+        COND=(4,LT) -> COND=(8,LT) was classified as *preserved*.
+        ``compare_parameters=False`` reproduces that behaviour.
         """
         # Semantic equivalence: compare by (type, subject, predicate, object) not by UUID
         def contract_signature(c: Contract) -> tuple[str, str, str, str]:
@@ -182,6 +187,10 @@ class BCG:
             return (
                 orig_c.validation_state != mod_c.validation_state
                 or abs(orig_conf - mod_conf) > 0.05
+                or (
+                    compare_parameters
+                    and contract_parameters(orig_c) != contract_parameters(mod_c)
+                )
             )
 
         preserved_list: list[Contract] = []
@@ -222,6 +231,15 @@ class BCG:
             "Validation states: " + ", ".join(f"{k}={v}" for k, v in sorted(state_counts.items())),
         ]
         return "\n".join(lines)
+
+
+# Behavioural parameters that are part of a contract's meaning but not of its
+# signature (type, subject, predicate, object).
+CONTRACT_PARAMETER_KEYS = ("rc_threshold", "operator")
+
+
+def contract_parameters(contract: Contract) -> tuple[tuple[str, Any], ...]:
+    return tuple((k, contract.metadata.get(k)) for k in CONTRACT_PARAMETER_KEYS)
 
 
 # ---------------------------------------------------------------------------

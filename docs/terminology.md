@@ -123,7 +123,7 @@ to identify violated, preserved, or weakened contracts.
 **Level-2 DETERMINISTIC ground truth**  
 Contracts extracted by the deterministic extractor and treated as the evaluation benchmark.
 Tautology warning: ground truth annotated by the same extraction family being evaluated.
-F1=1.0 on this benchmark confirms idempotence, not semantic correctness.
+A perfect score on such a benchmark confirms idempotence, not semantic correctness (this is why the legacy RQ1/RQ2 results are withdrawn).
 
 **Level-3 human-annotated ground truth**  
 Contracts independently annotated by domain experts with no access to the extractor's output.

@@ -1,0 +1,30 @@
+\begin{tabular}{lrrrrrrrrrrrrr}
+\toprule
+Population & Evaluable & Answered C / D & Common n (pos/neg) & Detector & TP & FP & FN & TN & Precision & Recall & F1 & F1 95\% CI & Specificity \\
+\midrule
+AWS CardDemo & 315 & 21 / 21 & 21 (13/8) & Baseline C: LLM-only & 13 & 0 & 0 & 8 & 1.000 & 1.000 & 1.000 & [1.00, 1.00] & 1.000 \\
+ &  &  &  & Baseline D: dependency + LLM & 12 & 0 & 1 & 8 & 1.000 & 0.923 & 0.960 & [0.83, 1.00] & 1.000 \\
+ &  &  &  & RELIC v1.0.0 (as released; primary) & 9 & 0 & 4 & 8 & 1.000 & 0.692 & 0.818 & [0.60, 0.96] & 1.000 \\
+ &  &  &  & RELIC v1.1 (post-hoc spec fixes) & 13 & 0 & 0 & 8 & 1.000 & 1.000 & 1.000 & [1.00, 1.00] & 1.000 \\
+ &  &  &  & Baseline A: structural edge diff & 10 & 0 & 3 & 8 & 1.000 & 0.769 & 0.870 & [0.67, 1.00] & 1.000 \\
+ &  &  &  & Reference: any non-comment text change & 13 & 2 & 0 & 6 & 0.867 & 1.000 & 0.929 & [0.77, 1.00] & 0.750 \\
+Open Mainframe Project COBOL Programming Course & 35 & 4 / 4 & 4 (0/4) & Baseline C: LLM-only & 0 & 1 & 0 & 3 & 0.000 & n/a & 0.000 & [0.00, 0.00] & 0.750 \\
+ &  &  &  & Baseline D: dependency + LLM & 0 & 0 & 0 & 4 & n/a & n/a & n/a & n/a & 1.000 \\
+ &  &  &  & RELIC v1.0.0 (as released; primary) & 0 & 0 & 0 & 4 & n/a & n/a & n/a & n/a & 1.000 \\
+ &  &  &  & RELIC v1.1 (post-hoc spec fixes) & 0 & 0 & 0 & 4 & n/a & n/a & n/a & n/a & 1.000 \\
+ &  &  &  & Baseline A: structural edge diff & 0 & 0 & 0 & 4 & n/a & n/a & n/a & n/a & 1.000 \\
+ &  &  &  & Reference: any non-comment text change & 0 & 0 & 0 & 4 & n/a & n/a & n/a & n/a & 1.000 \\
+IBM CICS General Insurance Application (GenApp) & 216 & 14 / 14 & 14 (13/1) & Baseline C: LLM-only & 9 & 0 & 4 & 1 & 1.000 & 0.692 & 0.818 & [0.76, 1.00] & 1.000 \\
+ &  &  &  & Baseline D: dependency + LLM & 13 & 0 & 0 & 1 & 1.000 & 1.000 & 1.000 & [1.00, 1.00] & 1.000 \\
+ &  &  &  & RELIC v1.0.0 (as released; primary) & 12 & 0 & 1 & 1 & 1.000 & 0.923 & 0.960 & [0.50, 1.00] & 1.000 \\
+ &  &  &  & RELIC v1.1 (post-hoc spec fixes) & 12 & 0 & 1 & 1 & 1.000 & 0.923 & 0.960 & [0.50, 1.00] & 1.000 \\
+ &  &  &  & Baseline A: structural edge diff & 12 & 0 & 1 & 1 & 1.000 & 0.923 & 0.960 & [0.50, 1.00] & 1.000 \\
+ &  &  &  & Reference: any non-comment text change & 13 & 0 & 0 & 1 & 1.000 & 1.000 & 1.000 & [1.00, 1.00] & 1.000 \\
+All subjects & 566 & 39 / 39 & 39 (26/13) & Baseline C: LLM-only & 22 & 1 & 4 & 12 & 0.957 & 0.846 & 0.898 & [0.81, 1.00] & 0.923 \\
+ &  &  &  & Baseline D: dependency + LLM & 25 & 0 & 1 & 13 & 1.000 & 0.962 & 0.980 & [0.91, 1.00] & 1.000 \\
+ &  &  &  & RELIC v1.0.0 (as released; primary) & 21 & 0 & 5 & 13 & 1.000 & 0.808 & 0.894 & [0.67, 0.97] & 1.000 \\
+ &  &  &  & RELIC v1.1 (post-hoc spec fixes) & 25 & 0 & 1 & 13 & 1.000 & 0.962 & 0.980 & [0.90, 1.00] & 1.000 \\
+ &  &  &  & Baseline A: structural edge diff & 22 & 0 & 4 & 13 & 1.000 & 0.846 & 0.917 & [0.73, 0.99] & 1.000 \\
+ &  &  &  & Reference: any non-comment text change & 26 & 2 & 0 & 11 & 0.929 & 1.000 & 0.963 & [0.86, 1.00] & 0.846 \\
+\bottomrule
+\end{tabular}

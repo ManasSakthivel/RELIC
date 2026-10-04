@@ -1,0 +1,27 @@
+{
+  "decoding": {
+    "max_tokens": 1024,
+    "reasoning_effort": "low",
+    "seed": 42,
+    "temperature": 0
+  },
+  "model": "openai/gpt-oss-120b",
+  "n_population": 566,
+  "n_scored_both": 39,
+  "order_seed": 20261004,
+  "overall": "PARTIAL",
+  "population": "EVALUABLE mutants of all subjects",
+  "prompt_version": "source_diff_v4",
+  "provider": "groq",
+  "samples_per_prompt": 1,
+  "status_counts": {
+    "llm_C": {
+      "NOT_RUN": 527,
+      "OK": 39
+    },
+    "llm_D": {
+      "NOT_RUN": 527,
+      "OK": 39
+    }
+  }
+}

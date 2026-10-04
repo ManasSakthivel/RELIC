@@ -6,8 +6,9 @@ two-step JCL job. It demonstrates:
 1. Parsing JCL artifacts
 2. Extracting TEMPORAL behavioral contracts
 3. Building a Behavioral Contract Graph (BCG)
-4. Applying a mutation
-5. Detecting the contract violation with BCGDiff
+4. Editing the JCL source (a migration that weakens a COND guard)
+5. Detecting the weakened contract by diffing the two BCGs
+6. Checking the verdict against the independent oracle (`jcl_oracle`)
 
 **No GnuCOBOL required.** This example uses static analysis only.
 
@@ -17,8 +18,7 @@ two-step JCL job. It demonstrates:
 
 ```bash
 # From the repository root
-pip install poetry
-poetry install
+make setup
 ```
 
 ---
@@ -50,62 +50,51 @@ This JCL encodes two implicit behavioral obligations:
 ## Running the Example
 
 ```bash
-cd examples/quickstart
-python3.11 run_quickstart.py
+.venv/bin/python examples/quickstart/run_quickstart.py
 ```
 
----
-
-## Expected Output
+## Expected Output (abridged)
 
 ```
-=== RELIC Quickstart ===
+Change under review:  COND=(4,GT,INITFILE)  ->  COND=(2,GT,INITFILE)
 
-Step 1: Parsing SAMPLEJOB.jcl...
-  Found job: SAMPLEJOB
-  Found 2 steps: INITFILE, PROCESS
+--- RELIC v1.0.0 (as released)
+  contracts in original BCG: 3
+    [TEMPORAL    ] INITFILE --PRECEDES--> PROCESS
+    [RESOURCE    ] INITFILE --PRODUCES_BEFORE_CONSUMES--> PROCESS
+    [CONTROL_FLOW] INITFILE --MUST_NOT_FOLLOW_ON_ERROR--> PROCESS  (RC test: 4,GT)
+  diff: broken=0 modified=0 preserved=3
+  verdict: no risk reported
 
-Step 2: Building BCG...
-  Entities (V): 4 (1 JOB, 2 STEPs, 1 DATASET)
-  Contracts (C): 2
-    [TEMPORAL]      INITFILE --MUST_PRECEDE--> PROCESS
-                    provenance: SAMPLEJOB.jcl:8, extraction=DETERMINISTIC, confidence=1.000
-    [CONTROL_FLOW]  PROCESS --CONDITIONAL_ON--> INITFILE  (threshold RC=4, op=GT)
-                    provenance: SAMPLEJOB.jcl:8, extraction=DETERMINISTIC, confidence=1.000
+--- RELIC v1.1 (post-hoc fixes)
+  ...
+  diff: broken=0 modified=1 preserved=2
+  verdict: RISK — 1 contract(s) broken or weakened
 
-Step 3: Applying ALTER_ERROR_BRANCH mutation...
-  Original:  COND=(4,GT,INITFILE)   [static_support=1.000]
-  Mutated:   COND=(16,GT,INITFILE)  [static_support=0.700]
-
-Step 4: Running BCGDiff...
-  BROKEN contracts:    0
-  MODIFIED contracts:  1
-    CONTRACT: PROCESS --CONDITIONAL_ON--> INITFILE
-    ORIGINAL confidence:  1.000
-    MUTATED  confidence:  0.700
-    DELTA:                0.300  > threshold 0.050
-    RISK LEVEL:           HIGH (confidence-delta exceeded threshold)
-
-=== RISK DETECTED ===
-The ALTER_ERROR_BRANCH mutation weakened a CONTROL_FLOW contract.
-PROCESS will now execute even when INITFILE returns a soft error (RC 5–16).
-This mutation is invisible to structural dependency analysis.
+--- Independent oracle (jcl_oracle)
+  label: DIFFERENT  (differing scenarios: 2 of 19)
+    [INITFILE=2] execution: [('PROCESS', 'BYPASS', None), ('PROCESS', 'RUN', 0)]
 ```
 
 ---
 
 ## What This Shows
 
-- **Structural analysis** sees the same dependency graph in both versions
-  (PROCESS still follows INITFILE; both reference the same DATASET).
-  It would produce 0 risk items.
+- Under IBM COND semantics a step is *bypassed* when its test is true.
+  `COND=(4,GT,INITFILE)` bypasses PROCESS when INITFILE ends with RC < 4;
+  `COND=(2,GT,INITFILE)` only when RC < 2, so PROCESS now also runs after RC 2 or 3.
+  The oracle confirms the behaviour change.
+- **RELIC v1.0.0** (as released) misses it: its BCG diff compared contracts only by
+  (type, subject, predicate, object) and ignored the COND threshold. This is the
+  defect behind its 0% recall on COND-threshold changes in the benchmark.
+- **RELIC v1.1** compares guard parameters and reports the contract as weakened.
+  v1.1 was written after this defect was found, so its benchmark results are post hoc.
+  It reports only *weakened* guards: a change that makes a guard stricter (e.g.
+  `COND=(4,GT)` → `COND=(16,GT)`) also changes behaviour but is not reported.
 
-- **BCG with confidence-delta** detects the weakening because the
-  `static_support` of the CONTROL_FLOW contract dropped from 1.000 to 0.700.
-  The `BCGDiff.modified` list contains this contract; `RiskDetector` fires.
-
-This is the discriminating finding of the paper: confidence-delta detection
-catches behavioral weakening that structural analysis misses.
+There is no "confidence-delta" mechanism in this example. The earlier version of
+this quickstart showed one, but it came from a harness that edited RELIC's own
+contract graph by hand, and it is withdrawn.
 
 ---
 

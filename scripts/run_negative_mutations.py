@@ -1,4 +1,10 @@
 #!/usr/bin/env python3.11
+# ---------------------------------------------------------------------------
+# SUPERSEDED (October 2026). Legacy experiment kept for provenance only; it runs
+# RELIC in v1.0.0 mode (legacy_v1_0=True). Its results are not valid evidence:
+# see docs/remediation/PRE_REMEDIATION_AUDIT.md. Authoritative evaluation:
+# `make reproduce` (relic_eval/pipeline.py).
+# ---------------------------------------------------------------------------
 """
 Negative Mutation Benchmark — True Negative (TN) Set Generation.
 
@@ -110,8 +116,8 @@ def main() -> None:
     jcl_files = _discover_jcl_files()
     print(f"JCL files discovered: {len(jcl_files)}")
 
-    parser = JCLParser()
-    extractor = StaticContractExtractor()
+    parser = JCLParser(legacy_v1_0=True)
+    extractor = StaticContractExtractor(legacy_v1_0=True)
     builder = BCGBuilder()
     neg_engine = NegativeMutationEngine()
 
@@ -137,7 +143,7 @@ def main() -> None:
                     mutated_bcg, record = neg_engine.apply(original_bcg, op, seed=seed)
 
                     # Compute BCGDiff
-                    diff = original_bcg.diff(mutated_bcg)
+                    diff = original_bcg.diff(mutated_bcg, compare_parameters=False)
 
                     # For negative mutations: any broken/modified contracts = FP
                     # (semantics-preserving mutations must NEVER trigger risk detection)

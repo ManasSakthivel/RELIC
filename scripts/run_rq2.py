@@ -1,4 +1,10 @@
 #!/usr/bin/env python3.11
+# ---------------------------------------------------------------------------
+# SUPERSEDED (October 2026). Legacy experiment kept for provenance only; it runs
+# RELIC in v1.0.0 mode (legacy_v1_0=True). Its results are not valid evidence:
+# see docs/remediation/PRE_REMEDIATION_AUDIT.md. Authoritative evaluation:
+# `make reproduce` (relic_eval/pipeline.py).
+# ---------------------------------------------------------------------------
 """
 RQ2 Experiment — Modernization Risk Detection (v2 — with Baseline A comparison).
 
@@ -183,7 +189,7 @@ def _run_mutations_for_file(
             # the mutation is semantically N/A for the contract set.
             # This can happen when the mutation targeted a relation that was
             # a parse artifact (e.g. reflexive MUST_PRECEDE) later filtered.
-            _early_diff = bcg.diff(mutated_bcg)
+            _early_diff = bcg.diff(mutated_bcg, compare_parameters=False)
             if not _early_diff.broken and not _early_diff.modified:
                 rows.append({
                     "file": str(jcl_path.name),
@@ -380,11 +386,11 @@ def main() -> None:
         jcl_files = _discover_all_jcl()
     print(f"Found {len(jcl_files)} JCL files for RQ2 mutation benchmark")
 
-    parser = JCLParser()
-    extractor = StaticContractExtractor()
+    parser = JCLParser(legacy_v1_0=True)
+    extractor = StaticContractExtractor(legacy_v1_0=True)
     builder = BCGBuilder()
     engine = MutationEngine()
-    detector = RiskDetector()
+    detector = RiskDetector(legacy_v1_0=True)
     structural_analyzer = StructuralBaselineAnalyzer()
     complexity_baseline = ComplexityBaseline()
     static_bcg_baseline = StaticBCGBaseline()

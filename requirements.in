@@ -1,0 +1,8 @@
+# Direct dependencies of the evaluation pipeline, RELIC core and test suite.
+# requirements.lock pins the full resolved set (generated from this file).
+loguru>=0.7
+matplotlib>=3.8
+pyyaml>=6.0
+scipy>=1.11
+python-dotenv>=1.0
+pytest>=7.4

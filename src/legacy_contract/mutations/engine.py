@@ -1,5 +1,11 @@
 """
-Fault-Grounded Mutation Engine.
+Fault-Grounded Mutation Engine (LEGACY — BCG-level).
+
+REMEDIATION NOTE (October 2026): this engine edits RELIC's own Behavioral
+Contract Graph (it deletes or weakens contracts directly) and is therefore not a
+valid way to evaluate RELIC; the authoritative benchmark mutates JCL source
+(relic_eval/mutate.py). The "empirical grounding" sources cited below could not
+be verified (docs/failure_taxonomy.md). Kept for API compatibility and tests.
 
 Every mutation operator is derived from an empirically documented
 real-world modernization failure (see docs/failure_taxonomy.md).

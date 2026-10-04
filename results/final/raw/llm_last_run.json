@@ -1,0 +1,8 @@
+{
+  "api_calls_made": 1,
+  "api_key_present": true,
+  "errors": [],
+  "finished_utc": "2026-10-04T06:52:35Z",
+  "quota_note": "provider quota exhausted (HTTP 429 rate_limit_exceeded: provider asked to wait 6611s)",
+  "seconds": 1
+}

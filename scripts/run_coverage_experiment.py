@@ -1,4 +1,10 @@
 #!/usr/bin/env python3.11
+# ---------------------------------------------------------------------------
+# SUPERSEDED (October 2026). Legacy experiment kept for provenance only; it runs
+# RELIC in v1.0.0 mode (legacy_v1_0=True). Its results are not valid evidence:
+# see docs/remediation/PRE_REMEDIATION_AUDIT.md. Authoritative evaluation:
+# `make reproduce` (relic_eval/pipeline.py).
+# ---------------------------------------------------------------------------
 """
 Coverage Experiment — Dynamic Validation Rate vs. Execution Coverage.
 
@@ -128,8 +134,8 @@ def run_at_coverage(
     n_sample = max(1, int(len(all_traces) * coverage_fraction))
     sampled_traces = rng.sample(all_traces, n_sample)
 
-    parser = JCLParser()
-    extractor = StaticContractExtractor()
+    parser = JCLParser(legacy_v1_0=True)
+    extractor = StaticContractExtractor(legacy_v1_0=True)
     builder = BCGBuilder()
 
     total_contracts = 0

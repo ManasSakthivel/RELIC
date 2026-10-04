@@ -1,4 +1,10 @@
 #!/usr/bin/env python3.11
+# ---------------------------------------------------------------------------
+# SUPERSEDED (October 2026). Legacy experiment kept for provenance only; it runs
+# RELIC in v1.0.0 mode (legacy_v1_0=True). Its results are not valid evidence:
+# see docs/remediation/PRE_REMEDIATION_AUDIT.md. Authoritative evaluation:
+# `make reproduce` (relic_eval/pipeline.py).
+# ---------------------------------------------------------------------------
 """
 RQ1 — Independent Deterministic Oracle Evaluation.
 
@@ -229,8 +235,8 @@ def main() -> None:
     jcl_files = _discover_held_out_jcl()
     print(f"JCL files (held-out/test split): {len(jcl_files)}")
 
-    parser = JCLParser()
-    extractor = StaticContractExtractor()
+    parser = JCLParser(legacy_v1_0=True)
+    extractor = StaticContractExtractor(legacy_v1_0=True)
     builder = BCGBuilder()
 
     total_tp = 0
@@ -261,14 +267,22 @@ def main() -> None:
             fp = len(system_sigs - oracle_sigs)  # System extracted but oracle doesn't have
             fn = len(oracle_sigs - system_sigs)  # Oracle has but system missed
 
-            prec = tp / (tp + fp) if (tp + fp) > 0 else 1.0  # No FPs = precision 1.0
-            rec = tp / (tp + fn) if (tp + fn) > 0 else 0.0
-            f1 = 2 * prec * rec / (prec + rec) if (prec + rec) > 0 else 0.0
+            # Remediation fix (Oct 2026): a file with no oracle and no system
+            # contracts (single-step job) has undefined P/R/F1 (0/0). v1 scored
+            # it F1 = 0, which produced macro-F1 = 0.5455 next to micro-F1 = 1.0.
+            # Such files are now excluded from the macro average and counted.
+            vacuous = (tp + fp + fn) == 0
+            prec = tp / (tp + fp) if (tp + fp) > 0 else None
+            rec = tp / (tp + fn) if (tp + fn) > 0 else None
+            f1 = (2 * prec * rec / (prec + rec)
+                  if prec is not None and rec is not None and (prec + rec) > 0
+                  else (None if vacuous else 0.0))
 
             total_tp += tp
             total_fp += fp
             total_fn += fn
-            f1_scores.append(f1)
+            if f1 is not None:
+                f1_scores.append(f1)
 
             per_file.append({
                 "file": jcl_path.name,
@@ -276,9 +290,10 @@ def main() -> None:
                 "oracle_contracts": len(oracle_contracts),
                 "system_contracts": len(system_contracts),
                 "tp": tp, "fp": fp, "fn": fn,
-                "precision": round(prec, 4),
-                "recall": round(rec, 4),
-                "f1": round(f1, 4),
+                "precision": None if prec is None else round(prec, 4),
+                "recall": None if rec is None else round(rec, 4),
+                "f1": None if f1 is None else round(f1, 4),
+                "vacuous_no_contracts": vacuous,
                 "oracle_only": sorted([f"{a}→{b}" for a, _, b in (oracle_sigs - system_sigs)]),
                 "system_only": sorted([f"{a}→{b}" for a, _, b in (system_sigs - oracle_sigs)]),
             })
@@ -326,6 +341,8 @@ def main() -> None:
         "micro_recall": round(micro_rec, 4),
         "micro_f1": round(micro_f1, 4),
         "macro_f1": round(macro_f1, 4),
+        "macro_f1_n_files": len(f1_scores),
+        "n_vacuous_files_excluded_from_macro": sum(1 for p in per_file if p.get("vacuous_no_contracts")),
         "f1_ci_lower": round(f1_ci_lo, 4),
         "f1_ci_upper": round(f1_ci_hi, 4),
         "bootstrap_n": 10000,

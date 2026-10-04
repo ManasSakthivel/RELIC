@@ -1,0 +1,24 @@
+{
+  "git_commit": "024a3f28e84f65382ad2673a2c317a89b3b63c19",
+  "git_dirty": true,
+  "negative_operators": [
+    "INSERT_COMMENT",
+    "CHANGE_MSGCLASS"
+  ],
+  "operators": [
+    "SWAP_ADJACENT_STEPS",
+    "SPLIT_JOB",
+    "DELETE_PRODUCER_STEP",
+    "RENAME_OUTPUT_DATASET",
+    "MOVE_CONSUMER_BEFORE_PRODUCER",
+    "REMOVE_COND",
+    "ALTER_COND_THRESHOLD",
+    "REMOVE_IF_GUARD",
+    "INSERT_COMMENT",
+    "CHANGE_MSGCLASS"
+  ],
+  "platform": "macOS-26.7-arm64-arm-64bit",
+  "python": "3.11.16",
+  "subjects": "all",
+  "timestamp_utc": "2026-10-04T06:37:43+00:00"
+}

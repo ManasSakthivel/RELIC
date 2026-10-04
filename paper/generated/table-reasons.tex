@@ -1,0 +1,10 @@
+\begin{tabular}{lrrrr}
+\toprule
+Status / reason & CardDemo & OMP course & GenApp & All \\
+\midrule
+INVALID\_MUTATION & renamed DSN exceeds JCL length limits & 3 & 0 & 0 & 3 \\
+INVALID\_MUTATION & split point inside IF/THEN/ELSE & 0 & 23 & 0 & 23 \\
+OUT\_OF\_SCOPE & IF/THEN/ELSE/ENDIF is outside RELIC's declared parser scope (jcl\_parser.py: 'noted but not deeply parsed') & 0 & 23 & 0 & 23 \\
+OUT\_OF\_SCOPE & no consumer of this dataset inside the analysed JCL file (cross-file effect only) & 38 & 3 & 0 & 41 \\
+\bottomrule
+\end{tabular}
