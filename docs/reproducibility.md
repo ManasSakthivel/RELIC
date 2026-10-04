@@ -17,7 +17,7 @@
 | Command | What it does | Time |
 |---|---|---|
 | `make test` | full test suite (RELIC unit/integration, oracle semantics, evaluation, regression, results integrity) | seconds |
-| `make reproduce` | generates all mutants, labels them with the oracle, runs every detector, writes raw records, manifest, metrics, tables, LaTeX tables, figures and generated doc blocks, then runs `make check` | ~5 min |
+| `make reproduce` | generates all mutants, labels them with the oracle, runs every detector, writes raw records, manifest, metrics, tables, LaTeX tables, figures and generated doc blocks, then runs `make check` | 5–25 min |
 | `make metrics` | recomputes metrics, tables, figures and doc blocks from the committed raw records only | ~1 s |
 | `make check` | fails if any reported number disagrees with the raw records, or active docs contain withdrawn numbers | ~2 s |
 | `make llm-baselines` | queries the model for every EVALUABLE mutant not yet in the cache (seeded random order; stops cleanly when the provider quota is exhausted) and recomputes metrics | API-bound (hours on a free-tier key) |

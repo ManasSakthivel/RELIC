@@ -176,7 +176,7 @@ Requires Python ≥ 3.11 (macOS or Linux). No mainframe, GnuCOBOL or API key nee
 git clone https://github.com/ManasSakthivel/RELIC.git && cd RELIC
 make setup        # .venv + pinned dependencies (requirements.lock)
 make test         # full test suite
-make reproduce    # mutants → oracle → detectors → metrics → tables → figures → docs (~5 min)
+make reproduce    # mutants → oracle → detectors → metrics → tables → figures → docs (5–25 min)
 make check        # verifies every reported number against the raw records
 ```
 
