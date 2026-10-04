@@ -339,7 +339,19 @@ LLM results:
 
 ## 13. Reproducibility
 
-CLEAN_RUN_PENDING
+**Clean reproduction (fresh clone, fresh virtual environment, no API key).**
+
+| | |
+|---|---|
+| Source | `git clone --branch relic/final-research-remediation` of the repository at commit `1cbcf06` |
+| Environment | macOS 26.7, Darwin arm64, CPython 3.11.16 (uv-managed), new `.venv` from `requirements.lock`; `GROQ_API_KEY` unset |
+| Commands | `make setup PY_BOOT=<python3.11>`, `make test`, `make reproduce`, `make check` |
+| Time | 2026-10-04 06:53:52Z → 06:58:52Z: 300 s in total, of which `make reproduce` took 289 s |
+| Exit status | setup 0, test 0 (391 passed), reproduce: every stage ran, but its final `make check` failed; check failed |
+| Cause of the failure | one sentence in this report quoted the legacy test count without marking it legacy (a documentation issue, found by the stale-number scan). It was reworded in the follow-up commit; no code or result changed |
+| Regenerated artifacts | every file under `results/final/` (raw records, LLM records and status, manifest, metrics, tables), `results/legacy/`, `paper/generated/`, `figures/final/`, `docs/assets/relic-results.svg` and all generated documentation blocks were **byte-identical** to the committed versions; the only changed file was `results/final/run_info.json` (commit hash, dirty flag, timestamp) |
+
+REPEAT_RUN_PENDING
 
 **Determinism.** Two complete benchmark runs with different `PYTHONHASHSEED`
 values produced byte-identical `evaluation_records.jsonl`,
@@ -357,7 +369,7 @@ re-scores exactly the committed answers.
 |---:|---:|---:|---:|---:|
 | 391 | 391 | 0 | 0 | 0 |
 
-The suite was 305 tests before the remediation. Added: oracle independence,
+The legacy (pre-remediation) suite had 305 tests. Added: oracle independence,
 semantics and determinism (`tests/oracle/`); mutation, metric, blindness,
 results-integrity, generated-block and LLM-protocol tests (`tests/evaluation/`);
 regression tests for the v1.1 fixes (`tests/remediation/`).
