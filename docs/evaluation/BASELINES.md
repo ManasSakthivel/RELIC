@@ -11,7 +11,7 @@ nothing else (`relic_eval/detectors.py`, `relic_eval/llm_baselines.py`).
 | `structural_A` | Baseline A: structural dependency graph (CALLS, PRODUCES, CONSUMES, MUST_PRECEDE, …) edge removal | v1.0 | |
 | `complexity_B` | Baseline B: weighted complexity score of the mutated file > 0.5 | v1.0 | change-agnostic by design; see corrections |
 | `textdiff` | flags any difference outside comment statements and columns 73–80 | none | new trivial reference that calibrates benchmark difficulty |
-| `llm_C` | Baseline C: LLM sees ORIGINAL and MODIFIED JCL | — | Groq `openai/gpt-oss-120b`; see protocol below |
+| `llm_C` | Baseline C: LLM sees ORIGINAL and MODIFIED JCL | — | nvidia `openai/gpt-oss-20b`; see protocol below |
 | `llm_D` | Baseline D: as C plus an automatically extracted dependency summary of both versions | IBM-conformant (v1.1) | same model; see protocol below |
 
 ## Corrections to legacy baselines
@@ -45,11 +45,11 @@ The reported F1 values measure rate limiting, not model capability, and are
 
 ## LLM baselines — corrected protocol
 
-`python -m relic_eval.llm_baselines` (Makefile: `make llm-baselines`; needs `GROQ_API_KEY`).
+`python -m relic_eval.llm_baselines` (Makefile: `make llm-baselines`; needs an API key for the configured provider — see `relic_eval/llm_baselines.py` for supported providers and environment variable names).
 
 | | Baseline C (LLM-only) | Baseline D (dependency + LLM) |
 |---|---|---|
-| Model | Groq `openai/gpt-oss-120b` (the legacy model `llama-3.3-70b-versatile` is no longer served) | same |
+| Model | nvidia `openai/gpt-oss-20b` (accessed via the nvidia API; the legacy model `llama-3.3-70b-versatile` is no longer served) | same |
 | Decoding | temperature 0, seed 42, `reasoning_effort` low, max_tokens 1024 (reasoning tokens count against it), one sample | same |
 | Prompt (`source_diff_v4`) | full ORIGINAL and MODIFIED JCL; a definition of behaviour that matches the oracle's observables (which steps run, incl. after non-zero RC or abend; order; dataset create/read/write/delete; final dataset state; comments, formatting and MSGCLASS are not behaviour); JSON answer `{behavior_changed, confidence, reason}` | as C, plus a dependency summary of both versions (steps, programs, COND, datasets created/used, step order) extracted by RELIC's parser in IBM-conformant mode |
 | Not in the prompt | operator name, mutation site, intent, label, file path, oracle output | same |

@@ -11,6 +11,10 @@ execution-semantics evaluation.
 
 ---
 
+**Quick navigation** — [Problem](#1-what-relic-is-and-the-problem-it-addresses) · [Method](#3-how-it-works) · [Results](#5-results) · [Baselines](#6-baselines) · [Limitations](#7-limitations) · [Reproduce](#8-reproducing) · [Repository map](#9-repository-layout) · [Benchmark](docs/evaluation/BENCHMARK.md) · [Oracle](docs/evaluation/ORACLE_SPECIFICATION.md) · [Full results](docs/evaluation/RESULTS.md) · [Reproducibility](docs/reproducibility.md) · [Limitations detail](docs/limitations.md) · [Audit](docs/remediation/PRE_REMEDIATION_AUDIT.md)
+
+---
+
 ## 1. What RELIC is and the problem it addresses
 
 Mainframe batch systems encode behavioral rules in JCL that are never written down
@@ -54,6 +58,15 @@ reconciliation component; it has not been validated with real execution evidence
   <img src="docs/assets/relic-architecture.svg" alt="RELIC architecture" width="680"/>
 </p>
 
+The architecture SVG shows the full codebase. The **evaluated path** is strictly the static
+JCL analysis path (parser → extractor → BCG → diff → risk detector); COBOL parsers, dynamic
+evidence, and the UI are present in the codebase but not part of the reported evaluation.
+[Details in docs/architecture.md](docs/architecture.md).
+
+<p align="center">
+  <img src="docs/assets/relic-workflow.svg" alt="RELIC evaluation pipeline" width="720"/>
+</p>
+
 ## 4. What was evaluated
 
 * **Subjects (multi-subject evaluation, not third-party external validation):**
@@ -86,7 +99,7 @@ reconciliation component; it has not been validated with real execution evidence
 - **Reference detector** that flags any non-comment text change: F1 0.943 (specificity 0.492); RELIC v1.0.0 − reference F1 difference 95% CI [-0.07, 0.02].
 - **Structural baseline A:** F1 0.896.
 - **All three subjects pooled:** RELIC v1.0.0 F1 0.905 (n = 566).
-- **LLM baselines** (`openai/gpt-oss-120b`; scored only where both LLM baselines answered — 39 of 566 evaluable mutants (6.9%), all subjects): LLM-only F1 0.898 (P 0.957, R 0.846, specificity 0.923); dependency + LLM F1 0.980 (P 1.000, R 0.962, specificity 1.000); RELIC v1.0.0 on the same mutants F1 0.894 (RELIC v1.0.0 − LLM-only F1 difference 95% CI [-0.30, 0.15]; − dependency + LLM [-0.30, 0.00]). Coverage is limited by the provider quota of the API key used; the answered mutants are the first ones of a seeded random order, i.e. a random subsample. The earlier F1 0.0377 / 0.1091 figures were artifacts of rate-limited calls scored as negatives and are withdrawn.
+- **LLM baselines** (`openai/gpt-oss-20b`; scored only where both LLM baselines answered — 383 of 566 evaluable mutants (67.7%), all subjects): LLM-only F1 0.985 (P 1.000, R 0.970, specificity 1.000); dependency + LLM F1 0.967 (P 0.993, R 0.943, specificity 0.977); RELIC v1.0.0 on the same mutants F1 0.908 (RELIC v1.0.0 − LLM-only F1 difference 95% CI [-0.14, -0.03]; − dependency + LLM [-0.12, -0.01]). Coverage is limited by the provider quota of the API key used; the answered mutants are the first ones of a seeded random order, i.e. a random subsample. The earlier F1 0.0377 / 0.1091 figures were artifacts of rate-limited calls scored as negatives and are withdrawn.
 <!-- END GENERATED:results-summary -->
 
 <!-- BEGIN GENERATED:table-main-carddemo -->
@@ -135,7 +148,7 @@ Structural (A) and complexity (B) baselines and the static BCG baseline (E) are
 evaluated. Two defects of the old baselines were corrected (Baseline B was given
 the mutation's location and could never fire).
 
-The LLM baselines were re-implemented and run with Groq `openai/gpt-oss-120b`.
+The LLM baselines were re-implemented and run with nvidia `openai/gpt-oss-20b`.
 Baseline C sees the original and modified JCL. Baseline D sees the same plus an
 extracted dependency summary. Neither prompt contains the operator, the site or
 the label. Failed or unparseable calls are excluded, never scored, and every
@@ -186,18 +199,30 @@ Outputs: `results/final/` (raw records, manifest, metrics, tables),
 
 ## 9. Repository layout
 
-```
-src/legacy_contract/  RELIC (parser, extractor, BCG, diff, risk detector, reconciliation)
-jcl_oracle/           independent JCL execution-semantics oracle (ground truth)
-relic_eval/           authoritative evaluation pipeline (mutants, detectors, metrics, reports)
-baselines/            baselines A, B, E (+ legacy LLM baselines C, D)
-datasets/             CardDemo, OMP COBOL course, GenApp (with licenses / provenance)
-results/final/        current results;  results/legacy/, results/rq*/  pre-remediation results
-docs/evaluation/      benchmark, oracle, baselines, results
-docs/remediation/     audit, bibliography verification
-paper/                manuscript (paper.md / paper.tex) and generated tables
-tests/                unit, integration, oracle, evaluation and regression tests
-```
+| Path | Contents | Authoritative? |
+|---|---|---|
+| `src/legacy_contract/` | RELIC source: JCL parser, contract extractor, BCG, diff, risk detector, reconciliation | ✓ implementation |
+| `jcl_oracle/` | Independent JCL execution-semantics oracle (ground truth; shares no code with RELIC) | ✓ oracle |
+| `relic_eval/` | Evaluation pipeline: mutant generation, detectors, metrics, figures, report generation, consistency check | ✓ evaluation |
+| `baselines/` | Baselines A (structural edge diff), B (complexity), E (static BCG), legacy C/D (LLM) | ✓ baselines |
+| `datasets/` | CardDemo, OMP COBOL course, GenApp — JCL source files with licenses and provenance notes | ✓ benchmark inputs |
+| `results/final/` | **Authoritative results**: raw records (JSONL), manifest (CSV), `metrics.json`, tables, figures | ✓ **current results** |
+| `results/final/raw/` | `evaluation_records.jsonl` (one record per mutant), `llm_records.jsonl`, `llm_cache/` (request/response cache) | ✓ raw evidence |
+| `results/legacy/`, `results/rq*/` | Pre-remediation results — withdrawn, kept for provenance | historical |
+| `docs/evaluation/` | [BENCHMARK.md](docs/evaluation/BENCHMARK.md), [ORACLE_SPECIFICATION.md](docs/evaluation/ORACLE_SPECIFICATION.md), [BASELINES.md](docs/evaluation/BASELINES.md), [RESULTS.md](docs/evaluation/RESULTS.md) | ✓ methodology |
+| `docs/limitations.md` | All 14 documented limitations with evidence and next steps | ✓ |
+| `docs/reproducibility.md` | Setup, commands, output paths, determinism | ✓ |
+| `docs/remediation/` | Pre-remediation audit; bibliography verification | ✓ provenance |
+| `docs/archive/` | Superseded reports from before the remediation (clearly labelled) | historical |
+| `figures/final/` | SVG figures generated by `relic_eval/figures.py` from `metrics.json` | generated |
+| `paper/` | Manuscript (`paper.md` / `paper.tex`) maintained separately; `paper/generated/` has LaTeX tables | generated |
+| `tests/` | 391 passing tests: unit, integration, oracle semantics, evaluation pipeline, regression, results integrity | ✓ |
+| `config/` | Evaluation configuration | ✓ |
+
+Files inside `<!-- BEGIN GENERATED:… -->` / `<!-- END GENERATED:… -->` blocks in the README,
+`docs/evaluation/RESULTS.md`, `docs/FINAL_RESEARCH_READINESS_REPORT.md`, and `results/README.md`
+are written by `python -m relic_eval.pipeline --skip-benchmark` and verified by `make check`.
+Do not edit them by hand.
 
 ## Citation
 

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+
+  <!-- Background -->
+  <rect width="760" height="520" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="380" y="30" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">RELIC — Evaluation Pipeline</text>
+
+  <!-- PHASE 1: Benchmark Inputs -->
+  <text x="20" y="62" font-size="11" font-weight="600" fill="#57606a">1 · Subject JCL corpora</text>
+
+  <rect x="20" y="70" width="145" height="38" rx="5" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="92" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">AWS CardDemo</text>
+  <text x="92" y="101" text-anchor="middle" font-size="10" fill="#3b82f6">55 files · primary</text>
+
+  <rect x="175" y="70" width="145" height="38" rx="5" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="247" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">OMP COBOL Course</text>
+  <text x="247" y="101" text-anchor="middle" font-size="10" fill="#3b82f6">37 files</text>
+
+  <rect x="330" y="70" width="145" height="38" rx="5" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="402" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#1e40af">IBM CICS GenApp</text>
+  <text x="402" y="101" text-anchor="middle" font-size="10" fill="#3b82f6">29 files</text>
+
+  <!-- Arrow down from subjects to mutant gen -->
+  <line x1="247" y1="108" x2="247" y2="148" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PHASE 2: Mutant generation -->
+  <text x="20" y="138" font-size="11" font-weight="600" fill="#57606a">2 · Source-level mutation   (relic_eval/mutate.py)</text>
+  <rect x="20" y="148" width="455" height="44" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+  <text x="247" y="167" text-anchor="middle" font-size="11" font-weight="600" fill="#14532d">10 mutation operators × every applicable site</text>
+  <text x="247" y="183" text-anchor="middle" font-size="10" fill="#15803d">SWAP_ADJACENT_STEPS · SPLIT_JOB · DELETE_PRODUCER · RENAME_DATASET · MOVE_CONSUMER · REMOVE_COND · ALTER_THRESHOLD · REMOVE_IF_GUARD · INSERT_COMMENT · CHANGE_MSGCLASS</text>
+
+  <!-- Arrow down -->
+  <line x1="247" y1="192" x2="247" y2="232" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PHASE 3: Candidate accounting -->
+  <text x="20" y="222" font-size="11" font-weight="600" fill="#57606a">3 · Candidate accounting</text>
+  <rect x="20" y="232" width="455" height="38" rx="5" fill="#fef9c3" stroke="#fde047" stroke-width="1.2"/>
+  <text x="247" y="249" text-anchor="middle" font-size="11" font-weight="600" fill="#713f12">656 candidates total</text>
+  <text x="247" y="263" text-anchor="middle" font-size="10" fill="#92400e">566 EVALUABLE (86.3%) · 64 OUT_OF_SCOPE · 26 INVALID_MUTATION</text>
+
+  <!-- Arrow to oracle -->
+  <line x1="247" y1="270" x2="247" y2="308" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Oracle box — separate from RELIC, highlighted -->
+  <text x="20" y="298" font-size="11" font-weight="600" fill="#57606a">4 · Ground truth  (jcl_oracle/ — no shared code with RELIC)</text>
+  <rect x="20" y="308" width="455" height="44" rx="5" fill="#ede9fe" stroke="#a78bfa" stroke-width="1.8"/>
+  <text x="247" y="327" text-anchor="middle" font-size="11" font-weight="600" fill="#4c1d95">JCL execution-semantics oracle</text>
+  <text x="247" y="343" text-anchor="middle" font-size="10" fill="#6d28d9">simulates both versions under RC + abend scenarios → DIFFERENT (violation) / EQUIVALENT (no violation)</text>
+
+  <!-- Arrow down to detectors -->
+  <line x1="247" y1="352" x2="247" y2="390" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PHASE 5: Detectors -->
+  <text x="20" y="380" font-size="11" font-weight="600" fill="#57606a">5 · Detectors (all blind: no operator, no site, no oracle output)</text>
+
+  <!-- Detector boxes -->
+  <rect x="20"  y="390" width="115" height="42" rx="4" fill="#ffe4e6" stroke="#fca5a5" stroke-width="1.2"/>
+  <text x="77"  y="407" text-anchor="middle" font-size="10" font-weight="700" fill="#881337">RELIC v1.0.0</text>
+  <text x="77"  y="423" text-anchor="middle" font-size="9"  fill="#9f1239">primary · blind</text>
+
+  <rect x="145" y="390" width="115" height="42" rx="4" fill="#fff7ed" stroke="#fdba74" stroke-width="1.2"/>
+  <text x="202" y="407" text-anchor="middle" font-size="10" font-weight="600" fill="#7c2d12">RELIC v1.1</text>
+  <text x="202" y="423" text-anchor="middle" font-size="9"  fill="#9a3412">post-hoc fixes</text>
+
+  <rect x="270" y="390" width="105" height="42" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+  <text x="322" y="407" text-anchor="middle" font-size="10" font-weight="600" fill="#14532d">Baseline A</text>
+  <text x="322" y="423" text-anchor="middle" font-size="9"  fill="#15803d">structural diff</text>
+
+  <rect x="385" y="390" width="90" height="42" rx="4" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2"/>
+  <text x="430" y="407" text-anchor="middle" font-size="10" font-weight="600" fill="#14532d">Baseline B</text>
+  <text x="430" y="423" text-anchor="middle" font-size="9"  fill="#15803d">complexity</text>
+
+  <!-- LLM note on right -->
+  <rect x="510" y="390" width="230" height="42" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="625" y="407" text-anchor="middle" font-size="10" font-weight="600" fill="#334155">LLM baselines C / D</text>
+  <text x="625" y="423" text-anchor="middle" font-size="9"  fill="#475569">383 of 566 answered (67.7%)</text>
+
+  <!-- Arrow down to metrics -->
+  <line x1="247" y1="432" x2="247" y2="466" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PHASE 6: Metrics -->
+  <text x="20" y="456" font-size="11" font-weight="600" fill="#57606a">6 · Metrics &amp; reporting  (relic_eval/metrics.py · report.py · make check)</text>
+  <rect x="20" y="466" width="455" height="38" rx="5" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="247" y="482" text-anchor="middle" font-size="10" font-weight="600" fill="#1f2328">results/final/metrics.json → tables · figures · generated doc blocks</text>
+  <text x="247" y="497" text-anchor="middle" font-size="9"  fill="#57606a">make check verifies all reported numbers · make reproduce regenerates from source</text>
+
+  <!-- Baseline E inside detectors area - add note -->
+  <text x="490" y="370" font-size="9" fill="#57606a" font-style="italic">Baseline E (static BCG) = RELIC v1.0.0 on this benchmark</text>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+</svg>
