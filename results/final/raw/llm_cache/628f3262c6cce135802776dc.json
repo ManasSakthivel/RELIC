@@ -1,0 +1,14 @@
+{
+ "provider": "groq",
+ "model": "openai/gpt-oss-120b",
+ "prompt_version": "source_diff_v4",
+ "decoding": {
+  "temperature": 0,
+  "max_tokens": 1024,
+  "reasoning_effort": "low",
+  "seed": 42
+ },
+ "prompt": "Below are two versions of the same JCL job: ORIGINAL and MODIFIED.\n\nDecide whether the MODIFIED version can behave differently from the ORIGINAL when it is\nexecuted. Behaviour means: which steps run (including when a step ends with a non-zero\nreturn code or abends), the order in which steps run, which datasets each step creates,\nreads, writes or deletes, which data a step reads, and the final state of the datasets.\nComments, formatting and job output-class (MSGCLASS) changes are not behaviour.\n\nAnswer with exactly one JSON object:\n{\"behavior_changed\": true or false, \"confidence\": number between 0 and 1, \"reason\": \"one sentence\"}\n\nORIGINAL:\n```\n//DEPTPAYJ JOB 1,NOTIFY=&SYSUID\n//COPY2DS1 EXEC PGM=IKJEFT01\n//INUNIX DD PATHOPTS=(ORDONLY),\n// PATH='/z/z99998/cobolcheck/CC##99.CBL'\n//OUTMVS DD DSN=Z99998.CBL(DEPTPAY),DISP=SHR\n//SYSTSPRT DD SYSOUT=*\n//SYSTSIN DD *\n OCOPY IND(INUNIX) OUTDD(OUTMVS) TEXT CONVERT(YES) PATHOPTS(USE)\n/*\n//COBRUN  EXEC IGYWCL\n//COBOL.SYSIN  DD DSN=Z99998.CBL(DEPTPAY),DISP=SHR\n//LKED.SYSLMOD DD DSN=Z99998.LOAD(DEPTPAY),DISP=SHR\n//RUN     EXEC PGM=DEPTPAY\n//STEPLIB   DD DSN=Z99998.LOAD,DISP=SHR\n```\n\nMODIFIED:\n```\n//DEPTPAYJ JOB 1,NOTIFY=&SYSUID\n//COBRUN  EXEC IGYWCL\n//COBOL.SYSIN  DD DSN=Z99998.CBL(DEPTPAY),DISP=SHR\n//LKED.SYSLMOD DD DSN=Z99998.LOAD(DEPTPAY),DISP=SHR\n//COPY2DS1 EXEC PGM=IKJEFT01\n//INUNIX DD PATHOPTS=(ORDONLY),\n// PATH='/z/z99998/cobolcheck/CC##99.CBL'\n//OUTMVS DD DSN=Z99998.CBL(DEPTPAY),DISP=SHR\n//SYSTSPRT DD SYSOUT=*\n//SYSTSIN DD *\n OCOPY IND(INUNIX) OUTDD(OUTMVS) TEXT CONVERT(YES) PATHOPTS(USE)\n/*\n//RUN     EXEC PGM=DEPTPAY\n//STEPLIB   DD DSN=Z99998.LOAD,DISP=SHR\n```\n\nDEPENDENCY SUMMARY (extracted automatically from each version):\nORIGINAL:\n- step COPY2DS1: runs IKJEFT01; uses Z99998.CBL(DEPTPAY)\n- step COBRUN: runs IGYWCL\n- step RUN: runs DEPTPAY; uses Z99998.LOAD\n- order: COPY2DS1<COBRUN, COBRUN<RUN\nMODIFIED:\n- step COBRUN: runs IGYWCL\n- step COPY2DS1: runs IKJEFT01; uses Z99998.CBL(DEPTPAY)\n- step RUN: runs DEPTPAY; uses Z99998.LOAD\n- order: COBRUN<COPY2DS1, COPY2DS1<RUN\n",
+ "response": "{\n  \"behavior_changed\": true,\n  \"confidence\": 0.97,\n  \"reason\": \"The step order was altered so the source copy may occur after the compile step, potentially changing the data used.\"\n}",
+ "error": ""
+}

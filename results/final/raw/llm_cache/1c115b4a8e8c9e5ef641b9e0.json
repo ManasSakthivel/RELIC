@@ -1,0 +1,13 @@
+{
+ "provider": "nvidia",
+ "model": "openai/gpt-oss-20b",
+ "prompt_version": "source_diff_v4",
+ "decoding": {
+  "temperature": 0,
+  "max_tokens": 1024,
+  "seed": 42
+ },
+ "prompt": "Below are two versions of the same JCL job: ORIGINAL and MODIFIED.\n\nDecide whether the MODIFIED version can behave differently from the ORIGINAL when it is\nexecuted. Behaviour means: which steps run (including when a step ends with a non-zero\nreturn code or abends), the order in which steps run, which datasets each step creates,\nreads, writes or deletes, which data a step reads, and the final state of the datasets.\nComments, formatting and job output-class (MSGCLASS) changes are not behaviour.\n\nAnswer with exactly one JSON object:\n{\"behavior_changed\": true or false, \"confidence\": number between 0 and 1, \"reason\": \"one sentence\"}\n\nORIGINAL:\n```\n//CBL006AJ JOB 1,NOTIFY=&SYSUID\n//***************************************************/\n//* Copyright Contributors to the COBOL Programming Course\n//* SPDX-License-Identifier: CC-BY-4.0\n//***************************************************/\n//COBRUN  EXEC IGYWCL\n//COBOL.SYSIN  DD DSN=&SYSUID..CBL(CBL006A),DISP=SHR\n//LKED.SYSLMOD DD DSN=&SYSUID..LOAD(CBL006A),DISP=SHR\n//***************************************************/\n// IF RC = 0 THEN\n//***************************************************/\n//RUN     EXEC PGM=CBL006A\n//STEPLIB   DD DSN=&SYSUID..LOAD,DISP=SHR\n//ACCTREC   DD DSN=&SYSUID..DATA,DISP=SHR\n//PRTLINE   DD SYSOUT=*,OUTLIM=15000\n//SYSOUT    DD SYSOUT=*,OUTLIM=15000\n//CEEDUMP   DD DUMMY\n//SYSUDUMP  DD DUMMY\n//***************************************************/\n// ELSE\n// ENDIF\n```\n\nMODIFIED:\n```\n//CBL006AJ JOB 1,NOTIFY=&SYSUID\n//***************************************************/\n//* Copyright Contributors to the COBOL Programming Course\n//* SPDX-License-Identifier: CC-BY-4.0\n//***************************************************/\n//COBRUN  EXEC IGYWCL\n//COBOL.SYSIN  DD DSN=&SYSUID..CBL(CBL006A),DISP=SHR\n//LKED.SYSLMOD DD DSN=&SYSUID..LOAD(CBL006A),DISP=SHR\n//***************************************************/\n// IF RC = 0 THEN\n//***************************************************/\n//* MIGRATION REVIEW: STEP ORDER VERIFIED\n//RUN     EXEC PGM=CBL006A\n//STEPLIB   DD DSN=&SYSUID..LOAD,DISP=SHR\n//ACCTREC   DD DSN=&SYSUID..DATA,DISP=SHR\n//PRTLINE   DD SYSOUT=*,OUTLIM=15000\n//SYSOUT    DD SYSOUT=*,OUTLIM=15000\n//CEEDUMP   DD DUMMY\n//SYSUDUMP  DD DUMMY\n//***************************************************/\n// ELSE\n// ENDIF\n```\n",
+ "response": "{\"behavior_changed\": false, \"confidence\": 0.99, \"reason\":\"The only change is a comment line, which does not affect execution.\"}",
+ "error": ""
+}
