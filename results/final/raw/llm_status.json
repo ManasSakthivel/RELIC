@@ -1,27 +1,26 @@
 {
   "decoding": {
     "max_tokens": 1024,
-    "reasoning_effort": "low",
     "seed": 42,
     "temperature": 0
   },
-  "model": "openai/gpt-oss-120b",
+  "model": "openai/gpt-oss-20b",
   "n_population": 566,
-  "n_scored_both": 39,
+  "n_scored_both": 383,
   "order_seed": 20261004,
   "overall": "PARTIAL",
   "population": "EVALUABLE mutants of all subjects",
   "prompt_version": "source_diff_v4",
-  "provider": "groq",
+  "provider": "nvidia",
   "samples_per_prompt": 1,
   "status_counts": {
     "llm_C": {
-      "NOT_RUN": 527,
-      "OK": 39
+      "INVALID_OUTPUT": 148,
+      "OK": 418
     },
     "llm_D": {
-      "NOT_RUN": 527,
-      "OK": 39
+      "INVALID_OUTPUT": 103,
+      "OK": 463
     }
   }
 }
