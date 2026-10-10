@@ -7,9 +7,9 @@
   `uv venv --python 3.11 && uv pip install -r requirements.lock`.
 - Not needed: z/OS, GnuCOBOL, Docker, network access, API keys. `make reproduce`
   re-scores the LLM baselines from the committed request/response cache
-  (`results/final/raw/llm_cache/`). Re-querying the model needs `GROQ_API_KEY`
-  (or another provider, see `relic_eval/llm_baselines.py`); pass it through the
-  environment only, never in a file.
+  (`results/final/raw/llm_cache/`). Re-querying the model needs an API key for
+  the configured provider (see `relic_eval/llm_baselines.py` for the expected
+  environment variable); pass it through the environment only, never in a file.
 - If no Python >= 3.11 is on PATH, `make setup` uses one managed by `uv`, or set
   `PY_BOOT=/path/to/python3.11`.
 

@@ -1,11 +1,24 @@
-# Architecture Documentation
+# Architecture
+
+> **Note.** The diagram below shows the full RELIC codebase structure.
+> The **evaluated system** is strictly the JCL-only static analysis path:
+> `JCL text → JCL Parser → IR → Contract Extractor → BCG → BCGDiff → Risk Detector`.
+> COBOL and copybook parsers exist in the codebase but are not part of the evaluated pipeline.
+> The dynamic-evidence reconciliation component is also present but has not been validated
+> with real execution evidence (see [limitations.md](limitations.md) §L11).
+> The UI, Neo4j storage, and restoration components are exploratory scaffolding.
+
 ## RELIC — System Architecture
 
 ---
 
 ## SYSTEM OVERVIEW
 
-RELIC is a modular research platform investigating whether execution-grounded behavioral contracts improve modernization-risk detection for legacy batch systems.
+RELIC is a research prototype that extracts behavioral contracts from JCL and detects
+whether a changed job still satisfies them. The implemented and evaluated path is
+static analysis only: JCL text in, a risk report out. The codebase also contains
+COBOL parsing, dynamic evidence reconciliation, and a UI — these are not part of the
+reported evaluation.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -170,15 +183,22 @@ BCG with Γ updated (ValidationState per contract)
 
 ## STORAGE ARCHITECTURE
 
-Development: SQLite database `bcg_store.db`  
-Production-scale: Neo4j graph database  
+> **Caveat.** The storage layer is exploratory scaffolding and is not exercised by the
+> evaluation pipeline or tests. The evaluation stores results as JSONL/JSON flat files
+> in `results/final/raw/`.
+
+Development: SQLite database `bcg_store.db`
+Production-scale: Neo4j graph database
 Adapter pattern: `BCGStorage` abstract class with `SQLiteBCGStorage` and `Neo4jBCGStorage`
 
 Schema defined in `src/bcg/schema.sql` and `src/bcg/schema_neo4j.cypher`
 
 ---
 
-## PRELIMINARY UI ARCHITECTURE
+## UI (EXPLORATORY)
+
+> **Caveat.** The UI is exploratory scaffolding. It is not part of the evaluated system
+> and has not been described in the reported results.
 
 **Stack:** React + TypeScript + D3.js (graph) + Vite (build)
 

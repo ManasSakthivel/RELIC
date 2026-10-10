@@ -26,7 +26,7 @@ edit as a detected regression. The evaluation was rebuilt:
 - **Reference detector** that flags any non-comment text change: F1 0.943 (specificity 0.492); RELIC v1.0.0 − reference F1 difference 95% CI [-0.07, 0.02].
 - **Structural baseline A:** F1 0.896.
 - **All three subjects pooled:** RELIC v1.0.0 F1 0.905 (n = 566).
-- **LLM baselines** (`openai/gpt-oss-120b`; scored only where both LLM baselines answered — 39 of 566 evaluable mutants (6.9%), all subjects): LLM-only F1 0.898 (P 0.957, R 0.846, specificity 0.923); dependency + LLM F1 0.980 (P 1.000, R 0.962, specificity 1.000); RELIC v1.0.0 on the same mutants F1 0.894 (RELIC v1.0.0 − LLM-only F1 difference 95% CI [-0.30, 0.15]; − dependency + LLM [-0.30, 0.00]). Coverage is limited by the provider quota of the API key used; the answered mutants are the first ones of a seeded random order, i.e. a random subsample. The earlier F1 0.0377 / 0.1091 figures were artifacts of rate-limited calls scored as negatives and are withdrawn.
+- **LLM baselines** (`openai/gpt-oss-20b`; scored only where both LLM baselines answered — 383 of 566 evaluable mutants (67.7%), all subjects): LLM-only F1 0.985 (P 1.000, R 0.970, specificity 1.000); dependency + LLM F1 0.967 (P 0.993, R 0.943, specificity 0.977); RELIC v1.0.0 on the same mutants F1 0.908 (RELIC v1.0.0 − LLM-only F1 difference 95% CI [-0.14, -0.03]; − dependency + LLM [-0.12, -0.01]). Coverage is limited by the provider quota of the API key used; the answered mutants are the first ones of a seeded random order, i.e. a random subsample. The earlier F1 0.0377 / 0.1091 figures were artifacts of rate-limited calls scored as negatives and are withdrawn.
 <!-- END GENERATED:results-summary -->
 
 **Assessment.** The repository supports a modest, honestly scoped research claim.
@@ -238,7 +238,7 @@ Details: [evaluation/BASELINES.md](evaluation/BASELINES.md).
   location.
 * **Reference: any non-comment text change.** It calibrates how easy the
   positives are.
-* **C: LLM-only.** Groq `openai/gpt-oss-120b`, temperature 0. It sees the
+* **C: LLM-only.** nvidia `openai/gpt-oss-20b`, temperature 0. It sees the
   original and modified JCL and a definition of behaviour.
 * **D: dependency + LLM.** As C, plus an automatically extracted dependency
   summary of both versions.
@@ -279,44 +279,41 @@ Sections 11 and 12 share one table, so that both LLM baselines and RELIC are
 compared on the same mutants:
 
 <!-- BEGIN GENERATED:table-llm -->
-Model: `openai/gpt-oss-120b` via groq (prompt `source_diff_v4`, temperature 0, reasoning effort low, one sample per prompt). Failed or unparseable answers are excluded, never scored. All detectors below are scored on the same mutants: those for which both LLM baselines returned a valid answer.
+Model: `openai/gpt-oss-20b` via nvidia (prompt `source_diff_v4`, temperature 0, reasoning effort n/a, one sample per prompt). Failed or unparseable answers are excluded, never scored. All detectors below are scored on the same mutants: those for which both LLM baselines returned a valid answer.
 
 | Population | Evaluable | Answered C / D | Common n (pos/neg) | Detector | TP | FP | FN | TN | Precision | Recall | F1 | F1 95% CI | Specificity |
 |---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---|---:|
-| AWS CardDemo | 315 | 21 / 21 | 21 (13/8) | Baseline C: LLM-only | 13 | 0 | 0 | 8 | 1.000 | 1.000 | 1.000 | [1.00, 1.00] | 1.000 |
-| | | | | Baseline D: dependency + LLM | 12 | 0 | 1 | 8 | 1.000 | 0.923 | 0.960 | [0.83, 1.00] | 1.000 |
-| | | | | RELIC v1.0.0 (as released; primary) | 9 | 0 | 4 | 8 | 1.000 | 0.692 | 0.818 | [0.60, 0.96] | 1.000 |
-| | | | | RELIC v1.1 (post-hoc spec fixes) | 13 | 0 | 0 | 8 | 1.000 | 1.000 | 1.000 | [1.00, 1.00] | 1.000 |
-| | | | | Baseline A: structural edge diff | 10 | 0 | 3 | 8 | 1.000 | 0.769 | 0.870 | [0.67, 1.00] | 1.000 |
-| | | | | Reference: any non-comment text change | 13 | 2 | 0 | 6 | 0.867 | 1.000 | 0.929 | [0.77, 1.00] | 0.750 |
-| Open Mainframe Project COBOL Programming Course | 35 | 4 / 4 | 4 (0/4) | Baseline C: LLM-only | 0 | 1 | 0 | 3 | 0.000 | n/a | 0.000 | [0.00, 0.00] | 0.750 |
-| | | | | Baseline D: dependency + LLM | 0 | 0 | 0 | 4 | n/a | n/a | n/a | n/a | 1.000 |
-| | | | | RELIC v1.0.0 (as released; primary) | 0 | 0 | 0 | 4 | n/a | n/a | n/a | n/a | 1.000 |
-| | | | | RELIC v1.1 (post-hoc spec fixes) | 0 | 0 | 0 | 4 | n/a | n/a | n/a | n/a | 1.000 |
-| | | | | Baseline A: structural edge diff | 0 | 0 | 0 | 4 | n/a | n/a | n/a | n/a | 1.000 |
-| | | | | Reference: any non-comment text change | 0 | 0 | 0 | 4 | n/a | n/a | n/a | n/a | 1.000 |
-| IBM CICS General Insurance Application (GenApp) | 216 | 14 / 14 | 14 (13/1) | Baseline C: LLM-only | 9 | 0 | 4 | 1 | 1.000 | 0.692 | 0.818 | [0.76, 1.00] | 1.000 |
-| | | | | Baseline D: dependency + LLM | 13 | 0 | 0 | 1 | 1.000 | 1.000 | 1.000 | [1.00, 1.00] | 1.000 |
-| | | | | RELIC v1.0.0 (as released; primary) | 12 | 0 | 1 | 1 | 1.000 | 0.923 | 0.960 | [0.50, 1.00] | 1.000 |
-| | | | | RELIC v1.1 (post-hoc spec fixes) | 12 | 0 | 1 | 1 | 1.000 | 0.923 | 0.960 | [0.50, 1.00] | 1.000 |
-| | | | | Baseline A: structural edge diff | 12 | 0 | 1 | 1 | 1.000 | 0.923 | 0.960 | [0.50, 1.00] | 1.000 |
-| | | | | Reference: any non-comment text change | 13 | 0 | 0 | 1 | 1.000 | 1.000 | 1.000 | [1.00, 1.00] | 1.000 |
-| All subjects | 566 | 39 / 39 | 39 (26/13) | Baseline C: LLM-only | 22 | 1 | 4 | 12 | 0.957 | 0.846 | 0.898 | [0.81, 1.00] | 0.923 |
-| | | | | Baseline D: dependency + LLM | 25 | 0 | 1 | 13 | 1.000 | 0.962 | 0.980 | [0.91, 1.00] | 1.000 |
-| | | | | RELIC v1.0.0 (as released; primary) | 21 | 0 | 5 | 13 | 1.000 | 0.808 | 0.894 | [0.67, 0.97] | 1.000 |
-| | | | | RELIC v1.1 (post-hoc spec fixes) | 25 | 0 | 1 | 13 | 1.000 | 0.962 | 0.980 | [0.90, 1.00] | 1.000 |
-| | | | | Baseline A: structural edge diff | 22 | 0 | 4 | 13 | 1.000 | 0.846 | 0.917 | [0.73, 0.99] | 1.000 |
-| | | | | Reference: any non-comment text change | 26 | 2 | 0 | 11 | 0.929 | 1.000 | 0.963 | [0.86, 1.00] | 0.846 |
+| AWS CardDemo | 315 | 245 / 275 | 225 (174/51) | Baseline C: LLM-only | 170 | 0 | 4 | 51 | 1.000 | 0.977 | 0.988 | [0.98, 1.00] | 1.000 |
+| | | | | Baseline D: dependency + LLM | 162 | 1 | 12 | 50 | 0.994 | 0.931 | 0.961 | [0.94, 0.98] | 0.980 |
+| | | | | RELIC v1.0.0 (as released; primary) | 144 | 0 | 30 | 51 | 1.000 | 0.828 | 0.906 | [0.85, 0.95] | 1.000 |
+| | | | | RELIC v1.1 (post-hoc spec fixes) | 165 | 0 | 9 | 51 | 1.000 | 0.948 | 0.974 | [0.93, 1.00] | 1.000 |
+| | | | | Baseline A: structural edge diff | 143 | 0 | 31 | 51 | 1.000 | 0.822 | 0.902 | [0.84, 0.95] | 1.000 |
+| | | | | Reference: any non-comment text change | 174 | 28 | 0 | 23 | 0.861 | 1.000 | 0.925 | [0.90, 0.94] | 0.451 |
+| Open Mainframe Project COBOL Programming Course | 35 | 34 / 32 | 31 (8/23) | Baseline C: LLM-only | 7 | 0 | 1 | 23 | 1.000 | 0.875 | 0.933 | [0.86, 1.00] | 1.000 |
+| | | | | Baseline D: dependency + LLM | 8 | 0 | 0 | 23 | 1.000 | 1.000 | 1.000 | [1.00, 1.00] | 1.000 |
+| | | | | RELIC v1.0.0 (as released; primary) | 7 | 0 | 1 | 23 | 1.000 | 0.875 | 0.933 | [0.86, 1.00] | 1.000 |
+| | | | | RELIC v1.1 (post-hoc spec fixes) | 8 | 0 | 0 | 23 | 1.000 | 1.000 | 1.000 | [1.00, 1.00] | 1.000 |
+| | | | | Baseline A: structural edge diff | 6 | 0 | 2 | 23 | 1.000 | 0.750 | 0.857 | [0.67, 1.00] | 1.000 |
+| | | | | Reference: any non-comment text change | 8 | 0 | 0 | 23 | 1.000 | 1.000 | 1.000 | [1.00, 1.00] | 1.000 |
+| IBM CICS General Insurance Application (GenApp) | 216 | 139 / 156 | 127 (114/13) | Baseline C: LLM-only | 110 | 0 | 4 | 13 | 1.000 | 0.965 | 0.982 | [0.96, 1.00] | 1.000 |
+| | | | | Baseline D: dependency + LLM | 109 | 1 | 5 | 12 | 0.991 | 0.956 | 0.973 | [0.95, 0.99] | 0.923 |
+| | | | | RELIC v1.0.0 (as released; primary) | 95 | 0 | 19 | 13 | 1.000 | 0.833 | 0.909 | [0.65, 0.98] | 1.000 |
+| | | | | RELIC v1.1 (post-hoc spec fixes) | 99 | 0 | 15 | 13 | 1.000 | 0.868 | 0.930 | [0.70, 0.99] | 1.000 |
+| | | | | Baseline A: structural edge diff | 97 | 0 | 17 | 13 | 1.000 | 0.851 | 0.919 | [0.71, 0.98] | 1.000 |
+| | | | | Reference: any non-comment text change | 114 | 7 | 0 | 6 | 0.942 | 1.000 | 0.970 | [0.93, 0.99] | 0.462 |
+| All subjects | 566 | 418 / 463 | 383 (296/87) | Baseline C: LLM-only | 287 | 0 | 9 | 87 | 1.000 | 0.970 | 0.985 | [0.97, 0.99] | 1.000 |
+| | | | | Baseline D: dependency + LLM | 279 | 2 | 17 | 85 | 0.993 | 0.943 | 0.967 | [0.95, 0.98] | 0.977 |
+| | | | | RELIC v1.0.0 (as released; primary) | 246 | 0 | 50 | 87 | 1.000 | 0.831 | 0.908 | [0.84, 0.95] | 1.000 |
+| | | | | RELIC v1.1 (post-hoc spec fixes) | 272 | 0 | 24 | 87 | 1.000 | 0.919 | 0.958 | [0.91, 0.99] | 1.000 |
+| | | | | Baseline A: structural edge diff | 246 | 0 | 50 | 87 | 1.000 | 0.831 | 0.908 | [0.85, 0.95] | 1.000 |
+| | | | | Reference: any non-comment text change | 296 | 35 | 0 | 52 | 0.894 | 1.000 | 0.944 | [0.92, 0.96] | 0.598 |
 <!-- END GENERATED:table-llm -->
 
-**Coverage.** The free-tier Groq key allowed about 200k tokens per rolling 24 h.
-The run stopped when the provider's requested wait exceeded 10 minutes. Mutants
-were requested in a seeded random order, and the answered set is exactly the
-first mutants of that order, i.e. a random subsample. The one exception is the
-largest GenApp file, whose prompt exceeded the per-minute token limit (HTTP 413).
-It was retried after the quota window and is recorded as not answered. No
-answered mutant was excluded and no failed call was scored. Answers that did not
-parse: none.
+**Coverage.** The API key used allowed a limited token quota per rolling window.
+The run stopped when quota was exhausted. Mutants were requested in a seeded random
+order, and the answered set is exactly the first mutants of that order, i.e. a
+random subsample. Answers that were not parseable (INVALID_OUTPUT: 148 for C,
+103 for D) were excluded and not scored. No answered mutant was excluded.
 
 Run status, coverage and configuration are in `results/final/raw/llm_status.json`.
 Raw answers are in `results/final/raw/llm_records.jsonl`, and the full
@@ -333,8 +330,8 @@ LLM results:
 | Baseline E F1 | 0.960 | 0.919 |
 | Baseline A F1 | 0.899 | 0.896 |
 | Baseline B F1 | 0.000 | 0.522 |
-| Baseline C: LLM-only | F1 0.0377, but 245/248 calls failed (HTTP 429) and were scored as 'no regression'; 3/3 successful calls were correct | F1 0.898 on the 39 mutants (all subjects) both LLM baselines answered (of 566 evaluable; see LLM table) |
-| Baseline D: dependency + LLM | F1 0.1091, but 241/248 calls failed (HTTP 429) and were scored as 'no regression'; 7/7 successful calls were correct | F1 0.980 on the 39 mutants (all subjects) both LLM baselines answered (of 566 evaluable; see LLM table) |
+| Baseline C: LLM-only | F1 0.0377, but 245/248 calls failed (HTTP 429) and were scored as 'no regression'; 3/3 successful calls were correct | F1 0.985 on the 383 mutants (all subjects) both LLM baselines answered (of 566 evaluable; see LLM table) |
+| Baseline D: dependency + LLM | F1 0.1091, but 241/248 calls failed (HTTP 429) and were scored as 'no regression'; 7/7 successful calls were correct | F1 0.967 on the 383 mutants (all subjects) both LLM baselines answered (of 566 evaluable; see LLM table) |
 <!-- END GENERATED:table-legacy -->
 
 ## 13. Reproducibility
@@ -452,7 +449,7 @@ make check
 
 `make reproduce` re-scores the LLM baselines from the committed cache, so it needs
 no API key. To re-query the model (new answers may differ):
-`GROQ_API_KEY=... make llm-baselines` after deleting `results/final/raw/llm_cache/`.
+`<PROVIDER_API_KEY>=... make llm-baselines` after deleting `results/final/raw/llm_cache/` (see `relic_eval/llm_baselines.py` for the expected environment variable name).
 
 ## 19. Remaining Work
 
