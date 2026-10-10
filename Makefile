@@ -27,9 +27,15 @@ test:
 
 # Full evaluation: mutants -> oracle labels -> detector predictions -> manifest
 # -> metrics -> tables (Markdown + LaTeX) -> figures -> generated doc blocks.
+#
+# LLM step: if a provider key is set (RELIC_LLM_PROVIDER / GROQ_API_KEY /
+# OPENAI_API_KEY / ANTHROPIC_API_KEY), queries the model for any uncached
+# mutant and extends the cache.  Without a key the LLM step is skipped and
+# the committed cache (results/final/raw/llm_cache/) is used to re-score the
+# 383 already-answered mutants — offline, no API calls.
 reproduce:
 	$(PYTHON) -m relic_eval.pipeline
-	$(PYTHON) -m relic_eval.llm_baselines
+	$(PYTHON) -m relic_eval.llm_baselines --offline-if-no-key
 	$(PYTHON) -m relic_eval.pipeline --skip-benchmark
 	$(PYTHON) -m relic_eval.check_consistency
 
