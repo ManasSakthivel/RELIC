@@ -391,11 +391,69 @@ def load_llm_predictions() -> dict:
     return {"status": status, "predictions": preds}
 
 
+def rescore_committed(subjects: list[str] | None) -> dict:
+    """Re-derive llm_status.json from the committed llm_records.jsonl without touching it.
+
+    Used by --offline-if-no-key when no provider API key is available.  Reads
+    the existing records file and recomputes the status counts so that
+    ``make reproduce`` without an API key does not overwrite the committed
+    383-mutation LLM results with a partial NOT_RUN run.
+    """
+    if not RECORDS.exists():
+        return {"overall": "NOT_RUN", "reason": "llm_records.jsonl not found"}
+
+    out = []
+    for line in open(RECORDS):
+        o = json.loads(line)
+        if subjects and o.get("subject_system") not in subjects:
+            continue
+        out.append(o)
+
+    counts: dict[str, dict[str, int]] = {}
+    for o in out:
+        counts.setdefault(o["baseline"], {}).setdefault(o["status"], 0)
+        counts[o["baseline"]][o["status"]] += 1
+
+    ok_both = {o["mutation_id"] for o in out if o["status"] == "OK" and o["baseline"] == "llm_C"} & \
+              {o["mutation_id"] for o in out if o["status"] == "OK" and o["baseline"] == "llm_D"}
+
+    status: dict = {}
+    if STATUS.exists():
+        # Preserve the original run metadata (provider, model, etc.)
+        status = json.loads(STATUS.read_text())
+    status["status_counts"] = counts
+    status["n_scored_both"] = len(ok_both)
+    # Recompute overall from re-derived counts
+    all_statuses = [o["status"] for o in out]
+    if all_statuses and all(s == "NOT_RUN" for s in all_statuses):
+        status["overall"] = "NOT_RUN"
+    elif all_statuses and all(s == "OK" for s in all_statuses):
+        status["overall"] = "RUN"
+    else:
+        status["overall"] = "PARTIAL" if all_statuses else "NOT_RUN"
+
+    with open(STATUS, "w") as fh:
+        json.dump(status, fh, indent=2, sort_keys=True)
+    return status
+
+
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--subjects", default="")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--offline-if-no-key", action="store_true",
+                    help="If no provider API key is available, re-score status from the "
+                         "committed llm_records.jsonl without rewriting it. Prevents "
+                         "make reproduce from overwriting the committed 383-mutation LLM "
+                         "results with a partial NOT_RUN run when no API key is set.")
     args = ap.parse_args(argv)
+    client = Client()
+    if args.offline_if_no_key and not client.available:
+        print("No provider key found — re-scoring status from committed records (offline mode).", flush=True)
+        subjects = [s for s in args.subjects.split(",") if s] or None
+        st = rescore_committed(subjects)
+        print(json.dumps(st, indent=2))
+        return
     st = run([s for s in args.subjects.split(",") if s] or None, args.limit or None)
     print(json.dumps(st, indent=2))
 
