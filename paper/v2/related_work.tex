@@ -1,0 +1,58 @@
+% related_work.tex
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Behavioural specifications and spec mining.}
+Design by contract~\cite{meyer1992applying} makes obligations explicit as
+pre- and postconditions. Dynamic invariant detection
+(Daikon~\cite{ernst2007daikon}), automaton inference from traces
+\cite{lorenzoli2008automatic,ammons2002mining}, annotation inference
+(Houdini~\cite{flanagan2001houdini}) and runtime
+verification~\cite{leucker2009brief} derive or check specifications from
+executions. RELIC differs in its input (job definitions, not traces) and in its
+vocabulary (steps, datasets, return-code guards). We do not claim this is a
+methodological advance over specification mining: the contracts RELIC extracts
+are syntactic patterns over JCL, and no learning or generalisation is involved.
+
+\paragraph{Semantic differencing and regression verification.}
+Semantic Diff~\cite{jackson1994semantic}, SymDiff~\cite{lahiri2012symdiff},
+differential assertion checking~\cite{lahiri2013differential}, differential
+symbolic execution~\cite{person2008differential} and regression
+verification~\cite{felsing2014automating} compare two program versions
+semantically, with formal program models. RELIC's diff is a comparison of
+extracted contract signatures and is far weaker; it is cheap and applies to a
+language for which no such formal model was available to us. Regression test
+selection~\cite{rothermel1996analyzing} addresses a related change-impact
+question by different means.
+
+\paragraph{Mutation analysis and its validity.}
+Mutation analysis originates in~\cite{hamlet1977testing,demillo1978hints} and is
+surveyed in~\cite{jia2011mutation}. Whether mutants are a valid substitute for
+real faults is debated~\cite{andrews2005mutation,just2014mutants}, and
+equivalent mutants are a known difficulty~\cite{madeyski2014equivalent}. Our
+benchmark uses mutation to \emph{generate change pairs for a change detector},
+not to assess a test suite; in it, ``equivalent'' mutants are the
+behaviour-preserving negatives. The oracle problem~\cite{barr2015oracle} applies
+directly: ground truth here is a model of JCL, not an execution.
+
+\paragraph{Legacy-language analysis.}
+Control-flow extraction for COBOL under migration is an active
+topic~\cite{deknop2022semiparsing}, and COBOL-to-Java migration has been
+discussed for some time~\cite{sneed2010migrating}. We found no work in the
+sources we checked that evaluates JCL-level behavioural checking against an
+execution-semantics oracle. This is an absence-of-evidence statement based on
+targeted Crossref queries only, not on a systematic literature review; see
+below.
+
+\paragraph{Gaps that must be closed before submission.}
+The following topics are \emph{not} covered by verified references and are
+listed as TODO rather than cited:
+(i)~a systematic search (DBLP, ACM DL, IEEE Xplore, arXiv) for prior JCL and
+mainframe-batch analysis, job-dependency or workflow-migration work;
+(ii)~language models for code review, code-change analysis and legacy-language
+translation (any recent survey would need to be located and verified);
+(iii)~benchmark-validity literature on trivial baselines and shortcut features;
+(iv)~Infrastructure-as-code and build-system change checking, which are
+structurally close to job-stream checking.
+\textbf{[PENDING EXPERIMENT]} (literature search, not an experiment per se, but
+unresolved).

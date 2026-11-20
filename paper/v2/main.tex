@@ -1,0 +1,35 @@
+% main.tex -- RELIC V2 revised draft (development-stage; not peer reviewed).
+% Compile: pdflatex main && bibtex main && pdflatex main && pdflatex main
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+\bibliographystyle{plainnat}
+\setcitestyle{numbers,square}
+
+\title{Behavioural-Contract Extraction for JCL Batch Jobs:\\
+A Benchmark, an Oracle Methodology, and What a Trivial Baseline Reveals\\[0.4em]
+\large Development-stage report; not peer reviewed}
+\author{Draft prepared from the RELIC repository (branch \texttt{research/relic-v2-integration})}
+\date{}
+
+\begin{document}
+\maketitle
+\input{abstract}
+\input{introduction}
+\input{related_work}
+\input{methodology}
+\input{architecture}
+\input{results}
+\input{discussion}
+\input{threats_to_validity}
+\input{conclusion}
+
+\bibliography{references}
+\end{document}

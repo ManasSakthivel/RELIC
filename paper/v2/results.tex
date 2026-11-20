@@ -1,0 +1,157 @@
+% results.tex -- every number below is copied from results/v2/v2_metrics.json
+% (schema relic-v2-metrics/1) or results/final/metrics.json (schema relic-final-metrics/1).
+\section{Results}
+\label{sec:results}
+
+\noindent\textbf{Status of all results in this section: development set only.}
+CardDemo, the OMP course and GenApp were inspected while defects were diagnosed
+and fixes were chosen (\texttt{validation\_status} in
+\texttt{results/v2/v2\_metrics.json}). Nothing here is independent validation.
+Held-out validation is \textbf{[PENDING EXPERIMENT]}.
+
+\subsection{Accounting}
+Source: \texttt{results/final/metrics.json}, key \texttt{accounting}.
+\begin{center}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Subject & Candidates & Evaluable & Out of scope & Invalid & \% evaluable \\
+\midrule
+CardDemo & 356 & 315 & 38 & 3 & 88.5 \\
+OMP course & 84 & 35 & 26 & 23 & 41.7 \\
+GenApp & 216 & 216 & 0 & 0 & 100.0 \\
+\textbf{All} & 656 & 566 & 64 & 26 & 86.3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Evaluable mutants: 460 behaviour-changing, 106 behaviour-preserving, in 66 files
+(\texttt{results/v2/v2\_metrics.json}, \texttt{populations.pooled}).
+
+\subsection{Benchmark composition}
+Source: \texttt{v2\_metrics.json}, \texttt{benchmark\_adequacy}.
+Behaviour-changing mutants by operator: \texttt{SPLIT\_JOB} 166,
+\texttt{SWAP\_ADJACENT\_STEPS} 166, \texttt{REMOVE\_COND} 34,
+\texttt{ALTER\_COND\_THRESHOLD} 34, \texttt{DELETE\_PRODUCER\_STEP} 33,
+\texttt{MOVE\_CONSUMER\_BEFORE\_PRODUCER} 14, \texttt{RENAME\_OUTPUT\_DATASET} 13.
+Behaviour-preserving mutants: \texttt{INSERT\_COMMENT} 65,
+\texttt{CHANGE\_MSGCLASS} 39, \texttt{REMOVE\_COND} 1,
+\texttt{ALTER\_COND\_THRESHOLD} 1. Hence 104 of 106 negatives are cosmetic.
+
+\subsection{Detection, pooled (RQ2)}
+Source: \texttt{v2\_metrics.json}, \texttt{populations.pooled.detectors}
+(n\,=\,566; 460 positive, 106 negative; 66 files).
+\begin{center}
+\small
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Detector & TP & FP & FN & TN & Prec. & Recall & Spec. & F1 \\
+\midrule
+RELIC v1.0 (= Baseline E) & 380 & 0 & 80 & 106 & 1.0000 & 0.8261 & 1.0000 & 0.9048 \\
+RELIC v1.1 & 417 & 0 & 43 & 106 & 1.0000 & 0.9065 & 1.0000 & 0.9510 \\
+RELIC V2 & 442 & 0 & 18 & 106 & 1.0000 & 0.9609 & 1.0000 & 0.9800 \\
+Structural edge diff (A) & 368 & 0 & 92 & 106 & 1.0000 & 0.8000 & 1.0000 & 0.8889 \\
+Complexity score (B) & 162 & 33 & 298 & 73 & 0.8308 & 0.3522 & 0.6887 & 0.4947 \\
+Text change, any non-comment & 460 & 41 & 0 & 65 & 0.9182 & 1.0000 & 0.6132 & 0.9573 \\
+\emph{Diagnostic: text diff ignoring JOB-card params} & 460 & 2 & 0 & 104 & 0.9957 & 1.0000 & 0.9811 & \textbf{0.9978} \\
+\bottomrule
+\end{tabular}
+\end{center}
+Bootstrap 95\% intervals for F1 (same source, \texttt{bootstrap.f1\_ci95}):
+v1.0 [0.8365, 0.9524]; v1.1 [0.8937, 0.9884]; V2 [0.9608, 0.9936];
+text change [0.9397, 0.9691]; diagnostic [0.992, 1.0].
+Paired F1 differences, 95\% CI (\texttt{bootstrap.diff\_ci95}):
+V2$-$v1.1 [0.0034, 0.0688]; V2$-$v1.0 [0.0379, 0.1273];
+V2$-$text change [0.0039, 0.0432]; V2$-$(V2 without D-004) [$-$0.006, 0.0].
+No interval is reported for V2 versus the diagnostic rule, which is higher than V2
+in point estimate (0.9978 vs.\ 0.9800).
+
+\subsection{Per subject (F1)}
+Source: \texttt{v2\_metrics.json}, \texttt{populations.<subject>.detectors}.
+\begin{center}
+\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Subject (n; files) & v1.0 & v1.1 & V2 & Text change & Diagnostic \\
+\midrule
+CardDemo (315; 31) & 0.9191 & 0.9820 & 0.9901 & 0.9425 & 0.9961 \\
+OMP course (35; 25) & 0.9474 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+GenApp (216; 10) & 0.8832 & 0.9050 & 0.9657 & 0.9751 & 1.0000 \\
+\bottomrule
+\end{tabular}
+\end{center}
+On GenApp the plain text-change rule has a higher point-estimate F1 than V2; the
+paired interval for V2$-$text change is [$-$0.0574, 0.0199].
+
+\subsection{Ablation of V2 fixes (pooled)}
+Source: \texttt{populations.pooled.detectors} and \texttt{bootstrap.diff\_ci95}.
+\begin{center}
+\small
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+Variant & TP & FN & F1 & Paired CI of V2$-$variant \\
+\midrule
+V2 & 442 & 18 & 0.9800 & --- \\
+without D-001 (same-name steps) & 419 & 41 & 0.9534 & [0.0035, 0.0654] \\
+without D-002 (DD parsing) & 441 & 19 & 0.9789 & [$-$0.0046, 0.0074] \\
+without D-003 (producer before consumer) & 442 & 18 & 0.9800 & [0.0, 0.0] \\
+without D-004 (\texttt{MOD,DELETE}) & 444 & 16 & 0.9823 & [$-$0.006, 0.0] \\
+\bottomrule
+\end{tabular}
+\end{center}
+All variants have FP\,=\,0. D-004 is kept on semantic grounds although it scores
+slightly worse (two true positives lost). Recall on files with repeated step
+names: v1.1 0.3906, V2 0.7656 (6 files, 64 positives); on files without:
+v1.1 0.9899, V2 0.9924 (37 files, 396 positives)
+(\texttt{recall\_by\_duplicate\_step\_names}). The fixes were found and
+selected on the same files used to score them.
+
+\subsection{Contract recovery against oracle facts (RQ1)}
+Source: \texttt{v2\_metrics.json}, \texttt{contract\_recovery} (TP/FP/FN).
+\begin{center}
+\small
+\begin{tabular}{@{}llccc@{}}
+\toprule
+Subject & Family & v1.1 & V2 & \\
+\midrule
+CardDemo & TEMPORAL & 79/0/0 & 79/0/0 & \\
+CardDemo & CONTROL\_FLOW & 55/0/0 & 55/0/0 & \\
+CardDemo & RESOURCE & 9/9/13 & 11/0/11 & \\
+GenApp & TEMPORAL & 68/4/0 & 68/4/0 & \\
+GenApp & CONTROL\_FLOW & 8/2/0 & 8/2/0 & \\
+GenApp & RESOURCE & 0/2/4 & 2/3/2 & \\
+OMP course & TEMPORAL & 26/0/0 & 26/0/0 & \\
+OMP course & CONTROL\_FLOW & 1/0/0 & 1/0/0 & \\
+OMP course & RESOURCE & 0/0/23 & 0/0/23 & \\
+\bottomrule
+\end{tabular}
+\end{center}
+The oracle's RESOURCE facts include program and utility I/O that JCL cannot show
+(defect D-007), so RESOURCE recall is not extraction accuracy on JCL-visible facts.
+
+\subsection{Language-model comparison (not interpretable)}
+Source: \texttt{results/final/raw/llm\_status.json} and \texttt{v2\_metrics.json},
+\texttt{llm\_selection\_analysis}. Model: \texttt{openai/gpt-oss-20b} via the
+nvidia provider, prompt \texttt{source\_diff\_v4}, temperature 0, one sample.
+All 566 evaluable mutants were attempted; 183 have no valid output from at least
+one baseline (C: 148 and D: 103 \texttt{INVALID\_OUTPUT}, ``no JSON object in
+response''). The unscored are 89.6\% positive; the 383 scored are 77.3\% positive.
+On the 383-mutant common subset (selection-biased, not a random subsample):
+C F1 0.9846, D 0.9671, v1.0 0.9077, v1.1 0.9577, V2 0.9793, text change 0.9442.
+Bounds over all 566 (invalid output as not flagged / as flagged):
+C 0.8083 / 0.9717; D 0.8468 / 0.9536. These records neither show RELIC beating
+nor losing to the models. A fair comparison with a documented provider/model,
+an invalid-output retry policy and full coverage is
+\textbf{[PENDING EXPERIMENT]}.
+
+\subsection{Pending evidence}
+\begin{itemize}
+  \item Evaluation of a frozen detector on a corpus never opened during development:
+    \textbf{[PENDING EXPERIMENT]}.
+  \item Normalised-text baseline on a benchmark with benign reorder, split, rename
+    and symbol-change negatives: \textbf{[PENDING EXPERIMENT]}.
+  \item Oracle validation against real z/OS execution or independent review of a
+    stratified label sample: \textbf{[PENDING EXPERIMENT]}.
+  \item Inter-annotator agreement on oracle labels: \textbf{[PENDING EXPERIMENT]}.
+  \item Fair, full-coverage, multi-model language-model re-run:
+    \textbf{[PENDING EXPERIMENT]}.
+  \item Mutants mined from real change histories: \textbf{[PENDING EXPERIMENT]}.
+\end{itemize}

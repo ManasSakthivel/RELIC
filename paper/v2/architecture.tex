@@ -1,0 +1,50 @@
+% architecture.tex
+\section{RELIC: Contract Extraction and Differencing}
+\label{sec:arch}
+
+The \emph{evaluated path} is the static JCL analysis only:
+parser $\rightarrow$ intermediate representation $\rightarrow$ contract
+extractor $\rightarrow$ Behavioural Contract Graph (BCG) $\rightarrow$ diff
+$\rightarrow$ risk report. The repository also contains COBOL parsers, a
+dynamic-evidence reconciliation component and a user interface; none of these
+is part of any reported result, and the reconciliation component has not been
+validated with real execution evidence.
+
+\subsection{Contract types}
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Type & Form & Extracted from \\
+\midrule
+TEMPORAL & $A \prec B$ & consecutive \texttt{EXEC} statements \\
+RESOURCE & $\mathit{produces}(A,D) \prec \mathit{consumes}(B,D)$ & DD statements sharing a DSN, by \texttt{DISP} \\
+CONTROL\_FLOW & $\mathit{RC}(A)\ \mathit{op}\ t \rightarrow \neg\mathit{run}(B)$ & \texttt{COND=} tests \\
+\bottomrule
+\end{tabular}
+\end{center}
+DATA, STATE and ERROR contract types are declared but no extractor produces
+them; they are not evaluated.
+
+\subsection{Differencing}
+Both versions are parsed and contracts are compared by signature
+(type, subject, predicate, object). A contract present only in the original is
+\emph{broken}; v1.1 and later also report a COND guard as \emph{weakened} when the
+new guard lets a step run at a return code where the original bypassed it. Any
+broken or weakened contract becomes a risk item. A stricter guard is not
+reported. For scoring, a detector ``flags'' a mutant if it returns at least one
+risk item; the quality of the explanation is not evaluated.
+
+\subsection{Scope limits}
+\begin{itemize}
+  \item PROC expansion, INCLUDE and IF/THEN/ELSE are not parsed
+    (defect D-006; 64 candidate mutants are out of scope).
+  \item Analysis is single-file; entity identifiers include the artifact path, so
+    no cross-file RESOURCE contracts are formed (D-008).
+  \item Step identity is name-based (with an occurrence index in V2), so swaps of
+    identically named steps are invisible (D-005): 13 of the 18 residual V2 false
+    negatives are such swaps.
+  \item Symbolic data-set names (\texttt{\&SYM}), \texttt{\&\&TEMP} scoping and
+    unnamed concatenations are not resolved (D-011); \texttt{COND=EVEN/ONLY} is
+    dropped (D-009).
+  \item V2 fixes are opt-in and are not part of the default detector set.
+\end{itemize}

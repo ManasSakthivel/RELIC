@@ -1,0 +1,50 @@
+% discussion.tex
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{What the evidence supports.}
+On a development benchmark, successive RELIC revisions recover more
+behaviour-changing mutants without flagging any behaviour-preserving one
+(pooled F1 0.9048, 0.9510, 0.9800; FP\,=\,0 throughout). The ablation attributes
+most of V2's gain to one fix (same-name step identity: F1 0.9534 without D-001).
+The baseline configuration's misses trace to concrete, documented defects, which
+is the value of the oracle-based evaluation as a debugging instrument.
+
+\paragraph{What it does not support.}
+\emph{Superiority over a trivial rule.} A text diff that ignores JOB-card
+parameters scores F1 0.9978, above every RELIC variant. The previously stated
+claim that RELIC's advantage is specificity on harmless edits is therefore not
+established: specificity is high for RELIC (1.0000), but the diagnostic reaches
+0.9811 because 104 of the 106 negatives are comment or MSGCLASS edits. The
+benchmark measures ``does not fire on cosmetic edits'', not equivalence
+reasoning. Moreover the diagnostic was built after inspecting the benchmark, so
+it is a diagnostic of the benchmark rather than a competing method; the
+converse caveat applies equally to V2.
+
+\emph{Generalisation.} All gains were found on the files used to measure them.
+The bootstrap quantifies sampling variation over files, not selection of fixes.
+
+\emph{Comparison with language models.} Not interpretable on the committed
+records (selection bias, 183 invalid outputs).
+
+\emph{Naming the violated contract.} This is RELIC's intended differentiator
+over a text diff, but the evaluation scores only whether any risk item is
+returned, not whether the explanation is correct.
+\textbf{[PENDING EXPERIMENT]}: an explanation-correctness study.
+
+\paragraph{Novelty.}
+Individually the ingredients are established: contracts~\cite{meyer1992applying},
+specification mining~\cite{ernst2007daikon,ammons2002mining}, semantic
+differencing~\cite{lahiri2012symdiff,jackson1994semantic} and mutation
+analysis~\cite{jia2011mutation}. The combination for JCL, with an
+execution-semantics oracle and complete mutant accounting, is, to our knowledge
+and subject to the incomplete literature search noted in
+Section~\ref{sec:related}, not previously reported. We do not claim algorithmic
+novelty: the extraction is rule-based and the diff is signature comparison.
+
+\paragraph{Strongest defensible narrative.}
+(a)~A benchmark-and-oracle methodology for checking changes to JCL, with
+negative and diagnostic findings (trivial-rule parity, cosmetic negatives,
+selection bias in a language-model comparison); (b)~behavioural-contract
+extraction for JCL with explicit scope limits; (c)~a catalogue of validity
+threats and a concrete plan for the missing experiments.

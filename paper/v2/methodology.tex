@@ -1,0 +1,76 @@
+% methodology.tex
+\section{Evaluation Methodology}
+\label{sec:method}
+
+All quantities in this section describe the committed pipeline; numbers come
+from \texttt{results/final/metrics.json} and \texttt{results/v2/v2\_metrics.json}
+and are not recomputed in this paper.
+
+\subsection{Subjects}
+Three public corpora authored by different organisations: AWS
+CardDemo~\cite{carddemo} (primary; 55 job files), the Open Mainframe Project
+COBOL course~\cite{ompcourse} (37 job files) and IBM CICS
+GenApp~\cite{genapp} (29 job files, commit \texttt{f6f3f4b}). All are
+demonstration or teaching code. The unit of analysis is one JCL file. After
+scope filtering, 66 files contribute evaluable mutants (31 CardDemo, 25 OMP,
+10 GenApp).
+
+\subsection{Mutation operators}
+Ten source-level operators are applied at every applicable site (no sampling):
+\texttt{SWAP\_ADJACENT\_STEPS}, \texttt{SPLIT\_JOB},
+\texttt{DELETE\_PRODUCER\_STEP}, \texttt{RENAME\_OUTPUT\_DATASET},
+\texttt{MOVE\_CONSUMER\_BEFORE\_PRODUCER}, \texttt{REMOVE\_COND},
+\texttt{ALTER\_COND\_THRESHOLD}, \texttt{REMOVE\_IF\_GUARD}, and two expected-harmless
+refactorings (\texttt{INSERT\_COMMENT}, \texttt{CHANGE\_MSGCLASS}).
+\texttt{REMOVE\_IF\_GUARD} yields no evaluable mutant (IF/THEN/ELSE is outside the
+parser's scope), so nine operators contribute to the metrics. The threshold
+operator always raises the COND code (it weakens the common \texttt{LT} form);
+guard \emph{strengthening} is never exercised. The operators were not derived
+from an empirical study of real migration defects: the earlier taxonomy's
+sources could not be verified.
+
+\subsection{Oracle}
+\texttt{jcl\_oracle} simulates the original and the mutant under a baseline
+scenario, a set of injected return codes per step, and per-step abends, and
+compares executed steps, return codes, the data version each read observes, the
+final catalogue and job termination. Programs it cannot model (DB2, IMS, CICS,
+TSO) are opaque; a mutant whose only possible difference involves an opaque step
+is \texttt{UNDETERMINED} and not scored. The oracle imports nothing from RELIC
+and never receives the operator name, which is enforced by tests. It was,
+however, written by the same team as RELIC and the mutator, it shares a lexer
+with the mutator, and it has not been compared with real z/OS execution or
+reviewed by an independent practitioner.
+
+\subsection{Accounting}
+Every candidate receives exactly one status: \texttt{EVALUABLE},
+\texttt{OUT\_OF\_SCOPE}, \texttt{INVALID\_MUTATION},
+\texttt{INFRASTRUCTURE\_FAILURE} or \texttt{OTHER}.
+
+\subsection{Detectors}
+\textbf{RELIC v1.0} (legacy-mode code path in the current tree; not a checkout of
+the earlier release commit), \textbf{RELIC v1.1} (post-hoc fixes: continuation
+rule, COND semantics, parameter-aware diff), \textbf{RELIC V2} (v1.1 plus four
+opt-in fixes D-001 to D-004: same-name step identity, DD parsing, producer-before-consumer
+ordering of RESOURCE contracts, treatment of \texttt{DISP=(MOD,DELETE)}),
+a static contract diff (Baseline E; decisions identical to v1.0), a structural
+dependency-edge diff (A), a complexity score (B), a text-change reference (any
+non-comment change), and a \emph{post-hoc diagnostic} that ignores JOB-card
+parameters. The diagnostic was constructed after inspecting the benchmark and is
+not a competing detector. All detectors receive only the two texts and the file path.
+Two language-model baselines (C: both versions; D: both versions plus a dependency
+summary) were run once on the committed benchmark with one model and one prompt.
+
+\subsection{Metrics}
+Precision, recall, F1 and specificity; the positive class is behaviour-changing.
+Intervals are percentile intervals from a file-level cluster bootstrap
+(10\,000 replicates, seed 20261004, 66 clusters pooled). Paired F1-difference
+intervals use the same resamples. Intervals describe sampling variation across
+these files only; they do not account for the selection of fixes on the same
+files.
+
+\subsection{Protocol status}
+Labels, statuses and mutants were not altered by the V2 work: V2 replays the
+committed benchmark and aborts unless every regenerated mutant matches its
+committed SHA-256. There was no pre-registration, no frozen detector and no
+held-out corpus. \textbf{[PENDING EXPERIMENT]}: frozen-detector evaluation on a
+corpus never opened during development.

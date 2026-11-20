@@ -1,0 +1,32 @@
+% abstract.tex -- revised abstract (development-set claims only)
+\begin{abstract}
+Mainframe batch jobs written in JCL encode behavioural rules (step order,
+dataset allocation and disposition, return-code guards) that are rarely
+written down and must be re-implemented by hand when a job stream is migrated.
+We describe RELIC, a static extractor of such rules as explicit
+\emph{behavioural contracts} (temporal, resource, control-flow) with a
+contract-level diff between two versions of a job, and we report what a
+carefully accounted evaluation of it does and does not show.
+The evaluation uses source-level mutation of three public JCL corpora
+(656 candidate mutants, 566 evaluable, 66 files) and labels mutants with a
+JCL execution-semantics simulator that shares no code with RELIC but was
+written by the same team and has not been validated against z/OS.
+On this benchmark the pooled F1 of the baseline configuration (v1.0, fixed before
+the defects were analysed) is 0.905, of a version with post-hoc fixes (v1.1) 0.951,
+and of a further revision (V2) 0.980.
+All three corpora were inspected while the defects were found and fixed, so
+these are \emph{development-set} figures and are probably optimistic.
+A post-hoc diagnostic rule that flags any text change except to JOB-card
+parameters reaches F1~0.998 on the same benchmark, because 104 of the 106
+behaviour-preserving mutants are comment or MSGCLASS edits; the benchmark
+therefore does not separate RELIC from a trivial normalised text rule.
+A comparison with a language model cannot be interpreted: 183 of 566 mutants
+have no valid output from at least one model, and these are 89.6\% positive.
+We contribute (i)~the benchmark, the accounting scheme and the
+oracle-based labelling methodology, together with the negative and diagnostic
+findings above; (ii)~behavioural-contract extraction for JCL with explicit
+scope limits (no PROC/INCLUDE/IF-THEN-ELSE, single-file analysis); and
+(iii)~a catalogue of validity threats. Held-out validation, a fair language-model
+comparison and independent oracle validation are
+\textbf{[PENDING EXPERIMENT]}. No claim of production compatibility is made.
+\end{abstract}

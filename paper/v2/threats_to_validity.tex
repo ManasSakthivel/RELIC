@@ -1,0 +1,57 @@
+% threats_to_validity.tex
+\section{Threats to Validity}
+\label{sec:threats}
+
+\paragraph{Construct validity.}
+Ground truth is the simulator's verdict under return-code and abend scenarios.
+Under the primary definition every reorder is behaviour-changing because of
+abend propagation; with normal-completion semantics only, some reorders are
+harmless and RELIC flags them (sensitivity analysis in
+\texttt{results/final/metrics.json}). A detector ``flags'' a mutant if it
+returns any risk item; explanation quality is not scored. Mutants are
+synthetic and not grounded in verified migration-failure data.
+
+\paragraph{Internal validity.}
+\emph{Oracle--detector--mutator coupling.} The oracle is code-independent of
+RELIC (import-checked), but one team wrote the oracle, the mutator and the
+detector; the mutator and oracle share a lexer; both were read against the same
+IBM reference. A shared blind spot (same-named steps) was found and fixed during
+the evaluation; others may remain.
+\emph{Fixes selected on the evaluation data.} Defects D-001 to D-004 were found
+in, and scored on, the same three corpora. Only v1.0 is a pre-fix result, and
+even its provenance is a legacy-mode code path rather than a release checkout.
+\emph{Benchmark negatives.} 104 of 106 negatives are comment or MSGCLASS edits;
+there are no benign reorder, split, rename or symbol-change negatives.
+\emph{Mutator--detector co-design.} The threshold operator only weakens guards and
+the detector only reports weakening; guard strengthening is neither exercised nor
+reported.
+\emph{Language-model baseline.} One model, one prompt, one sample; 183 invalid
+outputs, concentrated in step-reorder and job-split operators; documentation
+of the model and provider was inconsistent across repository files (the committed
+records state \texttt{openai/gpt-oss-20b} via nvidia).
+
+\paragraph{External validity.}
+Three demonstration or teaching corpora; CardDemo dominates; single-file
+analysis; 66 evaluable files. No production JCL was available. No claim is made
+about production compatibility or other languages. Only three contract types
+are implemented.
+
+\paragraph{Conclusion validity.}
+Mutants cluster within files. Cluster-bootstrap intervals are reported; they
+ignore the selection effect above. Per-operator and secondary-subject cells are
+small (e.g.\ OMP course: 10 positives, 25 negatives). No significance tests are
+reported.
+
+\paragraph{Experiments required to close the main threats.}
+\begin{enumerate}
+  \item Frozen-detector evaluation on a never-opened corpus:
+    \textbf{[PENDING EXPERIMENT]}.
+  \item Independent oracle validation on z/OS or by an external mainframe engineer
+    on a stratified, blinded label sample: \textbf{[PENDING EXPERIMENT]}.
+  \item Inter-annotator agreement on oracle labels: \textbf{[PENDING EXPERIMENT]}.
+  \item Benchmark extension with benign reorder/split/rename/symbol negatives,
+    then a normalised-text baseline on it: \textbf{[PENDING EXPERIMENT]}.
+  \item Fair language-model re-run (documented model, retries, full coverage,
+    several models and prompts): \textbf{[PENDING EXPERIMENT]}.
+  \item Real-defect or change-history mutants: \textbf{[PENDING EXPERIMENT]}.
+\end{enumerate}

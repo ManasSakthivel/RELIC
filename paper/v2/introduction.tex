@@ -1,0 +1,61 @@
+% introduction.tex -- revised introduction
+\section{Introduction}
+\label{sec:intro}
+
+Re-implementing a JCL job stream on another platform is risky in a specific
+way: the new job usually runs, but it behaves differently in situations the
+migration did not consider. A step that used to be bypassed after a failure now
+runs, a consumer reads a dataset before its producer has rewritten it, or a
+renamed output is no longer found downstream. These rules are implicit in the
+semantics of JCL~\cite{ibm_jcl_reference}. Structural dependency tools record
+which step uses which dataset, but not the obligations (``step~B must not run if
+step~A ends with RC\,$>$\,4'') that the new implementation must preserve.
+
+RELIC extracts such obligations from JCL as explicit behavioural contracts
+(in the sense of design by contract~\cite{meyer1992applying}) and reports the
+contracts that a changed version of a job breaks or weakens. This paper reports
+a development-stage evaluation of RELIC and of the evaluation instrument built
+around it. It does \emph{not} report an independent validation.
+
+\paragraph{Research questions.}
+\begin{description}
+  \item[RQ1 (recovery)] How well do the contracts RELIC extracts match facts
+    derived from an execution-semantics simulator of JCL?
+  \item[RQ2 (detection)] Given an original and a mutated job, how well does a
+    contract-level diff separate behaviour-changing from behaviour-preserving
+    mutants, compared with structural, text-based and language-model baselines?
+  \item[RQ3 (benchmark validity)] Does the benchmark discriminate a
+    contract-aware detector from trivial change detectors?
+\end{description}
+
+\paragraph{Contributions.}
+\begin{enumerate}
+  \item A mutation benchmark for JCL change checking with complete accounting of
+    every candidate mutant (656 candidates; 566 evaluable; 90 excluded with
+    stated reasons) and ground-truth labels from an execution-semantics
+    simulator that is code-independent of the detector (but not
+    author-independent).
+  \item Diagnostic and negative findings: on this benchmark a text diff that
+    ignores JOB-card parameters scores F1~0.9978, higher than every RELIC variant
+    (0.9048, 0.9510, 0.9800); the evaluable negatives are almost entirely
+    cosmetic; and the committed language-model comparison is selection-biased
+    and not interpretable.
+  \item Behavioural-contract extraction and differencing for JCL
+    (TEMPORAL, RESOURCE, CONTROL\_FLOW) with documented scope limits and an
+    ablation of four post-hoc fixes.
+  \item A catalogue of threats to validity and a list of experiments that would
+    be needed before any claim of effectiveness.
+\end{enumerate}
+
+\paragraph{What we do not claim.} We do not claim that RELIC outperforms a
+normalised text diff or a language model, that the mutants represent real
+migration defects, that the oracle matches z/OS behaviour, that the V2 figures
+generalise beyond the three corpora, or that RELIC is compatible with
+production JCL. Each of these is \textbf{[PENDING EXPERIMENT]} where it would
+need new evidence (Section~\ref{sec:threats}).
+
+\paragraph{Organisation.} Section~\ref{sec:related} places the work in the
+literature; Section~\ref{sec:method} describes the benchmark and oracle;
+Section~\ref{sec:arch} the tool; Section~\ref{sec:results} the results;
+Sections~\ref{sec:discussion} and~\ref{sec:threats} the interpretation and
+threats; Section~\ref{sec:conclusion} concludes.
