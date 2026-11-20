@@ -1,0 +1,4021 @@
+{
+  "benchmark_adequacy": {
+    "negatives": 106,
+    "negatives_by_operator": {
+      "ALTER_COND_THRESHOLD": 1,
+      "CHANGE_MSGCLASS": 39,
+      "INSERT_COMMENT": 65,
+      "REMOVE_COND": 1
+    },
+    "negatives_that_are_cosmetic_comment_or_msgclass": 104,
+    "negatives_that_are_other": 2,
+    "note": "All evaluable behaviour-preserving mutants are comment insertions or MSGCLASS edits, except COND edits whose guarded step cannot be bypassed in any modelled scenario. Specificity therefore measures 'does not fire on cosmetic edits', not semantic-equivalence reasoning.",
+    "operators_with_zero_evaluable_mutants": [
+      "REMOVE_IF_GUARD"
+    ],
+    "positives_by_operator": {
+      "ALTER_COND_THRESHOLD": 34,
+      "DELETE_PRODUCER_STEP": 33,
+      "MOVE_CONSUMER_BEFORE_PRODUCER": 14,
+      "REMOVE_COND": 34,
+      "RENAME_OUTPUT_DATASET": 13,
+      "SPLIT_JOB": 166,
+      "SWAP_ADJACENT_STEPS": 166
+    }
+  },
+  "contract_recovery": {
+    "carddemo": {
+      "relic_v1_1": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 55
+        },
+        "RESOURCE": {
+          "f1": 0.45,
+          "fn": 13,
+          "fp": 9,
+          "precision": 0.5,
+          "recall": 0.4091,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 9
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 79
+        }
+      },
+      "relic_v2": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 55
+        },
+        "RESOURCE": {
+          "f1": 0.6667,
+          "fn": 11,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.5,
+          "specificity": null,
+          "tn": 0,
+          "tp": 11
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 79
+        }
+      },
+      "relic_v2_wo_D001": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 55
+        },
+        "RESOURCE": {
+          "f1": 0.6667,
+          "fn": 11,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.5,
+          "specificity": null,
+          "tn": 0,
+          "tp": 11
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 79
+        }
+      },
+      "relic_v2_wo_D002": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 55
+        },
+        "RESOURCE": {
+          "f1": 0.5143,
+          "fn": 13,
+          "fp": 4,
+          "precision": 0.6923,
+          "recall": 0.4091,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 9
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 79
+        }
+      },
+      "relic_v2_wo_D003": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 55
+        },
+        "RESOURCE": {
+          "f1": 0.6111,
+          "fn": 11,
+          "fp": 3,
+          "precision": 0.7857,
+          "recall": 0.5,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 11
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 79
+        }
+      },
+      "relic_v2_wo_D004": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 55
+        },
+        "RESOURCE": {
+          "f1": 0.6111,
+          "fn": 11,
+          "fp": 3,
+          "precision": 0.7857,
+          "recall": 0.5,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 11
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 79
+        }
+      }
+    },
+    "genapp": {
+      "relic_v1_1": {
+        "CONTROL_FLOW": {
+          "f1": 0.8889,
+          "fn": 0,
+          "fp": 2,
+          "precision": 0.8,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 8
+        },
+        "RESOURCE": {
+          "f1": 0.0,
+          "fn": 4,
+          "fp": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 0
+        },
+        "TEMPORAL": {
+          "f1": 0.9714,
+          "fn": 0,
+          "fp": 4,
+          "precision": 0.9444,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 68
+        }
+      },
+      "relic_v2": {
+        "CONTROL_FLOW": {
+          "f1": 0.8889,
+          "fn": 0,
+          "fp": 2,
+          "precision": 0.8,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 8
+        },
+        "RESOURCE": {
+          "f1": 0.4444,
+          "fn": 2,
+          "fp": 3,
+          "precision": 0.4,
+          "recall": 0.5,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 2
+        },
+        "TEMPORAL": {
+          "f1": 0.9714,
+          "fn": 0,
+          "fp": 4,
+          "precision": 0.9444,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 68
+        }
+      },
+      "relic_v2_wo_D001": {
+        "CONTROL_FLOW": {
+          "f1": 0.8889,
+          "fn": 0,
+          "fp": 2,
+          "precision": 0.8,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 8
+        },
+        "RESOURCE": {
+          "f1": 0.4444,
+          "fn": 2,
+          "fp": 3,
+          "precision": 0.4,
+          "recall": 0.5,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 2
+        },
+        "TEMPORAL": {
+          "f1": 0.9714,
+          "fn": 0,
+          "fp": 4,
+          "precision": 0.9444,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 68
+        }
+      },
+      "relic_v2_wo_D002": {
+        "CONTROL_FLOW": {
+          "f1": 0.8889,
+          "fn": 0,
+          "fp": 2,
+          "precision": 0.8,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 8
+        },
+        "RESOURCE": {
+          "f1": 0.0,
+          "fn": 4,
+          "fp": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 0
+        },
+        "TEMPORAL": {
+          "f1": 0.9714,
+          "fn": 0,
+          "fp": 4,
+          "precision": 0.9444,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 68
+        }
+      },
+      "relic_v2_wo_D003": {
+        "CONTROL_FLOW": {
+          "f1": 0.8889,
+          "fn": 0,
+          "fp": 2,
+          "precision": 0.8,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 8
+        },
+        "RESOURCE": {
+          "f1": 0.4444,
+          "fn": 2,
+          "fp": 3,
+          "precision": 0.4,
+          "recall": 0.5,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 2
+        },
+        "TEMPORAL": {
+          "f1": 0.9714,
+          "fn": 0,
+          "fp": 4,
+          "precision": 0.9444,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 68
+        }
+      },
+      "relic_v2_wo_D004": {
+        "CONTROL_FLOW": {
+          "f1": 0.8889,
+          "fn": 0,
+          "fp": 2,
+          "precision": 0.8,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 8
+        },
+        "RESOURCE": {
+          "f1": 0.4444,
+          "fn": 2,
+          "fp": 3,
+          "precision": 0.4,
+          "recall": 0.5,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 2
+        },
+        "TEMPORAL": {
+          "f1": 0.9714,
+          "fn": 0,
+          "fp": 4,
+          "precision": 0.9444,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 68
+        }
+      }
+    },
+    "omp_course": {
+      "relic_v1_1": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "RESOURCE": {
+          "f1": 0.0,
+          "fn": 23,
+          "fp": 0,
+          "precision": null,
+          "recall": 0.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 0
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 26
+        }
+      },
+      "relic_v2": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "RESOURCE": {
+          "f1": 0.0,
+          "fn": 23,
+          "fp": 0,
+          "precision": null,
+          "recall": 0.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 0
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 26
+        }
+      },
+      "relic_v2_wo_D001": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "RESOURCE": {
+          "f1": 0.0,
+          "fn": 23,
+          "fp": 0,
+          "precision": null,
+          "recall": 0.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 0
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 26
+        }
+      },
+      "relic_v2_wo_D002": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "RESOURCE": {
+          "f1": 0.0,
+          "fn": 23,
+          "fp": 0,
+          "precision": null,
+          "recall": 0.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 0
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 26
+        }
+      },
+      "relic_v2_wo_D003": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "RESOURCE": {
+          "f1": 0.0,
+          "fn": 23,
+          "fp": 0,
+          "precision": null,
+          "recall": 0.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 0
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 26
+        }
+      },
+      "relic_v2_wo_D004": {
+        "CONTROL_FLOW": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "RESOURCE": {
+          "f1": 0.0,
+          "fn": 23,
+          "fp": 0,
+          "precision": null,
+          "recall": 0.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 0
+        },
+        "TEMPORAL": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 26
+        }
+      }
+    }
+  },
+  "detector_notes": {
+    "relic_v1_0": "committed predictions (primary detector of results/final)",
+    "relic_v1_1": "recomputed; verified equal to committed predictions",
+    "relic_v2": "v1.1 + D-001 step identity + D-002 DD parsing + D-003 producer-before-consumer + D-004 DISP=(MOD,DELETE) idiom (opt-in v2_fixes)",
+    "relic_v2_wo_D001": "ablation: V2 without D-001",
+    "relic_v2_wo_D002": "ablation: V2 without D-002",
+    "relic_v2_wo_D003": "ablation: V2 without D-003",
+    "relic_v2_wo_D004": "ablation: V2 without D-004",
+    "textdiff_ignore_job_parameters": "post-hoc diagnostic, not a competing detector"
+  },
+  "detectors": [
+    "relic_v1_0",
+    "relic_v1_1",
+    "relic_v2",
+    "relic_v2_wo_D001",
+    "relic_v2_wo_D002",
+    "relic_v2_wo_D003",
+    "relic_v2_wo_D004",
+    "static_bcg_E",
+    "structural_A",
+    "complexity_B",
+    "textdiff",
+    "textdiff_ignore_job_parameters"
+  ],
+  "flips_v2_vs_v1_1": {
+    "gained_false_positives": 0,
+    "gained_flags": [
+      "carddemo/app/jcl/DEFCUST.jcl/SPLIT_JOB/0",
+      "carddemo/app/jcl/TRANREPT.jcl/DELETE_PRODUCER_STEP/0",
+      "carddemo/app/jcl/TRANREPT.jcl/SPLIT_JOB/0",
+      "carddemo/app/jcl/TRANREPT.jcl/SWAP_ADJACENT_STEPS/0",
+      "carddemo/app/jcl/TRANREPT.jcl/SWAP_ADJACENT_STEPS/1",
+      "carddemo/samples/jcl/IMSMQCMP.jcl/RENAME_OUTPUT_DATASET/0",
+      "genapp/base/cntl/asmmap.jcl/RENAME_OUTPUT_DATASET/0",
+      "genapp/base/cntl/asmmap.jcl/RENAME_OUTPUT_DATASET/1",
+      "genapp/base/cntl/db2cre.jcl/ALTER_COND_THRESHOLD/1",
+      "genapp/base/cntl/db2cre.jcl/ALTER_COND_THRESHOLD/2",
+      "genapp/base/cntl/db2cre.jcl/ALTER_COND_THRESHOLD/3",
+      "genapp/base/cntl/db2cre.jcl/ALTER_COND_THRESHOLD/4",
+      "genapp/base/cntl/db2cre.jcl/ALTER_COND_THRESHOLD/5",
+      "genapp/base/cntl/db2cre.jcl/ALTER_COND_THRESHOLD/6",
+      "genapp/base/cntl/db2cre.jcl/REMOVE_COND/1",
+      "genapp/base/cntl/db2cre.jcl/REMOVE_COND/2",
+      "genapp/base/cntl/db2cre.jcl/REMOVE_COND/3",
+      "genapp/base/cntl/db2cre.jcl/REMOVE_COND/4",
+      "genapp/base/cntl/db2cre.jcl/REMOVE_COND/5",
+      "genapp/base/cntl/db2cre.jcl/REMOVE_COND/6",
+      "genapp/base/cntl/db2cre.jcl/SWAP_ADJACENT_STEPS/0",
+      "genapp/base/cntl/wsaap01.jcl/SPLIT_JOB/0",
+      "genapp/base/cntl/wsaap01.jcl/SPLIT_JOB/1",
+      "genapp/base/cntl/wsaap01.jcl/SPLIT_JOB/2",
+      "genapp/base/cntl/wsaup01.jcl/SPLIT_JOB/0",
+      "genapp/base/cntl/wsaup01.jcl/SPLIT_JOB/1",
+      "genapp/base/cntl/wsaup01.jcl/SPLIT_JOB/2"
+    ],
+    "gained_true_positives": 27,
+    "lost_false_positives_removed": 0,
+    "lost_flags": [
+      "carddemo/app/jcl/DUSRSECJ.jcl/RENAME_OUTPUT_DATASET/0",
+      "carddemo/app/jcl/ESDSRRDS.jcl/RENAME_OUTPUT_DATASET/0"
+    ],
+    "lost_true_positives": 2,
+    "remaining_false_negatives_v2": [
+      "carddemo/app/jcl/DEFCUST.jcl/SWAP_ADJACENT_STEPS/0",
+      "carddemo/app/jcl/DUSRSECJ.jcl/RENAME_OUTPUT_DATASET/0",
+      "carddemo/app/jcl/ESDSRRDS.jcl/RENAME_OUTPUT_DATASET/0",
+      "carddemo/app/jcl/PRTCATBL.jcl/RENAME_OUTPUT_DATASET/1",
+      "carddemo/app/jcl/TRANREPT.jcl/RENAME_OUTPUT_DATASET/0",
+      "genapp/base/cntl/db2cre.jcl/SWAP_ADJACENT_STEPS/1",
+      "genapp/base/cntl/db2cre.jcl/SWAP_ADJACENT_STEPS/2",
+      "genapp/base/cntl/db2cre.jcl/SWAP_ADJACENT_STEPS/3",
+      "genapp/base/cntl/db2cre.jcl/SWAP_ADJACENT_STEPS/4",
+      "genapp/base/cntl/db2cre.jcl/SWAP_ADJACENT_STEPS/5",
+      "genapp/base/cntl/db2cre.jcl/SWAP_ADJACENT_STEPS/6",
+      "genapp/base/cntl/wsaap01.jcl/SWAP_ADJACENT_STEPS/0",
+      "genapp/base/cntl/wsaap01.jcl/SWAP_ADJACENT_STEPS/1",
+      "genapp/base/cntl/wsaap01.jcl/SWAP_ADJACENT_STEPS/2",
+      "genapp/base/cntl/wsaip01.jcl/SWAP_ADJACENT_STEPS/3",
+      "genapp/base/cntl/wsaup01.jcl/SWAP_ADJACENT_STEPS/0",
+      "genapp/base/cntl/wsaup01.jcl/SWAP_ADJACENT_STEPS/1",
+      "genapp/base/cntl/wsaup01.jcl/SWAP_ADJACENT_STEPS/2"
+    ],
+    "remaining_false_positives_v2": []
+  },
+  "llm_selection_analysis": {
+    "available": true,
+    "llm_bounds_on_all_evaluable": {
+      "llm_C_invalid_as_flagged": {
+        "f1": 0.9717,
+        "fn": 13,
+        "fp": 13,
+        "precision": 0.9717,
+        "recall": 0.9717,
+        "specificity": 0.8774,
+        "tn": 93,
+        "tp": 447
+      },
+      "llm_C_invalid_as_not_flagged": {
+        "f1": 0.8083,
+        "fn": 148,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.6783,
+        "specificity": 1.0,
+        "tn": 106,
+        "tp": 312
+      },
+      "llm_D_invalid_as_flagged": {
+        "f1": 0.9536,
+        "fn": 28,
+        "fp": 14,
+        "precision": 0.9686,
+        "recall": 0.9391,
+        "specificity": 0.8679,
+        "tn": 92,
+        "tp": 432
+      },
+      "llm_D_invalid_as_not_flagged": {
+        "f1": 0.8468,
+        "fn": 120,
+        "fp": 3,
+        "precision": 0.9913,
+        "recall": 0.7391,
+        "specificity": 0.9717,
+        "tn": 103,
+        "tp": 340
+      }
+    },
+    "non_ok_reasons": {
+      "llm_C:INVALID_OUTPUT:no JSON object in response": 148,
+      "llm_D:INVALID_OUTPUT:no JSON object in response": 103
+    },
+    "not_scored": {
+      "by_operator": {
+        "ALTER_COND_THRESHOLD": 17,
+        "CHANGE_MSGCLASS": 5,
+        "DELETE_PRODUCER_STEP": 3,
+        "INSERT_COMMENT": 13,
+        "MOVE_CONSUMER_BEFORE_PRODUCER": 2,
+        "REMOVE_COND": 19,
+        "RENAME_OUTPUT_DATASET": 1,
+        "SPLIT_JOB": 52,
+        "SWAP_ADJACENT_STEPS": 71
+      },
+      "by_subject": {
+        "carddemo": 90,
+        "genapp": 89,
+        "omp_course": 4
+      },
+      "n": 183,
+      "positive_share": 0.8962
+    },
+    "relic_v1_0_all_evaluable": {
+      "f1": 0.9048,
+      "fn": 80,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.8261,
+      "specificity": 1.0,
+      "tn": 106,
+      "tp": 380
+    },
+    "relic_v2_all_evaluable": {
+      "f1": 0.98,
+      "fn": 18,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.9609,
+      "specificity": 1.0,
+      "tn": 106,
+      "tp": 442
+    },
+    "scored_on_both_baselines": {
+      "by_operator": {
+        "ALTER_COND_THRESHOLD": 18,
+        "CHANGE_MSGCLASS": 34,
+        "DELETE_PRODUCER_STEP": 30,
+        "INSERT_COMMENT": 52,
+        "MOVE_CONSUMER_BEFORE_PRODUCER": 12,
+        "REMOVE_COND": 16,
+        "RENAME_OUTPUT_DATASET": 12,
+        "SPLIT_JOB": 114,
+        "SWAP_ADJACENT_STEPS": 95
+      },
+      "by_subject": {
+        "carddemo": 225,
+        "genapp": 127,
+        "omp_course": 31
+      },
+      "n": 383,
+      "positive_share": 0.7728
+    },
+    "status_counts": {
+      "llm_C:INVALID_OUTPUT": 148,
+      "llm_C:OK": 418,
+      "llm_D:INVALID_OUTPUT": 103,
+      "llm_D:OK": 463
+    }
+  },
+  "n_evaluable_replayed": 566,
+  "oracle": "unchanged: labels and statuses are the committed results/final records",
+  "per_contract_type": {
+    "carddemo": {
+      "CONTROL_FLOW": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "tn": 2,
+          "tp": 42
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "tn": 2,
+          "tp": 42
+        },
+        "textdiff": {
+          "f1": 0.9767,
+          "fn": 0,
+          "fp": 2,
+          "precision": 0.9545,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 42
+        }
+      },
+      "NONE": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 59,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 59,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": 0.0,
+          "fn": 0,
+          "fp": 29,
+          "precision": 0.0,
+          "recall": null,
+          "specificity": 0.5085,
+          "tn": 30,
+          "tp": 0
+        }
+      },
+      "RESOURCE": {
+        "relic_v1_1": {
+          "f1": 0.9583,
+          "fn": 4,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.92,
+          "specificity": null,
+          "tn": 0,
+          "tp": 46
+        },
+        "relic_v2": {
+          "f1": 0.9583,
+          "fn": 4,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.92,
+          "specificity": null,
+          "tn": 0,
+          "tp": 46
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 50
+        }
+      },
+      "TEMPORAL": {
+        "relic_v1_1": {
+          "f1": 0.9843,
+          "fn": 5,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9691,
+          "specificity": null,
+          "tn": 0,
+          "tp": 157
+        },
+        "relic_v2": {
+          "f1": 0.9969,
+          "fn": 1,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9938,
+          "specificity": null,
+          "tn": 0,
+          "tp": 161
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 162
+        }
+      }
+    },
+    "genapp": {
+      "CONTROL_FLOW": {
+        "relic_v1_1": {
+          "f1": 0.6667,
+          "fn": 12,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.5,
+          "specificity": null,
+          "tn": 0,
+          "tp": 12
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 24
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 24
+        }
+      },
+      "NONE": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 20,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 20,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": 0.0,
+          "fn": 0,
+          "fp": 10,
+          "precision": 0.0,
+          "recall": null,
+          "specificity": 0.5,
+          "tn": 10,
+          "tp": 0
+        }
+      },
+      "RESOURCE": {
+        "relic_v1_1": {
+          "f1": 0.8889,
+          "fn": 2,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.8,
+          "specificity": null,
+          "tn": 0,
+          "tp": 8
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 10
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 10
+        }
+      },
+      "TEMPORAL": {
+        "relic_v1_1": {
+          "f1": 0.9342,
+          "fn": 20,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.8765,
+          "specificity": null,
+          "tn": 0,
+          "tp": 142
+        },
+        "relic_v2": {
+          "f1": 0.9582,
+          "fn": 13,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9198,
+          "specificity": null,
+          "tn": 0,
+          "tp": 149
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 162
+        }
+      }
+    },
+    "omp_course": {
+      "CONTROL_FLOW": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 2
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 2
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 2
+        }
+      },
+      "NONE": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 25,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 25,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 25,
+          "tp": 0
+        }
+      },
+      "TEMPORAL": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 8
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 8
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 8
+        }
+      }
+    },
+    "pooled": {
+      "CONTROL_FLOW": {
+        "relic_v1_1": {
+          "f1": 0.9032,
+          "fn": 12,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.8235,
+          "specificity": 1.0,
+          "tn": 2,
+          "tp": 56
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "tn": 2,
+          "tp": 68
+        },
+        "textdiff": {
+          "f1": 0.9855,
+          "fn": 0,
+          "fp": 2,
+          "precision": 0.9714,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 68
+        }
+      },
+      "NONE": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 104,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 104,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": 0.0,
+          "fn": 0,
+          "fp": 39,
+          "precision": 0.0,
+          "recall": null,
+          "specificity": 0.625,
+          "tn": 65,
+          "tp": 0
+        }
+      },
+      "RESOURCE": {
+        "relic_v1_1": {
+          "f1": 0.9474,
+          "fn": 6,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9,
+          "specificity": null,
+          "tn": 0,
+          "tp": 54
+        },
+        "relic_v2": {
+          "f1": 0.9655,
+          "fn": 4,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9333,
+          "specificity": null,
+          "tn": 0,
+          "tp": 56
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 60
+        }
+      },
+      "TEMPORAL": {
+        "relic_v1_1": {
+          "f1": 0.9609,
+          "fn": 25,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9247,
+          "specificity": null,
+          "tn": 0,
+          "tp": 307
+        },
+        "relic_v2": {
+          "f1": 0.9785,
+          "fn": 14,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9578,
+          "specificity": null,
+          "tn": 0,
+          "tp": 318
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 332
+        }
+      }
+    }
+  },
+  "per_operator": {
+    "carddemo": {
+      "ALTER_COND_THRESHOLD": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "tn": 1,
+          "tp": 21
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "tn": 1,
+          "tp": 21
+        },
+        "textdiff": {
+          "f1": 0.9767,
+          "fn": 0,
+          "fp": 1,
+          "precision": 0.9545,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 21
+        }
+      },
+      "CHANGE_MSGCLASS": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 29,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 29,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": 0.0,
+          "fn": 0,
+          "fp": 29,
+          "precision": 0.0,
+          "recall": null,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 0
+        }
+      },
+      "DELETE_PRODUCER_STEP": {
+        "relic_v1_1": {
+          "f1": 0.9818,
+          "fn": 1,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9643,
+          "specificity": null,
+          "tn": 0,
+          "tp": 27
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 28
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 28
+        }
+      },
+      "INSERT_COMMENT": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 30,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 30,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 30,
+          "tp": 0
+        }
+      },
+      "MOVE_CONSUMER_BEFORE_PRODUCER": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 11
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 11
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 11
+        }
+      },
+      "REMOVE_COND": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "tn": 1,
+          "tp": 21
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "tn": 1,
+          "tp": 21
+        },
+        "textdiff": {
+          "f1": 0.9767,
+          "fn": 0,
+          "fp": 1,
+          "precision": 0.9545,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 21
+        }
+      },
+      "RENAME_OUTPUT_DATASET": {
+        "relic_v1_1": {
+          "f1": 0.8421,
+          "fn": 3,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.7273,
+          "specificity": null,
+          "tn": 0,
+          "tp": 8
+        },
+        "relic_v2": {
+          "f1": 0.7778,
+          "fn": 4,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.6364,
+          "specificity": null,
+          "tn": 0,
+          "tp": 7
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 11
+        }
+      },
+      "SPLIT_JOB": {
+        "relic_v1_1": {
+          "f1": 0.9875,
+          "fn": 2,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9753,
+          "specificity": null,
+          "tn": 0,
+          "tp": 79
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 81
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 81
+        }
+      },
+      "SWAP_ADJACENT_STEPS": {
+        "relic_v1_1": {
+          "f1": 0.9811,
+          "fn": 3,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.963,
+          "specificity": null,
+          "tn": 0,
+          "tp": 78
+        },
+        "relic_v2": {
+          "f1": 0.9938,
+          "fn": 1,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9877,
+          "specificity": null,
+          "tn": 0,
+          "tp": 80
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 81
+        }
+      }
+    },
+    "genapp": {
+      "ALTER_COND_THRESHOLD": {
+        "relic_v1_1": {
+          "f1": 0.6667,
+          "fn": 6,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.5,
+          "specificity": null,
+          "tn": 0,
+          "tp": 6
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 12
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 12
+        }
+      },
+      "CHANGE_MSGCLASS": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 10,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 10,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": 0.0,
+          "fn": 0,
+          "fp": 10,
+          "precision": 0.0,
+          "recall": null,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 0
+        }
+      },
+      "DELETE_PRODUCER_STEP": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 5
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 5
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 5
+        }
+      },
+      "INSERT_COMMENT": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 10,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 10,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 10,
+          "tp": 0
+        }
+      },
+      "MOVE_CONSUMER_BEFORE_PRODUCER": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 3
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 3
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 3
+        }
+      },
+      "REMOVE_COND": {
+        "relic_v1_1": {
+          "f1": 0.6667,
+          "fn": 6,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.5,
+          "specificity": null,
+          "tn": 0,
+          "tp": 6
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 12
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 12
+        }
+      },
+      "RENAME_OUTPUT_DATASET": {
+        "relic_v1_1": {
+          "f1": 0.0,
+          "fn": 2,
+          "fp": 0,
+          "precision": null,
+          "recall": 0.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 2
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 2
+        }
+      },
+      "SPLIT_JOB": {
+        "relic_v1_1": {
+          "f1": 0.9615,
+          "fn": 6,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9259,
+          "specificity": null,
+          "tn": 0,
+          "tp": 75
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 81
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 81
+        }
+      },
+      "SWAP_ADJACENT_STEPS": {
+        "relic_v1_1": {
+          "f1": 0.9054,
+          "fn": 14,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.8272,
+          "specificity": null,
+          "tn": 0,
+          "tp": 67
+        },
+        "relic_v2": {
+          "f1": 0.9128,
+          "fn": 13,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.8395,
+          "specificity": null,
+          "tn": 0,
+          "tp": 68
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 81
+        }
+      }
+    },
+    "omp_course": {
+      "ALTER_COND_THRESHOLD": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        }
+      },
+      "INSERT_COMMENT": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 25,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 25,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 25,
+          "tp": 0
+        }
+      },
+      "REMOVE_COND": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 1
+        }
+      },
+      "SPLIT_JOB": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 4
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 4
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 4
+        }
+      },
+      "SWAP_ADJACENT_STEPS": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 4
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 4
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 4
+        }
+      }
+    },
+    "pooled": {
+      "ALTER_COND_THRESHOLD": {
+        "relic_v1_1": {
+          "f1": 0.9032,
+          "fn": 6,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.8235,
+          "specificity": 1.0,
+          "tn": 1,
+          "tp": 28
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "tn": 1,
+          "tp": 34
+        },
+        "textdiff": {
+          "f1": 0.9855,
+          "fn": 0,
+          "fp": 1,
+          "precision": 0.9714,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 34
+        }
+      },
+      "CHANGE_MSGCLASS": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 39,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 39,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": 0.0,
+          "fn": 0,
+          "fp": 39,
+          "precision": 0.0,
+          "recall": null,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 0
+        }
+      },
+      "DELETE_PRODUCER_STEP": {
+        "relic_v1_1": {
+          "f1": 0.9846,
+          "fn": 1,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9697,
+          "specificity": null,
+          "tn": 0,
+          "tp": 32
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 33
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 33
+        }
+      },
+      "INSERT_COMMENT": {
+        "relic_v1_1": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 65,
+          "tp": 0
+        },
+        "relic_v2": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 65,
+          "tp": 0
+        },
+        "textdiff": {
+          "f1": null,
+          "fn": 0,
+          "fp": 0,
+          "precision": null,
+          "recall": null,
+          "specificity": 1.0,
+          "tn": 65,
+          "tp": 0
+        }
+      },
+      "MOVE_CONSUMER_BEFORE_PRODUCER": {
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 14
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 14
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 14
+        }
+      },
+      "REMOVE_COND": {
+        "relic_v1_1": {
+          "f1": 0.9032,
+          "fn": 6,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.8235,
+          "specificity": 1.0,
+          "tn": 1,
+          "tp": 28
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": 1.0,
+          "tn": 1,
+          "tp": 34
+        },
+        "textdiff": {
+          "f1": 0.9855,
+          "fn": 0,
+          "fp": 1,
+          "precision": 0.9714,
+          "recall": 1.0,
+          "specificity": 0.0,
+          "tn": 0,
+          "tp": 34
+        }
+      },
+      "RENAME_OUTPUT_DATASET": {
+        "relic_v1_1": {
+          "f1": 0.7619,
+          "fn": 5,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.6154,
+          "specificity": null,
+          "tn": 0,
+          "tp": 8
+        },
+        "relic_v2": {
+          "f1": 0.8182,
+          "fn": 4,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.6923,
+          "specificity": null,
+          "tn": 0,
+          "tp": 9
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 13
+        }
+      },
+      "SPLIT_JOB": {
+        "relic_v1_1": {
+          "f1": 0.9753,
+          "fn": 8,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9518,
+          "specificity": null,
+          "tn": 0,
+          "tp": 158
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 166
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 166
+        }
+      },
+      "SWAP_ADJACENT_STEPS": {
+        "relic_v1_1": {
+          "f1": 0.946,
+          "fn": 17,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.8976,
+          "specificity": null,
+          "tn": 0,
+          "tp": 149
+        },
+        "relic_v2": {
+          "f1": 0.956,
+          "fn": 14,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 0.9157,
+          "specificity": null,
+          "tn": 0,
+          "tp": 152
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "specificity": null,
+          "tn": 0,
+          "tp": 166
+        }
+      }
+    }
+  },
+  "populations": {
+    "carddemo": {
+      "bootstrap": {
+        "diff_ci95": {
+          "relic_v2-relic_v1_0": [
+            0.0381,
+            0.1087
+          ],
+          "relic_v2-relic_v1_1": [
+            -0.0063,
+            0.0309
+          ],
+          "relic_v2-relic_v2_wo_D001": [
+            0.0,
+            0.0245
+          ],
+          "relic_v2-relic_v2_wo_D002": [
+            -0.0092,
+            0.0042
+          ],
+          "relic_v2-relic_v2_wo_D003": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-relic_v2_wo_D004": [
+            -0.0097,
+            0.0
+          ],
+          "relic_v2-textdiff": [
+            0.0318,
+            0.0705
+          ]
+        },
+        "f1_ci95": {
+          "complexity_B": [
+            0.186,
+            0.714
+          ],
+          "relic_v1_0": [
+            0.8778,
+            0.953
+          ],
+          "relic_v1_1": [
+            0.9538,
+            0.9981
+          ],
+          "relic_v2": [
+            0.9803,
+            0.9976
+          ],
+          "relic_v2_wo_D001": [
+            0.9586,
+            0.9965
+          ],
+          "relic_v2_wo_D002": [
+            0.9837,
+            0.9982
+          ],
+          "relic_v2_wo_D003": [
+            0.9803,
+            0.9976
+          ],
+          "relic_v2_wo_D004": [
+            0.9855,
+            1.0
+          ],
+          "static_bcg_E": [
+            0.8778,
+            0.953
+          ],
+          "structural_A": [
+            0.8427,
+            0.9484
+          ],
+          "textdiff": [
+            0.9188,
+            0.9584
+          ],
+          "textdiff_ignore_job_parameters": [
+            0.9854,
+            1.0
+          ]
+        },
+        "n_clusters": 31,
+        "reps": 10000,
+        "seed": 20261004
+      },
+      "detectors": {
+        "complexity_B": {
+          "f1": 0.5225,
+          "fn": 161,
+          "fp": 9,
+          "fpr": 0.1475,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 0.9118,
+          "precision_ci95": [
+            0.8408,
+            0.9529
+          ],
+          "recall": 0.3661,
+          "recall_ci95": [
+            0.3093,
+            0.427
+          ],
+          "specificity": 0.8525,
+          "specificity_ci95": [
+            0.7428,
+            0.9204
+          ],
+          "tn": 52,
+          "tp": 93
+        },
+        "relic_v1_0": {
+          "f1": 0.9191,
+          "fn": 38,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9825,
+            1.0
+          ],
+          "recall": 0.8504,
+          "recall_ci95": [
+            0.8013,
+            0.889
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9408,
+            1.0
+          ],
+          "tn": 61,
+          "tp": 216
+        },
+        "relic_v1_1": {
+          "f1": 0.982,
+          "fn": 9,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9846,
+            1.0
+          ],
+          "recall": 0.9646,
+          "recall_ci95": [
+            0.934,
+            0.9812
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9408,
+            1.0
+          ],
+          "tn": 61,
+          "tp": 245
+        },
+        "relic_v2": {
+          "f1": 0.9901,
+          "fn": 5,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9848,
+            1.0
+          ],
+          "recall": 0.9803,
+          "recall_ci95": [
+            0.9548,
+            0.9916
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9408,
+            1.0
+          ],
+          "tn": 61,
+          "tp": 249
+        },
+        "relic_v2_wo_D001": {
+          "f1": 0.982,
+          "fn": 9,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9846,
+            1.0
+          ],
+          "recall": 0.9646,
+          "recall_ci95": [
+            0.934,
+            0.9812
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9408,
+            1.0
+          ],
+          "tn": 61,
+          "tp": 245
+        },
+        "relic_v2_wo_D002": {
+          "f1": 0.9921,
+          "fn": 4,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9849,
+            1.0
+          ],
+          "recall": 0.9843,
+          "recall_ci95": [
+            0.9602,
+            0.9939
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9408,
+            1.0
+          ],
+          "tn": 61,
+          "tp": 250
+        },
+        "relic_v2_wo_D003": {
+          "f1": 0.9901,
+          "fn": 5,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9848,
+            1.0
+          ],
+          "recall": 0.9803,
+          "recall_ci95": [
+            0.9548,
+            0.9916
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9408,
+            1.0
+          ],
+          "tn": 61,
+          "tp": 249
+        },
+        "relic_v2_wo_D004": {
+          "f1": 0.9941,
+          "fn": 3,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9849,
+            1.0
+          ],
+          "recall": 0.9882,
+          "recall_ci95": [
+            0.9659,
+            0.996
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9408,
+            1.0
+          ],
+          "tn": 61,
+          "tp": 251
+        },
+        "static_bcg_E": {
+          "f1": 0.9191,
+          "fn": 38,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9825,
+            1.0
+          ],
+          "recall": 0.8504,
+          "recall_ci95": [
+            0.8013,
+            0.889
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9408,
+            1.0
+          ],
+          "tn": 61,
+          "tp": 216
+        },
+        "structural_A": {
+          "f1": 0.8957,
+          "fn": 48,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9817,
+            1.0
+          ],
+          "recall": 0.811,
+          "recall_ci95": [
+            0.7584,
+            0.8544
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9408,
+            1.0
+          ],
+          "tn": 61,
+          "tp": 206
+        },
+        "textdiff": {
+          "f1": 0.9425,
+          "fn": 0,
+          "fp": 31,
+          "fpr": 0.5082,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 0.8912,
+          "precision_ci95": [
+            0.8497,
+            0.9223
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9851,
+            1.0
+          ],
+          "specificity": 0.4918,
+          "specificity_ci95": [
+            0.3706,
+            0.614
+          ],
+          "tn": 30,
+          "tp": 254
+        },
+        "textdiff_ignore_job_parameters": {
+          "f1": 0.9961,
+          "fn": 0,
+          "fp": 2,
+          "fpr": 0.0328,
+          "n": 315,
+          "negatives": 61,
+          "no_prediction": 0,
+          "positives": 254,
+          "precision": 0.9922,
+          "precision_ci95": [
+            0.972,
+            0.9979
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9851,
+            1.0
+          ],
+          "specificity": 0.9672,
+          "specificity_ci95": [
+            0.8881,
+            0.991
+          ],
+          "tn": 59,
+          "tp": 254
+        }
+      },
+      "n": 315,
+      "n_files": 31,
+      "negatives": 61,
+      "positives": 254
+    },
+    "genapp": {
+      "bootstrap": {
+        "diff_ci95": {
+          "relic_v2-relic_v1_0": [
+            0.0178,
+            0.2501
+          ],
+          "relic_v2-relic_v1_1": [
+            0.007,
+            0.1929
+          ],
+          "relic_v2-relic_v2_wo_D001": [
+            0.0,
+            0.1828
+          ],
+          "relic_v2-relic_v2_wo_D002": [
+            0.0,
+            0.025
+          ],
+          "relic_v2-relic_v2_wo_D003": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-relic_v2_wo_D004": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-textdiff": [
+            -0.0574,
+            0.0199
+          ]
+        },
+        "f1_ci95": {
+          "complexity_B": [
+            0.0,
+            0.8126
+          ],
+          "relic_v1_0": [
+            0.6592,
+            0.9744
+          ],
+          "relic_v1_1": [
+            0.7143,
+            0.9867
+          ],
+          "relic_v2": [
+            0.9037,
+            0.9948
+          ],
+          "relic_v2_wo_D001": [
+            0.7264,
+            0.993
+          ],
+          "relic_v2_wo_D002": [
+            0.892,
+            0.9904
+          ],
+          "relic_v2_wo_D003": [
+            0.9037,
+            0.9948
+          ],
+          "relic_v2_wo_D004": [
+            0.9037,
+            0.9948
+          ],
+          "static_bcg_E": [
+            0.6592,
+            0.9744
+          ],
+          "structural_A": [
+            0.6525,
+            0.9745
+          ],
+          "textdiff": [
+            0.9485,
+            0.9846
+          ],
+          "textdiff_ignore_job_parameters": [
+            1.0,
+            1.0
+          ]
+        },
+        "n_clusters": 10,
+        "reps": 10000,
+        "seed": 20261004
+      },
+      "detectors": {
+        "complexity_B": {
+          "f1": 0.4651,
+          "fn": 136,
+          "fp": 2,
+          "fpr": 0.1,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 0.9677,
+          "precision_ci95": [
+            0.8898,
+            0.9911
+          ],
+          "recall": 0.3061,
+          "recall_ci95": [
+            0.2458,
+            0.3739
+          ],
+          "specificity": 0.9,
+          "specificity_ci95": [
+            0.699,
+            0.9721
+          ],
+          "tn": 18,
+          "tp": 60
+        },
+        "relic_v1_0": {
+          "f1": 0.8832,
+          "fn": 41,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9758,
+            1.0
+          ],
+          "recall": 0.7908,
+          "recall_ci95": [
+            0.7286,
+            0.8419
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 155
+        },
+        "relic_v1_1": {
+          "f1": 0.905,
+          "fn": 34,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9768,
+            1.0
+          ],
+          "recall": 0.8265,
+          "recall_ci95": [
+            0.7674,
+            0.8731
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 162
+        },
+        "relic_v2": {
+          "f1": 0.9657,
+          "fn": 13,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9794,
+            1.0
+          ],
+          "recall": 0.9337,
+          "recall_ci95": [
+            0.8898,
+            0.9608
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 183
+        },
+        "relic_v2_wo_D001": {
+          "f1": 0.9111,
+          "fn": 32,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9771,
+            1.0
+          ],
+          "recall": 0.8367,
+          "recall_ci95": [
+            0.7786,
+            0.8819
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 164
+        },
+        "relic_v2_wo_D002": {
+          "f1": 0.9602,
+          "fn": 15,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9792,
+            1.0
+          ],
+          "recall": 0.9235,
+          "recall_ci95": [
+            0.8776,
+            0.9531
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 181
+        },
+        "relic_v2_wo_D003": {
+          "f1": 0.9657,
+          "fn": 13,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9794,
+            1.0
+          ],
+          "recall": 0.9337,
+          "recall_ci95": [
+            0.8898,
+            0.9608
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 183
+        },
+        "relic_v2_wo_D004": {
+          "f1": 0.9657,
+          "fn": 13,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9794,
+            1.0
+          ],
+          "recall": 0.9337,
+          "recall_ci95": [
+            0.8898,
+            0.9608
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 183
+        },
+        "static_bcg_E": {
+          "f1": 0.8832,
+          "fn": 41,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9758,
+            1.0
+          ],
+          "recall": 0.7908,
+          "recall_ci95": [
+            0.7286,
+            0.8419
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 155
+        },
+        "structural_A": {
+          "f1": 0.88,
+          "fn": 42,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9757,
+            1.0
+          ],
+          "recall": 0.7857,
+          "recall_ci95": [
+            0.7231,
+            0.8374
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 154
+        },
+        "textdiff": {
+          "f1": 0.9751,
+          "fn": 0,
+          "fp": 10,
+          "fpr": 0.5,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 0.9515,
+          "precision_ci95": [
+            0.913,
+            0.9734
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9808,
+            1.0
+          ],
+          "specificity": 0.5,
+          "specificity_ci95": [
+            0.2993,
+            0.7007
+          ],
+          "tn": 10,
+          "tp": 196
+        },
+        "textdiff_ignore_job_parameters": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 216,
+          "negatives": 20,
+          "no_prediction": 0,
+          "positives": 196,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9808,
+            1.0
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9808,
+            1.0
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8389,
+            1.0
+          ],
+          "tn": 20,
+          "tp": 196
+        }
+      },
+      "n": 216,
+      "n_files": 10,
+      "negatives": 20,
+      "positives": 196
+    },
+    "omp_course": {
+      "bootstrap": {
+        "diff_ci95": {
+          "relic_v2-relic_v1_0": [
+            0.0,
+            0.1429
+          ],
+          "relic_v2-relic_v1_1": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-relic_v2_wo_D001": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-relic_v2_wo_D002": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-relic_v2_wo_D003": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-relic_v2_wo_D004": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-textdiff": [
+            0.0,
+            0.0
+          ]
+        },
+        "f1_ci95": {
+          "complexity_B": [
+            0.0,
+            0.625
+          ],
+          "relic_v1_0": [
+            0.8571,
+            1.0
+          ],
+          "relic_v1_1": [
+            1.0,
+            1.0
+          ],
+          "relic_v2": [
+            1.0,
+            1.0
+          ],
+          "relic_v2_wo_D001": [
+            1.0,
+            1.0
+          ],
+          "relic_v2_wo_D002": [
+            1.0,
+            1.0
+          ],
+          "relic_v2_wo_D003": [
+            1.0,
+            1.0
+          ],
+          "relic_v2_wo_D004": [
+            1.0,
+            1.0
+          ],
+          "static_bcg_E": [
+            0.8571,
+            1.0
+          ],
+          "structural_A": [
+            0.6667,
+            1.0
+          ],
+          "textdiff": [
+            1.0,
+            1.0
+          ],
+          "textdiff_ignore_job_parameters": [
+            1.0,
+            1.0
+          ]
+        },
+        "n_clusters": 25,
+        "reps": 10000,
+        "seed": 20261004
+      },
+      "detectors": {
+        "complexity_B": {
+          "f1": 0.439,
+          "fn": 1,
+          "fp": 22,
+          "fpr": 0.88,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 0.2903,
+          "precision_ci95": [
+            0.161,
+            0.4659
+          ],
+          "recall": 0.9,
+          "recall_ci95": [
+            0.5958,
+            0.9821
+          ],
+          "specificity": 0.12,
+          "specificity_ci95": [
+            0.0417,
+            0.2996
+          ],
+          "tn": 3,
+          "tp": 9
+        },
+        "relic_v1_0": {
+          "f1": 0.9474,
+          "fn": 1,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7009,
+            1.0
+          ],
+          "recall": 0.9,
+          "recall_ci95": [
+            0.5958,
+            0.9821
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 9
+        },
+        "relic_v1_1": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7225,
+            1.0
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.7225,
+            1.0
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 10
+        },
+        "relic_v2": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7225,
+            1.0
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.7225,
+            1.0
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 10
+        },
+        "relic_v2_wo_D001": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7225,
+            1.0
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.7225,
+            1.0
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 10
+        },
+        "relic_v2_wo_D002": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7225,
+            1.0
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.7225,
+            1.0
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 10
+        },
+        "relic_v2_wo_D003": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7225,
+            1.0
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.7225,
+            1.0
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 10
+        },
+        "relic_v2_wo_D004": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7225,
+            1.0
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.7225,
+            1.0
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 10
+        },
+        "static_bcg_E": {
+          "f1": 0.9474,
+          "fn": 1,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7009,
+            1.0
+          ],
+          "recall": 0.9,
+          "recall_ci95": [
+            0.5958,
+            0.9821
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 9
+        },
+        "structural_A": {
+          "f1": 0.8889,
+          "fn": 2,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.6756,
+            1.0
+          ],
+          "recall": 0.8,
+          "recall_ci95": [
+            0.4902,
+            0.9433
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 8
+        },
+        "textdiff": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7225,
+            1.0
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.7225,
+            1.0
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 10
+        },
+        "textdiff_ignore_job_parameters": {
+          "f1": 1.0,
+          "fn": 0,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 35,
+          "negatives": 25,
+          "no_prediction": 0,
+          "positives": 10,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.7225,
+            1.0
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.7225,
+            1.0
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.8668,
+            1.0
+          ],
+          "tn": 25,
+          "tp": 10
+        }
+      },
+      "n": 35,
+      "n_files": 25,
+      "negatives": 25,
+      "positives": 10
+    },
+    "pooled": {
+      "bootstrap": {
+        "diff_ci95": {
+          "relic_v2-relic_v1_0": [
+            0.0379,
+            0.1273
+          ],
+          "relic_v2-relic_v1_1": [
+            0.0034,
+            0.0688
+          ],
+          "relic_v2-relic_v2_wo_D001": [
+            0.0035,
+            0.0654
+          ],
+          "relic_v2-relic_v2_wo_D002": [
+            -0.0046,
+            0.0074
+          ],
+          "relic_v2-relic_v2_wo_D003": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-relic_v2_wo_D004": [
+            -0.006,
+            0.0
+          ],
+          "relic_v2-textdiff": [
+            0.0039,
+            0.0432
+          ]
+        },
+        "f1_ci95": {
+          "complexity_B": [
+            0.2068,
+            0.6912
+          ],
+          "relic_v1_0": [
+            0.8365,
+            0.9524
+          ],
+          "relic_v1_1": [
+            0.8937,
+            0.9884
+          ],
+          "relic_v2": [
+            0.9608,
+            0.9936
+          ],
+          "relic_v2_wo_D001": [
+            0.8964,
+            0.9894
+          ],
+          "relic_v2_wo_D002": [
+            0.9597,
+            0.9929
+          ],
+          "relic_v2_wo_D003": [
+            0.9608,
+            0.9936
+          ],
+          "relic_v2_wo_D004": [
+            0.9632,
+            0.9956
+          ],
+          "static_bcg_E": [
+            0.8365,
+            0.9524
+          ],
+          "structural_A": [
+            0.8135,
+            0.9454
+          ],
+          "textdiff": [
+            0.9397,
+            0.9691
+          ],
+          "textdiff_ignore_job_parameters": [
+            0.992,
+            1.0
+          ]
+        },
+        "n_clusters": 66,
+        "reps": 10000,
+        "seed": 20261004
+      },
+      "detectors": {
+        "complexity_B": {
+          "f1": 0.4947,
+          "fn": 298,
+          "fp": 33,
+          "fpr": 0.3113,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 0.8308,
+          "precision_ci95": [
+            0.7719,
+            0.8769
+          ],
+          "recall": 0.3522,
+          "recall_ci95": [
+            0.3099,
+            0.3969
+          ],
+          "specificity": 0.6887,
+          "specificity_ci95": [
+            0.5952,
+            0.7689
+          ],
+          "tn": 73,
+          "tp": 162
+        },
+        "relic_v1_0": {
+          "f1": 0.9048,
+          "fn": 80,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.99,
+            1.0
+          ],
+          "recall": 0.8261,
+          "recall_ci95": [
+            0.7888,
+            0.858
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.965,
+            1.0
+          ],
+          "tn": 106,
+          "tp": 380
+        },
+        "relic_v1_1": {
+          "f1": 0.951,
+          "fn": 43,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9909,
+            1.0
+          ],
+          "recall": 0.9065,
+          "recall_ci95": [
+            0.8765,
+            0.9299
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.965,
+            1.0
+          ],
+          "tn": 106,
+          "tp": 417
+        },
+        "relic_v2": {
+          "f1": 0.98,
+          "fn": 18,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9914,
+            1.0
+          ],
+          "recall": 0.9609,
+          "recall_ci95": [
+            0.939,
+            0.9751
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.965,
+            1.0
+          ],
+          "tn": 106,
+          "tp": 442
+        },
+        "relic_v2_wo_D001": {
+          "f1": 0.9534,
+          "fn": 41,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9909,
+            1.0
+          ],
+          "recall": 0.9109,
+          "recall_ci95": [
+            0.8813,
+            0.9336
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.965,
+            1.0
+          ],
+          "tn": 106,
+          "tp": 419
+        },
+        "relic_v2_wo_D002": {
+          "f1": 0.9789,
+          "fn": 19,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9914,
+            1.0
+          ],
+          "recall": 0.9587,
+          "recall_ci95": [
+            0.9364,
+            0.9734
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.965,
+            1.0
+          ],
+          "tn": 106,
+          "tp": 441
+        },
+        "relic_v2_wo_D003": {
+          "f1": 0.98,
+          "fn": 18,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9914,
+            1.0
+          ],
+          "recall": 0.9609,
+          "recall_ci95": [
+            0.939,
+            0.9751
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.965,
+            1.0
+          ],
+          "tn": 106,
+          "tp": 442
+        },
+        "relic_v2_wo_D004": {
+          "f1": 0.9823,
+          "fn": 16,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9914,
+            1.0
+          ],
+          "recall": 0.9652,
+          "recall_ci95": [
+            0.9443,
+            0.9785
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.965,
+            1.0
+          ],
+          "tn": 106,
+          "tp": 444
+        },
+        "static_bcg_E": {
+          "f1": 0.9048,
+          "fn": 80,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.99,
+            1.0
+          ],
+          "recall": 0.8261,
+          "recall_ci95": [
+            0.7888,
+            0.858
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.965,
+            1.0
+          ],
+          "tn": 106,
+          "tp": 380
+        },
+        "structural_A": {
+          "f1": 0.8889,
+          "fn": 92,
+          "fp": 0,
+          "fpr": 0.0,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9897,
+            1.0
+          ],
+          "recall": 0.8,
+          "recall_ci95": [
+            0.761,
+            0.834
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.965,
+            1.0
+          ],
+          "tn": 106,
+          "tp": 368
+        },
+        "textdiff": {
+          "f1": 0.9573,
+          "fn": 0,
+          "fp": 41,
+          "fpr": 0.3868,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 0.9182,
+          "precision_ci95": [
+            0.8909,
+            0.9391
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9917,
+            1.0
+          ],
+          "specificity": 0.6132,
+          "specificity_ci95": [
+            0.5181,
+            0.7004
+          ],
+          "tn": 65,
+          "tp": 460
+        },
+        "textdiff_ignore_job_parameters": {
+          "f1": 0.9978,
+          "fn": 0,
+          "fp": 2,
+          "fpr": 0.0189,
+          "n": 566,
+          "negatives": 106,
+          "no_prediction": 0,
+          "positives": 460,
+          "precision": 0.9957,
+          "precision_ci95": [
+            0.9844,
+            0.9988
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9917,
+            1.0
+          ],
+          "specificity": 0.9811,
+          "specificity_ci95": [
+            0.9338,
+            0.9948
+          ],
+          "tn": 104,
+          "tp": 460
+        }
+      },
+      "n": 566,
+      "n_files": 66,
+      "negatives": 106,
+      "positives": 460
+    }
+  },
+  "recall_by_duplicate_step_names": {
+    "files_with_duplicate_step_names": {
+      "n_files": 6,
+      "positives": 64,
+      "relic_v1_1_recall": 0.3906,
+      "relic_v2_recall": 0.7656
+    },
+    "files_without_duplicate_step_names": {
+      "n_files": 37,
+      "positives": 396,
+      "relic_v1_1_recall": 0.9899,
+      "relic_v2_recall": 0.9924
+    }
+  },
+  "schema": "relic-v2-metrics/1",
+  "validation_status": "DEVELOPMENT ONLY. Every subject below (CardDemo, OMP COBOL course, GenApp) was inspected while diagnosing defects and choosing fixes; none is a held-out set. No genuinely independent held-out dataset or independent reviewer was available: EXTERNAL VALIDATION REMAINS PENDING."
+}

@@ -5,6 +5,7 @@
 #   make reproduce    regenerate every reported number, table and figure
 #   make check        verify docs/tables/metrics are consistent with raw results
 #   make llm-baselines  run LLM baselines C/D (needs an API key; optional)
+#   make v2-eval      RELIC V2 development-set replay -> results/v2 (does not touch results/final)
 
 # Bootstrap interpreter: first Python >= 3.11 on PATH, else one managed by uv, else python3.
 PY_BOOT ?= $(shell command -v python3.11 || command -v python3.12 || command -v python3.13 || \
@@ -13,7 +14,7 @@ VENV    ?= .venv
 PYTHON  ?= $(if $(wildcard $(VENV)/bin/python),$(VENV)/bin/python,$(PY_BOOT))
 export PYTHONPATH := $(CURDIR)/src:$(CURDIR)
 
-.PHONY: setup test reproduce metrics check llm-baselines figures-legacy reproduce-legacy reproduce-paper1 clean
+.PHONY: setup test reproduce metrics check v2-eval llm-baselines figures-legacy reproduce-legacy reproduce-paper1 clean
 
 setup:
 	$(PY_BOOT) -c 'import sys; assert sys.version_info >= (3, 11), "Python >= 3.11 required (found %s); set PY_BOOT=/path/to/python3.11" % sys.version.split()[0]'
@@ -45,6 +46,10 @@ metrics:
 
 check:
 	$(PYTHON) -m relic_eval.check_consistency
+
+# RELIC V2 replay of the committed benchmark (about 5 s, offline, deterministic).
+v2-eval:
+	$(PYTHON) -m relic_eval.v2_eval
 
 llm-baselines:
 	$(PYTHON) -m relic_eval.llm_baselines
