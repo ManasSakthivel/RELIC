@@ -1,0 +1,433 @@
+{
+  "all_cases": {
+    "detectors": {
+      "normalized_text_A": {
+        "fn": 15,
+        "fp": 35,
+        "mcc": 0.4511,
+        "recall": 0.8387,
+        "specificity": 0.5977,
+        "tn": 52,
+        "tp": 78
+      },
+      "normalized_text_B": {
+        "fn": 15,
+        "fp": 28,
+        "mcc": 0.5249,
+        "recall": 0.8387,
+        "specificity": 0.6782,
+        "tn": 59,
+        "tp": 78
+      },
+      "raw_text": {
+        "fn": 15,
+        "fp": 77,
+        "mcc": -0.067,
+        "recall": 0.8387,
+        "specificity": 0.1149,
+        "tn": 10,
+        "tp": 78
+      },
+      "relic_v1_0": {
+        "fn": 78,
+        "fp": 2,
+        "mcc": 0.2363,
+        "recall": 0.1613,
+        "specificity": 0.977,
+        "tn": 85,
+        "tp": 15
+      },
+      "relic_v1_1": {
+        "fn": 70,
+        "fp": 2,
+        "mcc": 0.3241,
+        "recall": 0.2473,
+        "specificity": 0.977,
+        "tn": 85,
+        "tp": 23
+      },
+      "relic_v2": {
+        "fn": 70,
+        "fp": 2,
+        "mcc": 0.3241,
+        "recall": 0.2473,
+        "specificity": 0.977,
+        "tn": 85,
+        "tp": 23
+      },
+      "textdiff": {
+        "fn": 15,
+        "fp": 60,
+        "mcc": 0.1761,
+        "recall": 0.8387,
+        "specificity": 0.3103,
+        "tn": 27,
+        "tp": 78
+      },
+      "textdiff_ignore_job_parameters": {
+        "fn": 15,
+        "fp": 49,
+        "mcc": 0.302,
+        "recall": 0.8387,
+        "specificity": 0.4368,
+        "tn": 38,
+        "tp": 78
+      }
+    },
+    "n": 180,
+    "paired_vs_relic_v2": {
+      "normalized_text_A": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.2198,
+          -0.0262
+        ],
+        "mcnemar_exact_p_uncorrected": 0.024623,
+        "v2_right_other_wrong": 33,
+        "v2_wrong_other_right": 55
+      },
+      "normalized_text_B": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.3006,
+          -0.0917
+        ],
+        "mcnemar_exact_p_uncorrected": 0.001689,
+        "v2_right_other_wrong": 26,
+        "v2_wrong_other_right": 55
+      },
+      "raw_text": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          0.2578,
+          0.5321
+        ],
+        "mcnemar_exact_p_uncorrected": 0.095253,
+        "v2_right_other_wrong": 75,
+        "v2_wrong_other_right": 55
+      },
+      "relic_v1_0": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          0.0157,
+          0.1637
+        ],
+        "mcnemar_exact_p_uncorrected": 0.007812,
+        "v2_right_other_wrong": 8,
+        "v2_wrong_other_right": 0
+      },
+      "relic_v1_1": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p_uncorrected": 1.0,
+        "v2_right_other_wrong": 0,
+        "v2_wrong_other_right": 0
+      },
+      "textdiff": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          0.042,
+          0.2539
+        ],
+        "mcnemar_exact_p_uncorrected": 0.85087,
+        "v2_right_other_wrong": 58,
+        "v2_wrong_other_right": 55
+      },
+      "textdiff_ignore_job_parameters": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.0747,
+          0.1275
+        ],
+        "mcnemar_exact_p_uncorrected": 0.488434,
+        "v2_right_other_wrong": 47,
+        "v2_wrong_other_right": 55
+      }
+    },
+    "positives": 93
+  },
+  "excluding_noop": {
+    "detectors": {
+      "normalized_text_A": {
+        "fn": 0,
+        "fp": 35,
+        "mcc": 0.6136,
+        "recall": 1.0,
+        "specificity": 0.5455,
+        "tn": 42,
+        "tp": 78
+      },
+      "normalized_text_B": {
+        "fn": 0,
+        "fp": 28,
+        "mcc": 0.6843,
+        "recall": 1.0,
+        "specificity": 0.6364,
+        "tn": 49,
+        "tp": 78
+      },
+      "raw_text": {
+        "fn": 0,
+        "fp": 77,
+        "mcc": null,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "tn": 0,
+        "tp": 78
+      },
+      "relic_v1_0": {
+        "fn": 63,
+        "fp": 2,
+        "mcc": 0.2661,
+        "recall": 0.1923,
+        "specificity": 0.974,
+        "tn": 75,
+        "tp": 15
+      },
+      "relic_v1_1": {
+        "fn": 55,
+        "fp": 2,
+        "mcc": 0.3655,
+        "recall": 0.2949,
+        "specificity": 0.974,
+        "tn": 75,
+        "tp": 23
+      },
+      "relic_v2": {
+        "fn": 55,
+        "fp": 2,
+        "mcc": 0.3655,
+        "recall": 0.2949,
+        "specificity": 0.974,
+        "tn": 75,
+        "tp": 23
+      },
+      "textdiff": {
+        "fn": 0,
+        "fp": 60,
+        "mcc": 0.3533,
+        "recall": 1.0,
+        "specificity": 0.2208,
+        "tn": 17,
+        "tp": 78
+      },
+      "textdiff_ignore_job_parameters": {
+        "fn": 0,
+        "fp": 49,
+        "mcc": 0.4726,
+        "recall": 1.0,
+        "specificity": 0.3636,
+        "tn": 28,
+        "tp": 78
+      }
+    },
+    "n": 155,
+    "paired_vs_relic_v2": {
+      "normalized_text_A": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.3569,
+          -0.1608
+        ],
+        "mcnemar_exact_p_uncorrected": 0.024623,
+        "v2_right_other_wrong": 33,
+        "v2_wrong_other_right": 55
+      },
+      "normalized_text_B": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.4326,
+          -0.229
+        ],
+        "mcnemar_exact_p_uncorrected": 0.001689,
+        "v2_right_other_wrong": 26,
+        "v2_wrong_other_right": 55
+      },
+      "raw_text": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": null,
+        "mcnemar_exact_p_uncorrected": 0.095253,
+        "v2_right_other_wrong": 75,
+        "v2_wrong_other_right": 55
+      },
+      "relic_v1_0": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          0.0187,
+          0.1833
+        ],
+        "mcnemar_exact_p_uncorrected": 0.007812,
+        "v2_right_other_wrong": 8,
+        "v2_wrong_other_right": 0
+      },
+      "relic_v1_1": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p_uncorrected": 1.0,
+        "v2_right_other_wrong": 0,
+        "v2_wrong_other_right": 0
+      },
+      "textdiff": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.0843,
+          0.0882
+        ],
+        "mcnemar_exact_p_uncorrected": 0.85087,
+        "v2_right_other_wrong": 58,
+        "v2_wrong_other_right": 55
+      },
+      "textdiff_ignore_job_parameters": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.2109,
+          -0.0233
+        ],
+        "mcnemar_exact_p_uncorrected": 0.488434,
+        "v2_right_other_wrong": 47,
+        "v2_wrong_other_right": 55
+      }
+    },
+    "positives": 78
+  },
+  "excluding_noop_and_oracle_disagreements": {
+    "detectors": {
+      "normalized_text_A": {
+        "fn": 0,
+        "fp": 32,
+        "mcc": 0.6198,
+        "recall": 1.0,
+        "specificity": 0.5676,
+        "tn": 42,
+        "tp": 67
+      },
+      "normalized_text_B": {
+        "fn": 0,
+        "fp": 25,
+        "mcc": 0.6944,
+        "recall": 1.0,
+        "specificity": 0.6622,
+        "tn": 49,
+        "tp": 67
+      },
+      "raw_text": {
+        "fn": 0,
+        "fp": 74,
+        "mcc": null,
+        "recall": 1.0,
+        "specificity": 0.0,
+        "tn": 0,
+        "tp": 67
+      },
+      "relic_v1_0": {
+        "fn": 52,
+        "fp": 0,
+        "mcc": 0.3626,
+        "recall": 0.2239,
+        "specificity": 1.0,
+        "tn": 74,
+        "tp": 15
+      },
+      "relic_v1_1": {
+        "fn": 44,
+        "fp": 0,
+        "mcc": 0.464,
+        "recall": 0.3433,
+        "specificity": 1.0,
+        "tn": 74,
+        "tp": 23
+      },
+      "relic_v2": {
+        "fn": 44,
+        "fp": 0,
+        "mcc": 0.464,
+        "recall": 0.3433,
+        "specificity": 1.0,
+        "tn": 74,
+        "tp": 23
+      },
+      "textdiff": {
+        "fn": 0,
+        "fp": 57,
+        "mcc": 0.3523,
+        "recall": 1.0,
+        "specificity": 0.2297,
+        "tn": 17,
+        "tp": 67
+      },
+      "textdiff_ignore_job_parameters": {
+        "fn": 0,
+        "fp": 46,
+        "mcc": 0.4737,
+        "recall": 1.0,
+        "specificity": 0.3784,
+        "tn": 28,
+        "tp": 67
+      }
+    },
+    "n": 141,
+    "paired_vs_relic_v2": {
+      "normalized_text_A": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.2952,
+          -0.048
+        ],
+        "mcnemar_exact_p_uncorrected": 0.206737,
+        "v2_right_other_wrong": 32,
+        "v2_wrong_other_right": 44
+      },
+      "normalized_text_B": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.3731,
+          -0.124
+        ],
+        "mcnemar_exact_p_uncorrected": 0.029493,
+        "v2_right_other_wrong": 25,
+        "v2_wrong_other_right": 44
+      },
+      "raw_text": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": null,
+        "mcnemar_exact_p_uncorrected": 0.00733,
+        "v2_right_other_wrong": 74,
+        "v2_wrong_other_right": 44
+      },
+      "relic_v1_0": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          0.0202,
+          0.1843
+        ],
+        "mcnemar_exact_p_uncorrected": 0.007812,
+        "v2_right_other_wrong": 8,
+        "v2_wrong_other_right": 0
+      },
+      "relic_v1_1": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "mcnemar_exact_p_uncorrected": 1.0,
+        "v2_right_other_wrong": 0,
+        "v2_wrong_other_right": 0
+      },
+      "textdiff": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.033,
+          0.2186
+        ],
+        "mcnemar_exact_p_uncorrected": 0.2323,
+        "v2_right_other_wrong": 57,
+        "v2_wrong_other_right": 44
+      },
+      "textdiff_ignore_job_parameters": {
+        "delta_mcc_v2_minus_other_ci95_cluster_bootstrap": [
+          -0.1627,
+          0.1036
+        ],
+        "mcnemar_exact_p_uncorrected": 0.916129,
+        "v2_right_other_wrong": 46,
+        "v2_wrong_other_right": 44
+      }
+    },
+    "positives": 67
+  },
+  "noop_pairs": {
+    "by_expected": {
+      "CHANGING": 15,
+      "PRESERVING": 10
+    },
+    "n": 25
+  },
+  "note": "Exclusion rule: byte-identical original/transformed (detector-independent). Frozen benchmark/metrics unchanged. p-values are uncorrected; bootstrap 2000 reps clustered by base_id, seed 20261004."
+}

@@ -1,0 +1,105 @@
+{
+  "optional_rules_version_B_only": [
+    "sort_keyword_operands"
+  ],
+  "purpose": "Normalisation rules of relic_eval/text_baselines.py frozen before any JCL-SemBench case was loaded by Agent 4; no rule may change afterwards.",
+  "rule_docs": {
+    "collapse_whitespace": {
+      "excluded": "number/amount of blanks between fields and around the statement",
+      "limitation": "Blank-vs-nonblank in column 3 (name present or not) is preserved as a single blank after '//'; blanks INSIDE quotes are never collapsed. Wrong for in-stream data (hence preserve_instream_data).",
+      "rationale": "Runs of blanks between fields are not significant (fields are blank delimited)."
+    },
+    "drop_blank_lines": {
+      "excluded": "empty / blank-only lines outside in-stream data",
+      "limitation": "z/OS treatment of a blank record is not asserted here; a blank record can be an error or terminate the job stream in some contexts.",
+      "rationale": "Empty lines outside in-stream data carry no JCL content."
+    },
+    "ignore_job_parameters": {
+      "excluded": "operand field and continuations of every JOB statement (name and existence kept)",
+      "limitation": "REAL semantic loss: JOB parameters such as COND=, TYPRUN=HOLD/SCAN, REGION=, TIME=, RESTART= and CLASS can change whether/how the job runs. A genuine behavioural change confined to JOB parameters becomes invisible.",
+      "rationale": "A JOB statement's name identifies the job; its parameters (CLASS, MSGCLASS, NOTIFY, accounting ...) are largely scheduling/reporting attributes. Mirrors the pre-existing trivial reference textdiff_ignore_job_parameters."
+    },
+    "join_continuations": {
+      "excluded": "line-break positions within a logical statement (and the '//' + blank prefix of continuation lines)",
+      "limitation": "Continuation detection is textual; a comma that ends a comment field or a statement with no operand field but trailing text is mis-read. strip_trailing_comment_field and sort_keyword_operands need this rule (they are no-ops without it).",
+      "rationale": "Re-flowing a statement over different physical lines (or splitting a long operand field differently) does not change the logical statement."
+    },
+    "preserve_instream_data": {
+      "excluded": "nothing is excluded; this rule PROTECTS in-stream data from the rules below",
+      "limitation": "Data-region detection is heuristic (DD * / DD DATA, DLM=xx, '//' ends DD * data). Mis-detection (e.g. PROC-internal SYSIN, symbolic-driven DD) makes the rule protect the wrong lines or normalise real data.",
+      "rationale": "Data between 'DD *'/'DD DATA' and its delimiter is program input, not JCL: it must not be re-formatted by any other rule. When ON, data lines are compared byte-for-byte; when OFF they are treated like ordinary text lines (and so subject to whitespace/case rules)."
+    },
+    "rstrip_whitespace": {
+      "excluded": "trailing whitespace of non-data lines",
+      "limitation": "Inside a quoted string continued at column 71 trailing blanks ARE significant; they are kept only when join_continuations handles that case.",
+      "rationale": "Trailing blanks on a record are not significant in JCL statements."
+    },
+    "sort_keyword_operands": {
+      "excluded": "order of top-level KEY=VALUE operands after the positional prefix (sub-parameters inside parentheses are never reordered)",
+      "limitation": "Changes positional meaning if a positional operand follows a keyword (then the statement is left unsorted, by design). Order IS significant inside parenthesised sub-parameter lists (not touched) and for duplicate keywords (invalid JCL). Requires join_continuations; skips JOB/IF/SET.",
+      "rationale": "VERSION B ONLY. Keyword operands of EXEC/DD/PROC/OUTPUT may be coded in any order; sorting them makes pure operand reordering invisible."
+    },
+    "strip_comment_lines": {
+      "excluded": "whole comment statements (outside in-stream data)",
+      "limitation": "Comments may carry out-of-band meaning (operator instructions, scheduler directives embedded as comments, '//*%OPC' style control comments); such changes ARE behavioural for those tools.",
+      "rationale": "'//*' statements are ignored by the system; changing them cannot change behaviour."
+    },
+    "strip_trailing_comment_field": {
+      "excluded": "the comment field after the operand field (not for IF/ELSE/ENDIF/SET, whose operands may contain blanks)",
+      "limitation": "Re-serialises the kept fields with single blanks (so it also hides blank-count differences even if collapse_whitespace is off). A statement without operands but with trailing text, or an operand containing an unquoted blank (e.g. arithmetic in SET, IF expressions in continued form), is mis-split; the exemption list is explicit and incomplete.",
+      "rationale": "Text after the operand field of a logical statement (separated by blanks) is the JCL comment field and has no effect."
+    },
+    "truncate_col71": {
+      "excluded": "columns 72-80 of statement lines (outside in-stream data)",
+      "limitation": "Column 72 of a continued quoted string is semantically a continuation flag; it is consulted by the (always-on) structure detector only. Source lines >80 columns or in non-fixed-record files lose real text.",
+      "rationale": "Columns 73-80 are sequence numbers and column 72 is the continuation column; the system does not use text beyond column 71 as statement text."
+    },
+    "uppercase_outside_quotes": {
+      "excluded": "letter case of all text outside apostrophes in statements",
+      "limitation": "Real semantic loss for case-sensitive content that is not quoted (z/OS UNIX paths in PATH= are quoted by rule, but unquoted symbolic or member names in some dialects are case-significant); wrong for in-stream data (hence preserve_instream_data).",
+      "rationale": "JCL keywords, ddnames and stepnames are upper-case by convention and lower case in them is not distinguished by writers reformatting code."
+    }
+  },
+  "rules_in_application_order": [
+    "preserve_instream_data",
+    "strip_comment_lines",
+    "drop_blank_lines",
+    "truncate_col71",
+    "rstrip_whitespace",
+    "join_continuations",
+    "strip_trailing_comment_field",
+    "collapse_whitespace",
+    "uppercase_outside_quotes",
+    "ignore_job_parameters"
+  ],
+  "schema": "relic-baseline-freeze/1",
+  "sembench_cases_jsonl_present_at_freeze": false,
+  "sembench_cases_loaded_by_agent4_before_freeze": false,
+  "statement_columns": 71,
+  "text_baselines_sha256": "1ff51f34ad5cf11c28dd9afba0cbd13c205749b75de5ce30cfc015ac976213c6",
+  "version_A_rules": [
+    "preserve_instream_data",
+    "strip_comment_lines",
+    "drop_blank_lines",
+    "truncate_col71",
+    "rstrip_whitespace",
+    "join_continuations",
+    "strip_trailing_comment_field",
+    "collapse_whitespace",
+    "uppercase_outside_quotes",
+    "ignore_job_parameters"
+  ],
+  "version_B_rules": [
+    "preserve_instream_data",
+    "strip_comment_lines",
+    "drop_blank_lines",
+    "truncate_col71",
+    "rstrip_whitespace",
+    "join_continuations",
+    "strip_trailing_comment_field",
+    "collapse_whitespace",
+    "uppercase_outside_quotes",
+    "ignore_job_parameters",
+    "sort_keyword_operands"
+  ]
+}

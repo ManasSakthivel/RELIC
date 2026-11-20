@@ -1,0 +1,337 @@
+{
+  "add_one_in": {
+    "(no rule = raw lines)": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    },
+    "collapse_whitespace": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    },
+    "drop_blank_lines": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    },
+    "ignore_job_parameters": {
+      "f1": 0.9321,
+      "fn": 0,
+      "fp": 67,
+      "no_prediction": 0,
+      "precision": 0.8729,
+      "recall": 1.0,
+      "specificity": 0.3679,
+      "tn": 39,
+      "tp": 460
+    },
+    "join_continuations": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    },
+    "preserve_instream_data": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    },
+    "rstrip_whitespace": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    },
+    "strip_comment_lines": {
+      "f1": 0.9573,
+      "fn": 0,
+      "fp": 41,
+      "no_prediction": 0,
+      "precision": 0.9182,
+      "recall": 1.0,
+      "specificity": 0.6132,
+      "tn": 65,
+      "tp": 460
+    },
+    "strip_trailing_comment_field": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    },
+    "truncate_col71": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    },
+    "uppercase_outside_quotes": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    }
+  },
+  "full": {
+    "normalized_text_A": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "normalized_text_B": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    }
+  },
+  "leave_one_out": {
+    "collapse_whitespace": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "drop_blank_lines": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "ignore_job_parameters": {
+      "f1": 0.9573,
+      "fn": 0,
+      "fp": 41,
+      "no_prediction": 0,
+      "precision": 0.9182,
+      "recall": 1.0,
+      "specificity": 0.6132,
+      "tn": 65,
+      "tp": 460
+    },
+    "join_continuations": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "preserve_instream_data": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "rstrip_whitespace": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "sort_keyword_operands(B minus sort = A)": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "strip_comment_lines": {
+      "f1": 0.9321,
+      "fn": 0,
+      "fp": 67,
+      "no_prediction": 0,
+      "precision": 0.8729,
+      "recall": 1.0,
+      "specificity": 0.3679,
+      "tn": 39,
+      "tp": 460
+    },
+    "strip_trailing_comment_field": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "truncate_col71": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "uppercase_outside_quotes": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    }
+  },
+  "n": 566,
+  "negatives": 106,
+  "normalized_text_A_false_positive_ids": [
+    "carddemo/app/jcl/TXT2PDF1.JCL/REMOVE_COND/0",
+    "carddemo/app/jcl/TXT2PDF1.JCL/ALTER_COND_THRESHOLD/0"
+  ],
+  "note": "Report only. Labels = results/v2/v2_predictions.jsonl 'truth'. Rules were frozen before SemBench; this table did not alter them.",
+  "positives": 460,
+  "reference": {
+    "normalized_text_A": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "normalized_text_B": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    },
+    "raw_text": {
+      "f1": 0.8967,
+      "fn": 0,
+      "fp": 106,
+      "no_prediction": 0,
+      "precision": 0.8127,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "tn": 0,
+      "tp": 460
+    },
+    "textdiff": {
+      "f1": 0.9573,
+      "fn": 0,
+      "fp": 41,
+      "no_prediction": 0,
+      "precision": 0.9182,
+      "recall": 1.0,
+      "specificity": 0.6132,
+      "tn": 65,
+      "tp": 460
+    },
+    "textdiff_ignore_job_parameters": {
+      "f1": 0.9978,
+      "fn": 0,
+      "fp": 2,
+      "no_prediction": 0,
+      "precision": 0.9957,
+      "recall": 1.0,
+      "specificity": 0.9811,
+      "tn": 104,
+      "tp": 460
+    }
+  }
+}
