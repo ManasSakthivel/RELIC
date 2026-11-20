@@ -74,3 +74,19 @@ Sources:
 2. Docker build remains unreproduced (row 38; stated in the paper).
 3. Register the appended-step generator defect (row 29).
 4. Row 30 is now verified; no further action.
+
+## Rows added in revision (after reviewer comments)
+
+| # | Claim (location) | Evidence | Status | Confirmatory? | Limitation |
+|---|---|---|---|---|---|
+| 50 | Exact cluster sign-flip p = 0.002 for RELIC V2 vs text B (RQ1) | `comparisons.normalized_text_B.p_cluster_signflip` = 0.00195 | Verified | Exploratory | 16 clusters; exact enumeration over 2^12 sign patterns |
+| 51 | MCC of text A 0.451, JOB-insensitive diff 0.302, plain text diff 0.176 (RQ1) | Derived from published ΔMCC values (RELIC 0.324 minus each ΔMCC): −0.127, +0.022, +0.148; cross-checked against `textdiff` MCC 0.176 in CANONICAL_NUMBERS.json | Verified (text A and JOB-insensitive values derived, not read directly) | — | — |
+| 52 | Text B is the strongest text rule on SemBench by MCC (RQ1) | Ranking of rows 1 and 51 | Verified | — | Choice of primary comparator was made after results |
+| 53 | Oracle returns EQUIVALENT for all 15 byte-identical CHANGING pairs (Results; Discussion) | `cases.jsonl` `oracle_verdict.label` = EQUIVALENT for all 15, all `ORACLE_DISAGREES` | Verified | — | — |
+| 54 | 13 disagreements are non-identical pairs (Results) | `cases.jsonl`: disagreements among non-identical = 14 incl. abstention sembench_172 | Verified | — | — |
+| 55 | Oracle definition: scenarios, DIFFERENT/EQUIVALENT/UNDETERMINED (Methods) | `jcl_oracle/__init__.py` docstring; `jcl_oracle/judge.py` | Verified (code) | — | Observables are documented in `docs/evaluation/ORACLE_SPECIFICATION.md`, not re-read here |
+| 56 | 70 SemBench misses = 15 no-ops + 16 DISP + 12 COND + 9 DSN redirects + 8 in-stream + 5 program substitution + 5 appended (RQ2) | `reports/recovery/ALGORITHM_IMPROVEMENT_REPORT.md` (error table, `algo_fn_trace.py`) | Verified-with-caveat (agent categorisation; sums to 70) | — | Categorisation is a judgement |
+| 57 | External zero RELIC-only TP is guaranteed because text recall = 1.000 there (RQ2) | `external.pooled_file_cluster.detectors.textdiff_ignore_job_parameters.recall` = 1.0 | Verified | — | — |
+| 58 | Bibliography authors: Tian et al. 2024 (Z. Tian, H. Shu, D. Wang, X. Cao, Y. Kamei, J. Chen) and Papadakis et al. 2016 (five authors incl. Y. Le Traon) | Crossref `api.crossref.org/works/10.1145/3650212.3680395` and `…/10.1145/2931037.2931040` | Verified | — | — |
+| 59 | Ferrante et al. 1984 and Horwitz et al. 1988 cited for program dependence graphs (Background) | Literature matrix rows (Crossref metadata) | Verified metadata; abstracts not read | — | — |
+| 60 | Venue: ResponsibleSE 2027 short papers 4–6 pages; research papers 6–8; IEEE template; double-blind; submission deadline Fri 20 Nov 2026 AoE (Publication strategy) | Official researchr page, read 2026-11-20 (web-fetch agent) | Verified for categories, template, blinding and deadline; **reference counting and archival status NOT STATED** | — | The negative-results category is not listed on the page; choose the short-paper WIP/position category |
