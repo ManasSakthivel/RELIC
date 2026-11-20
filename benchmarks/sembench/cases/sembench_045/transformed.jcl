@@ -1,0 +1,20 @@
+//INSTREAM JOB (ACCT111,'UTIL'),'IN-STREAM DATA',
+//         CLASS=A,MSGCLASS=X
+//DELSTEP  EXEC PGM=IEFBR14
+//OLDREP   DD DSN=REPORT.SUMMARY.OUTPUT,
+//            DISP=(MOD,DELETE,DELETE),
+//            UNIT=SYSDA,SPACE=(TRK,0)
+//GENREP   EXEC PGM=IEBGENER
+//SYSUT1   DD *
+=====================================================
+MONTHLY AUDIT SUMMARY REPORT
+PERIOD: 2025-01
+STATUS: VERIFIED
+=====================================================
+/*
+//SYSUT2   DD DSN=REPORT.SUMMARY.OUTPUT,
+//            UNIT=SYSDA,DISP=(NEW,CATLG,DELETE),
+//            SPACE=(TRK,(5,2)),
+//            DCB=(RECFM=FB,LRECL=80,BLKSIZE=800)
+//SYSPRINT DD SYSOUT=*
+//SYSIN    DD DUMMY

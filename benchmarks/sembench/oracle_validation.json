@@ -1,0 +1,271 @@
+{
+  "total_pairs": 180,
+  "preserving_count": 87,
+  "changing_count": 93,
+  "validation_status_counts": {
+    "VALIDATED_BY_ORACLE_AND_ARGUMENT": 151,
+    "ORACLE_DISAGREES": 28,
+    "ORACLE_ABSTAINS": 1,
+    "ARGUMENT_ONLY": 0
+  },
+  "category_counts": {
+    "comment_edit": {
+      "total": 17,
+      "PRESERVING": 17,
+      "CHANGING": 0
+    },
+    "whitespace_and_continuation": {
+      "total": 17,
+      "PRESERVING": 17,
+      "CHANGING": 0
+    },
+    "syntax_representation": {
+      "total": 21,
+      "PRESERVING": 21,
+      "CHANGING": 0
+    },
+    "job_card_refactor": {
+      "total": 12,
+      "PRESERVING": 12,
+      "CHANGING": 0
+    },
+    "independent_statement_reorder": {
+      "total": 14,
+      "PRESERVING": 14,
+      "CHANGING": 0
+    },
+    "unreferenced_step_rename": {
+      "total": 6,
+      "PRESERVING": 6,
+      "CHANGING": 0
+    },
+    "step_reorder_dependent": {
+      "total": 14,
+      "PRESERVING": 0,
+      "CHANGING": 14
+    },
+    "dataset_dependency_change": {
+      "total": 17,
+      "PRESERVING": 0,
+      "CHANGING": 17
+    },
+    "disp_change": {
+      "total": 19,
+      "PRESERVING": 0,
+      "CHANGING": 19
+    },
+    "cond_logic_change": {
+      "total": 18,
+      "PRESERVING": 0,
+      "CHANGING": 18
+    },
+    "producer_consumer_change": {
+      "total": 12,
+      "PRESERVING": 0,
+      "CHANGING": 12
+    },
+    "return_code_effect": {
+      "total": 13,
+      "PRESERVING": 0,
+      "CHANGING": 13
+    }
+  },
+  "disagreements": [
+    {
+      "id": "sembench_036",
+      "category": "syntax_representation",
+      "expected": "PRESERVING",
+      "oracle_label": "DIFFERENT",
+      "reason": "PARM values passed to IGYCRCTL resolve to the identical character parameter string 'NODECK,OBJECT,LIST'. NOTE: The simulator hashes PARM text directly into the dataflow version, leading to an oracle disagreement despite documented semantic equivalence."
+    },
+    {
+      "id": "sembench_078",
+      "category": "unreferenced_step_rename",
+      "expected": "PRESERVING",
+      "oracle_label": "DIFFERENT",
+      "reason": "Step names serve as internal labels for COND checks, backward references, and restart points. Systematically renaming a step along with all internal references preserves exact program invocation, dataset transformations, and execution conditions. NOTE: The oracle keys steps by name and flags step additions/removals as differing execution observables; this case demonstrates documented z/OS semantic equivalence where the oracle's step-identity model disagrees."
+    },
+    {
+      "id": "sembench_079",
+      "category": "unreferenced_step_rename",
+      "expected": "PRESERVING",
+      "oracle_label": "DIFFERENT",
+      "reason": "Step names serve as internal labels for COND checks, backward references, and restart points. Systematically renaming a step along with all internal references preserves exact program invocation, dataset transformations, and execution conditions. NOTE: The oracle keys steps by name and flags step additions/removals as differing execution observables; this case demonstrates documented z/OS semantic equivalence where the oracle's step-identity model disagrees."
+    },
+    {
+      "id": "sembench_100",
+      "category": "dataset_dependency_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Populates master file from outdated staging dataset. NOTE: In single-job simulation without initial catalog distinction between stage files, the oracle reports EQUIVALENT, but z/OS catalog resolution alters input dataflow."
+    },
+    {
+      "id": "sembench_103",
+      "category": "dataset_dependency_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Populates master file from outdated staging dataset. NOTE: In single-job simulation without initial catalog distinction between stage files, the oracle reports EQUIVALENT, but z/OS catalog resolution alters input dataflow."
+    },
+    {
+      "id": "sembench_108",
+      "category": "dataset_dependency_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Populates master file from outdated staging dataset. NOTE: In single-job simulation without initial catalog distinction between stage files, the oracle reports EQUIVALENT, but z/OS catalog resolution alters input dataflow."
+    },
+    {
+      "id": "sembench_111",
+      "category": "dataset_dependency_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Populates master file from outdated staging dataset. NOTE: In single-job simulation without initial catalog distinction between stage files, the oracle reports EQUIVALENT, but z/OS catalog resolution alters input dataflow."
+    },
+    {
+      "id": "sembench_112",
+      "category": "dataset_dependency_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Populates master file from outdated staging dataset. NOTE: In single-job simulation without initial catalog distinction between stage files, the oracle reports EQUIVALENT, but z/OS catalog resolution alters input dataflow."
+    },
+    {
+      "id": "sembench_117",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "DISP=OLD requests exclusive dataset enqueue, preventing concurrent job access and causing job lockouts in production. (Oracle single-job simulation models both as reads, producing EQUIVALENT)."
+    },
+    {
+      "id": "sembench_118",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Specifying KEEP instead of CATLG for a newly allocated dataset leaves it uncataloged on non-SMS volumes or alters system catalog association."
+    },
+    {
+      "id": "sembench_120",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "DISP=OLD requests exclusive dataset enqueue, preventing concurrent job access and causing job lockouts in production. (Oracle single-job simulation models both as reads, producing EQUIVALENT)."
+    },
+    {
+      "id": "sembench_121",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Specifying KEEP instead of CATLG for a newly allocated dataset leaves it uncataloged on non-SMS volumes or alters system catalog association."
+    },
+    {
+      "id": "sembench_123",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Attempts to allocate an existing dataset as NEW, triggering JCL allocation error."
+    },
+    {
+      "id": "sembench_124",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Specifying KEEP instead of CATLG for a newly allocated dataset leaves it uncataloged on non-SMS volumes or alters system catalog association."
+    },
+    {
+      "id": "sembench_126",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "DISP=OLD requests exclusive dataset enqueue, preventing concurrent job access and causing job lockouts in production. (Oracle single-job simulation models both as reads, producing EQUIVALENT)."
+    },
+    {
+      "id": "sembench_127",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Specifying KEEP instead of CATLG for a newly allocated dataset leaves it uncataloged on non-SMS volumes or alters system catalog association."
+    },
+    {
+      "id": "sembench_128",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Attempts to allocate an existing dataset as NEW, triggering JCL allocation error."
+    },
+    {
+      "id": "sembench_129",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "DISP=OLD requests exclusive dataset enqueue, preventing concurrent job access and causing job lockouts in production. (Oracle single-job simulation models both as reads, producing EQUIVALENT)."
+    },
+    {
+      "id": "sembench_130",
+      "category": "disp_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Specifying KEEP instead of CATLG for a newly allocated dataset leaves it uncataloged on non-SMS volumes or alters system catalog association."
+    },
+    {
+      "id": "sembench_153",
+      "category": "producer_consumer_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Omitting a processing step prevents generation of intermediate datasets, breaks DISP pass chains, and omits intended catalog mutations."
+    },
+    {
+      "id": "sembench_154",
+      "category": "producer_consumer_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Omitting a processing step prevents generation of intermediate datasets, breaks DISP pass chains, and omits intended catalog mutations."
+    },
+    {
+      "id": "sembench_156",
+      "category": "producer_consumer_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Omitting a processing step prevents generation of intermediate datasets, breaks DISP pass chains, and omits intended catalog mutations."
+    },
+    {
+      "id": "sembench_158",
+      "category": "producer_consumer_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Omitting a processing step prevents generation of intermediate datasets, breaks DISP pass chains, and omits intended catalog mutations."
+    },
+    {
+      "id": "sembench_160",
+      "category": "producer_consumer_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Omitting a processing step prevents generation of intermediate datasets, breaks DISP pass chains, and omits intended catalog mutations."
+    },
+    {
+      "id": "sembench_161",
+      "category": "producer_consumer_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Omitting a processing step prevents generation of intermediate datasets, breaks DISP pass chains, and omits intended catalog mutations."
+    },
+    {
+      "id": "sembench_165",
+      "category": "return_code_effect",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "IDCAMS prints 10 records instead of 100 to SYSPRINT, modifying program execution output."
+    },
+    {
+      "id": "sembench_170",
+      "category": "return_code_effect",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "IEFBR14 performs no data transfer; the target dataset remains unwritten."
+    },
+    {
+      "id": "sembench_175",
+      "category": "dataset_dependency_change",
+      "expected": "CHANGING",
+      "oracle_label": "EQUIVALENT",
+      "reason": "Directs application to alternate non-existent dataset, changing input dataflow and causing potential abend/error."
+    }
+  ]
+}

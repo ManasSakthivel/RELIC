@@ -1,0 +1,15 @@
+//ETLJOB01 JOB (ACCT101,'FINANCE'),'NIGHTLY ETL',
+//         CLASS=A,MSGCLASS=X,NOTIFY=&SYSUID
+//* Clean up previous target dataset
+//STEP10   EXEC PGM=IEFBR14
+//OLDDEL   DD DSN=FIN.PROD.DAILY.TRANS,
+//            DISP=(MOD,DELETE,DELETE),
+//            UNIT=SYSDA,SPACE=(TRK,0)
+//* Backup newly created dataset (producer STEP20 was deleted!)
+//STEP30   EXEC PGM=IDCAMS
+//SYSPRINT DD SYSOUT=*
+//SYSIN    DD *
+  REPRO -
+    INDATASET(FIN.PROD.DAILY.TRANS) -
+    OUTDATASET(FIN.BKUP.DAILY.TRANS)
+/*
