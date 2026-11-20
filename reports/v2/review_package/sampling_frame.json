@@ -1,0 +1,102 @@
+{
+ "cells": {
+  "DIFFERENT|ALTER_COND_THRESHOLD|carddemo": {
+   "population": 21,
+   "quota": 1
+  },
+  "DIFFERENT|ALTER_COND_THRESHOLD|genapp": {
+   "population": 12,
+   "quota": 1
+  },
+  "DIFFERENT|ALTER_COND_THRESHOLD|omp_course": {
+   "population": 1,
+   "quota": 1
+  },
+  "DIFFERENT|DELETE_PRODUCER_STEP|carddemo": {
+   "population": 28,
+   "quota": 3
+  },
+  "DIFFERENT|DELETE_PRODUCER_STEP|genapp": {
+   "population": 5,
+   "quota": 1
+  },
+  "DIFFERENT|MOVE_CONSUMER_BEFORE_PRODUCER|carddemo": {
+   "population": 11,
+   "quota": 2
+  },
+  "DIFFERENT|MOVE_CONSUMER_BEFORE_PRODUCER|genapp": {
+   "population": 3,
+   "quota": 1
+  },
+  "DIFFERENT|REMOVE_COND|carddemo": {
+   "population": 21,
+   "quota": 1
+  },
+  "DIFFERENT|REMOVE_COND|genapp": {
+   "population": 12,
+   "quota": 1
+  },
+  "DIFFERENT|REMOVE_COND|omp_course": {
+   "population": 1,
+   "quota": 1
+  },
+  "DIFFERENT|RENAME_OUTPUT_DATASET|carddemo": {
+   "population": 11,
+   "quota": 3
+  },
+  "DIFFERENT|RENAME_OUTPUT_DATASET|genapp": {
+   "population": 2,
+   "quota": 1
+  },
+  "DIFFERENT|SPLIT_JOB|carddemo": {
+   "population": 81,
+   "quota": 2
+  },
+  "DIFFERENT|SPLIT_JOB|genapp": {
+   "population": 81,
+   "quota": 3
+  },
+  "DIFFERENT|SPLIT_JOB|omp_course": {
+   "population": 4,
+   "quota": 1
+  },
+  "DIFFERENT|SWAP_ADJACENT_STEPS|carddemo": {
+   "population": 81,
+   "quota": 2
+  },
+  "DIFFERENT|SWAP_ADJACENT_STEPS|genapp": {
+   "population": 81,
+   "quota": 3
+  },
+  "DIFFERENT|SWAP_ADJACENT_STEPS|omp_course": {
+   "population": 4,
+   "quota": 2
+  },
+  "EQUIVALENT|CHANGE_MSGCLASS|carddemo": {
+   "population": 29,
+   "quota": 7
+  },
+  "EQUIVALENT|CHANGE_MSGCLASS|genapp": {
+   "population": 10,
+   "quota": 7
+  },
+  "EQUIVALENT|INSERT_COMMENT|carddemo": {
+   "population": 30,
+   "quota": 5
+  },
+  "EQUIVALENT|INSERT_COMMENT|genapp": {
+   "population": 10,
+   "quota": 4
+  },
+  "EQUIVALENT|INSERT_COMMENT|omp_course": {
+   "population": 25,
+   "quota": 5
+  }
+ },
+ "population_by_label": {
+  "DIFFERENT": 460,
+  "EQUIVALENT": 106
+ },
+ "population_evaluable": 566,
+ "seed": 20251120
+}

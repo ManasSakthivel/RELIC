@@ -1,0 +1,3884 @@
+{
+ "summary": {
+  "relic_v1_0(legacy)": {
+   "files": 121,
+   "stmts_total": 1519,
+   "stmts_both": 1436,
+   "stmts_only_oracle": 83,
+   "stmts_only_relic": 0,
+   "operand_cmp": 1436,
+   "opname_cmp": 1436,
+   "opname_equal": 1436,
+   "operand_equal": 1201,
+   "dsn_dd_total": 398,
+   "role_agree": 262,
+   "role_relic_no_dsn_seen": 111,
+   "file_exec_agree": 121,
+   "file_dd_agree": 81,
+   "file_dsn_set_agree": 65,
+   "file_stmt_set_agree": 79,
+   "file_step_entities_eq_exec": 114,
+   "role_disagree": 25,
+   "stmt_anchor_agreement": 0.9454,
+   "file_level_exec_count_agreement": 1.0,
+   "file_level_dd_count_agreement": 0.6694,
+   "file_level_dsn_set_agreement": 0.5372,
+   "file_level_stmt_set_agreement": 0.6529,
+   "operand_field_agreement_on_common_stmts": 0.8364,
+   "dd_role_agreement_on_dsn_dds": 0.6583,
+   "step_entities_equal_exec_count_files": 0.9421
+  },
+  "relic_v1_1(default)": {
+   "files": 121,
+   "stmts_total": 1519,
+   "stmts_both": 1436,
+   "stmts_only_oracle": 83,
+   "stmts_only_relic": 0,
+   "operand_cmp": 1436,
+   "operand_equal": 1436,
+   "opname_cmp": 1436,
+   "opname_equal": 1436,
+   "dsn_dd_total": 398,
+   "role_agree": 368,
+   "role_relic_no_dsn_seen": 24,
+   "file_exec_agree": 121,
+   "file_dd_agree": 81,
+   "file_dsn_set_agree": 90,
+   "file_stmt_set_agree": 79,
+   "file_step_entities_eq_exec": 114,
+   "role_disagree": 6,
+   "stmt_anchor_agreement": 0.9454,
+   "file_level_exec_count_agreement": 1.0,
+   "file_level_dd_count_agreement": 0.6694,
+   "file_level_dsn_set_agreement": 0.7438,
+   "file_level_stmt_set_agreement": 0.6529,
+   "operand_field_agreement_on_common_stmts": 1.0,
+   "dd_role_agreement_on_dsn_dds": 0.9246,
+   "step_entities_equal_exec_count_files": 0.9421
+  },
+  "relic_v2(v2_fixes)": {
+   "files": 121,
+   "stmts_total": 1519,
+   "stmts_both": 1436,
+   "stmts_only_oracle": 83,
+   "stmts_only_relic": 0,
+   "operand_cmp": 1436,
+   "operand_equal": 1436,
+   "opname_cmp": 1436,
+   "opname_equal": 1436,
+   "dsn_dd_total": 398,
+   "role_agree": 371,
+   "role_relic_no_dsn_seen": 27,
+   "file_exec_agree": 121,
+   "file_dd_agree": 81,
+   "file_dsn_set_agree": 92,
+   "file_stmt_set_agree": 79,
+   "file_step_entities_eq_exec": 121,
+   "stmt_anchor_agreement": 0.9454,
+   "file_level_exec_count_agreement": 1.0,
+   "file_level_dd_count_agreement": 0.6694,
+   "file_level_dsn_set_agreement": 0.7603,
+   "file_level_stmt_set_agreement": 0.6529,
+   "operand_field_agreement_on_common_stmts": 1.0,
+   "dd_role_agreement_on_dsn_dds": 0.9322,
+   "step_entities_equal_exec_count_files": 1.0
+  }
+ },
+ "examples": {
+  "relic_v1_0(legacy)": {
+   "operand_diff": [
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+     1,
+     "'CARDDEMO',CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),REGION=0M,NOTIFY=&SYSUID",
+     "'CARDDEMO',CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+     24,
+     "PGM=DFSRRC00,PARM='BMP,CBPAUP0C,PSBPAUTB'",
+     "PGM=DFSRRC00,"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     1,
+     "'DBPAUTP0DBUNLOAD',CLASS=A,MSGCLASS=X,REGION=0K,TIME=30,NOTIFY=&SYSUID",
+     "'DBPAUTP0DBUNLOAD',CLASS=A,MSGCLASS=X,"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     9,
+     "DSN=AWS.M2.CARDDEMO.IMSDATA.DBPAUTP0,DISP=(MOD,DELETE),UNIT=SYSDA,SPAC",
+     "DSN=AWS.M2.CARDDEMO.IMSDATA.DBPAUTP0,"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     15,
+     "PGM=DFSRRC00,REGION=4M,PARM=(ULU,DFSURGU0,DBPAUTP0)",
+     "PGM=DFSRRC00,REGION=4M,"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     25,
+     "DSN=AWS.M2.CARDDEMO.IMSDATA.DBPAUTP0,DISP=(,CATLG,DELETE),UNIT=SYSDA,S",
+     "DSN=AWS.M2.CARDDEMO.IMSDATA.DBPAUTP0,"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     36,
+     "SYSOUT=*,DCB=(RECFM=FBA,LRECL=133),SPACE=(605,(500,500),RLSE,,ROUND)",
+     "SYSOUT=*,"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+     1,
+     "'M2APP',CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),REGION=0M,NOTIFY=&SYSUID,TIM",
+     "'M2APP',CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+     26,
+     "PGM=DFSRRC00,PARM='BMP,PAUDBLOD,PSBPAUTB'",
+     "PGM=DFSRRC00,"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+     44,
+     "DISP=SHR,DSN=OEMPP.IMS.V15R01MB.PROCLIB(DFSVSMDB)",
+     "DISP=SHR,"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+     1,
+     "'M2APP',CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),REGION=0M,NOTIFY=&SYSUID,TIM",
+     "'M2APP',CLASS=A,MSGCLASS=H,MSGLEVEL=(1,1),"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+     26,
+     "PGM=DFSRRC00,PARM='DLI,DBUNLDGS,DLIGSAMP,,,,,,,,,,,N'",
+     "PGM=DFSRRC00,"
+    ]
+   ],
+   "relic_no_dsn": [
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+     28,
+     "DISP=SHR,DSN=IMS.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+     31,
+     "DSN=IMS.SDFSRESL,DISP=SHR"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     20,
+     "DSN=OEMA.IMS.IMSP.SDFSRESL,DISP=SHR"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+     31,
+     "DISP=SHR,DSN=OEMA.IMS.IMSP.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+     44,
+     "DISP=SHR,DSN=OEMPP.IMS.V15R01MB.PROCLIB(DFSVSMDB)"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+     31,
+     "DISP=SHR,DSN=OEMA.IMS.IMSP.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+     46,
+     "DISP=SHR,DSN=OEMPP.IMS.V15R01MB.PROCLIB(DFSVSMDB)"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDPADB.JCL",
+     43,
+     "DISP=SHR,DSN=OEMA.IMS.IMSP.SDFSRESL"
+    ]
+   ],
+   "role_diff": [
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     9,
+     "MOD",
+     [
+      "C"
+     ],
+     "DSN=AWS.M2.CARDDEMO.IMSDATA.DBPAUTP0,DISP=(MOD,DELETE),UNIT=SYSDA,SPAC"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     25,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=AWS.M2.CARDDEMO.IMSDATA.DBPAUTP0,DISP=(,CATLG,DELETE),UNIT=SYSDA,S"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDPADB.JCL",
+     48,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=AWS.M2.CARDDEMO.PAUTDB.ROOT.FILEO,DISP=(NEW,CATLG,DELETE),DCB=(LRE"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDPADB.JCL",
+     53,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=AWS.M2.CARDDEMO.PAUTDB.CHILD.FILEO,DISP=(NEW,CATLG,DELETE),DCB=(LR"
+    ],
+    [
+     "carddemo/app/app-transaction-type-db2/jcl/TRANEXTR.jcl",
+     35,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=&HLQ..TRANTYPE.BKUP(+1),DISP=(NEW,CATLG),DCB=(LRECL=60,RECFM=FB,BL"
+    ],
+    [
+     "carddemo/app/app-transaction-type-db2/jcl/TRANEXTR.jcl",
+     46,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=&HLQ..TRANCATG.PS.BKUP(+1),DISP=(NEW,CATLG),DCB=(LRECL=60,RECFM=FB"
+    ],
+    [
+     "carddemo/app/jcl/CREASTMT.JCL",
+     48,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=AWS.M2.CARDDEMO.TRXFL.SEQ,DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=("
+    ],
+    [
+     "carddemo/app/jcl/DEFGDGD.jcl",
+     40,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=AWS.M2.CARDDEMO.TRANTYPE.BKUP(+1),DISP=(NEW,CATLG),DCB=(LRECL=60,R"
+    ],
+    [
+     "carddemo/app/jcl/DEFGDGD.jcl",
+     63,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=AWS.M2.CARDDEMO.TRANCATG.PS.BKUP(+1),DISP=(NEW,CATLG),DCB=(LRECL=6"
+    ],
+    [
+     "carddemo/app/jcl/DEFGDGD.jcl",
+     86,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=AWS.M2.CARDDEMO.DISCGRP.BKUP(+1),DISP=(NEW,CATLG),DCB=(LRECL=50,RE"
+    ]
+   ],
+   "dsn_set_diff": [
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+     [
+      "OEMPP.IMS.V15R01MB.PROCLIB(DFSVSMDB)"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+     [
+      "OEMPP.IMS.V15R01MB.PROCLIB(DFSVSMDB)"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDPADB.JCL",
+     [
+      "OEMPP.IMS.V15R01MB.PROCLIB(DFSVSMDB)"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/app-transaction-type-db2/jcl/CREADB21.jcl",
+     [
+      "CEE.SCEERUN",
+      "OEM.DB2.&DB2S..SDSNLOAD"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/ACCTFILE.jcl",
+     [
+      "AWS.M2.CARDDEMO.ACCTDATA.PS",
+      "AWS.M2.CARDDEMO.ACCTDATA.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/CARDFILE.jcl",
+     [
+      "AWS.M2.CARDDEMO.CARDDATA.PS",
+      "AWS.M2.CARDDEMO.CARDDATA.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/CBEXPORT.jcl",
+     [
+      "AWS.M2.CARDDEMO.ACCTDATA.VSAM.KSDS",
+      "AWS.M2.CARDDEMO.CARDDATA.VSAM.KSDS",
+      "AWS.M2.CARDDEMO.CARDXREF.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/CBIMPORT.jcl",
+     [
+      "AWS.M2.CARDDEMO.ACCTDATA.IMPORT",
+      "AWS.M2.CARDDEMO.CARDXREF.IMPORT",
+      "AWS.M2.CARDDEMO.CUSTDATA.IMPORT"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/COMBTRAN.jcl",
+     [
+      "AWS.M2.CARDDEMO.SYSTRAN(0)",
+      "AWS.M2.CARDDEMO.TRANSACT.BKUP(0)",
+      "AWS.M2.CARDDEMO.TRANSACT.COMBINED(+1)"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/CREASTMT.JCL",
+     [
+      "AWS.M2.CARDDEMO.STATEMNT.HTML",
+      "AWS.M2.CARDDEMO.STATEMNT.PS"
+     ],
+     []
+    ]
+   ],
+   "only_oracle": [
+    [
+     "carddemo/app/jcl/PRTCATBL.jcl",
+     32,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TCATBALF.VSAM.KSDS"
+    ],
+    [
+     "carddemo/app/jcl/PRTCATBL.jcl",
+     35,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=50,RECFM=FB,BL"
+    ],
+    [
+     "carddemo/app/jcl/TRANBKP.jcl",
+     26,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+    ],
+    [
+     "carddemo/app/jcl/TRANBKP.jcl",
+     29,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=350,RECFM=FB,B"
+    ],
+    [
+     "carddemo/app/jcl/TRANREPT.jcl",
+     26,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+    ],
+    [
+     "carddemo/app/jcl/TRANREPT.jcl",
+     29,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=350,RECFM=FB,B"
+    ],
+    [
+     "carddemo/samples/jcl/REPRTEST.jcl",
+     26,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+    ],
+    [
+     "carddemo/samples/jcl/REPRTEST.jcl",
+     29,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=350,RECFM=FB,B"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(ADDAMT),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(ADDAMT),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0002),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0002),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0004),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0004),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0005J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0005),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0005J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0005),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0006J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0006),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0006J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0006),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0007J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0007),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0007J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0007),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0008J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0008),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0008J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0008),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0009J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0009),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0009J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0009),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0010J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0010),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0010J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0010),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0011J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0011),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0011J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0011),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0012J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0012),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0012J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0012),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0013J.jcl",
+     4,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0013),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0013J.jcl",
+     5,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0013),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0014J.jcl",
+     4,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0014),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0014J.jcl",
+     5,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0014),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(HELLO),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(HELLO),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+     13,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0033),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL006AJ.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL006A),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL006AJ.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL006A),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/COBRUN.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(COBOL),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/COBRUN.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(COBEXEC),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHBINJ.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(SRCHBIN),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHBINJ.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(SRCHBIN),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHSERJ.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(SRCHSER),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHSERJ.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(SRCHSER),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/jcl/CBL0106J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0106),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/jcl/CBL0106J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0106),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB21C.jcl",
+     7,
+     "DD",
+     "BIND.SYSTSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB22C.jcl",
+     7,
+     "DD",
+     "BIND.SYSTSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB23C.jcl",
+     7,
+     "DD",
+     "BIND.SYSTSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CRETBL.jcl",
+     7,
+     "DD",
+     "SQL.SYSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/DEPTPAY.JCL",
+     11,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=Z99998.CBL(DEPTPAY),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/DEPTPAY.JCL",
+     12,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=Z99998.LOAD(DEPTPAY),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/EMPPAY.JCL",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(EMPPAY),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/EMPPAY.JCL",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(EMPPAY),DISP=SHR"
+    ],
+    [
+     "genapp/base/cntl/cpsmde2.jcl",
+     55,
+     "DD",
+     "EYU9XDBT.RESDEFS",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/cpsmde2.jcl",
+     14,
+     "DD",
+     "EYU9XDBT.SYSIN",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/sampcma.jcl",
+     1,
+     "JOB",
+     "<CMASAPPL>",
+     ",'CMAS',CLASS=A,MSGCLASS=H"
+    ],
+    [
+     "genapp/base/cntl/sampwui.jcl",
+     1,
+     "JOB",
+     "<WUIAPPL>",
+     "241901,'WUI',NOTIFY=&SYSUID,CLASS=A,MSGCLASS=H"
+    ],
+    [
+     "genapp/base/cntl/wsaac01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaap01.jcl",
+     64,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaap01.jcl",
+     42,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaap01.jcl",
+     20,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaic01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaip01.jcl",
+     65,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaip01.jcl",
+     43,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaip01.jcl",
+     109,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsauc01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaup01.jcl",
+     64,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaup01.jcl",
+     42,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaup01.jcl",
+     20,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsavc01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsavp01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ]
+   ]
+  },
+  "relic_v1_1(default)": {
+   "relic_no_dsn": [
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+     28,
+     "DISP=SHR,DSN=IMS.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+     31,
+     "DSN=IMS.SDFSRESL,DISP=SHR"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     20,
+     "DSN=OEMA.IMS.IMSP.SDFSRESL,DISP=SHR"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+     31,
+     "DISP=SHR,DSN=OEMA.IMS.IMSP.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+     31,
+     "DISP=SHR,DSN=OEMA.IMS.IMSP.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDPADB.JCL",
+     43,
+     "DISP=SHR,DSN=OEMA.IMS.IMSP.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-transaction-type-db2/jcl/CREADB21.jcl",
+     32,
+     "DSN=OEM.DB2.&DB2S..SDSNLOAD,DISP=SHR"
+    ],
+    [
+     "carddemo/app/app-transaction-type-db2/jcl/CREADB21.jcl",
+     33,
+     "DSN=OEM.DB2.&DB2S..SDSNLOAD,DISP=SHR"
+    ]
+   ],
+   "role_diff": [
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     25,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=AWS.M2.CARDDEMO.IMSDATA.DBPAUTP0,DISP=(,CATLG,DELETE),UNIT=SYSDA,S"
+    ],
+    [
+     "carddemo/samples/jcl/IMSMQCMP.jcl",
+     32,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=&&SYSCIN,DISP=(,PASS),UNIT=SYSDA,DCB=BLKSIZE=400,SPACE=(400,(400,1"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/DB2SETUP.jcl",
+     34,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=&SYSUID..DBRMLIB,DISP=(,CATLG),UNIT=3390,VOL=SER=DB2004,SPACE=(CYL"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/DBRMLIB.jcl",
+     8,
+     "NEW",
+     [
+      "C"
+     ],
+     "DSN=&SYSUID..DBRMLIB,DISP=(,CATLG),UNIT=3390,VOL=SER=DB2004,SPACE=(CYL"
+    ],
+    [
+     "genapp/base/cntl/asmmap.jcl",
+     13,
+     "NEW",
+     [
+      "C"
+     ],
+     "DISP=(,PASS),DSN=&&TEMPM,DCB=(LRECL=80,BLKSIZE=3120,RECFM=FB),UNIT=SYS"
+    ],
+    [
+     "genapp/base/cntl/asmmap.jcl",
+     32,
+     "NEW",
+     [
+      "C"
+     ],
+     "DISP=(,PASS),DSN=&&MAP,UNIT=SYSDA,DCB=BLKSIZE=3120,SPACE=(CYL,(1,1))"
+    ]
+   ],
+   "dsn_set_diff": [
+    [
+     "carddemo/app/app-transaction-type-db2/jcl/CREADB21.jcl",
+     [
+      "CEE.SCEERUN",
+      "OEM.DB2.&DB2S..SDSNLOAD"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/PRTCATBL.jcl",
+     [
+      "AWS.M2.CARDDEMO.TCATBALF.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/TRANBKP.jcl",
+     [
+      "AWS.M2.CARDDEMO.TRANSACT.BKUP(+1)",
+      "AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/TRANREPT.jcl",
+     [
+      "AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "carddemo/samples/jcl/IMSMQCMP.jcl",
+     [
+      "&HLQ..CICSLOAD(IMSMQPGM)",
+      "CEE.SCEERUN",
+      "CEE.SCEERUN2"
+     ],
+     []
+    ],
+    [
+     "carddemo/samples/jcl/REPRTEST.jcl",
+     [
+      "AWS.M2.CARDDEMO.TRANSACT.BKUP(+1)",
+      "AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+     [
+      "&SYSUID..CBL(ADDAMT)",
+      "&SYSUID..LOAD(ADDAMT)"
+     ],
+     []
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+     [
+      "&SYSUID..CBL(CBL0001)",
+      "&SYSUID..LOAD(CBL0001)"
+     ],
+     []
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+     [
+      "&SYSUID..CBL(CBL0002)",
+      "&SYSUID..LOAD(CBL0002)"
+     ],
+     []
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+     [
+      "&SYSUID..CBL(CBL0001)",
+      "&SYSUID..LOAD(CBL0001)"
+     ],
+     []
+    ]
+   ],
+   "only_oracle": [
+    [
+     "carddemo/app/jcl/PRTCATBL.jcl",
+     32,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TCATBALF.VSAM.KSDS"
+    ],
+    [
+     "carddemo/app/jcl/PRTCATBL.jcl",
+     35,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=50,RECFM=FB,BL"
+    ],
+    [
+     "carddemo/app/jcl/TRANBKP.jcl",
+     26,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+    ],
+    [
+     "carddemo/app/jcl/TRANBKP.jcl",
+     29,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=350,RECFM=FB,B"
+    ],
+    [
+     "carddemo/app/jcl/TRANREPT.jcl",
+     26,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+    ],
+    [
+     "carddemo/app/jcl/TRANREPT.jcl",
+     29,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=350,RECFM=FB,B"
+    ],
+    [
+     "carddemo/samples/jcl/REPRTEST.jcl",
+     26,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+    ],
+    [
+     "carddemo/samples/jcl/REPRTEST.jcl",
+     29,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=350,RECFM=FB,B"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(ADDAMT),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(ADDAMT),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0002),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0002),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0004),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0004),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0005J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0005),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0005J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0005),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0006J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0006),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0006J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0006),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0007J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0007),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0007J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0007),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0008J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0008),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0008J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0008),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0009J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0009),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0009J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0009),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0010J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0010),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0010J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0010),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0011J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0011),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0011J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0011),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0012J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0012),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0012J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0012),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0013J.jcl",
+     4,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0013),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0013J.jcl",
+     5,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0013),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0014J.jcl",
+     4,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0014),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0014J.jcl",
+     5,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0014),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(HELLO),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(HELLO),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+     13,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0033),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL006AJ.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL006A),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL006AJ.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL006A),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/COBRUN.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(COBOL),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/COBRUN.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(COBEXEC),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHBINJ.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(SRCHBIN),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHBINJ.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(SRCHBIN),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHSERJ.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(SRCHSER),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHSERJ.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(SRCHSER),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/jcl/CBL0106J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0106),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/jcl/CBL0106J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0106),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB21C.jcl",
+     7,
+     "DD",
+     "BIND.SYSTSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB22C.jcl",
+     7,
+     "DD",
+     "BIND.SYSTSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB23C.jcl",
+     7,
+     "DD",
+     "BIND.SYSTSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CRETBL.jcl",
+     7,
+     "DD",
+     "SQL.SYSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/DEPTPAY.JCL",
+     11,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=Z99998.CBL(DEPTPAY),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/DEPTPAY.JCL",
+     12,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=Z99998.LOAD(DEPTPAY),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/EMPPAY.JCL",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(EMPPAY),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/EMPPAY.JCL",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(EMPPAY),DISP=SHR"
+    ],
+    [
+     "genapp/base/cntl/cpsmde2.jcl",
+     55,
+     "DD",
+     "EYU9XDBT.RESDEFS",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/cpsmde2.jcl",
+     14,
+     "DD",
+     "EYU9XDBT.SYSIN",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/sampcma.jcl",
+     1,
+     "JOB",
+     "<CMASAPPL>",
+     ",'CMAS',CLASS=A,MSGCLASS=H"
+    ],
+    [
+     "genapp/base/cntl/sampwui.jcl",
+     1,
+     "JOB",
+     "<WUIAPPL>",
+     "241901,'WUI',NOTIFY=&SYSUID,CLASS=A,MSGCLASS=H"
+    ],
+    [
+     "genapp/base/cntl/wsaac01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaap01.jcl",
+     64,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaap01.jcl",
+     42,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaap01.jcl",
+     20,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaic01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaip01.jcl",
+     65,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaip01.jcl",
+     43,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaip01.jcl",
+     109,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsauc01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaup01.jcl",
+     64,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaup01.jcl",
+     42,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaup01.jcl",
+     20,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsavc01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsavp01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ]
+   ]
+  },
+  "relic_v2(v2_fixes)": {
+   "relic_no_dsn": [
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+     28,
+     "DISP=SHR,DSN=IMS.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+     31,
+     "DSN=IMS.SDFSRESL,DISP=SHR"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     9,
+     "DSN=AWS.M2.CARDDEMO.IMSDATA.DBPAUTP0,DISP=(MOD,DELETE),UNIT=SYSDA,SPAC"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+     20,
+     "DSN=OEMA.IMS.IMSP.SDFSRESL,DISP=SHR"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+     31,
+     "DISP=SHR,DSN=OEMA.IMS.IMSP.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+     31,
+     "DISP=SHR,DSN=OEMA.IMS.IMSP.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDPADB.JCL",
+     43,
+     "DISP=SHR,DSN=OEMA.IMS.IMSP.SDFSRESL"
+    ],
+    [
+     "carddemo/app/app-transaction-type-db2/jcl/CREADB21.jcl",
+     32,
+     "DSN=OEM.DB2.&DB2S..SDSNLOAD,DISP=SHR"
+    ]
+   ],
+   "dsn_set_diff": [
+    [
+     "carddemo/app/app-transaction-type-db2/jcl/CREADB21.jcl",
+     [
+      "CEE.SCEERUN",
+      "OEM.DB2.&DB2S..SDSNLOAD"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/PRTCATBL.jcl",
+     [
+      "AWS.M2.CARDDEMO.TCATBALF.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/TRANBKP.jcl",
+     [
+      "AWS.M2.CARDDEMO.TRANSACT.BKUP(+1)",
+      "AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "carddemo/app/jcl/TRANREPT.jcl",
+     [
+      "AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "carddemo/samples/jcl/REPRTEST.jcl",
+     [
+      "AWS.M2.CARDDEMO.TRANSACT.BKUP(+1)",
+      "AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+     ],
+     []
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+     [
+      "&SYSUID..CBL(ADDAMT)",
+      "&SYSUID..LOAD(ADDAMT)"
+     ],
+     []
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+     [
+      "&SYSUID..CBL(CBL0001)",
+      "&SYSUID..LOAD(CBL0001)"
+     ],
+     []
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+     [
+      "&SYSUID..CBL(CBL0002)",
+      "&SYSUID..LOAD(CBL0002)"
+     ],
+     []
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+     [
+      "&SYSUID..CBL(CBL0001)",
+      "&SYSUID..LOAD(CBL0001)"
+     ],
+     []
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+     [
+      "&SYSUID..CBL(CBL0004)",
+      "&SYSUID..LOAD(CBL0004)"
+     ],
+     []
+    ]
+   ],
+   "only_oracle": [
+    [
+     "carddemo/app/jcl/PRTCATBL.jcl",
+     32,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TCATBALF.VSAM.KSDS"
+    ],
+    [
+     "carddemo/app/jcl/PRTCATBL.jcl",
+     35,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=50,RECFM=FB,BL"
+    ],
+    [
+     "carddemo/app/jcl/TRANBKP.jcl",
+     26,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+    ],
+    [
+     "carddemo/app/jcl/TRANBKP.jcl",
+     29,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=350,RECFM=FB,B"
+    ],
+    [
+     "carddemo/app/jcl/TRANREPT.jcl",
+     26,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+    ],
+    [
+     "carddemo/app/jcl/TRANREPT.jcl",
+     29,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=350,RECFM=FB,B"
+    ],
+    [
+     "carddemo/samples/jcl/REPRTEST.jcl",
+     26,
+     "DD",
+     "PRC001.FILEIN",
+     "DISP=SHR,DSN=AWS.M2.CARDDEMO.TRANSACT.VSAM.KSDS"
+    ],
+    [
+     "carddemo/samples/jcl/REPRTEST.jcl",
+     29,
+     "DD",
+     "PRC001.FILEOUT",
+     "DISP=(NEW,CATLG,DELETE),UNIT=SYSDA,DCB=(LRECL=350,RECFM=FB,B"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(ADDAMT),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(ADDAMT),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0002),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0002),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0001),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0004),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0004),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0005J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0005),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0005J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0005),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0006J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0006),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0006J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0006),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0007J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0007),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0007J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0007),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0008J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0008),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0008J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0008),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0009J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0009),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0009J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0009),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0010J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0010),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0010J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0010),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0011J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0011),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0011J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0011),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0012J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0012),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0012J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0012),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0013J.jcl",
+     4,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0013),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0013J.jcl",
+     5,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0013),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0014J.jcl",
+     4,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0014),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0014J.jcl",
+     5,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0014),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(HELLO),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(HELLO),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+     13,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0033),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL006AJ.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL006A),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL006AJ.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL006A),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/COBRUN.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(COBOL),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/COBRUN.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(COBEXEC),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHBINJ.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(SRCHBIN),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHBINJ.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(SRCHBIN),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHSERJ.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(SRCHSER),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHSERJ.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(SRCHSER),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/jcl/CBL0106J.jcl",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(CBL0106),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/jcl/CBL0106J.jcl",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(CBL0106),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB21C.jcl",
+     7,
+     "DD",
+     "BIND.SYSTSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB22C.jcl",
+     7,
+     "DD",
+     "BIND.SYSTSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB23C.jcl",
+     7,
+     "DD",
+     "BIND.SYSTSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CRETBL.jcl",
+     7,
+     "DD",
+     "SQL.SYSIN",
+     "*,SYMBOLS=CNVTSYS"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/DEPTPAY.JCL",
+     11,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=Z99998.CBL(DEPTPAY),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/DEPTPAY.JCL",
+     12,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=Z99998.LOAD(DEPTPAY),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/EMPPAY.JCL",
+     7,
+     "DD",
+     "COBOL.SYSIN",
+     "DSN=&SYSUID..CBL(EMPPAY),DISP=SHR"
+    ],
+    [
+     "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/EMPPAY.JCL",
+     8,
+     "DD",
+     "LKED.SYSLMOD",
+     "DSN=&SYSUID..LOAD(EMPPAY),DISP=SHR"
+    ],
+    [
+     "genapp/base/cntl/cpsmde2.jcl",
+     55,
+     "DD",
+     "EYU9XDBT.RESDEFS",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/cpsmde2.jcl",
+     14,
+     "DD",
+     "EYU9XDBT.SYSIN",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/sampcma.jcl",
+     1,
+     "JOB",
+     "<CMASAPPL>",
+     ",'CMAS',CLASS=A,MSGCLASS=H"
+    ],
+    [
+     "genapp/base/cntl/sampwui.jcl",
+     1,
+     "JOB",
+     "<WUIAPPL>",
+     "241901,'WUI',NOTIFY=&SYSUID,CLASS=A,MSGCLASS=H"
+    ],
+    [
+     "genapp/base/cntl/wsaac01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaap01.jcl",
+     64,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaap01.jcl",
+     42,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaap01.jcl",
+     20,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaic01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaip01.jcl",
+     65,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaip01.jcl",
+     43,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaip01.jcl",
+     109,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsauc01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaup01.jcl",
+     64,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaup01.jcl",
+     42,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsaup01.jcl",
+     20,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsavc01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ],
+    [
+     "genapp/base/cntl/wsavp01.jcl",
+     19,
+     "DD",
+     "INPUT.SYSUT1",
+     "*"
+    ]
+   ]
+  }
+ },
+ "files": [
+  {
+   "file": "carddemo/app/app-authorization-ims-db2-mq/jcl/CBPAUP0J.jcl",
+   "o_exec": 1,
+   "o_dd": 17,
+   "o_dsn": 5,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 17,
+   "r_dsn": 5,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/app-authorization-ims-db2-mq/jcl/DBPAUTP0.jcl",
+   "o_exec": 2,
+   "o_dd": 19,
+   "o_dsn": 11,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 19,
+   "r_dsn": 11,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/app/app-authorization-ims-db2-mq/jcl/LOADPADB.JCL",
+   "o_exec": 1,
+   "o_dd": 14,
+   "o_dsn": 8,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 14,
+   "r_dsn": 8,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDGSAM.JCL",
+   "o_exec": 1,
+   "o_dd": 16,
+   "o_dsn": 10,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 16,
+   "r_dsn": 10,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/app-authorization-ims-db2-mq/jcl/UNLDPADB.JCL",
+   "o_exec": 2,
+   "o_dd": 21,
+   "o_dsn": 10,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 21,
+   "r_dsn": 10,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/app/app-transaction-type-db2/jcl/CREADB21.jcl",
+   "o_exec": 5,
+   "o_dd": 30,
+   "o_dsn": 11,
+   "o_model_steps": 5,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 5,
+   "r_dd": 30,
+   "r_dsn": 9,
+   "r_step_entities": 5
+  },
+  {
+   "file": "carddemo/app/app-transaction-type-db2/jcl/MNTTRDB2.jcl",
+   "o_exec": 1,
+   "o_dd": 7,
+   "o_dsn": 5,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 7,
+   "r_dsn": 5,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/app-transaction-type-db2/jcl/TRANEXTR.jcl",
+   "o_exec": 5,
+   "o_dd": 28,
+   "o_dsn": 6,
+   "o_model_steps": 5,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 5,
+   "r_dd": 28,
+   "r_dsn": 6,
+   "r_step_entities": 5
+  },
+  {
+   "file": "carddemo/app/jcl/ACCTFILE.jcl",
+   "o_exec": 3,
+   "o_dd": 8,
+   "o_dsn": 2,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 8,
+   "r_dsn": 2,
+   "r_step_entities": 3
+  },
+  {
+   "file": "carddemo/app/jcl/CARDFILE.jcl",
+   "o_exec": 8,
+   "o_dd": 20,
+   "o_dsn": 2,
+   "o_model_steps": 8,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 8,
+   "r_dd": 20,
+   "r_dsn": 2,
+   "r_step_entities": 8
+  },
+  {
+   "file": "carddemo/app/jcl/CBADMCDJ.jcl",
+   "o_exec": 1,
+   "o_dd": 5,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 5,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/CBEXPORT.jcl",
+   "o_exec": 2,
+   "o_dd": 11,
+   "o_dsn": 7,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 11,
+   "r_dsn": 7,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/app/jcl/CBIMPORT.jcl",
+   "o_exec": 1,
+   "o_dd": 9,
+   "o_dsn": 7,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 9,
+   "r_dsn": 7,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/CLOSEFIL.jcl",
+   "o_exec": 1,
+   "o_dd": 3,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 3,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/COMBTRAN.jcl",
+   "o_exec": 2,
+   "o_dd": 10,
+   "o_dsn": 4,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 10,
+   "r_dsn": 4,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/app/jcl/CREASTMT.JCL",
+   "o_exec": 5,
+   "o_dd": 22,
+   "o_dsn": 9,
+   "o_model_steps": 5,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 5,
+   "r_dd": 22,
+   "r_dsn": 9,
+   "r_step_entities": 5
+  },
+  {
+   "file": "carddemo/app/jcl/CUSTFILE.jcl",
+   "o_exec": 5,
+   "o_dd": 14,
+   "o_dsn": 2,
+   "o_model_steps": 5,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 5,
+   "r_dd": 14,
+   "r_dsn": 2,
+   "r_step_entities": 5
+  },
+  {
+   "file": "carddemo/app/jcl/DALYREJS.jcl",
+   "o_exec": 1,
+   "o_dd": 2,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 2,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/DEFCUST.jcl",
+   "o_exec": 2,
+   "o_dd": 4,
+   "o_dsn": 0,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 4,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/DEFGDGB.jcl",
+   "o_exec": 1,
+   "o_dd": 2,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 2,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/DEFGDGD.jcl",
+   "o_exec": 6,
+   "o_dd": 18,
+   "o_dsn": 6,
+   "o_model_steps": 6,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 6,
+   "r_dd": 18,
+   "r_dsn": 6,
+   "r_step_entities": 6
+  },
+  {
+   "file": "carddemo/app/jcl/DISCGRP.jcl",
+   "o_exec": 3,
+   "o_dd": 8,
+   "o_dsn": 2,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 8,
+   "r_dsn": 2,
+   "r_step_entities": 3
+  },
+  {
+   "file": "carddemo/app/jcl/DUSRSECJ.jcl",
+   "o_exec": 4,
+   "o_dd": 12,
+   "o_dsn": 2,
+   "o_model_steps": 4,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 4,
+   "r_dd": 12,
+   "r_dsn": 2,
+   "r_step_entities": 4
+  },
+  {
+   "file": "carddemo/app/jcl/ESDSRRDS.jcl",
+   "o_exec": 6,
+   "o_dd": 19,
+   "o_dsn": 3,
+   "o_model_steps": 6,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 6,
+   "r_dd": 19,
+   "r_dsn": 3,
+   "r_step_entities": 6
+  },
+  {
+   "file": "carddemo/app/jcl/FTPJCL.JCL",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 1,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/INTCALC.jcl",
+   "o_exec": 1,
+   "o_dd": 9,
+   "o_dsn": 7,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 9,
+   "r_dsn": 7,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/INTRDRJ1.JCL",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 3,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 8,
+   "r_dsn": 3,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/app/jcl/INTRDRJ2.JCL",
+   "o_exec": 1,
+   "o_dd": 4,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 4,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/OPENFIL.jcl",
+   "o_exec": 1,
+   "o_dd": 3,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 3,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/POSTTRAN.jcl",
+   "o_exec": 1,
+   "o_dd": 9,
+   "o_dsn": 7,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 9,
+   "r_dsn": 7,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/PRTCATBL.jcl",
+   "o_exec": 3,
+   "o_dd": 8,
+   "o_dsn": 3,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 3
+  },
+  {
+   "file": "carddemo/app/jcl/READACCT.jcl",
+   "o_exec": 2,
+   "o_dd": 10,
+   "o_dsn": 5,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 10,
+   "r_dsn": 5,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/app/jcl/READCARD.jcl",
+   "o_exec": 1,
+   "o_dd": 4,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 4,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/READCUST.jcl",
+   "o_exec": 1,
+   "o_dd": 4,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 4,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/READXREF.jcl",
+   "o_exec": 1,
+   "o_dd": 4,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 4,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/REPTFILE.jcl",
+   "o_exec": 1,
+   "o_dd": 2,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 2,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/TCATBALF.jcl",
+   "o_exec": 3,
+   "o_dd": 8,
+   "o_dsn": 2,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 8,
+   "r_dsn": 2,
+   "r_step_entities": 3
+  },
+  {
+   "file": "carddemo/app/jcl/TRANBKP.jcl",
+   "o_exec": 3,
+   "o_dd": 6,
+   "o_dsn": 2,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 4,
+   "r_dsn": 0,
+   "r_step_entities": 3
+  },
+  {
+   "file": "carddemo/app/jcl/TRANCATG.jcl",
+   "o_exec": 3,
+   "o_dd": 8,
+   "o_dsn": 2,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 8,
+   "r_dsn": 2,
+   "r_step_entities": 3
+  },
+  {
+   "file": "carddemo/app/jcl/TRANFILE.jcl",
+   "o_exec": 8,
+   "o_dd": 20,
+   "o_dsn": 2,
+   "o_model_steps": 8,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 8,
+   "r_dd": 20,
+   "r_dsn": 2,
+   "r_step_entities": 8
+  },
+  {
+   "file": "carddemo/app/jcl/TRANIDX.jcl",
+   "o_exec": 3,
+   "o_dd": 6,
+   "o_dsn": 0,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 6,
+   "r_dsn": 0,
+   "r_step_entities": 3
+  },
+  {
+   "file": "carddemo/app/jcl/TRANREPT.jcl",
+   "o_exec": 3,
+   "o_dd": 16,
+   "o_dsn": 9,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 14,
+   "r_dsn": 8,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/app/jcl/TRANTYPE.jcl",
+   "o_exec": 3,
+   "o_dd": 8,
+   "o_dsn": 2,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 8,
+   "r_dsn": 2,
+   "r_step_entities": 3
+  },
+  {
+   "file": "carddemo/app/jcl/TXT2PDF1.JCL",
+   "o_exec": 1,
+   "o_dd": 6,
+   "o_dsn": 3,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 6,
+   "r_dsn": 3,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/WAITSTEP.jcl",
+   "o_exec": 1,
+   "o_dd": 3,
+   "o_dsn": 1,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 3,
+   "r_dsn": 1,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/app/jcl/XREFFILE.jcl",
+   "o_exec": 6,
+   "o_dd": 14,
+   "o_dsn": 2,
+   "o_model_steps": 6,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 6,
+   "r_dd": 14,
+   "r_dsn": 2,
+   "r_step_entities": 6
+  },
+  {
+   "file": "carddemo/samples/jcl/BATCMP.jcl",
+   "o_exec": 1,
+   "o_dd": 0,
+   "o_dsn": 0,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/samples/jcl/BMSCMP.jcl",
+   "o_exec": 2,
+   "o_dd": 3,
+   "o_dsn": 0,
+   "o_model_steps": 7,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 3,
+   "r_dsn": 0,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/samples/jcl/CICCMP.jcl",
+   "o_exec": 2,
+   "o_dd": 3,
+   "o_dsn": 0,
+   "o_model_steps": 5,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 3,
+   "r_dsn": 0,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/samples/jcl/CICDBCMP.jcl",
+   "o_exec": 1,
+   "o_dd": 0,
+   "o_dsn": 0,
+   "o_model_steps": 6,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/samples/jcl/IMSMQCMP.jcl",
+   "o_exec": 6,
+   "o_dd": 56,
+   "o_dsn": 19,
+   "o_model_steps": 6,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 6,
+   "r_dd": 56,
+   "r_dsn": 15,
+   "r_step_entities": 6
+  },
+  {
+   "file": "carddemo/samples/jcl/LISTCAT.jcl",
+   "o_exec": 2,
+   "o_dd": 3,
+   "o_dsn": 1,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 3,
+   "r_dsn": 1,
+   "r_step_entities": 2
+  },
+  {
+   "file": "carddemo/samples/jcl/RACFCMDS.jcl",
+   "o_exec": 1,
+   "o_dd": 3,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 3,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/samples/jcl/REPRTEST.jcl",
+   "o_exec": 1,
+   "o_dd": 2,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "carddemo/samples/jcl/SORTTEST.jcl",
+   "o_exec": 1,
+   "o_dd": 5,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 5,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/ADDAMT.jcl",
+   "o_exec": 2,
+   "o_dd": 7,
+   "o_dsn": 3,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 5,
+   "r_dsn": 1,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0001J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0002J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0003J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0004J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0005J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0006J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0007J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0008J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0009J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0010J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0011J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0012J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0013J.jcl",
+   "o_exec": 2,
+   "o_dd": 6,
+   "o_dsn": 3,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 4,
+   "r_dsn": 1,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0014J.jcl",
+   "o_exec": 2,
+   "o_dd": 6,
+   "o_dsn": 3,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 4,
+   "r_dsn": 1,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL0033J.jcl",
+   "o_exec": 3,
+   "o_dd": 11,
+   "o_dsn": 6,
+   "o_model_steps": 5,
+   "L_stmt_only_oracle": 5,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/CBL006AJ.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/COBRUN.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/HELLO.jcl",
+   "o_exec": 1,
+   "o_dd": 0,
+   "o_dsn": 0,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/PAYROL00.jcl",
+   "o_exec": 1,
+   "o_dd": 0,
+   "o_dsn": 0,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/PAYROL0X.jcl",
+   "o_exec": 1,
+   "o_dd": 0,
+   "o_dsn": 0,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHBINJ.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #2 - Learning COBOL/Labs/jcl/SRCHSERJ.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Challenges/Debugging/jcl/CBL0106J.jcl",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB21C.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB21R.jcl",
+   "o_exec": 1,
+   "o_dd": 8,
+   "o_dsn": 1,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 8,
+   "r_dsn": 1,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB22C.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB22R.jcl",
+   "o_exec": 1,
+   "o_dd": 9,
+   "o_dsn": 1,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 9,
+   "r_dsn": 1,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB23C.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CBLDB23R.jcl",
+   "o_exec": 1,
+   "o_dd": 9,
+   "o_dsn": 1,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 9,
+   "r_dsn": 1,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/CRETBL.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/DB2SETUP.jcl",
+   "o_exec": 2,
+   "o_dd": 9,
+   "o_dsn": 5,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 9,
+   "r_dsn": 1,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/DBRMLIB.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 1,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 1,
+   "r_dsn": 1,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/LOADTBL.jcl",
+   "o_exec": 2,
+   "o_dd": 3,
+   "o_dsn": 1,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 3,
+   "r_dsn": 1,
+   "r_step_entities": 2
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #3 - Advanced Topics/Labs/jcl/SELTBL.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 1,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/DEPTPAY.JCL",
+   "o_exec": 3,
+   "o_dd": 7,
+   "o_dsn": 3,
+   "o_model_steps": 4,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 5,
+   "r_dsn": 2,
+   "r_step_entities": 3
+  },
+  {
+   "file": "omp_course/COBOL Programming Course #4 - Testing/Labs/jcl/EMPPAY.JCL",
+   "o_exec": 2,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 6,
+   "r_dsn": 2,
+   "r_step_entities": 2
+  },
+  {
+   "file": "genapp/base/cntl/adef121.jcl",
+   "o_exec": 6,
+   "o_dd": 16,
+   "o_dsn": 4,
+   "o_model_steps": 6,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 6,
+   "r_dd": 16,
+   "r_dsn": 4,
+   "r_step_entities": 6
+  },
+  {
+   "file": "genapp/base/cntl/asmmap.jcl",
+   "o_exec": 4,
+   "o_dd": 28,
+   "o_dsn": 9,
+   "o_model_steps": 4,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 4,
+   "r_dd": 28,
+   "r_dsn": 9,
+   "r_step_entities": 4
+  },
+  {
+   "file": "genapp/base/cntl/cdef121.jcl",
+   "o_exec": 1,
+   "o_dd": 5,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 5,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/cdef122.jcl",
+   "o_exec": 1,
+   "o_dd": 5,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 5,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/cdef123.jcl",
+   "o_exec": 1,
+   "o_dd": 5,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 5,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/cdef124.jcl",
+   "o_exec": 1,
+   "o_dd": 5,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 5,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/cdef125.jcl",
+   "o_exec": 1,
+   "o_dd": 5,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 5,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/cobol.jcl",
+   "o_exec": 34,
+   "o_dd": 46,
+   "o_dsn": 20,
+   "o_model_steps": 93,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 34,
+   "r_dd": 46,
+   "r_dsn": 20,
+   "r_step_entities": 34
+  },
+  {
+   "file": "genapp/base/cntl/cpsmde2.jcl",
+   "o_exec": 1,
+   "o_dd": 2,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 2,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/db2bind.jcl",
+   "o_exec": 1,
+   "o_dd": 7,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 7,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/db2cre.jcl",
+   "o_exec": 10,
+   "o_dd": 52,
+   "o_dsn": 1,
+   "o_model_steps": 10,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 10,
+   "r_dd": 52,
+   "r_dsn": 1,
+   "r_step_entities": 4
+  },
+  {
+   "file": "genapp/base/cntl/db2del.jcl",
+   "o_exec": 1,
+   "o_dd": 6,
+   "o_dsn": 1,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 6,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/defdrep.jcl",
+   "o_exec": 3,
+   "o_dd": 8,
+   "o_dsn": 2,
+   "o_model_steps": 3,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 3,
+   "r_dd": 8,
+   "r_dsn": 2,
+   "r_step_entities": 3
+  },
+  {
+   "file": "genapp/base/cntl/defwrep.jcl",
+   "o_exec": 2,
+   "o_dd": 4,
+   "o_dsn": 0,
+   "o_model_steps": 2,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 2,
+   "r_dd": 4,
+   "r_dsn": 0,
+   "r_step_entities": 2
+  },
+  {
+   "file": "genapp/base/cntl/itpentr.jcl",
+   "o_exec": 1,
+   "o_dd": 8,
+   "o_dsn": 4,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 8,
+   "r_dsn": 4,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/itpll.jcl",
+   "o_exec": 1,
+   "o_dd": 4,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 4,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/itpstl.jcl",
+   "o_exec": 23,
+   "o_dd": 7,
+   "o_dsn": 4,
+   "o_model_steps": 22,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 23,
+   "r_dd": 7,
+   "r_dsn": 4,
+   "r_step_entities": 23
+  },
+  {
+   "file": "genapp/base/cntl/sampcma.jcl",
+   "o_exec": 1,
+   "o_dd": 30,
+   "o_dsn": 14,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 30,
+   "r_dsn": 14,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/sampncs.jcl",
+   "o_exec": 1,
+   "o_dd": 4,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 4,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/samptsq.jcl",
+   "o_exec": 1,
+   "o_dd": 4,
+   "o_dsn": 2,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 0,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 4,
+   "r_dsn": 2,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/sampwui.jcl",
+   "o_exec": 1,
+   "o_dd": 35,
+   "o_dsn": 18,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 35,
+   "r_dsn": 18,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/wsaac01.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/wsaap01.jcl",
+   "o_exec": 4,
+   "o_dd": 4,
+   "o_dsn": 0,
+   "o_model_steps": 4,
+   "L_stmt_only_oracle": 4,
+   "L_stmt_only_relic": 0,
+   "r_exec": 4,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/wsaic01.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/wsaip01.jcl",
+   "o_exec": 5,
+   "o_dd": 5,
+   "o_dsn": 0,
+   "o_model_steps": 5,
+   "L_stmt_only_oracle": 5,
+   "L_stmt_only_relic": 0,
+   "r_exec": 5,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 4
+  },
+  {
+   "file": "genapp/base/cntl/wsauc01.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/wsaup01.jcl",
+   "o_exec": 4,
+   "o_dd": 4,
+   "o_dsn": 0,
+   "o_model_steps": 4,
+   "L_stmt_only_oracle": 4,
+   "L_stmt_only_relic": 0,
+   "r_exec": 4,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/wsavc01.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  },
+  {
+   "file": "genapp/base/cntl/wsavp01.jcl",
+   "o_exec": 1,
+   "o_dd": 1,
+   "o_dsn": 0,
+   "o_model_steps": 1,
+   "L_stmt_only_oracle": 1,
+   "L_stmt_only_relic": 0,
+   "r_exec": 1,
+   "r_dd": 0,
+   "r_dsn": 0,
+   "r_step_entities": 1
+  }
+ ]
+}
