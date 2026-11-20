@@ -133,7 +133,17 @@ class ResourceContractExtractor:
 
     This is a cross-artifact contract when A and B are in different jobs.
     It is a single-artifact contract when A and B are in the same job.
+
+    ``v2_resource_order`` (RELIC V2, defect D-003) additionally requires that,
+    when producer and consumer are in the same artifact, the producer is
+    declared *before* the consumer. v1.x emitted ``produces ≺ consumes`` pairs
+    for consumers declared earlier than the producer, i.e. contracts the file
+    itself does not satisfy. Cross-artifact pairs are unaffected (no ordering
+    is knowable without a job schedule).
     """
+
+    def __init__(self, v2_resource_order: bool = False) -> None:
+        self.v2_resource_order = v2_resource_order
 
     def extract(self, ir: IRGraph) -> list[Contract]:
         contracts: list[Contract] = []
@@ -164,6 +174,16 @@ class ResourceContractExtractor:
 
                     # Avoid self-contracts
                     if producer_step.entity_id == consumer_step.entity_id:
+                        continue
+
+                    if (
+                        self.v2_resource_order
+                        and producer_step.artifact_path == consumer_step.artifact_path
+                        and "order" in producer_step.attributes
+                        and "order" in consumer_step.attributes
+                        and producer_step.attributes["order"]
+                        >= consumer_step.attributes["order"]
+                    ):
                         continue
 
                     cross_artifact = (
@@ -261,8 +281,9 @@ class ControlFlowContractExtractor:
     step (``legacy_v1_0=True`` reproduces that behaviour).
     """
 
-    def __init__(self, legacy_v1_0: bool = False) -> None:
+    def __init__(self, legacy_v1_0: bool = False, v2_fixes: bool = False) -> None:
         self.legacy_v1_0 = legacy_v1_0
+        self.v2_fixes = v2_fixes
 
     def extract(self, ir: IRGraph) -> list[Contract]:
         contracts: list[Contract] = []
@@ -284,11 +305,14 @@ class ControlFlowContractExtractor:
 
                 # Find the step this condition references (or applies to all previous steps)
                 if ref_step:
-                    ref_entities = [
-                        e for e in ir.entities.values()
-                        if e.entity_type == EntityType.STEP
-                        and e.name.upper() == ref_step.upper()
-                    ]
+                    if self.v2_fixes:
+                        ref_entities = self._resolve_ref_step(step, ref_step, ir)
+                    else:
+                        ref_entities = [
+                            e for e in ir.entities.values()
+                            if e.entity_type == EntityType.STEP
+                            and e.name.upper() == ref_step.upper()
+                        ]
                 else:
                     # Applies to all preceding steps
                     if self.legacy_v1_0:
@@ -355,6 +379,31 @@ class ControlFlowContractExtractor:
 
         return contracts
 
+    @staticmethod
+    def _resolve_ref_step(
+        step: IREntity, ref_step: str, ir: IRGraph
+    ) -> list[IREntity]:
+        """
+        Resolve ``COND=(rc,op,stepname)`` when step names may repeat (v2).
+
+        Candidates are steps whose *declared* name (``base_name``) equals
+        ``stepname``. If several exist, the nearest one declared before the
+        COND-bearing step is used; when none precedes it, all candidates are
+        kept (the v1.x behaviour for forward references).
+        """
+        wanted = ref_step.upper()
+        candidates = [
+            e for e in ir.entities.values()
+            if e.entity_type == EntityType.STEP
+            and str(e.attributes.get("base_name", e.name)).upper() == wanted
+        ]
+        if len(candidates) > 1:
+            here = step.attributes.get("order", 0)
+            earlier = [c for c in candidates if c.attributes.get("order", 0) < here]
+            if earlier:
+                return [max(earlier, key=lambda c: c.attributes.get("order", 0))]
+        return candidates
+
     def _get_preceding_steps(
         self, step: IREntity, ir: IRGraph
     ) -> list[IREntity]:
@@ -419,10 +468,19 @@ class StaticContractExtractor:
     Call .extract(ir) to get all static candidate contracts.
     """
 
-    def __init__(self, legacy_v1_0: bool = False) -> None:
+    def __init__(
+        self,
+        legacy_v1_0: bool = False,
+        v2_fixes: bool = False,
+        v2_resource_order: bool | None = None,
+    ) -> None:
         self._temporal = TemporalContractExtractor()
-        self._resource = ResourceContractExtractor()
-        self._control = ControlFlowContractExtractor(legacy_v1_0=legacy_v1_0)
+        self._resource = ResourceContractExtractor(
+            v2_resource_order=v2_fixes if v2_resource_order is None else v2_resource_order
+        )
+        self._control = ControlFlowContractExtractor(
+            legacy_v1_0=legacy_v1_0, v2_fixes=v2_fixes
+        )
 
     def extract(self, ir: IRGraph) -> StaticExtractionResult:
         result = StaticExtractionResult(

@@ -112,8 +112,14 @@ class JCLParser:
     STATEMENT_COLUMNS = 71
     COND_PATTERN_LEGACY = re.compile(r"COND=(\([^)]+\)|\w+)", re.IGNORECASE)
     COND_PATTERN_BALANCED = re.compile(r"COND=(\((?:[^()]|\([^()]*\))*\)|\w+)", re.IGNORECASE)
+    # v2 DD-statement patterns (opt-in via ``v2_fixes``).
+    # DSNAME= is the documented long form of DSN=; the v1.x pattern missed it.
+    DSN_PATTERN_V2 = re.compile(r"(?<![A-Z0-9@#$])DSN(?:AME)?=([^\s,]+)", re.IGNORECASE)
+    # DISP value: a parenthesised list (possibly with an empty first element,
+    # e.g. ``(,PASS)``) or a single bare status.
+    DISP_PATTERN_V2 = re.compile(r"(?<![A-Z0-9@#$])DISP=(\([^)]*\)|[^\s,()]+)", re.IGNORECASE)
 
-    def __init__(self, legacy_v1_0: bool = False) -> None:
+    def __init__(self, legacy_v1_0: bool = False, v2_fixes: bool = False) -> None:
         """
         Parameters
         ----------
@@ -122,11 +128,37 @@ class JCLParser:
             continuation rule, sequence columns 73-80 kept, COND captured up to
             the first ')'). Used only to evaluate the released version; the
             default follows the IBM JCL statement-format rules.
+        v2_fixes:
+            Opt-in corrections made in RELIC V2 (see reports/v2/DEFECT_REGISTER.md).
+            Off by default so that the v1.0.0 / v1.1 behaviour behind the
+            published ``results/final`` numbers is unchanged.
+
+            * D-001 step identity: a step whose name has already been used in
+              the same file gets the unique name ``NAME#n`` (n = occurrence
+              number; the first occurrence keeps ``NAME``). Without this,
+              same-named steps collapse into one IR entity.
+            * D-002 DD parsing: ``DSNAME=`` is recognised as ``DSN=``; an
+              omitted DISP status inside parentheses (``DISP=(,PASS)``) means
+              NEW instead of being read as a consumer.
+            * D-004 deletion idiom: ``DISP=(MOD,DELETE[,...])`` deletes a
+              dataset and is neither a producer nor a consumer of it.
+            (D-003, producer-before-consumer ordering, lives in
+            ``ResourceContractExtractor``.)
         """
+        if legacy_v1_0 and v2_fixes:
+            raise ValueError("legacy_v1_0 and v2_fixes are mutually exclusive")
         self.legacy_v1_0 = legacy_v1_0
+        self.v2_fixes = v2_fixes
+        # Individual V2 fixes; separate attributes only so that the ablation
+        # study (relic_eval.v2_eval) can switch one off.
+        self.v2_step_identity = v2_fixes   # D-001
+        self.v2_dd_parsing = v2_fixes      # D-002
+        self.v2_delete_disp = v2_fixes     # D-004 (only effective with D-002 parsing)
         self._current_job: IREntity | None = None
         self._current_step: IREntity | None = None
         self._step_order: list[IREntity] = []
+        self._exec_name_counts: dict[str, int] = {}
+        self._exec_count = 0
 
     def parse_file(self, artifact_path: str) -> tuple[JCLParseResult, IRGraph]:
         """Parse a JCL file and return parse result + IR graph."""
@@ -148,6 +180,8 @@ class JCLParser:
         self._current_job = None
         self._current_step = None
         self._step_order = []
+        self._exec_name_counts = {}
+        self._exec_count = 0
 
         # Merge continuation lines before tokenizing
         merged_lines = self._merge_continuations(lines, artifact_path, result)
@@ -344,13 +378,28 @@ class JCLParser:
         if not pgm_match and not proc_match and token.name:
             positional_proc = token.operands.split(",")[0].strip() if token.operands else None
 
-        step_name = token.name or f"STEP_{len(self._step_order) + 1:03d}"
+        step_attrs: dict[str, Any] = {"operands": token.operands}
+        if self.v2_fixes:
+            # File-wide declaration order and declared name (used by D-001 and D-003).
+            self._exec_count += 1
+            base_name = token.name or f"STEP_{self._exec_count:03d}"
+            step_attrs["base_name"] = base_name
+            step_attrs["order"] = self._exec_count
+            step_name = base_name
+            if self.v2_step_identity:
+                # D-001: file-wide unique step identity. Entity ids hash
+                # (artifact, type, name), so equal names would otherwise merge.
+                seen = self._exec_name_counts.get(base_name.upper(), 0) + 1
+                self._exec_name_counts[base_name.upper()] = seen
+                step_name = base_name if seen == 1 else f"{base_name}#{seen}"
+        else:
+            step_name = token.name or f"STEP_{len(self._step_order) + 1:03d}"
         step_entity = IREntity(
             entity_type=EntityType.STEP,
             name=step_name,
             artifact_path=artifact_path,
             location=loc,
-            attributes={"operands": token.operands},
+            attributes=step_attrs,
         )
         ir.add_entity(step_entity)
         self._step_order.append(step_entity)
@@ -419,9 +468,28 @@ class JCLParser:
             return
 
         # Extract DSN (dataset name)
-        dsn_match = re.search(r"DSN=([^\s,]+)", token.operands, re.IGNORECASE)
+        if self.v2_dd_parsing:
+            dsn_match = self.DSN_PATTERN_V2.search(token.operands)
+        else:
+            dsn_match = re.search(r"DSN=([^\s,]+)", token.operands, re.IGNORECASE)
         # Extract DISP (disposition — tells us if file is created or consumed)
-        disp_match = re.search(r"DISP=\(?([^,)]+)", token.operands, re.IGNORECASE)
+        disp_normal = ""
+        if self.v2_dd_parsing:
+            disp_match = None
+            disp_v2 = self.DISP_PATTERN_V2.search(token.operands)
+            if disp_v2:
+                inner = disp_v2.group(1).strip()
+                if inner.startswith("("):
+                    inner = inner[1:-1]
+                parts = [x.strip().upper() for x in inner.split(",")]
+                # IBM JCL: an omitted DISP status means NEW.
+                disp_text = parts[0] or "NEW"
+                disp_normal = parts[1] if len(parts) > 1 else ""
+            else:
+                disp_text = None
+        else:
+            disp_match = re.search(r"DISP=\(?([^,)]+)", token.operands, re.IGNORECASE)
+            disp_text = disp_match.group(1).upper() if disp_match else None
 
         dd_name = token.name or "ANON_DD"
         dd_entity = IREntity(
@@ -453,7 +521,9 @@ class JCLParser:
             dd_entity.attributes["dsn"] = dsn
 
             # DISP: NEW or CATLG or PASS = producing; OLD/SHR = consuming
-            disp = (disp_match.group(1).upper() if disp_match else "OLD")
+            disp = disp_text if disp_text else "OLD"
+            if self.v2_delete_disp and disp == "MOD" and disp_normal == "DELETE":
+                return      # D-004: pre-delete idiom, neither producer nor consumer
             if disp in {"NEW", "CATLG", "PASS", "MOD"}:
                 ir.add_relation(IRRelation(
                     relation_type=RelationType.PRODUCES,

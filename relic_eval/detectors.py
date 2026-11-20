@@ -64,31 +64,41 @@ def neutral_record() -> MutationRecord:
     )
 
 
-def _parse(text: str, path: str, legacy: bool):
-    _res, ir = JCLParser(legacy_v1_0=legacy).parse_lines(text.splitlines(), path)
+def _parse(text: str, path: str, legacy: bool, v2: bool = False):
+    _res, ir = JCLParser(legacy_v1_0=legacy, v2_fixes=v2).parse_lines(text.splitlines(), path)
     return ir
 
 
-def _bcg(text: str, path: str, legacy: bool):
-    ir = _parse(text, path, legacy)
-    extraction = StaticContractExtractor(legacy_v1_0=legacy).extract(ir)
+def _bcg(text: str, path: str, legacy: bool, v2: bool = False):
+    ir = _parse(text, path, legacy, v2)
+    extraction = StaticContractExtractor(legacy_v1_0=legacy, v2_fixes=v2).extract(ir)
     return BCGBuilder().build(ir, extraction)
 
 
 @lru_cache(maxsize=256)
-def _bcg_cached(text: str, path: str, legacy: bool):
-    return _bcg(text, path, legacy)
+def _bcg_cached(text: str, path: str, legacy: bool, v2: bool = False):
+    return _bcg(text, path, legacy, v2)
 
 
 class RelicDetector:
-    def __init__(self, legacy_v1_0: bool):
+    """
+    ``v2=True`` selects the RELIC V2 corrections (parser ``v2_fixes``). It is
+    deliberately NOT part of ``all_detectors()`` so that ``make reproduce``
+    keeps regenerating the published v1.0.0 / v1.1 results unchanged; V2 is
+    evaluated by ``relic_eval.v2_eval`` into ``results/v2/``.
+    """
+
+    def __init__(self, legacy_v1_0: bool, v2: bool = False):
+        if legacy_v1_0 and v2:
+            raise ValueError("legacy_v1_0 and v2 are mutually exclusive")
         self.legacy = legacy_v1_0
-        self.name = "relic_v1_0" if legacy_v1_0 else "relic_v1_1"
+        self.v2 = v2
+        self.name = "relic_v2" if v2 else ("relic_v1_0" if legacy_v1_0 else "relic_v1_1")
 
     def predict(self, original: str, mutated: str, path: str) -> Prediction:
         try:
-            b0 = _bcg_cached(original, path, self.legacy)
-            b1 = _bcg(mutated, path, self.legacy)
+            b0 = _bcg_cached(original, path, self.legacy, self.v2)
+            b1 = _bcg(mutated, path, self.legacy, self.v2)
             report = RiskDetector(legacy_v1_0=self.legacy).detect(b0, b1, neutral_record())
             n = len(report.risk_items) + len(report.false_positive_candidates)
             types = sorted({r.contract_type.value for r in
