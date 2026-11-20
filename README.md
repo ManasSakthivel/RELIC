@@ -162,6 +162,28 @@ previously reported LLM F1 values (0.0377 / 0.1091) are withdrawn: 245/248 and
 241/248 calls had failed with HTTP 429 and were scored as "no regression", and
 the prompt never contained the JCL. [Protocol](docs/evaluation/BASELINES.md).
 
+## 6b. RELIC V2 research extension (branch `research/relic-v2-final-sprint`)
+
+Everything below is additive; `results/final`, `results/legacy` and the default
+v1.0.0 / v1.1 behaviour are unchanged. Detailed claims, caveats and the
+corrected record are in [`reports/v2/FINAL_SCIENTIFIC_VALIDITY_REPORT.md`](reports/v2/FINAL_SCIENTIFIC_VALIDITY_REPORT.md).
+
+* **Opt-in fixes D-001…D-004** (`v2_fixes=True`) and a defect register D-001…D-025
+  (`reports/v2/DEFECT_REGISTER.md`). Development-set results only (`make v2-eval`).
+* **JCL-SemBench** (`benchmarks/sembench/`, 180 pairs, 87 preserving / 93 changing).
+  Labels rest on author arguments plus the *non-independent* project oracle.
+  **Independent review is PENDING; no pair is independently validated.** 25 pairs are
+  byte-identical (no-ops) and are reported separately (`results/sembench/noop_sensitivity.json`).
+* **Result, stated plainly:** on SemBench and on the old benchmark a normalised text
+  diff outperforms RELIC (H1 "RELIC beats normalised text" is refuted). RELIC is a
+  high-precision, low-recall filter. External runs (824 mutants, 11 repositories) use the
+  same oracle and were *not* blind.
+* **Commands:** `python -m relic_eval.sembench_eval`, `python -m relic_eval.external_eval run --clones <dir>`
+  (needs the pinned clones in `results/external/SUBJECT_FREEZE.json`), `python benchmarks/sembench/validate.py`,
+  `python -m pytest tests -q`.
+* **Not claimed:** independent validation, production-JCL compatibility, novelty priority, or
+  superiority over LLM baselines (the LLM comparison was not re-run in V2).
+
 ## 7. Limitations
 
 * **Small, non-production subjects.** Three demonstration/teaching corpora;

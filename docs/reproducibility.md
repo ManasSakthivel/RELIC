@@ -94,3 +94,18 @@ opt-in (`JCLParser(v2_fixes=True)`, `StaticContractExtractor(v2_fixes=True)`,
 results** (the corpora were inspected while diagnosing defects); external
 validation is pending. LLM baselines are not re-run by V2. Defects, evidence and
 scope limits: `reports/v2/DEFECT_REGISTER.md`; evaluation: `reports/v2/EVALUATION_SUMMARY.md`.
+
+## Final-sprint additions (branch `research/relic-v2-final-sprint`)
+
+| Command | Purpose |
+|---|---|
+| `python benchmarks/sembench/validate.py` | verifies the SemBench SHA-256 manifest and re-runs the oracle on all 180 pairs |
+| `python -m relic_eval.sembench_eval` | SemBench evaluation of RELIC and the frozen text baselines -> `results/sembench/` |
+| `python results/sembench/noop_sensitivity.py` | sensitivity analysis excluding the 25 byte-identical pairs |
+| `python -m relic_eval.external_eval run --clones DIR` | external-repository run; clones must match `results/external/SUBJECT_FREEZE.json` (network needed to obtain them) |
+
+### Known documentation / packaging inconsistencies (documented, not silently changed)
+- **Version fields disagree:** `pyproject.toml` and `CITATION.cff` say 1.1.0, `src/legacy_contract/__init__.py` says 0.1.0, the Dockerfile label says 0.1.0, and the only git tag is `v1.0.0`. No value was chosen on the maintainer's behalf.
+- **Docker/compose are stale:** the Dockerfile uses poetry but no `poetry.lock` exists; `docker-compose.yml` references `make reproduce-paper1` and UI/API services that are not part of the current evaluation. Use the virtualenv instructions above; the container path was not executed in this sprint.
+- **Generated LLM sentence:** `relic_eval/report.py` renders the LLM coverage as "a random subsample limited by the provider quota". The accurate statement is a selection-biased subset (383/566; 183 `INVALID_OUTPUT`, 89.6% positive). The template was not changed because regenerating rewrites `results/final/tables/`; corrections are hand-written next to the generated blocks (README section 5, `paper/paper.md` erratum).
+- The LLM baseline was **not re-run** in V2 (no credentials); see `reports/v2/LLM_EVALUATION_PROTOCOL.md`.
