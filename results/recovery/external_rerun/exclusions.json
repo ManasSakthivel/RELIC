@@ -1,0 +1,2490 @@
+{
+  "excluded_at_freeze": [
+    {
+      "file": "IDE/GitISPFClient/sbgzsamp/bgzoput.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "IBM_dbb"
+    },
+    {
+      "file": "JCL/INCLUDE.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "IBM_zopeneditor-sample"
+    },
+    {
+      "file": "JCLLIB/COMPSET.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "IBM_zopeneditor-sample"
+    },
+    {
+      "file": "JCLPROC/COMPROC.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "IBM_zopeneditor-sample"
+    },
+    {
+      "file": "$ASM.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "ASMEXIT.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "BUCKETS.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "BUCKETS2.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "BUILDDB.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "BYMINUTE.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "BYSCLASS.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "SQLACCT.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "SSIDCORR.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "SSIDMIN.JCL",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "MartinPacker_Db2-DDF-Analysis-Tool"
+    },
+    {
+      "file": "jcl/testdata/test0001.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0002.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0003.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0004.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0005.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_EXEC_STEPS_40",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0006.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0007.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_EXEC_STEPS_40",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0008.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0009.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_EXEC_STEPS_40",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0010.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0011.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0012.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0013.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0014.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0015.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0016.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0017.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0018.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0019.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0020.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0021.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0022.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0023.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0024.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0025.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0026.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0027.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0028.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0029.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0030.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0031.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0032.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0033.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0034.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0035.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0036.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0037.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0038.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0039.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0040.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0041.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0042.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0043.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0044.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0045.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0046.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0047.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0048.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0049.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0050.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0051.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0052.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0053.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0054.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0055.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0056.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0057.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0058.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0059.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0060.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0061.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0062.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0063.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0064.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0065.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0066.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0067.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0068.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0069.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0070.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0071.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0072.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0073.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0074.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0075.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0076.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0077.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0078.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0079.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0080.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0081.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0082.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0083.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0084.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0085.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0086.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0087.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0088.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0089.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0090.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0091.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0092.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0093.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0094.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0095.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0096.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0097.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0098.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0099.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0100.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0101.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0102.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0103.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0104.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0105.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0106.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0107.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0108.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0109.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0110.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0111.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0112.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0113.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0114.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0115.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0116.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0117.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0118.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0119.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0120.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0121.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0122.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0123.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0124.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0125.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0126.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0127.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0128.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0129.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0130.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0131.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0132.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0133.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0134.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0135.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0136.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0137.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0138.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0139.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0140.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0141.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0142.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0143.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0144.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0145.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0146.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0147.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0148.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0149.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0150.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0151.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0152.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0153.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0154.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0155.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0156.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0157.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0158.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0159.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0160.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0161.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0162.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0163.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0164.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0165.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0166.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0167.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0168.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0169.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0170.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0171.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0172.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0173.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0174.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0175.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0176.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0177.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0178.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_EXEC_STEPS_40",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0179.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0180.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0181.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0182.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0183.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0184.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0185.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0186.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0187.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0188.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0189.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0190.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0191.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test0192.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9001.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9002.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9003.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9004.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9005.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9006.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9007.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9008.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9009.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9010.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9011.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9012.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9013.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9014.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9015.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9016.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9017.jcl",
+      "reasons": [
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9018.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9019.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9020.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9021.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9022.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9023.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "jcl/testdata/test9024.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS",
+        "REPO_ROBUSTNESS_ONLY_SYNTHETIC"
+      ],
+      "repo": "cschneid-the-elder_mapa"
+    },
+    {
+      "file": "Unix/UNIXENUM.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "mainframed_Enumeration"
+    },
+    {
+      "file": "release/allocate.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "mainframed_Enumeration"
+    },
+    {
+      "file": "release/compile_unix.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "mainframed_Enumeration"
+    },
+    {
+      "file": "release/run_access.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "mainframed_Enumeration"
+    },
+    {
+      "file": "release/run_apfcheck.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "mainframed_Enumeration"
+    },
+    {
+      "file": "release/run_enum.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "mainframed_Enumeration"
+    },
+    {
+      "file": "release/run_unix.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "mainframed_Enumeration"
+    },
+    {
+      "file": "mvs/brexx1.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "vlachoudis_brexx"
+    },
+    {
+      "file": "mvs/brexx5b.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_EXEC_STEPS_40"
+      ],
+      "repo": "vlachoudis_brexx"
+    },
+    {
+      "file": "JCL/CONFIG.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_EXEC_STEPS_40"
+      ],
+      "repo": "walmartlabs_zECS"
+    },
+    {
+      "file": "JCL/CSDZECS.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "walmartlabs_zECS"
+    },
+    {
+      "file": "JCL/CSDZECSN.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "walmartlabs_zECS"
+    },
+    {
+      "file": "JCL/CSDZECSR.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "walmartlabs_zECS"
+    },
+    {
+      "file": "JCL/CSDZECSS.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "walmartlabs_zECS"
+    },
+    {
+      "file": "SOFTWARE/ASSEMBLER/01_sys2_maclib_install.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/ASSEMBLER/02_sys1_proclib_asm_update.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/EZASMI/01_install_sxmaclib.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/EZASMI/02_install_ezasmi.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/FSI/01_install_fsi.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/FSI/jcl/#cmp.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/FSS/01_install_fss.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/FTPD/original/FTPD_PROC.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/FTPD/original/MAKEXCTL.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/FTPD/source/auto/build_01_assemble_ftp_objects.ebcdic.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/FTPD/source/auto/build_02_assemble_link_FTPDXCTL.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/IMON370/01_receive_load_imon370.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/IMON370/02_receive_data_imon370.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/IMON370/03_imon_tso_cmdlib.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/INDFILE/01_recv_indfile.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/INDFILE/IND$FILE.JCL",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/KICKS/01_kicks_receive.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/MVSDDT/03_test_mvsddt.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/OFFLOAD/01_install_offload.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/QUEUE/01_install_queue.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RAKF/02_rakf_b_recv.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RAKF/03_rakf_c_apply.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RAKF/04_rakf_d_accept.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RAKF/05_rakf_recv_RRKF002.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RAKF/06_rakf_recv_RRKF004.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RAKF/07_rakf_recv_RRKF005.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RAKF/08_rakf_recv_RRKF006.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RAKF/09_rakf_pdsload_ptfs.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/REVIEW/01_review_receive_clist.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/REVIEW/02_review_receive_help.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/REVIEW/03_review_receive_load.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/REVIEW/04_review_receive_data.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/REVIEW/06_SOC1_fix.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RPF/01_rpf_install_jcl.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RPF/02_rpf_install_help.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RPF/03_rpf_install_loadlib.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RPF/04_rpf_tso_help.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "SOFTWARE/RPF/05_rpf_tso_cmdlib.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/mvs01.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/null.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/queue38j.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS",
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/smpjob01.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/smpjob02.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/smpjob04.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/smpjob05.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/smpjob06.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/smpmount.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/stage2.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000",
+        "EXCEEDS_MAX_EXEC_STEPS_40"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/sysgen03.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/sysgen04.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/sysgen06.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/usermods1.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/usermods2.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/usermods3.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000",
+        "EXCEEDS_MAX_EXEC_STEPS_40"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/usermods4.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000",
+        "EXCEEDS_MAX_EXEC_STEPS_40"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/usermods5.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000",
+        "EXCEEDS_MAX_EXEC_STEPS_40"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "sysgen/jcl/usermods6.jcl",
+      "reasons": [
+        "EXCEEDS_MAX_LINES_2000",
+        "EXCEEDS_MAX_EXEC_STEPS_40"
+      ],
+      "repo": "yetacp_mvs_sysgen"
+    },
+    {
+      "file": "complink.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT"
+      ],
+      "repo": "zosconnect_zosconnect-sample-wola-batch"
+    },
+    {
+      "file": "runcobol.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zosconnect_zosconnect-sample-wola-batch"
+    },
+    {
+      "file": "packages/zosjobs/__tests__/__resources__/jcl/iefbr14.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-cli"
+    },
+    {
+      "file": "packages/zosjobs/__tests__/__resources__/jcl/instream_rexx_content.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-cli"
+    },
+    {
+      "file": "packages/zosjobs/__tests__/__resources__/jcl/instream_rexx_delay.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-cli"
+    },
+    {
+      "file": "packages/zosjobs/__tests__/__resources__/jcl/instream_rexx_forever_loop.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-cli"
+    },
+    {
+      "file": "prototypes/uri_encoding_tests/hello_world_bpxbatch.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-cli"
+    },
+    {
+      "file": "bin/commands/sample/test/TSTFAIL.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "bin/commands/sample/test/TSTFAST.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "bin/commands/sample/test/TSTSLOW.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "playbooks/roles/custom_for_test/files/ZWECCADD.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "playbooks/roles/ptf/files/jcl/jobcard.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "smpe/bld/PTF@.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "smpe/bld/PTF@FB80.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "smpe/bld/PTF@LMOD.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "smpe/bld/PTF@MVS.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "smpe/bld/PTFMERGE.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "smpe/bld/PTFTRKS.jcl",
+      "reasons": [
+        "NO_JOB_STATEMENT",
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "smpe/bld/gimdts.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "smpe/bld/gimmerge.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    },
+    {
+      "file": "smpe/bld/gimzip.jcl",
+      "reasons": [
+        "FEWER_THAN_2_EXEC_STEPS"
+      ],
+      "repo": "zowe_zowe-install-packaging"
+    }
+  ],
+  "infrastructure_failures": [],
+  "oracle_model_errors_on_original": [],
+  "repos_not_acquired": [
+    {
+      "github": "MVS-sysgen/sysgen",
+      "reason": "no licence (GitHub API licence=null; no LICENSE file per protocol). A clone was started and aborted; repo excluded from effectiveness metrics until a licence is confirmed."
+    },
+    {
+      "github": "MVS-sysgen/NETSOL",
+      "reason": "no licence (GitHub API licence=null); not cloned"
+    },
+    {
+      "github": "moshix/mvs",
+      "reason": "no licence (GitHub API licence=null); not cloned"
+    },
+    {
+      "github": "mainframed/usstable",
+      "reason": "no licence (GitHub API licence=null); not cloned"
+    },
+    {
+      "github": "mainframed/logica",
+      "reason": "no licence (GitHub API licence=null); not cloned"
+    },
+    {
+      "github": "mainframed/DC30_Workshop",
+      "reason": "no licence (GitHub API licence=null); not cloned"
+    },
+    {
+      "github": "zedsec390/NJElib",
+      "reason": "no licence (GitHub API licence=null); not cloned"
+    },
+    {
+      "github": "mvslovers/jcc",
+      "reason": "GitHub API licence=NOASSERTION; not cloned"
+    },
+    {
+      "github": "pdos-project/pdos",
+      "reason": "GitHub API licence=null (a public-domain statement, if any, was not verified in time); not cloned"
+    },
+    {
+      "github": "IBM/IBM-Z-zOS",
+      "reason": "clone aborted by timeout; per earlier protocol 5 .jcl files, none multi-step (0 expected eligible)"
+    }
+  ],
+  "robustness_failures": [],
+  "run_failures": [],
+  "schema": "relic-external-eval/1"
+}

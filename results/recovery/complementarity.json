@@ -1,0 +1,4376 @@
+{
+ "note": "Binary predictions only; no PR curve/operating-point sweep computable. Only pre-registered hybrids UNION/INTERSECTION/FAST_TRACK are in the confirmatory-style tables.",
+ "exploratory_items_added": [
+  "per-category/operator splits",
+  "mean-other-detectors easiness",
+  "reverse review-queue stats",
+  "sensitivity baselines (counted as same 3 rules on extra baselines)",
+  "cluster bootstrap CIs (descriptive)"
+ ],
+ "sembench": {
+  "population_sizes": {
+   "ALL_180": 180,
+   "EXCL_25_IDENTICAL": 155,
+   "EXCL_15_NOOP_CHANGING_ONLY": 165,
+   "CLEAN_CORE": 141
+  },
+  "populations": {
+   "ALL_180": {
+    "normalized_text_B  [PRIMARY]": {
+     "n": 180,
+     "n_truth_positive": 93,
+     "n_truth_negative": 87,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 55,
+       "neither": 15
+      },
+      "neg": {
+       "both": 2,
+       "relic_only": 0,
+       "text_only": 26,
+       "neither": 59
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 25,
+      "value": 0.92,
+      "wilson95": [
+       0.7503389087653979,
+       0.9777795989158737
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 78,
+      "n": 106,
+      "value": 0.7358490566037735,
+      "wilson95": [
+       0.6447402058461661,
+       0.8104613228774666
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 78,
+      "fp": 28,
+      "fn": 15,
+      "tn": 59,
+      "recall": {
+       "k": 78,
+       "n": 93,
+       "value": 0.8387096774193549,
+       "wilson95": [
+        0.7507986037988315,
+        0.8997492166054711
+       ]
+      },
+      "precision": {
+       "k": 78,
+       "n": 106,
+       "value": 0.7358490566037735,
+       "wilson95": [
+        0.6447402058461661,
+        0.8104613228774666
+       ]
+      },
+      "fpr": {
+       "k": 28,
+       "n": 87,
+       "value": 0.3218390804597701,
+       "wilson95": [
+        0.23300721326285093,
+        0.4257389101288022
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 70,
+      "tn": 85,
+      "recall": {
+       "k": 23,
+       "n": 93,
+       "value": 0.24731182795698925,
+       "wilson95": [
+        0.17082219102325957,
+        0.3438484826433718
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 25,
+       "value": 0.92,
+       "wilson95": [
+        0.7503389087653979,
+        0.9777795989158737
+       ]
+      },
+      "fpr": {
+       "k": 2,
+       "n": 87,
+       "value": 0.022988505747126436,
+       "wilson95": [
+        0.00632708504899073,
+        0.07999318080608057
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 106,
+      "accepted_without_review": 25,
+      "reviews_avoided": {
+       "k": 25,
+       "n": 106,
+       "value": 0.2358490566037736,
+       "wilson95": [
+        0.165160411495225,
+        0.3250138763343062
+       ]
+      },
+      "wrongly_accepted": 2,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 2,
+       "n": 25,
+       "value": 0.08,
+       "wilson95": [
+        0.022220401084126245,
+        0.24966109123460217
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 2,
+       "n": 106,
+       "value": 0.018867924528301886,
+       "wilson95": [
+        0.005189608732908724,
+        0.06619927267088022
+       ]
+      },
+      "review_queue": 81,
+      "review_queue_true_changes": 55,
+      "true_changes_text_misses_(unchanged_by_scheme)": 15
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     },
+     "bootstrap_by_base_id": {
+      "cluster_key": "base_id",
+      "n_clusters": 16,
+      "resamples": 10000,
+      "seed": 20261004,
+      "reviews_avoided": {
+       "ci95": [
+        0.11956521739130435,
+        0.33064516129032256
+       ],
+       "n_valid_resamples": 10000
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "ci95": [
+        0.0,
+        0.037037037037037035
+       ],
+       "n_valid_resamples": 10000
+      },
+      "wrongly_accepted_share_of_accepted": {
+       "ci95": [
+        0.0,
+        0.12121212121212122
+       ],
+       "n_valid_resamples": 10000
+      }
+     }
+    },
+    "normalized_text_A  [sensitivity]": {
+     "n": 180,
+     "n_truth_positive": 93,
+     "n_truth_negative": 87,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 55,
+       "neither": 15
+      },
+      "neg": {
+       "both": 2,
+       "relic_only": 0,
+       "text_only": 33,
+       "neither": 52
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 25,
+      "value": 0.92,
+      "wilson95": [
+       0.7503389087653979,
+       0.9777795989158737
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 78,
+      "n": 113,
+      "value": 0.6902654867256637,
+      "wilson95": [
+       0.5999367503088308,
+       0.7680833036318295
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 78,
+      "fp": 35,
+      "fn": 15,
+      "tn": 52,
+      "recall": {
+       "k": 78,
+       "n": 93,
+       "value": 0.8387096774193549,
+       "wilson95": [
+        0.7507986037988315,
+        0.8997492166054711
+       ]
+      },
+      "precision": {
+       "k": 78,
+       "n": 113,
+       "value": 0.6902654867256637,
+       "wilson95": [
+        0.5999367503088308,
+        0.7680833036318295
+       ]
+      },
+      "fpr": {
+       "k": 35,
+       "n": 87,
+       "value": 0.40229885057471265,
+       "wilson95": [
+        0.30550818852835304,
+        0.5073525888154568
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 70,
+      "tn": 85,
+      "recall": {
+       "k": 23,
+       "n": 93,
+       "value": 0.24731182795698925,
+       "wilson95": [
+        0.17082219102325957,
+        0.3438484826433718
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 25,
+       "value": 0.92,
+       "wilson95": [
+        0.7503389087653979,
+        0.9777795989158737
+       ]
+      },
+      "fpr": {
+       "k": 2,
+       "n": 87,
+       "value": 0.022988505747126436,
+       "wilson95": [
+        0.00632708504899073,
+        0.07999318080608057
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 113,
+      "accepted_without_review": 25,
+      "reviews_avoided": {
+       "k": 25,
+       "n": 113,
+       "value": 0.22123893805309736,
+       "wilson95": [
+        0.15458477700834647,
+        0.3062230509390582
+       ]
+      },
+      "wrongly_accepted": 2,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 2,
+       "n": 25,
+       "value": 0.08,
+       "wilson95": [
+        0.022220401084126245,
+        0.24966109123460217
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 2,
+       "n": 113,
+       "value": 0.017699115044247787,
+       "wilson95": [
+        0.004867231776703891,
+        0.06224472451325015
+       ]
+      },
+      "review_queue": 88,
+      "review_queue_true_changes": 55,
+      "true_changes_text_misses_(unchanged_by_scheme)": 15
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     }
+    },
+    "textdiff  [sensitivity]": {
+     "n": 180,
+     "n_truth_positive": 93,
+     "n_truth_negative": 87,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 55,
+       "neither": 15
+      },
+      "neg": {
+       "both": 2,
+       "relic_only": 0,
+       "text_only": 58,
+       "neither": 27
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 25,
+      "value": 0.92,
+      "wilson95": [
+       0.7503389087653979,
+       0.9777795989158737
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 78,
+      "n": 138,
+      "value": 0.5652173913043478,
+      "wilson95": [
+       0.48185075897891205,
+       0.6450514890800549
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 78,
+      "fp": 60,
+      "fn": 15,
+      "tn": 27,
+      "recall": {
+       "k": 78,
+       "n": 93,
+       "value": 0.8387096774193549,
+       "wilson95": [
+        0.7507986037988315,
+        0.8997492166054711
+       ]
+      },
+      "precision": {
+       "k": 78,
+       "n": 138,
+       "value": 0.5652173913043478,
+       "wilson95": [
+        0.48185075897891205,
+        0.6450514890800549
+       ]
+      },
+      "fpr": {
+       "k": 60,
+       "n": 87,
+       "value": 0.6896551724137931,
+       "wilson95": [
+        0.586161806572981,
+        0.7771084491713883
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 70,
+      "tn": 85,
+      "recall": {
+       "k": 23,
+       "n": 93,
+       "value": 0.24731182795698925,
+       "wilson95": [
+        0.17082219102325957,
+        0.3438484826433718
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 25,
+       "value": 0.92,
+       "wilson95": [
+        0.7503389087653979,
+        0.9777795989158737
+       ]
+      },
+      "fpr": {
+       "k": 2,
+       "n": 87,
+       "value": 0.022988505747126436,
+       "wilson95": [
+        0.00632708504899073,
+        0.07999318080608057
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 138,
+      "accepted_without_review": 25,
+      "reviews_avoided": {
+       "k": 25,
+       "n": 138,
+       "value": 0.18115942028985507,
+       "wilson95": [
+        0.12582544526743114,
+        0.2537635642220633
+       ]
+      },
+      "wrongly_accepted": 2,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 2,
+       "n": 25,
+       "value": 0.08,
+       "wilson95": [
+        0.022220401084126245,
+        0.24966109123460217
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 2,
+       "n": 138,
+       "value": 0.014492753623188406,
+       "wilson95": [
+        0.003983475367118987,
+        0.05129978908279297
+       ]
+      },
+      "review_queue": 113,
+      "review_queue_true_changes": 55,
+      "true_changes_text_misses_(unchanged_by_scheme)": 15
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     }
+    }
+   },
+   "EXCL_25_IDENTICAL": {
+    "normalized_text_B  [PRIMARY]": {
+     "n": 155,
+     "n_truth_positive": 78,
+     "n_truth_negative": 77,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 55,
+       "neither": 0
+      },
+      "neg": {
+       "both": 2,
+       "relic_only": 0,
+       "text_only": 26,
+       "neither": 49
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 25,
+      "value": 0.92,
+      "wilson95": [
+       0.7503389087653979,
+       0.9777795989158737
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 78,
+      "n": 106,
+      "value": 0.7358490566037735,
+      "wilson95": [
+       0.6447402058461661,
+       0.8104613228774666
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 78,
+      "fp": 28,
+      "fn": 0,
+      "tn": 49,
+      "recall": {
+       "k": 78,
+       "n": 78,
+       "value": 1.0,
+       "wilson95": [
+        0.9530621895820832,
+        1.0
+       ]
+      },
+      "precision": {
+       "k": 78,
+       "n": 106,
+       "value": 0.7358490566037735,
+       "wilson95": [
+        0.6447402058461661,
+        0.8104613228774666
+       ]
+      },
+      "fpr": {
+       "k": 28,
+       "n": 77,
+       "value": 0.36363636363636365,
+       "wilson95": [
+        0.265054324236713,
+        0.47517797376231913
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 75,
+      "recall": {
+       "k": 23,
+       "n": 78,
+       "value": 0.2948717948717949,
+       "wilson95": [
+        0.20524218405654404,
+        0.4037579432943962
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 25,
+       "value": 0.92,
+       "wilson95": [
+        0.7503389087653979,
+        0.9777795989158737
+       ]
+      },
+      "fpr": {
+       "k": 2,
+       "n": 77,
+       "value": 0.025974025974025976,
+       "wilson95": [
+        0.0071521597435208,
+        0.08984582853882885
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 106,
+      "accepted_without_review": 25,
+      "reviews_avoided": {
+       "k": 25,
+       "n": 106,
+       "value": 0.2358490566037736,
+       "wilson95": [
+        0.165160411495225,
+        0.3250138763343062
+       ]
+      },
+      "wrongly_accepted": 2,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 2,
+       "n": 25,
+       "value": 0.08,
+       "wilson95": [
+        0.022220401084126245,
+        0.24966109123460217
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 2,
+       "n": 106,
+       "value": 0.018867924528301886,
+       "wilson95": [
+        0.005189608732908724,
+        0.06619927267088022
+       ]
+      },
+      "review_queue": 81,
+      "review_queue_true_changes": 55,
+      "true_changes_text_misses_(unchanged_by_scheme)": 0
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     },
+     "bootstrap_by_base_id": {
+      "cluster_key": "base_id",
+      "n_clusters": 15,
+      "resamples": 10000,
+      "seed": 20261004,
+      "reviews_avoided": {
+       "ci95": [
+        0.11827956989247312,
+        0.32857142857142857
+       ],
+       "n_valid_resamples": 10000
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "ci95": [
+        0.0,
+        0.03676470588235294
+       ],
+       "n_valid_resamples": 10000
+      },
+      "wrongly_accepted_share_of_accepted": {
+       "ci95": [
+        0.0,
+        0.12
+       ],
+       "n_valid_resamples": 10000
+      }
+     }
+    },
+    "normalized_text_A  [sensitivity]": {
+     "n": 155,
+     "n_truth_positive": 78,
+     "n_truth_negative": 77,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 55,
+       "neither": 0
+      },
+      "neg": {
+       "both": 2,
+       "relic_only": 0,
+       "text_only": 33,
+       "neither": 42
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 25,
+      "value": 0.92,
+      "wilson95": [
+       0.7503389087653979,
+       0.9777795989158737
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 78,
+      "n": 113,
+      "value": 0.6902654867256637,
+      "wilson95": [
+       0.5999367503088308,
+       0.7680833036318295
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 78,
+      "fp": 35,
+      "fn": 0,
+      "tn": 42,
+      "recall": {
+       "k": 78,
+       "n": 78,
+       "value": 1.0,
+       "wilson95": [
+        0.9530621895820832,
+        1.0
+       ]
+      },
+      "precision": {
+       "k": 78,
+       "n": 113,
+       "value": 0.6902654867256637,
+       "wilson95": [
+        0.5999367503088308,
+        0.7680833036318295
+       ]
+      },
+      "fpr": {
+       "k": 35,
+       "n": 77,
+       "value": 0.45454545454545453,
+       "wilson95": [
+        0.3481416080842047,
+        0.5652691579154726
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 75,
+      "recall": {
+       "k": 23,
+       "n": 78,
+       "value": 0.2948717948717949,
+       "wilson95": [
+        0.20524218405654404,
+        0.4037579432943962
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 25,
+       "value": 0.92,
+       "wilson95": [
+        0.7503389087653979,
+        0.9777795989158737
+       ]
+      },
+      "fpr": {
+       "k": 2,
+       "n": 77,
+       "value": 0.025974025974025976,
+       "wilson95": [
+        0.0071521597435208,
+        0.08984582853882885
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 113,
+      "accepted_without_review": 25,
+      "reviews_avoided": {
+       "k": 25,
+       "n": 113,
+       "value": 0.22123893805309736,
+       "wilson95": [
+        0.15458477700834647,
+        0.3062230509390582
+       ]
+      },
+      "wrongly_accepted": 2,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 2,
+       "n": 25,
+       "value": 0.08,
+       "wilson95": [
+        0.022220401084126245,
+        0.24966109123460217
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 2,
+       "n": 113,
+       "value": 0.017699115044247787,
+       "wilson95": [
+        0.004867231776703891,
+        0.06224472451325015
+       ]
+      },
+      "review_queue": 88,
+      "review_queue_true_changes": 55,
+      "true_changes_text_misses_(unchanged_by_scheme)": 0
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     }
+    },
+    "textdiff  [sensitivity]": {
+     "n": 155,
+     "n_truth_positive": 78,
+     "n_truth_negative": 77,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 55,
+       "neither": 0
+      },
+      "neg": {
+       "both": 2,
+       "relic_only": 0,
+       "text_only": 58,
+       "neither": 17
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 25,
+      "value": 0.92,
+      "wilson95": [
+       0.7503389087653979,
+       0.9777795989158737
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 78,
+      "n": 138,
+      "value": 0.5652173913043478,
+      "wilson95": [
+       0.48185075897891205,
+       0.6450514890800549
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 78,
+      "fp": 60,
+      "fn": 0,
+      "tn": 17,
+      "recall": {
+       "k": 78,
+       "n": 78,
+       "value": 1.0,
+       "wilson95": [
+        0.9530621895820832,
+        1.0
+       ]
+      },
+      "precision": {
+       "k": 78,
+       "n": 138,
+       "value": 0.5652173913043478,
+       "wilson95": [
+        0.48185075897891205,
+        0.6450514890800549
+       ]
+      },
+      "fpr": {
+       "k": 60,
+       "n": 77,
+       "value": 0.7792207792207793,
+       "wilson95": [
+        0.6745693244827248,
+        0.8573359700906857
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 75,
+      "recall": {
+       "k": 23,
+       "n": 78,
+       "value": 0.2948717948717949,
+       "wilson95": [
+        0.20524218405654404,
+        0.4037579432943962
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 25,
+       "value": 0.92,
+       "wilson95": [
+        0.7503389087653979,
+        0.9777795989158737
+       ]
+      },
+      "fpr": {
+       "k": 2,
+       "n": 77,
+       "value": 0.025974025974025976,
+       "wilson95": [
+        0.0071521597435208,
+        0.08984582853882885
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 138,
+      "accepted_without_review": 25,
+      "reviews_avoided": {
+       "k": 25,
+       "n": 138,
+       "value": 0.18115942028985507,
+       "wilson95": [
+        0.12582544526743114,
+        0.2537635642220633
+       ]
+      },
+      "wrongly_accepted": 2,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 2,
+       "n": 25,
+       "value": 0.08,
+       "wilson95": [
+        0.022220401084126245,
+        0.24966109123460217
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 2,
+       "n": 138,
+       "value": 0.014492753623188406,
+       "wilson95": [
+        0.003983475367118987,
+        0.05129978908279297
+       ]
+      },
+      "review_queue": 113,
+      "review_queue_true_changes": 55,
+      "true_changes_text_misses_(unchanged_by_scheme)": 0
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     }
+    }
+   },
+   "EXCL_15_NOOP_CHANGING_ONLY": {
+    "normalized_text_B  [PRIMARY]": {
+     "n": 165,
+     "n_truth_positive": 78,
+     "n_truth_negative": 87,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 55,
+       "neither": 0
+      },
+      "neg": {
+       "both": 2,
+       "relic_only": 0,
+       "text_only": 26,
+       "neither": 59
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 25,
+      "value": 0.92,
+      "wilson95": [
+       0.7503389087653979,
+       0.9777795989158737
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 78,
+      "n": 106,
+      "value": 0.7358490566037735,
+      "wilson95": [
+       0.6447402058461661,
+       0.8104613228774666
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 78,
+      "fp": 28,
+      "fn": 0,
+      "tn": 59,
+      "recall": {
+       "k": 78,
+       "n": 78,
+       "value": 1.0,
+       "wilson95": [
+        0.9530621895820832,
+        1.0
+       ]
+      },
+      "precision": {
+       "k": 78,
+       "n": 106,
+       "value": 0.7358490566037735,
+       "wilson95": [
+        0.6447402058461661,
+        0.8104613228774666
+       ]
+      },
+      "fpr": {
+       "k": 28,
+       "n": 87,
+       "value": 0.3218390804597701,
+       "wilson95": [
+        0.23300721326285093,
+        0.4257389101288022
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 85,
+      "recall": {
+       "k": 23,
+       "n": 78,
+       "value": 0.2948717948717949,
+       "wilson95": [
+        0.20524218405654404,
+        0.4037579432943962
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 25,
+       "value": 0.92,
+       "wilson95": [
+        0.7503389087653979,
+        0.9777795989158737
+       ]
+      },
+      "fpr": {
+       "k": 2,
+       "n": 87,
+       "value": 0.022988505747126436,
+       "wilson95": [
+        0.00632708504899073,
+        0.07999318080608057
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 106,
+      "accepted_without_review": 25,
+      "reviews_avoided": {
+       "k": 25,
+       "n": 106,
+       "value": 0.2358490566037736,
+       "wilson95": [
+        0.165160411495225,
+        0.3250138763343062
+       ]
+      },
+      "wrongly_accepted": 2,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 2,
+       "n": 25,
+       "value": 0.08,
+       "wilson95": [
+        0.022220401084126245,
+        0.24966109123460217
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 2,
+       "n": 106,
+       "value": 0.018867924528301886,
+       "wilson95": [
+        0.005189608732908724,
+        0.06619927267088022
+       ]
+      },
+      "review_queue": 81,
+      "review_queue_true_changes": 55,
+      "true_changes_text_misses_(unchanged_by_scheme)": 0
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     },
+     "bootstrap_by_base_id": {
+      "cluster_key": "base_id",
+      "n_clusters": 16,
+      "resamples": 10000,
+      "seed": 20261004,
+      "reviews_avoided": {
+       "ci95": [
+        0.11956521739130435,
+        0.33064516129032256
+       ],
+       "n_valid_resamples": 10000
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "ci95": [
+        0.0,
+        0.037037037037037035
+       ],
+       "n_valid_resamples": 10000
+      },
+      "wrongly_accepted_share_of_accepted": {
+       "ci95": [
+        0.0,
+        0.12121212121212122
+       ],
+       "n_valid_resamples": 10000
+      }
+     }
+    },
+    "normalized_text_A  [sensitivity]": {
+     "n": 165,
+     "n_truth_positive": 78,
+     "n_truth_negative": 87,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 55,
+       "neither": 0
+      },
+      "neg": {
+       "both": 2,
+       "relic_only": 0,
+       "text_only": 33,
+       "neither": 52
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 25,
+      "value": 0.92,
+      "wilson95": [
+       0.7503389087653979,
+       0.9777795989158737
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 78,
+      "n": 113,
+      "value": 0.6902654867256637,
+      "wilson95": [
+       0.5999367503088308,
+       0.7680833036318295
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 78,
+      "fp": 35,
+      "fn": 0,
+      "tn": 52,
+      "recall": {
+       "k": 78,
+       "n": 78,
+       "value": 1.0,
+       "wilson95": [
+        0.9530621895820832,
+        1.0
+       ]
+      },
+      "precision": {
+       "k": 78,
+       "n": 113,
+       "value": 0.6902654867256637,
+       "wilson95": [
+        0.5999367503088308,
+        0.7680833036318295
+       ]
+      },
+      "fpr": {
+       "k": 35,
+       "n": 87,
+       "value": 0.40229885057471265,
+       "wilson95": [
+        0.30550818852835304,
+        0.5073525888154568
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 85,
+      "recall": {
+       "k": 23,
+       "n": 78,
+       "value": 0.2948717948717949,
+       "wilson95": [
+        0.20524218405654404,
+        0.4037579432943962
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 25,
+       "value": 0.92,
+       "wilson95": [
+        0.7503389087653979,
+        0.9777795989158737
+       ]
+      },
+      "fpr": {
+       "k": 2,
+       "n": 87,
+       "value": 0.022988505747126436,
+       "wilson95": [
+        0.00632708504899073,
+        0.07999318080608057
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 113,
+      "accepted_without_review": 25,
+      "reviews_avoided": {
+       "k": 25,
+       "n": 113,
+       "value": 0.22123893805309736,
+       "wilson95": [
+        0.15458477700834647,
+        0.3062230509390582
+       ]
+      },
+      "wrongly_accepted": 2,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 2,
+       "n": 25,
+       "value": 0.08,
+       "wilson95": [
+        0.022220401084126245,
+        0.24966109123460217
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 2,
+       "n": 113,
+       "value": 0.017699115044247787,
+       "wilson95": [
+        0.004867231776703891,
+        0.06224472451325015
+       ]
+      },
+      "review_queue": 88,
+      "review_queue_true_changes": 55,
+      "true_changes_text_misses_(unchanged_by_scheme)": 0
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     }
+    },
+    "textdiff  [sensitivity]": {
+     "n": 165,
+     "n_truth_positive": 78,
+     "n_truth_negative": 87,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 55,
+       "neither": 0
+      },
+      "neg": {
+       "both": 2,
+       "relic_only": 0,
+       "text_only": 58,
+       "neither": 27
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 25,
+      "value": 0.92,
+      "wilson95": [
+       0.7503389087653979,
+       0.9777795989158737
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 78,
+      "n": 138,
+      "value": 0.5652173913043478,
+      "wilson95": [
+       0.48185075897891205,
+       0.6450514890800549
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 78,
+      "fp": 60,
+      "fn": 0,
+      "tn": 27,
+      "recall": {
+       "k": 78,
+       "n": 78,
+       "value": 1.0,
+       "wilson95": [
+        0.9530621895820832,
+        1.0
+       ]
+      },
+      "precision": {
+       "k": 78,
+       "n": 138,
+       "value": 0.5652173913043478,
+       "wilson95": [
+        0.48185075897891205,
+        0.6450514890800549
+       ]
+      },
+      "fpr": {
+       "k": 60,
+       "n": 87,
+       "value": 0.6896551724137931,
+       "wilson95": [
+        0.586161806572981,
+        0.7771084491713883
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 85,
+      "recall": {
+       "k": 23,
+       "n": 78,
+       "value": 0.2948717948717949,
+       "wilson95": [
+        0.20524218405654404,
+        0.4037579432943962
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 25,
+       "value": 0.92,
+       "wilson95": [
+        0.7503389087653979,
+        0.9777795989158737
+       ]
+      },
+      "fpr": {
+       "k": 2,
+       "n": 87,
+       "value": 0.022988505747126436,
+       "wilson95": [
+        0.00632708504899073,
+        0.07999318080608057
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 138,
+      "accepted_without_review": 25,
+      "reviews_avoided": {
+       "k": 25,
+       "n": 138,
+       "value": 0.18115942028985507,
+       "wilson95": [
+        0.12582544526743114,
+        0.2537635642220633
+       ]
+      },
+      "wrongly_accepted": 2,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 2,
+       "n": 25,
+       "value": 0.08,
+       "wilson95": [
+        0.022220401084126245,
+        0.24966109123460217
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 2,
+       "n": 138,
+       "value": 0.014492753623188406,
+       "wilson95": [
+        0.003983475367118987,
+        0.05129978908279297
+       ]
+      },
+      "review_queue": 113,
+      "review_queue_true_changes": 55,
+      "true_changes_text_misses_(unchanged_by_scheme)": 0
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     }
+    }
+   },
+   "CLEAN_CORE": {
+    "normalized_text_B  [PRIMARY]": {
+     "n": 141,
+     "n_truth_positive": 67,
+     "n_truth_negative": 74,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 44,
+       "neither": 0
+      },
+      "neg": {
+       "both": 0,
+       "relic_only": 0,
+       "text_only": 25,
+       "neither": 49
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 23,
+      "value": 1.0,
+      "wilson95": [
+       0.8568833796149266,
+       1.0000000000000002
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 67,
+      "n": 92,
+      "value": 0.7282608695652174,
+      "wilson95": [
+       0.629581469255927,
+       0.8086422440539769
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 67,
+      "fp": 25,
+      "fn": 0,
+      "tn": 49,
+      "recall": {
+       "k": 67,
+       "n": 67,
+       "value": 1.0,
+       "wilson95": [
+        0.9457738597996286,
+        1.0
+       ]
+      },
+      "precision": {
+       "k": 67,
+       "n": 92,
+       "value": 0.7282608695652174,
+       "wilson95": [
+        0.629581469255927,
+        0.8086422440539769
+       ]
+      },
+      "fpr": {
+       "k": 25,
+       "n": 74,
+       "value": 0.33783783783783783,
+       "wilson95": [
+        0.2404661345578359,
+        0.4512148752161626
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 44,
+      "tn": 74,
+      "recall": {
+       "k": 23,
+       "n": 67,
+       "value": 0.34328358208955223,
+       "wilson95": [
+        0.24089006202229762,
+        0.4626733550554306
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 23,
+       "value": 1.0,
+       "wilson95": [
+        0.8568833796149266,
+        1.0000000000000002
+       ]
+      },
+      "fpr": {
+       "k": 0,
+       "n": 74,
+       "value": 0.0,
+       "wilson95": [
+        0.0,
+        0.04934978013649534
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 92,
+      "accepted_without_review": 23,
+      "reviews_avoided": {
+       "k": 23,
+       "n": 92,
+       "value": 0.25,
+       "wilson95": [
+        0.17275255290754926,
+        0.3472881420387465
+       ]
+      },
+      "wrongly_accepted": 0,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 0,
+       "n": 23,
+       "value": 0.0,
+       "wilson95": [
+        0.0,
+        0.14311662038507353
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 0,
+       "n": 92,
+       "value": 0.0,
+       "wilson95": [
+        0.0,
+        0.04008138989259148
+       ]
+      },
+      "review_queue": 69,
+      "review_queue_true_changes": 44,
+      "true_changes_text_misses_(unchanged_by_scheme)": 0
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     },
+     "bootstrap_by_base_id": {
+      "cluster_key": "base_id",
+      "n_clusters": 15,
+      "resamples": 10000,
+      "seed": 20261004,
+      "reviews_avoided": {
+       "ci95": [
+        0.13043478260869565,
+        0.35135135135135137
+       ],
+       "n_valid_resamples": 10000
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "n_valid_resamples": 10000
+      },
+      "wrongly_accepted_share_of_accepted": {
+       "ci95": [
+        0.0,
+        0.0
+       ],
+       "n_valid_resamples": 10000
+      }
+     }
+    },
+    "normalized_text_A  [sensitivity]": {
+     "n": 141,
+     "n_truth_positive": 67,
+     "n_truth_negative": 74,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 44,
+       "neither": 0
+      },
+      "neg": {
+       "both": 0,
+       "relic_only": 0,
+       "text_only": 32,
+       "neither": 42
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 23,
+      "value": 1.0,
+      "wilson95": [
+       0.8568833796149266,
+       1.0000000000000002
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 67,
+      "n": 99,
+      "value": 0.6767676767676768,
+      "wilson95": [
+       0.5795296781431055,
+       0.7607999941576202
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 67,
+      "fp": 32,
+      "fn": 0,
+      "tn": 42,
+      "recall": {
+       "k": 67,
+       "n": 67,
+       "value": 1.0,
+       "wilson95": [
+        0.9457738597996286,
+        1.0
+       ]
+      },
+      "precision": {
+       "k": 67,
+       "n": 99,
+       "value": 0.6767676767676768,
+       "wilson95": [
+        0.5795296781431055,
+        0.7607999941576202
+       ]
+      },
+      "fpr": {
+       "k": 32,
+       "n": 74,
+       "value": 0.43243243243243246,
+       "wilson95": [
+        0.32566118579428427,
+        0.5458725682782152
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 44,
+      "tn": 74,
+      "recall": {
+       "k": 23,
+       "n": 67,
+       "value": 0.34328358208955223,
+       "wilson95": [
+        0.24089006202229762,
+        0.4626733550554306
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 23,
+       "value": 1.0,
+       "wilson95": [
+        0.8568833796149266,
+        1.0000000000000002
+       ]
+      },
+      "fpr": {
+       "k": 0,
+       "n": 74,
+       "value": 0.0,
+       "wilson95": [
+        0.0,
+        0.04934978013649534
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 99,
+      "accepted_without_review": 23,
+      "reviews_avoided": {
+       "k": 23,
+       "n": 99,
+       "value": 0.23232323232323232,
+       "wilson95": [
+        0.1600911355099771,
+        0.32455250357749577
+       ]
+      },
+      "wrongly_accepted": 0,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 0,
+       "n": 23,
+       "value": 0.0,
+       "wilson95": [
+        0.0,
+        0.14311662038507353
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 0,
+       "n": 99,
+       "value": 0.0,
+       "wilson95": [
+        0.0,
+        0.03735321263509084
+       ]
+      },
+      "review_queue": 76,
+      "review_queue_true_changes": 44,
+      "true_changes_text_misses_(unchanged_by_scheme)": 0
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     }
+    },
+    "textdiff  [sensitivity]": {
+     "n": 141,
+     "n_truth_positive": 67,
+     "n_truth_negative": 74,
+     "overlap_by_truth": {
+      "pos": {
+       "both": 23,
+       "relic_only": 0,
+       "text_only": 44,
+       "neither": 0
+      },
+      "neg": {
+       "both": 0,
+       "relic_only": 0,
+       "text_only": 57,
+       "neither": 17
+      }
+     },
+     "relic_only_precision": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": null,
+      "tp": 0,
+      "fp": 0,
+      "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+     },
+     "relic_flagged_precision": {
+      "k": 23,
+      "n": 23,
+      "value": 1.0,
+      "wilson95": [
+       0.8568833796149266,
+       1.0000000000000002
+      ]
+     },
+     "text_flagged_precision": {
+      "k": 67,
+      "n": 124,
+      "value": 0.5403225806451613,
+      "wilson95": [
+       0.4527120675952182,
+       0.6255098182273242
+      ]
+     },
+     "relic_only_true_positives_(H2)": 0,
+     "UNION": {
+      "tp": 67,
+      "fp": 57,
+      "fn": 0,
+      "tn": 17,
+      "recall": {
+       "k": 67,
+       "n": 67,
+       "value": 1.0,
+       "wilson95": [
+        0.9457738597996286,
+        1.0
+       ]
+      },
+      "precision": {
+       "k": 67,
+       "n": 124,
+       "value": 0.5403225806451613,
+       "wilson95": [
+        0.4527120675952182,
+        0.6255098182273242
+       ]
+      },
+      "fpr": {
+       "k": 57,
+       "n": 74,
+       "value": 0.7702702702702703,
+       "wilson95": [
+        0.6625368542964842,
+        0.8513281294135183
+       ]
+      }
+     },
+     "INTERSECTION": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 44,
+      "tn": 74,
+      "recall": {
+       "k": 23,
+       "n": 67,
+       "value": 0.34328358208955223,
+       "wilson95": [
+        0.24089006202229762,
+        0.4626733550554306
+       ]
+      },
+      "precision": {
+       "k": 23,
+       "n": 23,
+       "value": 1.0,
+       "wilson95": [
+        0.8568833796149266,
+        1.0000000000000002
+       ]
+      },
+      "fpr": {
+       "k": 0,
+       "n": 74,
+       "value": 0.0,
+       "wilson95": [
+        0.0,
+        0.04934978013649534
+       ]
+      }
+     },
+     "FAST_TRACK": {
+      "text_flagged": 124,
+      "accepted_without_review": 23,
+      "reviews_avoided": {
+       "k": 23,
+       "n": 124,
+       "value": 0.18548387096774194,
+       "wilson95": [
+        0.12689752212687191,
+        0.26297176845729636
+       ]
+      },
+      "wrongly_accepted": 0,
+      "wrongly_accepted_share_of_accepted": {
+       "k": 0,
+       "n": 23,
+       "value": 0.0,
+       "wilson95": [
+        0.0,
+        0.14311662038507353
+       ]
+      },
+      "wrongly_accepted_share_of_text_flagged": {
+       "k": 0,
+       "n": 124,
+       "value": 0.0,
+       "wilson95": [
+        0.0,
+        0.03004861580047276
+       ]
+      },
+      "review_queue": 101,
+      "review_queue_true_changes": 44,
+      "true_changes_text_misses_(unchanged_by_scheme)": 0
+     },
+     "verdicts": {
+      "H2_rejected_if_relic_only_TP==0": true,
+      "H4_avoided>=30%": false,
+      "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+      "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+     }
+    }
+   }
+  },
+  "per_category_vs_normalized_text_B_ALL_180_(exploratory)": {
+   "comment_edit": {
+    "n": 17,
+    "n_truth_positive": 0,
+    "relic_flags": 0,
+    "text_flags": 0,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   },
+   "cond_logic_change": {
+    "n": 18,
+    "n_truth_positive": 18,
+    "relic_flags": 6,
+    "text_flags": 18,
+    "pos_both": 6,
+    "pos_relic_only": 0,
+    "pos_text_only": 12,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 6,
+     "n": 18,
+     "value": 0.3333333333333333,
+     "wilson95": [
+      0.16278774656229916,
+      0.5625053287487956
+     ]
+    },
+    "relic_precision": {
+     "k": 6,
+     "n": 6,
+     "value": 1.0,
+     "wilson95": [
+      0.6096657083436264,
+      1.0
+     ]
+    }
+   },
+   "dataset_dependency_change": {
+    "n": 17,
+    "n_truth_positive": 17,
+    "relic_flags": 1,
+    "text_flags": 11,
+    "pos_both": 1,
+    "pos_relic_only": 0,
+    "pos_text_only": 10,
+    "pos_neither": 6,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 1,
+     "n": 17,
+     "value": 0.058823529411764705,
+     "wilson95": [
+      0.010460400868949863,
+      0.26982030858456973
+     ]
+    },
+    "relic_precision": {
+     "k": 1,
+     "n": 1,
+     "value": 1.0,
+     "wilson95": [
+      0.20654931179180275,
+      1.0
+     ]
+    }
+   },
+   "disp_change": {
+    "n": 19,
+    "n_truth_positive": 19,
+    "relic_flags": 1,
+    "text_flags": 17,
+    "pos_both": 1,
+    "pos_relic_only": 0,
+    "pos_text_only": 16,
+    "pos_neither": 2,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 1,
+     "n": 19,
+     "value": 0.05263157894736842,
+     "wilson95": [
+      0.0093519939586018,
+      0.24638731374732356
+     ]
+    },
+    "relic_precision": {
+     "k": 1,
+     "n": 1,
+     "value": 1.0,
+     "wilson95": [
+      0.20654931179180275,
+      1.0
+     ]
+    }
+   },
+   "independent_statement_reorder": {
+    "n": 14,
+    "n_truth_positive": 0,
+    "relic_flags": 0,
+    "text_flags": 11,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 11,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   },
+   "job_card_refactor": {
+    "n": 12,
+    "n_truth_positive": 0,
+    "relic_flags": 0,
+    "text_flags": 0,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   },
+   "producer_consumer_change": {
+    "n": 12,
+    "n_truth_positive": 12,
+    "relic_flags": 6,
+    "text_flags": 6,
+    "pos_both": 6,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 6,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 6,
+     "n": 12,
+     "value": 0.5,
+     "wilson95": [
+      0.25378159616252394,
+      0.7462184038374761
+     ]
+    },
+    "relic_precision": {
+     "k": 6,
+     "n": 6,
+     "value": 1.0,
+     "wilson95": [
+      0.6096657083436264,
+      1.0
+     ]
+    }
+   },
+   "return_code_effect": {
+    "n": 13,
+    "n_truth_positive": 13,
+    "relic_flags": 0,
+    "text_flags": 12,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 12,
+    "pos_neither": 1,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 0,
+     "n": 13,
+     "value": 0.0,
+     "wilson95": [
+      0.0,
+      0.22809537513180025
+     ]
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   },
+   "step_reorder_dependent": {
+    "n": 14,
+    "n_truth_positive": 14,
+    "relic_flags": 9,
+    "text_flags": 14,
+    "pos_both": 9,
+    "pos_relic_only": 0,
+    "pos_text_only": 5,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 9,
+     "n": 14,
+     "value": 0.6428571428571429,
+     "wilson95": [
+      0.3876442292429552,
+      0.8365526834990504
+     ]
+    },
+    "relic_precision": {
+     "k": 9,
+     "n": 9,
+     "value": 1.0,
+     "wilson95": [
+      0.700854948272956,
+      1.0
+     ]
+    }
+   },
+   "syntax_representation": {
+    "n": 21,
+    "n_truth_positive": 0,
+    "relic_flags": 0,
+    "text_flags": 13,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 13,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   },
+   "unreferenced_step_rename": {
+    "n": 6,
+    "n_truth_positive": 0,
+    "relic_flags": 2,
+    "text_flags": 2,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 2,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 2,
+     "value": 0.0,
+     "wilson95": [
+      0.0,
+      0.6576197760453506
+     ]
+    }
+   },
+   "whitespace_and_continuation": {
+    "n": 17,
+    "n_truth_positive": 0,
+    "relic_flags": 0,
+    "text_flags": 2,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 2,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   }
+  },
+  "easiness_ALL_180_(exploratory)": {
+   "relic_caught": {
+    "n": 23,
+    "mean_other_detectors_flagging": 6.6521739130434785,
+    "n_other_detectors": 7
+   },
+   "relic_missed": {
+    "n": 70,
+    "mean_other_detectors_flagging": 3.9285714285714284,
+    "n_other_detectors": 7
+   },
+   "caught_by_relic_but_by_no_other_detector": 0,
+   "relic_caught_also_flagged_by_every_other_detector": 15
+  },
+  "easiness_CLEAN_CORE_(exploratory)": {
+   "relic_caught": {
+    "n": 23,
+    "mean_other_detectors_flagging": 6.6521739130434785,
+    "n_other_detectors": 7
+   },
+   "relic_missed": {
+    "n": 44,
+    "mean_other_detectors_flagging": 5.0,
+    "n_other_detectors": 7
+   },
+   "caught_by_relic_but_by_no_other_detector": 0,
+   "relic_caught_also_flagged_by_every_other_detector": 15
+  }
+ },
+ "external": {
+  "n": 824,
+  "note": "External run was not blind; oracle same-author. Only 6 repos: repo-cluster bootstrap is very coarse.",
+  "pooled": {
+   "textdiff_ignore_job_parameters  [PRIMARY]": {
+    "n": 824,
+    "n_truth_positive": 691,
+    "n_truth_negative": 133,
+    "overlap_by_truth": {
+     "pos": {
+      "both": 658,
+      "relic_only": 0,
+      "text_only": 33,
+      "neither": 0
+     },
+     "neg": {
+      "both": 0,
+      "relic_only": 0,
+      "text_only": 3,
+      "neither": 130
+     }
+    },
+    "relic_only_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null,
+     "tp": 0,
+     "fp": 0,
+     "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+    },
+    "relic_flagged_precision": {
+     "k": 658,
+     "n": 658,
+     "value": 1.0,
+     "wilson95": [
+      0.9941958019858879,
+      1.0
+     ]
+    },
+    "text_flagged_precision": {
+     "k": 691,
+     "n": 694,
+     "value": 0.9956772334293948,
+     "wilson95": [
+      0.9873684821327882,
+      0.9985288033379366
+     ]
+    },
+    "relic_only_true_positives_(H2)": 0,
+    "UNION": {
+     "tp": 691,
+     "fp": 3,
+     "fn": 0,
+     "tn": 130,
+     "recall": {
+      "k": 691,
+      "n": 691,
+      "value": 1.0,
+      "wilson95": [
+       0.9944714598816817,
+       1.0
+      ]
+     },
+     "precision": {
+      "k": 691,
+      "n": 694,
+      "value": 0.9956772334293948,
+      "wilson95": [
+       0.9873684821327882,
+       0.9985288033379366
+      ]
+     },
+     "fpr": {
+      "k": 3,
+      "n": 133,
+      "value": 0.022556390977443608,
+      "wilson95": [
+       0.007700422759946929,
+       0.0642182703156146
+      ]
+     }
+    },
+    "INTERSECTION": {
+     "tp": 658,
+     "fp": 0,
+     "fn": 33,
+     "tn": 133,
+     "recall": {
+      "k": 658,
+      "n": 691,
+      "value": 0.9522431259044862,
+      "wilson95": [
+       0.9336908422325978,
+       0.9657949210467816
+      ]
+     },
+     "precision": {
+      "k": 658,
+      "n": 658,
+      "value": 1.0,
+      "wilson95": [
+       0.9941958019858879,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 133,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.028072332118501443
+      ]
+     }
+    },
+    "FAST_TRACK": {
+     "text_flagged": 694,
+     "accepted_without_review": 658,
+     "reviews_avoided": {
+      "k": 658,
+      "n": 694,
+      "value": 0.9481268011527377,
+      "wilson95": [
+       0.9290219640539025,
+       0.962297965543177
+      ]
+     },
+     "wrongly_accepted": 0,
+     "wrongly_accepted_share_of_accepted": {
+      "k": 0,
+      "n": 658,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.005804198014112292
+      ]
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "k": 0,
+      "n": 694,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.005504773086216763
+      ]
+     },
+     "review_queue": 36,
+     "review_queue_true_changes": 33,
+     "true_changes_text_misses_(unchanged_by_scheme)": 0
+    },
+    "verdicts": {
+     "H2_rejected_if_relic_only_TP==0": true,
+     "H4_avoided>=30%": true,
+     "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": true,
+     "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": true
+    },
+    "bootstrap_by_repo": {
+     "cluster_key": "repo",
+     "n_clusters": 7,
+     "resamples": 10000,
+     "seed": 20261004,
+     "reviews_avoided": {
+      "ci95": [
+       0.9281437125748503,
+       0.9906832298136646
+      ],
+      "n_valid_resamples": 10000
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n_valid_resamples": 10000
+     },
+     "wrongly_accepted_share_of_accepted": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "n_valid_resamples": 10000
+     }
+    }
+   },
+   "textdiff  [sensitivity]": {
+    "n": 824,
+    "n_truth_positive": 691,
+    "n_truth_negative": 133,
+    "overlap_by_truth": {
+     "pos": {
+      "both": 658,
+      "relic_only": 0,
+      "text_only": 33,
+      "neither": 0
+     },
+     "neg": {
+      "both": 0,
+      "relic_only": 0,
+      "text_only": 62,
+      "neither": 71
+     }
+    },
+    "relic_only_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null,
+     "tp": 0,
+     "fp": 0,
+     "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+    },
+    "relic_flagged_precision": {
+     "k": 658,
+     "n": 658,
+     "value": 1.0,
+     "wilson95": [
+      0.9941958019858879,
+      1.0
+     ]
+    },
+    "text_flagged_precision": {
+     "k": 691,
+     "n": 753,
+     "value": 0.9176626826029216,
+     "wilson95": [
+      0.895845083842156,
+      0.9352404660030369
+     ]
+    },
+    "relic_only_true_positives_(H2)": 0,
+    "UNION": {
+     "tp": 691,
+     "fp": 62,
+     "fn": 0,
+     "tn": 71,
+     "recall": {
+      "k": 691,
+      "n": 691,
+      "value": 1.0,
+      "wilson95": [
+       0.9944714598816817,
+       1.0
+      ]
+     },
+     "precision": {
+      "k": 691,
+      "n": 753,
+      "value": 0.9176626826029216,
+      "wilson95": [
+       0.895845083842156,
+       0.9352404660030369
+      ]
+     },
+     "fpr": {
+      "k": 62,
+      "n": 133,
+      "value": 0.46616541353383456,
+      "wilson95": [
+       0.38352785848663523,
+       0.5507026000777745
+      ]
+     }
+    },
+    "INTERSECTION": {
+     "tp": 658,
+     "fp": 0,
+     "fn": 33,
+     "tn": 133,
+     "recall": {
+      "k": 658,
+      "n": 691,
+      "value": 0.9522431259044862,
+      "wilson95": [
+       0.9336908422325978,
+       0.9657949210467816
+      ]
+     },
+     "precision": {
+      "k": 658,
+      "n": 658,
+      "value": 1.0,
+      "wilson95": [
+       0.9941958019858879,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 133,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.028072332118501443
+      ]
+     }
+    },
+    "FAST_TRACK": {
+     "text_flagged": 753,
+     "accepted_without_review": 658,
+     "reviews_avoided": {
+      "k": 658,
+      "n": 753,
+      "value": 0.8738379814077025,
+      "wilson95": [
+       0.84820939886414,
+       0.8956716258780597
+      ]
+     },
+     "wrongly_accepted": 0,
+     "wrongly_accepted_share_of_accepted": {
+      "k": 0,
+      "n": 658,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.005804198014112292
+      ]
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "k": 0,
+      "n": 753,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.005075645415849899
+      ]
+     },
+     "review_queue": 95,
+     "review_queue_true_changes": 33,
+     "true_changes_text_misses_(unchanged_by_scheme)": 0
+    },
+    "verdicts": {
+     "H2_rejected_if_relic_only_TP==0": true,
+     "H4_avoided>=30%": true,
+     "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": true,
+     "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": true
+    }
+   }
+  },
+  "per_repo": {
+   "IBM_dbb": {
+    "n": 8,
+    "n_truth_positive": 6,
+    "n_truth_negative": 2,
+    "overlap_by_truth": {
+     "pos": {
+      "both": 6,
+      "relic_only": 0,
+      "text_only": 0,
+      "neither": 0
+     },
+     "neg": {
+      "both": 0,
+      "relic_only": 0,
+      "text_only": 0,
+      "neither": 2
+     }
+    },
+    "relic_only_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null,
+     "tp": 0,
+     "fp": 0,
+     "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+    },
+    "relic_flagged_precision": {
+     "k": 6,
+     "n": 6,
+     "value": 1.0,
+     "wilson95": [
+      0.6096657083436264,
+      1.0
+     ]
+    },
+    "text_flagged_precision": {
+     "k": 6,
+     "n": 6,
+     "value": 1.0,
+     "wilson95": [
+      0.6096657083436264,
+      1.0
+     ]
+    },
+    "relic_only_true_positives_(H2)": 0,
+    "UNION": {
+     "tp": 6,
+     "fp": 0,
+     "fn": 0,
+     "tn": 2,
+     "recall": {
+      "k": 6,
+      "n": 6,
+      "value": 1.0,
+      "wilson95": [
+       0.6096657083436264,
+       1.0
+      ]
+     },
+     "precision": {
+      "k": 6,
+      "n": 6,
+      "value": 1.0,
+      "wilson95": [
+       0.6096657083436264,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 2,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.6576197760453506
+      ]
+     }
+    },
+    "INTERSECTION": {
+     "tp": 6,
+     "fp": 0,
+     "fn": 0,
+     "tn": 2,
+     "recall": {
+      "k": 6,
+      "n": 6,
+      "value": 1.0,
+      "wilson95": [
+       0.6096657083436264,
+       1.0
+      ]
+     },
+     "precision": {
+      "k": 6,
+      "n": 6,
+      "value": 1.0,
+      "wilson95": [
+       0.6096657083436264,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 2,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.6576197760453506
+      ]
+     }
+    },
+    "FAST_TRACK": {
+     "text_flagged": 6,
+     "accepted_without_review": 6,
+     "reviews_avoided": {
+      "k": 6,
+      "n": 6,
+      "value": 1.0,
+      "wilson95": [
+       0.6096657083436264,
+       1.0
+      ]
+     },
+     "wrongly_accepted": 0,
+     "wrongly_accepted_share_of_accepted": {
+      "k": 0,
+      "n": 6,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.39033429165637346
+      ]
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "k": 0,
+      "n": 6,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.39033429165637346
+      ]
+     },
+     "review_queue": 0,
+     "review_queue_true_changes": 0,
+     "true_changes_text_misses_(unchanged_by_scheme)": 0
+    },
+    "verdicts": {
+     "H2_rejected_if_relic_only_TP==0": true,
+     "H4_avoided>=30%": true,
+     "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": true,
+     "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": true
+    }
+   },
+   "IBM_zopeneditor-sample": {
+    "n": 54,
+    "n_truth_positive": 40,
+    "n_truth_negative": 14,
+    "overlap_by_truth": {
+     "pos": {
+      "both": 40,
+      "relic_only": 0,
+      "text_only": 0,
+      "neither": 0
+     },
+     "neg": {
+      "both": 0,
+      "relic_only": 0,
+      "text_only": 0,
+      "neither": 14
+     }
+    },
+    "relic_only_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null,
+     "tp": 0,
+     "fp": 0,
+     "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+    },
+    "relic_flagged_precision": {
+     "k": 40,
+     "n": 40,
+     "value": 1.0,
+     "wilson95": [
+      0.9123783975415363,
+      1.0
+     ]
+    },
+    "text_flagged_precision": {
+     "k": 40,
+     "n": 40,
+     "value": 1.0,
+     "wilson95": [
+      0.9123783975415363,
+      1.0
+     ]
+    },
+    "relic_only_true_positives_(H2)": 0,
+    "UNION": {
+     "tp": 40,
+     "fp": 0,
+     "fn": 0,
+     "tn": 14,
+     "recall": {
+      "k": 40,
+      "n": 40,
+      "value": 1.0,
+      "wilson95": [
+       0.9123783975415363,
+       1.0
+      ]
+     },
+     "precision": {
+      "k": 40,
+      "n": 40,
+      "value": 1.0,
+      "wilson95": [
+       0.9123783975415363,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 14,
+      "value": 0.0,
+      "wilson95": [
+       -2.1779500275404528e-17,
+       0.21531080540298045
+      ]
+     }
+    },
+    "INTERSECTION": {
+     "tp": 40,
+     "fp": 0,
+     "fn": 0,
+     "tn": 14,
+     "recall": {
+      "k": 40,
+      "n": 40,
+      "value": 1.0,
+      "wilson95": [
+       0.9123783975415363,
+       1.0
+      ]
+     },
+     "precision": {
+      "k": 40,
+      "n": 40,
+      "value": 1.0,
+      "wilson95": [
+       0.9123783975415363,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 14,
+      "value": 0.0,
+      "wilson95": [
+       -2.1779500275404528e-17,
+       0.21531080540298045
+      ]
+     }
+    },
+    "FAST_TRACK": {
+     "text_flagged": 40,
+     "accepted_without_review": 40,
+     "reviews_avoided": {
+      "k": 40,
+      "n": 40,
+      "value": 1.0,
+      "wilson95": [
+       0.9123783975415363,
+       1.0
+      ]
+     },
+     "wrongly_accepted": 0,
+     "wrongly_accepted_share_of_accepted": {
+      "k": 0,
+      "n": 40,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.08762160245846368
+      ]
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "k": 0,
+      "n": 40,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.08762160245846368
+      ]
+     },
+     "review_queue": 0,
+     "review_queue_true_changes": 0,
+     "true_changes_text_misses_(unchanged_by_scheme)": 0
+    },
+    "verdicts": {
+     "H2_rejected_if_relic_only_TP==0": true,
+     "H4_avoided>=30%": true,
+     "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": true,
+     "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": true
+    }
+   },
+   "mainframed_Enumeration": {
+    "n": 62,
+    "n_truth_positive": 50,
+    "n_truth_negative": 12,
+    "overlap_by_truth": {
+     "pos": {
+      "both": 49,
+      "relic_only": 0,
+      "text_only": 1,
+      "neither": 0
+     },
+     "neg": {
+      "both": 0,
+      "relic_only": 0,
+      "text_only": 2,
+      "neither": 10
+     }
+    },
+    "relic_only_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null,
+     "tp": 0,
+     "fp": 0,
+     "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+    },
+    "relic_flagged_precision": {
+     "k": 49,
+     "n": 49,
+     "value": 1.0,
+     "wilson95": [
+      0.9273021797160157,
+      1.0
+     ]
+    },
+    "text_flagged_precision": {
+     "k": 50,
+     "n": 52,
+     "value": 0.9615384615384616,
+     "wilson95": [
+      0.8701881073969999,
+      0.9893882890942731
+     ]
+    },
+    "relic_only_true_positives_(H2)": 0,
+    "UNION": {
+     "tp": 50,
+     "fp": 2,
+     "fn": 0,
+     "tn": 10,
+     "recall": {
+      "k": 50,
+      "n": 50,
+      "value": 1.0,
+      "wilson95": [
+       0.9286523998213858,
+       0.9999999999999998
+      ]
+     },
+     "precision": {
+      "k": 50,
+      "n": 52,
+      "value": 0.9615384615384616,
+      "wilson95": [
+       0.8701881073969999,
+       0.9893882890942731
+      ]
+     },
+     "fpr": {
+      "k": 2,
+      "n": 12,
+      "value": 0.16666666666666666,
+      "wilson95": [
+       0.04696514175692081,
+       0.4480308646118111
+      ]
+     }
+    },
+    "INTERSECTION": {
+     "tp": 49,
+     "fp": 0,
+     "fn": 1,
+     "tn": 12,
+     "recall": {
+      "k": 49,
+      "n": 50,
+      "value": 0.98,
+      "wilson95": [
+       0.895045563061035,
+       0.9964607407674952
+      ]
+     },
+     "precision": {
+      "k": 49,
+      "n": 49,
+      "value": 1.0,
+      "wilson95": [
+       0.9273021797160157,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 12,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.2424940095530979
+      ]
+     }
+    },
+    "FAST_TRACK": {
+     "text_flagged": 52,
+     "accepted_without_review": 49,
+     "reviews_avoided": {
+      "k": 49,
+      "n": 52,
+      "value": 0.9423076923076923,
+      "wilson95": [
+       0.8435748852621204,
+       0.980185828042016
+      ]
+     },
+     "wrongly_accepted": 0,
+     "wrongly_accepted_share_of_accepted": {
+      "k": 0,
+      "n": 49,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.07269782028398425
+      ]
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "k": 0,
+      "n": 52,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.06879223713445441
+      ]
+     },
+     "review_queue": 3,
+     "review_queue_true_changes": 1,
+     "true_changes_text_misses_(unchanged_by_scheme)": 0
+    },
+    "verdicts": {
+     "H2_rejected_if_relic_only_TP==0": true,
+     "H4_avoided>=30%": true,
+     "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": true,
+     "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": true
+    }
+   },
+   "vlachoudis_brexx": {
+    "n": 56,
+    "n_truth_positive": 53,
+    "n_truth_negative": 3,
+    "overlap_by_truth": {
+     "pos": {
+      "both": 53,
+      "relic_only": 0,
+      "text_only": 0,
+      "neither": 0
+     },
+     "neg": {
+      "both": 0,
+      "relic_only": 0,
+      "text_only": 0,
+      "neither": 3
+     }
+    },
+    "relic_only_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null,
+     "tp": 0,
+     "fp": 0,
+     "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+    },
+    "relic_flagged_precision": {
+     "k": 53,
+     "n": 53,
+     "value": 1.0,
+     "wilson95": [
+      0.9324180104293548,
+      1.0
+     ]
+    },
+    "text_flagged_precision": {
+     "k": 53,
+     "n": 53,
+     "value": 1.0,
+     "wilson95": [
+      0.9324180104293548,
+      1.0
+     ]
+    },
+    "relic_only_true_positives_(H2)": 0,
+    "UNION": {
+     "tp": 53,
+     "fp": 0,
+     "fn": 0,
+     "tn": 3,
+     "recall": {
+      "k": 53,
+      "n": 53,
+      "value": 1.0,
+      "wilson95": [
+       0.9324180104293548,
+       1.0
+      ]
+     },
+     "precision": {
+      "k": 53,
+      "n": 53,
+      "value": 1.0,
+      "wilson95": [
+       0.9324180104293548,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 3,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.5614970356393196
+      ]
+     }
+    },
+    "INTERSECTION": {
+     "tp": 53,
+     "fp": 0,
+     "fn": 0,
+     "tn": 3,
+     "recall": {
+      "k": 53,
+      "n": 53,
+      "value": 1.0,
+      "wilson95": [
+       0.9324180104293548,
+       1.0
+      ]
+     },
+     "precision": {
+      "k": 53,
+      "n": 53,
+      "value": 1.0,
+      "wilson95": [
+       0.9324180104293548,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 3,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.5614970356393196
+      ]
+     }
+    },
+    "FAST_TRACK": {
+     "text_flagged": 53,
+     "accepted_without_review": 53,
+     "reviews_avoided": {
+      "k": 53,
+      "n": 53,
+      "value": 1.0,
+      "wilson95": [
+       0.9324180104293548,
+       1.0
+      ]
+     },
+     "wrongly_accepted": 0,
+     "wrongly_accepted_share_of_accepted": {
+      "k": 0,
+      "n": 53,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.06758198957064511
+      ]
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "k": 0,
+      "n": 53,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.06758198957064511
+      ]
+     },
+     "review_queue": 0,
+     "review_queue_true_changes": 0,
+     "true_changes_text_misses_(unchanged_by_scheme)": 0
+    },
+    "verdicts": {
+     "H2_rejected_if_relic_only_TP==0": true,
+     "H4_avoided>=30%": true,
+     "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": true,
+     "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": true
+    }
+   },
+   "walmartlabs_zECS": {
+    "n": 49,
+    "n_truth_positive": 44,
+    "n_truth_negative": 5,
+    "overlap_by_truth": {
+     "pos": {
+      "both": 44,
+      "relic_only": 0,
+      "text_only": 0,
+      "neither": 0
+     },
+     "neg": {
+      "both": 0,
+      "relic_only": 0,
+      "text_only": 0,
+      "neither": 5
+     }
+    },
+    "relic_only_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null,
+     "tp": 0,
+     "fp": 0,
+     "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+    },
+    "relic_flagged_precision": {
+     "k": 44,
+     "n": 44,
+     "value": 1.0,
+     "wilson95": [
+      0.9197043950765085,
+      0.9999999999999998
+     ]
+    },
+    "text_flagged_precision": {
+     "k": 44,
+     "n": 44,
+     "value": 1.0,
+     "wilson95": [
+      0.9197043950765085,
+      0.9999999999999998
+     ]
+    },
+    "relic_only_true_positives_(H2)": 0,
+    "UNION": {
+     "tp": 44,
+     "fp": 0,
+     "fn": 0,
+     "tn": 5,
+     "recall": {
+      "k": 44,
+      "n": 44,
+      "value": 1.0,
+      "wilson95": [
+       0.9197043950765085,
+       0.9999999999999998
+      ]
+     },
+     "precision": {
+      "k": 44,
+      "n": 44,
+      "value": 1.0,
+      "wilson95": [
+       0.9197043950765085,
+       0.9999999999999998
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 5,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.43448246865939283
+      ]
+     }
+    },
+    "INTERSECTION": {
+     "tp": 44,
+     "fp": 0,
+     "fn": 0,
+     "tn": 5,
+     "recall": {
+      "k": 44,
+      "n": 44,
+      "value": 1.0,
+      "wilson95": [
+       0.9197043950765085,
+       0.9999999999999998
+      ]
+     },
+     "precision": {
+      "k": 44,
+      "n": 44,
+      "value": 1.0,
+      "wilson95": [
+       0.9197043950765085,
+       0.9999999999999998
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 5,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.43448246865939283
+      ]
+     }
+    },
+    "FAST_TRACK": {
+     "text_flagged": 44,
+     "accepted_without_review": 44,
+     "reviews_avoided": {
+      "k": 44,
+      "n": 44,
+      "value": 1.0,
+      "wilson95": [
+       0.9197043950765085,
+       0.9999999999999998
+      ]
+     },
+     "wrongly_accepted": 0,
+     "wrongly_accepted_share_of_accepted": {
+      "k": 0,
+      "n": 44,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.08029560492349135
+      ]
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "k": 0,
+      "n": 44,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.08029560492349135
+      ]
+     },
+     "review_queue": 0,
+     "review_queue_true_changes": 0,
+     "true_changes_text_misses_(unchanged_by_scheme)": 0
+    },
+    "verdicts": {
+     "H2_rejected_if_relic_only_TP==0": true,
+     "H4_avoided>=30%": true,
+     "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": true,
+     "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": true
+    }
+   },
+   "yetacp_mvs_sysgen": {
+    "n": 589,
+    "n_truth_positive": 494,
+    "n_truth_negative": 95,
+    "overlap_by_truth": {
+     "pos": {
+      "both": 465,
+      "relic_only": 0,
+      "text_only": 29,
+      "neither": 0
+     },
+     "neg": {
+      "both": 0,
+      "relic_only": 0,
+      "text_only": 1,
+      "neither": 94
+     }
+    },
+    "relic_only_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null,
+     "tp": 0,
+     "fp": 0,
+     "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+    },
+    "relic_flagged_precision": {
+     "k": 465,
+     "n": 465,
+     "value": 1.0,
+     "wilson95": [
+      0.9918064863750273,
+      1.0
+     ]
+    },
+    "text_flagged_precision": {
+     "k": 494,
+     "n": 495,
+     "value": 0.997979797979798,
+     "wilson95": [
+      0.9886466534023668,
+      0.9996432956840703
+     ]
+    },
+    "relic_only_true_positives_(H2)": 0,
+    "UNION": {
+     "tp": 494,
+     "fp": 1,
+     "fn": 0,
+     "tn": 94,
+     "recall": {
+      "k": 494,
+      "n": 494,
+      "value": 1.0,
+      "wilson95": [
+       0.9922837706407013,
+       1.0
+      ]
+     },
+     "precision": {
+      "k": 494,
+      "n": 495,
+      "value": 0.997979797979798,
+      "wilson95": [
+       0.9886466534023668,
+       0.9996432956840703
+      ]
+     },
+     "fpr": {
+      "k": 1,
+      "n": 95,
+      "value": 0.010526315789473684,
+      "wilson95": [
+       0.0018605762417867558,
+       0.057238702010584265
+      ]
+     }
+    },
+    "INTERSECTION": {
+     "tp": 465,
+     "fp": 0,
+     "fn": 29,
+     "tn": 95,
+     "recall": {
+      "k": 465,
+      "n": 494,
+      "value": 0.9412955465587044,
+      "wilson95": [
+       0.9169624319185496,
+       0.9588183858938911
+      ]
+     },
+     "precision": {
+      "k": 465,
+      "n": 465,
+      "value": 1.0,
+      "wilson95": [
+       0.9918064863750273,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 95,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.038864854128766085
+      ]
+     }
+    },
+    "FAST_TRACK": {
+     "text_flagged": 495,
+     "accepted_without_review": 465,
+     "reviews_avoided": {
+      "k": 465,
+      "n": 495,
+      "value": 0.9393939393939394,
+      "wilson95": [
+       0.9147999822870123,
+       0.95722056102455
+      ]
+     },
+     "wrongly_accepted": 0,
+     "wrongly_accepted_share_of_accepted": {
+      "k": 0,
+      "n": 465,
+      "value": 0.0,
+      "wilson95": [
+       -8.602549977704156e-19,
+       0.008193513624972752
+      ]
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "k": 0,
+      "n": 495,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.007700761059256928
+      ]
+     },
+     "review_queue": 30,
+     "review_queue_true_changes": 29,
+     "true_changes_text_misses_(unchanged_by_scheme)": 0
+    },
+    "verdicts": {
+     "H2_rejected_if_relic_only_TP==0": true,
+     "H4_avoided>=30%": true,
+     "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": true,
+     "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": true
+    }
+   },
+   "zowe_zowe-cli": {
+    "n": 6,
+    "n_truth_positive": 4,
+    "n_truth_negative": 2,
+    "overlap_by_truth": {
+     "pos": {
+      "both": 1,
+      "relic_only": 0,
+      "text_only": 3,
+      "neither": 0
+     },
+     "neg": {
+      "both": 0,
+      "relic_only": 0,
+      "text_only": 0,
+      "neither": 2
+     }
+    },
+    "relic_only_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null,
+     "tp": 0,
+     "fp": 0,
+     "note": "DENOMINATOR ZERO: RELIC flags nothing text does not"
+    },
+    "relic_flagged_precision": {
+     "k": 1,
+     "n": 1,
+     "value": 1.0,
+     "wilson95": [
+      0.20654931179180275,
+      1.0
+     ]
+    },
+    "text_flagged_precision": {
+     "k": 4,
+     "n": 4,
+     "value": 1.0,
+     "wilson95": [
+      0.5101091596030786,
+      0.9999999999999999
+     ]
+    },
+    "relic_only_true_positives_(H2)": 0,
+    "UNION": {
+     "tp": 4,
+     "fp": 0,
+     "fn": 0,
+     "tn": 2,
+     "recall": {
+      "k": 4,
+      "n": 4,
+      "value": 1.0,
+      "wilson95": [
+       0.5101091596030786,
+       0.9999999999999999
+      ]
+     },
+     "precision": {
+      "k": 4,
+      "n": 4,
+      "value": 1.0,
+      "wilson95": [
+       0.5101091596030786,
+       0.9999999999999999
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 2,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.6576197760453506
+      ]
+     }
+    },
+    "INTERSECTION": {
+     "tp": 1,
+     "fp": 0,
+     "fn": 3,
+     "tn": 2,
+     "recall": {
+      "k": 1,
+      "n": 4,
+      "value": 0.25,
+      "wilson95": [
+       0.04558726029536886,
+       0.6993581599030917
+      ]
+     },
+     "precision": {
+      "k": 1,
+      "n": 1,
+      "value": 1.0,
+      "wilson95": [
+       0.20654931179180275,
+       1.0
+      ]
+     },
+     "fpr": {
+      "k": 0,
+      "n": 2,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.6576197760453506
+      ]
+     }
+    },
+    "FAST_TRACK": {
+     "text_flagged": 4,
+     "accepted_without_review": 1,
+     "reviews_avoided": {
+      "k": 1,
+      "n": 4,
+      "value": 0.25,
+      "wilson95": [
+       0.04558726029536886,
+       0.6993581599030917
+      ]
+     },
+     "wrongly_accepted": 0,
+     "wrongly_accepted_share_of_accepted": {
+      "k": 0,
+      "n": 1,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.7934506882081973
+      ]
+     },
+     "wrongly_accepted_share_of_text_flagged": {
+      "k": 0,
+      "n": 4,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.4898908403969213
+      ]
+     },
+     "review_queue": 3,
+     "review_queue_true_changes": 3,
+     "true_changes_text_misses_(unchanged_by_scheme)": 0
+    },
+    "verdicts": {
+     "H2_rejected_if_relic_only_TP==0": true,
+     "H4_avoided>=30%": false,
+     "H4_pass_wrongly_accepted_as_share_of_accepted<=1%": false,
+     "H4_pass_wrongly_accepted_as_share_of_text_flagged<=1%": false
+    }
+   }
+  },
+  "H3_triage_precision_(vs_relic_v2_flagged_set)": {
+   "pooled": {
+    "relic_flagged": 658,
+    "precision": 1.0,
+    "wilson95": [
+     0.9941958019858879,
+     1.0
+    ],
+    "rejected": false
+   },
+   "IBM_dbb": {
+    "relic_flagged": 6,
+    "precision": 1.0,
+    "wilson95": [
+     0.6096657083436264,
+     1.0
+    ],
+    "applies_(>=20_flagged)": false,
+    "rejected": null
+   },
+   "IBM_zopeneditor-sample": {
+    "relic_flagged": 40,
+    "precision": 1.0,
+    "wilson95": [
+     0.9123783975415363,
+     1.0
+    ],
+    "applies_(>=20_flagged)": true,
+    "rejected": false
+   },
+   "mainframed_Enumeration": {
+    "relic_flagged": 49,
+    "precision": 1.0,
+    "wilson95": [
+     0.9273021797160157,
+     1.0
+    ],
+    "applies_(>=20_flagged)": true,
+    "rejected": false
+   },
+   "vlachoudis_brexx": {
+    "relic_flagged": 53,
+    "precision": 1.0,
+    "wilson95": [
+     0.9324180104293548,
+     1.0
+    ],
+    "applies_(>=20_flagged)": true,
+    "rejected": false
+   },
+   "walmartlabs_zECS": {
+    "relic_flagged": 44,
+    "precision": 1.0,
+    "wilson95": [
+     0.9197043950765085,
+     0.9999999999999998
+    ],
+    "applies_(>=20_flagged)": true,
+    "rejected": false
+   },
+   "yetacp_mvs_sysgen": {
+    "relic_flagged": 465,
+    "precision": 1.0,
+    "wilson95": [
+     0.9918064863750273,
+     1.0
+    ],
+    "applies_(>=20_flagged)": true,
+    "rejected": false
+   },
+   "zowe_zowe-cli": {
+    "relic_flagged": 1,
+    "precision": 1.0,
+    "wilson95": [
+     0.20654931179180275,
+     1.0
+    ],
+    "applies_(>=20_flagged)": false,
+    "rejected": null
+   },
+   "overall_rejected": false
+  },
+  "per_failure_category_(exploratory)": {
+   "F1_ORDERING": {
+    "n": 543,
+    "n_truth_positive": 542,
+    "relic_flags": 520,
+    "text_flags": 543,
+    "pos_both": 520,
+    "pos_relic_only": 0,
+    "pos_text_only": 22,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 1,
+    "relic_recall": {
+     "k": 520,
+     "n": 542,
+     "value": 0.959409594095941,
+     "wilson95": [
+      0.9393086743569319,
+      0.9730441561163209
+     ]
+    },
+    "relic_precision": {
+     "k": 520,
+     "n": 520,
+     "value": 1.0,
+     "wilson95": [
+      0.992666752857821,
+      0.9999999999999998
+     ]
+    }
+   },
+   "F2_DATASET": {
+    "n": 94,
+    "n_truth_positive": 94,
+    "relic_flags": 88,
+    "text_flags": 94,
+    "pos_both": 88,
+    "pos_relic_only": 0,
+    "pos_text_only": 6,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 88,
+     "n": 94,
+     "value": 0.9361702127659575,
+     "wilson95": [
+      0.867670263797917,
+      0.9704202648754615
+     ]
+    },
+    "relic_precision": {
+     "k": 88,
+     "n": 88,
+     "value": 1.0,
+     "wilson95": [
+      0.9581729327028544,
+      1.0000000000000002
+     ]
+    }
+   },
+   "F3_RETURN_CODE": {
+    "n": 57,
+    "n_truth_positive": 55,
+    "relic_flags": 50,
+    "text_flags": 57,
+    "pos_both": 50,
+    "pos_relic_only": 0,
+    "pos_text_only": 5,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 2,
+    "relic_recall": {
+     "k": 50,
+     "n": 55,
+     "value": 0.9090909090909091,
+     "wilson95": [
+      0.8042250531228354,
+      0.9605418451755379
+     ]
+    },
+    "relic_precision": {
+     "k": 50,
+     "n": 50,
+     "value": 1.0,
+     "wilson95": [
+      0.9286523998213858,
+      0.9999999999999998
+     ]
+    }
+   },
+   "NEGATIVE_REFACTOR": {
+    "n": 130,
+    "n_truth_positive": 0,
+    "relic_flags": 0,
+    "text_flags": 0,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   }
+  },
+  "per_operator_(exploratory)": {
+   "ALTER_COND_THRESHOLD": {
+    "n": 28,
+    "n_truth_positive": 27,
+    "relic_flags": 25,
+    "text_flags": 28,
+    "pos_both": 25,
+    "pos_relic_only": 0,
+    "pos_text_only": 2,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 1,
+    "relic_recall": {
+     "k": 25,
+     "n": 27,
+     "value": 0.9259259259259259,
+     "wilson95": [
+      0.7663040715188113,
+      0.9794453461246099
+     ]
+    },
+    "relic_precision": {
+     "k": 25,
+     "n": 25,
+     "value": 1.0,
+     "wilson95": [
+      0.866807747239609,
+      1.0
+     ]
+    }
+   },
+   "CHANGE_MSGCLASS": {
+    "n": 59,
+    "n_truth_positive": 0,
+    "relic_flags": 0,
+    "text_flags": 0,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   },
+   "DELETE_PRODUCER_STEP": {
+    "n": 40,
+    "n_truth_positive": 40,
+    "relic_flags": 40,
+    "text_flags": 40,
+    "pos_both": 40,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 40,
+     "n": 40,
+     "value": 1.0,
+     "wilson95": [
+      0.9123783975415363,
+      1.0
+     ]
+    },
+    "relic_precision": {
+     "k": 40,
+     "n": 40,
+     "value": 1.0,
+     "wilson95": [
+      0.9123783975415363,
+      1.0
+     ]
+    }
+   },
+   "INSERT_COMMENT": {
+    "n": 71,
+    "n_truth_positive": 0,
+    "relic_flags": 0,
+    "text_flags": 0,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   },
+   "MOVE_CONSUMER_BEFORE_PRODUCER": {
+    "n": 25,
+    "n_truth_positive": 25,
+    "relic_flags": 25,
+    "text_flags": 25,
+    "pos_both": 25,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 25,
+     "n": 25,
+     "value": 1.0,
+     "wilson95": [
+      0.866807747239609,
+      1.0
+     ]
+    },
+    "relic_precision": {
+     "k": 25,
+     "n": 25,
+     "value": 1.0,
+     "wilson95": [
+      0.866807747239609,
+      1.0
+     ]
+    }
+   },
+   "REMOVE_COND": {
+    "n": 29,
+    "n_truth_positive": 28,
+    "relic_flags": 25,
+    "text_flags": 29,
+    "pos_both": 25,
+    "pos_relic_only": 0,
+    "pos_text_only": 3,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 1,
+    "relic_recall": {
+     "k": 25,
+     "n": 28,
+     "value": 0.8928571428571429,
+     "wilson95": [
+      0.7280414829086314,
+      0.962881633460356
+     ]
+    },
+    "relic_precision": {
+     "k": 25,
+     "n": 25,
+     "value": 1.0,
+     "wilson95": [
+      0.866807747239609,
+      1.0
+     ]
+    }
+   },
+   "RENAME_OUTPUT_DATASET": {
+    "n": 29,
+    "n_truth_positive": 29,
+    "relic_flags": 23,
+    "text_flags": 29,
+    "pos_both": 23,
+    "pos_relic_only": 0,
+    "pos_text_only": 6,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 23,
+     "n": 29,
+     "value": 0.7931034482758621,
+     "wilson95": [
+      0.6160990944322833,
+      0.9015392985954367
+     ]
+    },
+    "relic_precision": {
+     "k": 23,
+     "n": 23,
+     "value": 1.0,
+     "wilson95": [
+      0.8568833796149266,
+      1.0000000000000002
+     ]
+    }
+   },
+   "SPLIT_JOB": {
+    "n": 274,
+    "n_truth_positive": 274,
+    "relic_flags": 260,
+    "text_flags": 274,
+    "pos_both": 260,
+    "pos_relic_only": 0,
+    "pos_text_only": 14,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 260,
+     "n": 274,
+     "value": 0.948905109489051,
+     "wilson95": [
+      0.9160739269602505,
+      0.9693230940260961
+     ]
+    },
+    "relic_precision": {
+     "k": 260,
+     "n": 260,
+     "value": 1.0,
+     "wilson95": [
+      0.9854402757717304,
+      1.0000000000000002
+     ]
+    }
+   },
+   "SWAP_ADJACENT_STEPS": {
+    "n": 269,
+    "n_truth_positive": 268,
+    "relic_flags": 260,
+    "text_flags": 269,
+    "pos_both": 260,
+    "pos_relic_only": 0,
+    "pos_text_only": 8,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 1,
+    "relic_recall": {
+     "k": 260,
+     "n": 268,
+     "value": 0.9701492537313433,
+     "wilson95": [
+      0.9422128210031283,
+      0.9847980957166791
+     ]
+    },
+    "relic_precision": {
+     "k": 260,
+     "n": 260,
+     "value": 1.0,
+     "wilson95": [
+      0.9854402757717304,
+      1.0000000000000002
+     ]
+    }
+   }
+  },
+  "per_contract_type_(exploratory)": {
+   "CONTROL_FLOW": {
+    "n": 57,
+    "n_truth_positive": 55,
+    "relic_flags": 50,
+    "text_flags": 57,
+    "pos_both": 50,
+    "pos_relic_only": 0,
+    "pos_text_only": 5,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 2,
+    "relic_recall": {
+     "k": 50,
+     "n": 55,
+     "value": 0.9090909090909091,
+     "wilson95": [
+      0.8042250531228354,
+      0.9605418451755379
+     ]
+    },
+    "relic_precision": {
+     "k": 50,
+     "n": 50,
+     "value": 1.0,
+     "wilson95": [
+      0.9286523998213858,
+      0.9999999999999998
+     ]
+    }
+   },
+   "NONE": {
+    "n": 130,
+    "n_truth_positive": 0,
+    "relic_flags": 0,
+    "text_flags": 0,
+    "pos_both": 0,
+    "pos_relic_only": 0,
+    "pos_text_only": 0,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    },
+    "relic_precision": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": null
+    }
+   },
+   "RESOURCE": {
+    "n": 94,
+    "n_truth_positive": 94,
+    "relic_flags": 88,
+    "text_flags": 94,
+    "pos_both": 88,
+    "pos_relic_only": 0,
+    "pos_text_only": 6,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 0,
+    "relic_recall": {
+     "k": 88,
+     "n": 94,
+     "value": 0.9361702127659575,
+     "wilson95": [
+      0.867670263797917,
+      0.9704202648754615
+     ]
+    },
+    "relic_precision": {
+     "k": 88,
+     "n": 88,
+     "value": 1.0,
+     "wilson95": [
+      0.9581729327028544,
+      1.0000000000000002
+     ]
+    }
+   },
+   "TEMPORAL": {
+    "n": 543,
+    "n_truth_positive": 542,
+    "relic_flags": 520,
+    "text_flags": 543,
+    "pos_both": 520,
+    "pos_relic_only": 0,
+    "pos_text_only": 22,
+    "pos_neither": 0,
+    "neg_both(FP both)": 0,
+    "neg_relic_only": 0,
+    "neg_text_only": 1,
+    "relic_recall": {
+     "k": 520,
+     "n": 542,
+     "value": 0.959409594095941,
+     "wilson95": [
+      0.9393086743569319,
+      0.9730441561163209
+     ]
+    },
+    "relic_precision": {
+     "k": 520,
+     "n": 520,
+     "value": 1.0,
+     "wilson95": [
+      0.992666752857821,
+      0.9999999999999998
+     ]
+    }
+   }
+  },
+  "easiness_(exploratory)": {
+   "relic_caught": {
+    "n": 658,
+    "mean_other_detectors_flagging": 3.907294832826748,
+    "n_other_detectors": 4
+   },
+   "relic_missed": {
+    "n": 33,
+    "mean_other_detectors_flagging": 2.0,
+    "n_other_detectors": 4
+   },
+   "caught_by_relic_but_by_no_other_detector": 0,
+   "relic_caught_also_flagged_by_every_other_detector": 612
+  }
+ }
+}

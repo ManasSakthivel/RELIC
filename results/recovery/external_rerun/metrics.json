@@ -1,0 +1,5964 @@
+{
+  "accounting": {
+    "IBM_dbb": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.6667,
+      "files": {
+        "eligible_frozen": 2,
+        "excluded_frozen": 1,
+        "exclusion_reason_counts": {
+          "FEWER_THAN_2_EXEC_STEPS": 1
+        },
+        "jcl_total": 3,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 2,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 2,
+        "with_job": 3
+      },
+      "mutants": {
+        "candidates": 8,
+        "coverage_evaluable_over_candidate_mutants": 1.0,
+        "oracle_abstain_undetermined": 0,
+        "oracle_labels": {
+          "DIFFERENT": 6,
+          "EQUIVALENT": 2
+        },
+        "status": {
+          "EVALUABLE": 8,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 0,
+          "OTHER": 0,
+          "OUT_OF_SCOPE": 0
+        },
+        "status_reasons": {}
+      }
+    },
+    "IBM_zopeneditor-sample": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.7,
+      "files": {
+        "eligible_frozen": 7,
+        "excluded_frozen": 3,
+        "exclusion_reason_counts": {
+          "FEWER_THAN_2_EXEC_STEPS": 3,
+          "NO_JOB_STATEMENT": 2
+        },
+        "jcl_total": 10,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 7,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 7,
+        "with_job": 8
+      },
+      "mutants": {
+        "candidates": 108,
+        "coverage_evaluable_over_candidate_mutants": 0.5,
+        "oracle_abstain_undetermined": 0,
+        "oracle_labels": {
+          "DIFFERENT": 94,
+          "EQUIVALENT": 14
+        },
+        "status": {
+          "EVALUABLE": 54,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 0,
+          "OTHER": 0,
+          "OUT_OF_SCOPE": 54
+        },
+        "status_reasons": {
+          "OUT_OF_SCOPE:no consumer of this dataset inside the analysed JCL file (cross-file e": 54
+        }
+      }
+    },
+    "MartinPacker_Db2-DDF-Analysis-Tool": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.0,
+      "files": {
+        "eligible_frozen": 0,
+        "excluded_frozen": 10,
+        "exclusion_reason_counts": {
+          "FEWER_THAN_2_EXEC_STEPS": 4,
+          "NO_JOB_STATEMENT": 10
+        },
+        "jcl_total": 10,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 0,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 0,
+        "with_job": 0
+      },
+      "mutants": {
+        "candidates": 0,
+        "coverage_evaluable_over_candidate_mutants": null,
+        "oracle_abstain_undetermined": 0,
+        "oracle_labels": {},
+        "status": {
+          "EVALUABLE": 0,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 0,
+          "OTHER": 0,
+          "OUT_OF_SCOPE": 0
+        },
+        "status_reasons": {}
+      }
+    },
+    "_total": {
+      "candidate_mutants": 1005,
+      "coverage_evaluable_over_candidate_mutants": 0.8199,
+      "eligible_frozen": 76,
+      "files_with_evaluable": 71,
+      "jcl_files_total": 182,
+      "run_exception": 0,
+      "run_timeout": 0,
+      "status": {
+        "EVALUABLE": 824,
+        "INFRASTRUCTURE_FAILURE": 0,
+        "INVALID_MUTATION": 17,
+        "OTHER": 1,
+        "OUT_OF_SCOPE": 163
+      }
+    },
+    "mainframed_Enumeration": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.4167,
+      "files": {
+        "eligible_frozen": 5,
+        "excluded_frozen": 7,
+        "exclusion_reason_counts": {
+          "FEWER_THAN_2_EXEC_STEPS": 7
+        },
+        "jcl_total": 12,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 5,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 5,
+        "with_job": 12
+      },
+      "mutants": {
+        "candidates": 66,
+        "coverage_evaluable_over_candidate_mutants": 0.9394,
+        "oracle_abstain_undetermined": 0,
+        "oracle_labels": {
+          "DIFFERENT": 53,
+          "EQUIVALENT": 12
+        },
+        "status": {
+          "EVALUABLE": 62,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 1,
+          "OTHER": 0,
+          "OUT_OF_SCOPE": 3
+        },
+        "status_reasons": {
+          "INVALID_MUTATION:COND has no numeric test (EVEN/ONLY)": 1,
+          "OUT_OF_SCOPE:no consumer of this dataset inside the analysed JCL file (cross-file e": 3
+        }
+      }
+    },
+    "vlachoudis_brexx": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.375,
+      "files": {
+        "eligible_frozen": 6,
+        "excluded_frozen": 2,
+        "exclusion_reason_counts": {
+          "EXCEEDS_MAX_EXEC_STEPS_40": 1,
+          "FEWER_THAN_2_EXEC_STEPS": 1
+        },
+        "jcl_total": 8,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 6,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 3,
+        "with_job": 8
+      },
+      "mutants": {
+        "candidates": 57,
+        "coverage_evaluable_over_candidate_mutants": 0.9825,
+        "oracle_abstain_undetermined": 0,
+        "oracle_labels": {
+          "DIFFERENT": 54,
+          "EQUIVALENT": 3
+        },
+        "status": {
+          "EVALUABLE": 56,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 0,
+          "OTHER": 0,
+          "OUT_OF_SCOPE": 1
+        },
+        "status_reasons": {
+          "OUT_OF_SCOPE:no consumer of this dataset inside the analysed JCL file (cross-file e": 1
+        }
+      }
+    },
+    "walmartlabs_zECS": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.5,
+      "files": {
+        "eligible_frozen": 5,
+        "excluded_frozen": 5,
+        "exclusion_reason_counts": {
+          "EXCEEDS_MAX_EXEC_STEPS_40": 1,
+          "FEWER_THAN_2_EXEC_STEPS": 4
+        },
+        "jcl_total": 10,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 5,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 5,
+        "with_job": 10
+      },
+      "mutants": {
+        "candidates": 56,
+        "coverage_evaluable_over_candidate_mutants": 0.875,
+        "oracle_abstain_undetermined": 0,
+        "oracle_labels": {
+          "DIFFERENT": 44,
+          "EQUIVALENT": 5
+        },
+        "status": {
+          "EVALUABLE": 49,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 7,
+          "OTHER": 0,
+          "OUT_OF_SCOPE": 0
+        },
+        "status_reasons": {
+          "INVALID_MUTATION:renamed DSN exceeds JCL length limits": 7
+        }
+      }
+    },
+    "yetacp_mvs_sysgen": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.4434,
+      "files": {
+        "eligible_frozen": 49,
+        "excluded_frozen": 57,
+        "exclusion_reason_counts": {
+          "EXCEEDS_MAX_EXEC_STEPS_40": 5,
+          "EXCEEDS_MAX_LINES_2000": 16,
+          "FEWER_THAN_2_EXEC_STEPS": 44,
+          "NO_JOB_STATEMENT": 3
+        },
+        "jcl_total": 106,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 49,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 47,
+        "with_job": 103
+      },
+      "mutants": {
+        "candidates": 702,
+        "coverage_evaluable_over_candidate_mutants": 0.839,
+        "oracle_abstain_undetermined": 18,
+        "oracle_labels": {
+          "DIFFERENT": 580,
+          "EQUIVALENT": 97,
+          "UNDETERMINED": 18
+        },
+        "status": {
+          "EVALUABLE": 589,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 7,
+          "OTHER": 1,
+          "OUT_OF_SCOPE": 105
+        },
+        "status_reasons": {
+          "INVALID_MUTATION:renamed DSN exceeds JCL length limits": 7,
+          "ORACLE_UNDETERMINED": 1,
+          "OUT_OF_SCOPE:no consumer of this dataset inside the analysed JCL file (cross-file e": 105
+        }
+      }
+    },
+    "zosconnect_zosconnect-sample-wola-batch": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.0,
+      "files": {
+        "eligible_frozen": 0,
+        "excluded_frozen": 2,
+        "exclusion_reason_counts": {
+          "FEWER_THAN_2_EXEC_STEPS": 1,
+          "NO_JOB_STATEMENT": 2
+        },
+        "jcl_total": 2,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 0,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 0,
+        "with_job": 0
+      },
+      "mutants": {
+        "candidates": 0,
+        "coverage_evaluable_over_candidate_mutants": null,
+        "oracle_abstain_undetermined": 0,
+        "oracle_labels": {},
+        "status": {
+          "EVALUABLE": 0,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 0,
+          "OTHER": 0,
+          "OUT_OF_SCOPE": 0
+        },
+        "status_reasons": {}
+      }
+    },
+    "zowe_zowe-cli": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.2857,
+      "files": {
+        "eligible_frozen": 2,
+        "excluded_frozen": 5,
+        "exclusion_reason_counts": {
+          "FEWER_THAN_2_EXEC_STEPS": 5
+        },
+        "jcl_total": 7,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 2,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 2,
+        "with_job": 7
+      },
+      "mutants": {
+        "candidates": 8,
+        "coverage_evaluable_over_candidate_mutants": 0.75,
+        "oracle_abstain_undetermined": 0,
+        "oracle_labels": {
+          "DIFFERENT": 4,
+          "EQUIVALENT": 2
+        },
+        "status": {
+          "EVALUABLE": 6,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 2,
+          "OTHER": 0,
+          "OUT_OF_SCOPE": 0
+        },
+        "status_reasons": {
+          "INVALID_MUTATION:mutant identical to original": 2
+        }
+      }
+    },
+    "zowe_zowe-install-packaging": {
+      "detector_ERROR_counts_all_candidates": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "detector_ERROR_counts_evaluable": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0,
+        "textdiff": 0,
+        "textdiff_ignore_job_parameters": 0
+      },
+      "file_coverage_eligible_files_with_evaluable_over_all_jcl_files": 0.0,
+      "files": {
+        "eligible_frozen": 0,
+        "excluded_frozen": 14,
+        "exclusion_reason_counts": {
+          "FEWER_THAN_2_EXEC_STEPS": 12,
+          "NO_JOB_STATEMENT": 6
+        },
+        "jcl_total": 14,
+        "oracle_model_errors_on_original": 0,
+        "run_exception": 0,
+        "run_freeze_mismatch": 0,
+        "run_ok": 0,
+        "run_timeout": 0,
+        "with_at_least_one_evaluable_mutant": 0,
+        "with_job": 8
+      },
+      "mutants": {
+        "candidates": 0,
+        "coverage_evaluable_over_candidate_mutants": null,
+        "oracle_abstain_undetermined": 0,
+        "oracle_labels": {},
+        "status": {
+          "EVALUABLE": 0,
+          "INFRASTRUCTURE_FAILURE": 0,
+          "INVALID_MUTATION": 0,
+          "OTHER": 0,
+          "OUT_OF_SCOPE": 0
+        },
+        "status_reasons": {}
+      }
+    }
+  },
+  "caveats": [
+    "Labels come from the same, non-independent jcl_oracle used in development: this tests generalisation of the parser/detector to unseen files, NOT independent ground truth.",
+    "Repositories are 'screened by aggregate counts/fragments', never blind.",
+    "Few repositories contribute: no repository-level generalisation claim; CIs at file level are cluster-bootstrap over files and are optimistic regarding repository heterogeneity.",
+    "Ground-truth positives/negatives follow the oracle: negatives are mostly comment/MSGCLASS edits plus oracle-equivalent fault mutants (see dev adequacy note in results/v2)."
+  ],
+  "detectors": [
+    "relic_v1_0",
+    "relic_v1_1",
+    "relic_v2",
+    "textdiff",
+    "textdiff_ignore_job_parameters"
+  ],
+  "dev_reference": {
+    "per_subject_f1": {
+      "carddemo": {
+        "relic_v1_0": 0.9191,
+        "relic_v1_1": 0.982,
+        "relic_v2": 0.9901,
+        "textdiff": 0.9425,
+        "textdiff_ignore_job_parameters": 0.9961
+      },
+      "genapp": {
+        "relic_v1_0": 0.8832,
+        "relic_v1_1": 0.905,
+        "relic_v2": 0.9657,
+        "textdiff": 0.9751,
+        "textdiff_ignore_job_parameters": 1.0
+      },
+      "omp_course": {
+        "relic_v1_0": 0.9474,
+        "relic_v1_1": 1.0,
+        "relic_v2": 1.0,
+        "textdiff": 1.0,
+        "textdiff_ignore_job_parameters": 1.0
+      }
+    },
+    "pooled": {
+      "relic_v1_0": {
+        "f1": 0.9048,
+        "fn": 80,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8261,
+        "specificity": 1.0,
+        "tn": 106,
+        "tp": 380
+      },
+      "relic_v1_1": {
+        "f1": 0.951,
+        "fn": 43,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.9065,
+        "specificity": 1.0,
+        "tn": 106,
+        "tp": 417
+      },
+      "relic_v2": {
+        "f1": 0.98,
+        "fn": 18,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.9609,
+        "specificity": 1.0,
+        "tn": 106,
+        "tp": 442
+      },
+      "textdiff": {
+        "f1": 0.9573,
+        "fn": 0,
+        "fp": 41,
+        "precision": 0.9182,
+        "recall": 1.0,
+        "specificity": 0.6132,
+        "tn": 65,
+        "tp": 460
+      },
+      "textdiff_ignore_job_parameters": {
+        "f1": 0.9978,
+        "fn": 0,
+        "fp": 2,
+        "precision": 0.9957,
+        "recall": 1.0,
+        "specificity": 0.9811,
+        "tn": 104,
+        "tp": 460
+      }
+    },
+    "source": "results/v2/v2_metrics.json (development replay, same oracle)"
+  },
+  "freeze_relic_commit": "f435029213fcb2b3034a7d76f8c00ef01749f3f9",
+  "populations": {
+    "leave_one_repo_out": {
+      "IBM_dbb": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.943,
+            "error_as_wrong": {
+              "fn": 78,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9396,
+            "fn": 78,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.7453,
+            "n": 816,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 685,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9937,
+              1.0
+            ],
+            "recall": 0.8861,
+            "recall_ci95": [
+              0.8602,
+              0.9078
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9715,
+              1.0
+            ],
+            "tn": 131,
+            "tp": 607
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9649,
+            "error_as_wrong": {
+              "fn": 48,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9637,
+            "fn": 48,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.825,
+            "n": 816,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 685,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.994,
+              1.0
+            ],
+            "recall": 0.9299,
+            "recall_ci95": [
+              0.9083,
+              0.9467
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9715,
+              1.0
+            ],
+            "tn": 131,
+            "tp": 637
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.9759,
+            "error_as_wrong": {
+              "fn": 33,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9753,
+            "fn": 33,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.872,
+            "n": 816,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 685,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9941,
+              1.0
+            ],
+            "recall": 0.9518,
+            "recall_ci95": [
+              0.9331,
+              0.9655
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9715,
+              1.0
+            ],
+            "tn": 131,
+            "tp": 652
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.7633,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 62
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9567,
+            "fn": 0,
+            "fp": 62,
+            "fpr": 0.4733,
+            "mcc": 0.695,
+            "n": 816,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 685,
+            "precision": 0.917,
+            "precision_ci95": [
+              0.895,
+              0.9347
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9944,
+              1.0
+            ],
+            "specificity": 0.5267,
+            "specificity_ci95": [
+              0.4417,
+              0.6102
+            ],
+            "tn": 69,
+            "tp": 685
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.9886,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 3
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9978,
+            "fn": 0,
+            "fp": 3,
+            "fpr": 0.0229,
+            "mcc": 0.9863,
+            "n": 816,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 685,
+            "precision": 0.9956,
+            "precision_ci95": [
+              0.9873,
+              0.9985
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9944,
+              1.0
+            ],
+            "specificity": 0.9771,
+            "specificity_ci95": [
+              0.9348,
+              0.9922
+            ],
+            "tn": 128,
+            "tp": 685
+          }
+        },
+        "n": 816,
+        "n_files": 69,
+        "negatives": 131,
+        "positives": 685
+      },
+      "IBM_zopeneditor-sample": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.9424,
+            "error_as_wrong": {
+              "fn": 75,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9389,
+            "fn": 75,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.7367,
+            "n": 770,
+            "negatives": 119,
+            "no_prediction": 0,
+            "positives": 651,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9934,
+              1.0
+            ],
+            "recall": 0.8848,
+            "recall_ci95": [
+              0.858,
+              0.9071
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9687,
+              1.0
+            ],
+            "tn": 119,
+            "tp": 576
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9631,
+            "error_as_wrong": {
+              "fn": 48,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9617,
+            "fn": 48,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8124,
+            "n": 770,
+            "negatives": 119,
+            "no_prediction": 0,
+            "positives": 651,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9937,
+              1.0
+            ],
+            "recall": 0.9263,
+            "recall_ci95": [
+              0.9036,
+              0.9439
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9687,
+              1.0
+            ],
+            "tn": 119,
+            "tp": 603
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.9747,
+            "error_as_wrong": {
+              "fn": 33,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.974,
+            "fn": 33,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8621,
+            "n": 770,
+            "negatives": 119,
+            "no_prediction": 0,
+            "positives": 651,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9938,
+              1.0
+            ],
+            "recall": 0.9493,
+            "recall_ci95": [
+              0.9297,
+              0.9637
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9687,
+              1.0
+            ],
+            "tn": 119,
+            "tp": 618
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.7689,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 55
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9595,
+            "fn": 0,
+            "fp": 55,
+            "fpr": 0.4622,
+            "mcc": 0.7042,
+            "n": 770,
+            "negatives": 119,
+            "no_prediction": 0,
+            "positives": 651,
+            "precision": 0.9221,
+            "precision_ci95": [
+              0.9,
+              0.9397
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9941,
+              1.0
+            ],
+            "specificity": 0.5378,
+            "specificity_ci95": [
+              0.4485,
+              0.6248
+            ],
+            "tn": 64,
+            "tp": 651
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.9874,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 3
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9977,
+            "fn": 0,
+            "fp": 3,
+            "fpr": 0.0252,
+            "mcc": 0.985,
+            "n": 770,
+            "negatives": 119,
+            "no_prediction": 0,
+            "positives": 651,
+            "precision": 0.9954,
+            "precision_ci95": [
+              0.9866,
+              0.9984
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9941,
+              1.0
+            ],
+            "specificity": 0.9748,
+            "specificity_ci95": [
+              0.9285,
+              0.9914
+            ],
+            "tn": 116,
+            "tp": 651
+          }
+        },
+        "n": 770,
+        "n_files": 64,
+        "negatives": 119,
+        "positives": 651
+      },
+      "mainframed_Enumeration": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.9477,
+            "error_as_wrong": {
+              "fn": 67,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9449,
+            "fn": 67,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.7592,
+            "n": 762,
+            "negatives": 121,
+            "no_prediction": 0,
+            "positives": 641,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9934,
+              1.0
+            ],
+            "recall": 0.8955,
+            "recall_ci95": [
+              0.8694,
+              0.9169
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9692,
+              1.0
+            ],
+            "tn": 121,
+            "tp": 574
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9633,
+            "error_as_wrong": {
+              "fn": 47,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9619,
+            "fn": 47,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.817,
+            "n": 762,
+            "negatives": 121,
+            "no_prediction": 0,
+            "positives": 641,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9936,
+              1.0
+            ],
+            "recall": 0.9267,
+            "recall_ci95": [
+              0.9039,
+              0.9444
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9692,
+              1.0
+            ],
+            "tn": 121,
+            "tp": 594
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.975,
+            "error_as_wrong": {
+              "fn": 32,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9744,
+            "fn": 32,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8668,
+            "n": 762,
+            "negatives": 121,
+            "no_prediction": 0,
+            "positives": 641,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9937,
+              1.0
+            ],
+            "recall": 0.9501,
+            "recall_ci95": [
+              0.9304,
+              0.9644
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9692,
+              1.0
+            ],
+            "tn": 121,
+            "tp": 609
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.7728,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 55
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9589,
+            "fn": 0,
+            "fp": 55,
+            "fpr": 0.4545,
+            "mcc": 0.7088,
+            "n": 762,
+            "negatives": 121,
+            "no_prediction": 0,
+            "positives": 641,
+            "precision": 0.921,
+            "precision_ci95": [
+              0.8985,
+              0.9388
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.994,
+              1.0
+            ],
+            "specificity": 0.5455,
+            "specificity_ci95": [
+              0.4567,
+              0.6314
+            ],
+            "tn": 66,
+            "tp": 641
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.9959,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 1
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9992,
+            "fn": 0,
+            "fp": 1,
+            "fpr": 0.0083,
+            "mcc": 0.9951,
+            "n": 762,
+            "negatives": 121,
+            "no_prediction": 0,
+            "positives": 641,
+            "precision": 0.9984,
+            "precision_ci95": [
+              0.9912,
+              0.9997
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.994,
+              1.0
+            ],
+            "specificity": 0.9917,
+            "specificity_ci95": [
+              0.9547,
+              0.9985
+            ],
+            "tn": 120,
+            "tp": 641
+          }
+        },
+        "n": 762,
+        "n_files": 66,
+        "negatives": 121,
+        "positives": 641
+      },
+      "vlachoudis_brexx": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.9381,
+            "error_as_wrong": {
+              "fn": 79,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.934,
+            "fn": 79,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.7382,
+            "n": 768,
+            "negatives": 130,
+            "no_prediction": 0,
+            "positives": 638,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9932,
+              1.0
+            ],
+            "recall": 0.8762,
+            "recall_ci95": [
+              0.8483,
+              0.8995
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9713,
+              1.0
+            ],
+            "tn": 130,
+            "tp": 559
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9624,
+            "error_as_wrong": {
+              "fn": 48,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9609,
+            "fn": 48,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8218,
+            "n": 768,
+            "negatives": 130,
+            "no_prediction": 0,
+            "positives": 638,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9935,
+              1.0
+            ],
+            "recall": 0.9248,
+            "recall_ci95": [
+              0.9017,
+              0.9428
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9713,
+              1.0
+            ],
+            "tn": 130,
+            "tp": 590
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.9742,
+            "error_as_wrong": {
+              "fn": 33,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9735,
+            "fn": 33,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8697,
+            "n": 768,
+            "negatives": 130,
+            "no_prediction": 0,
+            "positives": 638,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9937,
+              1.0
+            ],
+            "recall": 0.9483,
+            "recall_ci95": [
+              0.9283,
+              0.9629
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9713,
+              1.0
+            ],
+            "tn": 130,
+            "tp": 605
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.7615,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 62
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9537,
+            "fn": 0,
+            "fp": 62,
+            "fpr": 0.4769,
+            "mcc": 0.6905,
+            "n": 768,
+            "negatives": 130,
+            "no_prediction": 0,
+            "positives": 638,
+            "precision": 0.9114,
+            "precision_ci95": [
+              0.8881,
+              0.9303
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.994,
+              1.0
+            ],
+            "specificity": 0.5231,
+            "specificity_ci95": [
+              0.4378,
+              0.607
+            ],
+            "tn": 68,
+            "tp": 638
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.9885,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 3
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9977,
+            "fn": 0,
+            "fp": 3,
+            "fpr": 0.0231,
+            "mcc": 0.9861,
+            "n": 768,
+            "negatives": 130,
+            "no_prediction": 0,
+            "positives": 638,
+            "precision": 0.9953,
+            "precision_ci95": [
+              0.9863,
+              0.9984
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.994,
+              1.0
+            ],
+            "specificity": 0.9769,
+            "specificity_ci95": [
+              0.9343,
+              0.9921
+            ],
+            "tn": 127,
+            "tp": 638
+          }
+        },
+        "n": 768,
+        "n_files": 68,
+        "negatives": 130,
+        "positives": 638
+      },
+      "walmartlabs_zECS": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.9389,
+            "error_as_wrong": {
+              "fn": 79,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.935,
+            "fn": 79,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.7368,
+            "n": 775,
+            "negatives": 128,
+            "no_prediction": 0,
+            "positives": 647,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9933,
+              1.0
+            ],
+            "recall": 0.8779,
+            "recall_ci95": [
+              0.8504,
+              0.9009
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9709,
+              1.0
+            ],
+            "tn": 128,
+            "tp": 568
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9629,
+            "error_as_wrong": {
+              "fn": 48,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9615,
+            "fn": 48,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8206,
+            "n": 775,
+            "negatives": 128,
+            "no_prediction": 0,
+            "positives": 647,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9936,
+              1.0
+            ],
+            "recall": 0.9258,
+            "recall_ci95": [
+              0.903,
+              0.9436
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9709,
+              1.0
+            ],
+            "tn": 128,
+            "tp": 599
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.9745,
+            "error_as_wrong": {
+              "fn": 33,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9738,
+            "fn": 33,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8686,
+            "n": 775,
+            "negatives": 128,
+            "no_prediction": 0,
+            "positives": 647,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9938,
+              1.0
+            ],
+            "recall": 0.949,
+            "recall_ci95": [
+              0.9292,
+              0.9635
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9709,
+              1.0
+            ],
+            "tn": 128,
+            "tp": 614
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.7578,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 62
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9543,
+            "fn": 0,
+            "fp": 62,
+            "fpr": 0.4844,
+            "mcc": 0.686,
+            "n": 775,
+            "negatives": 128,
+            "no_prediction": 0,
+            "positives": 647,
+            "precision": 0.9126,
+            "precision_ci95": [
+              0.8895,
+              0.9312
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9941,
+              1.0
+            ],
+            "specificity": 0.5156,
+            "specificity_ci95": [
+              0.4299,
+              0.6005
+            ],
+            "tn": 66,
+            "tp": 647
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.9883,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 3
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9977,
+            "fn": 0,
+            "fp": 3,
+            "fpr": 0.0234,
+            "mcc": 0.9859,
+            "n": 775,
+            "negatives": 128,
+            "no_prediction": 0,
+            "positives": 647,
+            "precision": 0.9954,
+            "precision_ci95": [
+              0.9865,
+              0.9984
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9941,
+              1.0
+            ],
+            "specificity": 0.9766,
+            "specificity_ci95": [
+              0.9334,
+              0.992
+            ],
+            "tn": 125,
+            "tp": 647
+          }
+        },
+        "n": 775,
+        "n_files": 66,
+        "negatives": 128,
+        "positives": 647
+      },
+      "yetacp_mvs_sysgen": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.9492,
+            "error_as_wrong": {
+              "fn": 20,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9465,
+            "fn": 20,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.7672,
+            "n": 235,
+            "negatives": 38,
+            "no_prediction": 0,
+            "positives": 197,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9788,
+              1.0
+            ],
+            "recall": 0.8985,
+            "recall_ci95": [
+              0.8484,
+              0.9333
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9082,
+              1.0
+            ],
+            "tn": 38,
+            "tp": 177
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9899,
+            "error_as_wrong": {
+              "fn": 4,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9897,
+            "fn": 4,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.9415,
+            "n": 235,
+            "negatives": 38,
+            "no_prediction": 0,
+            "positives": 197,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9805,
+              1.0
+            ],
+            "recall": 0.9797,
+            "recall_ci95": [
+              0.949,
+              0.9921
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9082,
+              1.0
+            ],
+            "tn": 38,
+            "tp": 193
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.9899,
+            "error_as_wrong": {
+              "fn": 4,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9897,
+            "fn": 4,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.9415,
+            "n": 235,
+            "negatives": 38,
+            "no_prediction": 0,
+            "positives": 197,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9805,
+              1.0
+            ],
+            "recall": 0.9797,
+            "recall_ci95": [
+              0.949,
+              0.9921
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9082,
+              1.0
+            ],
+            "tn": 38,
+            "tp": 193
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.8158,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 14
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9657,
+            "fn": 0,
+            "fp": 14,
+            "fpr": 0.3684,
+            "mcc": 0.7679,
+            "n": 235,
+            "negatives": 38,
+            "no_prediction": 0,
+            "positives": 197,
+            "precision": 0.9336,
+            "precision_ci95": [
+              0.8917,
+              0.9601
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9809,
+              1.0
+            ],
+            "specificity": 0.6316,
+            "specificity_ci95": [
+              0.4728,
+              0.7662
+            ],
+            "tn": 24,
+            "tp": 197
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.9737,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 2
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9949,
+            "fn": 0,
+            "fp": 2,
+            "fpr": 0.0526,
+            "mcc": 0.9684,
+            "n": 235,
+            "negatives": 38,
+            "no_prediction": 0,
+            "positives": 197,
+            "precision": 0.9899,
+            "precision_ci95": [
+              0.9641,
+              0.9972
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9809,
+              1.0
+            ],
+            "specificity": 0.9474,
+            "specificity_ci95": [
+              0.8271,
+              0.9854
+            ],
+            "tn": 36,
+            "tp": 197
+          }
+        },
+        "n": 235,
+        "n_files": 24,
+        "negatives": 38,
+        "positives": 197
+      },
+      "zowe_zowe-cli": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.9447,
+            "error_as_wrong": {
+              "fn": 76,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9414,
+            "fn": 76,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.7502,
+            "n": 818,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 687,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9938,
+              1.0
+            ],
+            "recall": 0.8894,
+            "recall_ci95": [
+              0.8637,
+              0.9107
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9715,
+              1.0
+            ],
+            "tn": 131,
+            "tp": 611
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9672,
+            "error_as_wrong": {
+              "fn": 45,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9661,
+            "fn": 45,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.834,
+            "n": 818,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 687,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9941,
+              1.0
+            ],
+            "recall": 0.9345,
+            "recall_ci95": [
+              0.9135,
+              0.9507
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9715,
+              1.0
+            ],
+            "tn": 131,
+            "tp": 642
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.9782,
+            "error_as_wrong": {
+              "fn": 30,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9777,
+            "fn": 30,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8821,
+            "n": 818,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 687,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9942,
+              1.0
+            ],
+            "recall": 0.9563,
+            "recall_ci95": [
+              0.9383,
+              0.9692
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9715,
+              1.0
+            ],
+            "tn": 131,
+            "tp": 657
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.7633,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 62
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9568,
+            "fn": 0,
+            "fp": 62,
+            "fpr": 0.4733,
+            "mcc": 0.6951,
+            "n": 818,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 687,
+            "precision": 0.9172,
+            "precision_ci95": [
+              0.8953,
+              0.9349
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9944,
+              1.0
+            ],
+            "specificity": 0.5267,
+            "specificity_ci95": [
+              0.4417,
+              0.6102
+            ],
+            "tn": 69,
+            "tp": 687
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.9886,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 3
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9978,
+            "fn": 0,
+            "fp": 3,
+            "fpr": 0.0229,
+            "mcc": 0.9863,
+            "n": 818,
+            "negatives": 131,
+            "no_prediction": 0,
+            "positives": 687,
+            "precision": 0.9957,
+            "precision_ci95": [
+              0.9873,
+              0.9985
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9944,
+              1.0
+            ],
+            "specificity": 0.9771,
+            "specificity_ci95": [
+              0.9348,
+              0.9922
+            ],
+            "tn": 128,
+            "tp": 687
+          }
+        },
+        "n": 818,
+        "n_files": 69,
+        "negatives": 131,
+        "positives": 687
+      }
+    },
+    "per_operator_pooled": {
+      "ALTER_COND_THRESHOLD": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.5,
+            "error_as_wrong": {
+              "fn": 27,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.0,
+            "fn": 27,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 28,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 27,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.1246
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.2065,
+              1.0
+            ],
+            "tn": 1,
+            "tp": 0
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9629,
+            "error_as_wrong": {
+              "fn": 2,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9615,
+            "fn": 2,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.5556,
+            "n": 28,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 27,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8668,
+              1.0
+            ],
+            "recall": 0.9259,
+            "recall_ci95": [
+              0.7663,
+              0.9794
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.2065,
+              1.0
+            ],
+            "tn": 1,
+            "tp": 25
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.9629,
+            "error_as_wrong": {
+              "fn": 2,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9615,
+            "fn": 2,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.5556,
+            "n": 28,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 27,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8668,
+              1.0
+            ],
+            "recall": 0.9259,
+            "recall_ci95": [
+              0.7663,
+              0.9794
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.2065,
+              1.0
+            ],
+            "tn": 1,
+            "tp": 25
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.5,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 1
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9818,
+            "fn": 0,
+            "fp": 1,
+            "fpr": 1.0,
+            "mcc": null,
+            "n": 28,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 27,
+            "precision": 0.9643,
+            "precision_ci95": [
+              0.8229,
+              0.9937
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8754,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.7935
+            ],
+            "tn": 0,
+            "tp": 27
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.5,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 1
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9818,
+            "fn": 0,
+            "fp": 1,
+            "fpr": 1.0,
+            "mcc": null,
+            "n": 28,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 27,
+            "precision": 0.9643,
+            "precision_ci95": [
+              0.8229,
+              0.9937
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8754,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.7935
+            ],
+            "tn": 0,
+            "tp": 27
+          }
+        },
+        "n": 28,
+        "n_files": 18,
+        "negatives": 1,
+        "positives": 27
+      },
+      "CHANGE_MSGCLASS": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": null,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 59,
+            "negatives": 59,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9389,
+              1.0
+            ],
+            "tn": 59,
+            "tp": 0
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": null,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 59,
+            "negatives": 59,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9389,
+              1.0
+            ],
+            "tn": 59,
+            "tp": 0
+          },
+          "relic_v2": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": null,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 59,
+            "negatives": 59,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9389,
+              1.0
+            ],
+            "tn": 59,
+            "tp": 0
+          },
+          "textdiff": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 59
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.0,
+            "fn": 0,
+            "fp": 59,
+            "fpr": 1.0,
+            "mcc": null,
+            "n": 59,
+            "negatives": 59,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": 0.0,
+            "precision_ci95": [
+              0.0,
+              0.0611
+            ],
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.0611
+            ],
+            "tn": 0,
+            "tp": 0
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": null,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 59,
+            "negatives": 59,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9389,
+              1.0
+            ],
+            "tn": 59,
+            "tp": 0
+          }
+        },
+        "n": 59,
+        "n_files": 59,
+        "negatives": 59,
+        "positives": 0
+      },
+      "DELETE_PRODUCER_STEP": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 40,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9124,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9124,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 40
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 40,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9124,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9124,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 40
+          },
+          "relic_v2": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 40,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9124,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9124,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 40
+          },
+          "textdiff": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 40,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9124,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9124,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 40
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 40,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9124,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9124,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 40
+          }
+        },
+        "n": 40,
+        "n_files": 23,
+        "negatives": 0,
+        "positives": 40
+      },
+      "INSERT_COMMENT": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": null,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 71,
+            "negatives": 71,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9487,
+              1.0
+            ],
+            "tn": 71,
+            "tp": 0
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": null,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 71,
+            "negatives": 71,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9487,
+              1.0
+            ],
+            "tn": 71,
+            "tp": 0
+          },
+          "relic_v2": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": null,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 71,
+            "negatives": 71,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9487,
+              1.0
+            ],
+            "tn": 71,
+            "tp": 0
+          },
+          "textdiff": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": null,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 71,
+            "negatives": 71,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9487,
+              1.0
+            ],
+            "tn": 71,
+            "tp": 0
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": null,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": null,
+            "n": 71,
+            "negatives": 71,
+            "no_prediction": 0,
+            "positives": 0,
+            "precision": null,
+            "precision_ci95": null,
+            "recall": null,
+            "recall_ci95": null,
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9487,
+              1.0
+            ],
+            "tn": 71,
+            "tp": 0
+          }
+        },
+        "n": 71,
+        "n_files": 71,
+        "negatives": 71,
+        "positives": 0
+      },
+      "MOVE_CONSUMER_BEFORE_PRODUCER": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 25,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 25,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8668,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8668,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 25
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 25,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 25,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8668,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8668,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 25
+          },
+          "relic_v2": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 25,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 25,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8668,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8668,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 25
+          },
+          "textdiff": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 25,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 25,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8668,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8668,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 25
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 25,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 25,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8668,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8668,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 25
+          }
+        },
+        "n": 25,
+        "n_files": 9,
+        "negatives": 0,
+        "positives": 25
+      },
+      "REMOVE_COND": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.875,
+            "error_as_wrong": {
+              "fn": 7,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.8571,
+            "fn": 7,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.3062,
+            "n": 29,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 28,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8454,
+              1.0
+            ],
+            "recall": 0.75,
+            "recall_ci95": [
+              0.5664,
+              0.8732
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.2065,
+              1.0
+            ],
+            "tn": 1,
+            "tp": 21
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9465,
+            "error_as_wrong": {
+              "fn": 3,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9434,
+            "fn": 3,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.4725,
+            "n": 29,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 28,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8668,
+              1.0
+            ],
+            "recall": 0.8929,
+            "recall_ci95": [
+              0.728,
+              0.9629
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.2065,
+              1.0
+            ],
+            "tn": 1,
+            "tp": 25
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.9465,
+            "error_as_wrong": {
+              "fn": 3,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9434,
+            "fn": 3,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.4725,
+            "n": 29,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 28,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8668,
+              1.0
+            ],
+            "recall": 0.8929,
+            "recall_ci95": [
+              0.728,
+              0.9629
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.2065,
+              1.0
+            ],
+            "tn": 1,
+            "tp": 25
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.5,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 1
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9825,
+            "fn": 0,
+            "fp": 1,
+            "fpr": 1.0,
+            "mcc": null,
+            "n": 29,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 28,
+            "precision": 0.9655,
+            "precision_ci95": [
+              0.8282,
+              0.9939
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8794,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.7935
+            ],
+            "tn": 0,
+            "tp": 28
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.5,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 1
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9825,
+            "fn": 0,
+            "fp": 1,
+            "fpr": 1.0,
+            "mcc": null,
+            "n": 29,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 28,
+            "precision": 0.9655,
+            "precision_ci95": [
+              0.8282,
+              0.9939
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.8794,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.7935
+            ],
+            "tn": 0,
+            "tp": 28
+          }
+        },
+        "n": 29,
+        "n_files": 18,
+        "negatives": 1,
+        "positives": 28
+      },
+      "RENAME_OUTPUT_DATASET": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 19,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.5128,
+            "fn": 19,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 29,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 29,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.7225,
+              1.0
+            ],
+            "recall": 0.3448,
+            "recall_ci95": [
+              0.1994,
+              0.5265
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 10
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 17,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.5854,
+            "fn": 17,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 29,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 29,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.7575,
+              1.0
+            ],
+            "recall": 0.4138,
+            "recall_ci95": [
+              0.2551,
+              0.5926
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 12
+          },
+          "relic_v2": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 6,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.8846,
+            "fn": 6,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 29,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 29,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.8569,
+              1.0
+            ],
+            "recall": 0.7931,
+            "recall_ci95": [
+              0.6161,
+              0.9015
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 23
+          },
+          "textdiff": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 29,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 29,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.883,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.883,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 29
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 29,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 29,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.883,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.883,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 29
+          }
+        },
+        "n": 29,
+        "n_files": 16,
+        "negatives": 0,
+        "positives": 29
+      },
+      "SPLIT_JOB": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 15,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9719,
+            "fn": 15,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 274,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 274,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9854,
+              1.0
+            ],
+            "recall": 0.9453,
+            "recall_ci95": [
+              0.9117,
+              0.9665
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 259
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 15,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9719,
+            "fn": 15,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 274,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 274,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9854,
+              1.0
+            ],
+            "recall": 0.9453,
+            "recall_ci95": [
+              0.9117,
+              0.9665
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 259
+          },
+          "relic_v2": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 14,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9738,
+            "fn": 14,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 274,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 274,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9854,
+              1.0
+            ],
+            "recall": 0.9489,
+            "recall_ci95": [
+              0.9161,
+              0.9693
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 260
+          },
+          "textdiff": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 274,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 274,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9862,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9862,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 274
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": null,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": null,
+            "mcc": null,
+            "n": 274,
+            "negatives": 0,
+            "no_prediction": 0,
+            "positives": 274,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9862,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9862,
+              1.0
+            ],
+            "specificity": null,
+            "specificity_ci95": null,
+            "tn": 0,
+            "tp": 274
+          }
+        },
+        "n": 274,
+        "n_files": 71,
+        "negatives": 0,
+        "positives": 274
+      },
+      "SWAP_ADJACENT_STEPS": {
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.9795,
+            "error_as_wrong": {
+              "fn": 11,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.979,
+            "fn": 11,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.2827,
+            "n": 269,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 268,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9853,
+              1.0
+            ],
+            "recall": 0.959,
+            "recall_ci95": [
+              0.928,
+              0.9769
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.2065,
+              1.0
+            ],
+            "tn": 1,
+            "tp": 257
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9795,
+            "error_as_wrong": {
+              "fn": 11,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.979,
+            "fn": 11,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.2827,
+            "n": 269,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 268,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9853,
+              1.0
+            ],
+            "recall": 0.959,
+            "recall_ci95": [
+              0.928,
+              0.9769
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.2065,
+              1.0
+            ],
+            "tn": 1,
+            "tp": 257
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.985,
+            "error_as_wrong": {
+              "fn": 8,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9848,
+            "fn": 8,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.3283,
+            "n": 269,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 268,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9854,
+              1.0
+            ],
+            "recall": 0.9701,
+            "recall_ci95": [
+              0.9422,
+              0.9848
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.2065,
+              1.0
+            ],
+            "tn": 1,
+            "tp": 260
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.5,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 1
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9981,
+            "fn": 0,
+            "fp": 1,
+            "fpr": 1.0,
+            "mcc": null,
+            "n": 269,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 268,
+            "precision": 0.9963,
+            "precision_ci95": [
+              0.9792,
+              0.9993
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9859,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.7935
+            ],
+            "tn": 0,
+            "tp": 268
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.5,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 1
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9981,
+            "fn": 0,
+            "fp": 1,
+            "fpr": 1.0,
+            "mcc": null,
+            "n": 269,
+            "negatives": 1,
+            "no_prediction": 0,
+            "positives": 268,
+            "precision": 0.9963,
+            "precision_ci95": [
+              0.9792,
+              0.9993
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9859,
+              1.0
+            ],
+            "specificity": 0.0,
+            "specificity_ci95": [
+              0.0,
+              0.7935
+            ],
+            "tn": 0,
+            "tp": 268
+          }
+        },
+        "n": 269,
+        "n_files": 70,
+        "negatives": 1,
+        "positives": 268
+      }
+    },
+    "per_repo": {
+      "IBM_dbb": {
+        "bootstrap": {
+          "diff_ci95": {
+            "relic_v2-relic_v1_0": [
+              0.0,
+              0.1429
+            ],
+            "relic_v2-relic_v1_1": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-textdiff": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-textdiff_ignore_job_parameters": [
+              0.0,
+              0.0
+            ]
+          },
+          "f1_ci95": {
+            "relic_v1_0": [
+              0.8571,
+              1.0
+            ],
+            "relic_v1_1": [
+              1.0,
+              1.0
+            ],
+            "relic_v2": [
+              1.0,
+              1.0
+            ],
+            "textdiff": [
+              1.0,
+              1.0
+            ],
+            "textdiff_ignore_job_parameters": [
+              1.0,
+              1.0
+            ]
+          },
+          "n_clusters": 2,
+          "reps": 10000,
+          "seed": 20261004
+        },
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.9166,
+            "error_as_wrong": {
+              "fn": 1,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9091,
+            "fn": 1,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.7454,
+            "n": 8,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 6,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.5655,
+              1.0
+            ],
+            "recall": 0.8333,
+            "recall_ci95": [
+              0.4365,
+              0.9699
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 5
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 8,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 6,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.6097,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.6097,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 6
+          },
+          "relic_v2": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 8,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 6,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.6097,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.6097,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 6
+          },
+          "textdiff": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 8,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 6,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.6097,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.6097,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 6
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 8,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 6,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.6097,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.6097,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 6
+          }
+        },
+        "n": 8,
+        "n_files": 2,
+        "negatives": 2,
+        "positives": 6
+      },
+      "IBM_zopeneditor-sample": {
+        "bootstrap": {
+          "diff_ci95": {
+            "relic_v2-relic_v1_0": [
+              0.011,
+              0.1111
+            ],
+            "relic_v2-relic_v1_1": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-textdiff": [
+              0.0631,
+              0.1045
+            ],
+            "relic_v2-textdiff_ignore_job_parameters": [
+              0.0,
+              0.0
+            ]
+          },
+          "f1_ci95": {
+            "relic_v1_0": [
+              0.8889,
+              0.989
+            ],
+            "relic_v1_1": [
+              1.0,
+              1.0
+            ],
+            "relic_v2": [
+              1.0,
+              1.0
+            ],
+            "textdiff": [
+              0.8955,
+              0.9369
+            ],
+            "textdiff_ignore_job_parameters": [
+              1.0,
+              1.0
+            ]
+          },
+          "n_clusters": 7,
+          "reps": 10000,
+          "seed": 20261004
+        },
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.95,
+            "error_as_wrong": {
+              "fn": 4,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9474,
+            "fn": 4,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8367,
+            "n": 54,
+            "negatives": 14,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9036,
+              1.0
+            ],
+            "recall": 0.9,
+            "recall_ci95": [
+              0.7695,
+              0.9604
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.7847,
+              1.0
+            ],
+            "tn": 14,
+            "tp": 36
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 54,
+            "negatives": 14,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9124,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9124,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.7847,
+              1.0
+            ],
+            "tn": 14,
+            "tp": 40
+          },
+          "relic_v2": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 54,
+            "negatives": 14,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9124,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9124,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.7847,
+              1.0
+            ],
+            "tn": 14,
+            "tp": 40
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.75,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 7
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9195,
+            "fn": 0,
+            "fp": 7,
+            "fpr": 0.5,
+            "mcc": 0.6523,
+            "n": 54,
+            "negatives": 14,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 0.8511,
+            "precision_ci95": [
+              0.7231,
+              0.9259
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9124,
+              1.0
+            ],
+            "specificity": 0.5,
+            "specificity_ci95": [
+              0.268,
+              0.732
+            ],
+            "tn": 7,
+            "tp": 40
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 54,
+            "negatives": 14,
+            "no_prediction": 0,
+            "positives": 40,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9124,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9124,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.7847,
+              1.0
+            ],
+            "tn": 14,
+            "tp": 40
+          }
+        },
+        "n": 54,
+        "n_files": 7,
+        "negatives": 14,
+        "positives": 40
+      },
+      "mainframed_Enumeration": {
+        "bootstrap": {
+          "diff_ci95": {
+            "relic_v2-relic_v1_0": [
+              0.0799,
+              0.1818
+            ],
+            "relic_v2-relic_v1_1": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-textdiff": [
+              0.0152,
+              0.102
+            ],
+            "relic_v2-textdiff_ignore_job_parameters": [
+              -0.027,
+              0.04
+            ]
+          },
+          "f1_ci95": {
+            "relic_v1_0": [
+              0.8182,
+              0.902
+            ],
+            "relic_v1_1": [
+              0.973,
+              1.0
+            ],
+            "relic_v2": [
+              0.973,
+              1.0
+            ],
+            "textdiff": [
+              0.898,
+              0.9573
+            ],
+            "textdiff_ignore_job_parameters": [
+              0.96,
+              1.0
+            ]
+          },
+          "n_clusters": 5,
+          "reps": 10000,
+          "seed": 20261004
+        },
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.88,
+            "error_as_wrong": {
+              "fn": 12,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.8636,
+            "fn": 12,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.6164,
+            "n": 62,
+            "negatives": 12,
+            "no_prediction": 0,
+            "positives": 50,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9082,
+              1.0
+            ],
+            "recall": 0.76,
+            "recall_ci95": [
+              0.6259,
+              0.857
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.7575,
+              1.0
+            ],
+            "tn": 12,
+            "tp": 38
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.99,
+            "error_as_wrong": {
+              "fn": 1,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9899,
+            "fn": 1,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.9511,
+            "n": 62,
+            "negatives": 12,
+            "no_prediction": 0,
+            "positives": 50,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9273,
+              1.0
+            ],
+            "recall": 0.98,
+            "recall_ci95": [
+              0.895,
+              0.9965
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.7575,
+              1.0
+            ],
+            "tn": 12,
+            "tp": 49
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.99,
+            "error_as_wrong": {
+              "fn": 1,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9899,
+            "fn": 1,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.9511,
+            "n": 62,
+            "negatives": 12,
+            "no_prediction": 0,
+            "positives": 50,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9273,
+              1.0
+            ],
+            "recall": 0.98,
+            "recall_ci95": [
+              0.895,
+              0.9965
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.7575,
+              1.0
+            ],
+            "tn": 12,
+            "tp": 49
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.7084,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 7
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9346,
+            "fn": 0,
+            "fp": 7,
+            "fpr": 0.5833,
+            "mcc": 0.6046,
+            "n": 62,
+            "negatives": 12,
+            "no_prediction": 0,
+            "positives": 50,
+            "precision": 0.8772,
+            "precision_ci95": [
+              0.7675,
+              0.9392
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9287,
+              1.0
+            ],
+            "specificity": 0.4167,
+            "specificity_ci95": [
+              0.1933,
+              0.6805
+            ],
+            "tn": 5,
+            "tp": 50
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.9166,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 2
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9804,
+            "fn": 0,
+            "fp": 2,
+            "fpr": 0.1667,
+            "mcc": 0.8951,
+            "n": 62,
+            "negatives": 12,
+            "no_prediction": 0,
+            "positives": 50,
+            "precision": 0.9615,
+            "precision_ci95": [
+              0.8702,
+              0.9894
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9287,
+              1.0
+            ],
+            "specificity": 0.8333,
+            "specificity_ci95": [
+              0.552,
+              0.953
+            ],
+            "tn": 10,
+            "tp": 50
+          }
+        },
+        "n": 62,
+        "n_files": 5,
+        "negatives": 12,
+        "positives": 50
+      },
+      "vlachoudis_brexx": {
+        "bootstrap": {
+          "diff_ci95": {
+            "relic_v2-relic_v1_0": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-relic_v1_1": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-textdiff": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-textdiff_ignore_job_parameters": [
+              0.0,
+              0.0
+            ]
+          },
+          "f1_ci95": {
+            "relic_v1_0": [
+              1.0,
+              1.0
+            ],
+            "relic_v1_1": [
+              1.0,
+              1.0
+            ],
+            "relic_v2": [
+              1.0,
+              1.0
+            ],
+            "textdiff": [
+              1.0,
+              1.0
+            ],
+            "textdiff_ignore_job_parameters": [
+              1.0,
+              1.0
+            ]
+          },
+          "n_clusters": 3,
+          "reps": 10000,
+          "seed": 20261004
+        },
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 56,
+            "negatives": 3,
+            "no_prediction": 0,
+            "positives": 53,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9324,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9324,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.4385,
+              1.0
+            ],
+            "tn": 3,
+            "tp": 53
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 56,
+            "negatives": 3,
+            "no_prediction": 0,
+            "positives": 53,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9324,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9324,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.4385,
+              1.0
+            ],
+            "tn": 3,
+            "tp": 53
+          },
+          "relic_v2": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 56,
+            "negatives": 3,
+            "no_prediction": 0,
+            "positives": 53,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9324,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9324,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.4385,
+              1.0
+            ],
+            "tn": 3,
+            "tp": 53
+          },
+          "textdiff": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 56,
+            "negatives": 3,
+            "no_prediction": 0,
+            "positives": 53,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9324,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9324,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.4385,
+              1.0
+            ],
+            "tn": 3,
+            "tp": 53
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 56,
+            "negatives": 3,
+            "no_prediction": 0,
+            "positives": 53,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9324,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9324,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.4385,
+              1.0
+            ],
+            "tn": 3,
+            "tp": 53
+          }
+        },
+        "n": 56,
+        "n_files": 3,
+        "negatives": 3,
+        "positives": 53
+      },
+      "walmartlabs_zECS": {
+        "bootstrap": {
+          "diff_ci95": {
+            "relic_v2-relic_v1_0": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-relic_v1_1": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-textdiff": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-textdiff_ignore_job_parameters": [
+              0.0,
+              0.0
+            ]
+          },
+          "f1_ci95": {
+            "relic_v1_0": [
+              1.0,
+              1.0
+            ],
+            "relic_v1_1": [
+              1.0,
+              1.0
+            ],
+            "relic_v2": [
+              1.0,
+              1.0
+            ],
+            "textdiff": [
+              1.0,
+              1.0
+            ],
+            "textdiff_ignore_job_parameters": [
+              1.0,
+              1.0
+            ]
+          },
+          "n_clusters": 5,
+          "reps": 10000,
+          "seed": 20261004
+        },
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 49,
+            "negatives": 5,
+            "no_prediction": 0,
+            "positives": 44,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9197,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9197,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.5655,
+              1.0
+            ],
+            "tn": 5,
+            "tp": 44
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 49,
+            "negatives": 5,
+            "no_prediction": 0,
+            "positives": 44,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9197,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9197,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.5655,
+              1.0
+            ],
+            "tn": 5,
+            "tp": 44
+          },
+          "relic_v2": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 49,
+            "negatives": 5,
+            "no_prediction": 0,
+            "positives": 44,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9197,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9197,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.5655,
+              1.0
+            ],
+            "tn": 5,
+            "tp": 44
+          },
+          "textdiff": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 49,
+            "negatives": 5,
+            "no_prediction": 0,
+            "positives": 44,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9197,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9197,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.5655,
+              1.0
+            ],
+            "tn": 5,
+            "tp": 44
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 49,
+            "negatives": 5,
+            "no_prediction": 0,
+            "positives": 44,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9197,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9197,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.5655,
+              1.0
+            ],
+            "tn": 5,
+            "tp": 44
+          }
+        },
+        "n": 49,
+        "n_files": 5,
+        "negatives": 5,
+        "positives": 44
+      },
+      "yetacp_mvs_sysgen": {
+        "bootstrap": {
+          "diff_ci95": {
+            "relic_v2-relic_v1_0": [
+              0.019,
+              0.0501
+            ],
+            "relic_v2-relic_v1_1": [
+              0.0057,
+              0.0279
+            ],
+            "relic_v2-textdiff": [
+              -0.0071,
+              0.0386
+            ],
+            "relic_v2-textdiff_ignore_job_parameters": [
+              -0.0564,
+              -0.0102
+            ]
+          },
+          "f1_ci95": {
+            "relic_v1_0": [
+              0.9,
+              0.9638
+            ],
+            "relic_v1_1": [
+              0.9252,
+              0.9756
+            ],
+            "relic_v2": [
+              0.9426,
+              0.9885
+            ],
+            "textdiff": [
+              0.9357,
+              0.9654
+            ],
+            "textdiff_ignore_job_parameters": [
+              0.9962,
+              1.0
+            ]
+          },
+          "n_clusters": 47,
+          "reps": 10000,
+          "seed": 20261004
+        },
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.9403,
+            "error_as_wrong": {
+              "fn": 59,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9365,
+            "fn": 59,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.737,
+            "n": 589,
+            "negatives": 95,
+            "no_prediction": 0,
+            "positives": 494,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9912,
+              1.0
+            ],
+            "recall": 0.8806,
+            "recall_ci95": [
+              0.849,
+              0.9063
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9611,
+              1.0
+            ],
+            "tn": 95,
+            "tp": 435
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.9555,
+            "error_as_wrong": {
+              "fn": 44,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9534,
+            "fn": 44,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.789,
+            "n": 589,
+            "negatives": 95,
+            "no_prediction": 0,
+            "positives": 494,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9915,
+              1.0
+            ],
+            "recall": 0.9109,
+            "recall_ci95": [
+              0.8825,
+              0.933
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9611,
+              1.0
+            ],
+            "tn": 95,
+            "tp": 450
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.9707,
+            "error_as_wrong": {
+              "fn": 29,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9698,
+            "fn": 29,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.8492,
+            "n": 589,
+            "negatives": 95,
+            "no_prediction": 0,
+            "positives": 494,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.9918,
+              1.0
+            ],
+            "recall": 0.9413,
+            "recall_ci95": [
+              0.917,
+              0.9588
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.9611,
+              1.0
+            ],
+            "tn": 95,
+            "tp": 465
+          },
+          "textdiff": {
+            "balanced_accuracy": 0.7473,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 48
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.9537,
+            "fn": 0,
+            "fp": 48,
+            "fpr": 0.5053,
+            "mcc": 0.6715,
+            "n": 589,
+            "negatives": 95,
+            "no_prediction": 0,
+            "positives": 494,
+            "precision": 0.9114,
+            "precision_ci95": [
+              0.8845,
+              0.9326
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9923,
+              1.0
+            ],
+            "specificity": 0.4947,
+            "specificity_ci95": [
+              0.3964,
+              0.5935
+            ],
+            "tn": 47,
+            "tp": 494
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 0.9948,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 1
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.999,
+            "fn": 0,
+            "fp": 1,
+            "fpr": 0.0105,
+            "mcc": 0.9937,
+            "n": 589,
+            "negatives": 95,
+            "no_prediction": 0,
+            "positives": 494,
+            "precision": 0.998,
+            "precision_ci95": [
+              0.9886,
+              0.9996
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.9923,
+              1.0
+            ],
+            "specificity": 0.9895,
+            "specificity_ci95": [
+              0.9428,
+              0.9981
+            ],
+            "tn": 94,
+            "tp": 494
+          }
+        },
+        "n": 589,
+        "n_files": 47,
+        "negatives": 95,
+        "positives": 494
+      },
+      "zowe_zowe-cli": {
+        "bootstrap": {
+          "diff_ci95": {
+            "relic_v2-relic_v1_0": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-relic_v1_1": [
+              0.0,
+              0.0
+            ],
+            "relic_v2-textdiff": [
+              -1.0,
+              -0.3333
+            ],
+            "relic_v2-textdiff_ignore_job_parameters": [
+              -1.0,
+              -0.3333
+            ]
+          },
+          "f1_ci95": {
+            "relic_v1_0": [
+              0.0,
+              0.6667
+            ],
+            "relic_v1_1": [
+              0.0,
+              0.6667
+            ],
+            "relic_v2": [
+              0.0,
+              0.6667
+            ],
+            "textdiff": [
+              1.0,
+              1.0
+            ],
+            "textdiff_ignore_job_parameters": [
+              1.0,
+              1.0
+            ]
+          },
+          "n_clusters": 2,
+          "reps": 10000,
+          "seed": 20261004
+        },
+        "detectors": {
+          "relic_v1_0": {
+            "balanced_accuracy": 0.625,
+            "error_as_wrong": {
+              "fn": 3,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.4,
+            "fn": 3,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.3162,
+            "n": 6,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 4,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.2065,
+              1.0
+            ],
+            "recall": 0.25,
+            "recall_ci95": [
+              0.0456,
+              0.6994
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 1
+          },
+          "relic_v1_1": {
+            "balanced_accuracy": 0.625,
+            "error_as_wrong": {
+              "fn": 3,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.4,
+            "fn": 3,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.3162,
+            "n": 6,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 4,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.2065,
+              1.0
+            ],
+            "recall": 0.25,
+            "recall_ci95": [
+              0.0456,
+              0.6994
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 1
+          },
+          "relic_v2": {
+            "balanced_accuracy": 0.625,
+            "error_as_wrong": {
+              "fn": 3,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 0.4,
+            "fn": 3,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 0.3162,
+            "n": 6,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 4,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.2065,
+              1.0
+            ],
+            "recall": 0.25,
+            "recall_ci95": [
+              0.0456,
+              0.6994
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 1
+          },
+          "textdiff": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 6,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 4,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.5101,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.5101,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 4
+          },
+          "textdiff_ignore_job_parameters": {
+            "balanced_accuracy": 1.0,
+            "error_as_wrong": {
+              "fn": 0,
+              "fp": 0
+            },
+            "errors_on_negatives": 0,
+            "errors_on_positives": 0,
+            "f1": 1.0,
+            "fn": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mcc": 1.0,
+            "n": 6,
+            "negatives": 2,
+            "no_prediction": 0,
+            "positives": 4,
+            "precision": 1.0,
+            "precision_ci95": [
+              0.5101,
+              1.0
+            ],
+            "recall": 1.0,
+            "recall_ci95": [
+              0.5101,
+              1.0
+            ],
+            "specificity": 1.0,
+            "specificity_ci95": [
+              0.3424,
+              1.0
+            ],
+            "tn": 2,
+            "tp": 4
+          }
+        },
+        "n": 6,
+        "n_files": 2,
+        "negatives": 2,
+        "positives": 4
+      }
+    },
+    "pooled_effectiveness": {
+      "bootstrap": {
+        "diff_ci95": {
+          "relic_v2-relic_v1_0": [
+            0.0232,
+            0.0526
+          ],
+          "relic_v2-relic_v1_1": [
+            0.0038,
+            0.0209
+          ],
+          "relic_v2-textdiff": [
+            0.001,
+            0.0356
+          ],
+          "relic_v2-textdiff_ignore_job_parameters": [
+            -0.0422,
+            -0.0081
+          ]
+        },
+        "f1_ci95": {
+          "relic_v1_0": [
+            0.911,
+            0.961
+          ],
+          "relic_v1_1": [
+            0.9431,
+            0.9806
+          ],
+          "relic_v2": [
+            0.9559,
+            0.9892
+          ],
+          "textdiff": [
+            0.9432,
+            0.9671
+          ],
+          "textdiff_ignore_job_parameters": [
+            0.9939,
+            1.0
+          ]
+        },
+        "n_clusters": 71,
+        "reps": 10000,
+        "seed": 20261004
+      },
+      "detectors": {
+        "relic_v1_0": {
+          "balanced_accuracy": 0.9428,
+          "error_as_wrong": {
+            "fn": 79,
+            "fp": 0
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.9394,
+          "fn": 79,
+          "fp": 0,
+          "fpr": 0.0,
+          "mcc": 0.7454,
+          "n": 824,
+          "negatives": 133,
+          "no_prediction": 0,
+          "positives": 691,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9938,
+            1.0
+          ],
+          "recall": 0.8857,
+          "recall_ci95": [
+            0.8598,
+            0.9073
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9719,
+            1.0
+          ],
+          "tn": 133,
+          "tp": 612
+        },
+        "relic_v1_1": {
+          "balanced_accuracy": 0.9652,
+          "error_as_wrong": {
+            "fn": 48,
+            "fp": 0
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.964,
+          "fn": 48,
+          "fp": 0,
+          "fpr": 0.0,
+          "mcc": 0.8269,
+          "n": 824,
+          "negatives": 133,
+          "no_prediction": 0,
+          "positives": 691,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9941,
+            1.0
+          ],
+          "recall": 0.9305,
+          "recall_ci95": [
+            0.9091,
+            0.9472
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9719,
+            1.0
+          ],
+          "tn": 133,
+          "tp": 643
+        },
+        "relic_v2": {
+          "balanced_accuracy": 0.9761,
+          "error_as_wrong": {
+            "fn": 33,
+            "fp": 0
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.9755,
+          "fn": 33,
+          "fp": 0,
+          "fpr": 0.0,
+          "mcc": 0.8735,
+          "n": 824,
+          "negatives": 133,
+          "no_prediction": 0,
+          "positives": 691,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9942,
+            1.0
+          ],
+          "recall": 0.9522,
+          "recall_ci95": [
+            0.9337,
+            0.9658
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9719,
+            1.0
+          ],
+          "tn": 133,
+          "tp": 658
+        },
+        "textdiff": {
+          "balanced_accuracy": 0.7669,
+          "error_as_wrong": {
+            "fn": 0,
+            "fp": 62
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.9571,
+          "fn": 0,
+          "fp": 62,
+          "fpr": 0.4662,
+          "mcc": 0.6999,
+          "n": 824,
+          "negatives": 133,
+          "no_prediction": 0,
+          "positives": 691,
+          "precision": 0.9177,
+          "precision_ci95": [
+            0.8958,
+            0.9352
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9945,
+            1.0
+          ],
+          "specificity": 0.5338,
+          "specificity_ci95": [
+            0.4493,
+            0.6165
+          ],
+          "tn": 71,
+          "tp": 691
+        },
+        "textdiff_ignore_job_parameters": {
+          "balanced_accuracy": 0.9887,
+          "error_as_wrong": {
+            "fn": 0,
+            "fp": 3
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.9978,
+          "fn": 0,
+          "fp": 3,
+          "fpr": 0.0226,
+          "mcc": 0.9865,
+          "n": 824,
+          "negatives": 133,
+          "no_prediction": 0,
+          "positives": 691,
+          "precision": 0.9957,
+          "precision_ci95": [
+            0.9874,
+            0.9985
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9945,
+            1.0
+          ],
+          "specificity": 0.9774,
+          "specificity_ci95": [
+            0.9358,
+            0.9923
+          ],
+          "tn": 130,
+          "tp": 691
+        }
+      },
+      "n": 824,
+      "n_files": 71,
+      "negatives": 133,
+      "positives": 691
+    },
+    "pooled_excluding_yetacp_mvs_sysgen": {
+      "bootstrap": {
+        "diff_ci95": {
+          "relic_v2-relic_v1_0": [
+            0.0164,
+            0.0842
+          ],
+          "relic_v2-relic_v1_1": [
+            0.0,
+            0.0
+          ],
+          "relic_v2-textdiff": [
+            0.0018,
+            0.0492
+          ],
+          "relic_v2-textdiff_ignore_job_parameters": [
+            -0.0265,
+            0.0096
+          ]
+        },
+        "f1_ci95": {
+          "relic_v1_0": [
+            0.8992,
+            0.9769
+          ],
+          "relic_v1_1": [
+            0.9709,
+            1.0
+          ],
+          "relic_v2": [
+            0.9709,
+            1.0
+          ],
+          "textdiff": [
+            0.9422,
+            0.9828
+          ],
+          "textdiff_ignore_job_parameters": [
+            0.9842,
+            1.0
+          ]
+        },
+        "n_clusters": 24,
+        "reps": 10000,
+        "seed": 20261004
+      },
+      "detectors": {
+        "relic_v1_0": {
+          "balanced_accuracy": 0.9492,
+          "error_as_wrong": {
+            "fn": 20,
+            "fp": 0
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.9465,
+          "fn": 20,
+          "fp": 0,
+          "fpr": 0.0,
+          "mcc": 0.7672,
+          "n": 235,
+          "negatives": 38,
+          "no_prediction": 0,
+          "positives": 197,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9788,
+            1.0
+          ],
+          "recall": 0.8985,
+          "recall_ci95": [
+            0.8484,
+            0.9333
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9082,
+            1.0
+          ],
+          "tn": 38,
+          "tp": 177
+        },
+        "relic_v1_1": {
+          "balanced_accuracy": 0.9899,
+          "error_as_wrong": {
+            "fn": 4,
+            "fp": 0
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.9897,
+          "fn": 4,
+          "fp": 0,
+          "fpr": 0.0,
+          "mcc": 0.9415,
+          "n": 235,
+          "negatives": 38,
+          "no_prediction": 0,
+          "positives": 197,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9805,
+            1.0
+          ],
+          "recall": 0.9797,
+          "recall_ci95": [
+            0.949,
+            0.9921
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9082,
+            1.0
+          ],
+          "tn": 38,
+          "tp": 193
+        },
+        "relic_v2": {
+          "balanced_accuracy": 0.9899,
+          "error_as_wrong": {
+            "fn": 4,
+            "fp": 0
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.9897,
+          "fn": 4,
+          "fp": 0,
+          "fpr": 0.0,
+          "mcc": 0.9415,
+          "n": 235,
+          "negatives": 38,
+          "no_prediction": 0,
+          "positives": 197,
+          "precision": 1.0,
+          "precision_ci95": [
+            0.9805,
+            1.0
+          ],
+          "recall": 0.9797,
+          "recall_ci95": [
+            0.949,
+            0.9921
+          ],
+          "specificity": 1.0,
+          "specificity_ci95": [
+            0.9082,
+            1.0
+          ],
+          "tn": 38,
+          "tp": 193
+        },
+        "textdiff": {
+          "balanced_accuracy": 0.8158,
+          "error_as_wrong": {
+            "fn": 0,
+            "fp": 14
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.9657,
+          "fn": 0,
+          "fp": 14,
+          "fpr": 0.3684,
+          "mcc": 0.7679,
+          "n": 235,
+          "negatives": 38,
+          "no_prediction": 0,
+          "positives": 197,
+          "precision": 0.9336,
+          "precision_ci95": [
+            0.8917,
+            0.9601
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9809,
+            1.0
+          ],
+          "specificity": 0.6316,
+          "specificity_ci95": [
+            0.4728,
+            0.7662
+          ],
+          "tn": 24,
+          "tp": 197
+        },
+        "textdiff_ignore_job_parameters": {
+          "balanced_accuracy": 0.9737,
+          "error_as_wrong": {
+            "fn": 0,
+            "fp": 2
+          },
+          "errors_on_negatives": 0,
+          "errors_on_positives": 0,
+          "f1": 0.9949,
+          "fn": 0,
+          "fp": 2,
+          "fpr": 0.0526,
+          "mcc": 0.9684,
+          "n": 235,
+          "negatives": 38,
+          "no_prediction": 0,
+          "positives": 197,
+          "precision": 0.9899,
+          "precision_ci95": [
+            0.9641,
+            0.9972
+          ],
+          "recall": 1.0,
+          "recall_ci95": [
+            0.9809,
+            1.0
+          ],
+          "specificity": 0.9474,
+          "specificity_ci95": [
+            0.8271,
+            0.9854
+          ],
+          "tn": 36,
+          "tp": 197
+        }
+      },
+      "n": 235,
+      "n_files": 24,
+      "negatives": 38,
+      "positives": 197
+    }
+  },
+  "robustness": {
+    "IBM_dbb": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 3,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    },
+    "IBM_zopeneditor-sample": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 10,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    },
+    "MartinPacker_Db2-DDF-Analysis-Tool": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 10,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    },
+    "cschneid-the-elder_mapa": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 216,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 4,
+      "oracle_model_exceptions": 0
+    },
+    "mainframed_Enumeration": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 12,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    },
+    "vlachoudis_brexx": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 8,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    },
+    "walmartlabs_zECS": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 10,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    },
+    "yetacp_mvs_sysgen": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 106,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    },
+    "zosconnect_zosconnect-sample-wola-batch": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 2,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    },
+    "zowe_zowe-cli": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 7,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    },
+    "zowe_zowe-install-packaging": {
+      "detector_parse_ERRORs": {
+        "relic_v1_0": 0,
+        "relic_v1_1": 0,
+        "relic_v2": 0
+      },
+      "files": 14,
+      "generator_exceptions": 0,
+      "lex_exceptions": 0,
+      "oracle_model_error_files": 0,
+      "oracle_model_exceptions": 0
+    }
+  },
+  "schema": "relic-external-eval/1",
+  "unsupported_syntax_prevalence": {
+    "IBM_dbb": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 1,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 1,
+        "PROC_USE": 1,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 1
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 2,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 1,
+        "PROC_USE": 1,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 1
+      },
+      "eligible_files": 2,
+      "files_with_job": 3,
+      "role": "effectiveness"
+    },
+    "IBM_zopeneditor-sample": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 4,
+        "GDG_REFERENCE": 7,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 7,
+        "SYMBOLIC_PARAMETERS": 7
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 4,
+        "GDG_REFERENCE": 7,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 1,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 1,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 1,
+        "SET_STATEMENT": 8,
+        "SYMBOLIC_PARAMETERS": 8
+      },
+      "eligible_files": 7,
+      "files_with_job": 8,
+      "role": "effectiveness"
+    },
+    "MartinPacker_Db2-DDF-Analysis-Tool": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 0
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 0
+      },
+      "eligible_files": 0,
+      "files_with_job": 0,
+      "role": "effectiveness"
+    },
+    "cschneid-the-elder_mapa": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 0
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 16,
+        "GDG_REFERENCE": 2,
+        "IF_THEN_ELSE": 5,
+        "INCLUDE": 2,
+        "INSTREAM_JCL_DATA": 5,
+        "JCLLIB": 5,
+        "MULTI_JOB": 16,
+        "PROC_DEFINITION": 4,
+        "PROC_USE": 28,
+        "SET_STATEMENT": 5,
+        "SYMBOLIC_PARAMETERS": 110
+      },
+      "eligible_files": 0,
+      "files_with_job": 199,
+      "role": "robustness_only"
+    },
+    "mainframed_Enumeration": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 4,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 1,
+        "SYMBOLIC_PARAMETERS": 5
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 4,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 1,
+        "SYMBOLIC_PARAMETERS": 12
+      },
+      "eligible_files": 5,
+      "files_with_job": 12,
+      "role": "effectiveness"
+    },
+    "vlachoudis_brexx": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 1,
+        "GDG_REFERENCE": 3,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 6,
+        "PROC_USE": 6,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 6
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 2,
+        "GDG_REFERENCE": 3,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 7,
+        "PROC_USE": 7,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 7
+      },
+      "eligible_files": 6,
+      "files_with_job": 8,
+      "role": "effectiveness"
+    },
+    "walmartlabs_zECS": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 1,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 1,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 0
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 1,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 1,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 1
+      },
+      "eligible_files": 5,
+      "files_with_job": 10,
+      "role": "effectiveness"
+    },
+    "yetacp_mvs_sysgen": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 11,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 12,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 10,
+        "PROC_USE": 25,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 8
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 20,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 23,
+        "JCLLIB": 0,
+        "MULTI_JOB": 7,
+        "PROC_DEFINITION": 14,
+        "PROC_USE": 47,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 15
+      },
+      "eligible_files": 49,
+      "files_with_job": 103,
+      "role": "effectiveness"
+    },
+    "zosconnect_zosconnect-sample-wola-batch": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 0
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 0
+      },
+      "eligible_files": 0,
+      "files_with_job": 0,
+      "role": "effectiveness"
+    },
+    "zowe_zowe-cli": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 1,
+        "PROC_USE": 1,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 1
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 1,
+        "PROC_USE": 1,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 4
+      },
+      "eligible_files": 2,
+      "files_with_job": 7,
+      "role": "effectiveness"
+    },
+    "zowe_zowe-install-packaging": {
+      "counts_over_eligible_files": {
+        "COND_PARAMETER": 0,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 0,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 0,
+        "SYMBOLIC_PARAMETERS": 0
+      },
+      "counts_over_files_with_job": {
+        "COND_PARAMETER": 1,
+        "GDG_REFERENCE": 0,
+        "IF_THEN_ELSE": 0,
+        "INCLUDE": 0,
+        "INSTREAM_JCL_DATA": 0,
+        "JCLLIB": 2,
+        "MULTI_JOB": 0,
+        "PROC_DEFINITION": 0,
+        "PROC_USE": 0,
+        "SET_STATEMENT": 4,
+        "SYMBOLIC_PARAMETERS": 6
+      },
+      "eligible_files": 0,
+      "files_with_job": 8,
+      "role": "effectiveness"
+    }
+  }
+}
