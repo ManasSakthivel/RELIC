@@ -1,0 +1,1774 @@
+{
+ "note": "Predictions are binary; no score/confidence exists, so no PR curve is computable.",
+ "sembench": {
+  "identical_pair_ids": [
+   "sembench_041",
+   "sembench_058",
+   "sembench_068",
+   "sembench_072",
+   "sembench_074",
+   "sembench_080",
+   "sembench_081",
+   "sembench_082",
+   "sembench_083",
+   "sembench_100",
+   "sembench_103",
+   "sembench_108",
+   "sembench_111",
+   "sembench_112",
+   "sembench_123",
+   "sembench_128",
+   "sembench_153",
+   "sembench_154",
+   "sembench_156",
+   "sembench_158",
+   "sembench_160",
+   "sembench_161",
+   "sembench_170",
+   "sembench_175",
+   "sembench_180"
+  ],
+  "n_identical": 25,
+  "identical_by_truth": {
+   "false": 10,
+   "true": 15
+  },
+  "oracle_disagree_ids_all": [
+   "sembench_036",
+   "sembench_078",
+   "sembench_079",
+   "sembench_100",
+   "sembench_103",
+   "sembench_108",
+   "sembench_111",
+   "sembench_112",
+   "sembench_117",
+   "sembench_118",
+   "sembench_120",
+   "sembench_121",
+   "sembench_123",
+   "sembench_124",
+   "sembench_126",
+   "sembench_127",
+   "sembench_128",
+   "sembench_129",
+   "sembench_130",
+   "sembench_153",
+   "sembench_154",
+   "sembench_156",
+   "sembench_158",
+   "sembench_160",
+   "sembench_161",
+   "sembench_165",
+   "sembench_170",
+   "sembench_172",
+   "sembench_175"
+  ],
+  "n_disagree_all": 29,
+  "oracle_disagree_non_identical_ids": [
+   "sembench_036",
+   "sembench_078",
+   "sembench_079",
+   "sembench_117",
+   "sembench_118",
+   "sembench_120",
+   "sembench_121",
+   "sembench_124",
+   "sembench_126",
+   "sembench_127",
+   "sembench_129",
+   "sembench_130",
+   "sembench_165",
+   "sembench_172"
+  ],
+  "n_disagree_non_identical": 14,
+  "abstain_ids": [
+   "sembench_172"
+  ],
+  "populations": {
+   "ALL_180": {
+    "n": 180,
+    "n_changing": 93,
+    "detectors": {
+     "normalized_text_A": {
+      "tp": 78,
+      "fp": 35,
+      "fn": 15,
+      "tn": 52,
+      "n": 180,
+      "precision": 0.6902654867256637,
+      "recall": 0.8387096774193549,
+      "specificity": 0.5977011494252874,
+      "f1": 0.7572815533980582,
+      "mcc": 0.45114899461986013
+     },
+     "normalized_text_B": {
+      "tp": 78,
+      "fp": 28,
+      "fn": 15,
+      "tn": 59,
+      "n": 180,
+      "precision": 0.7358490566037735,
+      "recall": 0.8387096774193549,
+      "specificity": 0.6781609195402298,
+      "f1": 0.7839195979899497,
+      "mcc": 0.5249454011682287
+     },
+     "raw_text": {
+      "tp": 78,
+      "fp": 77,
+      "fn": 15,
+      "tn": 10,
+      "n": 180,
+      "precision": 0.5032258064516129,
+      "recall": 0.8387096774193549,
+      "specificity": 0.11494252873563218,
+      "f1": 0.6290322580645161,
+      "mcc": -0.06697216117237094
+     },
+     "relic_v1_0": {
+      "tp": 15,
+      "fp": 2,
+      "fn": 78,
+      "tn": 85,
+      "n": 180,
+      "precision": 0.8823529411764706,
+      "recall": 0.16129032258064516,
+      "specificity": 0.9770114942528736,
+      "f1": 0.2727272727272727,
+      "mcc": 0.23632557489605005
+     },
+     "relic_v1_1": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 70,
+      "tn": 85,
+      "n": 180,
+      "precision": 0.92,
+      "recall": 0.24731182795698925,
+      "specificity": 0.9770114942528736,
+      "f1": 0.3898305084745763,
+      "mcc": 0.32414526007427535
+     },
+     "relic_v2": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 70,
+      "tn": 85,
+      "n": 180,
+      "precision": 0.92,
+      "recall": 0.24731182795698925,
+      "specificity": 0.9770114942528736,
+      "f1": 0.3898305084745763,
+      "mcc": 0.32414526007427535
+     },
+     "textdiff": {
+      "tp": 78,
+      "fp": 60,
+      "fn": 15,
+      "tn": 27,
+      "n": 180,
+      "precision": 0.5652173913043478,
+      "recall": 0.8387096774193549,
+      "specificity": 0.3103448275862069,
+      "f1": 0.6753246753246753,
+      "mcc": 0.17610918969123626
+     },
+     "textdiff_ignore_job_parameters": {
+      "tp": 78,
+      "fp": 49,
+      "fn": 15,
+      "tn": 38,
+      "n": 180,
+      "precision": 0.6141732283464567,
+      "recall": 0.8387096774193549,
+      "specificity": 0.4367816091954023,
+      "f1": 0.7090909090909091,
+      "mcc": 0.30204327640376977
+     }
+    },
+    "overlap_relic_v2_vs_normalized_text_B": {
+     "A": "relic_v2",
+     "B": "normalized_text_B",
+     "truth_positive": {
+      "both": 23,
+      "only_A": 0,
+      "only_B": 55,
+      "neither": 15
+     },
+     "truth_negative": {
+      "both": 2,
+      "only_A": 0,
+      "only_B": 26,
+      "neither": 59
+     }
+    },
+    "overlap_relic_v2_vs_normalized_text_A": {
+     "A": "relic_v2",
+     "B": "normalized_text_A",
+     "truth_positive": {
+      "both": 23,
+      "only_A": 0,
+      "only_B": 55,
+      "neither": 15
+     },
+     "truth_negative": {
+      "both": 2,
+      "only_A": 0,
+      "only_B": 33,
+      "neither": 52
+     }
+    }
+   },
+   "EXCL_25_IDENTICAL": {
+    "n": 155,
+    "n_changing": 78,
+    "detectors": {
+     "normalized_text_A": {
+      "tp": 78,
+      "fp": 35,
+      "fn": 0,
+      "tn": 42,
+      "n": 155,
+      "precision": 0.6902654867256637,
+      "recall": 1.0,
+      "specificity": 0.5454545454545454,
+      "f1": 0.8167539267015707,
+      "mcc": 0.613602841669518
+     },
+     "normalized_text_B": {
+      "tp": 78,
+      "fp": 28,
+      "fn": 0,
+      "tn": 49,
+      "n": 155,
+      "precision": 0.7358490566037735,
+      "recall": 1.0,
+      "specificity": 0.6363636363636364,
+      "f1": 0.8478260869565217,
+      "mcc": 0.6843007975116855
+     },
+     "raw_text": {
+      "tp": 78,
+      "fp": 77,
+      "fn": 0,
+      "tn": 0,
+      "n": 155,
+      "precision": 0.5032258064516129,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "f1": 0.6695278969957081,
+      "mcc": null
+     },
+     "relic_v1_0": {
+      "tp": 15,
+      "fp": 2,
+      "fn": 63,
+      "tn": 75,
+      "n": 155,
+      "precision": 0.8823529411764706,
+      "recall": 0.19230769230769232,
+      "specificity": 0.974025974025974,
+      "f1": 0.3157894736842105,
+      "mcc": 0.2661391836531956
+     },
+     "relic_v1_1": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 75,
+      "n": 155,
+      "precision": 0.92,
+      "recall": 0.2948717948717949,
+      "specificity": 0.974025974025974,
+      "f1": 0.44660194174757284,
+      "mcc": 0.3655427563205565
+     },
+     "relic_v2": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 75,
+      "n": 155,
+      "precision": 0.92,
+      "recall": 0.2948717948717949,
+      "specificity": 0.974025974025974,
+      "f1": 0.44660194174757284,
+      "mcc": 0.3655427563205565
+     },
+     "textdiff": {
+      "tp": 78,
+      "fp": 60,
+      "fn": 0,
+      "tn": 17,
+      "n": 155,
+      "precision": 0.5652173913043478,
+      "recall": 1.0,
+      "specificity": 0.22077922077922077,
+      "f1": 0.7222222222222222,
+      "mcc": 0.35325381133547284
+     },
+     "textdiff_ignore_job_parameters": {
+      "tp": 78,
+      "fp": 49,
+      "fn": 0,
+      "tn": 28,
+      "n": 155,
+      "precision": 0.6141732283464567,
+      "recall": 1.0,
+      "specificity": 0.36363636363636365,
+      "f1": 0.7609756097560976,
+      "mcc": 0.4725840871196485
+     }
+    },
+    "overlap_relic_v2_vs_normalized_text_B": {
+     "A": "relic_v2",
+     "B": "normalized_text_B",
+     "truth_positive": {
+      "both": 23,
+      "only_A": 0,
+      "only_B": 55,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 2,
+      "only_A": 0,
+      "only_B": 26,
+      "neither": 49
+     }
+    },
+    "overlap_relic_v2_vs_normalized_text_A": {
+     "A": "relic_v2",
+     "B": "normalized_text_A",
+     "truth_positive": {
+      "both": 23,
+      "only_A": 0,
+      "only_B": 55,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 2,
+      "only_A": 0,
+      "only_B": 33,
+      "neither": 42
+     }
+    }
+   },
+   "EXCL_15_NOOP_CHANGING_ONLY": {
+    "n": 165,
+    "n_changing": 78,
+    "detectors": {
+     "normalized_text_A": {
+      "tp": 78,
+      "fp": 35,
+      "fn": 0,
+      "tn": 52,
+      "n": 165,
+      "precision": 0.6902654867256637,
+      "recall": 1.0,
+      "specificity": 0.5977011494252874,
+      "f1": 0.8167539267015707,
+      "mcc": 0.6423180480295837
+     },
+     "normalized_text_B": {
+      "tp": 78,
+      "fp": 28,
+      "fn": 0,
+      "tn": 59,
+      "n": 165,
+      "precision": 0.7358490566037735,
+      "recall": 1.0,
+      "specificity": 0.6781609195402298,
+      "f1": 0.8478260869565217,
+      "mcc": 0.7064163594292149
+     },
+     "raw_text": {
+      "tp": 78,
+      "fp": 77,
+      "fn": 0,
+      "tn": 10,
+      "n": 165,
+      "precision": 0.5032258064516129,
+      "recall": 1.0,
+      "specificity": 0.11494252873563218,
+      "f1": 0.6695278969957081,
+      "mcc": 0.24050373535264727
+     },
+     "relic_v1_0": {
+      "tp": 15,
+      "fp": 2,
+      "fn": 63,
+      "tn": 85,
+      "n": 165,
+      "precision": 0.8823529411764706,
+      "recall": 0.19230769230769232,
+      "specificity": 0.9770114942528736,
+      "f1": 0.3157894736842105,
+      "mcc": 0.2780723343220216
+     },
+     "relic_v1_1": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 85,
+      "n": 165,
+      "precision": 0.92,
+      "recall": 0.2948717948717949,
+      "specificity": 0.9770114942528736,
+      "f1": 0.44660194174757284,
+      "mcc": 0.37857804193927463
+     },
+     "relic_v2": {
+      "tp": 23,
+      "fp": 2,
+      "fn": 55,
+      "tn": 85,
+      "n": 165,
+      "precision": 0.92,
+      "recall": 0.2948717948717949,
+      "specificity": 0.9770114942528736,
+      "f1": 0.44660194174757284,
+      "mcc": 0.37857804193927463
+     },
+     "textdiff": {
+      "tp": 78,
+      "fp": 60,
+      "fn": 0,
+      "tn": 27,
+      "n": 165,
+      "precision": 0.5652173913043478,
+      "recall": 1.0,
+      "specificity": 0.3103448275862069,
+      "f1": 0.7222222222222222,
+      "mcc": 0.41882250877080796
+     },
+     "textdiff_ignore_job_parameters": {
+      "tp": 78,
+      "fp": 49,
+      "fn": 0,
+      "tn": 38,
+      "n": 165,
+      "precision": 0.6141732283464567,
+      "recall": 1.0,
+      "specificity": 0.4367816091954023,
+      "f1": 0.7609756097560976,
+      "mcc": 0.517937806113727
+     }
+    },
+    "overlap_relic_v2_vs_normalized_text_B": {
+     "A": "relic_v2",
+     "B": "normalized_text_B",
+     "truth_positive": {
+      "both": 23,
+      "only_A": 0,
+      "only_B": 55,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 2,
+      "only_A": 0,
+      "only_B": 26,
+      "neither": 59
+     }
+    },
+    "overlap_relic_v2_vs_normalized_text_A": {
+     "A": "relic_v2",
+     "B": "normalized_text_A",
+     "truth_positive": {
+      "both": 23,
+      "only_A": 0,
+      "only_B": 55,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 2,
+      "only_A": 0,
+      "only_B": 33,
+      "neither": 52
+     }
+    }
+   },
+   "CLEAN_CORE_(no identical, no disagree, no abstain)": {
+    "n": 141,
+    "n_changing": 67,
+    "detectors": {
+     "normalized_text_A": {
+      "tp": 67,
+      "fp": 32,
+      "fn": 0,
+      "tn": 42,
+      "n": 141,
+      "precision": 0.6767676767676768,
+      "recall": 1.0,
+      "specificity": 0.5675675675675675,
+      "f1": 0.8072289156626506,
+      "mcc": 0.6197672015453739
+     },
+     "normalized_text_B": {
+      "tp": 67,
+      "fp": 25,
+      "fn": 0,
+      "tn": 49,
+      "n": 141,
+      "precision": 0.7282608695652174,
+      "recall": 1.0,
+      "specificity": 0.6621621621621622,
+      "f1": 0.8427672955974843,
+      "mcc": 0.6944255122109215
+     },
+     "raw_text": {
+      "tp": 67,
+      "fp": 74,
+      "fn": 0,
+      "tn": 0,
+      "n": 141,
+      "precision": 0.475177304964539,
+      "recall": 1.0,
+      "specificity": 0.0,
+      "f1": 0.6442307692307693,
+      "mcc": null
+     },
+     "relic_v1_0": {
+      "tp": 15,
+      "fp": 0,
+      "fn": 52,
+      "tn": 74,
+      "n": 141,
+      "precision": 1.0,
+      "recall": 0.22388059701492538,
+      "specificity": 1.0,
+      "f1": 0.36585365853658536,
+      "mcc": 0.3626091973363233
+     },
+     "relic_v1_1": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 44,
+      "tn": 74,
+      "n": 141,
+      "precision": 1.0,
+      "recall": 0.34328358208955223,
+      "specificity": 1.0,
+      "f1": 0.5111111111111111,
+      "mcc": 0.4639822566981804
+     },
+     "relic_v2": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 44,
+      "tn": 74,
+      "n": 141,
+      "precision": 1.0,
+      "recall": 0.34328358208955223,
+      "specificity": 1.0,
+      "f1": 0.5111111111111111,
+      "mcc": 0.4639822566981804
+     },
+     "textdiff": {
+      "tp": 67,
+      "fp": 57,
+      "fn": 0,
+      "tn": 17,
+      "n": 141,
+      "precision": 0.5403225806451613,
+      "recall": 1.0,
+      "specificity": 0.22972972972972974,
+      "f1": 0.7015706806282722,
+      "mcc": 0.35231826580307046
+     },
+     "textdiff_ignore_job_parameters": {
+      "tp": 67,
+      "fp": 46,
+      "fn": 0,
+      "tn": 28,
+      "n": 141,
+      "precision": 0.5929203539823009,
+      "recall": 1.0,
+      "specificity": 0.3783783783783784,
+      "f1": 0.7444444444444445,
+      "mcc": 0.47365413758074265
+     }
+    },
+    "overlap_relic_v2_vs_normalized_text_B": {
+     "A": "relic_v2",
+     "B": "normalized_text_B",
+     "truth_positive": {
+      "both": 23,
+      "only_A": 0,
+      "only_B": 44,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 25,
+      "neither": 49
+     }
+    },
+    "overlap_relic_v2_vs_normalized_text_A": {
+     "A": "relic_v2",
+     "B": "normalized_text_A",
+     "truth_positive": {
+      "both": 23,
+      "only_A": 0,
+      "only_B": 44,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 32,
+      "neither": 42
+     }
+    }
+   }
+  },
+  "per_category_ALL_180": {
+   "comment_edit": {
+    "n": 17,
+    "n_changing": 0,
+    "relic_v2": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 17,
+     "n": 17,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 17,
+     "n": 17,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    }
+   },
+   "cond_logic_change": {
+    "n": 18,
+    "n_changing": 18,
+    "relic_v2": {
+     "tp": 6,
+     "fp": 0,
+     "fn": 12,
+     "tn": 0,
+     "n": 18,
+     "precision": 1.0,
+     "recall": 0.3333333333333333,
+     "specificity": null,
+     "f1": 0.5,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 18,
+     "fp": 0,
+     "fn": 0,
+     "tn": 0,
+     "n": 18,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": null,
+     "f1": 1.0,
+     "mcc": null
+    }
+   },
+   "dataset_dependency_change": {
+    "n": 17,
+    "n_changing": 17,
+    "relic_v2": {
+     "tp": 1,
+     "fp": 0,
+     "fn": 16,
+     "tn": 0,
+     "n": 17,
+     "precision": 1.0,
+     "recall": 0.058823529411764705,
+     "specificity": null,
+     "f1": 0.1111111111111111,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 11,
+     "fp": 0,
+     "fn": 6,
+     "tn": 0,
+     "n": 17,
+     "precision": 1.0,
+     "recall": 0.6470588235294118,
+     "specificity": null,
+     "f1": 0.7857142857142857,
+     "mcc": null
+    }
+   },
+   "disp_change": {
+    "n": 19,
+    "n_changing": 19,
+    "relic_v2": {
+     "tp": 1,
+     "fp": 0,
+     "fn": 18,
+     "tn": 0,
+     "n": 19,
+     "precision": 1.0,
+     "recall": 0.05263157894736842,
+     "specificity": null,
+     "f1": 0.1,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 17,
+     "fp": 0,
+     "fn": 2,
+     "tn": 0,
+     "n": 19,
+     "precision": 1.0,
+     "recall": 0.8947368421052632,
+     "specificity": null,
+     "f1": 0.9444444444444444,
+     "mcc": null
+    }
+   },
+   "independent_statement_reorder": {
+    "n": 14,
+    "n_changing": 0,
+    "relic_v2": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 14,
+     "n": 14,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 0,
+     "fp": 11,
+     "fn": 0,
+     "tn": 3,
+     "n": 14,
+     "precision": 0.0,
+     "recall": null,
+     "specificity": 0.21428571428571427,
+     "f1": 0.0,
+     "mcc": null
+    }
+   },
+   "job_card_refactor": {
+    "n": 12,
+    "n_changing": 0,
+    "relic_v2": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 12,
+     "n": 12,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 12,
+     "n": 12,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    }
+   },
+   "producer_consumer_change": {
+    "n": 12,
+    "n_changing": 12,
+    "relic_v2": {
+     "tp": 6,
+     "fp": 0,
+     "fn": 6,
+     "tn": 0,
+     "n": 12,
+     "precision": 1.0,
+     "recall": 0.5,
+     "specificity": null,
+     "f1": 0.6666666666666666,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 6,
+     "fp": 0,
+     "fn": 6,
+     "tn": 0,
+     "n": 12,
+     "precision": 1.0,
+     "recall": 0.5,
+     "specificity": null,
+     "f1": 0.6666666666666666,
+     "mcc": null
+    }
+   },
+   "return_code_effect": {
+    "n": 13,
+    "n_changing": 13,
+    "relic_v2": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 13,
+     "tn": 0,
+     "n": 13,
+     "precision": null,
+     "recall": 0.0,
+     "specificity": null,
+     "f1": 0.0,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 12,
+     "fp": 0,
+     "fn": 1,
+     "tn": 0,
+     "n": 13,
+     "precision": 1.0,
+     "recall": 0.9230769230769231,
+     "specificity": null,
+     "f1": 0.96,
+     "mcc": null
+    }
+   },
+   "step_reorder_dependent": {
+    "n": 14,
+    "n_changing": 14,
+    "relic_v2": {
+     "tp": 9,
+     "fp": 0,
+     "fn": 5,
+     "tn": 0,
+     "n": 14,
+     "precision": 1.0,
+     "recall": 0.6428571428571429,
+     "specificity": null,
+     "f1": 0.782608695652174,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 14,
+     "fp": 0,
+     "fn": 0,
+     "tn": 0,
+     "n": 14,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": null,
+     "f1": 1.0,
+     "mcc": null
+    }
+   },
+   "syntax_representation": {
+    "n": 21,
+    "n_changing": 0,
+    "relic_v2": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 21,
+     "n": 21,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 0,
+     "fp": 13,
+     "fn": 0,
+     "tn": 8,
+     "n": 21,
+     "precision": 0.0,
+     "recall": null,
+     "specificity": 0.38095238095238093,
+     "f1": 0.0,
+     "mcc": null
+    }
+   },
+   "unreferenced_step_rename": {
+    "n": 6,
+    "n_changing": 0,
+    "relic_v2": {
+     "tp": 0,
+     "fp": 2,
+     "fn": 0,
+     "tn": 4,
+     "n": 6,
+     "precision": 0.0,
+     "recall": null,
+     "specificity": 0.6666666666666666,
+     "f1": 0.0,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 0,
+     "fp": 2,
+     "fn": 0,
+     "tn": 4,
+     "n": 6,
+     "precision": 0.0,
+     "recall": null,
+     "specificity": 0.6666666666666666,
+     "f1": 0.0,
+     "mcc": null
+    }
+   },
+   "whitespace_and_continuation": {
+    "n": 17,
+    "n_changing": 0,
+    "relic_v2": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 17,
+     "n": 17,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    },
+    "normalized_text_B": {
+     "tp": 0,
+     "fp": 2,
+     "fn": 0,
+     "tn": 15,
+     "n": 17,
+     "precision": 0.0,
+     "recall": null,
+     "specificity": 0.8823529411764706,
+     "f1": 0.0,
+     "mcc": null
+    }
+   }
+  }
+ },
+ "external": {
+  "n_evaluable": 824,
+  "detectors": {
+   "relic_v1_0": {
+    "tp": 612,
+    "fp": 0,
+    "fn": 79,
+    "tn": 133,
+    "n": 824,
+    "precision": 1.0,
+    "recall": 0.8856729377713459,
+    "specificity": 1.0,
+    "f1": 0.9393706830391404,
+    "mcc": 0.7454089061551518
+   },
+   "relic_v1_1": {
+    "tp": 643,
+    "fp": 0,
+    "fn": 48,
+    "tn": 133,
+    "n": 824,
+    "precision": 1.0,
+    "recall": 0.9305354558610709,
+    "specificity": 1.0,
+    "f1": 0.9640179910044977,
+    "mcc": 0.826900007414775
+   },
+   "relic_v2": {
+    "tp": 658,
+    "fp": 0,
+    "fn": 33,
+    "tn": 133,
+    "n": 824,
+    "precision": 1.0,
+    "recall": 0.9522431259044862,
+    "specificity": 1.0,
+    "f1": 0.9755374351371386,
+    "mcc": 0.8734653866056586
+   },
+   "textdiff": {
+    "tp": 691,
+    "fp": 62,
+    "fn": 0,
+    "tn": 71,
+    "n": 824,
+    "precision": 0.9176626826029216,
+    "recall": 1.0,
+    "specificity": 0.5338345864661654,
+    "f1": 0.9570637119113573,
+    "mcc": 0.6999143366746838
+   },
+   "textdiff_ignore_job_parameters": {
+    "tp": 691,
+    "fp": 3,
+    "fn": 0,
+    "tn": 130,
+    "n": 824,
+    "precision": 0.9956772334293948,
+    "recall": 1.0,
+    "specificity": 0.9774436090225563,
+    "f1": 0.9978339350180505,
+    "mcc": 0.9865182960618734
+   }
+  },
+  "overlap_relic_v2_vs_textdiff": {
+   "A": "relic_v2",
+   "B": "textdiff",
+   "truth_positive": {
+    "both": 658,
+    "only_A": 0,
+    "only_B": 33,
+    "neither": 0
+   },
+   "truth_negative": {
+    "both": 0,
+    "only_A": 0,
+    "only_B": 62,
+    "neither": 71
+   }
+  },
+  "overlap_relic_v2_vs_textdiff_ignore_job_parameters": {
+   "A": "relic_v2",
+   "B": "textdiff_ignore_job_parameters",
+   "truth_positive": {
+    "both": 658,
+    "only_A": 0,
+    "only_B": 33,
+    "neither": 0
+   },
+   "truth_negative": {
+    "both": 0,
+    "only_A": 0,
+    "only_B": 3,
+    "neither": 130
+   }
+  },
+  "truth_counts": {
+   "true": 691,
+   "false": 133
+  },
+  "per_repo": {
+   "IBM_dbb": {
+    "n": 8,
+    "n_positive": 6,
+    "relic_v2": {
+     "tp": 6,
+     "fp": 0,
+     "fn": 0,
+     "tn": 2,
+     "n": 8,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": 1.0,
+     "f1": 1.0,
+     "mcc": 1.0
+    },
+    "textdiff": {
+     "tp": 6,
+     "fp": 0,
+     "fn": 0,
+     "tn": 2,
+     "n": 8,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": 1.0,
+     "f1": 1.0,
+     "mcc": 1.0
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 6,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 2
+     }
+    }
+   },
+   "IBM_zopeneditor-sample": {
+    "n": 54,
+    "n_positive": 40,
+    "relic_v2": {
+     "tp": 40,
+     "fp": 0,
+     "fn": 0,
+     "tn": 14,
+     "n": 54,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": 1.0,
+     "f1": 1.0,
+     "mcc": 1.0
+    },
+    "textdiff": {
+     "tp": 40,
+     "fp": 7,
+     "fn": 0,
+     "tn": 7,
+     "n": 54,
+     "precision": 0.851063829787234,
+     "recall": 1.0,
+     "specificity": 0.5,
+     "f1": 0.9195402298850575,
+     "mcc": 0.6523280730534422
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 40,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 7,
+      "neither": 7
+     }
+    }
+   },
+   "mainframed_Enumeration": {
+    "n": 62,
+    "n_positive": 50,
+    "relic_v2": {
+     "tp": 49,
+     "fp": 0,
+     "fn": 1,
+     "tn": 12,
+     "n": 62,
+     "precision": 1.0,
+     "recall": 0.98,
+     "specificity": 1.0,
+     "f1": 0.98989898989899,
+     "mcc": 0.9511127086814604
+    },
+    "textdiff": {
+     "tp": 50,
+     "fp": 7,
+     "fn": 0,
+     "tn": 5,
+     "n": 62,
+     "precision": 0.8771929824561403,
+     "recall": 1.0,
+     "specificity": 0.4166666666666667,
+     "f1": 0.9345794392523364,
+     "mcc": 0.604563541758343
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 49,
+      "only_A": 0,
+      "only_B": 1,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 7,
+      "neither": 5
+     }
+    }
+   },
+   "vlachoudis_brexx": {
+    "n": 56,
+    "n_positive": 53,
+    "relic_v2": {
+     "tp": 53,
+     "fp": 0,
+     "fn": 0,
+     "tn": 3,
+     "n": 56,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": 1.0,
+     "f1": 1.0,
+     "mcc": 1.0
+    },
+    "textdiff": {
+     "tp": 53,
+     "fp": 0,
+     "fn": 0,
+     "tn": 3,
+     "n": 56,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": 1.0,
+     "f1": 1.0,
+     "mcc": 1.0
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 53,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 3
+     }
+    }
+   },
+   "walmartlabs_zECS": {
+    "n": 49,
+    "n_positive": 44,
+    "relic_v2": {
+     "tp": 44,
+     "fp": 0,
+     "fn": 0,
+     "tn": 5,
+     "n": 49,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": 1.0,
+     "f1": 1.0,
+     "mcc": 1.0
+    },
+    "textdiff": {
+     "tp": 44,
+     "fp": 0,
+     "fn": 0,
+     "tn": 5,
+     "n": 49,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": 1.0,
+     "f1": 1.0,
+     "mcc": 1.0
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 44,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 5
+     }
+    }
+   },
+   "yetacp_mvs_sysgen": {
+    "n": 589,
+    "n_positive": 494,
+    "relic_v2": {
+     "tp": 465,
+     "fp": 0,
+     "fn": 29,
+     "tn": 95,
+     "n": 589,
+     "precision": 1.0,
+     "recall": 0.9412955465587044,
+     "specificity": 1.0,
+     "f1": 0.9697601668404588,
+     "mcc": 0.8492077756084468
+    },
+    "textdiff": {
+     "tp": 494,
+     "fp": 48,
+     "fn": 0,
+     "tn": 47,
+     "n": 589,
+     "precision": 0.9114391143911439,
+     "recall": 1.0,
+     "specificity": 0.49473684210526314,
+     "f1": 0.9536679536679536,
+     "mcc": 0.671507638992359
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 465,
+      "only_A": 0,
+      "only_B": 29,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 48,
+      "neither": 47
+     }
+    }
+   },
+   "zowe_zowe-cli": {
+    "n": 6,
+    "n_positive": 4,
+    "relic_v2": {
+     "tp": 1,
+     "fp": 0,
+     "fn": 3,
+     "tn": 2,
+     "n": 6,
+     "precision": 1.0,
+     "recall": 0.25,
+     "specificity": 1.0,
+     "f1": 0.4,
+     "mcc": 0.31622776601683794
+    },
+    "textdiff": {
+     "tp": 4,
+     "fp": 0,
+     "fn": 0,
+     "tn": 2,
+     "n": 6,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": 1.0,
+     "f1": 1.0,
+     "mcc": 1.0
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 1,
+      "only_A": 0,
+      "only_B": 3,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 2
+     }
+    }
+   }
+  },
+  "per_operator": {
+   "ALTER_COND_THRESHOLD": {
+    "n": 28,
+    "n_positive": 27,
+    "relic_v2": {
+     "tp": 25,
+     "fp": 0,
+     "fn": 2,
+     "tn": 1,
+     "n": 28,
+     "precision": 1.0,
+     "recall": 0.9259259259259259,
+     "specificity": 1.0,
+     "f1": 0.9615384615384616,
+     "mcc": 0.5555555555555556
+    },
+    "textdiff": {
+     "tp": 27,
+     "fp": 1,
+     "fn": 0,
+     "tn": 0,
+     "n": 28,
+     "precision": 0.9642857142857143,
+     "recall": 1.0,
+     "specificity": 0.0,
+     "f1": 0.9818181818181818,
+     "mcc": null
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 25,
+      "only_A": 0,
+      "only_B": 2,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 1,
+      "neither": 0
+     }
+    }
+   },
+   "CHANGE_MSGCLASS": {
+    "n": 59,
+    "n_positive": 0,
+    "relic_v2": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 59,
+     "n": 59,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    },
+    "textdiff": {
+     "tp": 0,
+     "fp": 59,
+     "fn": 0,
+     "tn": 0,
+     "n": 59,
+     "precision": 0.0,
+     "recall": null,
+     "specificity": 0.0,
+     "f1": 0.0,
+     "mcc": null
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 59,
+      "neither": 0
+     }
+    }
+   },
+   "DELETE_PRODUCER_STEP": {
+    "n": 40,
+    "n_positive": 40,
+    "relic_v2": {
+     "tp": 40,
+     "fp": 0,
+     "fn": 0,
+     "tn": 0,
+     "n": 40,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": null,
+     "f1": 1.0,
+     "mcc": null
+    },
+    "textdiff": {
+     "tp": 40,
+     "fp": 0,
+     "fn": 0,
+     "tn": 0,
+     "n": 40,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": null,
+     "f1": 1.0,
+     "mcc": null
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 40,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     }
+    }
+   },
+   "INSERT_COMMENT": {
+    "n": 71,
+    "n_positive": 0,
+    "relic_v2": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 71,
+     "n": 71,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    },
+    "textdiff": {
+     "tp": 0,
+     "fp": 0,
+     "fn": 0,
+     "tn": 71,
+     "n": 71,
+     "precision": null,
+     "recall": null,
+     "specificity": 1.0,
+     "f1": null,
+     "mcc": null
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 71
+     }
+    }
+   },
+   "MOVE_CONSUMER_BEFORE_PRODUCER": {
+    "n": 25,
+    "n_positive": 25,
+    "relic_v2": {
+     "tp": 25,
+     "fp": 0,
+     "fn": 0,
+     "tn": 0,
+     "n": 25,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": null,
+     "f1": 1.0,
+     "mcc": null
+    },
+    "textdiff": {
+     "tp": 25,
+     "fp": 0,
+     "fn": 0,
+     "tn": 0,
+     "n": 25,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": null,
+     "f1": 1.0,
+     "mcc": null
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 25,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     }
+    }
+   },
+   "REMOVE_COND": {
+    "n": 29,
+    "n_positive": 28,
+    "relic_v2": {
+     "tp": 25,
+     "fp": 0,
+     "fn": 3,
+     "tn": 1,
+     "n": 29,
+     "precision": 1.0,
+     "recall": 0.8928571428571429,
+     "specificity": 1.0,
+     "f1": 0.9433962264150944,
+     "mcc": 0.472455591261534
+    },
+    "textdiff": {
+     "tp": 28,
+     "fp": 1,
+     "fn": 0,
+     "tn": 0,
+     "n": 29,
+     "precision": 0.9655172413793104,
+     "recall": 1.0,
+     "specificity": 0.0,
+     "f1": 0.9824561403508771,
+     "mcc": null
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 25,
+      "only_A": 0,
+      "only_B": 3,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 1,
+      "neither": 0
+     }
+    }
+   },
+   "RENAME_OUTPUT_DATASET": {
+    "n": 29,
+    "n_positive": 29,
+    "relic_v2": {
+     "tp": 23,
+     "fp": 0,
+     "fn": 6,
+     "tn": 0,
+     "n": 29,
+     "precision": 1.0,
+     "recall": 0.7931034482758621,
+     "specificity": null,
+     "f1": 0.8846153846153846,
+     "mcc": null
+    },
+    "textdiff": {
+     "tp": 29,
+     "fp": 0,
+     "fn": 0,
+     "tn": 0,
+     "n": 29,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": null,
+     "f1": 1.0,
+     "mcc": null
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 23,
+      "only_A": 0,
+      "only_B": 6,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     }
+    }
+   },
+   "SPLIT_JOB": {
+    "n": 274,
+    "n_positive": 274,
+    "relic_v2": {
+     "tp": 260,
+     "fp": 0,
+     "fn": 14,
+     "tn": 0,
+     "n": 274,
+     "precision": 1.0,
+     "recall": 0.948905109489051,
+     "specificity": null,
+     "f1": 0.9737827715355806,
+     "mcc": null
+    },
+    "textdiff": {
+     "tp": 274,
+     "fp": 0,
+     "fn": 0,
+     "tn": 0,
+     "n": 274,
+     "precision": 1.0,
+     "recall": 1.0,
+     "specificity": null,
+     "f1": 1.0,
+     "mcc": null
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 260,
+      "only_A": 0,
+      "only_B": 14,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 0,
+      "neither": 0
+     }
+    }
+   },
+   "SWAP_ADJACENT_STEPS": {
+    "n": 269,
+    "n_positive": 268,
+    "relic_v2": {
+     "tp": 260,
+     "fp": 0,
+     "fn": 8,
+     "tn": 1,
+     "n": 269,
+     "precision": 1.0,
+     "recall": 0.9701492537313433,
+     "specificity": 1.0,
+     "f1": 0.9848484848484849,
+     "mcc": 0.3283205164556501
+    },
+    "textdiff": {
+     "tp": 268,
+     "fp": 1,
+     "fn": 0,
+     "tn": 0,
+     "n": 269,
+     "precision": 0.9962825278810409,
+     "recall": 1.0,
+     "specificity": 0.0,
+     "f1": 0.9981378026070763,
+     "mcc": null
+    },
+    "overlap": {
+     "A": "relic_v2",
+     "B": "textdiff",
+     "truth_positive": {
+      "both": 260,
+      "only_A": 0,
+      "only_B": 8,
+      "neither": 0
+     },
+     "truth_negative": {
+      "both": 0,
+      "only_A": 0,
+      "only_B": 1,
+      "neither": 0
+     }
+    }
+   }
+  }
+ }
+}
