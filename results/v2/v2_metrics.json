@@ -693,6 +693,69 @@
   },
   "llm_selection_analysis": {
     "available": true,
+    "common_scored_subset_metrics": {
+      "llm_C": {
+        "f1": 0.9846,
+        "fn": 9,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.9696,
+        "specificity": 1.0,
+        "tn": 87,
+        "tp": 287
+      },
+      "llm_D": {
+        "f1": 0.9671,
+        "fn": 17,
+        "fp": 2,
+        "precision": 0.9929,
+        "recall": 0.9426,
+        "specificity": 0.977,
+        "tn": 85,
+        "tp": 279
+      },
+      "relic_v1_0": {
+        "f1": 0.9077,
+        "fn": 50,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8311,
+        "specificity": 1.0,
+        "tn": 87,
+        "tp": 246
+      },
+      "relic_v1_1": {
+        "f1": 0.9577,
+        "fn": 24,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.9189,
+        "specificity": 1.0,
+        "tn": 87,
+        "tp": 272
+      },
+      "relic_v2": {
+        "f1": 0.9793,
+        "fn": 12,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.9595,
+        "specificity": 1.0,
+        "tn": 87,
+        "tp": 284
+      },
+      "textdiff": {
+        "f1": 0.9442,
+        "fn": 0,
+        "fp": 35,
+        "precision": 0.8943,
+        "recall": 1.0,
+        "specificity": 0.5977,
+        "tn": 52,
+        "tp": 296
+      }
+    },
+    "common_scored_subset_note": "Selection-biased: restricted to mutants where BOTH LLM baselines returned parseable output (not a random subsample). Positive share differs from the full benchmark.",
     "llm_bounds_on_all_evaluable": {
       "llm_C_invalid_as_flagged": {
         "f1": 0.9717,

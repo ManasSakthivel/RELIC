@@ -366,8 +366,22 @@ def llm_selection(rows: list[dict]) -> dict:
             recs.append({"truth": row["truth"], "pred": {"x": bool(p)}})
         return _compact(confusion(recs, "x").as_dict())
 
+    common = []
+    for m in sorted(scored):
+        pred = dict(truth[m]["pred"])
+        pred["llm_C"] = by_mut[m]["llm_C"]["flagged"]
+        pred["llm_D"] = by_mut[m]["llm_D"]["flagged"]
+        common.append({"truth": truth[m]["truth"], "pred": pred})
+    common_scored = {
+        d: _compact(confusion(common, d).as_dict())
+        for d in ("relic_v1_0", "relic_v1_1", "relic_v2", "textdiff", "llm_C", "llm_D")
+    }
     return {
         "available": True,
+        "common_scored_subset_metrics": common_scored,
+        "common_scored_subset_note": (
+            "Selection-biased: restricted to mutants where BOTH LLM baselines returned parseable "
+            "output (not a random subsample). Positive share differs from the full benchmark."),
         "status_counts": {f"{b}:{s}": n for (b, s), n in sorted(status.items())},
         "non_ok_reasons": {f"{b}:{s}:{rsn}": n for (b, s, rsn), n in sorted(reasons.items())},
         "scored_on_both_baselines": prof(scored),
