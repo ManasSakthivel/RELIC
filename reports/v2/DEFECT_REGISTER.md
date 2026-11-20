@@ -209,3 +209,44 @@ with credentials and output-format retries — **not performed**.
 `docs/reproducibility.md` says outputs contain no timestamps; `run_info.json` does.
 Detector exceptions are recorded as `ERROR` and scored as "not flagged" (none
 occurred in V2 runs: 0 missing predictions).
+
+---
+
+## Added in the integration sprint (found by Agent 4, re-verified by the Execution Lead)
+
+I re-ran the two snippets below myself (v1.1 and V2 parse identically); the other items are as
+reported in `AGENT_4_TECHNICAL_AUDIT.md` (executed there, not re-run by me).
+
+## D-020 Multi-job files: step ordering kept only for the last job — **P0 (generality)** — Open
+* **Evidence (re-run).** A file with `J1 (A1,A2)` and `J2 (B1,B2)` yields only `MUST_PRECEDE B1→B2`;
+  `A1→A2` is missing, in v1.1 and V2.
+* **Root cause.** `_step_order` is reset at each JOB statement but `_add_step_ordering` runs once at end of file.
+* **Benchmark exposure.** 0 of the 121 corpus JCL files contain more than one JOB, so the
+  original-file numbers are unaffected. **Mutated** `SPLIT_JOB` files do contain two jobs, so the
+  detection of the 166 SPLIT_JOB positives (29 % of all positives) plausibly relies on this behaviour
+  (ordering across the split is lost → contract appears broken). That is not isolated by an
+  experiment. Not fixed: changing it alters SPLIT_JOB results and needs its own ablation.
+
+## D-021 In-stream data (`DD *` / `DD DATA`) parsed as JCL — **P0 (generality)** — Open
+* **Evidence (re-run).** `//FAKE EXEC` inside a `SYSIN DD *` block becomes a STEP entity.
+* **Exposure.** 1 of 121 corpus files (GenApp) has `//` lines inside in-stream data. No fix: needs
+  delimiter (`/*`, `DLM=`) tracking and a re-measurement.
+
+## D-022 Detector/parser exceptions scored as "not flagged" — **P0 (metric validity)** — Open
+`Prediction(None,"ERROR")` is scored as negative (`missing="negative"`). V2 predictions contain 0 `None`
+values, so no committed number is affected, but a future crash on a positive mutant would silently
+lower recall. Recommended: make the harness fail (or report an explicit error count in the metrics).
+
+## D-023 Unsupported constructs produce no diagnostic — P1 — Open
+`IF/THEN/ELSE` is a no-op (mutually exclusive branches chain sequentially); JOB-level `COND`
+and `COND=EVEN/ONLY` yield no contract; `PROCSTEP.DDNAME` overrides fail the statement regex
+and are dropped without a `parse_warnings` entry. Recommended (low risk, no detection change):
+a coverage/“unsupported construct” field in the parse result.
+
+## D-024 `static_bcg_E` is not an independent baseline — P1 — Doc
+Its confusion matrix equals `relic_v1_0` in every cell (Agent 1). Treat it as a duplicate, not a second baseline.
+
+## D-025 Label ≈ "non-cosmetic text edit happened" — **P0 (construct validity)** — Doc
+DIFFERENT agrees with "any non-comment, non-JOB-parameter text change" on 564 of 566 evaluable
+mutants (Agent 1). The benchmark therefore mostly measures whether a detector ignores cosmetic edits;
+it does not test behavioural reasoning. See D-014.
