@@ -1,0 +1,529 @@
+% final_verified_references.bib  (Agent 5, final sprint)
+%
+% POLICY. An entry is here only if title, authors, year, venue and DOI/arXiv id were returned by a
+% primary bibliographic source during the session named in its comment:
+%   NEW      = verified in this sprint (Crossref REST API, arXiv API, or OpenAlex DOI lookup where stated)
+%   CARRIED  = verified by Agent 2 in the earlier session (see LITERATURE_AND_NOVELTY_ASSESSMENT.md section 2);
+%              reused here without re-querying, as instructed.
+% Verification covers BIBLIOGRAPHIC METADATA ONLY. No full texts were read. Where an abstract was read
+% (arXiv entries) the entry says so. Characterisations of paper content in the companion documents
+% that are not from an abstract come from background knowledge and must be re-checked before citing.
+% Items that could not be verified are NOT in this file; see section 8 of FINAL_NOVELTY_ASSESSMENT.md.
+
+% ---------------------------------------------------------------- mutation validity / equivalent mutants
+
+% CARRIED (Crossref 10.1145/2635868.2635929)
+@inproceedings{just2014mutants,
+  author    = {Just, Ren{\'e} and Jalali, Darioush and Inozemtseva, Laura and Ernst, Michael D. and Holmes, Reid and Fraser, Gordon},
+  title     = {Are mutants a valid substitute for real faults in software testing?},
+  booktitle = {Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering (FSE)},
+  year      = {2014},
+  doi       = {10.1145/2635868.2635929}
+}
+
+% CARRIED (Crossref 10.1109/tse.2010.62)
+@article{jia2011mutation,
+  author  = {Jia, Yue and Harman, Mark},
+  title   = {An Analysis and Survey of the Development of Mutation Testing},
+  journal = {IEEE Transactions on Software Engineering},
+  year    = {2011},
+  doi     = {10.1109/tse.2010.62}
+}
+
+% NEW. Crossref returned title/year/venue/DOI but NO author list (book-chapter record, issued 2019).
+% Authors below come from an OpenAlex DOI lookup (api.openalex.org/works/doi:...), a secondary aggregator;
+% OpenAlex gives publication_year 2018 (online) whereas Crossref issued = 2019. Check the publisher page before final submission.
+@incollection{papadakis2019advances,
+  author    = {Papadakis, Mike and Kintis, Marinos and Zhang, Jie and Jia, Yue and Le Traon, Yves and Harman, Mark},
+  title     = {Mutation Testing Advances: An Analysis and Survey},
+  booktitle = {Advances in Computers},
+  publisher = {Elsevier},
+  year      = {2019},
+  doi       = {10.1016/bs.adcom.2018.03.015},
+  note      = {Authors via OpenAlex only; Crossref record has none}
+}
+
+% NEW (Crossref 10.1145/3180155.3180183)
+@inproceedings{papadakis2018correlated,
+  author    = {Papadakis, Mike and Shin, Donghwan and Yoo, Shin and Bae, Doo-Hwan},
+  title     = {Are mutation scores correlated with real fault detection?},
+  booktitle = {Proceedings of the 40th International Conference on Software Engineering (ICSE)},
+  year      = {2018},
+  doi       = {10.1145/3180155.3180183}
+}
+
+% NEW (Crossref 10.1109/icse.2015.103)
+@inproceedings{papadakis2015tce,
+  author    = {Papadakis, Mike and Jia, Yue and Harman, Mark and Le Traon, Yves},
+  title     = {Trivial Compiler Equivalence: A Large Scale Empirical Study of a Simple, Fast and Effective Equivalent Mutant Detection Technique},
+  booktitle = {2015 IEEE/ACM 37th IEEE International Conference on Software Engineering (ICSE)},
+  year      = {2015},
+  doi       = {10.1109/icse.2015.103}
+}
+
+% NEW (Crossref 10.1109/tse.2017.2684805; issued 2018-04-01)
+@article{kintis2018trivial,
+  author  = {Kintis, Marinos and Papadakis, Mike and Jia, Yue and Malevris, Nicos and Le Traon, Yves and Harman, Mark},
+  title   = {Detecting Trivial Mutant Equivalences via Compiler Optimisations},
+  journal = {IEEE Transactions on Software Engineering},
+  year    = {2018},
+  doi     = {10.1109/tse.2017.2684805}
+}
+
+% NEW (Crossref 10.1109/tse.2013.44; issued 2014-01)
+@article{madeyski2014equivalent,
+  author  = {Madeyski, Lech and Orzeszyna, Wojciech and Torkar, Richard and Jozala, Mariusz},
+  title   = {Overcoming the Equivalent Mutant Problem: A Systematic Literature Review and a Comparative Experiment of Second Order Mutation},
+  journal = {IEEE Transactions on Software Engineering},
+  year    = {2014},
+  doi     = {10.1109/tse.2013.44}
+}
+
+% NEW (Crossref 10.1109/issre.2014.40)
+@inproceedings{gopinath2014close,
+  author    = {Gopinath, Rahul and Jensen, Carlos and Groce, Alex},
+  title     = {Mutations: How Close are they to Real Faults?},
+  booktitle = {2014 IEEE 25th International Symposium on Software Reliability Engineering (ISSRE)},
+  year      = {2014},
+  doi       = {10.1109/issre.2014.40}
+}
+
+% NEW (Crossref 10.1109/icst.2017.12)
+@inproceedings{gopinath2017composite,
+  author    = {Gopinath, Rahul and Jensen, Carlos and Groce, Alex},
+  title     = {The Theory of Composite Faults},
+  booktitle = {2017 IEEE International Conference on Software Testing, Verification and Validation (ICST)},
+  year      = {2017},
+  doi       = {10.1109/icst.2017.12}
+}
+
+% CARRIED (Crossref 10.1145/125489.125473)
+@article{offutt1992coupling,
+  author  = {Offutt, A. Jefferson},
+  title   = {Investigations of the software testing coupling effect},
+  journal = {ACM Transactions on Software Engineering and Methodology},
+  year    = {1992},
+  doi     = {10.1145/125489.125473}
+}
+
+% NEW (Crossref 10.1109/c-m.1978.218136; journal "Computer")
+@article{demillo1978hints,
+  author  = {DeMillo, R. A. and Lipton, R. J. and Sayward, F. G.},
+  title   = {Hints on Test Data Selection: Help for the Practicing Programmer},
+  journal = {Computer},
+  year    = {1978},
+  doi     = {10.1109/c-m.1978.218136}
+}
+
+% ---------------------------------------------------------------- metamorphic testing / EMI / semantics-preserving transformations / code-model robustness
+
+% NEW (Crossref 10.1145/2594291.2594334 = PLDI proceedings record; SIGPLAN Notices copy 10.1145/2666356.2594334)
+@inproceedings{le2014emi,
+  author    = {Le, Vu and Afshari, Mehrdad and Su, Zhendong},
+  title     = {Compiler validation via equivalence modulo inputs},
+  booktitle = {Proceedings of the 35th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI)},
+  year      = {2014},
+  doi       = {10.1145/2594291.2594334}
+}
+
+% NEW (Crossref 10.1145/3143561). Crossref title is "Metamorphic Testing" with no subtitle; subtitle not asserted here.
+@article{chen2018metamorphic,
+  author  = {Chen, Tsong Yueh and Kuo, Fei-Ching and Liu, Huai and Poon, Pak-Lok and Towey, Dave and Tse, T. H. and Zhou, Zhi Quan},
+  title   = {Metamorphic Testing},
+  journal = {ACM Computing Surveys},
+  year    = {2018},
+  doi     = {10.1145/3143561}
+}
+
+% NEW (Crossref 10.1145/3611643.3616272)
+@inproceedings{zhang2023statfier,
+  author    = {Zhang, Huaien and Pei, Yu and Chen, Junjie and Tan, Shin Hwei},
+  title     = {Statfier: Automated Testing of Static Analyzers via Semantic-Preserving Program Transformations},
+  booktitle = {Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE)},
+  year      = {2023},
+  doi       = {10.1145/3611643.3616272}
+}
+
+% NEW (Crossref 10.1145/3428230; arXiv 1910.07517 comment: "Accepted to OOPSLA'2020"; abstract read)
+@article{yefet2020adversarial,
+  author  = {Yefet, Noam and Alon, Uri and Yahav, Eran},
+  title   = {Adversarial examples for models of code},
+  journal = {Proceedings of the ACM on Programming Languages (OOPSLA)},
+  year    = {2020},
+  doi     = {10.1145/3428230}
+}
+
+% NEW (Crossref 10.1016/j.infsof.2021.106552)
+@article{rabin2021generalizability,
+  author  = {Rabin, Md Rafiqul Islam and Bui, Nghi D. Q. and Wang, Ke and Yu, Yijun and Jiang, Lingxiao and Alipour, Mohammad Amin},
+  title   = {On the generalizability of Neural Program Models with respect to semantic-preserving program transformations},
+  journal = {Information and Software Technology},
+  year    = {2021},
+  doi     = {10.1016/j.infsof.2021.106552}
+}
+
+% NEW (arXiv API 2212.10264, abstract read). Peer-reviewed venue NOT verified.
+@misc{wang2022recode,
+  author        = {Wang, Shiqi and Li, Zheng and Qian, Haifeng and Yang, Chenghao and Wang, Zijian and Shang, Mingyue and Kumar, Varun and Tan, Samson and Ray, Baishakhi and Bhatia, Parminder and Nallapati, Ramesh and Ramanathan, Murali Krishna and Roth, Dan and Xiang, Bing},
+  title         = {{ReCode}: Robustness Evaluation of Code Generation Models},
+  year          = {2022},
+  eprint        = {2212.10264},
+  archivePrefix = {arXiv},
+  note          = {Preprint; no peer-reviewed venue verified}
+}
+
+% CARRIED (arXiv 2502.12466; abstract read by Agent 2)
+@misc{wei2025equibench,
+  author        = {Wei, Anjiang and Cao, Jiannan and Li, Ran and Chen, Hongyu and Zhang, Yuhui and Wang, Ziheng and Liu, Yuan and Teixeira, Thiago S. F. X. and Yang, Diyi and Wang, Ke and Aiken, Alex},
+  title         = {{EquiBench}: Benchmarking Large Language Models' Reasoning about Program Semantics via Equivalence Checking},
+  year          = {2025},
+  eprint        = {2502.12466},
+  archivePrefix = {arXiv},
+  note          = {Preprint; no peer-reviewed venue verified}
+}
+
+% ---------------------------------------------------------------- semantic differencing / regression verification / differential testing
+
+% CARRIED (Crossref 10.1002/stvr.1472)
+@article{godlin2012regression,
+  author  = {Godlin, Benny and Strichman, Ofer},
+  title   = {Regression verification: proving the equivalence of similar programs},
+  journal = {Software Testing, Verification and Reliability},
+  year    = {2012},
+  doi     = {10.1002/stvr.1472}
+}
+
+% CARRIED (Crossref 10.1007/978-3-642-31424-7_54)
+@inproceedings{lahiri2012symdiff,
+  author    = {Lahiri, Shuvendu K. and Hawblitzel, Chris and Kawaguchi, Ming and Reb{\^e}lo, Henrique},
+  title     = {{SYMDIFF}: A Language-Agnostic Semantic Diff Tool for Imperative Programs},
+  booktitle = {Computer Aided Verification (CAV)},
+  series    = {LNCS},
+  year      = {2012},
+  doi       = {10.1007/978-3-642-31424-7_54}
+}
+
+% CARRIED. NOTE: Crossref returned family names only ("Jackson", "Ladd").
+@inproceedings{jackson1994semanticdiff,
+  author    = {Jackson and Ladd},
+  title     = {Semantic Diff: a tool for summarizing the effects of modifications},
+  booktitle = {Proceedings International Conference on Software Maintenance (ICSM-94)},
+  year      = {1994},
+  doi       = {10.1109/icsm.1994.336770}
+}
+
+% CARRIED (Crossref 10.1145/1287624.1287707)
+@inproceedings{evans2007differential,
+  author    = {Evans, Robert B. and Savoia, Alberto},
+  title     = {Differential testing},
+  booktitle = {Proceedings of ESEC/FSE 2007},
+  year      = {2007},
+  doi       = {10.1145/1287624.1287707}
+}
+
+% NEW (Crossref 10.1002/stvr.1475)
+@article{li2012impact,
+  author  = {Li, Bixin and Sun, Xiaobing and Leung, Hareton and Zhang, Sai},
+  title   = {A survey of code-based change impact analysis techniques},
+  journal = {Software Testing, Verification and Reliability},
+  year    = {2012},
+  doi     = {10.1002/stvr.1475}
+}
+
+% CARRIED (Crossref 10.1145/2908080.2908083)
+@inproceedings{shambaugh2016rehearsal,
+  author    = {Shambaugh, Rian and Weiss, Aaron and Guha, Arjun},
+  title     = {Rehearsal: a configuration verification tool for puppet},
+  booktitle = {Proceedings of the 37th ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI)},
+  year      = {2016},
+  doi       = {10.1145/2908080.2908083}
+}
+
+% CARRIED (Crossref 10.1109/icse.2019.00125)
+@inproceedings{licker2019incorrect,
+  author    = {Licker, Nandor and Rice, Andrew},
+  title     = {Detecting Incorrect Build Rules},
+  booktitle = {2019 IEEE/ACM 41st International Conference on Software Engineering (ICSE)},
+  year      = {2019},
+  doi       = {10.1109/icse.2019.00125}
+}
+
+% ---------------------------------------------------------------- oracle problem / independence
+
+% NEW (Crossref 10.1109/tse.2014.2372785; issued 2015-05)
+@article{barr2015oracle,
+  author  = {Barr, Earl T. and Harman, Mark and McMinn, Phil and Shahbaz, Muzammil and Yoo, Shin},
+  title   = {The Oracle Problem in Software Testing: A Survey},
+  journal = {IEEE Transactions on Software Engineering},
+  year    = {2015},
+  doi     = {10.1109/tse.2014.2372785}
+}
+
+% NEW (Crossref 10.1109/tse.1985.231893)
+@article{avizienis1985nversion,
+  author  = {Avizienis, A.},
+  title   = {The N-Version Approach to Fault-Tolerant Software},
+  journal = {IEEE Transactions on Software Engineering},
+  year    = {1985},
+  doi     = {10.1109/tse.1985.231893}
+}
+
+% NEW (Crossref 10.1109/tse.1986.6312924)
+@article{knight1986independence,
+  author  = {Knight, John C. and Leveson, Nancy G.},
+  title   = {An experimental evaluation of the assumption of independence in multiversion programming},
+  journal = {IEEE Transactions on Software Engineering},
+  year    = {1986},
+  doi     = {10.1109/tse.1986.6312924}
+}
+
+% ---------------------------------------------------------------- benchmark design, validity, leakage
+
+% NEW (Crossref 10.1109/icse.2003.1201189). WARNING: Crossref also returns a 2021 record with the same title by different
+% authors in "Journal of Science & Technology" (10.46243/jst.2021.v6.i06.pp139-149). Do NOT cite that record.
+@inproceedings{sim2003benchmarking,
+  author    = {Sim, S. E. and Easterbrook, S. and Holt, R. C.},
+  title     = {Using benchmarking to advance research: a challenge to software engineering},
+  booktitle = {25th International Conference on Software Engineering, 2003. Proceedings},
+  year      = {2003},
+  doi       = {10.1109/icse.2003.1201189}
+}
+
+% NEW (arXiv API 2105.00272, abstract read; DOI and venue (EASE 2021) from the arXiv record's doi/comment fields)
+@inproceedings{hasselbring2021benchmarking,
+  author    = {Hasselbring, Wilhelm},
+  title     = {Benchmarking as Empirical Standard in Software Engineering Research},
+  booktitle = {Evaluation and Assessment in Software Engineering (EASE 2021)},
+  year      = {2021},
+  doi       = {10.1145/3463274.3463361}
+}
+
+% NEW (Crossref 10.1016/j.patter.2023.100804)
+@article{kapoor2023leakage,
+  author  = {Kapoor, Sayash and Narayanan, Arvind},
+  title   = {Leakage and the reproducibility crisis in machine-learning-based science},
+  journal = {Patterns},
+  year    = {2023},
+  doi     = {10.1016/j.patter.2023.100804}
+}
+
+% NEW (Crossref 10.1145/3359591.3359735)
+@inproceedings{allamanis2019duplication,
+  author    = {Allamanis, Miltiadis},
+  title     = {The adverse effects of code duplication in machine learning models of code},
+  booktitle = {Proceedings of the 2019 ACM SIGPLAN International Symposium on New Ideas, New Paradigms, and Reflections on Programming and Software (Onward!)},
+  year      = {2019},
+  doi       = {10.1145/3359591.3359735}
+}
+
+% NEW (arXiv API 2305.01210, abstract read). Peer-reviewed venue NOT verified from a primary source.
+@misc{liu2023evalplus,
+  author        = {Liu, Jiawei and Xia, Chunqiu Steven and Wang, Yuyao and Zhang, Lingming},
+  title         = {Is Your Code Generated by {ChatGPT} Really Correct? Rigorous Evaluation of Large Language Models for Code Generation},
+  year          = {2023},
+  eprint        = {2305.01210},
+  archivePrefix = {arXiv},
+  note          = {Preprint; peer-reviewed venue not verified}
+}
+
+% NEW (arXiv API 2310.06770, abstract read; arXiv comment states ICLR 2024; not checked against the ICLR record)
+@misc{jimenez2023swebench,
+  author        = {Jimenez, Carlos E. and Yang, John and Wettig, Alexander and Yao, Shunyu and Pei, Kexin and Press, Ofir and Narasimhan, Karthik},
+  title         = {{SWE-bench}: Can Language Models Resolve Real-World {GitHub} Issues?},
+  year          = {2023},
+  eprint        = {2310.06770},
+  archivePrefix = {arXiv},
+  note          = {arXiv comment: ICLR 2024; venue not verified independently}
+}
+
+% NEW (arXiv API 2410.06992, abstract read). No venue verified.
+@misc{aleithan2024swebenchplus,
+  author        = {Aleithan, Reem and Xue, Haoran and Mohajer, Mohammad Mahdi and Nnorom, Elijah and Uddin, Gias and Wang, Song},
+  title         = {{SWE-Bench+}: Enhanced Coding Benchmark for {LLMs}},
+  year          = {2024},
+  eprint        = {2410.06992},
+  archivePrefix = {arXiv},
+  note          = {Preprint; no peer-reviewed venue verified}
+}
+
+% CARRIED (Crossref 10.1145/3639476.3639764)
+@inproceedings{sallou2024breaking,
+  author    = {Sallou, June and Durieux, Thomas and Panichella, Annibale},
+  title     = {Breaking the Silence: the Threats of Using {LLMs} in Software Engineering},
+  booktitle = {Proceedings of the 2024 ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)},
+  year      = {2024},
+  doi       = {10.1145/3639476.3639764}
+}
+
+% CARRIED (Crossref 10.1145/3106237.3106256)
+@inproceedings{fu2017easy,
+  author    = {Fu, Wei and Menzies, Tim},
+  title     = {Easy over hard: a case study on deep learning},
+  booktitle = {Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering (ESEC/FSE)},
+  year      = {2017},
+  doi       = {10.1145/3106237.3106256}
+}
+
+% NEW (arXiv API 1912.05511, abstract read; FAccT '21 and DOI 10.1145/3442188.3445901 from the arXiv record's comment/doi fields)
+@inproceedings{jacobs2021measurement,
+  author    = {Jacobs, Abigail Z. and Wallach, Hanna},
+  title     = {Measurement and Fairness},
+  booktitle = {Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (FAccT)},
+  year      = {2021},
+  doi       = {10.1145/3442188.3445901}
+}
+
+% NEW (arXiv API 2111.15366, abstract read; arXiv comment: NeurIPS 2021 Benchmarks and Datasets track; venue not checked independently)
+@misc{raji2021everything,
+  author        = {Raji, Inioluwa Deborah and Bender, Emily M. and Paullada, Amandalynne and Denton, Emily and Hanna, Alex},
+  title         = {{AI} and the Everything in the Whole Wide World Benchmark},
+  year          = {2021},
+  eprint        = {2111.15366},
+  archivePrefix = {arXiv},
+  note          = {arXiv comment: NeurIPS 2021 Datasets and Benchmarks track}
+}
+
+% ---------------------------------------------------------------- research-method standards, registered reports, responsible SE
+
+% NEW (arXiv API 2010.03525, abstract read). Author list on arXiv is long (45+ names); truncated here with "and others".
+@misc{ralph2020empirical,
+  author        = {Ralph, Paul and bin Ali, Nauman and Baltes, Sebastian and Bianculli, Domenico and others},
+  title         = {Empirical Standards for Software Engineering Research},
+  year          = {2020},
+  eprint        = {2010.03525},
+  archivePrefix = {arXiv},
+  note          = {Preprint (arXiv v2, 2021); complete standards at the SIGSOFT repository named in the arXiv comment; not fetched}
+}
+
+% NEW (Crossref 10.1007/s10664-022-10277-5; issued 2023-03)
+@article{ernst2023registered,
+  author  = {Ernst, Neil A. and Baldassarre, Maria Teresa},
+  title   = {Registered reports in software engineering},
+  journal = {Empirical Software Engineering},
+  year    = {2023},
+  doi     = {10.1007/s10664-022-10277-5}
+}
+
+% NEW (Crossref 10.1145/3458723)
+@article{gebru2021datasheets,
+  author  = {Gebru, Timnit and Morgenstern, Jamie and Vecchione, Briana and Vaughan, Jennifer Wortman and Wallach, Hanna and Daum{\'e}, III, Hal and Crawford, Kate},
+  title   = {Datasheets for datasets},
+  journal = {Communications of the ACM},
+  year    = {2021},
+  doi     = {10.1145/3458723}
+}
+
+% NEW (Crossref 10.1177/0018720810376055)
+@article{parasuraman2010complacency,
+  author  = {Parasuraman, Raja and Manzey, Dietrich H.},
+  title   = {Complacency and Bias in Human Use of Automation: An Attentional Integration},
+  journal = {Human Factors},
+  year    = {2010},
+  doi     = {10.1177/0018720810376055}
+}
+
+% NEW (Crossref 10.1136/amiajnl-2011-000089)
+@article{goddard2012automation,
+  author  = {Goddard, Kate and Roudsari, Abdul and Wyatt, Jeremy C.},
+  title   = {Automation bias: a systematic review of frequency, effect mediators, and mitigators},
+  journal = {Journal of the American Medical Informatics Association},
+  year    = {2012},
+  doi     = {10.1136/amiajnl-2011-000089}
+}
+
+% NEW (Crossref 10.1145/3173016; Crossref title "ACM code of ethics", issued 2017-12-27, CACM). This is the CACM article about the Code,
+% NOT the Code text itself. The Code's own page (acm.org/code-of-ethics) returned HTTP 403 and was not verified.
+@article{gotterbarn2017acm,
+  author  = {Gotterbarn, Don and Bruckman, Amy and Flick, Catherine and Miller, Keith and Wolf, Marty J.},
+  title   = {{ACM} code of ethics},
+  journal = {Communications of the ACM},
+  year    = {2017},
+  doi     = {10.1145/3173016},
+  note    = {CACM article; Crossref title as returned, no subtitle asserted}
+}
+
+% Meyer, Daikon, Ammons below are used only for terminology in the companion documents.
+% CARRIED (Crossref 10.1109/2.161279)
+@article{meyer1992applying,
+  author  = {Meyer, Bertrand},
+  title   = {Applying ``Design by Contract''},
+  journal = {Computer},
+  year    = {1992},
+  doi     = {10.1109/2.161279}
+}
+
+% CARRIED (Crossref 10.1016/j.scico.2007.01.015)
+@article{ernst2007daikon,
+  author  = {Ernst, Michael D. and Perkins, Jeff H. and Guo, Philip J. and McCamant, Stephen and Pacheco, Carlos and Tschantz, Matthew S. and Xiao, Chen},
+  title   = {The {Daikon} system for dynamic detection of likely invariants},
+  journal = {Science of Computer Programming},
+  year    = {2007},
+  doi     = {10.1016/j.scico.2007.01.015}
+}
+
+% CARRIED (Crossref 10.1145/503272.503275)
+@inproceedings{ammons2002mining,
+  author    = {Ammons, Glenn and Bod{\'\i}k, Rastislav and Larus, James R.},
+  title     = {Mining specifications},
+  booktitle = {Proceedings of the 29th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL)},
+  year      = {2002},
+  doi       = {10.1145/503272.503275}
+}
+
+% ---------------------------------------------------------------- legacy / mainframe
+
+% NEW (Crossref 10.1109/icsm.2010.5609583)
+@inproceedings{sneed2010cobol,
+  author    = {Sneed, Harry M.},
+  title     = {Migrating from {COBOL} to {Java}},
+  booktitle = {2010 IEEE International Conference on Software Maintenance (ICSM)},
+  year      = {2010},
+  doi       = {10.1109/icsm.2010.5609583}
+}
+
+% NEW (Crossref 10.1109/icsm.2009.5306312)
+@inproceedings{vangeet2009feature,
+  author    = {Van Geet, Joris and Demeyer, Serge},
+  title     = {Feature location in {COBOL} mainframe systems: An experience report},
+  booktitle = {2009 IEEE International Conference on Software Maintenance (ICSM)},
+  year      = {2009},
+  doi       = {10.1109/icsm.2009.5306312}
+}
+
+% CARRIED (Crossref 10.1109/icsme52107.2021.00055)
+@inproceedings{schnappinger2021platform,
+  author    = {Schnappinger, Markus and Streit, Jonathan},
+  title     = {Efficient Platform Migration of a Mainframe Legacy System Using Custom Transpilation},
+  booktitle = {2021 IEEE International Conference on Software Maintenance and Evolution (ICSME)},
+  year      = {2021},
+  doi       = {10.1109/icsme52107.2021.00055}
+}
+
+% CARRIED (Crossref 10.1109/icsme55016.2022.00072)
+@inproceedings{deknop2022semiparsing,
+  author    = {Deknop, C{\'e}line and Fabry, Johan and Mens, Kim and Zaytsev, Vadim},
+  title     = {Generating Customised Control Flow Graphs for Legacy Languages with Semi-Parsing},
+  booktitle = {2022 IEEE International Conference on Software Maintenance and Evolution (ICSME)},
+  year      = {2022},
+  doi       = {10.1109/icsme55016.2022.00072}
+}
+
+% CARRIED (arXiv 2408.04660; abstract read by Agent 2)
+@misc{dau2024xmainframe,
+  author        = {Dau, Anh T. V. and Dao, Hieu Trung and Nguyen, Anh Tuan and Tran, Hieu Trung and Nguyen, Phong X. and Bui, Nghi D. Q.},
+  title         = {{XMainframe}: A Large Language Model for Mainframe Modernization},
+  year          = {2024},
+  eprint        = {2408.04660},
+  archivePrefix = {arXiv},
+  note          = {Preprint; no peer-reviewed venue verified}
+}
+
+% CARRIED (arXiv 2604.03986; abstract read by Agent 2)
+@misc{dau2026cobolcoder,
+  author        = {Dau, Anh T. V. and Tan, Shin Hwei and Yang, Jinqiu and Bui, Nghi D. Q. and Nguyen, Anh Tuan},
+  title         = {{COBOL-Coder}: Domain-Adapted Large Language Models for {COBOL} Code Generation and Translation},
+  year          = {2026},
+  eprint        = {2604.03986},
+  archivePrefix = {arXiv},
+  note          = {Preprint; no peer-reviewed venue verified}
+}
