@@ -1,0 +1,211 @@
+{
+  "baseline_commit": "aee230921bc929eb28ff82edf36919e4a823fa95",
+  "baseline_ref": "origin/main (= relic/final-research-remediation); tag v1.0.0 also present",
+  "clone": "fresh clone of origin; no other local copy was read",
+  "consistency_check": {
+    "command": "python -m relic_eval.check_consistency",
+    "executed": true,
+    "result": "passed"
+  },
+  "environment": {
+    "dependencies": "requirements.lock into .venv",
+    "platform": "macOS (darwin, arm64)",
+    "python": "3.11.15"
+  },
+  "hash_lists": "1277 tracked files under results/ hashed before any change and again after the V2 work; zero differences (see REPOSITORY_AUDIT.md)",
+  "headline_metrics_results_final": {
+    "accounting_pooled": {
+      "by_status": {
+        "EVALUABLE": 566,
+        "INFRASTRUCTURE_FAILURE": 0,
+        "INVALID_MUTATION": 26,
+        "OTHER": 0,
+        "OUT_OF_SCOPE": 64
+      },
+      "total": 656
+    },
+    "carddemo": {
+      "complexity_B": {
+        "f1": 0.5225,
+        "fn": 161,
+        "fp": 9,
+        "precision": 0.9118,
+        "recall": 0.3661,
+        "specificity": 0.8525,
+        "tn": 52,
+        "tp": 93
+      },
+      "relic_v1_0": {
+        "f1": 0.9191,
+        "fn": 38,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8504,
+        "specificity": 1.0,
+        "tn": 61,
+        "tp": 216
+      },
+      "relic_v1_1": {
+        "f1": 0.982,
+        "fn": 9,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.9646,
+        "specificity": 1.0,
+        "tn": 61,
+        "tp": 245
+      },
+      "static_bcg_E": {
+        "f1": 0.9191,
+        "fn": 38,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8504,
+        "specificity": 1.0,
+        "tn": 61,
+        "tp": 216
+      },
+      "structural_A": {
+        "f1": 0.8957,
+        "fn": 48,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.811,
+        "specificity": 1.0,
+        "tn": 61,
+        "tp": 206
+      },
+      "textdiff": {
+        "f1": 0.9425,
+        "fn": 0,
+        "fp": 31,
+        "precision": 0.8912,
+        "recall": 1.0,
+        "specificity": 0.4918,
+        "tn": 30,
+        "tp": 254
+      }
+    },
+    "evaluable_total": 566,
+    "pooled": {
+      "complexity_B": {
+        "f1": 0.4947,
+        "fn": 298,
+        "fp": 33,
+        "precision": 0.8308,
+        "recall": 0.3522,
+        "specificity": 0.6887,
+        "tn": 73,
+        "tp": 162
+      },
+      "relic_v1_0": {
+        "f1": 0.9048,
+        "fn": 80,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8261,
+        "specificity": 1.0,
+        "tn": 106,
+        "tp": 380
+      },
+      "relic_v1_1": {
+        "f1": 0.951,
+        "fn": 43,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.9065,
+        "specificity": 1.0,
+        "tn": 106,
+        "tp": 417
+      },
+      "static_bcg_E": {
+        "f1": 0.9048,
+        "fn": 80,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8261,
+        "specificity": 1.0,
+        "tn": 106,
+        "tp": 380
+      },
+      "structural_A": {
+        "f1": 0.8889,
+        "fn": 92,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 0.8,
+        "specificity": 1.0,
+        "tn": 106,
+        "tp": 368
+      },
+      "textdiff": {
+        "f1": 0.9573,
+        "fn": 0,
+        "fp": 41,
+        "precision": 0.9182,
+        "recall": 1.0,
+        "specificity": 0.6132,
+        "tn": 65,
+        "tp": 460
+      }
+    },
+    "primary_detector": "relic_v1_0",
+    "primary_population": "carddemo"
+  },
+  "llm": {
+    "reason": "no provider credentials used; only committed records/cache were analysed",
+    "rerun": false
+  },
+  "llm_cache_files": 1225,
+  "repository": "https://github.com/ManasSakthivel/RELIC",
+  "reproduction": {
+    "command": "make reproduce (pipeline; llm_baselines --offline-if-no-key; pipeline --skip-benchmark; check_consistency)",
+    "consistency_after_reproduction": "passed",
+    "elapsed_seconds": 347,
+    "files_identical_to_committed": 1276,
+    "files_that_differ": [
+      "results/final/run_info.json (timestamp/commit, by design)"
+    ],
+    "location": "scratch export of the clean clone (not the work tree)",
+    "tracked_results_files": 1277
+  },
+  "result_file_sha256": {
+    "results/final/contract_recovery.json": "7328b3c49189b69f9dea97894be2d2a23d563d713894ec6db18292adbbb33f8e",
+    "results/final/evaluation_manifest.csv": "324d5f2a88f5ddece76ed1f3bf6616629f18da31b9b8cd5f8335511a473aacc7",
+    "results/final/metrics.json": "968fa973eca58089f4008859f20dc10a59cfea574e650ed5091016c646fcb188",
+    "results/final/raw/evaluation_records.jsonl": "5a74b26d08715e2c599bc2a0584f9655bb499d9dce807ada8174cb5934434a9c",
+    "results/final/raw/llm_records.jsonl": "960f49075d30204c22339c9bbd70ba6e1d04a91012e2ba15143fd56e7e183eb0",
+    "results/final/raw/llm_status.json": "921e6393be7779462a9c4db9d29be368cf68b89d4a271f161544c9dd27aa5f0f",
+    "results/final/tables/results-summary.md": "cab5fbaffe93174f09d8aa9590e944cacfb9d265413e0b2d57830e2b36b80fa7",
+    "results/final/tables/table-accounting.md": "aa956d578353f101d8a1e26dd97ebdd32a53ab92ccdcc67538e58490c68ecb60",
+    "results/final/tables/table-contract-recovery.md": "d7900b97d8f53102e196fc5af8c31fee667273273d080537de13d17caf3a51a6",
+    "results/final/tables/table-legacy.md": "594ca8f2f0c99c3d79a80a4209deecac58af72acc0c3d68ad8395b79114863f1",
+    "results/final/tables/table-llm.md": "f10185c4e7a43cab31404ff88f6c80a3034097863a00a35c5d272b90ced318dc",
+    "results/final/tables/table-main-carddemo.md": "90641d19a796aed4db77a7cea6185668855a13418f55ad6292bdcae1665d4cd3",
+    "results/final/tables/table-main-pooled.md": "56946ad9a39fbad0df992ee375875fefa3f8ecd316e10a09f0f17b0bf721438d",
+    "results/final/tables/table-operators-carddemo.md": "2827c93b1a5e4a933703bd9ecd3ffecea29c9c71aea669c82fa3597048665bc6",
+    "results/final/tables/table-reasons.md": "706327625b28b2c29d5acc7667527f8f656970efa828e00f7f5c5851dc0e83eb",
+    "results/final/tables/table-sensitivity-carddemo.md": "7d901b14c60763cdca83a50c24704e0986e1c2e19177ff174ec28eb60bc44866",
+    "results/final/tables/table-subjects.md": "05cd539a8e9d8e0446734a002281966b9d66d578dacb9b19d0659089b07685dc"
+  },
+  "result_files_last_modifying_commit": {
+    "results/final/contract_recovery.json": "1cbcf06 2026-10-04",
+    "results/final/evaluation_manifest.csv": "1cbcf06 2026-10-04",
+    "results/final/metrics.json": "1162aee 2026-10-10",
+    "results/final/raw/evaluation_records.jsonl": "1cbcf06 2026-10-04",
+    "results/final/raw/llm_records.jsonl": "1162aee 2026-10-10",
+    "results/final/raw/llm_status.json": "1162aee 2026-10-10"
+  },
+  "schema": "relic-v2-baseline/1",
+  "tests": {
+    "claim_matches": true,
+    "command": "PYTHONPATH=$PWD/src:$PWD .venv/bin/python -m pytest tests/ -q",
+    "errors": 0,
+    "executed": true,
+    "failed": 0,
+    "passed": 391,
+    "readme_claim": "391"
+  },
+  "work_branch": "research/relic-v2-development",
+  "working_tree_at_baseline": "clean"
+}

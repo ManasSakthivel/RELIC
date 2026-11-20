@@ -76,3 +76,21 @@ twice and comparing hashes).
 - File reading uses `errors="replace"`; all subject files are ASCII.
 - The pipeline imports with `PYTHONPATH=src:.` (set by the Makefile) or after
   `pip install -e .`.
+
+## RELIC V2 (development branch `research/relic-v2-development`)
+
+V2 is additive. `results/final` and the default behaviour of the parser,
+extractor and detectors (v1.0.0 / v1.1) are unchanged; the corrections are
+opt-in (`JCLParser(v2_fixes=True)`, `StaticContractExtractor(v2_fixes=True)`,
+`RelicDetector(legacy_v1_0=False, v2=True)`).
+
+| Command | What it does | API key | Time |
+|---|---|---|---|
+| `make v2-eval` (`python -m relic_eval.v2_eval`) | replays the committed benchmark with `relic_v2` and per-fix ablations; verifies every regenerated mutant against the committed `mutant_sha256`; verifies recomputed v1.1 predictions equal the committed ones; writes `results/v2/` only | no | ≈ 5 s |
+| `python -m pytest tests/v2 -q` | regression tests for D-001…D-004 and V2 results integrity (re-runs the replay and compares it with the committed `results/v2`) | no | ≈ 12 s |
+
+`results/v2/v2_metrics.json` and `v2_predictions.jsonl` are deterministic;
+`v2_run_info.json` holds a timestamp. All V2 numbers are **development-set
+results** (the corpora were inspected while diagnosing defects); external
+validation is pending. LLM baselines are not re-run by V2. Defects, evidence and
+scope limits: `reports/v2/DEFECT_REGISTER.md`; evaluation: `reports/v2/EVALUATION_SUMMARY.md`.

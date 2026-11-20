@@ -4,6 +4,20 @@ All notable changes to RELIC are documented here.
 
 ---
 
+## [Unreleased] — RELIC V2 development (`research/relic-v2-development`)
+
+Development-set only; external validation pending. `results/final` unchanged.
+
+### Added
+
+- Opt-in `v2_fixes` for `JCLParser`/`StaticContractExtractor` and `RelicDetector(v2=True)`:
+  D-001 unique step identity, D-002 `DSNAME=`/`DISP=(,PASS)`, D-003 producer-before-consumer,
+  D-004 `DISP=(MOD,DELETE)` idiom. Defaults are unchanged (v1.0.0/v1.1 behaviour preserved).
+- `relic_eval/v2_eval.py` (`make v2-eval`) and `results/v2/`; `tests/v2/` (48 tests).
+- `reports/v2/`: baseline, repository audit, defect register, evaluation summary, remaining risks.
+
+---
+
 ## [1.1.0] — 2026-10-04
 
 **Research remediation.** The evaluation was rebuilt; the 1.0.0 headline results are
