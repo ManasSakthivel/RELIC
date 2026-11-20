@@ -81,3 +81,37 @@ def test_v1_1_recomputation_equals_committed_predictions():
 def test_v2_harness_output_directory_is_not_the_historical_one():
     assert v2_eval.OUT == ROOT / "results" / "v2"
     assert v2_eval.OUT != ROOT / "results" / "final"
+
+
+def _confusion(detector):
+    tp = fp = fn = tn = 0
+    for line in (COMMITTED / "v2_predictions.jsonl").read_text().splitlines():
+        r = json.loads(line)
+        p = bool(r["pred"][detector])
+        t = bool(r["truth"])
+        tp += p and t
+        fp += p and not t
+        fn += (not p) and t
+        tn += (not p) and not t
+    return tp, fp, fn, tn
+
+
+@pytest.mark.parametrize("detector,expected", [
+    ("relic_v1_0", (380, 0, 80, 106)),
+    ("relic_v1_1", (417, 0, 43, 106)),
+    ("relic_v2", (442, 0, 18, 106)),
+    ("relic_v2_wo_D001", (419, 0, 41, 106)),
+    ("relic_v2_wo_D002", (441, 0, 19, 106)),
+    ("relic_v2_wo_D003", (442, 0, 18, 106)),
+    ("relic_v2_wo_D004", (444, 0, 16, 106)),
+    ("textdiff", (460, 41, 0, 65)),
+    ("textdiff_ignore_job_parameters", (460, 2, 0, 104)),
+])
+def test_pinned_confusion_matrices_recomputed_from_raw_predictions(detector, expected):
+    """Independent of v2_eval's metric code: counts come straight from the prediction records."""
+    assert _confusion(detector) == expected
+
+
+def test_pinned_f1_of_relic_v2_is_0_980():
+    tp, fp, fn, _tn = _confusion("relic_v2")
+    assert round(2 * tp / (2 * tp + fp + fn), 4) == 0.98

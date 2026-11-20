@@ -59,7 +59,7 @@ none are restated here.
 - **Next step:** Implement these as separately evaluated improvements on held-out subjects.
 
 ### L10. LLM comparison is narrow
-- **Evidence:** `results/final/raw/llm_status.json` and the LLM table in `docs/evaluation/RESULTS.md`. One model (Groq `openai/gpt-oss-120b`), one prompt, temperature 0, one sample per mutant. Coverage depends on the provider quota of the API key used; unanswered mutants are excluded and all detectors are compared on the common answered population.
+- **Evidence:** `results/final/raw/llm_status.json` and the LLM table in `docs/evaluation/RESULTS.md`. One model (the committed records are `openai/gpt-oss-20b` via the nvidia provider; see `llm_status.json`), one prompt, temperature 0, one sample per mutant. All 566 evaluable mutants were attempted; the 183 without a parseable answer are excluded, they are 89.6% positive versus 77.3% for the scored ones, so the comparison is selection-biased (`reports/v2/DEFECT_REGISTER.md` D-016, D-017). The 93 orphaned Groq `gpt-oss-120b` cache files are not referenced by any record.
 - **Impact:** The result says how this model with this prompt compares with RELIC on these mutants. It does not generalise to LLM-based review in general. The behaviour definition in the prompt makes the two harmless operators easy for the model.
 - **Why it remains:** API access was limited to one free-tier provider key during the remediation.
 - **Next step:** Several models, several samples, prompts without the MSGCLASS/comment hint, and full coverage. The cached responses make each run re-scorable offline.

@@ -126,10 +126,13 @@ How to read this honestly:
   oracle labels every reorder as behaviour-changing. If only normal completion is
   considered observable, RELIC flags some harmless reorders
   ([sensitivity analysis](docs/evaluation/RESULTS.md#sensitivity-analyses--carddemo)).
-* **LLM baselines are competitive.** On the random subsample both LLM baselines
-  answered (limited by the API quota), the LLM given both job versions, with or
-  without a dependency summary, is at least as accurate as RELIC v1.0.0. The
-  subsample is small and the intervals are wide.
+* **LLM baselines are competitive.** On the 383 mutants for which both LLM
+  baselines returned parseable output, the LLM given both job versions, with or
+  without a dependency summary, is at least as accurate as RELIC v1.0.0. This
+  subset is **not** a random subsample: all 566 evaluable mutants were attempted and
+  the 183 without a valid answer (`INVALID_OUTPUT`, "no JSON object in response") are
+  89.6% positive versus 77.3% for the scored ones (`reports/v2/DEFECT_REGISTER.md`
+  D-017). The intervals are wide and the comparison is selection-biased.
 * **Where RELIC v1.0.0 misses:** COND threshold changes (its diff ignored the
   threshold), producer-side renames (a continuation-line parser bug hid most
   dataset dispositions), procedure-internal steps and same-named steps.
