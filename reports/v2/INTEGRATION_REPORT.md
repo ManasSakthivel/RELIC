@@ -77,7 +77,7 @@ stated. **All five are [PENDING EXPERIMENT].**
 | P2 | New contract families, PROC/INCLUDE/IF parsing, UI, performance | — | not started |
 
 ## Release audit (Agent 6, re-run where noted)
-Branch/HEAD and remote in sync; 439 tests pass (**re-run after edits: see below**); `make v2-eval`
+Branch/HEAD and remote in sync; 439 tests passed at audit time; **449 pass after this sprint's added pinned-number tests (re-run)**; `make v2-eval`
 byte-identical to committed (metrics + predictions); consistency check passes (re-run);
 0 of 1277 historical `results/` files differ from `aee2309`; no secrets found; 2 old large tracked files
 (33.8 MB zip, 7 MB GIF; pre-existing). Open blockers: R-1 `paper/paper.md:162` still says Groq 120b;
