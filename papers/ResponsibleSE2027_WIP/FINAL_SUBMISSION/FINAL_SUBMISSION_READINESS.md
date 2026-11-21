@@ -47,8 +47,8 @@ Manuscript (none critical):
 5. Deduplication rule (first ID per group) is one choice; other rules were not tested.
 
 Outside the manuscript (must be handled by the human author):
-6. **Key exposure.** A tracked report (`reports/v2/AGENT_6_RELEASE_AUDIT.md`) contains two `gsk_`-format strings. Rotate the Groq key (it was also pasted in chat), then redact the file in a reviewed commit. Nothing was printed or modified here.
-7. **Author identity (camera-ready only).** The brief lists "Dr. Rajasdhree". The faculty-profile text supplied later is "Rajashree Shettar", which is the name printed in the author PDF. Confirm the intended person and spelling. Designations and emails come from supplied profile text, not live RVCE pages (HTTP 403). Confirm whether emails should appear.
+6. **Key handling.** A full-length key-format string was checked for across the working tree and all git history: none found. The `gsk_` matches in the audit report and in these notes are descriptions of the scan pattern, not keys. The Groq key pasted into chat earlier should still be rotated, since it was shared outside the repository.
+7. **Author identity (resolved by the author).** The author confirmed "Rajashree Shettar" as the intended person; the author PDF uses that name. Designations and emails come from supplied profile text, not live RVCE pages (HTTP 403).
 8. **Working-tree changes.** The Groq raw file (two appended records) and several tracked files show modifications. Decide what to commit; nothing has been committed.
 9. **HotCRP.** The portal page showed only a sign-in form. Open/closed status and the deadline (11:59:59 UTC today per HotCRP, equivalent to 20 November AoE per researchr) must be confirmed by someone with an account.
 10. **Artifact.** No anonymised artifact exists. The anonymous paper states this. If the venue requires one, it must be created before submission.
