@@ -208,6 +208,7 @@ try:
         return " ".join(pdf[i].get_textpage().get_text_range() for i in range(len(pdf))).replace("\r", " ").replace("\n", " ")
     anon_t = pdf_text("ResponsibleSE2027_Anonymous_Submission.pdf")
     auth_t = pdf_text("ResponsibleSE2027_Author_Identified.pdf")
+    check("??" not in anon_t and "??" not in auth_t, "no unresolved references (??) in either PDF")
     check("0.666, 0.803" in anon_t and "0.666, 0.803" in auth_t, "PDFs carry corrected L1 text-B interval 0.666")
     check("0.665, 0.803" not in anon_t and "0.665, 0.803" not in auth_t, "PDFs do not carry the stale 0.665")
     for w in ["manas", "sakthivel", "rvce", "bengaluru", "github", "desktop", "users/", "groq", "gpt-oss"]:

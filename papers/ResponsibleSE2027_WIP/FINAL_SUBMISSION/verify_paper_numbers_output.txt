@@ -67,6 +67,7 @@ PASS LLM figure 'gpt-oss' absent from manuscript
 PASS LLM figure 'Groq' absent from manuscript
 PASS no 'corrected baseline/ground truth' wording
 PASS unverifiable 'fixed before' claim removed
+PASS no unresolved references (??) in either PDF
 PASS PDFs carry corrected L1 text-B interval 0.666
 PASS PDFs do not carry the stale 0.665
 PASS anonymous PDF free of 'manas'
@@ -80,4 +81,4 @@ PASS anonymous PDF free of 'groq'
 PASS anonymous PDF free of 'gpt-oss'
 PASS author PDF carries author name
 
-81 passed, 0 failed
+82 passed, 0 failed

@@ -60,3 +60,9 @@ Outside the manuscript (must be handled by the human author):
 - Upload only `ResponsibleSE2027_Anonymous_Submission.pdf`. Do not upload the build folder or any `build_*` file.
 
 THE MANUSCRIPT IS FINALIZED AND READY FOR HUMAN SUBMISSION TO RESPONSIBLESE 2027. Items 6–10 must be handled by the human author before submission.
+
+## Revision: figures and citations (2026-11-21)
+- Added three figures, all generated from the raw inputs by `make_figures.py`: Figure 1, the evaluation pipeline flowchart; Figure 2, benchmark composition by audit class; Figure 3, MCC with 95% cluster bootstrap intervals by label set.
+- Citations: the Introduction, Research Approach, Preliminary Findings, Framework and Limitations now cite sources at the claims that need them. Four references were added and verified against Crossref: McNemar (1947), Matthews (1975), Efron and Tibshirani (1994), and Good (2000). The bibliography has 18 entries, all cited.
+- Page count: anonymous PDF 5 pages (was 4); author-identified PDF 5 pages. Within the one-page increase allowed.
+- The verifier now also checks both PDFs for unresolved references ("??"). A missing figure label was caught this way and fixed. The build log does not report unresolved references, so the PDF text check is what catches them.
