@@ -1,0 +1,30 @@
+{
+  "llm_worst_L1": 0.603,
+  "llm_best_L1": 0.89,
+  "text_B_L1_180": 0.731,
+  "relic_L1_180": 0.394,
+  "dedup_n": 155,
+  "dedup_L1_gap": -0.338,
+  "leave_one_program_out_L1": {
+    "min": -0.364,
+    "max": -0.313,
+    "by_program": {
+      "base_hw_01_etl": -0.353,
+      "base_hw_02_cond_chain": -0.344,
+      "base_hw_03_compile_link": -0.343,
+      "base_hw_04_gdg_cycle": -0.364,
+      "base_hw_05_multi_disp": -0.34,
+      "base_hw_06_sort_merge": -0.343,
+      "base_hw_07_idcams_catalog": -0.324,
+      "base_hw_08_iebgener_copy": -0.313,
+      "base_hw_09_iebcopy_pds": -0.326,
+      "base_hw_10_if_then_else": -0.329,
+      "base_hw_11_instream_sysin": -0.32,
+      "base_hw_12_parallel_prep": -0.343,
+      "corpus_carddemo_cbpaup0j": -0.335,
+      "corpus_carddemo_dbpautp0": -0.336,
+      "corpus_genapp_adef121": -0.33,
+      "corpus_omp_course_cbl0001j": -0.339
+    }
+  }
+}

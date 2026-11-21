@@ -13,3 +13,8 @@ run_info.json: differs only in timestamp_utc, relic_commit_at_run, platform patc
 results/final/run_info.json (timestamp, platform, python patch, git_commit only)
 make v2-eval: results/v2/v2_run_info.json (timestamp, git_commit, platform, python patch only)
 make reproduce-legacy: run_timestamp fields and negative_mutations.csv UUID column only (verified)
+
+## Outsider path: fresh GitHub clone of origin/research/relic-v2-final-sprint @ 3352bf4
+make setup (PY_BOOT=uv 3.11) exit 0; make test 500 passed; make check passed;
+sembench_eval --out (PYTHONPATH=src:.): metrics.json, predictions.jsonl, paired_tests.json IDENTICAL to results/sembench;
+make reproduce exit 0; only results/final/run_info.json modified (timestamp, platform, python patch, git_commit).

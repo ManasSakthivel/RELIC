@@ -1,0 +1,160 @@
+\documentclass[conference]{IEEEtran}
+\def\AnonFlag{1}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+\begin{document}
+
+\title{When Benchmark Labels Become the Risk: Responsible Evaluation of Behaviour-Change Detection in Legacy Software}
+
+\ifdefined\AnonFlag
+\author{\IEEEauthorblockN{Anonymous Submission}
+\IEEEauthorblockA{Author details withheld for double-blind review}}
+\else
+\author{
+\IEEEauthorblockN{Manas Sakthivel}\IEEEauthorblockA{R. V. College of Engineering, Bengaluru, Karnataka, India}\and
+\IEEEauthorblockN{K. Badari Nath}\IEEEauthorblockA{Professor, R. V. College of Engineering, Bengaluru, Karnataka, India\\ badarinath.kb@rvce.edu.in}\and
+\IEEEauthorblockN{Rajashree Shettar}\IEEEauthorblockA{Professor, R. V. College of Engineering, Bengaluru, Karnataka, India\\ rajashreeshettar@rvce.edu.in}\and
+\IEEEauthorblockN{Vinay Hegde}\IEEEauthorblockA{Professor, R. V. College of Engineering, Bengaluru, Karnataka, India\\ vinayvhegde@rvce.edu.in}
+}
+\fi
+
+\maketitle
+
+\begin{abstract}
+Maintenance decisions about legacy software increasingly rest on automated evidence that a modification does or does not change behaviour. If the benchmarks, semantic labels and oracles behind that evidence are unreliable, confidence in the decisions is unjustified, and the resulting errors fall on maintainers who cannot see them. We investigate this problem through RELIC, a behavioural-contract analyser for job control language (JCL) batch code, and JCL-SemBench, a 180-pair benchmark built with its own oracle. The evidence is preliminary. Twenty-five pairs are byte-identical, and fifteen of them are labelled as behaviour-changing. Forty-six pairs form 21 duplicate groups, five of which carry conflicting labels. The oracle disagrees with 28 author labels, and ten of the 93 changing labels concern effects the oracle does not distinguish. The normalized text baseline has higher MCC than RELIC V2 under all four label sets; the size of the gap ranges from $-0.170$ to $-0.336$ depending on the label set, and the point-estimate sign does not change. On L3 the exact cluster-level test does not reach significance ($p=0.089$). No independent review has been completed. We propose five evaluation practices for responsible tool evidence, each tied to an observed risk and an inspectable artifact, and we state what remains to be validated.
+\end{abstract}
+
+\begin{IEEEkeywords}
+responsible software engineering, legacy modernisation, benchmark validity, test oracles, label quality, job control language
+\end{IEEEkeywords}
+
+\section{Introduction}
+Batch systems written in job control language (JCL) remain common in legacy estates; we do not quantify their prevalence here. Modernising them requires knowing whether a proposed change alters behaviour. Automated tools are used to support that judgement, and an EQUIVALENT or ``no change'' verdict can close a review. Responsibility for such a verdict is shared: the tool developer decides what it observes, the team decides what it licenses, and the evaluation that vouches for the tool shapes both.
+
+This paper concerns that last link. Benchmarks for behaviour-change detection contain labels, and those labels come from oracles that observe only part of what a change can alter. When labels are duplicated, contradictory, or asserted outside the oracle's observable scope, reported effectiveness can be misleading. The maintainers who act on a detector's output bear the cost of errors they cannot see. This is a data-centric responsibility question: who curates, labels and checks the evidence behind a maintenance decision.
+
+We study this with RELIC, a behavioural-contract analyser for JCL, and JCL-SemBench, a 180-pair benchmark of original and transformed jobs built by the same group that wrote the tool and the oracle. Our contributions are:
+\begin{itemize}
+\item preliminary, counted evidence of benchmark-integrity problems (byte-identical pairs, duplicate and contradictory groups, oracle disagreements, and labels outside the oracle's observable scope), with their denominators;
+\item a sensitivity analysis showing that the point-estimate comparison between a contract analyser and a normalized text baseline keeps its sign under every label set examined, while its size depends on which labels are kept (on L3 the exact cluster-level test gives $p=0.089$);
+\item a five-dimension framework for responsible evaluation of change-detection evidence, each dimension tied to an observed risk and an inspectable artifact.
+\end{itemize}
+The paper is not a claim that RELIC is inadequate in general, that the oracle is generally invalid, or that the framework has been validated. Section~\ref{sec:limits} lists what has not been done.
+
+\section{Background and Motivation}
+RELIC extracts job-level behavioural contracts (step order, dataset resources, and conditional control flow) and reports the contracts that a change breaks. Its oracle simulates both versions of a job under return-code and abend scenarios and compares externally observable behaviour: step status and return codes, dataset versions read, permanent datasets at job end, and termination. The oracle returns DIFFERENT when an observable differs, UNDETERMINED when an opaque step's context changes, and EQUIVALENT otherwise. EQUIVALENT is returned only when no modelled observable differs in any generated scenario and no opaque step's context changes. Changes outside those observables are not examined.
+
+Stakeholders are concrete. Maintainers of batch estates act on ``no change'' verdicts. Modernisation teams schedule reviews and migrations from detector output. Test engineers inherit benchmark results when they choose tools. Tool developers must decide what a benchmark may claim. A false ``no change'' can let a behaviour-changing edit pass unreviewed. A false alarm costs review time. Neither error requires an incident to matter, and neither is visible from a headline accuracy figure.
+
+Semantic differencing of program versions predates this work~\cite{jackson1994}. The empirical literature already recognises these risks in general terms. The oracle problem is a standing challenge in testing~\cite{barr2015}. Test oracles are studied as a foundation of testing~\cite{staats2011}, and oracle creation based on mutation testing has been studied~\cite{staats2012}. Threats to the validity of mutation-based assessment have been catalogued~\cite{papadakis2016}. Label errors in test sets can destabilise benchmark rankings~\cite{northcutt2021}, misclassification can bias defect-prediction results~\cite{herzig2013}, and duplicated code can inflate results on learned models of code~\cite{allamanis2019}. Leakage through shared data is a general reproducibility concern~\cite{kapoor2023}. Documentation of data provenance and curation is a recognised remedy~\cite{gebru2021}, and measurement validity has been argued as a fairness concern~\cite{jacobs2021}. Responsible software engineering has been introduced as a topic~\cite{schieferdecker2019} and applied to online safety~\cite{zhang2025}. In a preliminary, non-systematic search we did not identify an evaluation study that examines these benchmark-label and oracle-accountability issues for behaviour-change evidence in legacy batch code. Commercial JCL analysis tools were not evaluated.
+
+\section{Research Approach}
+We ask three questions. \textbf{RQ1:} What benchmark-integrity problems affect evaluations of behaviour-change detection for JCL? \textbf{RQ2:} How do the oracle's observable boundary and the label choices change the reported comparison? \textbf{RQ3:} Which minimum practices would make such evidence inspectable by the people who rely on it?
+
+All quantitative evidence comes from two JCL-SemBench files, \texttt{cases.jsonl} (which records SHA-256 of both file versions) and frozen detector predictions. No anonymised artifact has yet been prepared for reviewers. Counts were recomputed from these files. \ifdefined\AnonFlag The software is not linked in the anonymous version. \else The software is available at \url{https://github.com/ManasSakthivel/RELIC} (no archival DOI was found; the release status is unconfirmed). \fi We do not use the earlier RELIC V1.0.0 evaluation with its three corpora, and we do not merge its numbers with the benchmark analysed here. Detectors are binary, so we report confusion counts and MCC, not threshold curves. Inference treats the 16 base programs as clusters, because mutations of one program are not independent. We use an exact cluster-level randomisation test (all $2^{16}$ assignments of the two detectors' predictions within clusters), and percentile cluster bootstrap intervals (10{,}000 resamples, seed 20261004). Label sets are defined as follows: L0 is the original labelling; L1 relabels the 15 identical CHANGING pairs as PRESERVING; L2 is L1 without the 13 non-identical disagreements and the abstention (sembench\_172); L3 is L1 with the 13 non-identical disagreements given the oracle's verdict, with the abstention excluded. L1 is an analytical adjustment that we use as the no-op-adjusted baseline; it is not independent ground truth. L3 is an oracle-derived sensitivity scenario, not ground truth.
+
+The only automated cross-check of the author labels is the oracle; it shares authorship with the benchmark and does not provide independent human validation. The oracle and the labels share the authors' evaluation process, and independent practitioner adjudication has not been completed. The 151 pairs marked ``validated'' are validated by that oracle and a written argument from the same group. The L3 relabelling uses oracle verdicts, so L3 is not independent of the oracle. No practitioner has labelled any pair, and no held-out corpus exists.
+
+\section{Preliminary Findings}
+\subsection{Benchmark integrity (RQ1)}
+Table~\ref{tab:integrity} gives the counts. Each denominator is the number of pairs or groups shown. A byte-identical pair cannot be a behaviour-changing edit, so the 15 CHANGING labels on identical pairs are wrong by construction; their rationales describe edits that the generator did not apply. Duplicate groups share both original and transformed bytes. They are not independent observations, and five of the 21 groups assign different labels to byte-identical content. Any evaluation that counts them separately gives them undue weight. Duplicate and identical pairs also cannot be scored independently.
+
+\begin{table}[t]
+\caption{Benchmark-integrity findings in JCL-SemBench (180 pairs). Counts recomputed from \texttt{cases.jsonl}.}
+\label{tab:integrity}
+\centering
+\small
+\begin{tabular}{@{}p{4.7cm}p{2.6cm}@{}}
+\toprule
+Finding & Count \\
+\midrule
+Pairs (CHANGING / PRESERVING) & 180 (93 / 87) \\
+Byte-identical original and transformed files & 25 (15 CHANGING, 10 PRESERVING) \\
+Duplicate groups (pairs in them) & 21 (46 pairs) \\
+Duplicate groups with conflicting labels & 5 \\
+Oracle disagrees with author label & 28 (15 identical, 13 not) \\
+Oracle abstains & 1 \\
+CHANGING labels the oracle returns as EQUIVALENT & 10 of 93 (8 distinct edits) \\
+Completed independent label reviews & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Oracle scope and label interpretation (RQ2)}
+The oracle can confirm or refute a label only inside its observables. Ten CHANGING labels concern effects that the oracle returns as EQUIVALENT: four are SHR-to-OLD enqueue changes (three distinct edits), one is a change in the record count of an output stream, and five are CATLG-to-KEEP catalogue changes (four distinct edits). The oracle treats CATLG and KEEP alike, because it compares catalogue membership only for existence. For the catalogue cases the premise of the label, that the dataset is SMS-managed, is not modelled either. So the oracle cannot confirm or refute these labels, and whether they are label errors or oracle blindness is not decided here. Three PRESERVING pairs are classified DIFFERENT for identity effects rather than behavioural ones. Two of them (078 and 079) rename steps, and identity is by name. The third (036) differs only in the quoting of a parameter, and the literal text enters a dataset version label that a later step reads. Whether the two quoting styles denote the same z/OS parameter has not been checked.
+
+We do not claim that the broader reading is more correct. The observable boundary is a design choice, and a different boundary would relabel some cases.
+
+\subsection{Comparison and sensitivity (RQ2)}
+Table~\ref{tab:compare} reports the comparison with the normalized text baseline (text B), the strongest of the text variants on every label set. RELIC V2 misses 55 of the 78 CHANGING pairs on L1 and has no true positive that text B misses. Text B's point-estimate advantage has the same sign in all four sets. Its size does not. The gap is $-0.170$ on L3, the oracle-derived sensitivity scenario, and $-0.336$ on L1. The exact cluster test is significant at 0.05 on L0 to L2, and not on L3 ($p=0.089$). On L1, dropping one base program at a time gives gaps between $-0.3645$ and $-0.3134$. Keeping one copy of each duplicate group gives $-0.3375$ on 155 unique pairs, so deduplication has little effect on the L1 comparison. Taken together, the size of the comparison depends on the label choice, and the sign is the only part that holds across the sets examined.
+
+\begin{table}[t]
+\caption{MCC of RELIC V2 and normalized text B under four label sets. Intervals are 95\% cluster bootstrap over 16 base programs. $\Delta$ is RELIC V2 minus text B, with exact cluster-level $p$.}
+\label{tab:compare}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Label set & RELIC V2 & Text B & $\Delta$ & $p$ \\
+\midrule
+L0 (original) & 0.324 & 0.525 & $-0.201$ & 0.015 \\
+ & [0.248, 0.382] & [0.420, 0.629] & [$-0.299$, $-0.102$] & \\
+\addlinespace[2pt]
+L1 (no-op-adjusted) & 0.394 & 0.731 & $-0.336$ & 0.002 \\
+ & [0.306, 0.456] & [0.666, 0.803] & [$-0.444$, $-0.256$] & \\
+\addlinespace[2pt]
+L2 (excl.\ disputed) & 0.488 & 0.738 & $-0.250$ & 0.010 \\
+ & [0.349, 0.584] & [0.672, 0.808] & [$-0.394$, $-0.147$] & \\
+\addlinespace[2pt]
+L3 (oracle verdicts) & 0.503 & 0.673 & $-0.170$ & 0.089 \\
+ & [0.348, 0.610] & [0.616, 0.744] & [$-0.344$, $-0.040$] & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Statistical accountability}
+Three features of the analysis matter for responsibility. First, the test unit is the base program, not the pair. Second, the bootstrap and exact procedures disagree on L3. Under L3 the exact cluster-level randomisation test does not reject at the 0.05 level ($p=0.089$), while the percentile cluster-bootstrap interval excludes zero. This illustrates sensitivity to the inferential procedure with only 16 base-program clusters; inference with clustered errors can require bootstrap improvements~\cite{cameron2008}. We treat the exact test as primary and interpret the L3 comparison cautiously. Third, the McNemar test on per-pair correctness treats duplicated pairs as independent; its $p$-values (0.002, 0.002, 0.029, 0.314 on L0 to L3) differ from the cluster test, so we report it only for continuity.
+
+\section{A Five-Dimension Framework for Responsible Evaluation}
+The five dimensions answer five accountability questions: who defines the observable boundary (the tool developer, dimension 2); who curates and labels the benchmark (the benchmark curator, dimension 1); who checks the labels independently (an independent reviewer, dimension 3); who decides whether the evidence is sufficient (the evaluation author, dimension 4); and what uncertainty the adopting team receives (dimension 5). A ``no change'' verdict drawn from labels that contain undecided cases can license an unreviewed behaviour change. We did not measure that cost, and the framework does not claim to prevent it. The framework below is proposed from the findings above. It is a preliminary organising aid, not a validated standard, and no external party has applied it. Each row names a risk we observed, a practice that would address it, and the artifact that would show compliance. Table~\ref{tab:framework} lists them.
+
+\begin{table*}[t]
+\caption{Proposed framework. Each dimension names the role that holds the responsibility, an observed risk, the practice that would address it, and the artifact that would show it. Status is what this study established.}
+\label{tab:framework}
+\centering
+\small
+\begin{tabular}{@{}p{2.2cm}p{2.0cm}p{4.0cm}p{4.0cm}p{3.8cm}@{}}
+\toprule
+Dimension & Responsible role & Observed risk & Practice & Artifact (status here) \\
+\midrule
+1. Transformation validity & Benchmark curator & 25 byte-identical pairs, including 15 labelled CHANGING; 21 duplicate groups (46 pairs), 5 with conflicting labels & Check byte-level no-op and duplicate status before labelling; record provenance of each transformation & Hash table per pair (done) \\
+2. Oracle transparency & Tool developer & 10 of 93 CHANGING labels returned EQUIVALENT by an oracle that does not distinguish them; identity-by-name verdicts & Declare observables; mark each label inside, outside or unclear relative to the boundary; report uncertainty instead of forcing a binary label & Boundary classification by one author (done) \\
+3. Independent scrutiny & Independent reviewer & 13 non-identical oracle disagreements and one abstention without independent adjudication; no independent review & Blind review of labels; adjudication log; keep disagreements in the record & Review package with no returned responses (not completed) \\
+4. Statistical accountability & Evaluation author & Pair-level inference overstates certainty; sign stable but size unstable & Cluster by base program; report sensitivity to label choice; report exact tests with their units & Exact cluster test, leave-one-out, sensitivity table (done) \\
+5. Decision transparency & Adopting team & 55 of 78 CHANGING pairs missed on L1 (16 disposition, 12 condition, 12 return-code, 10 dataset, 5 reorder) & Report false-negative and false-positive counts with the decision each would affect; state what a ``no change'' verdict licenses & Miss counts by type (done); decision consequence (not done) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The framework is not complete. Dimensions 3 and 5 depend on work not yet done: an independent review would show whether the author labels match practitioner judgement, and a consequence analysis would show what the misses cost. We include them because a framework without them would present the author's own labels as reviewed evidence.
+
+\section{Limitations and Roadmap}
+\label{sec:limits}
+The study has one benchmark, one oracle, and one tool, all built by the same group. No practitioner has labelled any pair. The review package has no returned responses, so no human agreement is reported. No held-out repository exists: every program was seen during development, and the 180 pairs come from 16 base programs, of which one contributes 30 pairs and four public corpus programs contribute seven. An external run was not blind and uses the same oracle, so we do not report it as validation. An exploratory language-model run was excluded from the reported comparison because its coverage was incomplete and non-random: it answered 155 of 180 pairs, and its missing pairs are associated with the label. Its outputs are retained for transparency, and no comparative claim is made. The z/OS equivalence of the two quoting styles in one case is unchecked. An earlier internal analysis of the original labels reached the same value on L0; it has not been published and is not cited. Our literature search was incomplete.
+
+The next steps, in order, are: (1) independent practitioner labelling of a blind sample, with agreement reported by category; (2) a held-out set of programs from repositories not used in development; (3) a frozen comparison against detectors that other groups built; (4) a consequence analysis linking each class of error to a maintenance decision; and (5) an external application of the framework by researchers or practitioners who did not design it.
+
+\section{Conclusion}
+A legacy change-detection tool's reported effectiveness depends on the evidence behind it, and that evidence has responsibilities attached. On this benchmark, the label choices (relabelling identical pairs, the 13 non-identical disagreements, and labels outside the oracle's observable scope) change the size of the reported comparison, while deduplication alone has little effect; the point-estimate sign does not change. We propose five evaluation practices that make such evidence inspectable, and we state which parts have been checked and which have not. The contribution is an accounting and a framework that other evaluations can apply and test, not a claim that the tool, the oracle, or the benchmark is generally valid or invalid.
+
+\bibliographystyle{IEEEtran}
+\bibliography{ResponsibleSE2027_Final_References}
+
+\end{document}

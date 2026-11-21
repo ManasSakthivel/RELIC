@@ -1,3 +1,6 @@
+# NOTE (final audit): the bootstrap intervals in this script use Python random resampling and are SUPERSEDED.
+# Authoritative intervals: results/final_go/bootstrap_original_method.json (reports/final_go/bootstrap_reproduction.py).
+# Exact p-values in this script are unaffected.
 """Label-set sensitivity for JCL-SemBench v1.1. Uses only committed predictions and labels.
 
 Label sets:

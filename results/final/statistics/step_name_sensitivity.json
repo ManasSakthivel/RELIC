@@ -1,0 +1,26 @@
+[
+  {
+    "scenario": "L1 (C1 only)",
+    "mcc_relic_v2": 0.3944,
+    "mcc_text_B": 0.7307,
+    "delta_mcc": -0.3362
+  },
+  {
+    "scenario": "L1 + 078,079 relabelled CHANGING (oracle verdict DIFFERENT)",
+    "mcc_relic_v2": 0.449,
+    "mcc_text_B": 0.7473,
+    "delta_mcc": -0.2983
+  },
+  {
+    "scenario": "L1 + 10 disputed CHANGING relabelled PRESERVING (oracle EQUIVALENT)",
+    "mcc_relic_v2": 0.4491,
+    "mcc_text_B": 0.651,
+    "delta_mcc": -0.2019
+  },
+  {
+    "scenario": "L1 + both of the above (decomposes L3 approx.)",
+    "mcc_relic_v2": 0.5034,
+    "mcc_text_B": 0.6665,
+    "delta_mcc": -0.1631
+  }
+]

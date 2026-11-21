@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
 s = json.load(open("results/final/statistics/sensitivity_three_way.json"))["sets"]
 sets = ["L0_original", "L1_C1_corrected", "L2_C1_excl_unresolved", "L3_C1_oracle_relabel_unresolved"]
-labels = ["L0\noriginal\n(n=180)", "L1\nC1-corrected\n(n=180)", "L2\nC1, excl. 14\nunresolved (n=166)", "L3\nC1 + oracle\nrelabel (n=179)*"]
+labels = ["L0\noriginal\n(n=180)", "L1\nC1\n(n=180)", "L2\nexcl. 14\n(n=166)", "L3\noracle\n(n=179)"]
 dets = [("relic_v2", "RELIC V2", "#1f4e79", -0.12), ("normalized_text_B", "Normalized text B", "#b5651d", 0.12)]
 plt.rcParams.update({"font.family": "serif", "font.size": 8, "pdf.fonttype": 42})
 fig, ax = plt.subplots(figsize=(3.5, 2.4))

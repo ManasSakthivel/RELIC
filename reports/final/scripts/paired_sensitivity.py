@@ -1,3 +1,6 @@
+# NOTE (final audit): the bootstrap intervals in this script use Python random resampling and are SUPERSEDED.
+# Authoritative intervals: results/final_go/bootstrap_original_method.json (reports/final_go/bootstrap_reproduction.py).
+# Exact p-values in this script are unaffected.
 """Paired comparison RELIC V2 vs normalized_text_B on each label set (frozen v1.1 analysis).
 Cluster bootstrap of the MCC difference (base_id clusters, 10,000 resamples, seed 20261004) and
 exact McNemar test on per-case correctness. Reuses label sets from sensitivity_v1_1.py logic.

@@ -1,0 +1,46 @@
+{
+  "steps": [
+    {
+      "step": "L1 (C1 applied)",
+      "cases": null,
+      "gap": -0.3362,
+      "delta_from_previous": null
+    },
+    {
+      "step": "+ PRESERVING disputed, oracle DIFFERENT -> CHANGING (036,078,079)",
+      "cases": [
+        "sembench_036",
+        "sembench_078",
+        "sembench_079"
+      ],
+      "gap": -0.3118,
+      "delta_from_previous": 0.0245
+    },
+    {
+      "step": "+ CHANGING disputed, oracle EQUIVALENT -> PRESERVING (10)",
+      "cases": [
+        "sembench_117",
+        "sembench_118",
+        "sembench_120",
+        "sembench_121",
+        "sembench_124",
+        "sembench_126",
+        "sembench_127",
+        "sembench_129",
+        "sembench_130",
+        "sembench_165"
+      ],
+      "gap": -0.1767,
+      "delta_from_previous": 0.135
+    },
+    {
+      "step": "+ abstention excluded (172)",
+      "cases": [
+        "sembench_172"
+      ],
+      "gap": -0.17,
+      "delta_from_previous": 0.0068
+    }
+  ],
+  "L3_recomputed_gap": -0.3362
+}

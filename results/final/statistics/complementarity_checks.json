@@ -1,0 +1,26 @@
+{
+  "L0": {
+    "n": 180,
+    "relic_only_true_positives": [],
+    "relic_flags_not_text_flags": [],
+    "text_recall": 0.8387
+  },
+  "L1": {
+    "n": 180,
+    "relic_only_true_positives": [],
+    "relic_flags_not_text_flags": [],
+    "text_recall": 1.0
+  },
+  "L2": {
+    "n": 166,
+    "relic_only_true_positives": [],
+    "relic_flags_not_text_flags": [],
+    "text_recall": 1.0
+  },
+  "L3": {
+    "n": 179,
+    "relic_only_true_positives": [],
+    "relic_flags_not_text_flags": [],
+    "text_recall": 1.0
+  }
+}

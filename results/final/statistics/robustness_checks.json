@@ -1,0 +1,75 @@
+{
+  "mcc": {
+    "normalized_text_A": {
+      "L0": 0.4511,
+      "L1": 0.6734,
+      "L2": 0.6768,
+      "L3": 0.6198
+    },
+    "normalized_text_B": {
+      "L0": 0.5249,
+      "L1": 0.7307,
+      "L2": 0.7378,
+      "L3": 0.6728
+    },
+    "raw_text": {
+      "L0": -0.067,
+      "L1": 0.3512,
+      "L2": 0.3464,
+      "L3": 0.3229
+    },
+    "relic_v1_0": {
+      "L0": 0.2363,
+      "L1": 0.2926,
+      "L2": 0.3831,
+      "L3": 0.4042
+    },
+    "relic_v1_1": {
+      "L0": 0.3241,
+      "L1": 0.3944,
+      "L2": 0.4875,
+      "L3": 0.5028
+    },
+    "relic_v2": {
+      "L0": 0.3241,
+      "L1": 0.3944,
+      "L2": 0.4875,
+      "L3": 0.5028
+    },
+    "textdiff": {
+      "L0": 0.1761,
+      "L1": 0.4824,
+      "L2": 0.4788,
+      "L3": 0.4437
+    },
+    "textdiff_ignore_job_parameters": {
+      "L0": 0.302,
+      "L1": 0.5649,
+      "L2": 0.5634,
+      "L3": 0.5197
+    }
+  },
+  "cluster_swap": {
+    "n_clusters": 16,
+    "L0": {
+      "observed_delta": -0.2008,
+      "p_two_sided_exact": 0.01538,
+      "assignments": 65536
+    },
+    "L1": {
+      "observed_delta": -0.3362,
+      "p_two_sided_exact": 0.00195,
+      "assignments": 65536
+    },
+    "L2": {
+      "observed_delta": -0.2503,
+      "p_two_sided_exact": 0.00964,
+      "assignments": 65536
+    },
+    "L3": {
+      "observed_delta": -0.17,
+      "p_two_sided_exact": 0.08875,
+      "assignments": 65536
+    }
+  }
+}

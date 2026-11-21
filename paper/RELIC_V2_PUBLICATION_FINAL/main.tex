@@ -9,9 +9,10 @@
 \usepackage[hidelinks]{hyperref}
 \graphicspath{{figures/}}
 
+
 \begin{document}
 
-\title{Benchmark and Oracle Reliability in Evaluating Semantic Change Detection for Legacy Software: A Negative Empirical Study}
+\title{Oracle Scope Shapes the Margin: Benchmark Labels and Semantic Change Detection for Legacy JCL}
 
 \author{\IEEEauthorblockN{Anonymous Submission}
 \IEEEauthorblockA{Author details withheld for double-blind review}}
@@ -19,7 +20,7 @@
 \maketitle
 
 \begin{abstract}
-Legacy batch systems encode behaviour in job control language (JCL), where small edits can change outcomes silently. Semantic change detectors promise to flag such edits, but their evaluations rest on benchmark labels and oracle assumptions that are rarely audited. We study RELIC V2, a static JCL contract analyser, against a normalized text-diff baseline on JCL-SemBench (180 pairs) and on an external run of 824 mutants. A byte-level audit found 15 labelled-CHANGING pairs whose two files are identical, which we corrected in a versioned release (v1.1) while keeping the original labels. Across four label sets, RELIC V2 has lower MCC than normalized text B in every case: $-0.20$ on the original labels, $-0.34$ after correction, $-0.25$ after excluding 14 unresolved cases, and $-0.17$ when those cases take the oracle's verdict. The sign is stable; the size is not. The paired MCC interval excludes zero in all four sets, but the exact McNemar test is not significant when the oracle relabels the unresolved cases ($p=0.31$). RELIC V2 detects no changing case that the text baseline misses in any label set. The external run is not blind, uses the same oracle, and is almost fully determined by mutation operator (one rule matches 821 of 824 labels). No independent practitioner or held-out subject was available, so all evidence is development or same-author evidence.
+Semantic change detectors for legacy batch code are scored against labels from an oracle, and the oracle sees only part of what a change can alter. We evaluate RELIC V2, a static contract analyser for job control language (JCL), against a normalized text-diff baseline on JCL-SemBench, a 180-pair benchmark built with its oracle by the same group. A byte-level audit found 15 pairs labelled behaviour-changing whose files are identical; we report a corrected label set and keep the original labels. Of the 14 disputed labels, ten assert an effect outside the oracle's declared observables. On this benchmark the normalized text baseline has higher MCC than RELIC V2 under all four label sets, with gaps from $-0.17$ to $-0.34$. An exact cluster-level test gives $p\le0.015$ on three of the four sets and $p=0.089$ on the set that follows the oracle. RELIC V2 detects no changing case that the text baseline misses. The size of the comparison depends on which labels are kept, so we argue that an oracle's observable boundary is part of the measurement. This is a preliminary negative result: the labels are not independent, and no held-out corpus or human validation exists.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -27,156 +28,223 @@ legacy modernisation, job control language, semantic change detection, benchmark
 \end{IEEEkeywords}
 
 \section{Introduction}
-Mainframe batch jobs written in JCL sequence programs, datasets and return-code guards. Re-implementing or refactoring them can alter behaviour without a visible failure, and the obligations behind a job are rarely written down. Automated analysis that flags behaviour-changing edits is therefore attractive for legacy modernisation.
+Batch jobs written in JCL sequence programs, datasets and return-code guards. A change to a job can alter which steps run and which datasets exist, without any change to program text, and the obligations behind a job are rarely written down. Tools that flag such changes are attractive for modernisation, and they are judged against labelled benchmarks.
 
-RELIC V2 extracts job-level contracts (temporal ordering, dataset resources and conditional control flow) and reports the contracts a change breaks. Its appeal is that it names the violated contract, which a textual check cannot. The question that matters is whether this semantic structure detects more real changes than a cheap normalized text diff, and whether the benchmark can tell the two apart.
+RELIC V2 extracts job-level contracts (temporal order, dataset resources and conditional control flow) and reports the contracts a change breaks. Its appeal is that it names the violated contract. The question for a modernisation team is whether this structure detects more real changes than a cheap normalized text diff. The question for a researcher is whether the benchmark can answer that at all.
 
-We report a negative empirical study. We do not claim RELIC V2 fails in general. On the available evidence its contract layer does not detect more behaviour changes than normalized text comparison, and benchmark label choices change the size of the reported gap. Our contributions are: (i) a byte-level audit of a published benchmark that found and corrected a label defect while preserving the original labels; (ii) a four-way label-set sensitivity analysis of the comparison, with paired intervals and exact McNemar tests; (iii) an error-overlap analysis showing that RELIC V2 has no true positive the text baseline misses; and (iv) reporting practices for evaluating semantic analysers, tied to responsible evaluation.
+We report a negative empirical study with one central claim. In this case study, the measured value of a semantic change detector depends on the observable boundary of the oracle that labels the benchmark. When a label asserts an effect outside that boundary, the oracle cannot confirm or refute it, and the comparison changes with the label choice. Our contributions are: (i) a byte-level audit that found a label defect, and a corrected label set that keeps the original labels; (ii) a four-label-set analysis with paired cluster-level inference and exact McNemar tests reported side by side; (iii) a classification of the 14 disputed cases against the oracle's declared observables; and (iv) a worked example of how one oracle's observables constrain the labels it can check.
 
-\section{Background and Motivation}
-JCL jobs are sequences of steps. A step runs a program with dataset disposition (DISP) and condition (COND) parameters, and later steps depend on datasets written by earlier ones. A change such as moving a consumer before its producer, altering a disposition or removing a return-code guard can change which datasets exist and which steps run, without touching program text.
+\section{Background and Related Work}
+A step runs a program under a disposition (DISP) and a condition (COND). Later steps depend on datasets that earlier steps write. Mutation analysis is a standard way to build labelled change benchmarks, and mutation-based oracle creation selects which observable variables an oracle checks~\cite{staats2012}, but equivalent and redundant mutants distort scores, and the oracle decides which mutants count~\cite{andrews2005,jia2011,papadakis2016}. The oracle problem has been surveyed for software testing generally~\cite{barr2015}, and the oracle has been studied as the basis of test adequacy~\cite{staats2011}. Label noise distorts defect-prediction benchmarks~\cite{herzig2013}, and label noise in classification has a broad literature~\cite{frenay2014}. Equivalent-mutant judgement is now delegated to language models~\cite{tian2024}.
 
-Mutation analysis is a standard way to build labelled change benchmarks, but mutants are not representative faults, and equivalent or redundant mutants distort scores~\cite{andrews2005,jia2011,papadakis2016}. Equivalent-mutant judgement is now delegated to language models~\cite{tian2024}, and LLM-based legacy analysis has been reported for COBOL and PL/I~\cite{kalohia2026}. RELIC's contract graph is job-level rather than a program dependence graph~\cite{ferrante1984,horwitz1988}. Static COBOL control-flow work exists~\cite{deknop2022}, and semantic change validation has been studied for Python~\cite{changeguard2025}. We found no peer-reviewed evaluation of JCL contract checking against an execution-semantics oracle. Our search was incomplete, and commercial tools and patents cover JCL dependency extraction, which we do not evaluate.
+Semantic differencing predates our work. Jackson and Ladd summarised the effects of modifications~\cite{jackson1994}, and SymDiff compares imperative programs through a language-agnostic semantic diff~\cite{lahiri2012}. Our contract graph is job-level rather than a program dependence graph~\cite{ferrante1987,horwitz1988}. Static COBOL control-flow work exists~\cite{deknop2022}, and semantic change validation has been studied for Python~\cite{changeguard2025}. We found no peer-reviewed evaluation of JCL contract checking against an execution-semantics oracle. Our search was incomplete, and commercial tools cover JCL dependency extraction, which we do not evaluate.
+
+The effect that an oracle's observables limit what its verdicts show is close to the oracle-observability work cited above~\cite{staats2012,staats2011}, and we do not claim it as new. What we add is an exact, per-case accounting for one JCL benchmark: which labels are defective, which disputed labels fall outside the oracle's boundary, and how far each choice moves the comparison.
 
 \section{Research Questions}
 \begin{description}
-\item[RQ1] Does RELIC V2 detect behaviour-changing JCL edits more accurately than a normalized text-diff baseline, and does the answer depend on the label set?
+\item[RQ1] Does RELIC V2 detect behaviour-changing JCL edits more accurately than a normalized text diff, and does the answer hold across label sets?
 \item[RQ2] Does RELIC V2 detect any changing case that the text baseline misses?
-\item[RQ3] How much of the reported comparison depends on benchmark defects and unresolved oracle disagreements?
+\item[RQ3] How much of the comparison depends on labels that the oracle's observable boundary cannot evaluate?
 \end{description}
-The decision rules for RQ1 and RQ2 were written into a file after the aggregate results were known. They are therefore not confirmatory, and we do not describe them as pre-registered. Everything else is exploratory.
+The decision rules were written in an analysis plan after the aggregate results were known (withheld for review). They are analysis rules, not confirmatory tests.
 
 \section{Methodology}
-Figure~\ref{fig:pipeline} shows the evaluation pipeline and the status of each evidence source.
+Figure~\ref{fig:pipeline} shows the pipeline and the status of each evidence source. All development evidence uses one benchmark and one oracle built by the same group. No independent labels exist.
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{fig0_evaluation_pipeline.pdf}
-\caption{Evaluation pipeline and evidence status. Grey: development evidence (JCL-SemBench, same-author oracle). Blue: external evidence (same oracle, not blind). Yellow: post hoc analyses and the audit. Red dashed: independent evidence, which does not exist for RELIC V2.}
+\caption{Evaluation pipeline and evidence status. Grey: development evidence (JCL-SemBench, same-group oracle). Blue: external evidence (same oracle, not blind). Yellow: post hoc analyses and audit. Red dashed: independent evidence, which does not exist for this study.}
 \label{fig:pipeline}
 \end{figure*}
 
-\subsection{Benchmark, oracle and label sets}
-JCL-SemBench contains 180 original-and-transformed JCL pairs (93 labelled CHANGING, 87 PRESERVING) from 16 base programs. Each label is the benchmark author's expectation, checked against a separately written execution-semantics oracle. The oracle simulates both versions under return-code and abend scenarios and returns DIFFERENT (an observable differs in some scenario), EQUIVALENT (none differs and every changed step is modelled) or UNDETERMINED. The oracle shares no code with RELIC V2 but has the same author.
+\subsection{Oracle and its observable boundary}
+The oracle simulates both versions of a job under return-code and abend scenarios and compares their externally observable behaviour: the execution status and return code of every step, the dataset versions each read sees, the existence and version of permanent datasets at job end, and the termination. Steps are identified by name, so renaming a step is treated as removing one step and adding another. The implemented verdict (\texttt{judge.compare\_versions}) is DIFFERENT if an observable differs in some scenario; UNDETERMINED if no observable differs but the context of an opaque step (a step whose program the oracle cannot model) differs in its job position, predecessors, dataset references and statuses, in-stream data or program; and EQUIVALENT otherwise. The oracle's docstring describes a stricter condition (every changed step fully modelled). The implementation does not check that, so EQUIVALENT means only that no modelled observable differs in any scenario. Changes outside those observables are not examined. Existing datasets default to KEEP in the simulator, so catalogue membership at job end is compared only for existence.
 
-We audited every pair by byte comparison and by oracle agreement. Fifteen CHANGING pairs have identical original and transformed files (\texttt{cmp} confirms equality for all fifteen), and each carries a rationale describing an edit that never reached the file. The generator has no assertion that the transformed file differs from the original. For these pairs the label describes a change the artefact does not contain. We therefore define four label sets:
-\begin{description}
-\item[L0] the original labels, as published;
-\item[L1] correction C1: the 15 byte-identical CHANGING pairs relabelled PRESERVING (evidence: byte equality; confidence high);
-\item[L2] L1 excluding the 14 unresolved cases (13 non-identical oracle disagreements and one oracle abstention);
-\item[L3] L1 with the 14 unresolved cases given the oracle's verdict (DIFFERENT as CHANGING, EQUIVALENT as PRESERVING; the abstention is excluded). This is an upper bound on how much the unresolved cases could move the result, not ground truth.
-\end{description}
-Original labels are preserved in the released dataset. The unresolved cases were classified by the authors from their diffs and the oracle's recorded evidence (Section~\ref{sec:audit}). That classification is not independent, and no practitioner reviewed it.
+We take CHANGING to mean that the job's behaviour differs under the oracle's scenarios, within the oracle's observables. The benchmark's original labels are the generator's expectations, and the oracle is the only independent check on them.
 
-\subsection{Detectors and baselines}
-Detectors are binary and emit no score, so only one operating point per detector exists and no precision--recall curve is computed. RELIC V2 flags a pair when its contract diff is non-empty. The primary text baseline is \texttt{normalized\_text\_B}, which strips comments, joins continuations, collapses whitespace, ignores case outside quotes and sorts keyword operands. Plain text diff is a reference point. The same detector outputs are used for every label set; only labels change.
+\subsection{Benchmark and label sets}\label{sec:labels}
+JCL-SemBench contains 180 original-and-transformed pairs (93 labelled CHANGING, 87 PRESERVING) from 16 base programs. Twelve base programs are synthetic and written by the authors; four come from public corpora and contribute seven pairs. One synthetic program contributes 30 pairs. A byte comparison found 25 identical pairs. Fifteen of them are labelled CHANGING, and their rationales describe edits that the generator did not apply.
 
-\subsection{Statistics}
-MCC, precision, recall, F1 and specificity are computed from confusion matrices. Intervals are percentile cluster bootstraps with 10{,}000 resamples and seed 20261004, clustered on the 16 base programs. The paired difference is RELIC V2 minus normalized text B, resampled over the same clusters. McNemar tests are exact, on per-case correctness. Holm correction is reported only for the original analysis (L0), over the published 14-test family and the 27 and 42 distinct tests.
+We define four label sets. L0 is the original labelling. L1 applies correction C1: the 15 identical CHANGING pairs become PRESERVING, which rests on byte equality. L2 is L1 without the 14 disputed cases: 13 non-identical oracle disagreements and one abstention. L3 is L1 with the 13 disagreements given the oracle's verdict (DIFFERENT as CHANGING, EQUIVALENT as PRESERVING), with the abstention excluded. L3 is a scenario, not ground truth. Section~\ref{sec:audit} shows that its oracle verdicts are fixed by the observable boundary.
 
-\textbf{Reproduction note.} Our recomputation reproduces every point estimate on L0 (for example RELIC V2 MCC 0.324, normalized text B 0.525, difference $-0.201$). Our intervals differ slightly from those in the original analysis: RELIC V2 MCC [0.263, 0.371] here against [0.248, 0.382] originally, and the paired difference $[-0.301,-0.096]$ against $[-0.299,-0.102]$. We have not determined the cause; the point estimates match exactly, so the difference is in the interval computation. The new intervals are used for every label set in this paper.
+\subsection{Detectors and statistics}\label{sec:stats}
+Detectors are binary. RELIC V2 flags a pair when its contract diff is non-empty. The primary text baseline is normalized text B, which strips comments, joins continuations, collapses whitespace, ignores case outside quotes and sorts keyword operands. It is the strongest text variant on every label set (Table~\ref{tab:all}), so the choice does not favour RELIC V2. Detector outputs are fixed across label sets.
+
+We report MCC and the related confusion-matrix metrics. Two inference procedures answer different questions, and we report both. (a) An exact cluster-level paired randomisation test: for each of the 16 base programs, the two detectors' predictions are swapped or kept, giving $2^{16}$ assignments; $p$ is the two-sided share with a change at least as large as observed. This test respects the duplicated and clustered structure. (b) An exact McNemar test on per-case correctness. It treats pairs as independent, which the duplicated pairs and shared base programs violate, so its $p$-values are anticonservative. Percentile cluster bootstraps (10{,}000 resamples, seed 20261004) give the intervals in Table~\ref{tab:main}. With 16 clusters they may under-cover, so we use the exact test for inference. $p$-values are unadjusted across label sets and are exploratory.
+
+We recomputed L0 point estimates from the committed predictions and they match the original analysis. Intervals use the repository's original cluster bootstrap (seed 20261004, percentile 95\%); a re-implementation (\texttt{reports/final\_go/bootstrap\_reproduction.py}) reproduces the published L0 intervals.
 
 \section{Results}
-\subsection{RQ1: accuracy under four label sets}
-Table~\ref{tab:main} gives the confusion matrices and metrics. On L0, RELIC V2 has precision 0.920 but recall 0.247, and normalized text B has recall 0.839 at precision 0.736. The MCC gap is $-0.201$ on L0. After correction (L1) both detectors gain MCC, but normalized text B gains more, and the gap widens to $-0.336$ [$-0.445$, $-0.252$]. Excluding the unresolved cases (L2) gives $-0.250$ [$-0.392$, $-0.143$]. Relabelling them by oracle verdict (L3) gives $-0.170$ [$-0.345$, $-0.040$].
+\subsection{RQ1: accuracy across label sets}
+Table~\ref{tab:main} gives the confusion matrices and metrics. On L0, RELIC V2 has precision 0.920 and recall 0.247, while normalized text B has recall 0.839 at precision 0.736. Its MCC is 0.324 against 0.525. Correction C1 raises both MCCs, but the text baseline rises more, and the gap widens to $-0.336$. Excluding the disputed cases (L2) gives $-0.250$. Relabelling them by the oracle (L3) gives $-0.170$.
 
-The sign is the same in all four sets: normalized text B has higher MCC than RELIC V2. The magnitude ranges from $-0.17$ to $-0.34$, so a single number misstates the result. The correction matters most for the text baseline, because the defective labels had counted byte-identical pairs as missed changes, which penalised a high-recall detector. On the original labels, the defect understated RELIC V2's deficit.
+The sign of the gap is the same in all four sets. Its size is not. Across every assignment of the 13 disagreements (exhaustive over $2^{13}$ labelings, with the abstention 172 kept at its original label, unlike L3), the gap lies between $-0.350$ and $-0.163$. Dropping the 25 identical pairs, on the L1 base, gives $-0.319$ over 155 pairs, without deduplicating the 21 duplicate groups.
 
-On L0 the Holm-adjusted $p$ is $0.020$ for the published 14-test family, $0.029$ for the 27 distinct published tests and $0.054$ for the 42 distinct tests in our reanalysis; the decision rule does not use Holm. The exact McNemar test agrees with the MCC interval on L0, L1 and L2 ($p=0.002$, $0.002$, $0.029$). On L3 it is not significant ($p=0.31$, 35 cases where only RELIC V2 is correct against 45 where only the text baseline is), although the MCC interval still excludes zero. We report both and do not treat the McNemar test as the primary test.
+The cluster-level test gives $p=0.015$, $0.002$, $0.010$ and $0.089$ on L0–L3. On L3 the exact test is not significant at the 0.05 level, although the bootstrap interval $[-0.344,-0.040]$ excludes zero. The two procedures disagree on L3; we treat the exact test as the primary inference. McNemar gives $p=0.002$, $0.002$, $0.029$ and $0.314$. The disagreement is informative: under McNemar, the discordant counts (26 against 55) are identical on L0 and L1, while the MCC gap moves by $0.135$.
 
-Against plain text diff, RELIC V2 has higher MCC on L0 ($+0.148$ [$+0.038$, $+0.247$]), because plain diff flags 60 of the 87 PRESERVING pairs. Against the text diff that ignores JOB parameters, the difference is a tie ($+0.022$ [$-0.077$, $0.120$]). Against normalized text A (normalized text B without keyword-operand sorting) the L0 difference is $-0.127$ [$-0.219$, $-0.033$]. RELIC V2 is therefore beaten by the normalizing text rules and not by every text rule. We have not recomputed these alternative comparators on L1--L3.
+RELIC V2 has higher specificity than the text baseline in every set (0.977 on L0, rising to 1.000 on L2 and L3, against 0.678--0.747). Its two false positives on L0 are \texttt{sembench\_078} and \texttt{079}, both step renames that are among the disputed cases. Its precision of 1.000 on L2 therefore follows from the exclusion.
+
+Table~\ref{tab:all} extends the comparison to the other text variants. On L1--L3, RELIC V2 is below both normalized text B and the job-parameter-ignoring text diff. On L1--L3 it is above plain text diff only on L2 and L3 (by $0.009$ and $0.059$); on L0 it is also above plain text diff ($0.324$ against $0.176$). On L0 it is above the job-parameter variant by $0.022$, a difference we do not treat as meaningful.
+
+\begin{table}[t]
+\caption{MCC of every detector on each label set (point estimates from committed predictions; no intervals).}
+\label{tab:all}
+\centering
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Detector & L0 & L1 & L2 & L3 \\
+\midrule
+Normalized text B & 0.525 & 0.731 & 0.738 & 0.673 \\
+Normalized text A & 0.451 & 0.673 & 0.677 & 0.620 \\
+Text diff (ignore job parameters) & 0.302 & 0.565 & 0.563 & 0.520 \\
+Text diff & 0.176 & 0.482 & 0.479 & 0.444 \\
+Raw text & $-0.067$ & 0.351 & 0.346 & 0.323 \\
+RELIC V2 & 0.324 & 0.394 & 0.488 & 0.503 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{table*}[t]
-\caption{SemBench results under four label sets. Metrics from confusion matrices. Intervals are 95\% cluster bootstraps (16 base programs). $\Delta$MCC is RELIC V2 minus normalized text B, with its paired interval. $p$ is the exact McNemar test on per-case correctness.}
+\caption{SemBench results under four label sets: L0 original; L1 C1-corrected; L2 C1 excluding the 14 disputed cases; L3 C1 with the 13 disagreements given oracle verdicts and the abstention excluded. Text B is normalized text B. Metrics come from confusion matrices. MCC intervals are 95\% cluster bootstraps (16 base programs). $\Delta$MCC is RELIC V2 minus text B, with its bootstrap interval. $p$ is the exact cluster-level randomisation test on the paired difference.}
 \label{tab:main}
 \centering
 \small
-\begin{tabular}{@{}llcccccccl@{}}
+\begin{tabular}{@{}llccccccccl@{}}
 \toprule
-Label set & Detector & TP & FP & TN & FN & Prec. & Recall & F1 & MCC [95\%] \\
+Label set & Detector & TP & FP & TN & FN & Prec. & Recall & Spec. & F1 & MCC [95\%] \\
 \midrule
-L0 original (180) & RELIC V2 & 23 & 2 & 85 & 70 & 0.920 & 0.247 & 0.390 & 0.324 [0.263, 0.371] \\
- & Normalized text B & 78 & 28 & 59 & 15 & 0.736 & 0.839 & 0.784 & 0.525 [0.438, 0.607] \\
- & $\Delta$MCC $-0.201$ [$-0.301$, $-0.096$] & & & & & & & & $p=0.002$ \\
+L0 (180) & RELIC V2 & 23 & 2 & 85 & 70 & 0.920 & 0.247 & 0.977 & 0.390 & 0.324 [0.248, 0.382] \\
+ & Text B & 78 & 28 & 59 & 15 & 0.736 & 0.839 & 0.678 & 0.784 & 0.525 [0.420, 0.629] \\
+\multicolumn{11}{@{}l@{}}{$\Delta$MCC $-0.201$ [$-0.299$, $-0.102$], $p=0.015$} \\
 \midrule
-L1 C1-corrected (180) & RELIC V2 & 23 & 2 & 100 & 55 & 0.920 & 0.295 & 0.447 & 0.394 [0.325, 0.447] \\
- & Normalized text B & 78 & 28 & 74 & 0 & 0.736 & 1.000 & 0.848 & 0.731 [0.680, 0.792] \\
- & $\Delta$MCC $-0.336$ [$-0.445$, $-0.252$] & & & & & & & & $p=0.002$ \\
+L1 (180) & RELIC V2 & 23 & 2 & 100 & 55 & 0.920 & 0.295 & 0.980 & 0.447 & 0.394 [0.306, 0.456] \\
+ & Text B & 78 & 28 & 74 & 0 & 0.736 & 1.000 & 0.725 & 0.848 & 0.731 [0.665, 0.803] \\
+\multicolumn{11}{@{}l@{}}{$\Delta$MCC $-0.336$ [$-0.444$, $-0.256$], $p=0.002$} \\
 \midrule
-L2 C1, excl.\ 14 unresolved (166) & RELIC V2 & 23 & 0 & 99 & 44 & 1.000 & 0.343 & 0.511 & 0.488 [0.363, 0.567] \\
- & Normalized text B & 67 & 25 & 74 & 0 & 0.728 & 1.000 & 0.843 & 0.738 [0.686, 0.797] \\
- & $\Delta$MCC $-0.250$ [$-0.392$, $-0.143$] & & & & & & & & $p=0.029$ \\
+L2 (166) & RELIC V2 & 23 & 0 & 99 & 44 & 1.000 & 0.343 & 1.000 & 0.511 & 0.488 [0.349, 0.584] \\
+ & Text B & 67 & 25 & 74 & 0 & 0.728 & 1.000 & 0.747 & 0.843 & 0.738 [0.672, 0.808] \\
+\multicolumn{11}{@{}l@{}}{$\Delta$MCC $-0.250$ [$-0.394$, $-0.147$], $p=0.010$} \\
 \midrule
-L3 C1 + oracle-relabelled (179) & RELIC V2 & 25 & 0 & 109 & 45 & 1.000 & 0.357 & 0.526 & 0.503 [0.361, 0.592] \\
- & Normalized text B & 70 & 35 & 74 & 0 & 0.667 & 1.000 & 0.800 & 0.673 [0.625, 0.726] \\
- & $\Delta$MCC $-0.170$ [$-0.345$, $-0.040$] & & & & & & & & $p=0.314$ \\
+L3 (179) & RELIC V2 & 25 & 0 & 109 & 45 & 1.000 & 0.357 & 1.000 & 0.526 & 0.503 [0.348, 0.610] \\
+ & Text B & 70 & 35 & 74 & 0 & 0.667 & 1.000 & 0.679 & 0.800 & 0.673 [0.616, 0.744] \\
+\multicolumn{11}{@{}l@{}}{$\Delta$MCC $-0.170$ [$-0.344$, $-0.040$], $p=0.089$} \\
 \bottomrule
 \end{tabular}
 \end{table*}
 
-\subsection{RQ2: no complementary detections}
-In every label set RELIC V2 has no true positive that the text baseline misses, and every RELIC V2 flag is also a text flag. RELIC V2's advantage is precision: it avoids 26 harmless edits the text baseline flags. Of RELIC V2's SemBench misses on L0, 15 are the byte-identical no-ops that no detector can catch. The rest trace to semantics its contract model does not represent: 16 DISP sub-parameter changes, 12 COND changes (duplicate keywords, EVEN, tightened tests), 9 dataset redirects, 8 in-stream utility statements, 5 program substitutions and 5 appended steps. This categorisation comes from our error analysis and has not been independently checked. The data show that the semantic layer adds no detections here, not that it is useless.
+\subsection{RQ2: complementary detections}
+In every label set RELIC V2 has no true positive that the text baseline misses, and every RELIC V2 flag is also a text flag (checked by \texttt{complementarity\_checks.py}). On L0, both detect 23 changing cases and the baseline alone detects 55. Of RELIC V2's 70 misses on L0, 15 are byte-identical pairs that no detector can catch. The remaining misses fall into categories that the contract model does not cover on our reading: 16 DISP sub-parameter changes, 12 COND changes, 9 dataset redirects, 8 in-stream utility statements, 5 program substitutions and 5 appended steps. This categorisation is ours and has not been independently checked. Its two readings are not separated by our data: a miss could reflect an extraction defect or a limit of the contract model, and we do not have per-category extraction traces.
 
-\subsection{RQ3: sensitivity to benchmark construction}
-Figure~\ref{fig:sens} shows MCC for both detectors under the four label sets, with cluster-bootstrap intervals. The ranking of the detectors is fixed. The gap is not. Excluding the unresolved cases (L2) narrows the gap relative to L1, and relabelling them by oracle verdict (L3) narrows it further. The aggregate counts do not show which individual cases drive this, and we have not decomposed it. The unresolved cases therefore matter for the size of the result, and the paper cannot settle which verdict is right without adjudication.
+On L1--L3 the baseline's recall is 1.000, so the RQ2 result is guaranteed there and carries no further information.
+
+\subsection{RQ3: labels the oracle cannot evaluate}
+Figure~\ref{fig:sens} shows the four label sets. Relative to the corrected set, the gap narrows from L1 to L3. Relative to the original labels, the net change is small: from $-0.201$ on L0 to $-0.170$ on L3. Table~\ref{tab:decomp} gives the exact sequential decomposition of the L1-to-L3 change.
+
+\begin{table}[t]
+\caption{Exact sequential decomposition of the L1-to-L3 change in the gap (RELIC V2 minus text B). Steps are cumulative in the order shown. The order changes the split between steps, not the total.}
+\label{tab:decomp}
+\centering
+\small
+\begin{tabular}{@{}p{3.6cm}p{1.9cm}p{1.9cm}@{}}
+\toprule
+Step & Cases & Gap (change) \\
+\midrule
+L1 (C1 applied) & -- & $-0.336$ \\
+PRESERVING$\to$CHANGING (oracle DIFF.) & 036, 078, 079 & $-0.312$ ($+0.024$) \\
+CHANGING$\to$PRESERVING (oracle EQ.) & 10 & $-0.177$ ($+0.135$) \\
+Abstention excluded & 172 & $-0.170$ ($+0.007$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The two step renames (078, 079) alone move the gap by $+0.038$. Adding 036 to the same step gives a net $+0.024$, so 036 alone moves it by about $-0.013$. The ten CHANGING relabels move the gap by $+0.134$ alone and $+0.135$ in sequence. In that sequence they account for about 81\% of the L1-to-L3 narrowing. This share depends on order. The ten cases are \texttt{117, 118, 120, 121, 124, 126, 127, 129, 130} and \texttt{165}. The text baseline flags all ten and RELIC V2 flags none. Relabelling them PRESERVING turns the baseline's hits into false positives, which is why the gap narrows. The effect of these ten relabels is as large as the C1 correction ($-0.135$) in the opposite direction. Label choices of this size shift the margin.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{fig_sensitivity_mcc.pdf}
-\caption{MCC on SemBench under four label sets (L0 original, L1 C1-corrected, L2 C1 excluding 14 unresolved, L3 C1 with the 14 relabelled by the oracle). Bars are 95\% cluster-bootstrap intervals. L3 uses oracle verdicts and is an upper bound, not ground truth.}
+\caption{MCC of RELIC V2 and normalized text B under four label sets, with 95\% cluster-bootstrap intervals (16 base programs). The sign of the gap is the same in every set; its size is not.}
 \label{fig:sens}
 \end{figure}
 
 \subsection{External run (not blind)}
-The external run takes mutants from 11 listed public repositories, of which 7 contribute evaluable mutants (824 total, 589 from one repository). The labels come from the same oracle and were not blind. RELIC V2 has precision 1.000 and recall 0.952. The text comparator (ignore JOB parameters) has recall 1.000, so zero RELIC-only true positives is guaranteed and carries no information. The pooled F1 difference is $-0.022$ (file-cluster 95\% CI $[-0.042,-0.008]$). Repository-clustered intervals include zero. Excluding the repository that supplies 71.5\% of mutants, the two detectors are indistinguishable (F1 difference $-0.005$ [$-0.027$, $0.010$]). The labels are almost fully determined by operator: predicting positive unless the operator is \texttt{INSERT\_COMMENT} or \texttt{CHANGE\_MSGCLASS} matches 821 of 824 labels. External F1 and MCC therefore measure recognition of operator type rather than behavioural reasoning.
+The external run takes mutants from 11 listed repositories, of which seven contribute evaluable mutants (824 in total, 589 from one). The labels come from the same oracle and were not blind. RELIC V2 has precision 1.000 and recall 0.952 (MCC 0.874). The text comparator has recall 1.000 (MCC 0.987), so zero RELIC-only true positives is guaranteed. The pooled F1 difference is $-0.022$ with a file-clustered interval of $[-0.042,-0.008]$. The repository-clustered interval $[-0.032,+0.004]$ includes zero. With seven clusters, and one repository holding 71.5\% of mutants, no percentile interval is reliable, so we report it as inconclusive. One operator rule (predict positive unless the operator is \texttt{INSERT\_COMMENT} or \texttt{CHANGE\_MSGCLASS}) matches 821 of 824 labels, so the external scores mostly measure recognition of the operator.
 
 \section{Benchmark and Oracle Audit}
 \label{sec:audit}
-Of the 180 pairs, 25 are byte-identical: 15 labelled CHANGING and 10 PRESERVING. The oracle returns EQUIVALENT for all 25, so for the 15 CHANGING pairs the label is the element at fault. Grouping pairs by their original and transformed bytes gives 21 duplicate groups covering 46 cases. Nine groups are byte-identical, and all five contradictory groups (the same bytes labelled both CHANGING and PRESERVING) are among them. The remaining 12 groups (24 cases) are non-identical with consistent labels. Five pairs labelled as consecutive step inversions are in fact appended steps; this generator defect is not yet in our defect register.
+Of the 180 pairs, 25 are byte-identical. Grouping by original and transformed bytes gives 21 duplicate groups covering 46 cases. Nine groups are byte-identical and contain all five contradictory groups, so the contradictions come from the no-op defect. Five pairs labelled as step inversions are appended steps, a generator defect that is not yet in our defect register. The 180 pairs come from only 16 base programs.
 
-Fourteen cases remain unresolved: 13 non-identical oracle disagreements and one abstention. We classified them from their diffs and the oracle's recorded evidence. Nine (SHR$\rightarrow$OLD and CATLG$\rightarrow$KEEP on DD statements) have CHANGING labels that rest on effects outside the oracle's model, namely exclusive enqueue and catalogue state. Their correctness depends on whether those effects belong to the benchmark's definition of behaviour. \texttt{sembench\_165} changes a printed record count from 100 to 10, which the oracle does not model; it is the strongest candidate for an oracle error, but confirming it needs the input dataset's size, which the artefact does not contain. \texttt{sembench\_172} needs an IEBCOPY return-code model that the oracle lacks. Two PRESERVING labels (\texttt{sembench\_078} and \texttt{079}) rename steps, and the oracle treats step names as observable; the label depends on whether step names belong to the benchmark's behaviour. \texttt{sembench\_036} changes a PARM from quoted to parenthesised form, and whether the two forms are equivalent for the compiler is a JCL syntax question we could not settle offline. None of these classifications has been checked by an independent practitioner.
+Table~\ref{tab:unres} classifies the 14 disputed cases against the oracle's declared boundary. The classification is ours, from the diffs and the specification, and an independent reviewer has not checked it.
 
-\section{Discussion and Implications}
-\textbf{Responsible evaluation.} The conclusion depends on which label set is reported. Every set favours normalized text B, but by between $0.17$ and $0.34$ MCC. A paper that reported only one set would give a materially different impression. We recommend that evaluations of semantic analysers publish every label set and its exclusion rule, decided before results are seen.
+\begin{table*}[t]
+\caption{The 14 disputed cases, classified against the oracle's declared observables. ``Outside boundary'' means the asserted effect is not an observable. ``Identity rule'' means the verdict follows from identifying steps by name.}
+\label{tab:unres}
+\centering
+\small
+\begin{tabular}{@{}p{4.4cm}p{2.6cm}p{2.9cm}p{7.6cm}@{}}
+\toprule
+Cases & Label & Oracle & Basis of the verdict \\
+\midrule
+117, 120, 126, 129 & CHANGING & EQUIVALENT & Exclusive enqueue (SHR$\to$OLD) is not a modelled observable \\
+118, 121, 124, 127, 130 & CHANGING & EQUIVALENT & Catalogue membership (CATLG$\to$KEEP) is not an observable beyond existence \\
+165 & CHANGING & EQUIVALENT & SYSPRINT record count is not an observable \\
+172 & CHANGING & UNDETERMINED & Opaque program CPYPDS; abstains by design \\
+078, 079 & PRESERVING & DIFFERENT & Step renames; identity by name yields DIFFERENT \\
+036 & PRESERVING & DIFFERENT & Files differ only in PARM quoting; the PARM text enters the version label of \&\&OBJSET that BIND reads \\
+\bottomrule
+\end{tabular}
+\end{table*}
 
-\textbf{Misleading assurance.} A benchmark that contains byte-identical pairs labelled CHANGING tells a reader that a detector should flag an edit that does not exist. The result is a metric that penalises detectors for correctly saying nothing changed, and a headline that is wrong by a magnitude that matters for a tool-selection decision. Misleading assurance can come from the benchmark as much as from the tool. The published labels made RELIC V2 look better than the corrected labels support: correction widens the gap against it from $-0.20$ to $-0.34$. The oracle's verdicts were the reliable element here, since it judged the no-op pairs EQUIVALENT, and the labels were wrong.
+For ten of the fourteen cases, the CHANGING labels outside the boundary, the label asserts an effect the oracle cannot observe, so an EQUIVALENT verdict cannot refute the label. The oracle's verdict cannot confirm the label either, so these labels are as unverified as the others. For three cases the DIFFERENT verdict comes from an identity effect rather than a behavioural difference. For 078 and 079, two steps are renamed. For 036, the literal PARM text of a writing step enters the dataset-version label that a later step reads, so the same parameters written in two quoting styles yield different versions. We did not check whether the two forms denote the same z/OS parameter.
 
-\textbf{Baseline fairness.} A normalized text diff is a strong, cheap baseline, and a semantic analyser should show value over it before its extra machinery is justified. Our data give no such evidence for RELIC V2 on these benchmarks. The external comparator was chosen after the development operator set was known. A stronger hand-built text rule could test the baseline's cost more fairly, and we did not build one.
+\section{Discussion}
+\textbf{Oracle scope is part of the measurement.} An EQUIVALENT verdict is evidence of no change only inside the oracle's observables, and the oracle checks unmodelled changes only in opaque steps. Ten of the 93 CHANGING labels in JCL-SemBench (11\%) assert effects outside the boundary; because two of these pairs are byte-duplicates of others, they cover eight distinct edits. Reporting a detector's score without its label set's observable boundary therefore makes the score hard to read against the labels' intent.
 
-\textbf{Oracle accountability.} The oracle shares authorship with the mutator that creates the positives, and its labels are not externally validated. We use ``same-author, unvalidated'' throughout. An unvalidated oracle can make the same tool look better or worse depending on which disputed labels are kept, as L1 to L3 show.
+\textbf{The sign is consistent; the size is not.} In all four label sets the text baseline has higher MCC, and the job-parameter text diff is above RELIC V2 on L1--L3. A reader who saw only one set would reach the same sign but a different size, between $-0.17$ and $-0.34$. On L3 the exact test is not significant ($p=0.089$). We recommend reporting every label set with its rationale and stating the observable boundary alongside it.
 
-\textbf{Claims.} The narrow statement supported is that, on these benchmarks and label sets, a static JCL contract analyser did not outperform normalized text comparison and produced no detections the text comparison lacked. Its precision and its named contracts are not evidence of benefit without that context.
+\textbf{Missed changes and assurance.} For a modernisation team, a ``no change'' answer is only as good as the boundary behind it, so automated assurance claims should state what the tool cannot observe. RELIC V2 reports no change on 55 of the 78 pairs labelled CHANGING in L1. Those are the cases where a user relying on the detector would have been told that nothing changed when, under these labels, something did. Whether anyone relied on such an answer is unknown, and the study has no decision-level data. The recall figures measure missed changes directly, whereas the boundary effect measures how much the label choice moves the comparison. We report both and do not combine them into a single risk estimate.
+
+\textbf{Baseline choice.} Normalized text B is the strongest text variant on all four label sets, so the comparison does not favour RELIC V2. The choice was made after the aggregate results were known, and it is the variant that most favours the text baseline. A benchmark-tuned text rule could still narrow or widen the gap. The analysis plan fixed text B after the aggregate results were known, and we do not claim it was chosen blind.
 
 \section{Threats to Validity}
-\textbf{Construct.} ``Changing'' is the benchmark author's expectation, checked by a same-author oracle. A different notion of behavioural change could reverse some labels, as the 14 unresolved cases show. The detectors are binary, so no threshold analysis is possible, and we do not evaluate explanation quality.
+\textbf{Construct.} CHANGING is the generator's expectation, checked by one oracle with declared observables. A different boundary would relabel some cases, as Table~\ref{tab:unres} shows.
 
-\textbf{Internal.} The benchmark author also wrote RELIC V2, the mutator, the oracle and the text baselines. Several text rules map onto benchmark categories, so the baseline's advantage is partly built in. The comparator was chosen after the results were known.
+\textbf{Internal.} The same group wrote RELIC V2, the mutator, the oracle and the text baselines. The text comparator was fixed after the aggregate results were known. An earlier internal analysis of this benchmark, using the original labels, is recorded in the authors' repository. It was not published externally and is not cited. It reached the same direction (MCC gap $-0.201$ on the original labels, as on L0 here).
 
-\textbf{External.} The external run is not blind and uses the same oracle. One repository supplies 71.5\% of evaluable mutants, and only 7 of 11 listed repositories contribute.
+\textbf{External.} The external run is not blind and uses the same oracle and operator-determined labels. One repository supplies 71.5\% of evaluable mutants.
 
-\textbf{Statistical.} There are 16 base programs and 7 repositories. Cluster bootstraps are unstable at these sizes, and the intervals may under-cover. Our bootstrap differs slightly from the original one (see Methods). L3 uses oracle verdicts, so its result is an upper bound.
+\textbf{Statistical.} With 16 base programs and 7 repositories, percentile bootstraps may under-cover, and few-cluster inference needs corrections we did not apply~\cite{cameron2008}. Leaving out one base program at a time, the L1 gap ranges from $-0.364$ to $-0.313$. Keeping one copy of each byte-identical duplicate group (155 unique pairs) gives $-0.338$. We use the exact cluster-level test for SemBench, which does not depend on large-sample approximations, and report McNemar only for continuity, since it treats duplicated pairs as independent. We do not adjust $p$-values across label sets.
 
 \section{Limitations}
-This is a negative empirical study of one tool and two benchmarks. No held-out corpus exists, and every subject was seen during development. No independent practitioner has labelled any pair, so no label is validated by a practitioner. The 60-case review package has zero returned responses and is not validation. We do not claim generalisation to production JCL, to z/OS execution or to other languages.
+This is a negative, exploratory study of one tool and one benchmark with one oracle, all built by the same group. No held-out corpus exists, and every subject was seen during development. No independent practitioner has labelled any pair. The 60-case review package has zero returned responses, and no human-subject data were collected. We do not claim generalisation to production JCL, to z/OS execution, or to other languages. External validation was not performed as a prospective, frozen, blind study, and we do not present it as one.
 
-\textbf{Language-model baseline (incomplete).} A language-model baseline (\texttt{openai/gpt-oss-120b} via the Groq API, temperature 0, one request per pair, both files shown, the prompt in \texttt{reports/final/scripts/llm\_baseline\_groq.py}) is being run. At drafting, [PENDING: N of 180 pairs] have a parsed verdict. Its outputs are kept separate from ground truth and will be scored against L0 and L1 only once all 180 pairs are complete. No LLM result is reported here, and the comparison with language models is untested until it is.
+\textbf{Language-model baseline (not reported as a result).} A language-model run answered 155 of the 180 pairs, all from the 12 synthetic base programs. The 25 unanswered pairs are 21 CHANGING and 4 PRESERVING, and the reason for their absence is not established. Scoring them as errors puts the model below normalized text B on L1 (MCC $0.603$ against $0.731$); scoring them as correct gives $0.890$. Of the 25, 21 are CHANGING, so missingness is correlated with the label. We make no comparative claim for the model.
 
 \section{Conclusion}
-We asked whether a semantic JCL contract analyser adds measurable detection value over normalized text comparison. On the available benchmarks it does not. RELIC V2 has lower MCC than normalized text B under every label set we examined, and it detects no change that the text baseline misses. The size of the gap depends on benchmark labels and oracle verdicts, ranging from $-0.17$ to $-0.34$. The lesson for responsible evaluation is that semantic analysers should show value over simple baselines on audited labels, and that the audit and its alternatives should be reported. A held-out, independently labelled corpus is the necessary next step.
+A semantic JCL contract analyser did not outperform normalized text comparison on this benchmark under any label set examined, and it detected no change that the text baseline missed. The size of the gap depends on the labels. The labels that move it most are those whose changes lie outside the oracle's observables, where the oracle can neither confirm nor refute them. For evaluations of this kind, an automated ``equivalent'' is a claim about the observables a tool can see, and reports should state those observables with their labels.
 
 \section*{Reproducibility}
-All numbers come from committed prediction files, the frozen manifest, the scripts \texttt{label\_correction\_v1\_1.py}, \texttt{sensitivity\_v1\_1.py} and \texttt{paired\_sensitivity.py}, and output files in \texttt{results/final/statistics/}. The original benchmark files and labels are unchanged; the corrected release is a separate versioned directory. In a clean clone, the SemBench evaluation and the external run (cloned at the frozen commits) reproduced their committed predictions, metrics and paired tests byte-for-byte, and the full pipeline ran to completion. The Docker image cannot be built as written: the project has no Poetry lock file, so the image installs unpinned dependencies, and the API service needs packages absent from the lock. The research service mounts the results directory read-write, so a container run can overwrite tracked results. We did not build the image. Repository identifiers are withheld for review.
+Each number in the paper is produced by a script listed with its command in the anonymised supplementary archive (reproduction note). The benchmark, the original labels and the frozen predictions are unchanged; the corrected label set is defined in Section~\ref{sec:labels}. The Docker image was not built.
 
 \begin{thebibliography}{1}
 \bibitem{andrews2005} J.~H. Andrews, L.~C. Briand, and Y.~Labiche, ``Is mutation an appropriate tool for testing experiments?'' in \emph{Proc. ICSE}, 2005, doi:10.1145/1062455.1062530.
 \bibitem{jia2011} Y.~Jia and M.~Harman, ``An analysis and survey of the development of mutation testing,'' \emph{IEEE Trans. Softw. Eng.}, 2011, doi:10.1109/TSE.2010.62.
 \bibitem{papadakis2016} M.~Papadakis, C.~Henard, M.~Harman, Y.~Jia, and Y.~Le~Traon, ``Threats to the validity of mutation-based test assessment,'' in \emph{Proc. ISSTA}, 2016, doi:10.1145/2931037.2931040.
+\bibitem{barr2015} E.~T. Barr, M.~Harman, P.~McMinn, M.~Shahbaz, and S.~Yoo, ``The oracle problem in software testing: A survey,'' \emph{IEEE Trans. Softw. Eng.}, 2015, doi:10.1109/TSE.2014.2372785.
+\bibitem{staats2012} M.~Staats, G.~Gay, M.~Whalen, and M.~Heimdahl, ``Automated oracle creation support, or: How I learned to stop worrying about fault propagation and love mutation testing,'' in \emph{Proc. ICSE}, 2012, doi:10.1109/icse.2012.6227132.
+\bibitem{staats2011} M.~Staats, M.~W. Whalen, and M.~P.~E. Heimdahl, ``Programs, tests, and oracles: The foundations of testing revisited,'' in \emph{Proc. ICSE}, 2011, doi:10.1145/1985793.1985847.
+\bibitem{herzig2013} K.~Herzig, S.~Just, and A.~Zeller, ``It's not a bug, it's a feature: How misclassification impacts bug prediction,'' in \emph{Proc. ICSE}, 2013, doi:10.1109/ICSE.2013.6606585.
+\bibitem{frenay2014} B.~Fr\'enay and M.~Verleysen, ``Classification in the presence of label noise: A survey,'' \emph{IEEE Trans. Neural Netw. Learn. Syst.}, 2014, doi:10.1109/TNNLS.2013.2292894.
 \bibitem{tian2024} Z.~Tian, H.~Shu, D.~Wang, X.~Cao, Y.~Kamei, and J.~Chen, ``Large language models for equivalent mutant detection: How far are we?'' in \emph{Proc. ISSTA}, 2024, doi:10.1145/3650212.3680395.
-\bibitem{kalohia2026} A.~Kalohia, ``Leveraging generative AI for extracting business requirements from legacy COBOL and PL/I code,'' in \emph{Proc. ACL Industry Track}, 2026. \url{https://aclanthology.org/2026.acl-industry.4/}.
+\bibitem{jackson1994} D.~Jackson and D.~Ladd, ``Semantic diff: A tool for summarizing the effects of modifications,'' in \emph{Proc. ICSM}, 1994, doi:10.1109/icsm.1994.336770.
+\bibitem{lahiri2012} S.~K. Lahiri, C.~Hawblitzel, M.~Kawaguchi, and H.~Reb\^elo, ``SymDiff: A language-agnostic semantic diff tool for imperative programs,'' in \emph{Proc. CAV}, LNCS, 2012, doi:10.1007/978-3-642-31424-7\_54.
+\bibitem{ferrante1987} J.~Ferrante, K.~J. Ottenstein, and J.~D. Warren, ``The program dependence graph and its use in optimization,'' \emph{ACM Trans. Program. Lang. Syst.}, vol. 9, no. 3, 1987, doi:10.1145/24039.24041.
+\bibitem{horwitz1988} S.~Horwitz, T.~Reps, and D.~Binkley, ``Interprocedural slicing using dependence graphs,'' in \emph{Proc. PLDI}, published in \emph{ACM SIGPLAN Notices}, 1988, doi:10.1145/960116.53994.
 \bibitem{deknop2022} C.~Deknop, J.~Fabry, K.~Mens, and V.~Zaytsev, ``Generating customised control flow graphs for legacy languages with semi-parsing,'' in \emph{Proc. ICSME}, 2022, doi:10.1109/ICSME55016.2022.00072.
-\bibitem{ferrante1984} J.~Ferrante, K.~J. Ottenstein, and J.~D. Warren, ``The program dependence graph and its use in optimization,'' LNCS, 1984, doi:10.1007/3-540-12925-1\_33.
-\bibitem{horwitz1988} S.~Horwitz, T.~Reps, and D.~Binkley, ``Interprocedural slicing using dependence graphs,'' in \emph{Proc. PLDI}, 1988, doi:10.1145/960116.53994.
 \bibitem{changeguard2025} L.~Gr\"oninger, B.~Souza, and M.~Pradel, ``ChangeGuard: Validating code changes via pairwise learning-guided execution,'' \emph{Proc. ACM Softw. Eng.}, 2025, doi:10.1145/3715760.
+\bibitem{cameron2008} A.~C. Cameron, J.~B. Gelbach, and D.~L. Miller, ``Bootstrap-based improvements for inference with clustered errors,'' \emph{Rev. Econ. Stat.}, 2008, doi:10.1162/rest.90.3.414.
 \end{thebibliography}
 
 \end{document}

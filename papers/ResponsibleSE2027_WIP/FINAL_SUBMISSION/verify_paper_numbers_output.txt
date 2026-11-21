@@ -1,0 +1,83 @@
+PASS cases.jsonl hash matches manifest
+PASS predictions.jsonl hash matches manifest
+PASS 180 pairs, predictions aligned
+PASS 93 CHANGING / 87 PRESERVING
+PASS 25 byte-identical pairs
+PASS 15 identical CHANGING
+PASS 10 identical PRESERVING
+PASS 21 duplicate groups covering 46 pairs
+PASS 5 duplicate groups with conflicting labels
+PASS 28 oracle disagreements (ORACLE_DISAGREES)
+PASS 28 = 15 identical + 13 non-identical
+PASS one abstention, sembench_172
+PASS 10 non-identical CHANGING labels returned EQUIVALENT
+PASS 8 distinct edits among the 10 (got 8)
+PASS 4 SHR-to-OLD labels
+PASS 5 CATLG-to-KEEP labels
+PASS L2 n=166, L3 n=179
+PASS L0 relic_v2 MCC 0.324 printed
+PASS L0 normalized_text_B MCC 0.525 printed
+PASS L0 delta $-0.201$ printed
+PASS L1 relic_v2 MCC 0.394 printed
+PASS L1 normalized_text_B MCC 0.731 printed
+PASS L1 delta $-0.336$ printed
+PASS L2 relic_v2 MCC 0.488 printed
+PASS L2 normalized_text_B MCC 0.738 printed
+PASS L2 delta $-0.250$ printed
+PASS L3 relic_v2 MCC 0.503 printed
+PASS L3 normalized_text_B MCC 0.673 printed
+PASS L3 delta $-0.170$ printed
+PASS L0 has 16 clusters
+PASS L0 relic_v2 CI [0.248, 0.382] printed
+PASS L0 normalized_text_B CI [0.420, 0.629] printed
+PASS L0 delta CI [$-0.299$, $-0.102$] printed
+PASS L1 has 16 clusters
+PASS L1 relic_v2 CI [0.306, 0.456] printed
+PASS L1 normalized_text_B CI [0.666, 0.803] printed
+PASS L1 delta CI [$-0.444$, $-0.256$] printed
+PASS L2 has 16 clusters
+PASS L2 relic_v2 CI [0.349, 0.584] printed
+PASS L2 normalized_text_B CI [0.672, 0.808] printed
+PASS L2 delta CI [$-0.394$, $-0.147$] printed
+PASS L3 has 16 clusters
+PASS L3 relic_v2 CI [0.348, 0.610] printed
+PASS L3 normalized_text_B CI [0.616, 0.744] printed
+PASS L3 delta CI [$-0.344$, $-0.040$] printed
+PASS L0: 2^16 assignments enumerated
+PASS L0 exact p 0.015 printed
+PASS L1: 2^16 assignments enumerated
+PASS L1 exact p 0.002 printed
+PASS L2: 2^16 assignments enumerated
+PASS L2 exact p 0.010 printed
+PASS L3: 2^16 assignments enumerated
+PASS L3 exact p 0.089 printed
+PASS exact p-values 0.015, 0.002, 0.010, 0.089
+PASS L3 p=0.089 printed in text
+PASS McNemar p printed as 0.002/0.002/0.029/0.314 (got ['0.002', '0.002', '0.029', '0.314'])
+PASS LOO range -0.3645..-0.3134 (got -0.3645..-0.3134)
+PASS LOO values printed
+PASS dedup gap -0.3375 on 155 pairs (got -0.3375)
+PASS dedup gap printed
+PASS L1: 78 CHANGING, 55 RELIC misses
+PASS miss categories 16/12/12/10/5 (got [16, 12, 12, 10, 5])
+PASS no RELIC-only true positives on any label set
+PASS LLM figure '0.603' absent from manuscript
+PASS LLM figure '0.890' absent from manuscript
+PASS LLM figure 'gpt-oss' absent from manuscript
+PASS LLM figure 'Groq' absent from manuscript
+PASS no 'corrected baseline/ground truth' wording
+PASS unverifiable 'fixed before' claim removed
+PASS PDFs carry corrected L1 text-B interval 0.666
+PASS PDFs do not carry the stale 0.665
+PASS anonymous PDF free of 'manas'
+PASS anonymous PDF free of 'sakthivel'
+PASS anonymous PDF free of 'rvce'
+PASS anonymous PDF free of 'bengaluru'
+PASS anonymous PDF free of 'github'
+PASS anonymous PDF free of 'desktop'
+PASS anonymous PDF free of 'users/'
+PASS anonymous PDF free of 'groq'
+PASS anonymous PDF free of 'gpt-oss'
+PASS author PDF carries author name
+
+81 passed, 0 failed

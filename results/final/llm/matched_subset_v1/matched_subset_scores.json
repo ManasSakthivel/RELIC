@@ -1,0 +1,323 @@
+{
+  "subset_n": 155,
+  "clusters_in_subset": 12,
+  "missing_from_llm": [
+    "sembench_119",
+    "sembench_122",
+    "sembench_125",
+    "sembench_128",
+    "sembench_130",
+    "sembench_132",
+    "sembench_134",
+    "sembench_138",
+    "sembench_141",
+    "sembench_144",
+    "sembench_148",
+    "sembench_151",
+    "sembench_153",
+    "sembench_156",
+    "sembench_163",
+    "sembench_166",
+    "sembench_169",
+    "sembench_173",
+    "sembench_174",
+    "sembench_175",
+    "sembench_176",
+    "sembench_177",
+    "sembench_178",
+    "sembench_179",
+    "sembench_180"
+  ],
+  "metrics": {
+    "L0": {
+      "LLM": {
+        "tp": 59,
+        "fp": 8,
+        "tn": 75,
+        "fn": 13,
+        "n": 155,
+        "precision": 0.8805970149253731,
+        "recall": 0.8194444444444444,
+        "specificity": 0.9036144578313253,
+        "f1": 0.8489208633093526,
+        "mcc": 0.7279477943540216
+      },
+      "RELIC_V2": {
+        "tp": 19,
+        "fp": 2,
+        "tn": 81,
+        "fn": 53,
+        "n": 155,
+        "precision": 0.9047619047619048,
+        "recall": 0.2638888888888889,
+        "specificity": 0.9759036144578314,
+        "f1": 0.40860215053763443,
+        "mcc": 0.3494450150067894
+      },
+      "TEXT_B": {
+        "tp": 61,
+        "fp": 27,
+        "tn": 56,
+        "fn": 11,
+        "n": 155,
+        "precision": 0.6931818181818182,
+        "recall": 0.8472222222222222,
+        "specificity": 0.6746987951807228,
+        "f1": 0.7625,
+        "mcc": 0.5254499353367723
+      },
+      "denominator": 155,
+      "unlabelled_in_subset": 0
+    },
+    "L1": {
+      "LLM": {
+        "tp": 59,
+        "fp": 8,
+        "tn": 86,
+        "fn": 2,
+        "n": 155,
+        "precision": 0.8805970149253731,
+        "recall": 0.9672131147540983,
+        "specificity": 0.9148936170212766,
+        "f1": 0.921875,
+        "mcc": 0.8699038306498884
+      },
+      "RELIC_V2": {
+        "tp": 19,
+        "fp": 2,
+        "tn": 92,
+        "fn": 42,
+        "n": 155,
+        "precision": 0.9047619047619048,
+        "recall": 0.3114754098360656,
+        "specificity": 0.9787234042553191,
+        "f1": 0.4634146341463415,
+        "mcc": 0.41424991797759425
+      },
+      "TEXT_B": {
+        "tp": 61,
+        "fp": 27,
+        "tn": 67,
+        "fn": 0,
+        "n": 155,
+        "precision": 0.6931818181818182,
+        "recall": 1.0,
+        "specificity": 0.7127659574468085,
+        "f1": 0.8187919463087249,
+        "mcc": 0.7029056852246133
+      },
+      "denominator": 155,
+      "unlabelled_in_subset": 0
+    },
+    "L2": {
+      "LLM": {
+        "tp": 50,
+        "fp": 7,
+        "tn": 84,
+        "fn": 1,
+        "n": 142,
+        "precision": 0.8771929824561403,
+        "recall": 0.9803921568627451,
+        "specificity": 0.9230769230769231,
+        "f1": 0.9259259259259259,
+        "mcc": 0.8842441341563383
+      },
+      "RELIC_V2": {
+        "tp": 19,
+        "fp": 0,
+        "tn": 91,
+        "fn": 32,
+        "n": 142,
+        "precision": 1.0,
+        "recall": 0.37254901960784315,
+        "specificity": 1.0,
+        "f1": 0.5428571428571428,
+        "mcc": 0.5250006642219084
+      },
+      "TEXT_B": {
+        "tp": 51,
+        "fp": 24,
+        "tn": 67,
+        "fn": 0,
+        "n": 142,
+        "precision": 0.68,
+        "recall": 1.0,
+        "specificity": 0.7362637362637363,
+        "f1": 0.8095238095238095,
+        "mcc": 0.707572851838834
+      },
+      "denominator": 142,
+      "unlabelled_in_subset": 13
+    },
+    "L3": {
+      "LLM": {
+        "tp": 51,
+        "fp": 15,
+        "tn": 85,
+        "fn": 3,
+        "n": 154,
+        "precision": 0.7727272727272727,
+        "recall": 0.9444444444444444,
+        "specificity": 0.85,
+        "f1": 0.85,
+        "mcc": 0.7660323462854265
+      },
+      "RELIC_V2": {
+        "tp": 21,
+        "fp": 0,
+        "tn": 100,
+        "fn": 33,
+        "n": 154,
+        "precision": 1.0,
+        "recall": 0.3888888888888889,
+        "specificity": 1.0,
+        "f1": 0.56,
+        "mcc": 0.5407380704358752
+      },
+      "TEXT_B": {
+        "tp": 54,
+        "fp": 33,
+        "tn": 67,
+        "fn": 0,
+        "n": 154,
+        "precision": 0.6206896551724138,
+        "recall": 1.0,
+        "specificity": 0.67,
+        "f1": 0.7659574468085106,
+        "mcc": 0.6448736845038083
+      },
+      "denominator": 154,
+      "unlabelled_in_subset": 1
+    }
+  },
+  "paired": {
+    "L0": {
+      "LLM_minus_RELIC_V2": {
+        "delta_mcc": 0.3785,
+        "ci95": [
+          0.2561,
+          0.5002
+        ],
+        "p_exact_cluster_swap": 0.00293,
+        "n_clusters": 12,
+        "n_items": 155
+      },
+      "LLM_minus_TEXT_B": {
+        "delta_mcc": 0.2025,
+        "ci95": [
+          0.135,
+          0.2794
+        ],
+        "p_exact_cluster_swap": 0.00391,
+        "n_clusters": 12,
+        "n_items": 155
+      },
+      "RELIC_V2_minus_TEXT_B": {
+        "delta_mcc": -0.176,
+        "ci95": [
+          -0.2812,
+          -0.0575
+        ],
+        "p_exact_cluster_swap": 0.06494,
+        "n_clusters": 12,
+        "n_items": 155
+      }
+    },
+    "L1": {
+      "LLM_minus_RELIC_V2": {
+        "delta_mcc": 0.4557,
+        "ci95": [
+          0.349,
+          0.5775
+        ],
+        "p_exact_cluster_swap": 0.00195,
+        "n_clusters": 12,
+        "n_items": 155
+      },
+      "LLM_minus_TEXT_B": {
+        "delta_mcc": 0.167,
+        "ci95": [
+          0.0971,
+          0.2455
+        ],
+        "p_exact_cluster_swap": 0.00781,
+        "n_clusters": 12,
+        "n_items": 155
+      },
+      "RELIC_V2_minus_TEXT_B": {
+        "delta_mcc": -0.2887,
+        "ci95": [
+          -0.4083,
+          -0.1862
+        ],
+        "p_exact_cluster_swap": 0.0083,
+        "n_clusters": 12,
+        "n_items": 155
+      }
+    },
+    "L2": {
+      "LLM_minus_RELIC_V2": {
+        "delta_mcc": 0.3592,
+        "ci95": [
+          0.2097,
+          0.5545
+        ],
+        "p_exact_cluster_swap": 0.00586,
+        "n_clusters": 12,
+        "n_items": 142
+      },
+      "LLM_minus_TEXT_B": {
+        "delta_mcc": 0.1767,
+        "ci95": [
+          0.0986,
+          0.2745
+        ],
+        "p_exact_cluster_swap": 0.00195,
+        "n_clusters": 12,
+        "n_items": 142
+      },
+      "RELIC_V2_minus_TEXT_B": {
+        "delta_mcc": -0.1826,
+        "ci95": [
+          -0.3236,
+          -0.0651
+        ],
+        "p_exact_cluster_swap": 0.06982,
+        "n_clusters": 12,
+        "n_items": 142
+      }
+    },
+    "L3": {
+      "LLM_minus_RELIC_V2": {
+        "delta_mcc": 0.2253,
+        "ci95": [
+          0.0283,
+          0.4872
+        ],
+        "p_exact_cluster_swap": 0.13184,
+        "n_clusters": 12,
+        "n_items": 154
+      },
+      "LLM_minus_TEXT_B": {
+        "delta_mcc": 0.1212,
+        "ci95": [
+          0.0276,
+          0.2458
+        ],
+        "p_exact_cluster_swap": 0.03125,
+        "n_clusters": 12,
+        "n_items": 154
+      },
+      "RELIC_V2_minus_TEXT_B": {
+        "delta_mcc": -0.1041,
+        "ci95": [
+          -0.2657,
+          0.0239
+        ],
+        "p_exact_cluster_swap": 0.29688,
+        "n_clusters": 12,
+        "n_items": 154
+      }
+    }
+  }
+}

@@ -126,7 +126,7 @@ DEV, EXT, NONE, AUD = "#e8e8e8", "#d6e6f5", "#ffffff", "#fff3c4"
 # development row
 box(1, 27, 18, 9, "JCL-SemBench\n180 pairs, 93 CHANGING\n(frozen; development)", DEV)
 box(24, 27, 18, 9, "Frozen predictions\n6 detectors (binary)", DEV)
-box(47, 27, 20, 9, "Paired statistics\nMCC, bootstrap, McNemar, Holm", DEV)
+box(47, 27, 20, 9, "Paired statistics\nMCC, cluster bootstrap, exact tests", DEV)
 # external row
 box(1, 13, 18, 9, "External run\n824 mutants, 7 repos\n(same oracle, not blind)", EXT)
 box(24, 13, 18, 9, "Frozen predictions\n5 detectors (binary)", EXT)
@@ -134,7 +134,7 @@ box(47, 13, 20, 9, "Paired statistics\nF1/MCC, file and repo clusters", EXT)
 # audit
 box(1, 1, 66, 8, "Benchmark and oracle audit: 25 byte-identical pairs, 21 duplicate groups, 13 disagreements, 1 abstention", AUD)
 box(72, 27, 27, 9, "Sensitivity populations\n(post hoc; reported in full)", AUD)
-box(72, 13, 27, 9, "Independent evidence:\nnone (no held-out corpus,\nno human labels, no LLM run)", NONE, ls="--", ec="#c0392b")
+box(72, 13, 27, 9, "Independent evidence:\nnone (no held-out corpus,\nno human labels)", NONE, ls="--", ec="#c0392b")
 arrow(19, 31.5, 24, 31.5); arrow(42, 31.5, 47, 31.5)
 arrow(19, 17.5, 24, 17.5); arrow(42, 17.5, 47, 17.5)
 arrow(67, 31.5, 72, 31.5)

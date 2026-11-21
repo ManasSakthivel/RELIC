@@ -1,0 +1,10 @@
+{
+  "n_disputed": 13,
+  "assignments": 8192,
+  "delta_mcc_min": -0.3496,
+  "delta_mcc_max": -0.1631,
+  "delta_mcc_all_disputed_as_CHANGING": -0.3118,
+  "delta_mcc_all_disputed_as_PRESERVING": -0.2019,
+  "dedup_excl_25_identical_L1_base": -0.3188,
+  "n_dedup": 155
+}

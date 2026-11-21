@@ -1,0 +1,245 @@
+{
+  "L0": {
+    "relic_v2": {
+      "mcc_point": 0.3241,
+      "mcc_ci95": [
+        0.248,
+        0.3816
+      ],
+      "undefined_reps": 0
+    },
+    "normalized_text_B": {
+      "mcc_point": 0.5249,
+      "mcc_ci95": [
+        0.4201,
+        0.629
+      ],
+      "undefined_reps": 0
+    },
+    "delta_relic_minus_textB": {
+      "point": -0.2008,
+      "ci95": [
+        -0.2992,
+        -0.1018
+      ],
+      "undefined_reps": 0
+    },
+    "n_items": 180,
+    "n_clusters": 16
+  },
+  "L1": {
+    "relic_v2": {
+      "mcc_point": 0.3944,
+      "mcc_ci95": [
+        0.3056,
+        0.4564
+      ],
+      "undefined_reps": 0
+    },
+    "normalized_text_B": {
+      "mcc_point": 0.7307,
+      "mcc_ci95": [
+        0.6655,
+        0.8031
+      ],
+      "undefined_reps": 0
+    },
+    "delta_relic_minus_textB": {
+      "point": -0.3363,
+      "ci95": [
+        -0.4438,
+        -0.2564
+      ],
+      "undefined_reps": 0
+    },
+    "n_items": 180,
+    "n_clusters": 16
+  },
+  "L2": {
+    "relic_v2": {
+      "mcc_point": 0.4875,
+      "mcc_ci95": [
+        0.3487,
+        0.5839
+      ],
+      "undefined_reps": 0
+    },
+    "normalized_text_B": {
+      "mcc_point": 0.7378,
+      "mcc_ci95": [
+        0.6723,
+        0.8085
+      ],
+      "undefined_reps": 0
+    },
+    "delta_relic_minus_textB": {
+      "point": -0.2503,
+      "ci95": [
+        -0.3935,
+        -0.1468
+      ],
+      "undefined_reps": 0
+    },
+    "n_items": 166,
+    "n_clusters": 16
+  },
+  "L3": {
+    "relic_v2": {
+      "mcc_point": 0.5028,
+      "mcc_ci95": [
+        0.3477,
+        0.61
+      ],
+      "undefined_reps": 0
+    },
+    "normalized_text_B": {
+      "mcc_point": 0.6728,
+      "mcc_ci95": [
+        0.6159,
+        0.7438
+      ],
+      "undefined_reps": 0
+    },
+    "delta_relic_minus_textB": {
+      "point": -0.17,
+      "ci95": [
+        -0.3441,
+        -0.0398
+      ],
+      "undefined_reps": 0
+    },
+    "n_items": 179,
+    "n_clusters": 16
+  },
+  "check_vs_published_L0": {
+    "published": {
+      "relic_mcc_ci": [
+        0.248,
+        0.3816
+      ],
+      "text_mcc_ci": [
+        0.4201,
+        0.629
+      ],
+      "delta_ci": [
+        -0.2992,
+        -0.1018
+      ]
+    },
+    "match": true
+  },
+  "matched_subset": {
+    "L0": {
+      "n_items": 155,
+      "n_clusters": 12,
+      "LLM": [
+        0.6271,
+        0.8324
+      ],
+      "relic_v2": [
+        0.2626,
+        0.4178
+      ],
+      "normalized_text_B": [
+        0.424,
+        0.6232
+      ],
+      "LLM_minus_relic_v2": [
+        0.2546,
+        0.5005
+      ],
+      "LLM_minus_normalized_text_B": [
+        0.133,
+        0.2801
+      ],
+      "relic_v2_minus_normalized_text_B": [
+        -0.2788,
+        -0.0575
+      ]
+    },
+    "L1": {
+      "n_items": 155,
+      "n_clusters": 12,
+      "LLM": [
+        0.8087,
+        0.9363
+      ],
+      "relic_v2": [
+        0.3173,
+        0.4959
+      ],
+      "normalized_text_B": [
+        0.6268,
+        0.787
+      ],
+      "LLM_minus_relic_v2": [
+        0.3454,
+        0.58
+      ],
+      "LLM_minus_normalized_text_B": [
+        0.0955,
+        0.2455
+      ],
+      "relic_v2_minus_normalized_text_B": [
+        -0.4063,
+        -0.1871
+      ]
+    },
+    "L2": {
+      "n_items": 142,
+      "n_clusters": 12,
+      "LLM": [
+        0.8111,
+        0.9654
+      ],
+      "relic_v2": [
+        0.3869,
+        0.6229
+      ],
+      "normalized_text_B": [
+        0.6289,
+        0.7887
+      ],
+      "LLM_minus_relic_v2": [
+        0.2056,
+        0.5556
+      ],
+      "LLM_minus_normalized_text_B": [
+        0.0972,
+        0.2735
+      ],
+      "relic_v2_minus_normalized_text_B": [
+        -0.3248,
+        -0.0637
+      ]
+    },
+    "L3": {
+      "n_items": 154,
+      "n_clusters": 12,
+      "LLM": [
+        0.6617,
+        0.8956
+      ],
+      "relic_v2": [
+        0.389,
+        0.6485
+      ],
+      "normalized_text_B": [
+        0.5754,
+        0.7202
+      ],
+      "LLM_minus_relic_v2": [
+        0.0252,
+        0.4881
+      ],
+      "LLM_minus_normalized_text_B": [
+        0.025,
+        0.2458
+      ],
+      "relic_v2_minus_normalized_text_B": [
+        -0.2633,
+        0.0276
+      ]
+    }
+  }
+}
