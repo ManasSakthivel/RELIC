@@ -1,0 +1,275 @@
+{
+  "ALL_180_original_labels": {
+    "normalized_text_A": {
+      "f1": 0.7573,
+      "fn": 15,
+      "fp": 35,
+      "mcc": 0.4511,
+      "precision": 0.6903,
+      "recall": 0.8387,
+      "specificity": 0.5977,
+      "tn": 52,
+      "tp": 78
+    },
+    "normalized_text_B": {
+      "f1": 0.7839,
+      "fn": 15,
+      "fp": 28,
+      "mcc": 0.5249,
+      "precision": 0.7358,
+      "recall": 0.8387,
+      "specificity": 0.6782,
+      "tn": 59,
+      "tp": 78
+    },
+    "raw_text": {
+      "f1": 0.629,
+      "fn": 15,
+      "fp": 77,
+      "mcc": -0.067,
+      "precision": 0.5032,
+      "recall": 0.8387,
+      "specificity": 0.1149,
+      "tn": 10,
+      "tp": 78
+    },
+    "relic_v1_0": {
+      "f1": 0.2727,
+      "fn": 78,
+      "fp": 2,
+      "mcc": 0.2363,
+      "precision": 0.8824,
+      "recall": 0.1613,
+      "specificity": 0.977,
+      "tn": 85,
+      "tp": 15
+    },
+    "relic_v1_1": {
+      "f1": 0.3898,
+      "fn": 70,
+      "fp": 2,
+      "mcc": 0.3241,
+      "precision": 0.92,
+      "recall": 0.2473,
+      "specificity": 0.977,
+      "tn": 85,
+      "tp": 23
+    },
+    "relic_v2": {
+      "f1": 0.3898,
+      "fn": 70,
+      "fp": 2,
+      "mcc": 0.3241,
+      "precision": 0.92,
+      "recall": 0.2473,
+      "specificity": 0.977,
+      "tn": 85,
+      "tp": 23
+    },
+    "textdiff": {
+      "f1": 0.6753,
+      "fn": 15,
+      "fp": 60,
+      "mcc": 0.1761,
+      "precision": 0.5652,
+      "recall": 0.8387,
+      "specificity": 0.3103,
+      "tn": 27,
+      "tp": 78
+    },
+    "textdiff_ignore_job_parameters": {
+      "f1": 0.7091,
+      "fn": 15,
+      "fp": 49,
+      "mcc": 0.302,
+      "precision": 0.6142,
+      "recall": 0.8387,
+      "specificity": 0.4368,
+      "tn": 38,
+      "tp": 78
+    }
+  },
+  "ALL_180_v1_1_labels": {
+    "normalized_text_A": {
+      "f1": 0.8168,
+      "fn": 0,
+      "fp": 35,
+      "mcc": 0.6734,
+      "precision": 0.6903,
+      "recall": 1.0,
+      "specificity": 0.6569,
+      "tn": 67,
+      "tp": 78
+    },
+    "normalized_text_B": {
+      "f1": 0.8478,
+      "fn": 0,
+      "fp": 28,
+      "mcc": 0.7307,
+      "precision": 0.7358,
+      "recall": 1.0,
+      "specificity": 0.7255,
+      "tn": 74,
+      "tp": 78
+    },
+    "raw_text": {
+      "f1": 0.6695,
+      "fn": 0,
+      "fp": 77,
+      "mcc": 0.3512,
+      "precision": 0.5032,
+      "recall": 1.0,
+      "specificity": 0.2451,
+      "tn": 25,
+      "tp": 78
+    },
+    "relic_v1_0": {
+      "f1": 0.3158,
+      "fn": 63,
+      "fp": 2,
+      "mcc": 0.2926,
+      "precision": 0.8824,
+      "recall": 0.1923,
+      "specificity": 0.9804,
+      "tn": 100,
+      "tp": 15
+    },
+    "relic_v1_1": {
+      "f1": 0.4466,
+      "fn": 55,
+      "fp": 2,
+      "mcc": 0.3944,
+      "precision": 0.92,
+      "recall": 0.2949,
+      "specificity": 0.9804,
+      "tn": 100,
+      "tp": 23
+    },
+    "relic_v2": {
+      "f1": 0.4466,
+      "fn": 55,
+      "fp": 2,
+      "mcc": 0.3944,
+      "precision": 0.92,
+      "recall": 0.2949,
+      "specificity": 0.9804,
+      "tn": 100,
+      "tp": 23
+    },
+    "textdiff": {
+      "f1": 0.7222,
+      "fn": 0,
+      "fp": 60,
+      "mcc": 0.4824,
+      "precision": 0.5652,
+      "recall": 1.0,
+      "specificity": 0.4118,
+      "tn": 42,
+      "tp": 78
+    },
+    "textdiff_ignore_job_parameters": {
+      "f1": 0.761,
+      "fn": 0,
+      "fp": 49,
+      "mcc": 0.5649,
+      "precision": 0.6142,
+      "recall": 1.0,
+      "specificity": 0.5196,
+      "tn": 53,
+      "tp": 78
+    }
+  },
+  "EXCL_15_corrected_pairs": {
+    "normalized_text_A": {
+      "f1": 0.8168,
+      "fn": 0,
+      "fp": 35,
+      "mcc": 0.6423,
+      "precision": 0.6903,
+      "recall": 1.0,
+      "specificity": 0.5977,
+      "tn": 52,
+      "tp": 78
+    },
+    "normalized_text_B": {
+      "f1": 0.8478,
+      "fn": 0,
+      "fp": 28,
+      "mcc": 0.7064,
+      "precision": 0.7358,
+      "recall": 1.0,
+      "specificity": 0.6782,
+      "tn": 59,
+      "tp": 78
+    },
+    "raw_text": {
+      "f1": 0.6695,
+      "fn": 0,
+      "fp": 77,
+      "mcc": 0.2405,
+      "precision": 0.5032,
+      "recall": 1.0,
+      "specificity": 0.1149,
+      "tn": 10,
+      "tp": 78
+    },
+    "relic_v1_0": {
+      "f1": 0.3158,
+      "fn": 63,
+      "fp": 2,
+      "mcc": 0.2781,
+      "precision": 0.8824,
+      "recall": 0.1923,
+      "specificity": 0.977,
+      "tn": 85,
+      "tp": 15
+    },
+    "relic_v1_1": {
+      "f1": 0.4466,
+      "fn": 55,
+      "fp": 2,
+      "mcc": 0.3786,
+      "precision": 0.92,
+      "recall": 0.2949,
+      "specificity": 0.977,
+      "tn": 85,
+      "tp": 23
+    },
+    "relic_v2": {
+      "f1": 0.4466,
+      "fn": 55,
+      "fp": 2,
+      "mcc": 0.3786,
+      "precision": 0.92,
+      "recall": 0.2949,
+      "specificity": 0.977,
+      "tn": 85,
+      "tp": 23
+    },
+    "textdiff": {
+      "f1": 0.7222,
+      "fn": 0,
+      "fp": 60,
+      "mcc": 0.4188,
+      "precision": 0.5652,
+      "recall": 1.0,
+      "specificity": 0.3103,
+      "tn": 27,
+      "tp": 78
+    },
+    "textdiff_ignore_job_parameters": {
+      "f1": 0.761,
+      "fn": 0,
+      "fp": 49,
+      "mcc": 0.5179,
+      "precision": 0.6142,
+      "recall": 1.0,
+      "specificity": 0.4368,
+      "tn": 38,
+      "tp": 78
+    }
+  },
+  "n_corrected": 15,
+  "n_pending_adjudication": 14,
+  "version": "1.1"
+}
