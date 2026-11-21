@@ -17,10 +17,10 @@
 \IEEEauthorblockA{Author details withheld for double-blind review}}
 \else
 \author{
-\IEEEauthorblockN{Manas Sakthivel}\IEEEauthorblockA{R. V. College of Engineering, Bengaluru, Karnataka, India}\and
-\IEEEauthorblockN{K. Badari Nath}\IEEEauthorblockA{Professor, R. V. College of Engineering, Bengaluru, Karnataka, India\\ badarinath.kb@rvce.edu.in}\and
-\IEEEauthorblockN{Rajashree Shettar}\IEEEauthorblockA{Professor, R. V. College of Engineering, Bengaluru, Karnataka, India\\ rajashreeshettar@rvce.edu.in}\and
-\IEEEauthorblockN{Vinay Hegde}\IEEEauthorblockA{Professor, R. V. College of Engineering, Bengaluru, Karnataka, India\\ vinayvhegde@rvce.edu.in}
+\IEEEauthorblockN{Manas Sakthivel}\IEEEauthorblockA{\mbox{}\\ R. V. College of Engineering\\ Bengaluru, Karnataka, India\\ \mbox{}}\and
+\IEEEauthorblockN{K. Badari Nath}\IEEEauthorblockA{Professor\\ R. V. College of Engineering\\ Bengaluru, Karnataka, India\\ badarinath.kb@rvce.edu.in}\and
+\IEEEauthorblockN{Rajashree Shettar}\IEEEauthorblockA{Professor\\ R. V. College of Engineering\\ Bengaluru, Karnataka, India\\ rajashreeshettar@rvce.edu.in}\and
+\IEEEauthorblockN{Vinay Hegde}\IEEEauthorblockA{Professor\\ R. V. College of Engineering\\ Bengaluru, Karnataka, India\\ vinayvhegde@rvce.edu.in}
 }
 \fi
 
@@ -67,7 +67,7 @@ Figure~\ref{fig:pipeline} summarises the pipeline. We ask three questions. \text
 
 All quantitative evidence comes from two JCL-SemBench files, \texttt{cases.jsonl} (which records SHA-256 of both file versions) and frozen detector predictions. No anonymised artifact has yet been prepared for reviewers. Counts were recomputed from these files. \ifdefined\AnonFlag The software is not linked in the anonymous version. \else The software is available at \url{https://github.com/ManasSakthivel/RELIC} (no archival DOI was found; the release status is unconfirmed). \fi We do not use the earlier RELIC V1.0.0 evaluation with its three corpora, and we do not merge its numbers with the benchmark analysed here. Detectors are binary, so we report confusion counts and the Matthews correlation coefficient (MCC)~\cite{matthews1975}, not threshold curves. Inference treats the 16 base programs as clusters, because mutations of one program are not independent~\cite{cameron2008}. We use an exact cluster-level randomisation test (all $2^{16}$ assignments of the two detectors' predictions within clusters)~\cite{good2000}, and percentile cluster bootstrap intervals (10{,}000 resamples, seed 20261004)~\cite{efron1994}. Label sets are defined as follows: L0 is the original labelling; L1 relabels the 15 identical CHANGING pairs as PRESERVING; L2 is L1 without the 13 non-identical disagreements and the abstention (sembench\_172); L3 is L1 with the 13 non-identical disagreements given the oracle's verdict, with the abstention excluded. L1 is an analytical adjustment that we use as the no-op-adjusted baseline; it is not independent ground truth. L3 is an oracle-derived sensitivity scenario, not ground truth.
 
-The only automated cross-check of the author labels is the oracle; it shares authorship with the benchmark and does not provide independent human validation. The oracle and the labels share the authors' evaluation process, and independent practitioner adjudication has not been completed. The 151 pairs marked ``validated'' are validated by that oracle and a written argument from the same group. The L3 relabelling uses oracle verdicts, so L3 is not independent of the oracle. No practitioner has labelled any pair, and no held-out corpus exists.
+The only automated cross-check of the author labels is the oracle; it shares authorship with the benchmark and does not provide independent human validation. The oracle and the labels share the authors' evaluation process, and independent practitioner adjudication has not been completed. For 151 pairs, the oracle agrees with the author-assigned label. This agreement is supported by the authors' written rationale, but it does not constitute independent human validation. The L3 relabelling uses oracle verdicts, so L3 is not independent of the oracle. No practitioner has labelled any pair, and no held-out corpus exists.
 
 \section{Preliminary Findings}
 \subsection{Benchmark integrity (RQ1)}
@@ -78,7 +78,7 @@ Table~\ref{tab:integrity} gives the counts, and Figure~\ref{fig:composition} sho
 \label{tab:integrity}
 \centering
 \small
-\begin{tabular}{@{}p{4.7cm}p{2.6cm}@{}}
+\begin{tabular}{@{}p{5.6cm}p{2.7cm}@{}}
 \toprule
 Finding & Count \\
 \midrule
@@ -157,9 +157,9 @@ Responsible software engineering frames such questions as accountability for the
 Dimension & Responsible role & Observed risk & Practice & Artifact (status here) \\
 \midrule
 1. Transformation validity & Benchmark curator & 25 byte-identical pairs, including 15 labelled CHANGING; 21 duplicate groups (46 pairs), 5 with conflicting labels & Check byte-level no-op and duplicate status before labelling; record provenance of each transformation & Hash table per pair (done) \\
-2. Oracle transparency & Tool developer & 10 of 93 CHANGING labels returned EQUIVALENT by an oracle that does not distinguish them; identity-by-name verdicts & Declare observables; mark each label inside, outside or unclear relative to the boundary; report uncertainty instead of forcing a binary label & Boundary classification by one author (done) \\
+2. Oracle transparency & Tool developer & (a) 10 of 93 CHANGING labels lie outside the oracle's observables and return EQUIVALENT; (b) 3 PRESERVING pairs return DIFFERENT because identity by name is treated as relevant, even where behaviour may not change & Declare observables; mark each label inside, outside or unclear relative to the boundary; report uncertainty instead of forcing a binary label & Boundary classification by one author (done) \\
 3. Independent scrutiny & Independent reviewer & 13 non-identical oracle disagreements and one abstention without independent adjudication; no independent review & Blind review of labels; adjudication log; keep disagreements in the record & Review package with no returned responses (not completed) \\
-4. Statistical accountability & Evaluation author & Pair-level inference overstates certainty; sign stable but size unstable & Cluster by base program; report sensitivity to label choice; report exact tests with their units & Exact cluster test, leave-one-out, sensitivity table (done) \\
+4. Statistical accountability & Evaluation author & Pair-level tests ignore within-program dependence and can misstate uncertainty; sign stable but size unstable & Cluster by base program; report sensitivity to label choice; report exact tests with their units & Exact cluster test, leave-one-out, sensitivity table (done) \\
 5. Decision transparency & Adopting team & 55 of 78 CHANGING pairs missed on L1 (16 disposition, 12 condition, 12 return-code, 10 dataset, 5 reorder) & Report false-negative and false-positive counts with the decision each would affect; state what a ``no change'' verdict licenses & Miss counts by type (done); decision consequence (not done) \\
 \bottomrule
 \end{tabular}
